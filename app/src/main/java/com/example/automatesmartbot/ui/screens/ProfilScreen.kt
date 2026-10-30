@@ -101,7 +101,7 @@ fun ProfilScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF6FAFF))
+            .background(MaterialTheme.colorScheme.background)
             .padding(16.dp)
     ) {
         if (isLoading && profile == null && errorMessage == null) {
@@ -150,7 +150,7 @@ fun ProfilScreen(
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 Card(
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     shape = RoundedCornerShape(22.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -178,7 +178,7 @@ fun ProfilScreen(
                             text = profile?.fullName ?: "Pengguna",
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
-                            color = Color(0xFF17324D)
+                            color = MaterialTheme.colorScheme.onSurface
                         )
 
                         Surface(
@@ -208,7 +208,7 @@ fun ProfilScreen(
                                     false -> "EMAIL BELUM TERVERIFIKASI"
                                     null -> "STATUS EMAIL TIDAK DIKETAHUI"
                                 },
-                                color = Color(0xFF17324D),
+                                color = MaterialTheme.colorScheme.onSurface,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.sp,
                                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
@@ -259,7 +259,7 @@ fun ProfilScreen(
                                     authRepository.logout()
                                     onNavigateLogin()
                                 },
-                                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFFEF4444)),
+                                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFFB91C1C)),
                                 shape = RoundedCornerShape(8.dp),
                                 modifier = Modifier.weight(1f)
                             ) {
@@ -298,7 +298,7 @@ fun ProfilScreen(
 @Composable
 private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) -> Unit) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         shape = RoundedCornerShape(22.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -306,7 +306,7 @@ private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) 
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            Text("Tampilan", fontWeight = FontWeight.Bold, color = Color(0xFF17324D), fontSize = 16.sp)
+            Text("Tampilan", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface, fontSize = 16.sp)
             Text("Pilih mode warna Karir Mate.", color = Color(0xFF64748B), fontSize = 12.sp)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 ThemeMode.entries.forEach { mode ->
@@ -349,7 +349,7 @@ fun ProfileDetailRow(
             modifier = Modifier.weight(1f),
             fontSize = 13.sp,
             fontWeight = FontWeight.SemiBold,
-            color = Color(0xFF17324D),
+            color = MaterialTheme.colorScheme.onSurface,
             textAlign = TextAlign.End,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
