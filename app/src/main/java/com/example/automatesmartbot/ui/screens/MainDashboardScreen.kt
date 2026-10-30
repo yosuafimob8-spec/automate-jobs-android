@@ -1,0 +1,353 @@
+package com.example.automatesmartbot.ui.screens
+
+import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Icon
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalLifecycleOwner
+import androidx.compose.ui.unit.sp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
+import com.example.automatesmartbot.data.network.ApiClient
+import com.example.automatesmartbot.data.repository.ProfileSetupRepository
+import com.example.automatesmartbot.data.security.SessionManager
+import com.example.automatesmartbot.ui.components.AppTopBar
+import com.example.automatesmartbot.ui.navigation.NavigationPolicy
+import com.example.automatesmartbot.ui.navigation.Screen
+import com.example.automatesmartbot.ui.navigation.appShellItems
+import com.example.automatesmartbot.ui.navigation.bottomNavItems
+import com.example.automatesmartbot.ui.screens.auth.ForgotPasswordScreen
+import com.example.automatesmartbot.ui.screens.auth.LoginScreen
+import com.example.automatesmartbot.ui.screens.auth.RegisterScreen
+import com.example.automatesmartbot.ui.viewmodel.DashboardViewModel
+
+@Composable
+fun MainDashboardScreen() {
+    val sessionManager = remember { ApiClient.getSessionManager() }
+    var startupComplete by remember { mutableStateOf(false) }
+    var startDestination by remember { mutableStateOf<String?>(null) }
+    var initialSessionToken by remember { mutableStateOf<String?>(null) }
+
+    LaunchedEffect(Unit) {
+        val validToken = sessionManager?.getValidToken()
+        initialSessionToken = validToken
+        startDestination = NavigationPolicy.startRoute(validToken != null)
+        startupComplete = true
+    }
+
+    if (!startupComplete || startDestination == null) {
+        StartupSplashScreen()
+        return
+    }
+
+    MainDashboardContent(
+        startDestination = startDestination!!,
+        initialSessionToken = initialSessionToken,
+        sessionManager = sessionManager
+    )
+}
+
+@Composable
+private fun MainDashboardContent(
+    startDestination: String,
+    initialSessionToken: String?,
+    sessionManager: SessionManager?
+) {
+    val navController = rememberNavController()
+    var sessionToken by remember { mutableStateOf(initialSessionToken) }
+    var checkedToken by remember { mutableStateOf<String?>(null) }
+    val dashboardViewModel: DashboardViewModel = viewModel()
+    val dashboardStatus by dashboardViewModel.status.collectAsState()
+
+    val navigateToDashboard: () -> Unit = {
+        if (!navController.popBackStack(Screen.Dashboard.route, inclusive = false)) {
+            navController.navigate(Screen.Dashboard.route) {
+                launchSingleTop = true
+            }
+        }
+    }
+
+    val navigateToLogin: () -> Unit = {
+        if (!navController.popBackStack(Screen.Login.route, inclusive = false)) {
+            navController.navigate(Screen.Login.route) {
+                launchSingleTop = true
+            }
+        }
+    }
+
+    val navigateUpOrDashboard: () -> Unit = {
+        if (!navController.popBackStack()) {
+            navigateToDashboard()
+        }
+    }
+
+    val endSession: () -> Unit = {
+        sessionToken = null
+        checkedToken = null
+        dashboardViewModel.reset()
+        if (navController.currentDestination?.route != Screen.Login.route) {
+            navController.navigate(Screen.Login.route) {
+                popUpTo(Screen.Dashboard.route) { inclusive = true }
+                launchSingleTop = true
+            }
+        }
+    }
+
+    LaunchedEffect(sessionManager) {
+        sessionManager?.sessionExpired?.collect {
+            endSession()
+        }
+    }
+
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner, sessionToken) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME &&
+                sessionToken != null &&
+                sessionManager?.hasValidSession() != true
+            ) {
+                endSession()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+
+    LaunchedEffect(sessionToken) {
+        val token = sessionToken
+        if (token.isNullOrBlank()) {
+            dashboardViewModel.reset()
+            return@LaunchedEffect
+        }
+
+        dashboardViewModel.loadStatus()
+
+        if (checkedToken == token) return@LaunchedEffect
+        checkedToken = token
+
+        val completed = ProfileSetupRepository(sessionManager).checkServerProfileCompletion()
+        val currentRoute = navController.currentDestination?.route
+        when (NavigationPolicy.profileGateTarget(completed, currentRoute)) {
+            Screen.OnboardingProfile.route -> {
+                navController.navigate(Screen.OnboardingProfile.route) {
+                    launchSingleTop = true
+                }
+            }
+            Screen.Dashboard.route -> navigateToDashboard()
+        }
+    }
+
+    val isPro = dashboardStatus?.isPro == true
+    val isOnline = dashboardStatus?.isOnline == true
+
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route ?: startDestination
+
+    val currentTitle = when (currentRoute) {
+        Screen.Dashboard.route -> "Beranda"
+        Screen.CariLowongan.route -> "Cari Lowongan"
+        Screen.KirimLamaran.route -> "Kirim Lamaran"
+        Screen.CvBuilder.route -> "CV Builder"
+        Screen.LatihanPsikotes.route -> "Latihan Psikotes"
+        Screen.AiInterview.route -> "AI Interview"
+        Screen.AiAgent.route -> "AI Agent"
+        Screen.Riwayat.route -> "Riwayat Lamaran"
+        Screen.SuratIzinDokumen.route -> "Surat Izin & Dokumen Kerja"
+        Screen.Profil.route -> "Profil & Pengaturan"
+        Screen.Login.route -> "Masuk Akun"
+        Screen.Register.route -> "Daftar Akun"
+        Screen.ForgotPassword.route -> "Reset Password"
+        Screen.OnboardingProfile.route -> "Setup Profil"
+        else -> "AutoMateSmartBot"
+    }
+
+    val bottomNavRoutes = bottomNavItems.map { it.route }
+    val appShellRoutes = appShellItems.map { it.route }
+    val showBottomBar = currentRoute in bottomNavRoutes
+    val showTopBar = currentRoute in appShellRoutes
+    val showBack = currentRoute in appShellRoutes && currentRoute != Screen.Dashboard.route
+    val onBack: (() -> Unit)? = if (showBack) navigateUpOrDashboard else null
+
+    BackHandler(enabled = currentRoute == Screen.OnboardingProfile.route) {
+        navigateUpOrDashboard()
+    }
+
+    Scaffold(
+        topBar = {
+            if (showTopBar) {
+                AppTopBar(
+                    title = currentTitle,
+                    isPro = isPro,
+                    onNavigateProfil = {
+                        navController.navigate(Screen.Profil.route) {
+                            launchSingleTop = true
+                        }
+                    },
+                    onBack = onBack
+                )
+            }
+        },
+        bottomBar = {
+            if (showBottomBar) {
+                NavigationBar(
+                    containerColor = Color(0xFF1B263B),
+                    contentColor = Color.White
+                ) {
+                    bottomNavItems.forEach { screen ->
+                        val selected = currentRoute == screen.route
+                        NavigationBarItem(
+                            icon = { Icon(screen.icon, contentDescription = screen.title) },
+                            label = { Text(screen.title, fontSize = 10.sp) },
+                            selected = selected,
+                            onClick = {
+                                if (!selected) {
+                                    navController.navigate(screen.route) {
+                                        popUpTo(Screen.Dashboard.route) { inclusive = false }
+                                        launchSingleTop = true
+                                    }
+                                }
+                            },
+                            colors = NavigationBarItemDefaults.colors(
+                                selectedIconColor = Color(0xFF60A5FA),
+                                selectedTextColor = Color(0xFF60A5FA),
+                                unselectedIconColor = Color(0xFF94A3B8),
+                                unselectedTextColor = Color(0xFF94A3B8),
+                                indicatorColor = Color(0xFF22304A)
+                            )
+                        )
+                    }
+                }
+            }
+        }
+    ) { innerPadding ->
+        NavHost(
+            navController = navController,
+            startDestination = startDestination,
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+        ) {
+            composable(Screen.Dashboard.route) {
+                DashboardScreen(
+                    onNavigate = { route ->
+                        navController.navigate(route) {
+                            launchSingleTop = true
+                        }
+                    },
+                    viewModel = dashboardViewModel
+                )
+            }
+            composable(Screen.CariLowongan.route) {
+                CariLowonganScreen(isPro = isPro)
+            }
+            composable(Screen.KirimLamaran.route) {
+                KirimLamaranScreen(
+                    isPro = isPro,
+                    isOnline = isOnline,
+                    onNavigateProfil = {
+                        navController.navigate(Screen.Profil.route) {
+                            launchSingleTop = true
+                        }
+                    }
+                )
+            }
+            composable(Screen.CvBuilder.route) {
+                CvBuilderScreen()
+            }
+            composable(Screen.LatihanPsikotes.route) {
+                LatihanPsikotesScreen()
+            }
+            composable(Screen.AiInterview.route) {
+                AiInterviewScreen()
+            }
+            composable(Screen.AiAgent.route) {
+                AiAgentScreen()
+            }
+            composable(Screen.SuratIzinDokumen.route) {
+                SuratIzinDokumenScreen()
+            }
+            composable(Screen.Riwayat.route) {
+                RiwayatScreen()
+            }
+            composable(Screen.Profil.route) {
+                ProfilScreen(
+                    isOnline = isOnline,
+                    onNavigateLogin = endSession,
+                    onNavigateEditProfile = {
+                        navController.navigate(Screen.OnboardingProfile.route) {
+                            launchSingleTop = true
+                        }
+                    }
+                )
+            }
+            composable(Screen.Login.route) {
+                LoginScreen(
+                    onNavigateRegister = {
+                        navController.navigate(Screen.Register.route) {
+                            launchSingleTop = true
+                        }
+                    },
+                    onNavigateForgot = {
+                        navController.navigate(Screen.ForgotPassword.route) {
+                            launchSingleTop = true
+                        }
+                    },
+                    onLoginSuccess = { profileCompleted ->
+                        val newToken = sessionManager?.getValidToken()
+                        sessionToken = newToken
+                        checkedToken = newToken
+                        val target = NavigationPolicy.postLoginRoute(profileCompleted)
+                        navController.navigate(target) {
+                            popUpTo(Screen.Login.route) { inclusive = true }
+                            launchSingleTop = true
+                        }
+                    }
+                )
+            }
+            composable(Screen.Register.route) {
+                RegisterScreen(
+                    onNavigateLogin = navigateToLogin,
+                    onRegisterSuccess = {
+                        navigateToLogin()
+                    }
+                )
+            }
+            composable(Screen.ForgotPassword.route) {
+                ForgotPasswordScreen(
+                    onNavigateLogin = navigateToLogin
+                )
+            }
+            composable(Screen.OnboardingProfile.route) {
+                OnboardingProfileScreen(
+                    isOnline = isOnline,
+                    onBack = navigateUpOrDashboard,
+                    onProfileSaved = {
+                        checkedToken = sessionToken
+                        dashboardViewModel.loadStatus()
+                        navigateToDashboard()
+                    }
+                )
+            }
+        }
+    }
+}
