@@ -10,6 +10,12 @@ import retrofit2.http.PUT
 import retrofit2.http.Query
 
 interface ApiService {
+    @GET("karirmate/selection")
+    suspend fun getKarirMateSelection(): Response<ResponseBody>
+
+    @GET("karirmate/report")
+    suspend fun getKarirMateReport(): Response<ResponseBody>
+
     @POST("auto-apply/enable")
     suspend fun enableAutoApply(): Response<ResponseBody>
 
