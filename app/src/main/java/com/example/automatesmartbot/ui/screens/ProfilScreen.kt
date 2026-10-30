@@ -101,12 +101,12 @@ fun ProfilScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF0D1B2A))
+            .background(Color(0xFFF6FAFF))
             .padding(16.dp)
     ) {
         if (isLoading && profile == null && errorMessage == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator(color = Color(0xFF3B82F6))
+                CircularProgressIndicator(color = Color(0xFF1599C3))
             }
         } else if (errorMessage != null && profile == null) {
             Column(
@@ -128,18 +128,18 @@ fun ProfilScreen(
                         "Sesi Anda tetap tersimpan. Sambungkan internet lalu coba lagi."
                     },
                     fontSize = 13.sp,
-                    color = Color(0xFF94A3B8),
+                    color = Color(0xFF64748B),
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Button(
                     onClick = { fetchProfileData() },
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3B82F6))
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1599C3))
                 ) {
                     Text("Coba Lagi")
                 }
                 TextButton(onClick = onNavigateLogin) {
-                    Text("Masuk / Login", color = Color(0xFF60A5FA))
+                    Text("Masuk / Login", color = Color(0xFF168CB8))
                 }
             }
         } else {
@@ -150,8 +150,8 @@ fun ProfilScreen(
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 Card(
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
-                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                    shape = RoundedCornerShape(22.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Column(
@@ -160,7 +160,7 @@ fun ProfilScreen(
                         verticalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
                         Surface(
-                            color = Color(0xFF22304A),
+                            color = Color(0xFFE5F3FF),
                             shape = RoundedCornerShape(50),
                             modifier = Modifier.size(72.dp)
                         ) {
@@ -168,7 +168,7 @@ fun ProfilScreen(
                                 Icon(
                                     imageVector = Icons.Default.Person,
                                     contentDescription = null,
-                                    tint = Color(0xFF60A5FA),
+                                    tint = Color(0xFF168CB8),
                                     modifier = Modifier.size(36.dp)
                                 )
                             }
@@ -178,16 +178,16 @@ fun ProfilScreen(
                             text = profile?.fullName ?: "Pengguna",
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
-                            color = Color.White
+                            color = Color(0xFF17324D)
                         )
 
                         Surface(
-                            color = if (profile?.completed == true) Color(0xFF065F46) else Color(0xFF5F0606),
+                            color = if (profile?.completed == true) Color(0xFFDCFCE7) else Color(0xFFFEE2E2),
                             shape = RoundedCornerShape(8.dp)
                         ) {
                             Text(
                                 text = if (profile?.completed == true) "PROFIL LENGKAP" else "PROFIL BELUM LENGKAP",
-                                color = Color.White,
+                                color = Color(0xFF166534),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.sp,
                                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
@@ -196,9 +196,9 @@ fun ProfilScreen(
 
                         Surface(
                             color = when (account?.isEmailVerified) {
-                                true -> Color(0xFF065F46)
-                                false -> Color(0xFF5F0606)
-                                null -> Color(0xFF334155)
+                                true -> Color(0xFFDCFCE7)
+                                false -> Color(0xFFFEE2E2)
+                                null -> Color(0xFFE2E8F0)
                             },
                             shape = RoundedCornerShape(8.dp)
                         ) {
@@ -208,7 +208,7 @@ fun ProfilScreen(
                                     false -> "EMAIL BELUM TERVERIFIKASI"
                                     null -> "STATUS EMAIL TIDAK DIKETAHUI"
                                 },
-                                color = Color.White,
+                                color = Color(0xFF17324D),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.sp,
                                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
@@ -245,7 +245,7 @@ fun ProfilScreen(
                         ) {
                             Button(
                                 onClick = onNavigateEditProfile,
-                                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3B82F6)),
+                                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1599C3)),
                                 shape = RoundedCornerShape(8.dp),
                                 modifier = Modifier.weight(1f)
                             ) {
@@ -298,16 +298,16 @@ fun ProfilScreen(
 @Composable
 private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) -> Unit) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
-        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+        shape = RoundedCornerShape(22.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            Text("Tampilan", fontWeight = FontWeight.Bold, color = Color.White, fontSize = 16.sp)
-            Text("Pilih mode warna Karir Mate.", color = Color(0xFF94A3B8), fontSize = 12.sp)
+            Text("Tampilan", fontWeight = FontWeight.Bold, color = Color(0xFF17324D), fontSize = 16.sp)
+            Text("Pilih mode warna Karir Mate.", color = Color(0xFF64748B), fontSize = 12.sp)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 ThemeMode.entries.forEach { mode ->
                     androidx.compose.material3.FilterChip(
@@ -315,7 +315,7 @@ private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) 
                         onClick = { onModeSelected(mode) },
                         label = { Text(mode.label, maxLines = 1, fontSize = 11.sp) },
                         colors = androidx.compose.material3.FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = Color(0xFF1267E8),
+                            selectedContainerColor = Color(0xFF1599C3),
                             selectedLabelColor = Color.White
                         )
                     )
@@ -341,15 +341,15 @@ fun ProfileDetailRow(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            Icon(icon, contentDescription = null, tint = Color(0xFF60A5FA), modifier = Modifier.size(16.dp))
-            Text(text = label, fontSize = 13.sp, color = Color(0xFF94A3B8))
+            Icon(icon, contentDescription = null, tint = Color(0xFF168CB8), modifier = Modifier.size(16.dp))
+            Text(text = label, fontSize = 13.sp, color = Color(0xFF64748B))
         }
         Text(
             text = value,
             modifier = Modifier.weight(1f),
             fontSize = 13.sp,
             fontWeight = FontWeight.SemiBold,
-            color = Color.White,
+            color = Color(0xFF17324D),
             textAlign = TextAlign.End,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis

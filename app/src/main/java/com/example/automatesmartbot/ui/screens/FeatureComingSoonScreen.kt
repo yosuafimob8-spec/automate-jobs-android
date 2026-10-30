@@ -37,7 +37,7 @@ fun FeatureComingSoonScreen(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .background(DarkBackground),
+            .background(Color(0xFFF5FAFF)),
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
@@ -71,7 +71,7 @@ fun FeatureComingSoonScreen(
                             )
                         }
                         Surface(
-                            color = DarkSurfaceVariant,
+                            color = Color(0xFFE9F5FF),
                             shape = RoundedCornerShape(8.dp)
                         ) {
                             Text(
@@ -88,12 +88,12 @@ fun FeatureComingSoonScreen(
                         text = title,
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = TextWhite
+                        color = Color(0xFF17324D)
                     )
                     Text(
                         text = description,
                         fontSize = 13.sp,
-                        color = TextGray,
+                        color = Color(0xFF64748B),
                         lineHeight = 19.sp
                     )
                 }
@@ -102,8 +102,8 @@ fun FeatureComingSoonScreen(
 
         item {
             Card(
-                colors = CardDefaults.cardColors(containerColor = DarkSurface),
-                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                shape = RoundedCornerShape(20.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
@@ -114,7 +114,7 @@ fun FeatureComingSoonScreen(
                         text = "Yang direncanakan",
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp,
-                        color = TextWhite
+                        color = Color(0xFF17324D)
                     )
                     bullets.forEach { bullet ->
                         Row(
@@ -132,7 +132,7 @@ fun FeatureComingSoonScreen(
                             Text(
                                 text = bullet,
                                 fontSize = 12.sp,
-                                color = TextGray,
+                                color = Color(0xFF64748B),
                                 lineHeight = 18.sp
                             )
                         }
@@ -143,8 +143,8 @@ fun FeatureComingSoonScreen(
 
         item {
             Card(
-                colors = CardDefaults.cardColors(containerColor = DarkSurface),
-                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                shape = RoundedCornerShape(20.dp),
                 border = BorderStroke(1.dp, CardBorder),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -166,23 +166,23 @@ fun FeatureComingSoonScreen(
                             text = "Status fitur",
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp,
-                            color = TextWhite
+                            color = Color(0xFF17324D)
                         )
                     }
                     Text(
                         text = "Fitur ini sedang disiapkan. Aplikasi tidak membuat data, hasil AI, atau dokumen palsu.",
                         fontSize = 12.sp,
-                        color = TextGray,
+                        color = Color(0xFF64748B),
                         lineHeight = 18.sp
                     )
                     Button(
                         onClick = { },
                         enabled = false,
                         colors = ButtonDefaults.buttonColors(
-                            disabledContainerColor = DarkSurfaceVariant,
-                            disabledContentColor = TextGray
+                            disabledContainerColor = Color(0xFFE9F5FF),
+                            disabledContentColor = Color(0xFF64748B)
                         ),
-                        shape = RoundedCornerShape(12.dp),
+                        shape = RoundedCornerShape(18.dp),
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(46.dp)
@@ -208,7 +208,7 @@ fun FeatureComingSoonScreen(
                 text = "Belum ada data yang dibuat dari layar ini.",
                 modifier = Modifier.fillMaxWidth(),
                 fontSize = 10.sp,
-                color = TextGray
+                color = Color(0xFF64748B)
             )
         }
     }

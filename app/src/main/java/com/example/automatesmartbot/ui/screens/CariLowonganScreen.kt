@@ -57,7 +57,7 @@ fun CariLowonganScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF0D1B2A))
+            .background(Color(0xFFF5FAFF))
             .padding(16.dp)
     ) {
         Column(
@@ -66,8 +66,8 @@ fun CariLowonganScreen(
         ) {
             // Header Info & Status
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
-                shape = RoundedCornerShape(12.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                shape = RoundedCornerShape(18.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -75,7 +75,7 @@ fun CariLowonganScreen(
                         text = "Cari Lowongan",
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp,
-                        color = Color.White
+                        color = Color(0xFF17324D)
                     )
                     Text(
                         text = "Total lowongan ditemukan: ${if (errorMessage != null) "-" else totalJobs}",
@@ -85,7 +85,7 @@ fun CariLowonganScreen(
                     Text(
                         text = "Pilih posisi dan lokasi untuk melihat lowongan yang tersedia.",
                         fontSize = 11.sp,
-                        color = Color(0xFF94A3B8)
+                        color = Color(0xFF64748B)
                     )
                 }
             }
@@ -131,7 +131,7 @@ fun CariLowonganScreen(
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
                             Text(text = "Gagal memuat lowongan", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(0xFFEF4444))
-                            Text(text = errorMessage ?: "Terjadi kesalahan", fontSize = 12.sp, color = Color(0xFF94A3B8))
+                            Text(text = errorMessage ?: "Terjadi kesalahan", fontSize = 12.sp, color = Color(0xFF64748B))
                             Button(onClick = { triggerSearch() }, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3B82F6))) {
                                 Text("Coba Lagi")
                             }
@@ -143,7 +143,7 @@ fun CariLowonganScreen(
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
                             Icon(Icons.Default.Work, contentDescription = null, tint = Color(0xFF64748B), modifier = Modifier.size(48.dp))
-                            Text(text = "Tidak ada lowongan ditemukan", fontSize = 14.sp, color = Color(0xFF94A3B8))
+                            Text(text = "Tidak ada lowongan ditemukan", fontSize = 14.sp, color = Color(0xFF64748B))
                             Text(text = "Coba ubah filter posisi atau lokasi Anda.", fontSize = 12.sp, color = Color(0xFF64748B))
                         }
                     }
@@ -153,18 +153,18 @@ fun CariLowonganScreen(
                             modifier = Modifier.fillMaxSize()
                         ) {
                             val liveJobs = jobs.filter { it.resultType != "spontaneous" }
-                            if (liveJobs.isNotEmpty()) item { Text("Lowongan LIVE", color = Color(0xFF12CBE8), fontWeight = FontWeight.Bold) }
+                            if (liveJobs.isNotEmpty()) item { Text("Lowongan LIVE", color = Color(0xFF008FAD), fontWeight = FontWeight.Bold) }
                             items(liveJobs) { job ->
                                 JobCard(job, context)
                             }
-                            if (liveJobs.isEmpty()) item { Text("Belum ada lowongan aktif yang sesuai", color = Color(0xFF94A3B8)) }
+                            if (liveJobs.isEmpty()) item { Text("Belum ada lowongan aktif yang sesuai", color = Color(0xFF64748B)) }
                             if (viewModel.hasMore) item {
                                 Button(onClick = viewModel::loadNextPage, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3B82F6))) { Text("Muat Halaman Berikutnya") }
                             }
                             /*
                             Card(
-                                    colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
-                                    shape = RoundedCornerShape(12.dp),
+                                    colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                                    shape = RoundedCornerShape(18.dp),
                                     modifier = Modifier.fillMaxWidth()
                                 ) {
                                     Column(
@@ -182,7 +182,7 @@ fun CariLowonganScreen(
                                                 text = job.title ?: "Tanpa Judul",
                                                 fontWeight = FontWeight.Bold,
                                                 fontSize = 15.sp,
-                                                color = Color.White,
+                                                color = Color(0xFF17324D),
                                                 modifier = Modifier.weight(1f)
                                             )
                                             job.matchLabel?.let { label ->
@@ -192,7 +192,7 @@ fun CariLowonganScreen(
                                                 ) {
                                                     Text(
                                                         text = label,
-                                                        color = Color(0xFF60A5FA),
+                                                        color = Color(0xFF1678C8),
                                                         fontSize = 11.sp,
                                                         fontWeight = FontWeight.Bold,
                                                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
@@ -205,8 +205,8 @@ fun CariLowonganScreen(
                                             verticalAlignment = Alignment.CenterVertically,
                                             horizontalArrangement = Arrangement.spacedBy(6.dp)
                                         ) {
-                                            Icon(Icons.Default.Business, contentDescription = null, tint = Color(0xFF94A3B8), modifier = Modifier.size(14.dp))
-                                            Text(text = "${job.company ?: "Perusahaan"} â€¢ Sumber: ${job.source ?: "Lowongan kerja"}", fontSize = 12.sp, color = Color(0xFF94A3B8))
+                                            Icon(Icons.Default.Business, contentDescription = null, tint = Color(0xFF64748B), modifier = Modifier.size(14.dp))
+                                            Text(text = "${job.company ?: "Perusahaan"} â€¢ Sumber: ${job.source ?: "Lowongan kerja"}", fontSize = 12.sp, color = Color(0xFF64748B))
                                         }
 
                                         Row(
@@ -215,7 +215,7 @@ fun CariLowonganScreen(
                                             verticalAlignment = Alignment.CenterVertically
                                         ) {
                                             Column {
-                                                Text(text = "Lokasi: ${job.location ?: "-"}", fontSize = 11.sp, color = Color(0xFF94A3B8))
+                                                Text(text = "Lokasi: ${job.location ?: "-"}", fontSize = 11.sp, color = Color(0xFF64748B))
                                                 Text(text = "Update: ${job.updated ?: "-"}", fontSize = 11.sp, color = Color(0xFF64748B))
                                             }
 
@@ -274,7 +274,7 @@ fun FilterDropdown(
     Box(modifier = modifier) {
         OutlinedCard(
             onClick = { expanded = true },
-            colors = CardDefaults.outlinedCardColors(containerColor = Color(0xFF1B263B)),
+            colors = CardDefaults.outlinedCardColors(containerColor = Color(0xFFFFFFFF)),
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -286,17 +286,17 @@ fun FilterDropdown(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(modifier = Modifier.weight(1f)) {
-                    Text(text = label, fontSize = 10.sp, color = Color(0xFF94A3B8))
+                    Text(text = label, fontSize = 10.sp, color = Color(0xFF64748B))
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
                         text = selectedOption,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color.White,
+                        color = Color(0xFF17324D),
                         maxLines = 1
                     )
                 }
-                Icon(Icons.Default.ArrowDropDown, contentDescription = null, tint = Color(0xFF60A5FA))
+                Icon(Icons.Default.ArrowDropDown, contentDescription = null, tint = Color(0xFF1678C8))
             }
         }
         DropdownMenu(
@@ -318,10 +318,10 @@ fun FilterDropdown(
 
 @Composable
 private fun JobCard(job: com.example.automatesmartbot.data.model.JobsV2Job, context: android.content.Context) {
-    Card(colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)), shape = RoundedCornerShape(12.dp), modifier = Modifier.fillMaxWidth()) {
+    Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)), shape = RoundedCornerShape(18.dp), modifier = Modifier.fillMaxWidth()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(7.dp)) {
-            Text(job.title ?: "Tanpa Judul", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 15.sp)
-            Text("${job.company ?: "Perusahaan"} | ${job.location ?: "Lokasi tidak diketahui"}", color = Color(0xFF94A3B8), fontSize = 12.sp)
+            Text(job.title ?: "Tanpa Judul", color = Color(0xFF17324D), fontWeight = FontWeight.Bold, fontSize = 15.sp)
+            Text("${job.company ?: "Perusahaan"} | ${job.location ?: "Lokasi tidak diketahui"}", color = Color(0xFF64748B), fontSize = 12.sp)
             if (job.resultType == "spontaneous") {
                 Text(job.opportunityLabel ?: "Peluang Lamaran Spontan", color = Color(0xFFFBBF24), fontSize = 11.sp)
             }
@@ -334,7 +334,7 @@ private fun JobCard(job: com.example.automatesmartbot.data.model.JobsV2Job, cont
                     Text(action.label ?: "Lihat Sumber Resmi", fontSize = 12.sp)
                 }
             } else {
-                Text("Tidak ada tindakan lamaran terverifikasi.", color = Color(0xFF94A3B8), fontSize = 11.sp)
+                Text("Tidak ada tindakan lamaran terverifikasi.", color = Color(0xFF64748B), fontSize = 11.sp)
             }
         }
     }

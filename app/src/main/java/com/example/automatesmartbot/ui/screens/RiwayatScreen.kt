@@ -19,7 +19,7 @@ fun RiwayatScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF0D1B2A))
+            .background(Color(0xFFF5FAFF))
             .padding(16.dp)
     ) {
         Column(
@@ -27,19 +27,19 @@ fun RiwayatScreen() {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
-                shape = RoundedCornerShape(12.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                shape = RoundedCornerShape(18.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Icon(Icons.Default.History, contentDescription = null, tint = Color(0xFF60A5FA))
-                        Text(text = "Riwayat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color.White)
+                        Icon(Icons.Default.History, contentDescription = null, tint = Color(0xFF1678C8))
+                        Text(text = "Riwayat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(0xFF17324D))
                     }
                     Text(
                         text = "Pantau status lamaran yang Anda kirim.",
                         fontSize = 12.sp,
-                        color = Color(0xFF94A3B8)
+                        color = Color(0xFF64748B)
                     )
                 }
             }
@@ -64,7 +64,7 @@ fun RiwayatScreen() {
                         text = "Belum ada riwayat lamaran",
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF94A3B8)
+                        color = Color(0xFF64748B)
                     )
                     Text(
                         text = "Riwayat akan muncul setelah fitur pengiriman lamaran tersedia. Aplikasi tidak menampilkan status palsu.",

@@ -27,7 +27,7 @@ fun AutoUploadScreen(isPro: Boolean) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF0D1B2A))
+            .background(Color(0xFFF5FAFF))
             .padding(16.dp)
     ) {
         Column(
@@ -35,8 +35,8 @@ fun AutoUploadScreen(isPro: Boolean) {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
-                shape = RoundedCornerShape(12.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                shape = RoundedCornerShape(18.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
@@ -44,19 +44,19 @@ fun AutoUploadScreen(isPro: Boolean) {
                         text = "🚀 Auto Upload Video Bot",
                         fontWeight = FontWeight.Bold,
                         fontSize = 18.sp,
-                        color = Color.White
+                        color = Color(0xFF17324D)
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
                         text = "Upload video otomatis ke berbagai platform sosial media secara terjadwal.",
                         fontSize = 13.sp,
-                        color = Color(0xFF94A3B8)
+                        color = Color(0xFF64748B)
                     )
                 }
             }
 
             // Platform Selection
-            Text(text = "Pilih Platform Tujuan:", fontSize = 14.sp, fontWeight = FontWeight.Bold, color = Color(0xFF60A5FA))
+            Text(text = "Pilih Platform Tujuan:", fontSize = 14.sp, fontWeight = FontWeight.Bold, color = Color(0xFF1678C8))
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.fillMaxWidth()
@@ -68,9 +68,9 @@ fun AutoUploadScreen(isPro: Boolean) {
                         label = { Text(platform, fontSize = 12.sp) },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = Color(0xFF3B82F6),
-                            selectedLabelColor = Color.White,
-                            containerColor = Color(0xFF1B263B),
-                            labelColor = Color(0xFF94A3B8)
+                            selectedLabelColor = Color(0xFF17324D),
+                            containerColor = Color(0xFFFFFFFF),
+                            labelColor = Color(0xFF64748B)
                         )
                     )
                 }
@@ -78,8 +78,8 @@ fun AutoUploadScreen(isPro: Boolean) {
 
             // Video File Picker Mock
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
-                shape = RoundedCornerShape(12.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                shape = RoundedCornerShape(18.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Row(
@@ -93,8 +93,8 @@ fun AutoUploadScreen(isPro: Boolean) {
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        Icon(Icons.Default.VideoLibrary, contentDescription = null, tint = Color(0xFF60A5FA))
-                        Text(text = "tutorial_compose_v1.mp4 (45 MB)", fontSize = 13.sp, color = Color.White)
+                        Icon(Icons.Default.VideoLibrary, contentDescription = null, tint = Color(0xFF1678C8))
+                        Text(text = "tutorial_compose_v1.mp4 (45 MB)", fontSize = 13.sp, color = Color(0xFF17324D))
                     }
                     TextButton(onClick = { }) {
                         Text("Ganti", color = Color(0xFF38BDF8))
@@ -106,15 +106,15 @@ fun AutoUploadScreen(isPro: Boolean) {
                 value = caption,
                 onValueChange = { caption = it },
                 label = { Text("Caption & Hashtags") },
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(18.dp),
                 minLines = 3,
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedBorderColor = Color(0xFF3B82F6),
-                    unfocusedBorderColor = Color(0xFF334155),
-                    focusedContainerColor = Color(0xFF1B263B),
-                    unfocusedContainerColor = Color(0xFF1B263B),
-                    focusedTextColor = Color.White,
-                    unfocusedTextColor = Color.White
+                    unfocusedBorderColor = Color(0xFFD8E9F5),
+                    focusedContainerColor = Color(0xFFFFFFFF),
+                    unfocusedContainerColor = Color(0xFFFFFFFF),
+                    focusedTextColor = Color(0xFF17324D),
+                    unfocusedTextColor = Color(0xFF17324D)
                 ),
                 modifier = Modifier.fillMaxWidth()
             )
@@ -131,7 +131,7 @@ fun AutoUploadScreen(isPro: Boolean) {
                 colors = ButtonDefaults.buttonColors(
                     containerColor = if (isUploading) Color(0xFFEF4444) else Color(0xFF3B82F6)
                 ),
-                shape = RoundedCornerShape(12.dp),
+                shape = RoundedCornerShape(18.dp),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp)
@@ -146,14 +146,14 @@ fun AutoUploadScreen(isPro: Boolean) {
             }
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
-                shape = RoundedCornerShape(12.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                shape = RoundedCornerShape(18.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
-                    Text(text = "Status Bot Upload:", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color(0xFF60A5FA))
+                    Text(text = "Status Bot Upload:", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = Color(0xFF1678C8))
                     Spacer(modifier = Modifier.height(4.dp))
-                    Text(text = uploadStatus, fontSize = 13.sp, color = Color.White)
+                    Text(text = uploadStatus, fontSize = 13.sp, color = Color(0xFF17324D))
                 }
             }
         }

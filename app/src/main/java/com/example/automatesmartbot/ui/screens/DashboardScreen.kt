@@ -91,7 +91,7 @@ private val jobFeatures = listOf(
         icon = Icons.Default.Psychology,
         accent = Color(0xFFF97316),
         route = Screen.LatihanPsikotes.route,
-        statusLabel = "Segera Hadir"
+        statusLabel = null
     ),
     DashboardFeature(
         title = "AI Interview",
@@ -148,7 +148,7 @@ fun DashboardScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
+            .background(Color(0xFFF6FAFF))
     ) {
         if (isLoading && status == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -165,12 +165,12 @@ fun DashboardScreen(
                         text = "Karir Mate",
                         fontWeight = FontWeight.Bold,
                         fontSize = 24.sp,
-                        color = MaterialTheme.colorScheme.onBackground
+                        color = Color(0xFF17324D)
                     )
                     Text(
                         text = "Temukan peluang dan siapkan langkah karier Anda.",
                         fontSize = 13.sp,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                        color = Color(0xFF64748B)
                     )
                 }
                 item {
@@ -196,7 +196,7 @@ fun DashboardScreen(
 @Composable
 private fun ConnectionPill(isOnline: Boolean) {
     Surface(
-        color = if (isOnline) Color(0xFF065F46) else Color(0xFF3F1D1D),
+        color = if (isOnline) Color(0xFFDCFCE7) else Color(0xFFFEE2E2),
         shape = RoundedCornerShape(50)
     ) {
         Row(
@@ -216,7 +216,7 @@ private fun ConnectionPill(isOnline: Boolean) {
                 text = if (isOnline) "Online" else "Offline",
                 fontWeight = FontWeight.Bold,
                 fontSize = 10.sp,
-                color = TextWhite
+                color = Color(0xFF17324D)
             )
         }
     }
@@ -241,7 +241,7 @@ private fun WelcomeCard(
     }
 
     Card(
-        colors = CardDefaults.cardColors(containerColor = DarkSurface),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
         shape = RoundedCornerShape(20.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -262,7 +262,7 @@ private fun WelcomeCard(
                         Text(
                             text = "Halo, $displayName",
                             fontSize = 13.sp,
-                            color = TextGray
+                            color = Color(0xFF64748B)
                         )
                         ConnectionPill(isOnline = status?.isOnline == true)
                     }
@@ -271,14 +271,14 @@ private fun WelcomeCard(
                         text = "AutoMate Dashboard",
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = TextWhite
+                        color = Color(0xFF17324D)
                     )
                 }
                 Spacer(modifier = Modifier.width(12.dp))
                 MembershipBadge(isPro = isPro)
             }
 
-            HorizontalDivider(color = CardBorder, thickness = 1.dp)
+            HorizontalDivider(color = Color(0xFFE2EAF5), thickness = 1.dp)
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -352,7 +352,7 @@ private fun StatusPill(
 ) {
     Surface(
         modifier = modifier,
-        color = DarkBackground,
+        color = Color(0xFFF5F9FF),
         shape = RoundedCornerShape(10.dp)
     ) {
         Row(
@@ -369,7 +369,7 @@ private fun StatusPill(
             Text(
                 text = text,
                 fontSize = 10.sp,
-                color = TextWhite,
+                color = Color(0xFF17324D),
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
@@ -438,10 +438,10 @@ private fun AccountStats(status: DashboardStatusResponse?) {
 @Composable
 private fun StatCard(item: StatItem, modifier: Modifier = Modifier) {
     Card(
-        modifier = modifier.height(96.dp),
-        colors = CardDefaults.cardColors(containerColor = DarkSurface),
+        modifier = modifier.height(88.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
         shape = RoundedCornerShape(14.dp),
-        border = BorderStroke(1.dp, CardBorder)
+        border = BorderStroke(1.dp, Color(0xFFE2EAF5))
     ) {
         Column(
             modifier = Modifier
@@ -452,7 +452,7 @@ private fun StatCard(item: StatItem, modifier: Modifier = Modifier) {
             Text(
                 text = item.title,
                 fontSize = 10.sp,
-                color = TextGray,
+                color = Color(0xFF64748B),
                 fontWeight = FontWeight.Medium
             )
             Text(
@@ -466,7 +466,7 @@ private fun StatCard(item: StatItem, modifier: Modifier = Modifier) {
             Text(
                 text = item.caption,
                 fontSize = 9.sp,
-                color = TextGray,
+                color = Color(0xFF64748B),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -485,13 +485,13 @@ private fun SectionHeader(title: String, itemCount: Int? = null) {
             text = title,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
-            color = TextWhite
+            color = Color(0xFF17324D)
         )
         if (itemCount != null) {
             Text(
                 text = "$itemCount fitur",
                 fontSize = 10.sp,
-                color = TextGray
+                color = Color(0xFF64748B)
             )
         }
     }
@@ -537,7 +537,7 @@ private fun FeatureCard(
 ) {
     Card(
         modifier = modifier
-            .height(158.dp)
+            .height(142.dp)
             .clickable(onClick = onClick),
         colors = CardDefaults.cardColors(containerColor = feature.accent.copy(alpha = 0.12f)),
         shape = RoundedCornerShape(18.dp),
@@ -569,14 +569,14 @@ private fun FeatureCard(
                 }
                 feature.statusLabel?.let { label ->
                     Surface(
-                        color = DarkSurfaceVariant,
+                        color = Color(0xFFEAF3FF),
                         shape = RoundedCornerShape(6.dp)
                     ) {
                         Text(
                             text = label,
                             modifier = Modifier.padding(horizontal = 6.dp, vertical = 4.dp),
                             fontSize = 8.sp,
-                            color = TextGray,
+                            color = Color(0xFF64748B),
                             fontWeight = FontWeight.Bold,
                             maxLines = 1
                         )
@@ -589,7 +589,7 @@ private fun FeatureCard(
                     text = feature.title,
                     fontWeight = FontWeight.Bold,
                     fontSize = 13.sp,
-                    color = TextWhite,
+                    color = Color(0xFF17324D),
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -602,7 +602,7 @@ private fun FeatureCard(
                         text = feature.subtitle,
                         modifier = Modifier.weight(1f),
                         fontSize = 10.sp,
-                        color = TextGray,
+                        color = Color(0xFF64748B),
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -623,7 +623,7 @@ private fun FeatureCard(
 @Composable
 private fun ActivityUnavailableCard(onOpenHistory: () -> Unit) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = DarkSurface),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -645,13 +645,13 @@ private fun ActivityUnavailableCard(onOpenHistory: () -> Unit) {
                     text = "Belum ada riwayat lamaran",
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp,
-                    color = TextWhite
+                    color = Color(0xFF17324D)
                 )
             }
             Text(
                 text = "Riwayat lamaran akan tampil di sini setelah fitur pengiriman tersedia. Aplikasi tidak menampilkan status palsu.",
                 fontSize = 12.sp,
-                color = TextGray
+                color = Color(0xFF64748B)
             )
             TextButton(
                 onClick = onOpenHistory,
