@@ -7,6 +7,10 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.runtime.rememberCoroutineScope
+import com.example.automatesmartbot.data.network.ApiClient
+import kotlinx.coroutines.launch
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -26,6 +30,19 @@ fun KirimLamaranScreen(
     isOnline: Boolean,
     onNavigateProfil: () -> Unit
 ) {
+    val scope = rememberCoroutineScope()
+    var message by remember { mutableStateOf("") }
+    var statusText by remember { mutableStateOf("Memuat status...") }
+    LaunchedEffect(Unit) {
+        statusText = try {
+            val r = ApiClient.apiService.getAutoApplyStatus()
+            if (r.isSuccessful) {
+                val j = org.json.JSONObject(r.body()?.string() ?: "{}")
+                val a = j.optJSONObject("auto_apply")
+                "Gmail: " + (if (j.optBoolean("gmail_connected")) "Terhubung" else "Belum terhubung") + " | Auto Apply: " + (if (a?.optBoolean("enabled") == true) "Aktif" else "Jeda") + " | Terkirim: " + (a?.optJSONObject("counts")?.optInt("sent", 0) ?: 0)
+            } else "Status tidak tersedia (${r.code()})"
+        } catch (e: Exception) { "Koneksi API gagal" }
+    }
     var position by remember { mutableStateOf("") }
     var region by remember { mutableStateOf("") }
     var dailyLimit by remember { mutableStateOf("5") }
@@ -87,12 +104,15 @@ fun KirimLamaranScreen(
                     }
                     if (!isOnline) Text("Offline: sambungkan internet untuk menjalankan pencarian.", color = Color(0xFFF87171), fontSize = 12.sp)
                     Button(
-                        onClick = {},
-                        enabled = false,
+                        onClick = { scope.launch { message = try { val r = ApiClient.apiService.enableAutoApply(); if (r.isSuccessful) "Auto Apply diizinkan" else "Aktivasi ditolak: ${r.code()}" } catch (e: Exception) { "Koneksi API gagal" } } },
+                        enabled = isPro && isOnline && agreed,
                         colors = ButtonDefaults.buttonColors(disabledContainerColor = Color(0xFFD8E9F5), disabledContentColor = Color(0xFF64748B)),
                         modifier = Modifier.fillMaxWidth().height(48.dp),
                         shape = RoundedCornerShape(18.dp)
-                    ) { Text("Aktivasi menunggu integrasi backend") }
+                    ) { Text("Aktifkan Auto Apply") }
+                    Text(statusText, color = Color(0xFF17324D))
+                    TextButton(onClick = { scope.launch { message = try { val r = ApiClient.apiService.pauseAutoApply(); if (r.isSuccessful) { statusText = "Auto Apply: Jeda"; "Auto Apply dijeda" } else "Gagal menjeda: ${r.code()}" } catch (e: Exception) { "Koneksi API gagal" } } }) { Text("Jeda Auto Apply") }
+                    if (message.isNotEmpty()) Text(message, color = Color(0xFF17324D))
                     if (!isPro) TextButton(onClick = onNavigateProfil) { Text("Lihat status PRO di Profil", color = ProGold) }
                 }
             }

@@ -10,6 +10,13 @@ import retrofit2.http.PUT
 import retrofit2.http.Query
 
 interface ApiService {
+    @POST("auto-apply/enable")
+    suspend fun enableAutoApply(): Response<ResponseBody>
+
+    @POST("auto-apply/pause")
+    suspend fun pauseAutoApply(): Response<ResponseBody>
+    @GET("auto-apply/status")
+    suspend fun getAutoApplyStatus(): Response<ResponseBody>
     @GET("health")
     suspend fun getHealth(): Response<ResponseBody>
 
