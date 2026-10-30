@@ -23,7 +23,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.automatesmartbot.data.model.JobFilters
 import com.example.automatesmartbot.ui.viewmodel.JobViewModel
 import com.example.automatesmartbot.util.UrlSafety
 
@@ -38,14 +37,17 @@ fun CariLowonganScreen(
     val isLoading by viewModel.isLoading.collectAsState()
     val errorMessage by viewModel.errorMessage.collectAsState()
 
-    val positions = JobFilters.positions
-    val locations = JobFilters.locations
-
-    var selectedPosition by remember { mutableStateOf(positions.first()) }
+    val locations = listOf("Semua Lokasi Jabodetabek", "Jakarta", "Bogor", "Depok", "Tangerang", "Bekasi")
+    var selectedPosition by remember { mutableStateOf("") }
     var selectedLocation by remember { mutableStateOf(locations.first()) }
 
     fun triggerSearch() {
-        viewModel.fetchJobs(selectedPosition, selectedLocation)
+        viewModel.fetchJobs(
+            positions = selectedPosition.trim().takeIf { it.isNotEmpty() }?.let(::listOf),
+            locations = selectedLocation.takeUnless { it == "Semua Lokasi Jabodetabek" }?.let(::listOf),
+            sources = null,
+            categories = null
+        )
     }
 
     LaunchedEffect(Unit) {
@@ -89,30 +91,26 @@ fun CariLowonganScreen(
             }
 
             // Dropdown Filters Row
-            Row(
+            OutlinedTextField(
+                value = selectedPosition,
+                onValueChange = { selectedPosition = it },
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
+                label = { Text("Posisi / Jabatan") },
+                placeholder = { Text("Semua Posisi") },
+                singleLine = true,
+                trailingIcon = { TextButton(onClick = { triggerSearch() }) { Text("Cari") } }
+            )
+            TextButton(onClick = { selectedPosition = ""; selectedLocation = locations.first(); triggerSearch() }) { Text("Reset pencarian") }
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 FilterDropdown(
-                    label = "Posisi",
-                    selectedOption = selectedPosition,
-                    options = positions,
-                    onSelected = {
-                        selectedPosition = it
-                        triggerSearch()
-                    },
-                    modifier = Modifier.weight(1f)
-                )
-
-                FilterDropdown(
-                    label = "Lokasi",
+                    label = "Lokasi Kerja",
                     selectedOption = selectedLocation,
                     options = locations,
                     onSelected = {
                         selectedLocation = it
                         triggerSearch()
                     },
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.fillMaxWidth()
                 )
             }
 
@@ -154,8 +152,17 @@ fun CariLowonganScreen(
                             verticalArrangement = Arrangement.spacedBy(12.dp),
                             modifier = Modifier.fillMaxSize()
                         ) {
-                            items(jobs) { job ->
-                                Card(
+                            val liveJobs = jobs.filter { it.resultType != "spontaneous" }
+                            if (liveJobs.isNotEmpty()) item { Text("Lowongan LIVE", color = Color(0xFF12CBE8), fontWeight = FontWeight.Bold) }
+                            items(liveJobs) { job ->
+                                JobCard(job, context)
+                            }
+                            if (liveJobs.isEmpty()) item { Text("Belum ada lowongan aktif yang sesuai", color = Color(0xFF94A3B8)) }
+                            if (viewModel.hasMore) item {
+                                Button(onClick = viewModel::loadNextPage, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3B82F6))) { Text("Muat Halaman Berikutnya") }
+                            }
+                            /*
+                            Card(
                                     colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
                                     shape = RoundedCornerShape(12.dp),
                                     modifier = Modifier.fillMaxWidth()
@@ -245,6 +252,7 @@ fun CariLowonganScreen(
                                     }
                                 }
                             }
+                            */
                         }
                     }
                 }
@@ -303,6 +311,30 @@ fun FilterDropdown(
                         expanded = false
                     }
                 )
+            }
+        }
+    }
+}
+
+@Composable
+private fun JobCard(job: com.example.automatesmartbot.data.model.JobsV2Job, context: android.content.Context) {
+    Card(colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)), shape = RoundedCornerShape(12.dp), modifier = Modifier.fillMaxWidth()) {
+        Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(7.dp)) {
+            Text(job.title ?: "Tanpa Judul", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 15.sp)
+            Text("${job.company ?: "Perusahaan"} | ${job.location ?: "Lokasi tidak diketahui"}", color = Color(0xFF94A3B8), fontSize = 12.sp)
+            if (job.resultType == "spontaneous") {
+                Text(job.opportunityLabel ?: "Peluang Lamaran Spontan", color = Color(0xFFFBBF24), fontSize = 11.sp)
+            }
+            val action = job.applicationActions.firstOrNull { UrlSafety.safeHttpUrl(it.url) != null }
+            if (action != null) {
+                Button(onClick = {
+                    val url = UrlSafety.safeHttpUrl(action.url) ?: return@Button
+                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                }, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3B82F6))) {
+                    Text(action.label ?: "Lihat Sumber Resmi", fontSize = 12.sp)
+                }
+            } else {
+                Text("Tidak ada tindakan lamaran terverifikasi.", color = Color(0xFF94A3B8), fontSize = 11.sp)
             }
         }
     }

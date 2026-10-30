@@ -54,6 +54,8 @@ import com.example.automatesmartbot.data.model.UserMeResponse
 import com.example.automatesmartbot.data.repository.AuthRepository
 import com.example.automatesmartbot.data.repository.ProfileSetupRepository
 import com.example.automatesmartbot.ui.components.CvSection
+import com.example.automatesmartbot.ui.theme.ThemeMode
+import com.example.automatesmartbot.ui.theme.ThemePreference
 import kotlinx.coroutines.launch
 
 @Composable
@@ -61,6 +63,7 @@ fun ProfilScreen(
     isOnline: Boolean = true,
     onNavigateLogin: () -> Unit,
     onNavigateEditProfile: () -> Unit,
+    themePreference: ThemePreference,
     authRepository: AuthRepository = remember { AuthRepository() },
     profileRepository: ProfileSetupRepository = remember { ProfileSetupRepository() }
 ) {
@@ -282,6 +285,41 @@ fun ProfilScreen(
                 }
 
                 CvSection()
+
+                AppearanceCard(
+                    selectedMode = themePreference.mode,
+                    onModeSelected = themePreference::selectMode
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) -> Unit) {
+    Card(
+        colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
+        shape = RoundedCornerShape(16.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            Text("Tampilan", fontWeight = FontWeight.Bold, color = Color.White, fontSize = 16.sp)
+            Text("Pilih mode warna Karir Mate.", color = Color(0xFF94A3B8), fontSize = 12.sp)
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                ThemeMode.entries.forEach { mode ->
+                    androidx.compose.material3.FilterChip(
+                        selected = selectedMode == mode,
+                        onClick = { onModeSelected(mode) },
+                        label = { Text(mode.label, maxLines = 1, fontSize = 11.sp) },
+                        colors = androidx.compose.material3.FilterChipDefaults.filterChipColors(
+                            selectedContainerColor = Color(0xFF1267E8),
+                            selectedLabelColor = Color.White
+                        )
+                    )
+                }
             }
         }
     }

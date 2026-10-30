@@ -28,7 +28,7 @@ class DashboardRepository {
                 ?.get("status")
                 ?.takeIf { !it.isJsonNull }
                 ?.asString
-                ?.equals("online", ignoreCase = true) == true
+                ?.let { status -> status.equals("online", ignoreCase = true) || status.equals("ok", ignoreCase = true) } == true
 
             if (!online) {
                 return@withContext Result.success(

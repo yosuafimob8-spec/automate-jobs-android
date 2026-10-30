@@ -16,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.automatesmartbot.ui.theme.Navy
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -42,6 +43,11 @@ fun AppTopBar(
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
+                BrandLogo(
+                    modifier = Modifier
+                        .size(28.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                )
                 Text(
                     text = title,
                     fontWeight = FontWeight.Bold,
@@ -99,7 +105,7 @@ fun AppTopBar(
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = Color(0xFF1B263B),
+            containerColor = Navy,
             titleContentColor = Color.White
         )
     )

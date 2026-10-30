@@ -18,6 +18,9 @@ object ApiClient {
             sessionManager = SessionManager(context.applicationContext)
             retrofit = createRetrofit(baseUrl, sessionManager!!)
             apiService = retrofit.create(ApiService::class.java)
+            jobsV2Api = BuildConfig.JOBS_V2_BASE_URL.takeIf { it.isNotBlank() }
+                ?.let { createJobsV2Api(sessionManager!!) }
+            psychotestApi = createPsychotestApi(sessionManager!!)
         }
     }
 
@@ -52,11 +55,34 @@ object ApiClient {
             .build()
     }
 
+    private fun createJobsV2Api(sm: SessionManager): JobsV2Api {
+        val url = BuildConfig.JOBS_V2_BASE_URL
+        val client = OkHttpClient.Builder()
+            .addInterceptor(AuthInterceptor(sm))
+            .connectTimeout(10, TimeUnit.SECONDS)
+            .readTimeout(210, TimeUnit.SECONDS)
+            .writeTimeout(15, TimeUnit.SECONDS)
+            .build()
+        return Retrofit.Builder().baseUrl(url).client(client)
+            .addConverterFactory(GsonConverterFactory.create()).build().create(JobsV2Api::class.java)
+    }
+
+    private fun createPsychotestApi(sm: SessionManager): PsychotestApi? {
+        if (BuildConfig.PSYCHOTEST_BASE_URL.isBlank()) return null
+        val client = OkHttpClient.Builder().addInterceptor(AuthInterceptor(sm)).connectTimeout(10, TimeUnit.SECONDS).readTimeout(30, TimeUnit.SECONDS).build()
+        return Retrofit.Builder().baseUrl(BuildConfig.PSYCHOTEST_BASE_URL).client(client).addConverterFactory(GsonConverterFactory.create()).build().create(PsychotestApi::class.java)
+    }
+
     private var retrofit: Retrofit = Retrofit.Builder()
         .baseUrl(baseUrl)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
     var apiService: ApiService = retrofit.create(ApiService::class.java)
+        private set
+
+    var jobsV2Api: JobsV2Api? = null
+        private set
+    var psychotestApi: PsychotestApi? = null
         private set
 }

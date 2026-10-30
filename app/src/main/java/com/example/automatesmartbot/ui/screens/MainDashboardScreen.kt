@@ -40,9 +40,10 @@ import com.example.automatesmartbot.ui.screens.auth.ForgotPasswordScreen
 import com.example.automatesmartbot.ui.screens.auth.LoginScreen
 import com.example.automatesmartbot.ui.screens.auth.RegisterScreen
 import com.example.automatesmartbot.ui.viewmodel.DashboardViewModel
+import com.example.automatesmartbot.ui.theme.ThemePreference
 
 @Composable
-fun MainDashboardScreen() {
+fun MainDashboardScreen(themePreference: ThemePreference) {
     val sessionManager = remember { ApiClient.getSessionManager() }
     var startupComplete by remember { mutableStateOf(false) }
     var startDestination by remember { mutableStateOf<String?>(null) }
@@ -63,7 +64,8 @@ fun MainDashboardScreen() {
     MainDashboardContent(
         startDestination = startDestination!!,
         initialSessionToken = initialSessionToken,
-        sessionManager = sessionManager
+        sessionManager = sessionManager,
+        themePreference = themePreference
     )
 }
 
@@ -71,7 +73,8 @@ fun MainDashboardScreen() {
 private fun MainDashboardContent(
     startDestination: String,
     initialSessionToken: String?,
-    sessionManager: SessionManager?
+    sessionManager: SessionManager?,
+    themePreference: ThemePreference
 ) {
     val navController = rememberNavController()
     var sessionToken by remember { mutableStateOf(initialSessionToken) }
@@ -178,7 +181,7 @@ private fun MainDashboardContent(
         Screen.Register.route -> "Daftar Akun"
         Screen.ForgotPassword.route -> "Reset Password"
         Screen.OnboardingProfile.route -> "Setup Profil"
-        else -> "AutoMateSmartBot"
+        else -> "Karir Mate"
     }
 
     val bottomNavRoutes = bottomNavItems.map { it.route }
@@ -210,8 +213,8 @@ private fun MainDashboardContent(
         bottomBar = {
             if (showBottomBar) {
                 NavigationBar(
-                    containerColor = Color(0xFF1B263B),
-                    contentColor = Color.White
+                    containerColor = androidx.compose.material3.MaterialTheme.colorScheme.surface,
+                    contentColor = androidx.compose.material3.MaterialTheme.colorScheme.onSurface
                 ) {
                     bottomNavItems.forEach { screen ->
                         val selected = currentRoute == screen.route
@@ -228,11 +231,11 @@ private fun MainDashboardContent(
                                 }
                             },
                             colors = NavigationBarItemDefaults.colors(
-                                selectedIconColor = Color(0xFF60A5FA),
-                                selectedTextColor = Color(0xFF60A5FA),
-                                unselectedIconColor = Color(0xFF94A3B8),
-                                unselectedTextColor = Color(0xFF94A3B8),
-                                indicatorColor = Color(0xFF22304A)
+                                selectedIconColor = androidx.compose.material3.MaterialTheme.colorScheme.primary,
+                                selectedTextColor = androidx.compose.material3.MaterialTheme.colorScheme.primary,
+                                unselectedIconColor = androidx.compose.material3.MaterialTheme.colorScheme.onSurfaceVariant,
+                                unselectedTextColor = androidx.compose.material3.MaterialTheme.colorScheme.onSurfaceVariant,
+                                indicatorColor = androidx.compose.material3.MaterialTheme.colorScheme.primaryContainer
                             )
                         )
                     }
@@ -275,7 +278,7 @@ private fun MainDashboardContent(
                 CvBuilderScreen()
             }
             composable(Screen.LatihanPsikotes.route) {
-                LatihanPsikotesScreen()
+                LatihanPsikotesScreen(onExit = navigateUpOrDashboard)
             }
             composable(Screen.AiInterview.route) {
                 AiInterviewScreen()
@@ -293,6 +296,7 @@ private fun MainDashboardContent(
                 ProfilScreen(
                     isOnline = isOnline,
                     onNavigateLogin = endSession,
+                    themePreference = themePreference,
                     onNavigateEditProfile = {
                         navController.navigate(Screen.OnboardingProfile.route) {
                             launchSingleTop = true

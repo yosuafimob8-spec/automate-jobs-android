@@ -21,8 +21,10 @@ class JobRepository(private val sessionManager: SessionManager? = ApiClient.getS
             try {
                 val response = ApiClient.apiService.searchJobs(position, location)
                 val body = response.body()
-                if (response.isSuccessful && body != null) {
+                if (response.isSuccessful && body != null && body.success != false) {
                     Result.success(body)
+                } else if (response.isSuccessful) {
+                    Result.failure(Exception("Layanan lowongan tidak dapat memenuhi permintaan. Coba lagi."))
                 } else if (response.code() == 401) {
                     sessionManager?.expireSession()
                     Result.failure(Exception("Sesi Anda berakhir. Silakan masuk kembali."))
