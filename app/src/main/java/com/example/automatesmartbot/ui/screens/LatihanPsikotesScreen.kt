@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -48,11 +49,22 @@ fun LatihanPsikotesScreen(onExit: () -> Unit = {}) {
     val leaderboard by vm.leaderboard.collectAsState()
     var page by remember { mutableStateOf("home") }
     var family by remember { mutableStateOf("all") }
+    var proNotice by remember { mutableStateOf(false) }
+    var freeNotice by remember { mutableStateOf(false) }
+    // Until subscription verification is integrated, never unlock PRO by default.
+    val isPro = false
+    val basicCategories = listOf("logika", "numerik", "matematika", "verbal", "bahasa", "ketelitian", "deret", "pola", "spasial", "gambar", "kepribadian", "twk", "tiu", "tkp")
+    fun basicMode(mode: JsonObject): Boolean {
+        val name = mode.s("title").lowercase()
+        val code = mode.s("test_id").lowercase()
+        return basicCategories.any { it in name || it in code } &&
+            !listOf("simulasi", "cat", "skb", "premium", "pro", "full").any { it in name || it in code }
+    }
+    fun freeEligible(mode: JsonObject): Boolean = basicMode(mode) && mode.n("question_count") in 10..20
 
     LaunchedEffect(Unit) { vm.loadCatalog(); vm.loadExtras() }
     LaunchedEffect(session, result) {
-        if (result != null) page = "result"
-        else if (session != null) page = "exam"
+        if (page == "exam" && result != null) page = "result"
     }
     fun back() {
         page = when (page) {
@@ -62,6 +74,14 @@ fun LatihanPsikotesScreen(onExit: () -> Unit = {}) {
         }
     }
     BackHandler { back() }
+    if (proNotice) AlertDialog(onDismissRequest = { proNotice = false },
+        title = { Text("Fitur PRO") },
+        text = { Text("Simulasi lengkap, statistik, dan peringkat memerlukan langganan PRO yang aktif. Aktivasi belum terhubung.") },
+        confirmButton = { TextButton(onClick = { proNotice = false }) { Text("Mengerti") } })
+    if (freeNotice) AlertDialog(onDismissRequest = { freeNotice = false },
+        title = { Text("Latihan FREE") },
+        text = { Text("Paket FREE hanya mencakup kategori dasar dengan 10–20 soal per sesi. Paket ini belum tersedia di server; silakan pilih kategori lain.") },
+        confirmButton = { TextButton(onClick = { freeNotice = false }) { Text("Mengerti") } })
     Column(Modifier.fillMaxSize().background(Color(0xFFF5F9FC))) {
         // The parent dashboard already draws the app toolbar; do not duplicate it.
         if (loading) LinearProgressIndicator(Modifier.fillMaxWidth(), color = teal)
@@ -84,11 +104,12 @@ fun LatihanPsikotesScreen(onExit: () -> Unit = {}) {
                 item {
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         Shortcut("🕘 Riwayat", Modifier.weight(1f)) { vm.loadExtras(); page = "history" }
-                        Shortcut("📊 Statistik", Modifier.weight(1f)) { vm.loadExtras(); page = "stats" }
-                        Shortcut("🏆 Peringkat", Modifier.weight(1f)) { vm.loadExtras(); page = "leaderboard" }
+                        Shortcut("📊 Statistik 👑", Modifier.weight(1f)) { if (isPro) { vm.loadExtras(); page = "stats" } else proNotice = true }
+                        Shortcut("🏆 Peringkat 👑", Modifier.weight(1f)) { if (isPro) { vm.loadExtras(); page = "leaderboard" } else proNotice = true }
                     }
                 }
-                item { Text("Persiapan hari ini membawa kamu lebih dekat ke karir impian.", style = MaterialTheme.typography.bodySmall, color = ink) }
+                item { Text("FREE: semua kategori dasar • 10–20 soal/sesi • riwayat latihan", style = MaterialTheme.typography.bodySmall, color = ink) }
+                item { Text("PRO: simulasi lengkap, statistik, dan peringkat (belum aktif)", style = MaterialTheme.typography.bodySmall, color = ink) }
             }
             "catalog" -> Column(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp)) {
                 TextButton(onClick = { page = "home" }, contentPadding = PaddingValues(0.dp)) { Text("← Kembali ke Psikotes", color = teal) }
@@ -104,18 +125,23 @@ fun LatihanPsikotesScreen(onExit: () -> Unit = {}) {
                     family == "all" || f == family || (family == "cpns" && f == "skb")
                 }
                 if (visible.isEmpty() && !loading) Text("Belum ada tes tersedia dari server.", color = ink)
+                Text("FREE: kategori dasar 10–20 soal. Kategori lain memerlukan PRO.", color = ink, style = MaterialTheme.typography.bodySmall)
                 LazyVerticalGrid(columns = GridCells.Fixed(2), horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp), contentPadding = PaddingValues(bottom = 12.dp)) {
                     items(visible) { mode ->
                         val title = mode.s("title", "Tes")
                         val icon = testIcon(title)
-                        Card(onClick = { vm.start(mode.s("test_id")) }, modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
+                        Card(onClick = {
+                            if (isPro || freeEligible(mode)) { vm.start(mode.s("test_id")); page = "exam" }
+                            else if (basicMode(mode)) freeNotice = true
+                            else proNotice = true
+                        }, modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
                             Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
                                 Box(Modifier.background(icon.second.copy(alpha = 0.13f), RoundedCornerShape(12.dp)).size(42.dp), contentAlignment = Alignment.Center) {
                                     Text(icon.first, style = MaterialTheme.typography.titleLarge)
                                 }
                                 Text(title, fontWeight = FontWeight.Bold, color = ink, maxLines = 2, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
                                 Text("${mode.n("question_count")} soal  •  ${mode.n("duration_seconds") / 60} menit", color = Color(0xFF58657A), style = MaterialTheme.typography.labelSmall)
-                                Text("Mulai  →", color = teal, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodySmall)
+                                Text(if (freeEligible(mode)) "FREE • Mulai →" else if (basicMode(mode)) "FREE • 10–20 soal saja" else "👑 PRO", color = if (freeEligible(mode)) teal else orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodySmall)
                             }
                         }
                     }
@@ -123,23 +149,37 @@ fun LatihanPsikotesScreen(onExit: () -> Unit = {}) {
             }
             "exam" -> session?.let { ExamPanel(it, questions, vm::answer, vm::submit) }
             "result" -> result?.let { r ->
-                LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    item { Banner("🏆  Kerja bagus!", "Kamu telah menyelesaikan tes psikotes.", listOf(Color(0xFFD8F8FA), Color(0xFFFFE9D8)), true) {} }
+                val maxScore = r.n("max_score").coerceAtLeast(1)
+                val actualScore = (r.n("score") * 100f / maxScore).toInt().coerceIn(0, 100)
+                val total = r.getAsJsonArray("questions")?.size() ?: questions.size
+                val encouragements = when (actualScore) {
+                    in 0..39 -> listOf("🌱 Tetap semangat! Setiap latihan adalah langkah maju.", "💪 Jangan menyerah, kemampuan tumbuh lewat latihan.", "✨ Awal yang baik untuk belajar lebih jauh!")
+                    in 40..59 -> listOf("💪 Terus berlatih, kamu semakin berkembang!", "🌟 Progresmu sudah terlihat. Ayo tingkatkan lagi!", "🚀 Sedikit demi sedikit, hasilmu akan meningkat!")
+                    in 60..79 -> listOf("⭐ Bagus! Pertahankan semangat belajarmu.", "🔥 Hasil yang baik! Masih ada ruang untuk bersinar.", "👏 Kamu berada di jalur yang tepat!")
+                    in 80..94 -> listOf("🏅 Hebat! Kerja kerasmu membuahkan hasil.", "🔥 Luar biasa, terus pertahankan performamu!", "🌟 Kemampuanmu sangat menjanjikan!")
+                    else -> listOf("🏆 Fantastis! Penguasaanmu sangat kuat.", "🎉 Luar biasa! Kamu tampil sangat baik.", "👑 Hasil istimewa, pertahankan prestasimu!")
+                }
+                val encouragement = remember(r, actualScore) { encouragements.random() }
+                LazyColumn(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp), contentPadding = PaddingValues(bottom = 30.dp)) {
+                    item { Banner("🏆  Tes Selesai", "Hasil latihan kamu sudah tersedia.", listOf(Color(0xFFE4F8F7), Color(0xFFFFE8D7)), true) {} }
                     item {
-                        Card(colors = CardDefaults.cardColors(containerColor = Color.White)) {
-                            Column(Modifier.fillMaxWidth().padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                                Text("${r.n("percent")}%", style = MaterialTheme.typography.displayMedium, fontWeight = FontWeight.Bold, color = teal)
-                                Text("Skor ${r.n("score")} dari ${r.n("max_score")}")
+                        Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                            Column(Modifier.fillMaxWidth().padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                                Text(encouragement, color = ink, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, style = MaterialTheme.typography.titleMedium)
+                                Text("NILAI LATIHAN", color = Color(0xFF526176), fontWeight = FontWeight.Bold)
+                                Text("$actualScore", style = MaterialTheme.typography.displayLarge, fontWeight = FontWeight.ExtraBold, color = ink)
+                                Text("dari 100", color = Color(0xFF526176))
+                                LinearProgressIndicator(progress = { actualScore / 100f }, modifier = Modifier.fillMaxWidth().height(10.dp), color = orange, trackColor = Color(0xFFE8EFF4))
+                                Text("Jawaban benar: ${r.n("score")} / $maxScore", color = ink, fontWeight = FontWeight.SemiBold)
+                                Text("Nilai berdasarkan jawaban benar yang dinilai server.", color = Color(0xFF526176), style = MaterialTheme.typography.bodySmall)
                             }
                         }
                     }
-                    item { Text("Pembahasan Jawaban", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
-                    items(r.getAsJsonArray("questions")?.map { it.asJsonObject } ?: emptyList()) { q ->
-                        Info(q.s("prompt"), q.s("explanation", "Pembahasan belum tersedia"))
-                    }
+                    item { Info("📈  Analisis Kemampuan Mendalam  👑 PRO", "Kekuatan, kelemahan, dan rekomendasi latihan personal. Ketuk untuk informasi akses PRO.") }
+                    item { Info("📚  Pembahasan Detail  👑 PRO", "Kunci jawaban dan penjelasan setiap soal tersedia untuk pelanggan PRO.") }
+                    item { Text("Fitur analisis mendalam dan pembahasan detail memerlukan PRO aktif.", color = orange, style = MaterialTheme.typography.bodySmall) }
                     item {
-                        Button(onClick = vm::retryWrong, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Ulangi Soal Salah") }
-                        OutlinedButton(onClick = { page = "home"; vm.loadExtras() }, modifier = Modifier.fillMaxWidth()) { Text("Kembali ke Beranda") }
+                        Button(onClick = { page = "home"; vm.loadExtras() }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Kembali ke Psikotes") }
                     }
                 }
             }
@@ -148,7 +188,7 @@ fun LatihanPsikotesScreen(onExit: () -> Unit = {}) {
                 if (history.isEmpty()) item { Text("Belum ada riwayat.") }
                 items(history) { Info(it.s("title", "Tes"), "Skor: ${it.s("score", "-")}") }
             }
-            "stats" -> Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            "stats" -> if (isPro) Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 TextButton(onClick = { page = "home" }) { Text("← Kembali", color = teal) }
                 stats?.let {
                     Info("Total Tes", it.s("total_tests", "0"))
@@ -156,7 +196,7 @@ fun LatihanPsikotesScreen(onExit: () -> Unit = {}) {
                     Info("Peningkatan", it.s("improvement_percent", "-"))
                 } ?: Text("Belum ada statistik.")
             }
-            "leaderboard" -> LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            "leaderboard" -> if (isPro) LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 item { TextButton(onClick = { page = "home" }) { Text("← Kembali", color = teal) } }
                 if (leaderboard.isEmpty()) item { Text("Belum ada peringkat.") }
                 items(leaderboard) { Info("🏆 ${it.s("alias", "Peserta")}", "Skor: ${it.s("score", "-")}") }
@@ -230,56 +270,54 @@ private fun ExamPanel(session: JsonObject, questions: List<JsonObject>, onAnswer
     val id = session.s("id")
     var index by remember(id) { mutableIntStateOf(0) }
     var remaining by remember(id) { mutableIntStateOf(session.n("remaining_seconds")) }
-    var confirm by remember { mutableStateOf(false) }
+    var confirm by remember(id) { mutableStateOf(false) }
     var submitted by remember(id) { mutableStateOf(false) }
     LaunchedEffect(id) {
         while (remaining > 0) { delay(1000); remaining-- }
         if (!submitted) { submitted = true; onSubmit() }
     }
     val answered = questions.count { it.get("selected_option_id")?.takeUnless { v -> v.isJsonNull } != null }
+    val allAnswered = questions.isNotEmpty() && answered == questions.size
     if (confirm) AlertDialog(
         onDismissRequest = { confirm = false },
-        title = { Text("Kirim ujian?") },
-        text = { Text("Terjawab $answered dari ${questions.size} soal. Kirim jawaban ke server?") },
-        confirmButton = { TextButton(onClick = { confirm = false; if (!submitted) { submitted = true; onSubmit() } }) { Text("Kirim") } },
-        dismissButton = { TextButton(onClick = { confirm = false }) { Text("Batal") } }
+        title = { Text("Selesaikan tes?") },
+        text = { Text("Semua $answered soal sudah dijawab. Kirim untuk melihat nilai?") },
+        confirmButton = { TextButton(onClick = { confirm = false; if (!submitted) { submitted = true; onSubmit() } }) { Text("Selesaikan") } },
+        dismissButton = { TextButton(onClick = { confirm = false }) { Text("Periksa Lagi") } }
     )
-    Column(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Info("⏱  Sisa Waktu", "%02d:%02d".format(remaining / 60, remaining % 60))
-        Text("Soal ${index + 1} dari ${questions.size}", fontWeight = FontWeight.Bold, color = ink)
-        LinearProgressIndicator(progress = { if (questions.isEmpty()) 0f else answered.toFloat() / questions.size }, modifier = Modifier.fillMaxWidth(), color = blue)
+    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Card(shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+            Row(Modifier.fillMaxWidth().padding(18.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                Column { Text("⏱  SISA WAKTU", color = Color(0xFF58657A), style = MaterialTheme.typography.labelMedium); Text("%02d:%02d".format(remaining / 60, remaining % 60), color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
+                Column(horizontalAlignment = Alignment.End) { Text("TERJAWAB", color = Color(0xFF58657A), style = MaterialTheme.typography.labelMedium); Text("$answered/${questions.size}", color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
+            }
+        }
+        Text("Soal ${index + 1} dari ${questions.size}", fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
+        LinearProgressIndicator(progress = { if (questions.isEmpty()) 0f else answered.toFloat() / questions.size }, modifier = Modifier.fillMaxWidth().height(7.dp), color = orange, trackColor = Color(0xFFE3EBF1))
         questions.getOrNull(index)?.let { q ->
-            Card(modifier = Modifier.weight(1f), colors = CardDefaults.cardColors(containerColor = Color.White)) {
-                LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    item { Text(q.s("prompt"), fontWeight = FontWeight.SemiBold, color = ink) }
-                    items(q.getAsJsonArray("options")?.map { it.asJsonObject } ?: emptyList()) { option ->
+            Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Column(Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text(q.s("prompt"), fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
+                    (q.getAsJsonArray("options")?.map { it.asJsonObject } ?: emptyList()).forEach { option ->
                         val selected = q.s("selected_option_id") == option.s("id")
-                        OutlinedButton(
-                            onClick = { onAnswer(q.s("question_id"), option.s("id")) },
-                            modifier = Modifier.fillMaxWidth(),
-                            colors = ButtonDefaults.outlinedButtonColors(containerColor = if (selected) Color(0xFFDDF5FA) else Color.White)
-                        ) { Text(option.s("text"), color = ink) }
+                        Card(onClick = { onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFE8DC) else Color(0xFFF7FAFD)), border = androidx.compose.foundation.BorderStroke(if (selected) 2.dp else 1.dp, if (selected) orange else Color(0xFFD9E3ED))) {
+                            Row(Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 7.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                                RadioButton(selected = selected, onClick = { onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.size(36.dp), colors = RadioButtonDefaults.colors(selectedColor = orange))
+                                Text(option.s("text"), color = ink, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
+                            }
+                        }
                     }
                 }
             }
         }
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            OutlinedButton(onClick = { index-- }, enabled = index > 0, modifier = Modifier.weight(1f)) { Text("← Sebelumnya") }
-            Button(onClick = { index++ }, enabled = index < questions.lastIndex, modifier = Modifier.weight(1f), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Berikutnya →") }
-        }
-        Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(5.dp)) {
-            questions.forEachIndexed { i, question ->
-                val done = question.get("selected_option_id")?.takeUnless { it.isJsonNull } != null
-                val active = i == index
-                Box(
-                    Modifier.size(34.dp).background(if (active) blue else if (done) Color(0xFFB8EFD8) else Color.White, RoundedCornerShape(9.dp))
-                        .border(1.dp, if (active) blue else Color(0xFFE0E6EB), RoundedCornerShape(9.dp))
-                        .clickable { index = i },
-                    contentAlignment = Alignment.Center
-                ) { Text("${i + 1}", color = if (active) Color.White else ink, style = MaterialTheme.typography.labelSmall) }
+        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            OutlinedButton(onClick = { index-- }, enabled = index > 0, modifier = Modifier.weight(1f).heightIn(min = 50.dp)) { Text("← Sebelumnya") }
+            if (index < questions.lastIndex) {
+                Button(onClick = { index++ }, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Selanjutnya →") }
+            } else {
+                Button(onClick = { confirm = true }, enabled = allAnswered && !submitted, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Selesaikan Tes") }
             }
         }
-        Text("Terjawab $answered/${questions.size}", color = Color(0xFF58657A))
-        Button(onClick = { confirm = true }, enabled = questions.isNotEmpty() && !submitted, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = teal)) { Text("Kirim Ujian") }
+        if (index == questions.lastIndex && !allAnswered) Text("Jawab semua soal untuk menyelesaikan tes. Gunakan Sebelumnya untuk memeriksa jawaban.", color = Color(0xFF58657A), style = MaterialTheme.typography.bodySmall)
     }
 }

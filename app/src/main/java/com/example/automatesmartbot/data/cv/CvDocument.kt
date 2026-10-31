@@ -132,7 +132,10 @@ object CvBuilderConstants {
         "minimal_01",
         "minimal_02",
         "minimal_03",
-        "minimal_04"
+        "minimal_04",
+        "ats_09", "ats_10", "modern_07", "modern_08",
+        "graduate_05", "graduate_06", "executive_05", "executive_06",
+        "creative_05", "creative_06", "minimal_05", "minimal_06"
     )
 
     val SECTION_ORDER: List<String> = listOf(

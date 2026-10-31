@@ -1,4 +1,5 @@
 package com.example.automatesmartbot.ui.screens
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.foundation.layout.Box
@@ -73,20 +74,26 @@ private val CvFixedColors = lightColorScheme(
     onSurfaceVariant = Color(0xFF526071),
     surface = Color.White,
     surfaceVariant = Color(0xFFF3F5F8),
-    outline = Color(0xFF8995A5)
+    outline = Color(0xFF8995A5),
+    primary = Color(0xFFFF622B),
+    onPrimary = Color.White,
+    background = Color.White
 )
 
 @Composable
 fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
     MaterialTheme(colorScheme = CvFixedColors) {
+    androidx.compose.runtime.CompositionLocalProvider(androidx.compose.material3.LocalContentColor provides Color(0xFF202938)) {
 
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
     var page by remember { mutableStateOf(0) }
+    var activeSection by remember { mutableStateOf<String?>(null) }
     var jobTitle by remember { mutableStateOf("") }
     var company by remember { mutableStateOf("") }
     var jobDescription by remember { mutableStateOf("") }
     var exportMessage by remember { mutableStateOf("") }
+    var templatePreviewId by remember { mutableStateOf<String?>(null) }
     val pdfPicker = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/pdf")) { uri ->
         if (uri != null) runCatching { CvExporter.exportPdf(context, uri, state.draft) }
             .onSuccess { exportMessage = "PDF berhasil disimpan" }
@@ -101,7 +108,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
     val orange = Color(0xFFFF622B)
     val aqua = Color(0xFF19B9C3)
     val pages = listOf("CV Saya" to 0, "Template" to 1, "CV Analyst" to 4)
-    Column(Modifier.fillMaxSize().background(Color(0xFFF8FBFE))) {
+    Column(Modifier.fillMaxSize().background(Color(0xFFF8FBFE)).imePadding()) {
         Column(Modifier.fillMaxWidth().background(Color.White).padding(16.dp)) {
             Text("KarirMate", color = orange, fontWeight = FontWeight.ExtraBold, fontSize = 21.sp)
             Text("CV Builder", color = navy, fontWeight = FontWeight.Bold, fontSize = 24.sp)
@@ -275,12 +282,35 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                                 val selected = state.templateId == id
                                 Column(Modifier.weight(1f)) {
                                     CvTemplateCard(id, pro, selected, navy, orange, aqua) {
-                                        if (!pro) viewModel.setTemplate(id)
+                                        templatePreviewId = id
                                     }
                                 }
                             }
                             if (pair.size == 1) Spacer(Modifier.weight(1f))
                         }
+                    }
+                    templatePreviewId?.let { previewId ->
+                        val locked = CvTemplateIsPro(previewId)
+                        androidx.compose.material3.AlertDialog(
+                            onDismissRequest = { templatePreviewId = null },
+                            title = { Text("Preview • " + previewId.replace('_', ' ').uppercase(), color = navy) },
+                            text = {
+                                Column(Modifier.fillMaxWidth().height(440.dp).verticalScroll(rememberScrollState())) {
+                                    CvTemplateArtwork(previewId, navy, aqua, Modifier.fillMaxWidth().height(310.dp))
+                                    Spacer(Modifier.height(12.dp))
+                                    Text(if (locked) "Template PRO • preview gratis, penggunaan memerlukan langganan aktif." else "Template gratis • siap dipilih.", color = navy)
+                                    Text("Preview merupakan contoh visual. Ekspor PDF khusus template masih dalam pengembangan.", fontSize = 11.sp, color = Color(0xFF66758D))
+                                }
+                            },
+                            confirmButton = {
+                                Button(onClick = {
+                                    if (!locked) { viewModel.setTemplate(previewId); templatePreviewId = null; page = 2 }
+                                }, enabled = !locked, colors = ButtonDefaults.buttonColors(containerColor = orange)) {
+                                    Text(if (locked) "Perlu PRO" else "Gunakan Template")
+                                }
+                            },
+                            dismissButton = { TextButton(onClick = { templatePreviewId = null }) { Text("Tutup") } }
+                        )
                     }
                     Text("Catatan: desain miniatur adalah ilustrasi. Renderer ekspor khusus tiap template dan aktivasi langganan PRO belum terhubung.",
                         color = Color(0xFF66758D), fontSize = 11.sp)
@@ -288,45 +318,77 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                         colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Lanjut ke Editor") }
                 }
                 2 -> {
-                    Text("Lengkapi Profil CV", color = navy, fontSize = 21.sp, fontWeight = FontWeight.Bold)
-                    Text("Pilih bagian untuk mengisi data. Setiap perubahan bisa disimpan ke CV.", color = Color(0xFF66758D), fontSize = 12.sp)
-                    CvProfileSection("Informasi Pribadi", "👤", "Nama, kontak, lokasi, dan ringkasan", navy, aqua) {
-                        CvBuilderBasicsEditor(state.draft) { viewModel.updateContent(it) }
+                    if (activeSection == null) {
+                        Text("Lengkapi Profil CV", color = navy, fontSize = 21.sp, fontWeight = FontWeight.Bold)
+                        Text("Pilih bagian CV untuk membuka halaman pengisian.", color = Color(0xFF526071))
+                        listOf(
+                            Triple("Informasi Pribadi", "👤", "Nama, kontak, dan domisili"),
+                            Triple("Pendidikan", "🎓", "Sekolah, universitas, dan jurusan"),
+                            Triple("Pengalaman", "💼", "Riwayat pekerjaan dan pencapaian"),
+                            Triple("Keterampilan", "✦", "Keahlian dan kemampuan"),
+                            Triple("Objektif / Ringkasan", "◎", "Profil profesional singkat"),
+                            Triple("Detail Proyek", "🚀", "Portofolio dan hasil proyek"),
+                            Triple("Sertifikasi", "🏅", "Sertifikat dan pelatihan"),
+                            Triple("Referensi", "♧", "Referensi profesional"),
+                            Triple("Tambahkan Bagian Lainnya", "+", "Bahasa, organisasi, dan penghargaan"),
+                            Triple("Ubah Urutan / Edit Judul", "↕", "Susunan bagian CV")
+                        ).forEach { (title, symbol, subtitle) ->
+                            Card(modifier = Modifier.fillMaxWidth().clickable { activeSection = title },
+                                shape = RoundedCornerShape(18.dp),
+                                colors = CardDefaults.cardColors(containerColor = Color.White),
+                                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
+                                Row(Modifier.fillMaxWidth().padding(18.dp),
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                                    Surface(color = Color(0xFFE7F9FA), shape = RoundedCornerShape(12.dp)) {
+                                        Text(symbol, Modifier.padding(12.dp), fontSize = 22.sp, color = navy)
+                                    }
+                                    Column(Modifier.weight(1f)) {
+                                        Text(title, color = navy, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+                                        Text(subtitle, color = Color(0xFF526071), fontSize = 12.sp)
+                                    }
+                                    Text("›", color = aqua, fontSize = 26.sp)
+                                }
+                            }
+                        }
+                        Button(onClick = { if (viewModel.saveDocument()) page = 3 },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = ButtonDefaults.buttonColors(containerColor = orange)) {
+                            Text("Simpan & Lihat CV", color = Color.White)
+                        }
+                    } else {
+                        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                            TextButton(onClick = { activeSection = null }) { Text("‹ Kembali", color = navy) }
+                            Text(activeSection.orEmpty(), color = navy, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                        }
+                        Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(18.dp),
+                            colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                                when (activeSection) {
+                                    "Informasi Pribadi" -> CvBuilderBasicsEditor(state.draft) { viewModel.updateContent(it) }
+                                    "Pendidikan" -> CvEducationSection(state.draft) { viewModel.updateContent(it) }
+                                    "Pengalaman" -> CvBuilderExperienceEditor(state.draft) { viewModel.updateContent(it) }
+                                    "Keterampilan" -> CvBuilderSkillsEditor(state.draft) { viewModel.updateContent(it) }
+                                    "Objektif / Ringkasan" -> OutlinedTextField(
+                                        value = state.draft.summary,
+                                        onValueChange = { value -> viewModel.updateContent { it.copy(summary = value) } },
+                                        label = { Text("Ringkasan profil") }, modifier = Modifier.fillMaxWidth(), minLines = 5)
+                                    "Detail Proyek" -> CvProjectsSection(state.draft) { viewModel.updateContent(it) }
+                                    "Sertifikasi" -> CvCertificationsSection(state.draft) { viewModel.updateContent(it) }
+                                    "Referensi" -> Text("Penyimpanan referensi belum didukung oleh model data CV.", color = navy)
+                                    "Tambahkan Bagian Lainnya" -> Text("Bagian tambahan memerlukan dukungan model data CV.", color = navy)
+                                    "Ubah Urutan / Edit Judul" -> Text("Pengaturan urutan memerlukan dukungan renderer CV.", color = navy)
+                                }
+                            }
+                        }
+                        Button(onClick = { if (viewModel.saveDocument()) activeSection = null },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = ButtonDefaults.buttonColors(containerColor = orange)) {
+                            Icon(Icons.Default.Save, contentDescription = null)
+                            Spacer(Modifier.width(8.dp))
+                            Text("Simpan", color = Color.White)
+                        }
                     }
-                    CvProfileSection("Pendidikan", "🎓", "Sekolah, universitas, dan jurusan", navy, aqua) {
-                        CvEducationSection(state.draft) { viewModel.updateContent(it) }
-                    }
-                    CvProfileSection("Pengalaman", "💼", "Riwayat pekerjaan dan pencapaian", navy, aqua) {
-                        CvBuilderExperienceEditor(state.draft) { viewModel.updateContent(it) }
-                    }
-                    CvProfileSection("Keterampilan", "✦", "Keahlian dan kemampuan", navy, aqua) {
-                        CvBuilderSkillsEditor(state.draft) { viewModel.updateContent(it) }
-                    }
-                    CvProfileSection("Objektif / Ringkasan", "◎", "Profil profesional singkat", navy, aqua) {
-                        OutlinedTextField(value = state.draft.summary, onValueChange = { v -> viewModel.updateContent { it.copy(summary = v) } },
-                            label = { Text("Ringkasan profil") }, placeholder = { Text("Ceritakan keahlian dan tujuan karier Anda") },
-                            modifier = Modifier.fillMaxWidth(), minLines = 3,
-                            colors = androidx.compose.material3.OutlinedTextFieldDefaults.colors(
-                                focusedTextColor = navy, unfocusedTextColor = navy, focusedLabelColor = navy,
-                                unfocusedLabelColor = navy, focusedBorderColor = aqua, unfocusedBorderColor = Color(0xFF9EACC0)))
-                    }
-                    CvProfileSection("Detail Proyek", "🚀", "Portofolio dan hasil proyek", navy, aqua) {
-                        CvProjectsSection(state.draft) { viewModel.updateContent(it) }
-                    }
-                    CvProfileSection("Sertifikasi", "🏅", "Sertifikat dan pelatihan", navy, aqua) {
-                        CvCertificationsSection(state.draft) { viewModel.updateContent(it) }
-                    }
-                    CvProfileSection("Referensi", "♧", "Tambahkan referensi bila diperlukan", navy, aqua) {
-                        Text("Referensi bersifat opsional. Fitur penyimpanan referensi akan ditambahkan pada pembaruan berikutnya.", color = navy)
-                    }
-                    CvProfileSection("Tambahkan Bagian Lainnya", "+", "Bahasa, organisasi, dan penghargaan", navy, aqua) {
-                        Text("Bagian tambahan akan tersedia pada pembaruan berikutnya.", color = navy)
-                    }
-                    CvProfileSection("Ubah Urutan / Edit Judul", "↕", "Atur susunan bagian CV", navy, aqua) {
-                        Text("Pengaturan urutan akan tersedia pada pembaruan berikutnya.", color = navy)
-                    }
-                    Button(onClick = { if (viewModel.saveDocument()) page = 3 }, modifier = Modifier.fillMaxWidth(),
-                        colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Simpan & Lihat CV") }
                 }
                 3 -> {
                     Text("Preview CV", color = navy, fontSize = 20.sp, fontWeight = FontWeight.Bold)
@@ -360,6 +422,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
         }
     }
 
+    }
     }
 }
 
@@ -450,13 +513,6 @@ private fun CvBuilderBasicsEditor(
             value = draft.contact.location,
             onValueChange = { value -> onUpdate { it.copy(contact = it.contact.copy(location = value)) } },
             label = { Text("Domisili") },
-            modifier = Modifier.fillMaxWidth()
-        )
-        OutlinedTextField(
-            value = draft.summary,
-            onValueChange = { value -> onUpdate { it.copy(summary = value) } },
-            label = { Text("Ringkasan profil") },
-            minLines = 3,
             modifier = Modifier.fillMaxWidth()
         )
     }
@@ -680,6 +736,65 @@ private fun CvCertificationsSection(draft: CvContent, onUpdate: ((CvContent) -> 
 }
 
 
+@Composable
+private fun CvTemplateArtwork(id: String, navy: Color, aqua: Color, modifier: Modifier = Modifier) {
+    val group = id.substringBefore('_')
+    val n = id.substringAfterLast('_').toIntOrNull() ?: 1
+    val accent = when (group) {
+        "ats" -> Color(0xFF273750)
+        "modern" -> aqua
+        "graduate" -> Color(0xFF3D80B9)
+        "executive" -> Color(0xFF27325A)
+        "creative" -> Color(0xFFEE7045)
+        else -> Color(0xFF5C6472)
+    }
+    val dark = group == "executive" && n % 3 == 0 || group == "creative" && n % 4 == 0
+    val ink = if (dark) Color.White else navy
+    val bg = if (dark) Color(0xFF202B43) else Color(0xFFF8FAFD)
+    Surface(color = bg, shape = RoundedCornerShape(5.dp), modifier = modifier) {
+        Column(Modifier.padding(10.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
+            if (n % 4 == 3 || group == "creative") Surface(color = accent, modifier = Modifier.fillMaxWidth().height(if (group == "creative") 13.dp else 6.dp)) {}
+            if (n % 5 == 0) Text("CV  /  PORTFOLIO", color = accent, fontSize = 7.sp, letterSpacing = 2.sp)
+            if (group == "executive" || group == "minimal") {
+                Text("NAMA LENGKAP", fontSize = if (group == "executive") 17.sp else 12.sp, color = ink, fontWeight = FontWeight.Bold)
+                Text("PROFESSIONAL PROFILE", fontSize = 7.sp, color = accent)
+            } else {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    if (group == "creative" || n % 4 == 2) Surface(color = accent.copy(alpha = .25f), shape = RoundedCornerShape(30.dp), modifier = Modifier.size(26.dp)) {}
+                    Spacer(Modifier.width(5.dp))
+                    Column {
+                        Text("NAMA LENGKAP", fontSize = 11.sp, color = ink, fontWeight = FontWeight.Bold)
+                        Text("Posisi Profesional • Kota", fontSize = 6.sp, color = ink)
+                    }
+                }
+            }
+            if (group == "ats" || group == "minimal" || n % 4 == 1) {
+                Surface(color = accent.copy(alpha = .7f), modifier = Modifier.fillMaxWidth().height(1.dp)) {}
+                Text("PROFIL", color = accent, fontSize = 8.sp, fontWeight = FontWeight.Bold)
+                Text("Ringkasan pengalaman profesional dan tujuan karier.", color = ink, fontSize = 7.sp)
+                Text("PENGALAMAN KERJA", color = accent, fontSize = 8.sp, fontWeight = FontWeight.Bold)
+                Text("2022–Sekarang  |  Nama Perusahaan\n• Pencapaian dan tanggung jawab utama\n• Mengelola proses dan tim", color = ink, fontSize = 7.sp, lineHeight = 11.sp)
+                Text("PENDIDIKAN", color = accent, fontSize = 8.sp, fontWeight = FontWeight.Bold)
+                Text("Universitas / Sekolah • 2018–2022", color = ink, fontSize = 7.sp)
+            } else {
+                Row(horizontalArrangement = Arrangement.spacedBy(7.dp)) {
+                    val left = if (n % 3 == 0) .60f else .36f
+                    Column(Modifier.weight(left).background(accent.copy(alpha = if (dark) .28f else .15f)).padding(5.dp)) {
+                        Text("KONTAK", fontSize = 8.sp, color = ink, fontWeight = FontWeight.Bold)
+                        Text("Email\nTelepon\nLokasi\n\nKEAHLIAN\n• Analisis\n• Komunikasi\n• Tim", fontSize = 7.sp, lineHeight = 12.sp, color = ink)
+                    }
+                    Column(Modifier.weight(1f-left)) {
+                        Text("PROFIL", fontSize = 8.sp, color = accent, fontWeight = FontWeight.Bold)
+                        Text("Ringkasan pengalaman profesional.", fontSize = 7.sp, color = ink)
+                        Text("PENGALAMAN", fontSize = 8.sp, color = accent, fontWeight = FontWeight.Bold)
+                        Text("2022–Kini\nNama Perusahaan\n• Pencapaian utama\n• Tanggung jawab\n\nPENDIDIKAN\nUniversitas", fontSize = 7.sp, lineHeight = 12.sp, color = ink)
+                    }
+                }
+            }
+        }
+    }
+}
+
 // Gallery preview only. The existing exporter is intentionally untouched.
 private fun CvTemplateIsPro(id: String): Boolean =
     id.substringAfterLast('_').toIntOrNull()?.let { it >= 4 } ?: false
@@ -701,39 +816,7 @@ private fun CvTemplateCard(id: String, pro: Boolean, selected: Boolean, navy: Co
         border = androidx.compose.foundation.BorderStroke(if (selected) 2.dp else 1.dp, if (selected) aqua else Color(0xFFE0E6EF)),
         elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)) {
         Column(Modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-            Surface(color = Color(0xFFF8FAFD), shape = RoundedCornerShape(5.dp), modifier = Modifier.fillMaxWidth().height(190.dp)) {
-                Column(Modifier.padding(9.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
-                    if (index % 3 == 0) Surface(color = accent, modifier = Modifier.fillMaxWidth().height(9.dp)) {}
-                    Text("NAMA LENGKAP", fontSize = 9.sp, fontWeight = FontWeight.Bold, color = accent)
-                    Text("Posisi Profesional • Kota", fontSize = 6.sp, color = navy)
-                    Surface(color = accent.copy(alpha = .85f), modifier = Modifier.fillMaxWidth().height(2.dp)) {}
-                    if (index % 2 == 0) {
-                        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                            Surface(color = accent.copy(alpha = .17f), modifier = Modifier.weight(.38f).height(135.dp)) {
-                                Column(Modifier.padding(5.dp)) {
-                                    Text("KONTAK", fontSize = 7.sp, fontWeight = FontWeight.Bold, color = accent)
-                                    Text("Email\nTelepon\nAlamat\n\nSKILL\n• Komunikasi\n• Analisis\n• Tim", fontSize = 6.sp, lineHeight = 10.sp, color = navy)
-                                }
-                            }
-                            Column(Modifier.weight(.62f)) {
-                                Text("PROFIL", fontSize = 7.sp, fontWeight = FontWeight.Bold, color = accent)
-                                Text("Ringkasan pengalaman dan tujuan karier.", fontSize = 6.sp, lineHeight = 9.sp, color = navy)
-                                Text("PENGALAMAN", fontSize = 7.sp, fontWeight = FontWeight.Bold, color = accent)
-                                Text("2022–Kini\nNama Perusahaan\n• Pencapaian utama\n• Tanggung jawab\n\nPENDIDIKAN\nUniversitas", fontSize = 6.sp, lineHeight = 10.sp, color = navy)
-                            }
-                        }
-                    } else {
-                        Text("PROFIL", fontSize = 7.sp, fontWeight = FontWeight.Bold, color = accent)
-                        Text("Ringkasan pengalaman dan tujuan karier profesional.", fontSize = 6.sp, color = navy)
-                        Surface(color = accent.copy(alpha = .6f), modifier = Modifier.fillMaxWidth().height(1.dp)) {}
-                        Text("PENGALAMAN KERJA", fontSize = 7.sp, fontWeight = FontWeight.Bold, color = accent)
-                        Text("2022–Sekarang  •  Nama Perusahaan\n• Pencapaian dan kontribusi utama\n• Mengelola proses dan tim", fontSize = 6.sp, lineHeight = 10.sp, color = navy)
-                        Text("PENDIDIKAN", fontSize = 7.sp, fontWeight = FontWeight.Bold, color = accent)
-                        Text("Universitas / Sekolah\n2018–2022", fontSize = 6.sp, lineHeight = 10.sp, color = navy)
-                        Text("KETERAMPILAN", fontSize = 7.sp, fontWeight = FontWeight.Bold, color = accent)
-                    }
-                }
-            }
+            CvTemplateArtwork(id, navy, aqua, Modifier.fillMaxWidth().height(190.dp))
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween,
                 modifier = Modifier.fillMaxWidth()) {
                 Text(id.replace('_', ' ').uppercase(), fontSize = 9.sp, color = navy, fontWeight = FontWeight.Bold,
@@ -750,7 +833,8 @@ private fun CvTemplateCard(id: String, pro: Boolean, selected: Boolean, navy: Co
 }
 
 
-// KarirMate CV Analyst V2.5 — analisis lokal berbasis CvAtsChecker, bukan AI jarak jauh.
+// CV Analyze V2.6: separate dashboard, upload, result, and history screens.
+// The existing local checker analyzes the current CV draft, not external PDFs.
 @Composable
 private fun KarirMateAnalystV25(
     state: CvBuilderUiState,
@@ -765,94 +849,161 @@ private fun KarirMateAnalystV25(
 ) {
     val navy = Color(0xFF102650)
     val orange = Color(0xFFFF622B)
-    val aqua = Color(0xFF19C5CA)
-    val context = LocalContext.current
-    var selectedFile by remember { mutableStateOf<String?>(null) }
-    var expandedIssues by remember { mutableStateOf(true) }
+    val blue = Color(0xFF2468D9)
+    val muted = Color(0xFF64748B)
+    var screen by remember { mutableStateOf("home") }
+    var chosenFile by remember { mutableStateOf<String?>(null) }
+    var showAll by remember { mutableStateOf(false) }
     val picker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-        if (uri != null) {
-            selectedFile = uri.lastPathSegment ?: "Dokumen dipilih"
+        if (uri != null) chosenFile = uri.lastPathSegment ?: "PDF dipilih"
+    }
+    val report = state.ats
+    val keywords = state.keyword
+    @Composable
+    fun SectionCard(content: @Composable androidx.compose.foundation.layout.ColumnScope.() -> Unit) {
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            shape = RoundedCornerShape(20.dp),
+            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        ) {
+            Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp), content = content)
         }
     }
-    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Card(colors = CardDefaults.cardColors(containerColor = Color.White),
-            shape = RoundedCornerShape(18.dp), elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)) {
-            Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                Text("Sumber CV", color = navy, fontWeight = FontWeight.Bold, fontSize = 17.sp)
-                Text("CV Saya • Dokumen yang sedang dibuka", color = navy, fontSize = 13.sp)
-                OutlinedButton(onClick = { picker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document")) },
-                    modifier = Modifier.fillMaxWidth()) { Text("＋ Pilih PDF / DOCX dari HP", color = navy) }
-                if (selectedFile != null) {
-                    Text("File dipilih: $selectedFile", color = navy, fontSize = 12.sp)
-                    Text("Analisis file eksternal belum aktif. Skor di bawah hanya menghitung data CV Saya, bukan file yang dipilih.",
-                        color = orange, fontSize = 12.sp)
-                }
-            }
+    Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
+        if (screen != "home") {
+            TextButton(onClick = { screen = "home" }) { Text("← Kembali ke CV Analyze", color = navy) }
         }
-        Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
-            Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                Text("Cocokkan dengan Lowongan", color = navy, fontWeight = FontWeight.Bold, fontSize = 17.sp)
-                OutlinedTextField(jobTitle, onJobTitleChange, label = { Text("Posisi yang dilamar") }, modifier = Modifier.fillMaxWidth())
-                OutlinedTextField(company, onCompanyChange, label = { Text("Nama perusahaan (opsional)") }, modifier = Modifier.fillMaxWidth())
-                OutlinedTextField(jobDescription, onJobDescriptionChange, label = { Text("Tempel deskripsi lowongan") }, minLines = 4, modifier = Modifier.fillMaxWidth())
-                Button(onClick = onRun, enabled = !state.isAnalyzing, modifier = Modifier.fillMaxWidth(),
-                    colors = ButtonDefaults.buttonColors(containerColor = orange)) {
-                    Text(if (state.isAnalyzing) "Sedang memeriksa..." else "Analisis CV Saya")
-                }
-            }
-        }
-        state.ats?.let { report ->
-            Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp),
-                elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)) {
-                Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(9.dp)) {
-                    Text("Skor Kesiapan ATS", color = navy, fontWeight = FontWeight.Bold, fontSize = 18.sp)
-                    Text("${report.score}/100", color = if (report.score >= 75) aqua else orange,
-                        fontSize = 40.sp, fontWeight = FontWeight.Bold)
-                    androidx.compose.material3.LinearProgressIndicator(
-                        progress = { report.score.coerceIn(0,100) / 100f },
-                        modifier = Modifier.fillMaxWidth().height(9.dp),
-                        color = if (report.score >= 75) aqua else orange,
-                        trackColor = Color(0xFFE9EDF3)
-                    )
-                    Text("Estimasi berdasarkan pemeriksaan struktur dan isi CV; bukan skor resmi ATS perusahaan.",
-                        color = Color(0xFF66758D), fontSize = 12.sp)
-                    Text("${report.stats.words} kata • ${report.stats.bullets} poin pengalaman • ${report.stats.quantified} pencapaian terukur",
-                        color = navy, fontSize = 12.sp)
-                }
-            }
-            Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
-                Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("Kekuatan CV (${report.passes.size})", color = navy, fontWeight = FontWeight.Bold)
-                    report.passes.take(8).forEach { item -> Text("✓ ${item.title}", color = navy, fontSize = 13.sp) }
-                }
-            }
-            Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
-                Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    androidx.compose.material3.TextButton(onClick = { expandedIssues = !expandedIssues }) {
-                        Text("Rekomendasi Perbaikan (${report.issues.size}) ${if (expandedIssues) "⌃" else "⌄"}", color = navy, fontWeight = FontWeight.Bold)
+        when (screen) {
+            "home" -> {
+                Text("CV ATS Analyzer", color = navy, fontSize = 24.sp, fontWeight = FontWeight.Bold)
+                SectionCard {
+                    Text("SKOR ATS TERAKHIR", color = muted, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                    if (report != null) {
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(20.dp)) {
+                            androidx.compose.material3.CircularProgressIndicator(
+                                progress = { report.score.coerceIn(0, 100) / 100f },
+                                modifier = Modifier.size(84.dp), color = blue, strokeWidth = 9.dp
+                            )
+                            Column {
+                                Text("${report.score}/100", color = navy, fontSize = 29.sp, fontWeight = FontWeight.Bold)
+                                Text("Skor kesiapan CV Saya", color = muted, fontSize = 12.sp)
+                            }
+                        }
+                        Button(onClick = { screen = "result" }, colors = ButtonDefaults.buttonColors(containerColor = blue),
+                            modifier = Modifier.fillMaxWidth()) { Text("Lihat Hasil Analisis") }
+                    } else {
+                        Text("Belum ada analisis CV", color = navy)
+                        Text("Analisis CV Saya untuk melihat skor dan rekomendasi.", color = muted, fontSize = 12.sp)
                     }
-                    if (expandedIssues) report.issues.forEach { issue ->
-                        Text("• ${issue.title}", color = orange, fontWeight = FontWeight.SemiBold)
-                        Text(issue.detail, color = navy, fontSize = 12.sp)
+                }
+                SectionCard {
+                    Text("Analisis CV Baru", color = navy, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                    Text("Periksa struktur CV dan kecocokan kata kunci lowongan.", color = muted, fontSize = 13.sp)
+                    Button(onClick = { screen = "upload" }, modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Mulai Analisis →") }
+                }
+                SectionCard {
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                        Text("Riwayat Terbaru", color = navy, fontWeight = FontWeight.Bold)
+                        TextButton(onClick = { screen = "history" }) { Text("Lihat Semua", color = blue) }
                     }
-                    if (report.issues.isEmpty()) Text("Tidak ada masalah yang terdeteksi oleh pemeriksa lokal.", color = navy)
+                    if (report == null) Text("Belum ada hasil analisis tersimpan.", color = muted)
+                    else Text("CV Saya  •  Skor ${report.score}/100", color = navy)
+                }
+            }
+            "upload" -> {
+                Text("Analisis CV", color = navy, fontSize = 23.sp, fontWeight = FontWeight.Bold)
+                SectionCard {
+                    Text("Upload CV", color = navy, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                    OutlinedButton(onClick = { picker.launch(arrayOf("application/pdf")) },
+                        modifier = Modifier.fillMaxWidth().height(94.dp)) {
+                        Text("↑  Pilih PDF dari HP", color = blue, fontWeight = FontWeight.Bold)
+                    }
+                    if (chosenFile != null) {
+                        Text("Dipilih: $chosenFile", color = navy, fontSize = 12.sp)
+                        Text("Analisis isi PDF eksternal belum tersedia. Untuk sekarang, skor hanya berasal dari data CV Saya.",
+                            color = orange, fontSize = 12.sp)
+                    }
+                    Text("Cocokkan dengan Lowongan (opsional)", color = navy, fontWeight = FontWeight.Bold)
+                    OutlinedTextField(jobTitle, onJobTitleChange, label = { Text("Posisi pekerjaan") }, modifier = Modifier.fillMaxWidth())
+                    OutlinedTextField(company, onCompanyChange, label = { Text("Perusahaan") }, modifier = Modifier.fillMaxWidth())
+                    OutlinedTextField(jobDescription, onJobDescriptionChange, label = { Text("Deskripsi lowongan") },
+                        modifier = Modifier.fillMaxWidth(), minLines = 3)
+                    Button(onClick = { onRun(); screen = "result" }, enabled = !state.isAnalyzing,
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.buttonColors(containerColor = blue)) {
+                        Text(if (state.isAnalyzing) "Menganalisis..." else "Analisis CV Saya Sekarang")
+                    }
+                }
+                Text("PARAMETER PEMERIKSAAN", color = muted, fontWeight = FontWeight.Bold)
+                listOf("Skor ATS" to "Struktur dan kelengkapan CV",
+                    "Keyword Match" to "Kecocokan dengan deskripsi lowongan",
+                    "Formatting" to "Keterbacaan dan susunan informasi").forEach { (title, detail) ->
+                    SectionCard { Text(title, color = navy, fontWeight = FontWeight.Bold); Text(detail, color = muted) }
+                }
+            }
+            "result" -> {
+                Text("Hasil Analisis", color = navy, fontSize = 24.sp, fontWeight = FontWeight.Bold)
+                if (report == null) {
+                    SectionCard {
+                        Text(if (state.isAnalyzing) "Sedang menganalisis CV..." else "Belum ada hasil analisis.", color = navy)
+                        if (!state.isAnalyzing) OutlinedButton(onClick = { screen = "upload" }) { Text("Mulai Analisis") }
+                    }
+                } else {
+                    SectionCard {
+                        Text("SKOR KESIAPAN ATS", color = muted, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                        Text("${report.score}/100", color = blue, fontWeight = FontWeight.Bold, fontSize = 40.sp)
+                        androidx.compose.material3.LinearProgressIndicator(
+                            progress = { report.score.coerceIn(0,100) / 100f },
+                            modifier = Modifier.fillMaxWidth().height(9.dp), color = blue,
+                            trackColor = Color(0xFFE9EDF3))
+                        Text("Estimasi pemeriksaan lokal, bukan skor resmi ATS perusahaan.", color = muted, fontSize = 12.sp)
+                        Text("${report.stats.words} kata • ${report.stats.bullets} poin • ${report.stats.quantified} pencapaian terukur",
+                            color = navy, fontSize = 12.sp)
+                    }
+                    SectionCard {
+                        Text("Skills & Keywords", color = navy, fontWeight = FontWeight.Bold, fontSize = 19.sp)
+                        if (keywords == null || jobDescription.isBlank()) {
+                            Text("Masukkan deskripsi lowongan untuk membandingkan kata kunci.", color = muted)
+                        } else {
+                            Text("Kecocokan kata kunci: ${(keywords.coverage * 100).toInt()}%", color = blue, fontWeight = FontWeight.Bold)
+                            Text("✓ Kata kunci cocok", color = Color(0xFF16805B), fontWeight = FontWeight.Bold)
+                            Text(keywords.matched.joinToString(" • ").ifBlank { "Belum ada" }, color = navy)
+                            Text("⚠ Kata kunci belum ditemukan", color = orange, fontWeight = FontWeight.Bold)
+                            Text(keywords.missing.joinToString(" • ").ifBlank { "Tidak ada" }, color = navy)
+                        }
+                    }
+                    SectionCard {
+                        Text("Kekuatan CV", color = navy, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                        report.passes.forEach { Text("✓ ${it.title}", color = navy) }
+                        if (report.passes.isEmpty()) Text("Belum ada poin yang terdeteksi.", color = muted)
+                    }
+                    SectionCard {
+                        Text("Rekomendasi Perbaikan", color = navy, fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                        report.issues.forEach {
+                            Text("• ${it.title}", color = orange, fontWeight = FontWeight.Bold)
+                            Text(it.detail, color = navy, fontSize = 13.sp)
+                        }
+                        if (report.issues.isEmpty()) Text("Tidak ada masalah yang terdeteksi.", color = muted)
+                    }
+                    Button(onClick = onEdit, modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Perbaiki CV di Editor") }
+                }
+            }
+            "history" -> {
+                Text("Riwayat Analisis", color = navy, fontSize = 24.sp, fontWeight = FontWeight.Bold)
+                SectionCard {
+                    if (report == null) Text("Belum ada riwayat.", color = muted)
+                    else {
+                        Text("Hasil terakhir • CV Saya", color = navy, fontWeight = FontWeight.Bold)
+                        Text("Skor ATS: ${report.score}/100", color = blue)
+                        OutlinedButton(onClick = { screen = "result" }) { Text("Lihat Hasil") }
+                    }
+                    Text("Riwayat analisis permanen belum tersedia. Hasil terakhir ditampilkan selama sesi ini.",
+                        color = muted, fontSize = 12.sp)
                 }
             }
         }
-        state.keyword?.let { keywords ->
-            Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
-                Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("Kecocokan Kata Kunci", color = navy, fontWeight = FontWeight.Bold, fontSize = 17.sp)
-                    Text("${(keywords.coverage * 100).toInt()}%", color = aqua, fontWeight = FontWeight.Bold, fontSize = 28.sp)
-                    Text("Cocok: ${keywords.matched.joinToString().ifBlank { "Belum ditemukan" }}", color = navy, fontSize = 13.sp)
-                    Text("Belum ditemukan: ${keywords.missing.joinToString().ifBlank { "Tidak ada" }}", color = orange, fontSize = 13.sp)
-                    if (jobDescription.isBlank()) Text("Isi deskripsi lowongan agar pencocokan kata kunci bermakna.", color = navy, fontSize = 12.sp)
-                }
-            }
-        }
-        Button(onClick = onEdit, modifier = Modifier.fillMaxWidth(),
-            colors = ButtonDefaults.buttonColors(containerColor = aqua)) { Text("Perbaiki CV di Editor", color = navy) }
-        Text("Penyimpanan riwayat analisis dan analisis AI berbasis server belum tersedia pada versi ini.",
-            color = Color(0xFF66758D), fontSize = 11.sp)
     }
 }
