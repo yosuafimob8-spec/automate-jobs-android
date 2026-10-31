@@ -249,11 +249,43 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                         colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Lanjut Isi CV") }
                 }
                 2 -> {
-                    Text("Lengkapi Data CV", color = navy, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                    CvBuilderBasicsEditor(state.draft) { viewModel.updateContent(it) }
-                    CvBuilderExperienceEditor(state.draft) { viewModel.updateContent(it) }
-                    CvBuilderSkillsEditor(state.draft) { viewModel.updateContent(it) }
-                    CvExtraEditor(state.draft) { viewModel.updateContent(it) }
+                    Text("Lengkapi Profil CV", color = navy, fontSize = 21.sp, fontWeight = FontWeight.Bold)
+                    Text("Pilih bagian untuk mengisi data. Setiap perubahan bisa disimpan ke CV.", color = Color(0xFF66758D), fontSize = 12.sp)
+                    CvProfileSection("Informasi Pribadi", "👤", "Nama, kontak, lokasi, dan ringkasan", navy, aqua) {
+                        CvBuilderBasicsEditor(state.draft) { viewModel.updateContent(it) }
+                    }
+                    CvProfileSection("Pendidikan", "🎓", "Sekolah, universitas, dan jurusan", navy, aqua) {
+                        CvEducationSection(state.draft) { viewModel.updateContent(it) }
+                    }
+                    CvProfileSection("Pengalaman", "💼", "Riwayat pekerjaan dan pencapaian", navy, aqua) {
+                        CvBuilderExperienceEditor(state.draft) { viewModel.updateContent(it) }
+                    }
+                    CvProfileSection("Keterampilan", "✦", "Keahlian dan kemampuan", navy, aqua) {
+                        CvBuilderSkillsEditor(state.draft) { viewModel.updateContent(it) }
+                    }
+                    CvProfileSection("Objektif / Ringkasan", "◎", "Profil profesional singkat", navy, aqua) {
+                        OutlinedTextField(value = state.draft.summary, onValueChange = { v -> viewModel.updateContent { it.copy(summary = v) } },
+                            label = { Text("Ringkasan profil") }, placeholder = { Text("Ceritakan keahlian dan tujuan karier Anda") },
+                            modifier = Modifier.fillMaxWidth(), minLines = 3,
+                            colors = androidx.compose.material3.OutlinedTextFieldDefaults.colors(
+                                focusedTextColor = navy, unfocusedTextColor = navy, focusedLabelColor = navy,
+                                unfocusedLabelColor = navy, focusedBorderColor = aqua, unfocusedBorderColor = Color(0xFF9EACC0)))
+                    }
+                    CvProfileSection("Detail Proyek", "🚀", "Portofolio dan hasil proyek", navy, aqua) {
+                        CvProjectsSection(state.draft) { viewModel.updateContent(it) }
+                    }
+                    CvProfileSection("Sertifikasi", "🏅", "Sertifikat dan pelatihan", navy, aqua) {
+                        CvCertificationsSection(state.draft) { viewModel.updateContent(it) }
+                    }
+                    CvProfileSection("Referensi", "♧", "Tambahkan referensi bila diperlukan", navy, aqua) {
+                        Text("Referensi bersifat opsional. Fitur penyimpanan referensi akan ditambahkan pada pembaruan berikutnya.", color = navy)
+                    }
+                    CvProfileSection("Tambahkan Bagian Lainnya", "+", "Bahasa, organisasi, dan penghargaan", navy, aqua) {
+                        Text("Bagian tambahan akan tersedia pada pembaruan berikutnya.", color = navy)
+                    }
+                    CvProfileSection("Ubah Urutan / Edit Judul", "↕", "Atur susunan bagian CV", navy, aqua) {
+                        Text("Pengaturan urutan akan tersedia pada pembaruan berikutnya.", color = navy)
+                    }
                     Button(onClick = { if (viewModel.saveDocument()) page = 3 }, modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Simpan & Lihat CV") }
                 }
@@ -541,4 +573,59 @@ private fun CvBuilderCoverLetterPanel(
         }
         state.coverLetter?.let { Text(it.content) }
     }
+}
+
+
+@Composable
+private fun CvProfileSection(title: String, symbol: String, subtitle: String, navy: Color, aqua: Color, content: @Composable () -> Unit) {
+    var expanded by remember { mutableStateOf(false) }
+    Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(18.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)) {
+        Column {
+            Row(modifier = Modifier.fillMaxWidth().clickable { expanded = !expanded }.padding(16.dp),
+                verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                Surface(color = Color(0xFFE7F9FA), shape = RoundedCornerShape(12.dp)) {
+                    Text(symbol, modifier = Modifier.padding(12.dp), fontSize = 22.sp, color = navy)
+                }
+                Column(Modifier.weight(1f)) {
+                    Text(title, color = navy, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                    Text(subtitle, color = Color(0xFF687991), fontSize = 11.sp)
+                }
+                Text(if (expanded) "⌃" else "⌄", color = aqua, fontSize = 24.sp)
+            }
+            androidx.compose.animation.AnimatedVisibility(visible = expanded) {
+                Column(Modifier.fillMaxWidth().padding(start = 16.dp, end = 16.dp, bottom = 16.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)) { content() }
+            }
+        }
+    }
+}
+
+@Composable
+private fun CvEducationSection(draft: CvContent, onUpdate: ((CvContent) -> CvContent) -> Unit) {
+    draft.education.forEachIndexed { i, item ->
+        OutlinedTextField(item.school, { value -> onUpdate { c -> c.copy(education = c.education.mapIndexed { j, e -> if (i == j) e.copy(school = value) else e }) } }, label = { Text("Sekolah / Universitas") }, modifier = Modifier.fillMaxWidth())
+        OutlinedTextField(item.degree, { value -> onUpdate { c -> c.copy(education = c.education.mapIndexed { j, e -> if (i == j) e.copy(degree = value) else e }) } }, label = { Text("Jenjang pendidikan") }, modifier = Modifier.fillMaxWidth())
+        OutlinedButton(onClick = { onUpdate { it.copy(education = it.education.filterIndexed { j, _ -> i != j }) } }) { Text("Hapus pendidikan") }
+    }
+    OutlinedButton(onClick = { onUpdate { it.copy(education = it.education + com.example.automatesmartbot.data.cv.CvEducation(id = System.nanoTime().toString())) } }) { Text("+ Tambah Pendidikan") }
+}
+
+@Composable
+private fun CvProjectsSection(draft: CvContent, onUpdate: ((CvContent) -> CvContent) -> Unit) {
+    draft.projects.forEachIndexed { i, item ->
+        OutlinedTextField(item.name, { value -> onUpdate { c -> c.copy(projects = c.projects.mapIndexed { j, e -> if (i == j) e.copy(name = value) else e }) } }, label = { Text("Nama proyek") }, modifier = Modifier.fillMaxWidth())
+        OutlinedTextField(item.tech, { value -> onUpdate { c -> c.copy(projects = c.projects.mapIndexed { j, e -> if (i == j) e.copy(tech = value) else e }) } }, label = { Text("Teknologi / keterampilan") }, modifier = Modifier.fillMaxWidth())
+    }
+    OutlinedButton(onClick = { onUpdate { it.copy(projects = it.projects + com.example.automatesmartbot.data.cv.CvProject(id = System.nanoTime().toString())) } }) { Text("+ Tambah Proyek") }
+}
+
+@Composable
+private fun CvCertificationsSection(draft: CvContent, onUpdate: ((CvContent) -> CvContent) -> Unit) {
+    draft.certifications.forEachIndexed { i, item ->
+        OutlinedTextField(item.name, { value -> onUpdate { c -> c.copy(certifications = c.certifications.mapIndexed { j, e -> if (i == j) e.copy(name = value) else e }) } }, label = { Text("Nama sertifikat") }, modifier = Modifier.fillMaxWidth())
+        OutlinedTextField(item.issuer, { value -> onUpdate { c -> c.copy(certifications = c.certifications.mapIndexed { j, e -> if (i == j) e.copy(issuer = value) else e }) } }, label = { Text("Penerbit") }, modifier = Modifier.fillMaxWidth())
+    }
+    OutlinedButton(onClick = { onUpdate { it.copy(certifications = it.certifications + com.example.automatesmartbot.data.cv.CvCertification(id = System.nanoTime().toString())) } }) { Text("+ Tambah Sertifikasi") }
 }
