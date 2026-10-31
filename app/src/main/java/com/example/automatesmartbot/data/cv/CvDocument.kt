@@ -103,10 +103,36 @@ object CvBuilderConstants {
     const val TEMPLATE_SENIOR = "senior"
 
     val HTML_TEMPLATE_IDS: List<String> = listOf(
-        TEMPLATE_STANDARD,
-        TEMPLATE_STUDENT,
-        TEMPLATE_COMBINATION,
-        TEMPLATE_SENIOR
+        "ats_01",
+        "ats_02",
+        "ats_03",
+        "ats_04",
+        "ats_05",
+        "ats_06",
+        "ats_07",
+        "ats_08",
+        "modern_01",
+        "modern_02",
+        "modern_03",
+        "modern_04",
+        "modern_05",
+        "modern_06",
+        "graduate_01",
+        "graduate_02",
+        "graduate_03",
+        "graduate_04",
+        "executive_01",
+        "executive_02",
+        "executive_03",
+        "executive_04",
+        "creative_01",
+        "creative_02",
+        "creative_03",
+        "creative_04",
+        "minimal_01",
+        "minimal_02",
+        "minimal_03",
+        "minimal_04"
     )
 
     val SECTION_ORDER: List<String> = listOf(

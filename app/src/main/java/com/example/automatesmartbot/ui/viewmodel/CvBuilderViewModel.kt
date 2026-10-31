@@ -106,22 +106,24 @@ class CvBuilderViewModel(application: Application) : AndroidViewModel(applicatio
         val current = _state.value
         val updated = transform(current.draft)
         val document = current.drafts.firstOrNull { it.id == current.activeId }
-        if (document != null) {
-            val next = document.copy(content = updated, updatedAt = System.currentTimeMillis())
-            draftStore.save(next)
-        }
+        val next = document?.copy(content = updated, templateId = current.templateId, updatedAt = System.currentTimeMillis())
+        if (next != null) draftStore.save(next)
         _state.value = current.copy(
-            draft = updated,
-            style = updated.style,
-            latexStyle = updated.latexStyle,
-            saveState = null
+            drafts = if (next == null) current.drafts else current.drafts.map { if (it.id == next.id) next else it },
+            draft = updated, style = updated.style, latexStyle = updated.latexStyle, saveState = "saved"
         )
     }
 
     fun setTemplate(id: String) {
         if (id !in CvBuilderConstants.HTML_TEMPLATE_IDS) return
         val current = _state.value
-        _state.value = current.copy(templateId = id, saveState = null)
+        val document = current.drafts.firstOrNull { it.id == current.activeId }
+        val next = document?.copy(templateId = id, updatedAt = System.currentTimeMillis())
+        if (next != null) draftStore.save(next)
+        _state.value = current.copy(
+            templateId = id, saveState = "saved",
+            drafts = if (next == null) current.drafts else current.drafts.map { if (it.id == next.id) next else it }
+        )
     }
 
     fun setLatexStyle(id: String) {
