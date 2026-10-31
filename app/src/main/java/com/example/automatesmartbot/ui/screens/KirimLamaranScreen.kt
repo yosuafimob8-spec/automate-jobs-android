@@ -33,12 +33,15 @@ fun KirimLamaranScreen(
     val scope = rememberCoroutineScope()
     var message by remember { mutableStateOf("") }
     var statusText by remember { mutableStateOf("Memuat status...") }
+    var autoApplyEnabled by remember { mutableStateOf(false) }
+    var isProcessing by remember { mutableStateOf(false) }
     LaunchedEffect(Unit) {
         statusText = try {
             val r = ApiClient.apiService.getAutoApplyStatus()
             if (r.isSuccessful) {
                 val j = org.json.JSONObject(r.body()?.string() ?: "{}")
                 val a = j.optJSONObject("auto_apply")
+                autoApplyEnabled = a?.optBoolean("enabled") == true
                 "Gmail: " + (if (j.optBoolean("gmail_connected")) "Terhubung" else "Belum terhubung") + " | Auto Apply: " + (if (a?.optBoolean("enabled") == true) "Aktif" else "Jeda") + " | Terkirim: " + (a?.optJSONObject("counts")?.optInt("sent", 0) ?: 0)
             } else "Status tidak tersedia (${r.code()})"
         } catch (e: Exception) { "Koneksi API gagal" }
@@ -56,6 +59,65 @@ fun KirimLamaranScreen(
             Text("Kirim Lamaran Otomatis", color = MaterialTheme.colorScheme.onSurface, fontSize = 22.sp, fontWeight = FontWeight.Bold)
             Text("AI mencari pekerjaan, mencocokkan CV, dan menyiapkan email lamaran.", color = Color(0xFF64748B), fontSize = 13.sp)
         }
+
+        item {
+            var refresh by remember { mutableIntStateOf(0) }
+            var result by remember { mutableStateOf("Memuat kandidat...") }
+
+            LaunchedEffect(refresh, isPro) {
+                if (!isPro) {
+                    result = "Khusus pengguna PRO"
+                } else {
+                    result = try {
+                        val r = ApiClient.apiService.getKarirMateCandidates()
+                        if (r.isSuccessful) {
+                            val j = org.json.JSONObject(r.body()?.string() ?: "{}")
+                            val arr = j.optJSONArray("items")
+                            if (arr == null || arr.length() == 0) {
+                                "Belum ada kandidat HR"
+                            } else {
+                                buildString {
+                                    append("Total kandidat: ${arr.length()}\n\n")
+                                    for (i in 0 until arr.length()) {
+                                        val x = arr.getJSONObject(i)
+                                        append(x.optString("company"))
+                                        append("\n")
+                                        append(x.optString("position"))
+                                        append("\n")
+                                        append(x.optString("email"))
+                                        append("\n\n")
+                                    }
+                                }
+                            }
+                        } else "Gagal mengambil kandidat: HTTP ${r.code()}"
+                    } catch (e: Exception) {
+                        "Koneksi gagal: ${e.message}"
+                    }
+                }
+            }
+
+            Card(
+                colors = CardDefaults.cardColors(
+                    containerColor = MaterialTheme.colorScheme.surface
+                )
+            ) {
+                Column(
+                    Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Text("Kandidat Email HR",
+                        fontWeight = FontWeight.Bold)
+                    Text(result)
+                    Button(
+                        onClick = { refresh++ },
+                        enabled = isPro && isOnline
+                    ) {
+                        Text("Refresh Kandidat")
+                    }
+                }
+            }
+        }
+
         item {
             Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
                 Column(Modifier.padding(16.dp)) {
@@ -98,14 +160,33 @@ fun KirimLamaranScreen(
                     }
                     if (!isOnline) Text("Offline: sambungkan internet untuk menjalankan pencarian.", color = Color(0xFFF87171), fontSize = 12.sp)
                     Button(
-                        onClick = { scope.launch { message = try { val r = ApiClient.apiService.enableAutoApply(); if (r.isSuccessful) "Auto Apply diizinkan" else "Aktivasi ditolak: ${r.code()}" } catch (e: Exception) { "Koneksi API gagal" } } },
-                        enabled = isPro && isOnline && agreed,
+                        onClick = { scope.launch {
+                            isProcessing = true
+                            message = try {
+                                val r = ApiClient.apiService.enableAutoApply()
+                                if (r.isSuccessful) {
+                                    val status = ApiClient.apiService.getAutoApplyStatus()
+                                    if (status.isSuccessful) {
+                                        val j = org.json.JSONObject(status.body()?.string() ?: "{}")
+                                        val a = j.optJSONObject("auto_apply")
+                                        autoApplyEnabled = a?.optBoolean("enabled") == true
+                                        statusText = "Gmail: " + (if (j.optBoolean("gmail_connected")) "Terhubung" else "Belum terhubung") + " | Auto Apply: " + (if (autoApplyEnabled) "Aktif" else "Jeda") + " | Terkirim: " + (a?.optJSONObject("counts")?.optInt("sent", 0) ?: 0)
+                                        if (autoApplyEnabled) "Auto Apply berhasil diaktifkan" else "Auto Apply belum aktif"
+                                    } else "Gagal memuat status: ${status.code()}"
+                                } else "Aktivasi ditolak: ${r.code()}"
+                            } catch (e: Exception) {
+                                "Koneksi API gagal: ${e.message ?: "periksa jaringan"}"
+                            } finally {
+                                isProcessing = false
+                            }
+                        } },
+                        enabled = isPro && isOnline && agreed && !autoApplyEnabled && !isProcessing,
                         colors = ButtonDefaults.buttonColors(disabledContainerColor = Color(0xFFD8E9F5), disabledContentColor = Color(0xFF64748B)),
                         modifier = Modifier.fillMaxWidth().height(48.dp),
                         shape = RoundedCornerShape(18.dp)
-                    ) { Text("Aktifkan Auto Apply") }
+                    ) { Text(if (autoApplyEnabled) "Auto Apply Sudah Aktif" else if (isProcessing) "Memproses..." else "Aktifkan Auto Apply") }
                     Text(statusText, color = MaterialTheme.colorScheme.onSurface)
-                    TextButton(onClick = { scope.launch { message = try { val r = ApiClient.apiService.pauseAutoApply(); if (r.isSuccessful) { statusText = "Auto Apply: Jeda"; "Auto Apply dijeda" } else "Gagal menjeda: ${r.code()}" } catch (e: Exception) { "Koneksi API gagal" } } }) { Text("Jeda Auto Apply") }
+                    TextButton(onClick = { scope.launch { message = try { val r = ApiClient.apiService.pauseAutoApply(); if (r.isSuccessful) { autoApplyEnabled = false; statusText = "Auto Apply: Jeda"; "Auto Apply dijeda" } else "Gagal menjeda: ${r.code()}" } catch (e: Exception) { "Koneksi API gagal" } } }) { Text("Jeda Auto Apply") }
                     if (message.isNotEmpty()) Text(message, color = MaterialTheme.colorScheme.onSurface)
                     if (!isPro) TextButton(onClick = onNavigateProfil) { Text("Lihat status PRO di Profil", color = ProGold) }
                 }

@@ -1,0 +1,194 @@
+package com.example.automatesmartbot.ui.screens
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Build
+import androidx.compose.material.icons.filled.DeleteOutline
+import androidx.compose.material.icons.filled.Description
+import androidx.compose.material.icons.filled.Save
+import androidx.compose.material.icons.filled.Send
+import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.material3.Checkbox
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.automatesmartbot.data.cv.CvBuilderConstants
+import com.example.automatesmartbot.data.cv.CvContent
+import com.example.automatesmartbot.data.cv.CvExperience
+import com.example.automatesmartbot.data.cv.CvSkillGroup
+import com.example.automatesmartbot.data.cv.CvAtsReport
+import com.example.automatesmartbot.data.cv.CvKeywordReport
+import com.example.automatesmartbot.ui.theme.DarkSurfaceVariant
+import com.example.automatesmartbot.ui.theme.TextWhite
+import com.example.automatesmartbot.ui.viewmodel.CvBuilderViewModel
+import com.example.automatesmartbot.ui.viewmodel.CvBuilderUiState
+
+@Composable
+fun CvBuilderScreen(
+    viewModel: CvBuilderViewModel = viewModel()
+) {
+    val state by viewModel.state.collectAsState()
+    val draft = state.draft
+    var jobTitle by remember { mutableStateOf("") }
+    var company by remember { mutableStateOf("") }
+    var jobDescription by remember { mutableStateOf("") }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background)
+            .verticalScroll(rememberScrollState())
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth,
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column {
+                Text(
+                    text = "CV Builder",
+                    fontSize = 24.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onBackground
+                )
+                Text(
+                    text = "Buat, edit, dan ekspor CV dari data Anda sendiri.",
+                    fontSize = 12.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            IconButton(onClick = { viewModel.newDocument() }) {
+                Icon(
+                    imageVector = Icons.Default.Add,
+                    contentDescription = null,
+                    tint = Color(0xFF1267E8),
+                    modifier = Modifier.size(26.dp)
+                )
+            }
+        }
+
+        state.message?.let { message ->
+            Text(
+                text = message,
+                fontSize = 12.sp,
+                color = Color(0xFFDC2626),
+                fontWeight = FontWeight.Medium
+            )
+        }
+
+        CvBuilderTemplateSelector(
+            templateId = state.templateId,
+            latexStyle = state.latexStyle,
+            onTemplateChange = { viewModel.setTemplate(it) },
+            onLatexStyleChange = { viewModel.setLatexStyle(it) }
+        )
+
+        CvBuilderPreview(
+            draft = draft,
+            templateId = state.templateId
+        )
+
+        CvBuilderBasicsEditor(
+            draft = draft,
+            onUpdate = { transform -> viewModel.updateContent(transform) }
+        )
+
+        CvBuilderExperienceEditor(
+            draft = draft,
+            onUpdate = { transform -> viewModel.updateContent(transform) }
+        )
+
+        CvBuilderSkillsEditor(
+            draft = draft,
+            onUpdate = { transform -> viewModel.updateContent(transform) }
+        )
+
+        CvBuilderAtsPanel(
+            state = state,
+            jobTitle = jobTitle,
+            company = company,
+            jobDescription = jobDescription,
+            onJobTitleChange = { jobTitle = it },
+            onCompanyChange = { company = it },
+            onJobDescriptionChange = { jobDescription = it },
+            onRunAnalysis = {
+                viewModel.runAtsCheck(jobTitle, company, jobDescription)
+            }
+        )
+
+        CvBuilderCoverLetterPanel(
+            state = state,
+            jobTitle = jobTitle,
+            company = company,
+            onGenerate = {
+                viewModel.generateCoverLetter(jobTitle, company)
+            }
+        )
+
+        Button(
+            onClick = { viewModel.saveDocument() },
+            modifier = Modifier.fillMaxWidth().height(48.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1267E8)),
+            shape = RoundedCornerShape(12.dp)
+        ) {
+            Icon(
+                imageVector = Icons.Default.Save,
+                contentDescription = null,
+                modifier = Modifier.size(17.dp)
+            )
+            Spacer(modifier = Modifier.width(7.dp))
+            Text("Simpan CV", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+        }
+
+        OutlinedButton(
+            onClick = { viewModel.saveDocument() },
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(12.dp)
+        ) {
+            Icon(
+                imageVector = Icons.Default.Description,
+                contentDescription = null,
+                modifier = Modifier.size(17.dp)
+            )
+            Spacer(modifier = Modifier.width(7.dp))
+            Text("Ekspor PDF / DOCX (backend CV)", fontWeight = FontWeight.Bold, fontSize = 13.sp)
+        }
+    }
+}

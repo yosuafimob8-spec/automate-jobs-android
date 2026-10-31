@@ -10,6 +10,9 @@ import retrofit2.http.PUT
 import retrofit2.http.Query
 
 interface ApiService {
+    @GET("karirmate/candidates")
+    suspend fun getKarirMateCandidates(): Response<ResponseBody>
+
     @GET("karirmate/selection")
     suspend fun getKarirMateSelection(): Response<ResponseBody>
 
