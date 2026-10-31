@@ -9,6 +9,12 @@ import retrofit2.http.POST
 import retrofit2.http.PUT
 import retrofit2.http.Query
 
+data class AutoApplyEnableRequest(
+    val consent: Boolean,
+    val max_emails_per_day: Int = 5,
+    val policy_version: String = "karirmate-v1"
+)
+
 interface ApiService {
     @GET("karirmate/candidates")
     suspend fun getKarirMateCandidates(): Response<ResponseBody>
@@ -20,7 +26,7 @@ interface ApiService {
     suspend fun getKarirMateReport(): Response<ResponseBody>
 
     @POST("auto-apply/enable")
-    suspend fun enableAutoApply(): Response<ResponseBody>
+    suspend fun enableAutoApply(@Body request: AutoApplyEnableRequest): Response<ResponseBody>
 
     @POST("auto-apply/pause")
     suspend fun pauseAutoApply(): Response<ResponseBody>

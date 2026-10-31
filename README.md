@@ -1,3 +1,5 @@
+> Perbaikan aplikasi Android KarirMate: lihat [laporan implementasi dan batas pengujian](docs/KARIRMATE_REPAIR_REPORT.md).
+
 # AutoMate Jobs V2 — pencarian Jabodetabek
 
 ## HTTP API Android V2 — aktif di loopback 8788

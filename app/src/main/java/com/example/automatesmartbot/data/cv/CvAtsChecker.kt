@@ -71,16 +71,6 @@ object CvAtsChecker {
         val issues = mutableListOf<CvIssue>()
         val passes = mutableListOf<CvPass>()
 
-        passes.add(CvPass("A1", "Single-column layout"))
-        passes.add(CvPass("A2", "No tables or text boxes"))
-        passes.add(CvPass("A4", "Contact details in the page body, not a header"))
-        passes.add(CvPass("A5", "No images, icons, or skill bars"))
-        passes.add(CvPass("A6", "Standard section headings (Work Experience, Education, Skills)"))
-        passes.add(CvPass("A7", "Text-selectable PDF with Unicode mapping"))
-        passes.add(CvPass("B3", "Standard, embedded fonts at 10-12pt"))
-        passes.add(CvPass("B4", "Plain bullet characters"))
-        passes.add(CvPass("B6", "Skills listed as labelled lines"))
-
         if (latexStyle == "columns") {
             issues.add(
                 CvIssue(
@@ -213,7 +203,7 @@ object CvAtsChecker {
             )
         }
 
-        val starts = resume.experience.map { it.start }.filter { it.isNotBlank() }.sorted()
+        val starts = resume.experience.map { it.start }.filter { it.isNotBlank() }
         if (starts.size > 1) {
             var outOfOrder = false
             for (i in starts.indices) {
@@ -256,7 +246,7 @@ object CvAtsChecker {
                 )
             )
         }
-        if (bullets >= 3 && quantified / bullets < 0.4) {
+        if (bullets >= 3 && quantified.toDouble() / bullets < 0.4) {
             issues.add(CvIssue("Q2", CvIssueSeverity.INFO.name, "Only $quantified of $bullets bullets have a number", "Aim for half or more. Latency, revenue, users, time saved, team size.", "experience"))
         } else if (bullets >= 3) {
             passes.add(CvPass("Q2", "Most bullets are quantified"))

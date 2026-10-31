@@ -335,7 +335,7 @@ private fun MembershipBadge(isPro: Boolean) {
             }
             Text(
                 text = if (isPro) "PRO" else "FREE",
-                color = if (isPro) Color.Black else Color.White,
+                color = Color(0xFF102B49),
                 fontWeight = FontWeight.Bold,
                 fontSize = 11.sp
             )
@@ -657,7 +657,7 @@ private fun ActivityUnavailableCard(onOpenHistory: () -> Unit) {
                 onClick = onOpenHistory,
                 contentPadding = PaddingValues(0.dp)
             ) {
-                Text("Buka Riwayat Lamaran", color = LightBlueAccent, fontSize = 12.sp)
+                Text("Buka Riwayat Lamaran", color = PrimaryBlue, fontSize = 12.sp)
             }
         }
     }

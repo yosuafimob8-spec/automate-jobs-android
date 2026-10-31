@@ -8,7 +8,8 @@ data class CvContact(
     val location: String = "",
     val website: String = "",
     val linkedin: String = "",
-    val github: String = ""
+    val github: String = "",
+    val photoPath: String = ""
 )
 
 data class CvExperience(
@@ -67,9 +68,12 @@ data class CvStyle(
     val css: String = ""
 )
 
+data class CvExtraSection(val id: String = "", val title: String = "", val text: String = "")
+
 data class CvContent(
     val contact: CvContact = CvContact(),
     val summary: String = "",
+    val extras: List<CvExtraSection> = emptyList(),
     val experience: List<CvExperience> = emptyList(),
     val education: List<CvEducation> = emptyList(),
     val skills: List<CvSkillGroup> = emptyList(),
@@ -102,44 +106,7 @@ object CvBuilderConstants {
     const val TEMPLATE_COMBINATION = "combination"
     const val TEMPLATE_SENIOR = "senior"
 
-    val HTML_TEMPLATE_IDS: List<String> = listOf(
-        "ats_01",
-        "ats_02",
-        "ats_03",
-        "ats_04",
-        "ats_05",
-        "ats_06",
-        "ats_07",
-        "ats_08",
-        "modern_01",
-        "modern_02",
-        "modern_03",
-        "modern_04",
-        "modern_05",
-        "modern_06",
-        "graduate_01",
-        "graduate_02",
-        "graduate_03",
-        "graduate_04",
-        "executive_01",
-        "executive_02",
-        "executive_03",
-        "executive_04",
-        "creative_01",
-        "creative_02",
-        "creative_03",
-        "creative_04",
-        "minimal_01",
-        "minimal_02",
-        "minimal_03",
-        "minimal_04",
-        "ats_09", "ats_10", "modern_07", "modern_08",
-        "graduate_05", "graduate_06", "executive_05", "executive_06",
-        "creative_05", "creative_06", "minimal_05", "minimal_06",
-        "ats_11", "ats_12", "modern_09", "modern_10",
-        "graduate_07", "graduate_08", "executive_07", "executive_08",
-        "creative_07", "creative_08", "minimal_07", "minimal_08"
-    )
+    val HTML_TEMPLATE_IDS: List<String> get() = CvTemplates.all.map { it.id }
 
     val SECTION_ORDER: List<String> = listOf(
         "summary",
@@ -151,7 +118,7 @@ object CvBuilderConstants {
     )
 }
 
-fun newCvId(): String = "cv_" + System.currentTimeMillis()
+fun newCvId(): String = "cv_" + java.util.UUID.randomUUID().toString()
 
 fun emptyCvDocument(
     name: String = "CV Baru",
@@ -164,3 +131,10 @@ fun emptyCvDocument(
     createdAt = System.currentTimeMillis(),
     updatedAt = System.currentTimeMillis()
 )
+
+fun CvContent.hasUserText(): Boolean = listOf(contact.fullName, contact.headline, contact.email, contact.phone,
+    contact.location, contact.website, contact.linkedin, contact.github, summary).any { it.isNotBlank() } ||
+    experience.any { it.title.isNotBlank() || it.company.isNotBlank() || it.bullets.any(String::isNotBlank) } ||
+    education.any { it.school.isNotBlank() || it.degree.isNotBlank() || it.details.any(String::isNotBlank) } ||
+    skills.any { it.items.any(String::isNotBlank) } || projects.any { it.name.isNotBlank() || it.bullets.any(String::isNotBlank) } ||
+    certifications.any { it.name.isNotBlank() } || extras.any { it.text.isNotBlank() }

@@ -81,8 +81,16 @@ class PsychotestApi:
         return self.service.history(subject, limit, offset)
 
     def stats(self, authorization):
-        subject, _ = self.identity(authorization)
+        subject, identity = self.identity(authorization)
+        self.require_pro(identity)
         return self.service.stats(subject)
+
+    @staticmethod
+    def require_pro(identity):
+        explicit = identity.get('is_pro')
+        active = explicit if isinstance(explicit, bool) else str(identity.get('membership', '')).lower() == 'pro'
+        if not active:
+            raise ApiError(403, 'PRO_REQUIRED', 'Fitur ini memerlukan langganan PRO aktif')
 
     def start(self, authorization, body):
         subject, identity = self.identity(authorization)
@@ -91,7 +99,16 @@ class PsychotestApi:
         test_id = body['test_id'].strip()
         if not re.fullmatch(r'[a-z0-9_]{2,64}', test_id):
             raise ApiError(400, 'INVALID_PARAMETERS', 'test_id tidak valid')
-        return self.service.start_session(test_id, subject, identity.get('account_id'))
+        question_count = body.get('question_count')
+        if question_count is not None and (type(question_count) is not int or not 10 <= question_count <= 20):
+            raise ApiError(400, 'INVALID_PARAMETERS', 'question_count harus 10–20')
+        # Membership must come from the existing authenticated identity, never the request body.
+        from psychotest_service import TESTS
+        from psychotest_policy import basic_mode
+        cfg = TESTS.get(test_id)
+        if cfg and not basic_mode(cfg):
+            self.require_pro(identity)
+        return self.service.start_session(test_id, subject, identity.get('account_id'), question_count=question_count)
 
     def sessions(self, authorization):
         subject, _ = self.identity(authorization)

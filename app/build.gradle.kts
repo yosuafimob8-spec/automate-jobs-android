@@ -24,6 +24,12 @@ val debugPsychotestBaseUrl = providers.gradleProperty("debugPsychotestBaseUrl")
     .getOrElse("http://10.0.2.2:8789/")
     .let { if (it.endsWith("/")) it else "$it/" }
 
+val releasePsychotestBaseUrl = providers.gradleProperty("releasePsychotestBaseUrl")
+    .orNull?.let {
+        require(it.startsWith("https://")) { "Release psychotest URL must use HTTPS" }
+        if (it.endsWith("/")) it else "$it/"
+    }.orEmpty()
+
 val generatedBrandRes = layout.buildDirectory.dir("generated/res/karirMate")
 val prepareBrandAssets by tasks.registering(Copy::class) {
     from(rootProject.file("design/Logo.jpeg"))
@@ -73,10 +79,11 @@ android {
             )
             buildConfigField("String", "BASE_URL", "\"$releaseApiBaseUrl\"")
             buildConfigField("String", "JOBS_V2_BASE_URL", "\"$releaseJobsV2BaseUrl\"")
-            buildConfigField("String", "PSYCHOTEST_BASE_URL", "\"\"")
+            buildConfigField("String", "PSYCHOTEST_BASE_URL", "\"$releasePsychotestBaseUrl\"")
             manifestPlaceholders["usesCleartextTraffic"] = "false"
         }
     }
+    testOptions { unitTests.isIncludeAndroidResources = true }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
@@ -115,7 +122,13 @@ dependencies {
     implementation(libs.okhttp)
     implementation(libs.loggingInterceptor)
     implementation(libs.androidx.security.crypto)
+    implementation("com.tom-roush:pdfbox-android:2.0.27.0")
+    implementation("androidx.exifinterface:exifinterface:1.3.7")
+    testImplementation(platform(libs.androidx.compose.bom))
+    testImplementation(libs.androidx.ui.test.junit4)
     testImplementation(libs.junit)
+    testImplementation("org.robolectric:robolectric:4.14.1")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))

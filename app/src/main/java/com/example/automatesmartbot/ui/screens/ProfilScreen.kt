@@ -119,7 +119,7 @@ fun ProfilScreen(
                     text = if (isOnline) "Gagal memuat profil" else "Anda sedang offline",
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp,
-                    color = Color(0xFFEF4444)
+                    color = MaterialTheme.colorScheme.error
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
@@ -129,7 +129,7 @@ fun ProfilScreen(
                         "Sesi Anda tetap tersimpan. Sambungkan internet lalu coba lagi."
                     },
                     fontSize = 13.sp,
-                    color = Color(0xFF64748B),
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(16.dp))
@@ -278,7 +278,7 @@ fun ProfilScreen(
                             Text(
                                 text = error,
                                 fontSize = 12.sp,
-                                color = Color(0xFFF87171),
+                                color = MaterialTheme.colorScheme.error,
                                 textAlign = TextAlign.Center
                             )
                         }
@@ -308,7 +308,7 @@ private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) 
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             Text("Tampilan", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface, fontSize = 16.sp)
-            Text("Pilih mode warna Karir Mate.", color = Color(0xFF64748B), fontSize = 12.sp)
+            Text("Pilih mode warna Karir Mate.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 ThemeMode.entries.forEach { mode ->
                     androidx.compose.material3.FilterChip(
@@ -343,7 +343,7 @@ fun ProfileDetailRow(
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             Icon(icon, contentDescription = null, tint = Color(0xFF168CB8), modifier = Modifier.size(16.dp))
-            Text(text = label, fontSize = 13.sp, color = Color(0xFF64748B))
+            Text(text = label, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
         Text(
             text = value,

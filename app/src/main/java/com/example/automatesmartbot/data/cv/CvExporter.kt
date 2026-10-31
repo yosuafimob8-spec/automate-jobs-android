@@ -27,44 +27,19 @@ object CvExporter {
         section("KEAHLIAN", c.skills.map { "${it.category}: ${it.items.joinToString(", ")}" })
         section("PROYEK", c.projects.flatMap { p -> listOf("${p.name} - ${p.tech} ${p.link}") + p.bullets })
         section("SERTIFIKASI", c.certifications.map { "${it.name} - ${it.issuer} (${it.date}) ${it.link}" })
+        c.extras.forEach { section(it.title, listOf(it.text)) }
     }.filter { it.isNotBlank() || it.isEmpty() }
 
-    fun exportPdf(context: Context, uri: Uri, content: CvContent) {
-        val doc = PdfDocument()
-        val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply { textSize = 11f; color = android.graphics.Color.BLACK }
-        val width = 595; val height = 842; val margin = 48f
-        var pageNo = 0
-        var page: PdfDocument.Page? = null
-        var y = margin
-        fun newPage() {
-            page?.let { doc.finishPage(it) }
-            pageNo++
-            page = doc.startPage(PdfDocument.PageInfo.Builder(width, height, pageNo).create())
-            y = margin
-        }
-        try {
-            newPage()
-            for (line in lines(content)) {
-                if (line.isBlank()) { y += 10f; continue }
-                var remaining = line
-                while (remaining.isNotEmpty()) {
-                    if (y > height - margin) newPage()
-                    val available = width - 2 * margin
-                    val count = paint.breakText(remaining, true, available, null).coerceAtLeast(1)
-                    var end = count
-                    if (count < remaining.length) {
-                        val space = remaining.lastIndexOf(' ', count - 1)
-                        if (space > 0) end = space + 1
-                    }
-                    page!!.canvas.drawText(remaining.substring(0, end).trim(), margin, y, paint)
-                    remaining = remaining.substring(end).trimStart()
-                    y += 17f
-                }
-            }
-            page?.let { doc.finishPage(it) }
-            context.contentResolver.openOutputStream(uri)?.use { doc.writeTo(it) }
-                ?: error("Tidak dapat membuka lokasi penyimpanan")
-        } finally { doc.close() }
+    fun exportPdf(context: Context, uri: Uri, content: CvContent, templateId: String = "ats_01") {
+        context.contentResolver.openOutputStream(uri, "wt")?.use {
+            CvRenderer.writePdf(CvRenderer.layout(content, templateId), it)
+        } ?: error("Tidak dapat membuka lokasi penyimpanan")
+    }
+
+    fun exportLetter(context: Context, uri: Uri, content: String) {
+        context.contentResolver.openOutputStream(uri, "wt")?.use {
+            CvRenderer.writePdf(CvRenderer.letterPages(content), it)
+        } ?: error("Tidak dapat membuka lokasi penyimpanan")
     }
 
     private fun escapeXml(s: String): String = buildString {

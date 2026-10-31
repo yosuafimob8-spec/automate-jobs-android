@@ -44,7 +44,7 @@ data class UserMeResponse(
         }
 
     val hasProMembership: Boolean
-        get() = isPro == true || membership?.equals("pro", ignoreCase = true) == true
+        get() = isPro ?: (membership?.equals("pro", ignoreCase = true) == true)
 
     val hasVerifiedMembership: Boolean
         get() = isPro != null || !membership.isNullOrBlank()

@@ -70,8 +70,10 @@ class CvDraftStore(context: Context) {
             put("website", c.contact.website)
             put("linkedin", c.contact.linkedin)
             put("github", c.contact.github)
+            put("photoPath", c.contact.photoPath)
         })
         put("summary", c.summary)
+        put("extras", JSONArray().apply { c.extras.forEach { e -> put(JSONObject().put("id", e.id).put("title", e.title).put("text", e.text)) } })
         put("latexStyle", c.latexStyle)
         put("sectionOrder", array(c.sectionOrder))
         put("style", JSONObject().apply {
@@ -134,9 +136,11 @@ class CvDraftStore(context: Context) {
                 location = contact.optString("location"),
                 website = contact.optString("website"),
                 linkedin = contact.optString("linkedin"),
-                github = contact.optString("github")
+                github = contact.optString("github"),
+                photoPath = contact.optString("photoPath")
             ),
             summary = j.optString("summary"),
+            extras = decode("extras") { e -> CvExtraSection(e.optString("id"), e.optString("title"), e.optString("text")) },
             experience = decode("experience") { e -> CvExperience(
                 id = e.optString("id"), title = e.optString("title"),
                 company = e.optString("company"), location = e.optString("location"),
