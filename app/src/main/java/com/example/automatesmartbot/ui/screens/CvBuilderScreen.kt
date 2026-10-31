@@ -89,21 +89,6 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
     val context = LocalContext.current
     var page by remember { mutableStateOf(0) }
     var activeSection by remember { mutableStateOf<String?>(null) }
-    var pageHistory by remember { mutableStateOf(listOf<Int>()) }
-    fun navigateTo(destination: Int) {
-        if (destination != page) {
-            pageHistory = pageHistory + page
-            page = destination
-        }
-    }
-    fun navigateBack() {
-        if (activeSection != null) { activeSection = null; return }
-        if (pageHistory.isNotEmpty()) {
-            page = pageHistory.last()
-            pageHistory = pageHistory.dropLast(1)
-        } else page = 0
-    }
-
     var jobTitle by remember { mutableStateOf("") }
     var company by remember { mutableStateOf("") }
     var jobDescription by remember { mutableStateOf("") }
@@ -123,7 +108,8 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
     val orange = Color(0xFFFF622B)
     val aqua = Color(0xFF19B9C3)
     androidx.activity.compose.BackHandler(enabled = activeSection != null || page != 0) {
-        navigateBack()
+        if (activeSection != null) activeSection = null
+        else page = when (page) { 3 -> 2; 2 -> 0; 4 -> 0; else -> 0 }
     }
     val pages = listOf("CV Saya" to 0, "Template" to 1, "CV Analyst" to 4)
     Column(Modifier.fillMaxSize().background(Color(0xFFF8FBFE)).imePadding()) {
@@ -141,7 +127,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                 val (label, destination) = pages[index]
                 val selected = page == destination || (destination == 0 && page == 2) || (destination == 0 && page == 3)
                 Surface(
-                    modifier = Modifier.clickable { navigateTo(destination) },
+                    modifier = Modifier.clickable { page = destination },
                     shape = RoundedCornerShape(20.dp),
                     color = if (selected) orange else Color(0xFFEDF2F8)
                 ) {
@@ -155,15 +141,15 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
             verticalArrangement = Arrangement.spacedBy(12.dp)) {
             state.message?.let { Text(it, color = aqua, fontSize = 12.sp) }
             if (page == 2 || page == 3) {
-                androidx.compose.material3.TextButton(onClick = { navigateBack() }) {
-                    Text("‹ Kembali", color = navy, fontWeight = FontWeight.SemiBold)
+                androidx.compose.material3.TextButton(onClick = { page = 0 }) {
+                    Text("‹ Kembali ke CV Saya", color = navy, fontWeight = FontWeight.SemiBold)
                 }
             }
             when (page) {
                 0 -> {
                     Text("CV Saya", color = navy, fontSize = 20.sp, fontWeight = FontWeight.Bold)
                     Button(
-                        onClick = { viewModel.newDocument(); navigateTo(2) },
+                        onClick = { viewModel.newDocument(); page = 2 },
                         modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(containerColor = orange),
                         shape = RoundedCornerShape(22.dp)
@@ -232,11 +218,11 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                                     fontSize = 11.sp, color = Color(0xFF657695)
                                 )
                                 Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                                    Button(onClick = { viewModel.selectDocument(doc.id); navigateTo(2) },
+                                    Button(onClick = { viewModel.selectDocument(doc.id); page = 2 },
                                         modifier = Modifier.weight(1f),
                                         colors = ButtonDefaults.buttonColors(containerColor = orange),
                                         shape = RoundedCornerShape(20.dp)) { Text("Edit") }
-                                    Button(onClick = { viewModel.selectDocument(doc.id); navigateTo(3) },
+                                    Button(onClick = { viewModel.selectDocument(doc.id); page = 3 },
                                         modifier = Modifier.weight(1f),
                                         colors = ButtonDefaults.buttonColors(containerColor = aqua),
                                         shape = RoundedCornerShape(20.dp)) { Text("Lihat CV") }
@@ -313,16 +299,16 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                             onDismissRequest = { templatePreviewId = null },
                             title = { Text("Preview • " + previewId.replace('_', ' ').uppercase(), color = navy) },
                             text = {
-                                Column(Modifier.fillMaxWidth().height(440.dp).verticalScroll(rememberScrollState())) {
+                                Column(Modifier.fillMaxWidth().height(490.dp).verticalScroll(rememberScrollState())) {
                                     CvBuilderPreview(state.draft, previewId)
                                     Spacer(Modifier.height(12.dp))
                                     Text(if (locked) "Template PRO • preview gratis, penggunaan memerlukan langganan aktif." else "Template gratis • siap dipilih.", color = navy)
-                                    Text("Pratinjau memakai data CV Anda. Desain ekspor PDF khusus template belum tersedia.", fontSize = 11.sp, color = Color(0xFF66758D))
+                                    Text("Preview menampilkan isi CV. Ekspor PDF khusus setiap desain belum tersedia.", fontSize = 11.sp, color = Color(0xFF66758D))
                                 }
                             },
                             confirmButton = {
                                 Button(onClick = {
-                                    if (!locked) { viewModel.setTemplate(previewId); templatePreviewId = null; navigateTo(2) }
+                                    if (!locked) { viewModel.setTemplate(previewId); templatePreviewId = null; page = 2 }
                                 }, enabled = !locked, colors = ButtonDefaults.buttonColors(containerColor = orange)) {
                                     Text(if (locked) "Perlu PRO" else "Gunakan Template")
                                 }
@@ -332,7 +318,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                     }
                     Text("Catatan: desain miniatur adalah ilustrasi. Renderer ekspor khusus tiap template dan aktivasi langganan PRO belum terhubung.",
                         color = Color(0xFF66758D), fontSize = 11.sp)
-                    Button(onClick = { navigateTo(2) }, modifier = Modifier.fillMaxWidth(),
+                    Button(onClick = { page = 2 }, modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Lanjut ke Editor") }
                 }
                 2 -> {
@@ -369,7 +355,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                                 }
                             }
                         }
-                        Button(onClick = { if (viewModel.saveDocument()) navigateTo(3) },
+                        Button(onClick = { if (viewModel.saveDocument()) page = 3 },
                             modifier = Modifier.fillMaxWidth(),
                             colors = ButtonDefaults.buttonColors(containerColor = orange)) {
                             Text("Simpan & Lihat CV", color = Color.White)
@@ -418,7 +404,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                             colors = ButtonDefaults.buttonColors(containerColor = aqua)) { Text("DOCX") }
                     }
                     if (exportMessage.isNotBlank()) Text(exportMessage, color = navy)
-                    OutlinedButton(onClick = { navigateTo(4) }, modifier = Modifier.fillMaxWidth()) { Text("Analisis CV") }
+                    OutlinedButton(onClick = { page = 4 }, modifier = Modifier.fillMaxWidth()) { Text("Analisis CV") }
                 }
                 else -> {
                     Text("CV Analyst", color = navy, fontSize = 20.sp, fontWeight = FontWeight.Bold)
@@ -432,7 +418,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                         onCompanyChange = { company = it },
                         onJobDescriptionChange = { jobDescription = it },
                         onRun = { viewModel.runAtsCheck("", "", "") },
-                        onEdit = { navigateTo(2) }
+                        onEdit = { page = 2 }
                     )
                     CvBuilderCoverLetterPanel(state, jobTitle, company) { viewModel.generateCoverLetter(jobTitle, company) }
                 }
@@ -471,27 +457,52 @@ private fun CvExtraEditor(draft: CvContent, onUpdate: ((CvContent) -> CvContent)
 
 @Composable
 private fun CvBuilderPreview(draft: CvContent, templateId: String) {
-    Card(modifier = Modifier.fillMaxWidth()) {
-        Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(5.dp)
-        ) {
-            Text("Preview CV • $templateId", fontWeight = FontWeight.Bold)
-            Text(draft.contact.fullName.ifBlank { "Nama Lengkap" }, fontSize = 21.sp)
-            Text(draft.contact.headline)
-            Text(listOf(draft.contact.email, draft.contact.phone, draft.contact.location)
-                .filter { it.isNotBlank() }.joinToString(" • "))
-            if (draft.summary.isNotBlank()) {
-                Text("PROFIL", fontWeight = FontWeight.Bold)
-                Text(draft.summary)
+    val group = templateId.substringBefore('_')
+    val number = templateId.substringAfterLast('_').toIntOrNull() ?: 1
+    val navy = Color(0xFF142B4B)
+    val accent = when (group) {
+        "ats" -> navy
+        "modern" -> Color(0xFF087E91)
+        "graduate" -> Color(0xFF246BB2)
+        "executive" -> Color(0xFF4C376B)
+        "creative" -> Color(0xFFC4552F)
+        else -> Color(0xFF3E5A60)
+    }
+    val name = draft.contact.fullName.ifBlank { "NAMA LENGKAP" }
+    val role = draft.contact.headline.ifBlank { "Posisi / Profesi" }
+    val contact = listOf(draft.contact.email.ifBlank { "email@contoh.com" },
+        draft.contact.phone.ifBlank { "08xx xxxx xxxx" },
+        draft.contact.location.ifBlank { "Kota Domisili" }).joinToString("  •  ")
+    val summary = draft.summary.ifBlank { "Ringkasan profesional: pengalaman, keahlian utama, dan pencapaian karier." }
+    @Composable fun Section(title: String, body: String) {
+        Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
+            Text(title, color = accent, fontWeight = FontWeight.Bold, fontSize = 11.sp)
+            Surface(color = accent.copy(alpha = 0.35f), modifier = Modifier.fillMaxWidth().height(1.dp)) {}
+            Text(body, color = navy, fontSize = 10.sp, lineHeight = 15.sp)
+        }
+    }
+    Surface(color = Color.White, shape = RoundedCornerShape(3.dp),
+        modifier = Modifier.fillMaxWidth()) {
+        Column(Modifier.padding(17.dp), verticalArrangement = Arrangement.spacedBy(11.dp)) {
+            if (group == "creative" || group == "modern") {
+                Surface(color = accent, modifier = Modifier.fillMaxWidth().height(if (number % 2 == 0) 9.dp else 5.dp)) {}
             }
-            draft.experience.forEach {
-                Text(it.title + " — " + it.company, fontWeight = FontWeight.Medium)
-                Text(it.bullets.joinToString("\\n"))
-            }
-            draft.skills.forEach {
-                Text(it.category + ": " + it.items.joinToString(", "))
-            }
+            Text(name, fontSize = if (group == "executive") 24.sp else 20.sp,
+                fontWeight = FontWeight.Bold, color = navy)
+            Text(role.uppercase(), color = accent, fontSize = 12.sp, fontWeight = FontWeight.Medium)
+            Text(contact, color = navy, fontSize = 9.sp, lineHeight = 13.sp)
+            Section("PROFIL", summary)
+            val experiences = draft.experience.joinToString("\n\n") {
+                (it.title.ifBlank { "Jabatan" } + " — " + it.company.ifBlank { "Perusahaan" } +
+                 "\n" + it.bullets.filter { b -> b.isNotBlank() }.joinToString("\n• "))
+            }.ifBlank { "Jabatan — Perusahaan\n• Jelaskan tanggung jawab dan pencapaian kerja." }
+            Section("PENGALAMAN KERJA", experiences)
+            val education = draft.education.joinToString("\n") { it.school + " — " + it.degree }
+                .ifBlank { "Sekolah / Universitas — Jurusan" }
+            Section("PENDIDIKAN", education)
+            Section("KETERAMPILAN", draft.skills.joinToString(" • ") {
+                it.items.joinToString(", ")
+            }.ifBlank { "Komunikasi • Kerja sama • Microsoft Office" })
         }
     }
 }
@@ -504,6 +515,10 @@ private fun CvBuilderBasicsEditor(
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
         Text("Data Pribadi", fontWeight = FontWeight.Bold, color = Color(0xFF102650))
         Text("Nama lengkap", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
+        Text("Posisi / profesi", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
+        Text("Email", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
+        Text("Nomor telepon", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
+        Text("Domisili", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
         OutlinedTextField(
             value = draft.contact.fullName,
             onValueChange = { value -> onUpdate { it.copy(contact = it.contact.copy(fullName = value)) } },
@@ -514,7 +529,6 @@ private fun CvBuilderBasicsEditor(
                 focusedBorderColor = Color(0xFF102650), unfocusedBorderColor = Color(0xFF8C99AB)
             )
         )
-        Text("Posisi / profesi", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
         OutlinedTextField(
             value = draft.contact.headline,
             onValueChange = { value -> onUpdate { it.copy(contact = it.contact.copy(headline = value)) } },
@@ -525,7 +539,6 @@ private fun CvBuilderBasicsEditor(
                 focusedBorderColor = Color(0xFF102650), unfocusedBorderColor = Color(0xFF8C99AB)
             )
         )
-        Text("Email", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
         OutlinedTextField(
             value = draft.contact.email,
             onValueChange = { value -> onUpdate { it.copy(contact = it.contact.copy(email = value)) } },
@@ -536,7 +549,6 @@ private fun CvBuilderBasicsEditor(
                 focusedBorderColor = Color(0xFF102650), unfocusedBorderColor = Color(0xFF8C99AB)
             )
         )
-        Text("Nomor telepon", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
         OutlinedTextField(
             value = draft.contact.phone,
             onValueChange = { value -> onUpdate { it.copy(contact = it.contact.copy(phone = value)) } },
@@ -547,7 +559,6 @@ private fun CvBuilderBasicsEditor(
                 focusedBorderColor = Color(0xFF102650), unfocusedBorderColor = Color(0xFF8C99AB)
             )
         )
-        Text("Domisili", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
         OutlinedTextField(
             value = draft.contact.location,
             onValueChange = { value -> onUpdate { it.copy(contact = it.contact.copy(location = value)) } },
@@ -1029,8 +1040,6 @@ private fun KarirMateAnalystV25(
                     }
                     Button(onClick = onEdit, modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Perbaiki CV di Editor") }
-                    Text("Untuk membuat surat lamaran, kembali ke bagian Surat Lamaran di bawah hasil analisis.",
-                        color = navy, fontSize = 12.sp)
                 }
             }
             "history" -> {
