@@ -25,6 +25,7 @@ import java.util.UUID
 fun SalaryCalculatorScreen() {
     var gross by rememberSaveable { mutableStateOf("") }
     var base by rememberSaveable { mutableStateOf("") }
+    var thr by rememberSaveable { mutableStateOf("") }
     var hours by rememberSaveable { mutableStateOf("0") }
     var health by rememberSaveable { mutableStateOf("") }
     var jht by rememberSaveable { mutableStateOf("") }
@@ -34,31 +35,35 @@ fun SalaryCalculatorScreen() {
     var day by rememberSaveable { mutableStateOf(PayrollCalculator.OvertimeDay.WORKDAY.name) }
     var result by remember { mutableStateOf<PayrollCalculator.Result?>(null) }
     var error by remember { mutableStateOf("") }
+    var fieldErrors by remember { mutableStateOf<Map<String, String>>(emptyMap()) }
     val rupiah = remember { NumberFormat.getCurrencyInstance(Locale("id", "ID")) }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         Text("Kalkulator Gaji & Hak Kerja", style = MaterialTheme.typography.titleLarge)
+        Text("Kolom bertanda * wajib diisi. Gunakan 0 untuk komponen yang tidak berlaku.")
         Text("Estimasi PPh 21 tahunan dengan lapisan tarif UU HPP; angka per bulan adalah rata-rata tahunan, bukan potongan TER pada slip gaji. Periksa rekonsiliasi aktual dengan pemberi kerja.")
-        AppInput("Penghasilan bruto pajak per bulan (Rp)", gross, { gross = it; result = null })
-        AppInput("Upah dasar lembur / THR (Rp)", base, { base = it; result = null })
-        AppInput("Jam lembur dalam satu hari", hours, { hours = it; result = null })
+        AppInput("Penghasilan bruto pajak per bulan (Rp) *", gross, { gross = it; result = null }, error = fieldErrors["gross"])
+        AppInput("Upah dasar lembur (Rp) *", base, { base = it; result = null }, error = fieldErrors["base"])
+        AppInput("Upah dasar THR (Rp) *", thr, { thr = it; result = null }, error = fieldErrors["thr"])
+        Text("Dasar lembur dan THR dapat berbeda. Gunakan dasar yang sesuai komponen upah dan ketentuan pada dokumen kerja.")
+        AppInput("Jam lembur dalam satu hari *", hours, { hours = it; result = null }, error = fieldErrors["hours"])
         listOf(PayrollCalculator.OvertimeDay.WORKDAY to "Hari kerja", PayrollCalculator.OvertimeDay.REST_FIVE_DAY_WEEK to "Istirahat, sistem 5 hari", PayrollCalculator.OvertimeDay.REST_SIX_DAY_WEEK to "Istirahat, sistem 6 hari", PayrollCalculator.OvertimeDay.SHORT_DAY_REST to "Istirahat jatuh pada hari terpendek (6 hari)").forEach { (value,label) ->
             Row { RadioButton(day == value.name, { day = value.name; result = null }); Text(label, Modifier.padding(top = 12.dp)) }
         }
         Text("Lembur memakai dasar 1/173 dan faktor PP 35/2021. Input untuk satu hari; batas mingguan dan ketentuan khusus perlu diperiksa terpisah.")
-        AppInput("Dasar iuran BPJS Kesehatan (0 jika tidak ikut)", health, { health = it; result = null })
-        AppInput("Dasar iuran JHT (0 jika tidak ikut)", jht, { jht = it; result = null })
-        AppInput("Dasar iuran JP setelah plafon yang berlaku (0 jika tidak ikut)", pension, { pension = it; result = null })
+        AppInput("Dasar iuran BPJS Kesehatan (0 jika tidak ikut) *", health, { health = it; result = null }, error = fieldErrors["health"])
+        AppInput("Dasar iuran JHT (0 jika tidak ikut) *", jht, { jht = it; result = null }, error = fieldErrors["jht"])
+        AppInput("Dasar iuran JP setelah plafon yang berlaku (0 jika tidak ikut) *", pension, { pension = it; result = null }, error = fieldErrors["pension"])
         Text("Porsi pekerja: kesehatan 1% (dasar maksimum Rp12 juta), JHT 2%, JP 1%. Masukkan dasar JP aktual pada slip; plafon tahunan tidak ditebak aplikasi.")
-        AppInput("PTKP tahunan sesuai status pajak (Rp)", ptkp, { ptkp = it; result = null })
-        AppInput("Masa kerja untuk THR (bulan penuh)", months, { months = it; result = null })
+        AppInput("PTKP tahunan sesuai status pajak (Rp) *", ptkp, { ptkp = it; result = null }, error = fieldErrors["ptkp"])
+        AppInput("Masa kerja untuk THR (bulan penuh) *", months, { months = it; result = null }, error = fieldErrors["months"])
         Button(onClick = {
-            try {
-                fun number(s: String) = s.trim().toLongOrNull() ?: kotlin.error("Isi angka rupiah tanpa titik/koma.")
-                result = PayrollCalculator.calculate(PayrollCalculator.Input(number(gross),number(base),hours.toIntOrNull() ?: kotlin.error("Jam tidak valid."),PayrollCalculator.OvertimeDay.valueOf(day),number(health),number(jht),number(pension),number(ptkp),months.toIntOrNull() ?: kotlin.error("Masa kerja tidak valid."),number(base)))
-                error = ""
-            } catch (e: Exception) { error = e.message ?: "Input tidak valid."; result = null }
+            val validated = PayrollForm.validate(mapOf("gross" to gross,"base" to base,"thr" to thr,"hours" to hours,"health" to health,"jht" to jht,"pension" to pension,"ptkp" to ptkp,"months" to months), PayrollCalculator.OvertimeDay.valueOf(day))
+            fieldErrors = validated.errors
+            if (validated.input == null) { error = "Periksa kolom yang ditandai. Input Anda tetap tersimpan."; result = null }
+            else try { result = PayrollCalculator.calculate(validated.input); error = "" } catch (e: Exception) { error = e.message ?: "Perhitungan belum dapat dilakukan."; result = null }
         }) { Text("Hitung") }
         if (error.isNotBlank()) Text(error, color = MaterialTheme.colorScheme.error)
+        PayrollSources()
         result?.let { r ->
             listOf("Upah lembur" to r.overtime,"BPJS Kesehatan pekerja" to r.health,"JHT pekerja" to r.jht,"JP pekerja" to r.pension,"THR bruto" to r.thr,"Estimasi PPh 21 setahun (termasuk THR)" to r.annualTax,"Rata-rata PPh 21 per bulan" to r.monthlyTaxEstimate,"Estimasi diterima bulan ini (tanpa THR)" to r.monthlyTakeHomeEstimate).forEach { (label,value) -> Text("$label: ${rupiah.format(value)}") }
             Text("THR: masa kerja ≥12 bulan satu bulan upah; 1–<12 bulan proporsional. Estimasi ini memakai pendapatan bulanan tetap, lembur input satu kali, dan THR satu kali; pendapatan lain perlu dimasukkan dalam perhitungan pajak aktual.")
@@ -105,7 +110,7 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
 }
 
 @Composable
-fun JobTrainingScreen() {
+fun LegacyJobTrainingScreen() {
     val context=LocalContext.current
     val prefs=remember{context.getSharedPreferences("career_training",0)}
     var courseId by rememberSaveable { mutableStateOf(TrainingCourses.all.first().id) }

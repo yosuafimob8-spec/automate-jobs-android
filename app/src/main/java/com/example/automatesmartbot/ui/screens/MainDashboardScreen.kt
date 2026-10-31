@@ -263,7 +263,6 @@ private fun MainDashboardContent(
                 .padding(innerPadding)
         ) {
             composable(Screen.Dashboard.route) {
-                FixedCanvasTheme(dark = false) {
                     DashboardScreen(
                         onNavigate = { route ->
                             navController.navigate(route) {
@@ -272,8 +271,6 @@ private fun MainDashboardContent(
                         },
                         viewModel = dashboardViewModel
                     )
-
-                }
             }
             composable(Screen.CariLowongan.route) {
                 FixedCanvasTheme(dark = false) {
@@ -289,10 +286,11 @@ private fun MainDashboardContent(
                         navController.navigate(Screen.Profil.route) {
                             launchSingleTop = true
                         }
-                    }
+                    },
+                    onNavigateReports = { navController.navigate(Screen.Riwayat.route) { launchSingleTop = true } }
                 )
             }
-            composable(Screen.JobTraining.route) { JobTrainingScreen() }
+            composable(Screen.JobTraining.route) { JobTrainingScreen(cvViewModel, isPro) }
             composable(Screen.SalaryCalculator.route) { SalaryCalculatorScreen() }
             composable(Screen.CareerLetters.route) {
                 CareerLettersScreen(onApplicationLetter = {
@@ -305,7 +303,7 @@ private fun MainDashboardContent(
                 CareerDocumentsScreen(onLegacyDocuments = { navController.navigate(Screen.SuratIzinDokumen.route) { launchSingleTop = true } })
             }
             composable(Screen.CvBuilder.route) {
-                CvBuilderScreen(viewModel = cvViewModel, onBack = cvBack)
+                CvBuilderScreen(viewModel = cvViewModel, onBack = cvBack, isPro = isPro)
             }
             composable(Screen.LatihanPsikotes.route) {
                 LatihanPsikotesScreen(isPro = isPro, onExit = navigateUpOrDashboard)

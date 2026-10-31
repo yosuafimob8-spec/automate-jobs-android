@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "approved": true,
+  "review_note": "Keputusan pengguna: 4 ATS FREE, 10 lainnya PRO; 8 bidang pelatihan terbuka untuk FREE/PRO. minimal_01 dan minimal_02 memiliki susunan satu kolom tanpa foto dan ditambahkan ke kategori ATS tanpa mengganti ID/desain.",
+  "cv_templates": {
+    "ats_01": "free",
+    "ats_02": "free",
+    "professional_01": "pro",
+    "professional_02": "pro",
+    "modern_01": "pro",
+    "modern_02": "pro",
+    "minimal_01": "free",
+    "minimal_02": "free",
+    "graduate_01": "pro",
+    "graduate_02": "pro",
+    "executive_01": "pro",
+    "executive_02": "pro",
+    "creative_01": "pro",
+    "creative_02": "pro"
+  },
+  "training_tiers": {
+    "office": "free",
+    "warehouse": "free",
+    "logistics": "free",
+    "customer_service": "free",
+    "sales": "free",
+    "production": "free",
+    "hr": "free",
+    "work_basics": "free"
+  },
+  "training": {
+    "pass_score": 80,
+    "module_count_is_permanent": false
+  },
+  "template_categories": {
+    "minimal_01": [
+      "Minimalis",
+      "ATS"
+    ],
+    "minimal_02": [
+      "Minimalis",
+      "ATS"
+    ]
+  }
+}

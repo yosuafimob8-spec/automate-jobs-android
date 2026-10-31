@@ -1,0 +1,1013 @@
+{
+  "version": 1,
+  "courses": [
+    {
+      "id": "office",
+      "title": "Administrasi Perkantoran",
+      "description": "Pengantar keterampilan kerja melalui materi, latihan dan kasus. Sesuaikan praktik dengan SOP tempat kerja.",
+      "modules": [
+        {
+          "id": "office_1",
+          "title": "Dasar pengelolaan dokumen",
+          "objective": "Mengidentifikasi alur dokumen dan menjaga ketepatan pencatatan.",
+          "content": "Catat surat masuk menggunakan tanggal, pengirim, perihal, dan penanggung jawab. Periksa kelengkapan lampiran sebelum meneruskan. Bedakan dokumen asli, salinan, dan versi revisi; gunakan penamaan yang konsisten. Batasi akses sesuai kewenangan. Dalam latihan ini, buat daftar surat dan tentukan siapa yang perlu menerima tindak lanjut.",
+          "references": [
+            {
+              "title": "Administratif Profesional",
+              "publisher": "Kementerian Ketenagakerjaan RI",
+              "standard": "Kepmenaker 109 Tahun 2024",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/2498/keputusan-menaker-nomor-109-tahun-2024",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Surat datang tanpa lampiran yang disebutkan. Tindakan awal?",
+              "options": [
+                "Tandai lengkap",
+                "Hapus surat",
+                "Catat kekurangan dan konfirmasi ke pengirim"
+              ],
+              "correct": 2,
+              "explanation": "Pencatatan harus menggambarkan kondisi dokumen sebenarnya."
+            }
+          ]
+        },
+        {
+          "id": "office_2",
+          "title": "Komunikasi dan agenda",
+          "objective": "Menyusun pesan kerja dan agenda yang dapat ditindaklanjuti.",
+          "content": "Sampaikan tujuan pesan, tindakan yang dibutuhkan, penanggung jawab, dan tenggat. Sebelum menetapkan rapat, konfirmasi ketersediaan peserta serta dokumen pendukung. Notulen merangkum keputusan dan tindak lanjut, bukan pendapat yang tidak disepakati. Contoh latihan: ubah pesan rapat yang samar menjadi undangan dengan waktu, tempat, agenda, dan kontak.",
+          "references": [
+            {
+              "title": "Administratif Profesional",
+              "publisher": "Kementerian Ketenagakerjaan RI",
+              "standard": "Kepmenaker 109 Tahun 2024",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/2498/keputusan-menaker-nomor-109-tahun-2024",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Isi tindak lanjut notulen yang dapat diperiksa?",
+              "options": [
+                "Hanya daftar makanan",
+                "Perkiraan keputusan pribadi",
+                "Tugas, penanggung jawab dan tenggat"
+              ],
+              "correct": 2,
+              "explanation": "Tindak lanjut harus menyebut pekerjaan dan siapa yang melaksanakannya."
+            }
+          ]
+        }
+      ],
+      "simulation": {
+        "prompt": "Simulasi: dua revisi kontrak masuk dengan nama file sama. Apa yang dilakukan?",
+        "options": [
+          "Timpa keduanya tanpa pemeriksaan",
+          "Sebarkan ke semua kontak",
+          "Konfirmasi versi berlaku, simpan jejak revisi dan batasi akses"
+        ],
+        "correct": 2,
+        "explanation": "Pengendalian versi mencegah penggunaan dokumen yang salah."
+      },
+      "exam": [
+        {
+          "prompt": "Surat datang tanpa lampiran yang disebutkan. Tindakan awal?",
+          "options": [
+            "Tandai lengkap",
+            "Hapus surat",
+            "Catat kekurangan dan konfirmasi ke pengirim"
+          ],
+          "correct": 2,
+          "explanation": "Pencatatan harus menggambarkan kondisi dokumen sebenarnya."
+        },
+        {
+          "prompt": "Isi tindak lanjut notulen yang dapat diperiksa?",
+          "options": [
+            "Hanya daftar makanan",
+            "Perkiraan keputusan pribadi",
+            "Tugas, penanggung jawab dan tenggat"
+          ],
+          "correct": 2,
+          "explanation": "Tindak lanjut harus menyebut pekerjaan dan siapa yang melaksanakannya."
+        },
+        {
+          "prompt": "Simulasi: dua revisi kontrak masuk dengan nama file sama. Apa yang dilakukan?",
+          "options": [
+            "Timpa keduanya tanpa pemeriksaan",
+            "Sebarkan ke semua kontak",
+            "Konfirmasi versi berlaku, simpan jejak revisi dan batasi akses"
+          ],
+          "correct": 2,
+          "explanation": "Pengendalian versi mencegah penggunaan dokumen yang salah."
+        },
+        {
+          "prompt": "Undangan rapat belum menyebut waktu. Apa yang perlu dilengkapi?",
+          "options": [
+            "Waktu dan konfirmasi peserta",
+            "Emoji saja",
+            "Nomor rekening pribadi"
+          ],
+          "correct": 0,
+          "explanation": "Informasi operasional harus jelas sebelum peserta menyiapkan agenda."
+        },
+        {
+          "prompt": "Rekan meminta dokumen rahasia tanpa kewenangan. Sikap yang tepat?",
+          "options": [
+            "Kirim lewat grup umum",
+            "Unggah ke media sosial",
+            "Periksa izin akses melalui penanggung jawab"
+          ],
+          "correct": 2,
+          "explanation": "Akses dokumen mengikuti kewenangan, bukan kedekatan pribadi."
+        }
+      ]
+    },
+    {
+      "id": "warehouse",
+      "title": "Warehouse/Pergudangan",
+      "description": "Pengantar keterampilan kerja melalui materi, latihan dan kasus. Sesuaikan praktik dengan SOP tempat kerja.",
+      "modules": [
+        {
+          "id": "warehouse_1",
+          "title": "Penerimaan dan identifikasi barang",
+          "objective": "Memeriksa kesesuaian fisik dengan dokumen penerimaan.",
+          "content": "Cocokkan identitas barang, jumlah, kondisi, dan dokumen penerimaan. Catat selisih serta kerusakan; pisahkan barang bermasalah sesuai SOP. Jangan mengubah catatan hanya agar sama dengan pesanan. Tentukan lokasi penyimpanan dan identitas yang dapat ditelusuri. Contoh: untuk 50 unit pesanan dan 48 unit diterima, catat jumlah aktual dan laporkan selisih.",
+          "references": [
+            {
+              "title": "SKKNI Bidang Logistik",
+              "publisher": "Kementerian Ketenagakerjaan RI",
+              "standard": "Kepmenaker 170 Tahun 2020",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/1947/keputusan-menaker-nomor-170-tahun-2020",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Diterima 48 unit dari pesanan 50. Catatan yang benar?",
+              "options": [
+                "50 unit agar rapi",
+                "Tidak perlu dicatat",
+                "48 unit dan selisih 2 unit"
+              ],
+              "correct": 2,
+              "explanation": "Pencatatan penerimaan mengikuti jumlah fisik yang diperiksa."
+            }
+          ]
+        },
+        {
+          "id": "warehouse_2",
+          "title": "Penyimpanan dan picking",
+          "objective": "Mengurangi kesalahan lokasi dan pengambilan barang.",
+          "content": "Gunakan alamat lokasi dan label yang jelas. Verifikasi kode, kuantitas, dan kondisi saat mengambil barang. Untuk produk kedaluwarsa, perhatikan aturan FEFO bila diterapkan SOP; jangan menyamakan dengan FIFO. Cocokkan hasil picking dengan dokumen sebelum serah terima. Stok berbeda perlu rekonsiliasi berbukti, bukan penyesuaian tanpa otorisasi.",
+          "references": [
+            {
+              "title": "SKKNI Bidang Logistik",
+              "publisher": "Kementerian Ketenagakerjaan RI",
+              "standard": "Kepmenaker 170 Tahun 2020",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/1947/keputusan-menaker-nomor-170-tahun-2020",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Produk memiliki tanggal kedaluwarsa berbeda. Prinsip FEFO?",
+              "options": [
+                "Yang paling mahal dahulu",
+                "Yang kedaluwarsa lebih awal dikeluarkan lebih dahulu",
+                "Yang paling baru selalu dahulu"
+              ],
+              "correct": 1,
+              "explanation": "FEFO mendahulukan tanggal kedaluwarsa paling awal."
+            }
+          ]
+        }
+      ],
+      "simulation": {
+        "prompt": "Simulasi: stok sistem 100, fisik 97. Langkah yang tepat?",
+        "options": [
+          "Tambahkan 3 di catatan tanpa bukti",
+          "Abaikan selisih",
+          "Hitung ulang, telusuri transaksi dan laporkan selisih"
+        ],
+        "correct": 2,
+        "explanation": "Rekonsiliasi memerlukan verifikasi fisik dan transaksi."
+      },
+      "exam": [
+        {
+          "prompt": "Diterima 48 unit dari pesanan 50. Catatan yang benar?",
+          "options": [
+            "50 unit agar rapi",
+            "Tidak perlu dicatat",
+            "48 unit dan selisih 2 unit"
+          ],
+          "correct": 2,
+          "explanation": "Pencatatan penerimaan mengikuti jumlah fisik yang diperiksa."
+        },
+        {
+          "prompt": "Produk memiliki tanggal kedaluwarsa berbeda. Prinsip FEFO?",
+          "options": [
+            "Yang paling mahal dahulu",
+            "Yang kedaluwarsa lebih awal dikeluarkan lebih dahulu",
+            "Yang paling baru selalu dahulu"
+          ],
+          "correct": 1,
+          "explanation": "FEFO mendahulukan tanggal kedaluwarsa paling awal."
+        },
+        {
+          "prompt": "Simulasi: stok sistem 100, fisik 97. Langkah yang tepat?",
+          "options": [
+            "Tambahkan 3 di catatan tanpa bukti",
+            "Abaikan selisih",
+            "Hitung ulang, telusuri transaksi dan laporkan selisih"
+          ],
+          "correct": 2,
+          "explanation": "Rekonsiliasi memerlukan verifikasi fisik dan transaksi."
+        },
+        {
+          "prompt": "Label lokasi tidak terbaca saat picking. Apa yang dilakukan?",
+          "options": [
+            "Verifikasi lokasi dan kode sebelum mengambil",
+            "Ambil barang yang mirip",
+            "Ubah kode pesanan"
+          ],
+          "correct": 0,
+          "explanation": "Identitas barang harus pasti sebelum serah terima."
+        },
+        {
+          "prompt": "Kemasan bocor ditemukan saat penerimaan. Tindakan?",
+          "options": [
+            "Campur dengan barang baik",
+            "Sembunyikan kerusakan",
+            "Pisahkan sesuai SOP dan laporkan kondisi"
+          ],
+          "correct": 2,
+          "explanation": "Barang bermasalah perlu ditangani agar tidak mengganggu keselamatan dan mutu."
+        }
+      ]
+    },
+    {
+      "id": "logistics",
+      "title": "Logistik",
+      "description": "Pengantar keterampilan kerja melalui materi, latihan dan kasus. Sesuaikan praktik dengan SOP tempat kerja.",
+      "modules": [
+        {
+          "id": "logistics_1",
+          "title": "Perencanaan pengiriman",
+          "objective": "Memeriksa kebutuhan dan kendala distribusi.",
+          "content": "Periksa tujuan, jadwal, jumlah, karakteristik muatan, serta dokumen yang dibutuhkan. Rencanakan serah terima dan kanal komunikasi. Jangan menjanjikan waktu tanpa mempertimbangkan kapasitas dan kendala. Pada latihan, bandingkan dua rencana pengiriman berdasarkan ketepatan waktu, keamanan barang, dan kemampuan pelacakan, bukan harga saja.",
+          "references": [
+            {
+              "title": "SKKNI Bidang Logistik",
+              "publisher": "Kementerian Ketenagakerjaan RI",
+              "standard": "Kepmenaker 170 Tahun 2020",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/1947/keputusan-menaker-nomor-170-tahun-2020",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Dasar memilih rencana pengiriman?",
+              "options": [
+                "Kebutuhan barang, jadwal, keamanan dan kapasitas",
+                "Harga termurah saja",
+                "Perkiraan tanpa alamat"
+              ],
+              "correct": 0,
+              "explanation": "Perencanaan menggabungkan kebutuhan layanan dan kendala operasional."
+            }
+          ]
+        },
+        {
+          "id": "logistics_2",
+          "title": "Pelacakan dan bukti serah terima",
+          "objective": "Mencatat pergerakan serta menangani keterlambatan.",
+          "content": "Catat waktu dan pihak pada setiap serah terima. Bandingkan perkembangan aktual dengan rencana. Jika terlambat, konfirmasi fakta, sampaikan dampak, dan perbarui estimasi kepada pihak terkait. Bukti penerimaan harus sesuai kejadian. Simpan laporan insiden dan tindak lanjut agar perbaikan proses dapat dinilai.",
+          "references": [
+            {
+              "title": "SKKNI Bidang Logistik",
+              "publisher": "Kementerian Ketenagakerjaan RI",
+              "standard": "Kepmenaker 170 Tahun 2020",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/1947/keputusan-menaker-nomor-170-tahun-2020",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Pengiriman terlambat. Informasi pertama yang perlu dipastikan?",
+              "options": [
+                "Alasan yang paling meyakinkan",
+                "Waktu tiba fiktif",
+                "Lokasi aktual dan penyebab yang terverifikasi"
+              ],
+              "correct": 2,
+              "explanation": "Keputusan dan komunikasi harus memakai fakta aktual."
+            }
+          ]
+        }
+      ],
+      "simulation": {
+        "prompt": "Simulasi: penerima mengaku belum menerima, sistem selesai. Tindakan?",
+        "options": [
+          "Buat tanda tangan penerima",
+          "Tutup laporan tanpa pemeriksaan",
+          "Periksa bukti serah terima dan klarifikasi ke pihak terkait"
+        ],
+        "correct": 2,
+        "explanation": "Penyelesaian membutuhkan bukti, bukan perubahan status sepihak."
+      },
+      "exam": [
+        {
+          "prompt": "Dasar memilih rencana pengiriman?",
+          "options": [
+            "Kebutuhan barang, jadwal, keamanan dan kapasitas",
+            "Harga termurah saja",
+            "Perkiraan tanpa alamat"
+          ],
+          "correct": 0,
+          "explanation": "Perencanaan menggabungkan kebutuhan layanan dan kendala operasional."
+        },
+        {
+          "prompt": "Pengiriman terlambat. Informasi pertama yang perlu dipastikan?",
+          "options": [
+            "Alasan yang paling meyakinkan",
+            "Waktu tiba fiktif",
+            "Lokasi aktual dan penyebab yang terverifikasi"
+          ],
+          "correct": 2,
+          "explanation": "Keputusan dan komunikasi harus memakai fakta aktual."
+        },
+        {
+          "prompt": "Simulasi: penerima mengaku belum menerima, sistem selesai. Tindakan?",
+          "options": [
+            "Buat tanda tangan penerima",
+            "Tutup laporan tanpa pemeriksaan",
+            "Periksa bukti serah terima dan klarifikasi ke pihak terkait"
+          ],
+          "correct": 2,
+          "explanation": "Penyelesaian membutuhkan bukti, bukan perubahan status sepihak."
+        },
+        {
+          "prompt": "Barang mudah rusak akan dikirim. Perencanaan perlu mencakup?",
+          "options": [
+            "Persyaratan penanganan dan waktu perjalanan",
+            "Warna kendaraan saja",
+            "Menghapus label"
+          ],
+          "correct": 0,
+          "explanation": "Karakteristik muatan memengaruhi penanganan yang diperlukan."
+        },
+        {
+          "prompt": "Kapan bukti penerimaan boleh ditandai lengkap?",
+          "options": [
+            "Saat kendaraan berangkat",
+            "Setelah serah terima terkonfirmasi",
+            "Sebelum barang dimuat"
+          ],
+          "correct": 1,
+          "explanation": "Bukti harus menggambarkan kejadian yang benar-benar berlangsung."
+        }
+      ]
+    },
+    {
+      "id": "customer_service",
+      "title": "Customer Service",
+      "description": "Pengantar keterampilan kerja melalui materi, latihan dan kasus. Sesuaikan praktik dengan SOP tempat kerja.",
+      "modules": [
+        {
+          "id": "customer_service_1",
+          "title": "Mendengarkan dan klarifikasi",
+          "objective": "Mengidentifikasi kebutuhan pelanggan secara tepat.",
+          "content": "Dengarkan penjelasan sampai selesai. Rangkum kebutuhan dan minta konfirmasi sebelum menawarkan tindakan. Gunakan bahasa yang sopan serta mudah dipahami. Verifikasi identitas sesuai SOP tanpa meminta informasi rahasia yang tidak diperlukan. Catat fakta penting agar pelanggan tidak harus menjelaskan ulang pada setiap petugas.",
+          "references": [
+            {
+              "title": "Program Pelayanan Pelanggan",
+              "publisher": "Kementerian Ketenagakerjaan RI",
+              "standard": null,
+              "url": "https://proglat.kemnaker.go.id/programs/f2a9a86f-5b52-4e2c-9cf1-49905454ea5f/versions/3",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Pelanggan menyampaikan keluhan panjang. Respons awal?",
+              "options": [
+                "Potong pembicaraan",
+                "Langsung menyalahkan pelanggan",
+                "Dengarkan, rangkum dan konfirmasi masalah"
+              ],
+              "correct": 2,
+              "explanation": "Klarifikasi membantu memastikan masalah yang ditangani benar."
+            }
+          ]
+        },
+        {
+          "id": "customer_service_2",
+          "title": "Penanganan keluhan",
+          "objective": "Menindaklanjuti keluhan sesuai kewenangan.",
+          "content": "Jelaskan tindakan yang tersedia dan waktu tindak lanjut secara realistis. Hindari menjanjikan pengembalian dana di luar kewenangan. Untuk kasus yang membutuhkan persetujuan, eskalasikan dengan ringkasan dan bukti. Konfirmasi hasil kepada pelanggan. Jaga kerahasiaan informasi dan dokumentasikan penyelesaian sesuai prosedur.",
+          "references": [
+            {
+              "title": "Program Pelayanan Pelanggan",
+              "publisher": "Kementerian Ketenagakerjaan RI",
+              "standard": null,
+              "url": "https://proglat.kemnaker.go.id/programs/f2a9a86f-5b52-4e2c-9cf1-49905454ea5f/versions/3",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Permintaan refund di luar kewenangan petugas. Tindakan?",
+              "options": [
+                "Janji refund pasti tanpa izin",
+                "Eskalasi dengan bukti dan jelaskan proses",
+                "Abaikan pelanggan"
+              ],
+              "correct": 1,
+              "explanation": "Petugas menjaga batas kewenangan dan kejelasan tindak lanjut."
+            }
+          ]
+        }
+      ],
+      "simulation": {
+        "prompt": "Simulasi: pelanggan marah karena tiga kali dihubungi tanpa solusi. Apa yang dilakukan?",
+        "options": [
+          "Minta mengulang dari awal tanpa membaca riwayat",
+          "Janji selesai lima menit tanpa pemeriksaan",
+          "Tinjau riwayat, akui dampak dan tetapkan tindak lanjut yang dapat dipenuhi"
+        ],
+        "correct": 2,
+        "explanation": "Riwayat dan tindakan realistis menjaga kesinambungan pelayanan."
+      },
+      "exam": [
+        {
+          "prompt": "Pelanggan menyampaikan keluhan panjang. Respons awal?",
+          "options": [
+            "Potong pembicaraan",
+            "Langsung menyalahkan pelanggan",
+            "Dengarkan, rangkum dan konfirmasi masalah"
+          ],
+          "correct": 2,
+          "explanation": "Klarifikasi membantu memastikan masalah yang ditangani benar."
+        },
+        {
+          "prompt": "Permintaan refund di luar kewenangan petugas. Tindakan?",
+          "options": [
+            "Janji refund pasti tanpa izin",
+            "Eskalasi dengan bukti dan jelaskan proses",
+            "Abaikan pelanggan"
+          ],
+          "correct": 1,
+          "explanation": "Petugas menjaga batas kewenangan dan kejelasan tindak lanjut."
+        },
+        {
+          "prompt": "Simulasi: pelanggan marah karena tiga kali dihubungi tanpa solusi. Apa yang dilakukan?",
+          "options": [
+            "Minta mengulang dari awal tanpa membaca riwayat",
+            "Janji selesai lima menit tanpa pemeriksaan",
+            "Tinjau riwayat, akui dampak dan tetapkan tindak lanjut yang dapat dipenuhi"
+          ],
+          "correct": 2,
+          "explanation": "Riwayat dan tindakan realistis menjaga kesinambungan pelayanan."
+        },
+        {
+          "prompt": "Data pelanggan akan diteruskan untuk eskalasi. Pilih cara yang tepat.",
+          "options": [
+            "Kanal resmi dengan data yang diperlukan saja",
+            "Grup publik",
+            "Akun pribadi siapa saja"
+          ],
+          "correct": 0,
+          "explanation": "Data dibagikan sesuai tujuan dan kewenangan."
+        },
+        {
+          "prompt": "Belum ada kepastian waktu solusi. Pernyataan yang tepat?",
+          "options": [
+            "Klaim selesai hari ini tanpa bukti",
+            "Diam sampai pelanggan menyerah",
+            "Jelaskan status dan jadwal pembaruan berikutnya"
+          ],
+          "correct": 2,
+          "explanation": "Komunikasi status dapat jelas tanpa membuat janji palsu."
+        }
+      ]
+    },
+    {
+      "id": "sales",
+      "title": "Sales & Marketing",
+      "description": "Pengantar keterampilan kerja melalui materi, latihan dan kasus. Sesuaikan praktik dengan SOP tempat kerja.",
+      "modules": [
+        {
+          "id": "sales_1",
+          "title": "Kebutuhan dan nilai produk",
+          "objective": "Menghubungkan kebutuhan pelanggan dengan manfaat nyata.",
+          "content": "Tentukan sasaran pelanggan dan masalah yang ingin diselesaikan. Bedakan fitur produk dari manfaat untuk pelanggan. Gunakan pertanyaan untuk memahami kebutuhan dan batas anggaran. Catat informasi yang terverifikasi; hindari klaim kemampuan produk tanpa bukti. Latihan: tulis satu manfaat yang relevan beserta alasan dan batas penggunaannya.",
+          "references": [
+            {
+              "title": "Program Content Marketing",
+              "publisher": "Skillhub Kemnaker / UPTD Pelatihan Kerja Disnaker Kabupaten Bandung",
+              "standard": null,
+              "url": "https://skillhub.kemnaker.go.id/pelatihan/vokasi-nasional/jadwal/content-marketing-6391d127-8563-4127-ac8a-d660a9cccf4e",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Cara menawarkan produk yang relevan?",
+              "options": [
+                "Pahami kebutuhan lalu jelaskan manfaat yang terbukti",
+                "Janji hasil apa pun",
+                "Abaikan kebutuhan pelanggan"
+              ],
+              "correct": 0,
+              "explanation": "Penawaran berangkat dari kebutuhan dan kemampuan produk yang nyata."
+            }
+          ]
+        },
+        {
+          "id": "sales_2",
+          "title": "Konten dan tindak lanjut",
+          "objective": "Menyusun pesan promosi dan mengevaluasi respons.",
+          "content": "Tentukan tujuan konten, sasaran, pesan utama, dan tindakan yang diharapkan. Sesuaikan kanal dengan kebutuhan audiens. Pastikan harga serta ketentuan mudah dipahami. Ukur respons terhadap tujuan, bukan jumlah tayangan saja. Lakukan tindak lanjut secara sopan dan hormati penolakan pelanggan. Dokumentasikan hasil agar pesan berikutnya lebih relevan.",
+          "references": [
+            {
+              "title": "Program Content Marketing",
+              "publisher": "Skillhub Kemnaker / UPTD Pelatihan Kerja Disnaker Kabupaten Bandung",
+              "standard": null,
+              "url": "https://skillhub.kemnaker.go.id/pelatihan/vokasi-nasional/jadwal/content-marketing-6391d127-8563-4127-ac8a-d660a9cccf4e",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Konten bertujuan menghasilkan permintaan demo. Ukuran yang paling terkait?",
+              "options": [
+                "Jumlah warna di poster",
+                "Jumlah file desain",
+                "Jumlah permintaan demo yang valid"
+              ],
+              "correct": 2,
+              "explanation": "Ukuran keberhasilan mengikuti tujuan yang ditetapkan."
+            }
+          ]
+        }
+      ],
+      "simulation": {
+        "prompt": "Simulasi: target penjualan tertinggal, rekan menyarankan klaim palsu. Sikap?",
+        "options": [
+          "Pakai klaim palsu",
+          "Gunakan bukti manfaat dan perbaiki sasaran serta tindak lanjut",
+          "Sembunyikan syarat harga"
+        ],
+        "correct": 1,
+        "explanation": "Perbaikan penjualan tidak membenarkan informasi yang menyesatkan."
+      },
+      "exam": [
+        {
+          "prompt": "Cara menawarkan produk yang relevan?",
+          "options": [
+            "Pahami kebutuhan lalu jelaskan manfaat yang terbukti",
+            "Janji hasil apa pun",
+            "Abaikan kebutuhan pelanggan"
+          ],
+          "correct": 0,
+          "explanation": "Penawaran berangkat dari kebutuhan dan kemampuan produk yang nyata."
+        },
+        {
+          "prompt": "Konten bertujuan menghasilkan permintaan demo. Ukuran yang paling terkait?",
+          "options": [
+            "Jumlah warna di poster",
+            "Jumlah file desain",
+            "Jumlah permintaan demo yang valid"
+          ],
+          "correct": 2,
+          "explanation": "Ukuran keberhasilan mengikuti tujuan yang ditetapkan."
+        },
+        {
+          "prompt": "Simulasi: target penjualan tertinggal, rekan menyarankan klaim palsu. Sikap?",
+          "options": [
+            "Pakai klaim palsu",
+            "Gunakan bukti manfaat dan perbaiki sasaran serta tindak lanjut",
+            "Sembunyikan syarat harga"
+          ],
+          "correct": 1,
+          "explanation": "Perbaikan penjualan tidak membenarkan informasi yang menyesatkan."
+        },
+        {
+          "prompt": "Pelanggan menolak dihubungi lagi. Apa yang dilakukan?",
+          "options": [
+            "Hubungi terus setiap jam",
+            "Sebarkan nomornya",
+            "Hormati penolakan dan catat preferensinya"
+          ],
+          "correct": 2,
+          "explanation": "Tindak lanjut profesional menghormati batas komunikasi."
+        },
+        {
+          "prompt": "Sebelum promosi diterbitkan, apa yang diperiksa?",
+          "options": [
+            "Ketepatan manfaat, harga dan ketentuan",
+            "Hanya ukuran logo",
+            "Klaim pesaing yang belum terbukti"
+          ],
+          "correct": 0,
+          "explanation": "Informasi promosi harus dapat dipertanggungjawabkan."
+        }
+      ]
+    },
+    {
+      "id": "production",
+      "title": "Operator Produksi",
+      "description": "Pengantar keterampilan kerja melalui materi, latihan dan kasus. Sesuaikan praktik dengan SOP tempat kerja.",
+      "modules": [
+        {
+          "id": "production_1",
+          "title": "Kesiapan dan bahaya kerja",
+          "objective": "Mengenali kondisi tidak aman sebelum bekerja.",
+          "content": "Ikuti pengarahan keselamatan dan SOP peralatan. Kenali bahaya, jalur evakuasi, serta pelindung yang diwajibkan. Jangan menjalankan mesin tanpa pelatihan dan kewenangan. Laporkan kondisi tidak aman sebelum melanjutkan. Materi ini pengantar keselamatan; keterampilan mesin tertentu harus dipelajari langsung dengan instruktur dan prosedur tempat kerja.",
+          "references": [
+            {
+              "title": "Keselamatan Kerja",
+              "publisher": "Pemerintah RI / JDIH Kemnaker",
+              "standard": "UU 1 Tahun 1970",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/49/undang-undang-nomor-1-tahun-1970",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Pelindung mesin rusak sebelum mulai kerja. Tindakan?",
+              "options": [
+                "Jalankan pelan-pelan",
+                "Hentikan persiapan dan laporkan sesuai SOP",
+                "Lepas pelindung lain"
+              ],
+              "correct": 1,
+              "explanation": "Kondisi tidak aman perlu ditangani sebelum paparan bahaya."
+            }
+          ]
+        },
+        {
+          "id": "production_2",
+          "title": "Pencatatan proses dan eskalasi",
+          "objective": "Menjaga catatan produksi dan merespons penyimpangan.",
+          "content": "Periksa instruksi kerja dan identitas bahan sebelum proses. Catat keluaran serta penyimpangan yang diamati secara jujur. Pisahkan hasil yang perlu pemeriksaan sesuai SOP. Jangan memperbaiki mesin berenergi tanpa otorisasi dan pengamanan. Saat ada bahaya, ikuti prosedur penghentian aman dan hubungi penanggung jawab.",
+          "references": [
+            {
+              "title": "Keselamatan Kerja",
+              "publisher": "Pemerintah RI / JDIH Kemnaker",
+              "standard": "UU 1 Tahun 1970",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/49/undang-undang-nomor-1-tahun-1970",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Ada penyimpangan hasil produksi. Catatan yang benar?",
+              "options": [
+                "Ubah agar target terlihat tercapai",
+                "Jumlah aktual dan jenis penyimpangan",
+                "Jangan catat produk rusak"
+              ],
+              "correct": 1,
+              "explanation": "Catatan faktual mendukung penelusuran dan penanganan penyimpangan."
+            }
+          ]
+        }
+      ],
+      "simulation": {
+        "prompt": "Simulasi: mesin macet dan masih berenergi. Apa yang dilakukan?",
+        "options": [
+          "Masukkan tangan untuk menarik benda",
+          "Minta rekan menahan tombol saja",
+          "Ikuti prosedur penghentian aman dan panggil petugas berwenang"
+        ],
+        "correct": 2,
+        "explanation": "Penanganan mesin memerlukan pengamanan dan kewenangan yang sesuai."
+      },
+      "exam": [
+        {
+          "prompt": "Pelindung mesin rusak sebelum mulai kerja. Tindakan?",
+          "options": [
+            "Jalankan pelan-pelan",
+            "Hentikan persiapan dan laporkan sesuai SOP",
+            "Lepas pelindung lain"
+          ],
+          "correct": 1,
+          "explanation": "Kondisi tidak aman perlu ditangani sebelum paparan bahaya."
+        },
+        {
+          "prompt": "Ada penyimpangan hasil produksi. Catatan yang benar?",
+          "options": [
+            "Ubah agar target terlihat tercapai",
+            "Jumlah aktual dan jenis penyimpangan",
+            "Jangan catat produk rusak"
+          ],
+          "correct": 1,
+          "explanation": "Catatan faktual mendukung penelusuran dan penanganan penyimpangan."
+        },
+        {
+          "prompt": "Simulasi: mesin macet dan masih berenergi. Apa yang dilakukan?",
+          "options": [
+            "Masukkan tangan untuk menarik benda",
+            "Minta rekan menahan tombol saja",
+            "Ikuti prosedur penghentian aman dan panggil petugas berwenang"
+          ],
+          "correct": 2,
+          "explanation": "Penanganan mesin memerlukan pengamanan dan kewenangan yang sesuai."
+        },
+        {
+          "prompt": "Tugas membutuhkan mesin yang belum Anda kuasai. Respons?",
+          "options": [
+            "Coba tanpa pendamping",
+            "Tiru gerakan dari jauh",
+            "Minta pelatihan dan arahan penanggung jawab"
+          ],
+          "correct": 2,
+          "explanation": "Kewenangan dan pemahaman keselamatan diperlukan sebelum operasi."
+        },
+        {
+          "prompt": "Jalur evakuasi terhalang bahan. Sikap?",
+          "options": [
+            "Biarkan sampai ada insiden",
+            "Gunakan untuk menambah stok",
+            "Laporkan dan tindak lanjuti sesuai prosedur"
+          ],
+          "correct": 2,
+          "explanation": "Akses darurat perlu dijaga agar dapat digunakan."
+        }
+      ]
+    },
+    {
+      "id": "hr",
+      "title": "HR & Recruitment",
+      "description": "Pengantar keterampilan kerja melalui materi, latihan dan kasus. Sesuaikan praktik dengan SOP tempat kerja.",
+      "modules": [
+        {
+          "id": "hr_1",
+          "title": "Kebutuhan jabatan dan seleksi",
+          "objective": "Menyusun kriteria seleksi berdasarkan pekerjaan.",
+          "content": "Terjemahkan kebutuhan pekerjaan menjadi tanggung jawab dan kriteria yang dapat diperiksa. Pisahkan syarat wajib dari keterampilan yang dapat dikembangkan. Siapkan pertanyaan berbasis pengalaman relevan dan catatan evaluasi yang konsisten. Hindari membuat keputusan hanya dari kesan pribadi. Latihan: tentukan bukti kemampuan untuk satu tugas administrasi.",
+          "references": [
+            {
+              "title": "SKKNI Manajemen Sumber Daya Manusia",
+              "publisher": "Kementerian Ketenagakerjaan RI",
+              "standard": "Kepmenaker 149 Tahun 2020",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/1933/keputusan-menaker-nomor-149-tahun-2020",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Kriteria seleksi yang dapat dinilai?",
+              "options": [
+                "Kemampuan relevan dengan tugas dan bukti yang jelas",
+                "Kesukaan pribadi pewawancara",
+                "Kemiripan nama kandidat"
+              ],
+              "correct": 0,
+              "explanation": "Kriteria terkait pekerjaan memungkinkan evaluasi konsisten."
+            }
+          ]
+        },
+        {
+          "id": "hr_2",
+          "title": "Dokumentasi dan kerahasiaan",
+          "objective": "Mencatat evaluasi kandidat secara bertanggung jawab.",
+          "content": "Catat jawaban, bukti, dan pertimbangan berdasarkan kriteria. Beri akses data kandidat hanya kepada pihak yang berkepentingan. Komunikasikan tahapan dan hasil yang sudah diputuskan melalui kanal resmi. Hindari janji penerimaan sebelum otorisasi. Simpan dokumen menurut kebijakan organisasi dan ketentuan perlindungan data yang berlaku.",
+          "references": [
+            {
+              "title": "SKKNI Manajemen Sumber Daya Manusia",
+              "publisher": "Kementerian Ketenagakerjaan RI",
+              "standard": "Kepmenaker 149 Tahun 2020",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/1933/keputusan-menaker-nomor-149-tahun-2020",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Catatan wawancara yang baik memuat?",
+              "options": [
+                "Rumor tentang keluarga",
+                "Komentar pribadi tanpa hubungan tugas",
+                "Bukti jawaban dan penilaian menurut kriteria"
+              ],
+              "correct": 2,
+              "explanation": "Dokumentasi membantu menelusuri dasar keputusan seleksi."
+            }
+          ]
+        }
+      ],
+      "simulation": {
+        "prompt": "Simulasi: kandidat meminta status seleksi, keputusan belum ada. Jawaban?",
+        "options": [
+          "Jelaskan status aktual dan jadwal pembaruan yang dapat dipenuhi",
+          "Klaim sudah diterima",
+          "Sebarkan penilaian kandidat lain"
+        ],
+        "correct": 0,
+        "explanation": "Komunikasi rekrutmen harus akurat dan menjaga kerahasiaan."
+      },
+      "exam": [
+        {
+          "prompt": "Kriteria seleksi yang dapat dinilai?",
+          "options": [
+            "Kemampuan relevan dengan tugas dan bukti yang jelas",
+            "Kesukaan pribadi pewawancara",
+            "Kemiripan nama kandidat"
+          ],
+          "correct": 0,
+          "explanation": "Kriteria terkait pekerjaan memungkinkan evaluasi konsisten."
+        },
+        {
+          "prompt": "Catatan wawancara yang baik memuat?",
+          "options": [
+            "Rumor tentang keluarga",
+            "Komentar pribadi tanpa hubungan tugas",
+            "Bukti jawaban dan penilaian menurut kriteria"
+          ],
+          "correct": 2,
+          "explanation": "Dokumentasi membantu menelusuri dasar keputusan seleksi."
+        },
+        {
+          "prompt": "Simulasi: kandidat meminta status seleksi, keputusan belum ada. Jawaban?",
+          "options": [
+            "Jelaskan status aktual dan jadwal pembaruan yang dapat dipenuhi",
+            "Klaim sudah diterima",
+            "Sebarkan penilaian kandidat lain"
+          ],
+          "correct": 0,
+          "explanation": "Komunikasi rekrutmen harus akurat dan menjaga kerahasiaan."
+        },
+        {
+          "prompt": "CV kandidat diminta oleh pihak yang tidak terkait rekrutmen. Tindakan?",
+          "options": [
+            "Langsung kirim semua CV",
+            "Periksa tujuan serta kewenangan sebelum berbagi",
+            "Unggah ke grup umum"
+          ],
+          "correct": 1,
+          "explanation": "Data kandidat hanya digunakan untuk tujuan yang sah dan berwenang."
+        },
+        {
+          "prompt": "Dua kandidat dinilai dengan kriteria berbeda tanpa alasan tugas. Perbaikan?",
+          "options": [
+            "Gunakan kriteria pekerjaan yang konsisten",
+            "Pilih berdasarkan selera",
+            "Hapus semua bukti"
+          ],
+          "correct": 0,
+          "explanation": "Konsistensi kriteria mendukung evaluasi yang dapat dipertanggungjawabkan."
+        }
+      ]
+    },
+    {
+      "id": "work_basics",
+      "title": "Dasar Dunia Kerja",
+      "description": "Pengantar keterampilan kerja melalui materi, latihan dan kasus. Sesuaikan praktik dengan SOP tempat kerja.",
+      "modules": [
+        {
+          "id": "work_basics_1",
+          "title": "Memahami dokumen dan waktu kerja",
+          "objective": "Menemukan ketentuan kerja dan meminta penjelasan.",
+          "content": "Baca dokumen kerja sebelum menyetujui. Periksa pihak, jenis hubungan kerja, tugas, lokasi, waktu kerja, upah, dan ketentuan lain yang berlaku. Minta penjelasan untuk bagian yang belum dipahami. Simpan salinan dokumen dan catatan waktu kerja. Ketentuan khusus sektor serta perjanjian perlu diperiksa; ringkasan ini bukan pengganti nasihat hukum.",
+          "references": [
+            {
+              "title": "Waktu Kerja, Waktu Istirahat dan Hubungan Kerja",
+              "publisher": "Pemerintah RI / JDIH Kemnaker",
+              "standard": "PP 35 Tahun 2021",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/1723/peraturan-pemerintah-nomor-35-tahun-2021",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Dokumen kerja memuat ketentuan yang belum dipahami. Tindakan?",
+              "options": [
+                "Tanda tangan tanpa membaca",
+                "Minta penjelasan dan simpan salinan sebelum menyetujui",
+                "Ubah dokumen diam-diam"
+              ],
+              "correct": 1,
+              "explanation": "Memahami dan menyimpan dokumen membantu memastikan kesepahaman."
+            }
+          ]
+        },
+        {
+          "id": "work_basics_2",
+          "title": "Komunikasi tugas dan pencatatan lembur",
+          "objective": "Mengklarifikasi tugas dan mencatat pekerjaan tambahan.",
+          "content": "Saat menerima tugas, konfirmasi hasil yang diharapkan, tenggat, dan prioritas. Jika ada kendala, laporkan fakta serta pilihan tindak lanjut. Untuk lembur, periksa perintah dan persetujuan sesuai ketentuan lalu catat waktunya. Jangan menganggap setiap keterlambatan pulang otomatis telah memenuhi prosedur lembur. Periksa pembatasan waktu dan aturan khusus bersama penanggung jawab.",
+          "references": [
+            {
+              "title": "Waktu Kerja, Waktu Istirahat dan Hubungan Kerja",
+              "publisher": "Pemerintah RI / JDIH Kemnaker",
+              "standard": "PP 35 Tahun 2021",
+              "url": "https://jdih.kemnaker.go.id/peraturan/detail/1723/peraturan-pemerintah-nomor-35-tahun-2021",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            },
+            {
+              "title": "Tugas dan Fungsi BNSP",
+              "publisher": "BNSP",
+              "standard": null,
+              "url": "https://ppid.bnsp.go.id/daftar-informasi-publik/informasi-berkala/tugas-dan-fungsi",
+              "checkedOn": "2026-10-31",
+              "scope": "Referensi pengantar; materi internal ini bukan seluruh unit kompetensi atau pelatihan resmi penerbit."
+            }
+          ],
+          "practice": [
+            {
+              "prompt": "Pencatatan lembur sebaiknya disertai?",
+              "options": [
+                "Perkiraan tanpa bukti",
+                "Waktu aktual dan dokumen perintah/persetujuan sesuai ketentuan",
+                "Jam yang dibuat agar gaji lebih besar"
+              ],
+              "correct": 1,
+              "explanation": "Pencatatan faktual mendukung pemeriksaan pemenuhan prosedur dan hak."
+            }
+          ]
+        }
+      ],
+      "simulation": {
+        "prompt": "Simulasi: dua tugas mendesak berbenturan. Tindakan profesional?",
+        "options": [
+          "Konfirmasi prioritas, jelaskan kapasitas dan sepakati tindak lanjut",
+          "Abaikan salah satunya tanpa kabar",
+          "Klaim keduanya selesai"
+        ],
+        "correct": 0,
+        "explanation": "Komunikasi kapasitas dan prioritas membantu mengelola pekerjaan."
+      },
+      "exam": [
+        {
+          "prompt": "Dokumen kerja memuat ketentuan yang belum dipahami. Tindakan?",
+          "options": [
+            "Tanda tangan tanpa membaca",
+            "Minta penjelasan dan simpan salinan sebelum menyetujui",
+            "Ubah dokumen diam-diam"
+          ],
+          "correct": 1,
+          "explanation": "Memahami dan menyimpan dokumen membantu memastikan kesepahaman."
+        },
+        {
+          "prompt": "Pencatatan lembur sebaiknya disertai?",
+          "options": [
+            "Perkiraan tanpa bukti",
+            "Waktu aktual dan dokumen perintah/persetujuan sesuai ketentuan",
+            "Jam yang dibuat agar gaji lebih besar"
+          ],
+          "correct": 1,
+          "explanation": "Pencatatan faktual mendukung pemeriksaan pemenuhan prosedur dan hak."
+        },
+        {
+          "prompt": "Simulasi: dua tugas mendesak berbenturan. Tindakan profesional?",
+          "options": [
+            "Konfirmasi prioritas, jelaskan kapasitas dan sepakati tindak lanjut",
+            "Abaikan salah satunya tanpa kabar",
+            "Klaim keduanya selesai"
+          ],
+          "correct": 0,
+          "explanation": "Komunikasi kapasitas dan prioritas membantu mengelola pekerjaan."
+        },
+        {
+          "prompt": "Apa perbedaan sertifikat internal KarirMate dan sertifikasi kompetensi resmi?",
+          "options": [
+            "Keduanya otomatis sertifikat BNSP",
+            "Sertifikat internal memberi lisensi semua pekerjaan",
+            "Sertifikat internal membuktikan penyelesaian pembelajaran KarirMate"
+          ],
+          "correct": 2,
+          "explanation": "Sertifikasi kompetensi memiliki proses dan lembaga berwenang tersendiri."
+        },
+        {
+          "prompt": "Catatan jam kerja berbeda dengan kenyataan. Tindakan?",
+          "options": [
+            "Ubah tanpa jejak",
+            "Abaikan selamanya",
+            "Ajukan koreksi dengan bukti melalui prosedur yang berlaku"
+          ],
+          "correct": 2,
+          "explanation": "Koreksi catatan perlu dapat ditelusuri dan diperiksa."
+        }
+      ]
+    }
+  ]
+}

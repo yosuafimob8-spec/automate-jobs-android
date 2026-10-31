@@ -38,15 +38,28 @@ object PdfCvAnalyzer {
         "certifications" to listOf("sertifikasi", "sertifikat", "certifications", "certificates")
     )
 
+    fun analyzeContent(cv: CvContent): PdfCvAnalysis {
+        require(cv.hasUserText()) { "CV Saya belum berisi data. Isi CV atau pilih PDF dari penyimpanan." }
+        val text = buildString {
+            appendLine(cv.contact.fullName); appendLine(cv.contact.headline); appendLine(cv.contact.email); appendLine(cv.contact.phone); appendLine(cv.contact.location)
+            if (cv.summary.isNotBlank()) appendLine("Profil\n${cv.summary}")
+            if (cv.experience.isNotEmpty()) { appendLine("Pengalaman Kerja"); cv.experience.forEach { appendLine("${it.title} ${it.company} ${it.start} ${it.end}"); it.bullets.forEach(::appendLine) } }
+            if (cv.education.isNotEmpty()) { appendLine("Pendidikan"); cv.education.forEach { appendLine("${it.school} ${it.degree} ${it.field} ${it.start} ${it.end}"); it.details.forEach(::appendLine) } }
+            if (cv.skills.isNotEmpty()) { appendLine("Keterampilan"); cv.skills.forEach { appendLine(it.items.joinToString(", ")) } }
+            cv.certifications.forEach { appendLine("${it.name} ${it.issuer}") }
+        }
+        return analyzeText(text, "CV Saya — ${cv.contact.fullName}").copy(cv = cv)
+    }
+
     fun analyzeText(text: String, source: String): PdfCvAnalysis {
         require(text.count(Char::isLetter) >= 40) { "Tidak cukup teks untuk dianalisis." }
         val lines = text.lines().map { it.trim() }.filter { it.isNotBlank() }
         val sections = mutableMapOf<String, MutableList<String>>()
         var section: String? = null
         lines.forEach { line ->
-            val normalized = line.lowercase().trim(' ', ':', '-', '•')
+            val normalized = line.substringBefore(':').lowercase().trim(' ', ':', '-', '•')
             val key = headings.entries.firstOrNull { normalized in it.value }?.key
-            if (key != null) { section = key; sections.getOrPut(key) { mutableListOf() } }
+            if (key != null) { section = key; val values = sections.getOrPut(key) { mutableListOf() }; if (line.contains(':')) line.substringAfter(':').trim().takeIf { it.isNotBlank() }?.let(values::add) }
             else section?.let { sections.getOrPut(it) { mutableListOf() }.add(line) }
         }
         val email = Regex("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}").find(text)?.value.orEmpty()

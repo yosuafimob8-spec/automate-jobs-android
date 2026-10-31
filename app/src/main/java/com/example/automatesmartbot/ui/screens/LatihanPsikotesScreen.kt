@@ -33,14 +33,13 @@ import kotlinx.coroutines.delay
 private val orange = com.example.automatesmartbot.ui.theme.ActionOrange
 private val teal = Color(0xFF11B9BE)
 private val blue = Color(0xFF219CEC)
-private val ink = Color(0xFF172744)
+private val ink: Color @Composable get() = MaterialTheme.colorScheme.onSurface
 private fun JsonObject.s(k: String, fallback: String = "") = get(k)?.takeUnless { it.isJsonNull }?.asString ?: fallback
 private fun JsonObject.n(k: String) = runCatching { get(k)?.asInt ?: 0 }.getOrDefault(0)
 
 @Composable
 fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
-    MaterialTheme(colorScheme = com.example.automatesmartbot.ui.theme.KarirMateLightColors) {
-    Surface(color = Color(0xFFF5F9FC), contentColor = ink) {
+    Surface(color = MaterialTheme.colorScheme.background, contentColor = ink) {
     val vm: PsychotestViewModel = viewModel()
     val modes by vm.catalog.collectAsState()
     val questions by vm.questions.collectAsState()
@@ -54,6 +53,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
     val submitting by vm.submitting.collectAsState()
     val pendingCount by vm.pendingCount.collectAsState()
     var page by rememberSaveable { mutableStateOf("home") }
+    var selectedMode by remember { mutableStateOf<JsonObject?>(null) }
     var family by remember { mutableStateOf("all") }
     var proNotice by remember { mutableStateOf(false) }
     var freeNotice by remember { mutableStateOf(false) }
@@ -79,6 +79,9 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
         }
     }
     BackHandler { back() }
+    selectedMode?.let { mode -> AlertDialog(onDismissRequest = { selectedMode = null }, title = { Text(mode.s("title")) }, text = { Text("Pilih latihan singkat atau simulasi penuh sesuai konfigurasi bank soal.") },
+        confirmButton = { TextButton(onClick = { vm.start(mode.s("test_id"), null); selectedMode = null; page = "exam" }) { Text("Simulasi Penuh · PRO") } },
+        dismissButton = { TextButton(onClick = { vm.start(mode.s("test_id"), mode.n("training_question_count").coerceIn(10, 20)); selectedMode = null; page = "exam" }) { Text("Latihan 10–20 Soal") } }) }
     if (proNotice) AlertDialog(onDismissRequest = { proNotice = false },
         title = { Text("Fitur PRO") },
         text = { Text("Simulasi lengkap, statistik, dan peringkat memerlukan langganan PRO yang aktif. Status akses mengikuti langganan yang diverifikasi server.") },
@@ -87,14 +90,14 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
         title = { Text("Latihan FREE") },
         text = { Text("Paket FREE hanya mencakup kategori dasar dengan 10–20 soal per sesi. Paket ini belum tersedia di server; silakan pilih kategori lain.") },
         confirmButton = { TextButton(onClick = { freeNotice = false }) { Text("Mengerti") } })
-    Column(Modifier.fillMaxSize().background(Color(0xFFF5F9FC))) {
+    Column(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
         // The parent dashboard already draws the app toolbar; do not duplicate it.
         if (loading) LinearProgressIndicator(Modifier.fillMaxWidth(), color = teal)
         error?.let { Text(it, Modifier.padding(12.dp), color = MaterialTheme.colorScheme.error) }
         when (page) {
             "home" -> LazyColumn(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 item {
-                    Card(shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFFE4F8F7))) {
+                    Card(shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer)) {
                         Row(Modifier.fillMaxWidth().height(122.dp).padding(14.dp), verticalAlignment = Alignment.CenterVertically) {
                             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                                 Text("Psikotes", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
@@ -113,8 +116,8 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         Shortcut("🏆 Peringkat 👑", Modifier.weight(1f)) { if (isPro) { vm.loadExtras(isPro); page = "leaderboard" } else proNotice = true }
                     }
                 }
-                item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("Latihan Gratis", color = ink, fontWeight = FontWeight.Bold); Text("Semua kategori dasar • 10–20 soal per sesi • Riwayat latihan", color = ink, style = MaterialTheme.typography.bodySmall) } } }
-                item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("👑 Fitur PRO", color = ink, fontWeight = FontWeight.Bold); Text("Simulasi lengkap, statistik dan peringkat untuk langganan aktif", color = ink, style = MaterialTheme.typography.bodySmall) } } }
+                item { Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), shape = RoundedCornerShape(14.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("Latihan Gratis", color = ink, fontWeight = FontWeight.Bold); Text("Semua kategori dasar • 10–20 soal per sesi • Riwayat latihan", color = ink, style = MaterialTheme.typography.bodySmall) } } }
+                item { Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), shape = RoundedCornerShape(14.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("👑 Fitur PRO", color = ink, fontWeight = FontWeight.Bold); Text("Simulasi lengkap, statistik dan peringkat untuk langganan aktif", color = ink, style = MaterialTheme.typography.bodySmall) } } }
             }
             "catalog" -> Column(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp)) {
                 TextButton(onClick = { page = "home" }, contentPadding = PaddingValues(0.dp)) { Text("← Kembali ke Psikotes", color = teal) }
@@ -136,51 +139,30 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         val title = mode.s("title", "Tes")
                         val icon = testIcon(title)
                         Card(onClick = {
-                            if (isPro || freeEligible(mode)) { vm.start(mode.s("test_id"), (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20)); page = "exam" }
+                            if (isPro) selectedMode = mode
+                            else if (freeEligible(mode)) { vm.start(mode.s("test_id"), mode.n("training_question_count").coerceIn(10, 20)); page = "exam" }
                             else if (basicMode(mode)) freeNotice = true
                             else proNotice = true
-                        }, enabled = !loading && (mode.get("training_available")?.asBoolean != false), modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
+                        }, enabled = !loading && (mode.get("training_available")?.asBoolean != false), modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), shape = RoundedCornerShape(18.dp)) {
                             Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
                                 Box(Modifier.background(icon.second.copy(alpha = 0.13f), RoundedCornerShape(12.dp)).size(42.dp), contentAlignment = Alignment.Center) {
                                     Text(icon.first, style = MaterialTheme.typography.titleLarge)
                                 }
                                 Text(title, fontWeight = FontWeight.Bold, color = ink, maxLines = 2, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
-                                Text("${(if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20)} soal  •  ${mode.n("duration_seconds") / 60} menit", color = Color(0xFF58657A), style = MaterialTheme.typography.labelSmall)
+                                Text("${(if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20)} soal  •  ${mode.n("duration_seconds") / 60} menit", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.labelSmall)
                                 Text(if (freeEligible(mode)) "FREE • Mulai →" else if (basicMode(mode)) "FREE • 10–20 soal saja" else "👑 PRO", color = if (freeEligible(mode)) teal else orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodySmall)
                             }
                         }
                     }
                 }
             }
-            "exam" -> if (session != null && questions.size in 10..20) {
+            "exam" -> if (session != null && questions.isNotEmpty()) {
                 ExamPanel(session!!, questions, submitting, pendingCount, vm::answer, vm::submit, { vm.syncAnswers() })
             } else Column(Modifier.padding(16.dp)) {
                 Text(if (loading) "Memuat sesi dan soal..." else "Sesi belum dapat dibuka. Periksa koneksi atau konfigurasi bank soal.", color = ink)
                 TextButton(onClick = { vm.loadCatalog(); page = "catalog" }) { Text("Pilih Tes Lagi") }
             }
-            "result" -> result?.let { r ->
-                val actualScore = PsychotestPolicy.normalizedScore(r.get("score")?.takeUnless { it.isJsonNull }?.asDouble, r.get("max_score")?.takeUnless { it.isJsonNull }?.asDouble)
-                LazyColumn(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-                    item { Text("Tes Selesai", color = ink, style = MaterialTheme.typography.headlineMedium) }
-                    item {
-                        Info("Nilai latihan", actualScore?.let { "$it / 100" } ?: "Tes kepribadian tidak memiliki nilai benar/salah.")
-                    }
-                    item {
-                        Info("Evaluasi", when {
-                            actualScore == null -> "Hasil menggambarkan kecenderungan, bukan diagnosis psikologis."
-                            actualScore < 40 -> "Pelajari konsep dasar dan pembahasan. Tetap semangat; kemajuan dimulai dari latihan rutin."
-                            actualScore < 60 -> "Pemahaman mulai berkembang. Ulangi kategori yang sulit dan periksa ketelitian."
-                            actualScore < 80 -> "Hasil baik. Tingkatkan konsistensi dan pengelolaan waktu."
-                            else -> "Penguasaan sangat baik. Pertahankan latihan dan coba variasi soal."
-                        })
-                    }
-                    item { Info("Penilaian server", "Benar: ${r.s("correct_count", "—")} • Salah: ${r.s("wrong_count", "—")} • Kosong: ${r.s("blank_count", "—")}. Nilai latihan dinormalisasi 1–100; bobot resmi tes tetap mengikuti server.") }
-                    if (isPro) {
-                        items(r.getAsJsonArray("questions")?.map { it.asJsonObject }.orEmpty()) { q -> Info(q.s("prompt"), q.s("explanation", "Pembahasan tidak tersedia dari server.")) }
-                    }
-                    item { Button(onClick = { page = "home"; vm.loadExtras(isPro) }, colors = ButtonDefaults.buttonColors(containerColor = orange, contentColor = Color.White)) { Text("Selesai") } }
-                }
-            }
+            "result" -> result?.let { r -> PsychotestResultPanel(r, isPro, { page = "home"; vm.loadExtras(isPro) }, { proNotice = true }) }
             "history" -> LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 item { TextButton(onClick = { page = "home" }) { Text("← Kembali", color = teal) } }
                 if (history.isEmpty()) item { Text("Belum ada riwayat.") }
@@ -205,7 +187,6 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
         }
     }
 }
-    }
     }
 
 
@@ -256,16 +237,16 @@ private fun Banner(title: String, subtitle: String, colors: List<Color>, dark: B
 }
 @Composable
 private fun Shortcut(label: String, modifier: Modifier, onClick: () -> Unit) {
-    Card(onClick = onClick, modifier = modifier.height(78.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+    Card(onClick = onClick, modifier = modifier.height(78.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
         Box(Modifier.fillMaxSize().padding(6.dp), contentAlignment = Alignment.Center) { Text(label, color = ink, style = MaterialTheme.typography.labelMedium, textAlign = TextAlign.Center) }
     }
 }
 @Composable
 private fun Info(title: String, subtitle: String) {
-    Card(colors = CardDefaults.cardColors(containerColor = Color.White), modifier = Modifier.fillMaxWidth()) {
+    Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), modifier = Modifier.fillMaxWidth()) {
         Column(Modifier.padding(16.dp)) {
             Text(title, color = ink, fontWeight = FontWeight.Bold)
-            Text(subtitle, color = Color.Gray)
+            Text(subtitle, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
@@ -285,30 +266,30 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
         if (!autoAttempted) { autoAttempted = true; onSubmit() }
     }
     val answered = questions.count { it.get("selected_option_id")?.takeUnless { v -> v.isJsonNull } != null }
-    val allAnswered = questions.isNotEmpty() && answered == questions.size
     if (confirm) AlertDialog(
         onDismissRequest = { confirm = false },
         title = { Text("Selesaikan tes?") },
-        text = { Text("Semua $answered soal sudah dijawab. Kirim untuk melihat nilai?") },
+        text = { Text("$answered dari ${questions.size} soal terjawab; ${questions.size - answered} masih kosong. Jawaban akan disinkronkan sebelum penilaian. Selesaikan sekarang?") },
         confirmButton = { TextButton(onClick = { confirm = false; if (!submitting) onSubmit() }) { Text("Selesaikan") } },
         dismissButton = { TextButton(onClick = { confirm = false }) { Text("Periksa Lagi") } }
     )
-    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Card(shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+    Column(Modifier.fillMaxSize()) {
+    Column(Modifier.weight(1f).verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Card(shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
             Row(Modifier.fillMaxWidth().padding(18.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                Column { Text("⏱  SISA WAKTU", color = Color(0xFF58657A), style = MaterialTheme.typography.labelMedium); Text("%02d:%02d".format(remaining / 60, remaining % 60), color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
-                Column(horizontalAlignment = Alignment.End) { Text("TERJAWAB", color = Color(0xFF58657A), style = MaterialTheme.typography.labelMedium); Text("$answered/${questions.size}", color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
+                Column { Text("⏱  SISA WAKTU", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.labelMedium); Text("%02d:%02d".format(remaining / 60, remaining % 60), color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
+                Column(horizontalAlignment = Alignment.End) { Text("TERJAWAB", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.labelMedium); Text("$answered/${questions.size}", color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
             }
         }
         Text("Soal ${index + 1} dari ${questions.size}", fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
         LinearProgressIndicator(progress = { if (questions.isEmpty()) 0f else answered.toFloat() / questions.size }, modifier = Modifier.fillMaxWidth().height(7.dp), color = orange, trackColor = Color(0xFFE3EBF1))
         questions.getOrNull(index)?.let { q ->
-            Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+            Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
                 Column(Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text(q.s("prompt"), fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
                     (q.getAsJsonArray("options")?.map { it.asJsonObject } ?: emptyList()).forEach { option ->
                         val selected = q.s("selected_option_id") == option.s("id")
-                        Card(onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFE8DC) else Color(0xFFF7FAFD)), border = androidx.compose.foundation.BorderStroke(if (selected) 2.dp else 1.dp, if (selected) orange else Color(0xFFD9E3ED))) {
+                        Card(onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = if (selected) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant), border = androidx.compose.foundation.BorderStroke(if (selected) 2.dp else 1.dp, if (selected) orange else Color(0xFFD9E3ED))) {
                             Row(Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 7.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                                 RadioButton(selected = selected, onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.size(36.dp), colors = RadioButtonDefaults.colors(selectedColor = orange))
                                 Text(option.s("text"), color = ink, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
@@ -318,15 +299,15 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
                 }
             }
         }
+    }
+    Surface(shadowElevation = 6.dp) { Column(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        Text("Terjawab $answered/${questions.size} · soal ${index+1}", style = MaterialTheme.typography.labelMedium)
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            Button(onClick = { index = PsychotestPolicy.previous(index) }, enabled = index > 0, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange, disabledContainerColor = orange, disabledContentColor = Color.White)) { Text("Sebelumnya", color = Color.White) }
-            if (index < questions.lastIndex) {
-                Button(onClick = { index = PsychotestPolicy.next(index, questions.size) }, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange, contentColor = Color.White)) { Text("Selanjutnya", color = Color.White) }
-            } else {
-                Button(onClick = { confirm = true }, enabled = (allAnswered || remaining == 0) && !submitting, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange, contentColor = Color.White)) { Text(if (submitting) "Mengirim..." else "Selesaikan Tes", color = Color.White) }
-            }
+            Button(onClick = { index = PsychotestPolicy.previous(index) }, enabled = index > 0 && !submitting, modifier = Modifier.weight(1f).heightIn(min = 48.dp), colors = ButtonDefaults.buttonColors(containerColor = orange, contentColor = Color.White, disabledContainerColor = orange.copy(alpha = 0.45f), disabledContentColor = Color.White)) { Text("Sebelumnya") }
+            Button(onClick = { index = PsychotestPolicy.next(index, questions.size) }, enabled = index < questions.lastIndex && !submitting, modifier = Modifier.weight(1f).heightIn(min = 48.dp), colors = ButtonDefaults.buttonColors(containerColor = orange, contentColor = Color.White)) { Text("Selanjutnya") }
         }
+        Button(onClick = { confirm = true }, enabled = !submitting && questions.isNotEmpty(), modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp), colors = ButtonDefaults.buttonColors(containerColor = orange, contentColor = Color.White)) { Text(if (submitting) "Menyimpan Hasil..." else "Selesaikan Tes") }
         if (pendingCount > 0) TextButton(onClick = onSync, enabled = !submitting) { Text("Sinkronkan Jawaban ($pendingCount)") }
-        if (index == questions.lastIndex && !allAnswered) Text("Jawab semua soal untuk menyelesaikan tes. Gunakan Sebelumnya untuk memeriksa jawaban.", color = Color(0xFF58657A), style = MaterialTheme.typography.bodySmall)
+    } }
     }
 }

@@ -53,6 +53,12 @@ class PsychotestViewModelTest {
         api.failAnswers = false; vm.submit(); advanceUntilIdle()
         assertNotNull(vm.result.value); assertEquals("a", api.answers["q0"])
     }
+    @Test fun fullModeKeepsConfiguredCountAndDoesNotSendTrainingCount() = runTest(dispatcher) {
+        val api = FakePsychotestApi().apply { count = 45 }
+        val vm = PsychotestViewModel(SavedStateHandle()) { api }
+        vm.start("full", null); advanceUntilIdle()
+        assertEquals(45, vm.questions.value.size); assertFalse(api.started!!.has("question_count"))
+    }
     @Test fun emptySessionFailsWithoutInventingAResult() = runTest(dispatcher) {
         val api = FakePsychotestApi().apply { emptyQuestions = true }
         val vm = PsychotestViewModel(SavedStateHandle()) { api }
@@ -63,13 +69,14 @@ class PsychotestViewModelTest {
 
 private class FakePsychotestApi : PsychotestApi {
     val answers = mutableMapOf<String, String>()
+    var count = 10; var started: JsonObject? = null
     var revision = 0; var conflicts = 0; var failAnswers = false; var emptyQuestions = false
     private fun current() = JsonObject().apply { addProperty("id", "session"); addProperty("revision", revision); addProperty("remaining_seconds", 600); addProperty("status", "active") }
     private fun ok() = JsonObject().apply { addProperty("ok", true); add("session", current()) }
     override suspend fun catalog() = Response.success(ok())
-    override suspend fun start(body: JsonObject): Response<JsonObject> = Response.success(ok())
+    override suspend fun start(body: JsonObject): Response<JsonObject> { started = body; return Response.success(ok()) }
     override suspend fun questions(id: String): Response<JsonObject> = Response.success(ok().apply {
-        add("questions", JsonArray().apply { if (!emptyQuestions) repeat(10) { n -> add(JsonObject().apply {
+        add("questions", JsonArray().apply { if (!emptyQuestions) repeat(count) { n -> add(JsonObject().apply {
             addProperty("question_id", "q$n"); addProperty("prompt", "Question $n")
             answers["q$n"]?.let { addProperty("selected_option_id", it) }
         }) } })

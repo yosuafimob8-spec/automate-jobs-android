@@ -28,7 +28,10 @@ interface ApiService {
     suspend fun getKarirMateSelection(): Response<ResponseBody>
 
     @GET("karirmate/report")
-    suspend fun getKarirMateReport(): Response<ResponseBody>
+    suspend fun getKarirMateReport(@Query("period") period: String? = null, @Query("offset") offset: Int? = null): Response<ResponseBody>
+
+    @POST("auto-apply/simulate")
+    suspend fun simulateAutoApply(@Body request: Map<String, String> = emptyMap()): Response<ResponseBody>
 
     @POST("auto-apply/enable")
     suspend fun enableAutoApply(@Body request: AutoApplyEnableRequest): Response<ResponseBody>

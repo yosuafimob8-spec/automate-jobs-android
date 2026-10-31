@@ -19,6 +19,8 @@ object PayrollCalculator {
     fun overtime(base: Long, hours: Int, day: OvertimeDay): Long {
         require(base in 0..100_000_000_000 && hours in 0..12)
         require(day != OvertimeDay.WORKDAY || hours <= 4) { "Lembur hari kerja maksimal 4 jam/hari; batas mingguan perlu diperiksa terpisah." }
+        require(day != OvertimeDay.REST_SIX_DAY_WEEK || hours <= 11) { "Lembur hari istirahat sistem 6 hari maksimal 11 jam." }
+        require(day != OvertimeDay.SHORT_DAY_REST || hours <= 9) { "Lembur pada hari terpendek maksimal 9 jam." }
         val units = (1..hours).sumOf { hour -> when(day) {
             OvertimeDay.WORKDAY -> if (hour == 1) 1.5 else 2.0
             OvertimeDay.REST_FIVE_DAY_WEEK -> if (hour <= 8) 2.0 else if (hour == 9) 3.0 else 4.0

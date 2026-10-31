@@ -23,7 +23,7 @@ data class CvBuilderUiState(
     val analysis: PdfCvAnalysis? = null, val analyses: List<PdfCvAnalysis> = emptyList(),
     val analysisError: String? = null, val isAnalyzing: Boolean = false,
     val coverLetter: CvCoverLetter? = null, val letters: List<CvCoverLetter> = emptyList(),
-    val photoLoading: Boolean = false
+    val photoLoading: Boolean = false, val validation: Map<String, String> = emptyMap()
 )
 
 class CvBuilderViewModel(application: Application, private val savedState: SavedStateHandle) : AndroidViewModel(application) {
@@ -36,10 +36,29 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
     val history = savedState.getStateFlow("cv_history", listOf(CvNavigation.HOME))
 
     init { CvRenderer.initialize(application); loadDrafts() }
-    fun navigate(page: String) { savedState["cv_history"] = CvNavigation.push(history.value, page) }
+    fun navigate(page: String) {
+        savedState["cv_history"] = CvNavigation.push(history.value, page)
+        if (page in CvWizard.steps) _state.value.activeId?.let { prefs.edit().putString("step_$it", page).apply() }
+        _state.value = _state.value.copy(validation = emptyMap())
+    }
+    fun resumeWizard() {
+        val page = prefs.getString("step_${_state.value.activeId}", CvWizard.steps.first()) ?: CvWizard.steps.first()
+        navigate(page.takeIf { it in CvWizard.steps } ?: CvWizard.steps.first())
+    }
+    fun continueWizard(): Boolean {
+        val page = history.value.last()
+        val errors = CvWizard.errors(page, _state.value.draft)
+        _state.value = _state.value.copy(validation = errors)
+        if (errors.isNotEmpty() || !saveDocument()) return false
+        CvWizard.steps.getOrNull(CvWizard.steps.indexOf(page) + 1)?.let(::navigate)
+        return true
+    }
     fun goBack(): Boolean {
         if (history.value.size <= 1) return false
-        savedState["cv_history"] = CvNavigation.pop(history.value)
+        val previous = CvNavigation.pop(history.value)
+        savedState["cv_history"] = previous
+        previous.lastOrNull()?.takeIf { it in CvWizard.steps }?.let { page -> _state.value.activeId?.let { prefs.edit().putString("step_$it", page).apply() } }
+        _state.value = _state.value.copy(validation = emptyMap())
         return true
     }
     fun resetNavigation() { savedState["cv_history"] = listOf(CvNavigation.HOME) }
@@ -72,7 +91,7 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
     fun updateContent(transform: (CvContent) -> CvContent) {
         if (_state.value.activeId == null) newDocument()
         val current = _state.value
-        _state.value = current.copy(draft = transform(current.draft), ats = null)
+        _state.value = current.copy(draft = transform(current.draft), ats = null, validation = emptyMap())
         persist()
     }
     fun setTemplate(id: String) {
@@ -142,7 +161,12 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
         finally { _state.value = _state.value.copy(isAnalyzing = false) }
     }
     fun selectAnalysis(analysis: PdfCvAnalysis) { prefs.edit().putLong("analysis", analysis.analyzedAt).apply(); _state.value = _state.value.copy(analysis = analysis); navigate("Hasil Analisis") }
-    fun runDraftCheck() { _state.value = _state.value.copy(ats = CvAtsChecker.check(_state.value.draft, _state.value.draft.latexStyle)) }
+    fun runDraftCheck() {
+        try {
+            val analysis = PdfCvAnalyzer.analyzeContent(_state.value.draft)
+            selectAnalysis(analysis)
+        } catch (e: Exception) { _state.value = _state.value.copy(analysis = null, analysisError = e.message) }
+    }
     fun generateCoverLetter(jobTitle: String, company: String, type: LetterType, useAnalyzedCv: Boolean): Boolean {
         return try {
             val source = if (useAnalyzedCv) requireNotNull(_state.value.analysis) { "Analisis PDF belum tersedia." }.cv else _state.value.draft

@@ -84,7 +84,7 @@ class FeatureUiTest {
     }
     @Test fun trainingEvaluationPersistsCompletionAndEnablesPdfCertificate() {
         compose.activity.getSharedPreferences("career_training",0).edit().clear().commit()
-        compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { JobTrainingScreen() } }
+        compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { LegacyJobTrainingScreen() } }
         compose.onAllNodes(hasSetTextAction())[0].performTextInput("Dina Peserta")
         val course = com.example.automatesmartbot.data.career.TrainingCourses.all.first()
         course.questions.forEach { q -> compose.onNodeWithText(q.options[q.correct]).performScrollTo().performClick() }
@@ -105,11 +105,11 @@ class FeatureUiTest {
         compose.setContent { KarirMateTheme(ThemeMode.LIGHT) {
             ExamPanel(session, questions, false, 0, { qid, oid -> questions = questions.map { q -> if (q.get("question_id").asString == qid) q.deepCopy().apply { addProperty("selected_option_id", oid) } else q } }, {}, {})
         } }
-        compose.onNodeWithText("Sebelumnya").performScrollTo().assertIsNotEnabled()
+        compose.onNodeWithText("Sebelumnya").assertIsNotEnabled()
         compose.onNodeWithText("Pilihan b soal 0").performScrollTo().performClick()
-        compose.onNodeWithText("Selanjutnya").performScrollTo().performClick()
+        compose.onNodeWithText("Selanjutnya").performClick()
         compose.onNodeWithText("Soal 2 dari 10").assertExists()
-        compose.onNodeWithText("Sebelumnya").performScrollTo().performClick()
+        compose.onNodeWithText("Sebelumnya").performClick()
         compose.onNodeWithText("Soal 1 dari 10").assertExists()
         compose.onAllNodes(isSelected()).assertCountEquals(1)
     }

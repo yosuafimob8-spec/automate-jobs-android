@@ -17,7 +17,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import com.example.automatesmartbot.data.autoapply.AutoApplyConfirmation
+import com.example.automatesmartbot.data.autoapply.*
 import com.example.automatesmartbot.data.network.ApiClient
 import com.example.automatesmartbot.data.network.AutoApplyEnableRequest
 import kotlinx.coroutines.CancellationException
@@ -25,7 +25,7 @@ import kotlinx.coroutines.launch
 import org.json.JSONObject
 
 @Composable
-fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -> Unit) {
+fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -> Unit, onNavigateReports: () -> Unit = {}) {
     val context = LocalContext.current
     val prefs = remember { context.getSharedPreferences("auto_apply_consent", 0) }
     val scope = rememberCoroutineScope()
@@ -40,12 +40,15 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
     var busy by remember { mutableStateOf(false) }
     var message by remember { mutableStateOf("") }
     var candidates by remember { mutableStateOf<List<JSONObject>>(emptyList()) }
+    var statusBody by remember { mutableStateOf(JSONObject()) }
+    var candidateDiagnosis by remember { mutableStateOf(JSONObject()) }
+    var simulation by remember { mutableStateOf<JSONObject?>(null) }
     var deliveries by remember { mutableStateOf<List<JSONObject>>(emptyList()) }
     suspend fun refresh() {
         statusLoaded = false
         val response = ApiClient.apiService.getAutoApplyStatus()
-        if (!response.isSuccessful) { if (response.code() in listOf(401,403,409)) gmailConnected = false; response.errorBody()?.close(); error("Status Auto Apply gagal (${response.code()}). Periksa sesi dan otorisasi Gmail.") }
-        val body = JSONObject(response.body()?.use { it.string() } ?: error("Status kosong."))
+        val body = response.readJson()
+        statusBody = body
         require(body.has("gmail_connected") && body.has("auto_apply")) { "Status Auto Apply dari server belum lengkap." }
         enabled = body.optJSONObject("auto_apply")?.optBoolean("enabled") == true
         gmailConnected = body.optBoolean("gmail_connected")
@@ -65,9 +68,11 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             if (isPro) {
                 val response = ApiClient.apiService.getKarirMateCandidates()
                 if (response.isSuccessful) {
-                    val array = JSONObject(response.body()?.use { it.string() } ?: "{}").optJSONArray("items")
+                    val result = response.readJson()
+                    candidateDiagnosis = result.optJSONObject("diagnosis") ?: JSONObject().put("message", result.optString("note"))
+                    val array = result.optJSONArray("items")
                     candidates = if (array == null) emptyList() else (0 until array.length()).map { array.getJSONObject(it) }
-                } else { response.errorBody()?.close(); message = "Kandidat gagal dimuat (${response.code()})." }
+                } else { try { response.readJson() } catch (e: Exception) { message = e.message.orEmpty() } }
             }
             val report = ApiClient.apiService.getKarirMateReport()
             if (report.isSuccessful) {
@@ -112,6 +117,28 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             TextButton(onClick = { scope.launch { load() } }, enabled = !busy && isOnline) { Text("Muat Ulang Status") }
             Text(if (!statusLoaded) "Status belum tersedia" else "Gmail: ${if (gmailConnected) "Terhubung" else "Belum terhubung"} • Izin Auto Apply: ${if (enabled) "Aktif" else "Jeda"}")
             Text(if (operatorSendAllowed) "Izin operasional tersedia; jadwal pengiriman belum diverifikasi dari aplikasi." else "Pengiriman produksi belum diizinkan operator; izin akun dapat disimpan tanpa memulai pengiriman.")
+            statusBody.objects("blockers").forEach { blocker ->
+                Card(Modifier.fillMaxWidth()) { Column(Modifier.padding(12.dp)) {
+                    Text(blocker.text("code"), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
+                    Text(blocker.text("message")); Text(blocker.text("action"), style = MaterialTheme.typography.bodySmall)
+                } }
+            }
+            if (statusBody.has("summary")) DeliverySummary(statusBody.getJSONObject("summary"), statusBody.optJSONObject("auto_apply") ?: JSONObject())
+            OutlinedButton(onClick = onNavigateReports) { Text("Riwayat & Laporan Lamaran") }
+            Button(onClick = { scope.launch {
+                busy = true
+                try { simulation = AutoApplyReportRepository(ApiClient.apiService).simulate(); message = "Simulasi selesai. Tidak ada email dikirim." }
+                catch (e: CancellationException) { throw e }
+                catch (e: Exception) { message = e.message ?: "Simulasi belum tersedia di backend." }
+                finally { busy = false }
+            } }, enabled = statusLoaded && isPro && isOnline && !busy) { Text("Simulasikan Rencana Hari Ini") }
+            simulation?.let { plan ->
+                Text(plan.text("note"))
+                Text("Rencana: ${plan.objects("plan").size} penerima · Email dikirim: ${plan.optInt("sent")}")
+                if (!plan.optBoolean("consent_granted")) Text("Simpan izin Auto Apply sebelum menyusun rencana.")
+                plan.optJSONObject("diagnosis")?.let { Text(it.text("message")) }
+                plan.objects("plan").forEach { Text("${it.text("company")} • ${it.text("email")} • ${if (it.text("kind") == "spontaneous") "Lamaran spontan" else "Lowongan terverifikasi"}") }
+            }
             TextButton(onClick = onNavigateProfil) { Text("Periksa Profil & CV") }
             Text(if (cvUploaded) "CV backend: tersimpan" else "CV backend: belum diunggah")
             OutlinedButton(onClick = { pdfPicker.launch(arrayOf("application/pdf")) }, enabled = isOnline && !busy) { Text("Unggah / Ganti CV PDF") }
@@ -172,7 +199,9 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         }
         item {
             Text("Kandidat dari server", style = MaterialTheme.typography.titleMedium)
-            if (candidates.isEmpty()) Text("Belum ada kandidat yang tersedia.")
+            Text(candidateDiagnosis.optString("message").ifBlank { statusBody.optJSONObject("diagnosis")?.optString("message").orEmpty() })
+            Text(candidateDiagnosis.optString("action"))
+            if (candidates.isEmpty() && candidateDiagnosis.length() == 0) Text("Penerima belum berhasil dimuat. Muat ulang untuk melihat diagnosis backend.")
             candidates.forEach { c ->
                 Text("${c.optString("company")} • ${c.optString("position")}\n${c.optString("email")}")
                 Text(if (c.optBoolean("vacancy_verified") && c.optBoolean("active")) "Lowongan aktif menurut server" else "Kontak / peluang spontan; lowongan belum terverifikasi", color = MaterialTheme.colorScheme.onSurfaceVariant)

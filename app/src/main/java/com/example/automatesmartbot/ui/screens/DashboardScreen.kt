@@ -2,6 +2,8 @@ package com.example.automatesmartbot.ui.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.compositeOver
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -144,11 +146,15 @@ fun DashboardScreen(
 ) {
     val status by viewModel.status.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
+    DashboardContent(status, isLoading, onNavigate)
+}
 
+@Composable
+internal fun DashboardContent(status: DashboardStatusResponse?, isLoading: Boolean, onNavigate: (String) -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF6FAFF))
+            .background(MaterialTheme.colorScheme.background)
     ) {
         if (isLoading && status == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -165,12 +171,12 @@ fun DashboardScreen(
                         text = "Karir Mate",
                         fontWeight = FontWeight.Bold,
                         fontSize = 24.sp,
-                        color = Color(0xFF17324D)
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = "Temukan peluang dan siapkan langkah karier Anda.",
                         fontSize = 13.sp,
-                        color = Color(0xFF64748B)
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
                 item {
@@ -187,7 +193,7 @@ fun DashboardScreen(
                 item { SectionHeader(title = "Otomasi & Dokumen", itemCount = automationFeatures.size) }
                 item { FeatureGrid(features = automationFeatures, onNavigate = onNavigate) }
                 item { SectionHeader(title = "Aktivitas Terakhir") }
-                item { ActivityUnavailableCard(onOpenHistory = { onNavigate(Screen.Riwayat.route) }) }
+                item { ApplicationReportsShortcut(onOpenHistory = { onNavigate(Screen.Riwayat.route) }) }
             }
         }
     }
@@ -241,12 +247,12 @@ private fun WelcomeCard(
     }
 
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         shape = RoundedCornerShape(20.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(
-            modifier = Modifier.padding(20.dp),
+            modifier = Modifier.background(Brush.linearGradient(listOf(MaterialTheme.colorScheme.primaryContainer, MaterialTheme.colorScheme.surface))).padding(20.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             Row(
@@ -262,23 +268,23 @@ private fun WelcomeCard(
                         Text(
                             text = "Halo, $displayName",
                             fontSize = 13.sp,
-                            color = Color(0xFF64748B)
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                         ConnectionPill(isOnline = status?.isOnline == true)
                     }
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
-                        text = "AutoMate Dashboard",
+                        text = "Langkah Karier Anda",
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = Color(0xFF17324D)
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                 }
                 Spacer(modifier = Modifier.width(12.dp))
                 MembershipBadge(isPro = isPro)
             }
 
-            HorizontalDivider(color = Color(0xFFE2EAF5), thickness = 1.dp)
+            HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant, thickness = 1.dp)
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -352,7 +358,7 @@ private fun StatusPill(
 ) {
     Surface(
         modifier = modifier,
-        color = Color(0xFFF5F9FF),
+        color = MaterialTheme.colorScheme.surfaceVariant,
         shape = RoundedCornerShape(10.dp)
     ) {
         Row(
@@ -369,7 +375,7 @@ private fun StatusPill(
             Text(
                 text = text,
                 fontSize = 10.sp,
-                color = Color(0xFF17324D),
+                color = MaterialTheme.colorScheme.onSurface,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
@@ -439,9 +445,9 @@ private fun AccountStats(status: DashboardStatusResponse?) {
 private fun StatCard(item: StatItem, modifier: Modifier = Modifier) {
     Card(
         modifier = modifier.height(88.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         shape = RoundedCornerShape(14.dp),
-        border = BorderStroke(1.dp, Color(0xFFE2EAF5))
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
     ) {
         Column(
             modifier = Modifier
@@ -452,7 +458,7 @@ private fun StatCard(item: StatItem, modifier: Modifier = Modifier) {
             Text(
                 text = item.title,
                 fontSize = 10.sp,
-                color = Color(0xFF64748B),
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 fontWeight = FontWeight.Medium
             )
             Text(
@@ -466,7 +472,7 @@ private fun StatCard(item: StatItem, modifier: Modifier = Modifier) {
             Text(
                 text = item.caption,
                 fontSize = 9.sp,
-                color = Color(0xFF64748B),
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -485,13 +491,13 @@ private fun SectionHeader(title: String, itemCount: Int? = null) {
             text = title,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
-            color = Color(0xFF17324D)
+            color = MaterialTheme.colorScheme.onSurface
         )
         if (itemCount != null) {
             Text(
                 text = "$itemCount fitur",
                 fontSize = 10.sp,
-                color = Color(0xFF64748B)
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
     }
@@ -502,8 +508,11 @@ private fun FeatureGrid(
     features: List<DashboardFeature>,
     onNavigate: (String) -> Unit
 ) {
+    val fontScale = androidx.compose.ui.platform.LocalDensity.current.fontScale
+    BoxWithConstraints(Modifier.fillMaxWidth()) {
+    val columns = if (maxWidth < 340.dp || fontScale > 1.25f) 1 else 2
     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        features.chunked(2).forEach { row ->
+        features.chunked(columns).forEach { row ->
             if (row.size == 1) {
                 val feature = row.first()
                 FeatureCard(
@@ -527,6 +536,7 @@ private fun FeatureGrid(
             }
         }
     }
+    }
 }
 
 @Composable
@@ -537,16 +547,16 @@ private fun FeatureCard(
 ) {
     Card(
         modifier = modifier
-            .height(142.dp)
+            .heightIn(min = 164.dp)
             .clickable(onClick = onClick),
-        colors = CardDefaults.cardColors(containerColor = feature.accent.copy(alpha = 0.12f)),
+        colors = CardDefaults.cardColors(containerColor = feature.accent.copy(alpha = 0.12f).compositeOver(MaterialTheme.colorScheme.surface)),
         shape = RoundedCornerShape(18.dp),
         border = BorderStroke(1.dp, feature.accent.copy(alpha = 0.35f))
     ) {
         Column(
             modifier = Modifier
-                .fillMaxSize()
-                .padding(13.dp),
+                .fillMaxWidth()
+                .padding(16.dp),
             verticalArrangement = Arrangement.SpaceBetween
         ) {
             Row(
@@ -569,14 +579,14 @@ private fun FeatureCard(
                 }
                 feature.statusLabel?.let { label ->
                     Surface(
-                        color = Color(0xFFEAF3FF),
+                        color = MaterialTheme.colorScheme.surfaceVariant,
                         shape = RoundedCornerShape(6.dp)
                     ) {
                         Text(
                             text = label,
                             modifier = Modifier.padding(horizontal = 6.dp, vertical = 4.dp),
                             fontSize = 8.sp,
-                            color = Color(0xFF64748B),
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             fontWeight = FontWeight.Bold,
                             maxLines = 1
                         )
@@ -584,12 +594,13 @@ private fun FeatureCard(
                 }
             }
 
-            Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
+            Spacer(Modifier.height(12.dp))
+            Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
                 Text(
                     text = feature.title,
                     fontWeight = FontWeight.Bold,
                     fontSize = 13.sp,
-                    color = Color(0xFF17324D),
+                    color = MaterialTheme.colorScheme.onSurface,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -602,7 +613,7 @@ private fun FeatureCard(
                         text = feature.subtitle,
                         modifier = Modifier.weight(1f),
                         fontSize = 10.sp,
-                        color = Color(0xFF64748B),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -621,9 +632,9 @@ private fun FeatureCard(
 }
 
 @Composable
-private fun ActivityUnavailableCard(onOpenHistory: () -> Unit) {
+private fun ApplicationReportsShortcut(onOpenHistory: () -> Unit) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         shape = RoundedCornerShape(16.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -642,16 +653,16 @@ private fun ActivityUnavailableCard(onOpenHistory: () -> Unit) {
                     modifier = Modifier.size(20.dp)
                 )
                 Text(
-                    text = "Belum ada riwayat lamaran",
+                    text = "Riwayat & Laporan Lamaran",
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp,
-                    color = Color(0xFF17324D)
+                    color = MaterialTheme.colorScheme.onSurface
                 )
             }
             Text(
-                text = "Riwayat lamaran akan tampil di sini setelah fitur pengiriman tersedia. Aplikasi tidak menampilkan status palsu.",
+                text = "Periksa pengiriman terkonfirmasi Gmail, kuota harian, antrean, dan informasi kesalahan dari backend.",
                 fontSize = 12.sp,
-                color = Color(0xFF64748B)
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
             TextButton(
                 onClick = onOpenHistory,

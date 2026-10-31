@@ -27,11 +27,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 @Composable
-fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
+fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBack: () -> Unit) {
     val state by viewModel.state.collectAsState()
     val history by viewModel.history.collectAsState()
     val page = history.last()
     val context = LocalContext.current
+    val productPolicy = remember { com.example.automatesmartbot.data.product.ProductPolicy(context) }
+    val step = CvWizard.steps.indexOf(page).takeIf { state.activeId != null } ?: -1
     val scope = rememberCoroutineScope()
     var exportBusy by remember { mutableStateOf(false) }
     var exportSnapshot by rememberSaveable { mutableStateOf<String?>(null) }
@@ -85,7 +87,11 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
         confirmButton = { TextButton(onClick = { deleteId?.let(viewModel::deleteDocument); deleteId = null }) { Text("Hapus") } },
         dismissButton = { TextButton(onClick = { deleteId = null }) { Text("Batal") } }
     )
-    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).imePadding().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+    Column(Modifier.fillMaxSize().imePadding()) {
+    if (step >= 0) Column(Modifier.padding(horizontal = 16.dp, vertical = 8.dp)) {
+        JourneyHeader("${step + 1}/9 · ${CvWizard.labels[step]}", "Draft disimpan di perangkat. Gunakan panah header untuk kembali.", (step + 1) / 9f)
+    }
+    key(page) { Column(Modifier.weight(1f).verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         state.message?.let { Text(it, color = MaterialTheme.colorScheme.onSurfaceVariant) }
         if (exportBusy) LinearProgressIndicator(Modifier.fillMaxWidth())
         when (page) {
@@ -109,7 +115,9 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                 }
             }
             "CV Saya" -> {
-                Text("Perubahan disimpan otomatis di perangkat.", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                JourneyHeader("Lengkapi CV Anda", "9 tahap dari profil hingga PDF. Pengalaman dan sertifikasi boleh dikosongkan jika belum ada.")
+                Button(onClick = viewModel::resumeWizard, Modifier.fillMaxWidth()) { Text("Mulai / Lanjutkan Pengisian") }
+                Text("Atau buka bagian tertentu. Semua perubahan disimpan otomatis.", color = MaterialTheme.colorScheme.onSurfaceVariant)
                 listOf("Informasi Pribadi", "Pendidikan", "Pengalaman", "Keterampilan", "Objektif / Ringkasan", "Detail Proyek", "Sertifikasi", "Referensi", "Tambahkan Bagian Lainnya", "Ubah Urutan / Edit Judul").forEach { title ->
                     OutlinedButton(onClick = { nav(title) }, Modifier.fillMaxWidth()) { Text(title) }
                 }
@@ -129,17 +137,24 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                 }
                 if (state.photoLoading) LinearProgressIndicator(Modifier.fillMaxWidth())
                 fun update(c: CvContact) = viewModel.updateContent { it.copy(contact = c) }
-                AppInput("Nama lengkap", contact.fullName, { update(contact.copy(fullName = it)) })
+                AppInput("Nama lengkap *", contact.fullName, { update(contact.copy(fullName = it)) }, error = state.validation["name"])
                 AppInput("Posisi / profesi", contact.headline, { update(contact.copy(headline = it)) })
-                AppInput("Email", contact.email, { update(contact.copy(email = it)) })
-                AppInput("Nomor telepon", contact.phone, { update(contact.copy(phone = it)) })
-                AppInput("Domisili", contact.location, { update(contact.copy(location = it)) })
+                AppInput("Email *", contact.email, { update(contact.copy(email = it)) }, error = state.validation["email"])
+                AppInput("Nomor telepon *", contact.phone, { update(contact.copy(phone = it)) }, error = state.validation["phone"])
+                AppInput("Domisili *", contact.location, { update(contact.copy(location = it)) }, error = state.validation["location"])
                 AppInput("Website", contact.website, { update(contact.copy(website = it)) })
                 AppInput("LinkedIn", contact.linkedin, { update(contact.copy(linkedin = it)) })
                 AppInput("GitHub", contact.github, { update(contact.copy(github = it)) })
             }
             "Objektif / Ringkasan" -> AppInput("Ringkasan profil", state.draft.summary, { value -> viewModel.updateContent { it.copy(summary = value) } }, minLines = 6)
-            "Pendidikan", "Pengalaman", "Keterampilan", "Detail Proyek", "Sertifikasi" -> CvEntriesEditor(page, state.draft, viewModel::updateContent)
+            "Pendidikan", "Pengalaman", "Keterampilan", "Detail Proyek", "Sertifikasi" -> {
+                Text("Isi hanya informasi yang benar-benar dimiliki. Bagian ini boleh dilewati jika belum tersedia.")
+                CvEntriesEditor(page, state.draft, viewModel::updateContent)
+                if (page == "Sertifikasi") {
+                    TextButton(onClick = { nav("Tambahkan Bagian Lainnya") }) { Text("Bahasa, organisasi & informasi tambahan") }
+                    TextButton(onClick = { nav("Detail Proyek") }) { Text("Tambahkan Proyek") }
+                }
+            }
             "Referensi", "Tambahkan Bagian Lainnya" -> {
                 val entries = state.draft.extras.filter { if (page == "Referensi") it.id == "references" else it.id != "references" }
                 entries.forEach { item ->
@@ -172,7 +187,9 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                 Column(Modifier.padding(8.dp)) {
                                     CvPageImage(remember(template.id) { CvRenderer.layout(CvTemplates.sample, template.id).first() }, 1, Modifier.fillMaxWidth(), 360)
                                     Text(template.name, fontWeight = FontWeight.Bold)
-                                    Text(template.category, style = MaterialTheme.typography.bodySmall)
+                                    Text(productPolicy.templateCategories(template.id, template.category).joinToString(" • "), style = MaterialTheme.typography.bodySmall)
+                                    Text(productPolicy.templateTier(template.id)?.uppercase() ?: "Akses tersedia", style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.primary)
+                                    if (state.templateId == template.id) Text("Terpilih", color = MaterialTheme.colorScheme.primary)
                                 }
                             }
                         }
@@ -186,14 +203,23 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                 val content = if (empty) CvTemplates.sample else state.draft
                 if (empty) Text("Data contoh untuk preview; isi CV Anda sebelum ekspor.")
                 Text(CvTemplates.resolve(id).name, fontWeight = FontWeight.Bold)
+                if (!productPolicy.canUseTemplate(id, isPro)) Text("PRO diperlukan untuk menggunakan atau mengekspor template ini. Data Anda tetap tersimpan.", color = MaterialTheme.colorScheme.primary)
                 val pages = remember(content, id) { CvRenderer.layout(content, id) }
                 CvDocumentPreview(pages, Modifier.fillMaxWidth().height(590.dp))
-                if (page == "Preview Template") Button(onClick = { viewModel.setTemplate(id); nav("CV Saya") }, Modifier.fillMaxWidth()) { Text("Gunakan Template") }
+                if (page == "Preview Template") Button(onClick = { if (productPolicy.templateTier(id) == "pro" && !isPro) viewModel.message("Template ini memerlukan PRO aktif.") else { viewModel.setTemplate(id); nav("Preview CV") } }, Modifier.fillMaxWidth()) { Text("Gunakan Template") }
                 else {
-                    Button(onClick = { export(CvRenderer.layout(state.draft, id), "KarirMate-CV.pdf") }, enabled = !exportBusy && !empty, modifier = Modifier.fillMaxWidth()) { Text("Ekspor PDF") }
-                    OutlinedButton(onClick = { docxOutput.launch("KarirMate-CV.docx") }, enabled = !exportBusy && !empty, modifier = Modifier.fillMaxWidth()) { Text("Ekspor DOCX") }
+                    Button(onClick = { export(CvRenderer.layout(state.draft, id), "KarirMate-CV.pdf") }, enabled = !exportBusy && !empty && productPolicy.canUseTemplate(id, isPro), modifier = Modifier.fillMaxWidth()) { Text("Ekspor PDF") }
+                    OutlinedButton(onClick = { docxOutput.launch("KarirMate-CV.docx") }, enabled = !exportBusy && !empty && productPolicy.canUseTemplate(id, isPro), modifier = Modifier.fillMaxWidth()) { Text("Ekspor DOCX") }
                     TextButton(onClick = { nav("CV Analyst") }) { Text("Analisis CV") }
                 }
+            }
+            "Ekspor PDF" -> {
+                Text("CV siap diekspor", style = MaterialTheme.typography.titleLarge)
+                Text("${CvTemplates.resolve(state.templateId).name} · A4 · halaman berlanjut otomatis")
+                val pages = remember(state.draft, state.templateId) { CvRenderer.layout(state.draft, state.templateId) }
+                Button(onClick = { export(pages, "KarirMate-CV.pdf") }, enabled = !exportBusy && state.draft.hasUserText() && productPolicy.canUseTemplate(state.templateId, isPro), modifier = Modifier.fillMaxWidth()) { Text("Simpan PDF ke Perangkat") }
+                OutlinedButton(onClick = { nav("Template") }) { Text("Ganti Template") }
+                OutlinedButton(onClick = { nav("Preview CV") }) { Text("Periksa Preview") }
             }
             "CV Analyst" -> {
                 Text("Analisis struktur dan kelengkapan berdasarkan teks PDF. Skor merupakan pemeriksaan aturan lokal, bukan penilaian perekrut atau jaminan lolos ATS.")
@@ -210,6 +236,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
             }
             "Hasil Analisis" -> state.analysis?.let { report ->
                 Text("Skor kelengkapan: ${report.score}/100", style = MaterialTheme.typography.headlineMedium)
+                Text("Pemeriksaan struktur ATS: judul bagian, teks terbaca, kontak, pengalaman, dan keterampilan. Pemeriksaan ini tidak menjamin lolos sistem perekrut.")
                 Text("Kelebihan", fontWeight = FontWeight.Bold); report.strengths.forEach { Text("• $it") }
                 Text("Kekurangan", fontWeight = FontWeight.Bold); report.weaknesses.forEach { Text("• $it") }
                 Text("Rekomendasi", fontWeight = FontWeight.Bold); report.recommendations.forEach { Text("• $it") }
@@ -244,5 +271,12 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                 Button(onClick = { export(pages, "KarirMate-Surat-Lamaran.pdf") }, enabled = !exportBusy, modifier = Modifier.fillMaxWidth()) { Text("Ekspor Surat PDF") }
             }
         }
+    } }
+    if (step in 0..7) Surface(shadowElevation = 6.dp) {
+        Column(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            state.validation.values.distinct().forEach { Text(it, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodySmall) }
+            Button(onClick = { if (step == 6 && !productPolicy.canUseTemplate(state.templateId, isPro)) viewModel.message("Pilih template FREE atau aktifkan PRO.") else viewModel.continueWizard() }, modifier = Modifier.fillMaxWidth().heightIn(min = 50.dp), enabled = !state.photoLoading && !exportBusy) { Text("Simpan & Lanjut") }
+        }
+    }
     }
 }

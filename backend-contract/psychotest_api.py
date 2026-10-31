@@ -11,6 +11,7 @@ import threading
 import time
 from urllib.parse import parse_qs, urlsplit
 
+from psychotest_access import result_for_access
 from psychotest_service import API_VERSION, PsychotestError, PsychotestService
 from search_identity import IdentityError, android_subject
 
@@ -106,7 +107,7 @@ class PsychotestApi:
         from psychotest_service import TESTS
         from psychotest_policy import basic_mode
         cfg = TESTS.get(test_id)
-        if cfg and not basic_mode(cfg):
+        if question_count is None or (cfg and not basic_mode(cfg)):
             self.require_pro(identity)
         return self.service.start_session(test_id, subject, identity.get('account_id'), question_count=question_count)
 
@@ -115,7 +116,7 @@ class PsychotestApi:
         return self.service.active_sessions(subject)
 
     def session(self, authorization, session_id, action=None, body=None):
-        subject, _ = self.identity(authorization)
+        subject, identity = self.identity(authorization)
         if action is None:
             return self.service.get_session(session_id, subject)
         if action == 'questions':
@@ -128,11 +129,12 @@ class PsychotestApi:
                 raise ApiError(400, 'INVALID_PARAMETERS', 'revision harus bilangan bulat positif atau nol')
             return self.service.save_answers(session_id, subject, body['answers'], revision)
         if action == 'submit':
-            return self.service.submit(session_id, subject)
+            return result_for_access(self.service.submit(session_id, subject), identity)
         if action == 'retry-wrong':
+            self.require_pro(identity)
             return self.service.retry_wrong(session_id, subject)
         if action == 'result':
-            return self.service.result(session_id, subject)
+            return result_for_access(self.service.result(session_id, subject), identity)
         raise ApiError(404, 'NOT_FOUND', 'Endpoint tidak ditemukan')
 
     @staticmethod

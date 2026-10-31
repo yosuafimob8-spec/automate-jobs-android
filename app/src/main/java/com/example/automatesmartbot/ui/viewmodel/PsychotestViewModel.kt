@@ -38,10 +38,11 @@ class PsychotestViewModel @JvmOverloads constructor(private val savedState: Save
     fun loadCatalog() = request { api ->
         catalog.value = api.catalog().bodyOrError().getAsJsonArray("modes")?.map { it.asJsonObject }.orEmpty()
     }
-    fun start(testId: String, questionCount: Int) = request { api -> lock.withLock {
+    fun start(testId: String, questionCount: Int?) = request { api -> lock.withLock {
         result.value = null; questions.value = emptyList(); session.value = null
         pending.clear(); savePending()
-        val body = api.start(JsonObject().apply { addProperty("test_id", testId); addProperty("question_count", questionCount.coerceIn(10, 20)) }).bodyOrError()
+        savedState["psychotest_training"] = questionCount != null
+        val body = api.start(JsonObject().apply { addProperty("test_id", testId); questionCount?.let { addProperty("question_count", it.coerceIn(10, 20)) } }).bodyOrError()
         val current = requireNotNull(body.getAsJsonObject("session")) { "Sesi tidak tersedia." }
         val id = current.get("id").asString
         savedState["psychotest_session"] = id
@@ -113,7 +114,9 @@ class PsychotestViewModel @JvmOverloads constructor(private val savedState: Save
             pending.clear(); savePending(); return
         }
         val loadedQuestions = body.getAsJsonArray("questions")?.map { it.asJsonObject }.orEmpty()
-        require(loadedQuestions.size in 10..20) { "Server mengembalikan ${loadedQuestions.size} soal. Sesi latihan memerlukan 10–20 soal; perbarui konfigurasi bank soal." }
+        require(loadedQuestions.isNotEmpty()) { "Sesi tidak berisi soal. Pilih tes kembali setelah bank soal tersedia." }
+        if (savedState.get<Boolean>("psychotest_training") == true) require(loadedQuestions.size in 10..20) { "Sesi latihan dari server harus berisi 10–20 soal." }
+        current.get("question_count")?.let { require(it.asInt == loadedQuestions.size) { "Soal sesi belum lengkap. Muat ulang sebelum menjawab." } }
         questions.value = loadedQuestions
         applyPending()
     }
