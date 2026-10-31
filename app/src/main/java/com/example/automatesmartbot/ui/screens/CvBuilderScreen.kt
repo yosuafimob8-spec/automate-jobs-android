@@ -1,4 +1,6 @@
 package com.example.automatesmartbot.ui.screens
+import androidx.compose.foundation.layout.Box
+import androidx.compose.material3.TextButton
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
