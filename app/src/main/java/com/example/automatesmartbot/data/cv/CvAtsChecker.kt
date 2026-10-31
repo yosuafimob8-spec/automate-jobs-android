@@ -59,7 +59,7 @@ object CvAtsChecker {
 
     private val SPECIAL: Regex = Regex("[←-⇿☀-➿★☆✓✔➤►▪▸]")
 
-    private val EMAIL: Regex = Regex("^[^\s@]+@[^\s@]+\\.[^\s@]+$")
+    private val EMAIL: Regex = Regex("""^[^\s@]+@[^\s@]+\.[^\s@]+$""")
     private val PHONE_DIGITS: Regex = Regex("\\d")
     private val STOPWORDS = setOf(
         "the", "and", "for", "with", "from", "that", "this", "your", "you", "will", "have", "been",
@@ -104,7 +104,7 @@ object CvAtsChecker {
         }
         if (contact.phone.isBlank()) {
             issues.add(CvIssue("C3", CvIssueSeverity.WARN.name, "Missing phone number", "Most portals have a required phone field the parser tries to fill in for you.", "basics"))
-        } else if (PHONE_DIGITS.replace(Regex("\\D"), "").length < 10) {
+        } else if (PHONE_DIGITS.findAll(contact.phone).count() < 10) {
             issues.add(CvIssue("C3b", CvIssueSeverity.WARN.name, "Phone number looks short", "Include the area code (and country code if applying abroad).", "basics"))
         }
         if (contact.location.isBlank()) {
@@ -279,7 +279,7 @@ object CvAtsChecker {
         }
 
         val years = yearsOfExperience(resume)
-        val wordCap = if (years >= 8 || resume.templateId == "senior") 1100 else 620
+        val wordCap = if (years >= 8) 1100 else 620
         if (words > wordCap) {
             issues.add(
                 CvIssue(
@@ -342,7 +342,7 @@ object CvAtsChecker {
 
     fun suggestKeywords(jobDescription: String): List<String> {
         val frequencies = mutableMapOf<String, Int>()
-        for (raw in jobDescription.split(Regex("[,;\\n]")) {
+        for (raw in jobDescription.split(Regex("[,;\\n]"))) {
             val words = raw.trim().lowercase().split(Regex("\\s+")).filter { it.isNotEmpty() }
             for (word in words) {
                 val clean = word.trim()
