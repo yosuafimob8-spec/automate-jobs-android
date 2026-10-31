@@ -1,4 +1,6 @@
 package com.example.automatesmartbot.ui.screens
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.material3.TextButton
 
@@ -65,8 +67,19 @@ import com.example.automatesmartbot.ui.theme.TextWhite
 import com.example.automatesmartbot.ui.viewmodel.CvBuilderViewModel
 import com.example.automatesmartbot.ui.viewmodel.CvBuilderUiState
 
+
+private val CvFixedColors = lightColorScheme(
+    onSurface = Color(0xFF202938),
+    onSurfaceVariant = Color(0xFF526071),
+    surface = Color.White,
+    surfaceVariant = Color(0xFFF3F5F8),
+    outline = Color(0xFF8995A5)
+)
+
 @Composable
 fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
+    MaterialTheme(colorScheme = CvFixedColors) {
+
     val state by viewModel.state.collectAsState()
     val context = LocalContext.current
     var page by remember { mutableStateOf(0) }
@@ -345,6 +358,8 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                 }
             }
         }
+    }
+
     }
 }
 
