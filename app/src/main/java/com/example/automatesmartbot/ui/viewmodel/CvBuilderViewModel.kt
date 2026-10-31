@@ -46,49 +46,44 @@ class CvBuilderViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     fun loadDrafts() {
-        val ids = draftStore.listDraftIds()
-        val drafts = ids.mapNotNull { draftStore.load(it) }
-        if (drafts.isEmpty()) {
-            val created = emptyCvDocument()
-            draftStore.save(created)
-            _state.value = _state.value.copy(
-                drafts = listOf(created),
-                activeId = created.id,
-                draft = created.content,
-                templateId = CvBuilderConstants.TEMPLATE_STANDARD,
-                latexStyle = created.content.latexStyle,
-                style = created.content.style,
-                saveState = "saved"
-            )
-            return
-        }
-        val active = drafts.firstOrNull { it.id == _state.value.activeId } ?: drafts.first()
+        val drafts = draftStore.listDraftIds().mapNotNull { draftStore.load(it) }
+        val active = drafts.firstOrNull { it.id == _state.value.activeId }
+            ?: drafts.firstOrNull { isCvFilled(it.content) }
         _state.value = _state.value.copy(
             drafts = drafts,
-            activeId = active.id,
-            draft = active.content,
-            templateId = active.templateId,
-            latexStyle = active.content.latexStyle,
-            style = active.content.style,
-            saveState = "saved"
+            activeId = active?.id,
+            draft = active?.content ?: CvContent(),
+            templateId = active?.templateId ?: CvBuilderConstants.TEMPLATE_STANDARD,
+            latexStyle = active?.content?.latexStyle ?: "classic",
+            style = active?.content?.style ?: CvStyle(),
+            saveState = if (active == null) null else "saved"
         )
     }
 
+    private fun isCvFilled(c: CvContent): Boolean =
+        c.contact.fullName.isNotBlank() || c.contact.email.isNotBlank() ||
+        c.contact.phone.isNotBlank() || c.contact.headline.isNotBlank() ||
+        c.summary.isNotBlank() || c.experience.isNotEmpty() ||
+        c.education.isNotEmpty() || c.skills.isNotEmpty() ||
+        c.projects.isNotEmpty() || c.certifications.isNotEmpty()
+
+
     fun newDocument() {
-        val created = emptyCvDocument()
-        draftStore.save(created)
-        val drafts = draftStore.listDraftIds().mapNotNull { draftStore.load(it) }
+        // Draf baru hanya di memori; belum masuk daftar CV tersimpan.
         _state.value = _state.value.copy(
-            drafts = drafts,
-            activeId = created.id,
-            draft = created.content,
-            templateId = created.templateId,
-            latexStyle = created.content.latexStyle,
-            style = created.content.style,
-            saveState = "saved",
-            message = "CV baru berhasil dibuat. Silakan isi data Anda."
+            activeId = null,
+            draft = CvContent(),
+            templateId = CvBuilderConstants.HTML_TEMPLATE_IDS.firstOrNull() ?: CvBuilderConstants.TEMPLATE_STANDARD,
+            latexStyle = "classic",
+            style = CvStyle(),
+            saveState = null,
+            message = null,
+            ats = null,
+            keyword = null,
+            coverLetter = null
         )
     }
+
 
     fun selectDocument(id: String) {
         val draft = draftStore.load(id) ?: return
@@ -110,9 +105,13 @@ class CvBuilderViewModel(application: Application) : AndroidViewModel(applicatio
         if (next != null) draftStore.save(next)
         _state.value = current.copy(
             drafts = if (next == null) current.drafts else current.drafts.map { if (it.id == next.id) next else it },
-            draft = updated, style = updated.style, latexStyle = updated.latexStyle, saveState = "saved"
+            draft = updated,
+            style = updated.style,
+            latexStyle = updated.latexStyle,
+            saveState = if (next == null) null else "saved"
         )
     }
+
 
     fun setTemplate(id: String) {
         if (id !in CvBuilderConstants.HTML_TEMPLATE_IDS) return
@@ -121,10 +120,12 @@ class CvBuilderViewModel(application: Application) : AndroidViewModel(applicatio
         val next = document?.copy(templateId = id, updatedAt = System.currentTimeMillis())
         if (next != null) draftStore.save(next)
         _state.value = current.copy(
-            templateId = id, saveState = "saved",
+            templateId = id,
+            saveState = if (next == null) null else "saved",
             drafts = if (next == null) current.drafts else current.drafts.map { if (it.id == next.id) next else it }
         )
     }
+
 
     fun setLatexStyle(id: String) {
         updateContent { it.copy(latexStyle = id) }
@@ -132,17 +133,28 @@ class CvBuilderViewModel(application: Application) : AndroidViewModel(applicatio
 
     fun saveDocument(): Boolean {
         val current = _state.value
-        val document = current.drafts.firstOrNull { it.id == current.activeId }
-            ?: return false.also { _state.value = current.copy(saveState = "error", message = "Draf aktif tidak ditemukan.") }
-        val updated = document.copy(content = current.draft, templateId = current.templateId, updatedAt = System.currentTimeMillis())
+        if (!isCvFilled(current.draft)) {
+            _state.value = current.copy(saveState = "error", message = "Isi data CV terlebih dahulu sebelum menyimpan.")
+            return false
+        }
+        val existing = current.drafts.firstOrNull { it.id == current.activeId }
+        val now = System.currentTimeMillis()
+        val updated = (existing ?: emptyCvDocument()).copy(
+            name = current.draft.contact.fullName.ifBlank { existing?.name ?: "CV Saya" },
+            content = current.draft,
+            templateId = current.templateId,
+            updatedAt = now
+        )
         draftStore.save(updated)
         _state.value = current.copy(
+            activeId = updated.id,
             drafts = draftStore.listDraftIds().mapNotNull { draftStore.load(it) },
             saveState = "saved",
-            message = "CV tersimpan di perangkat."
+            message = "CV berhasil disimpan."
         )
         return true
     }
+
 
     fun deleteDocument(id: String) {
         draftStore.delete(id)

@@ -115,23 +115,100 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
             state.message?.let { Text(it, color = aqua, fontSize = 12.sp) }
             when (page) {
                 0 -> {
-                    Text("Dokumen Saya", color = navy, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                    Button(onClick = { viewModel.newDocument(); page = 1 },
-                        modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = orange)) {
-                        Icon(Icons.Default.Add, null); Spacer(Modifier.width(6.dp)); Text("Buat CV Baru")
+                    Text("CV Saya", color = navy, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                    Button(
+                        onClick = { viewModel.newDocument(); page = 2 },
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.buttonColors(containerColor = orange),
+                        shape = RoundedCornerShape(22.dp)
+                    ) {
+                        Icon(Icons.Default.Add, contentDescription = null)
+                        Spacer(Modifier.width(8.dp))
+                        Text("Buat CV Baru")
                     }
-                    state.drafts.distinctBy { it.id }.forEach { doc ->
-                        Card(colors = CardDefaults.cardColors(containerColor = Color.White),
-                            shape = RoundedCornerShape(16.dp), modifier = Modifier.fillMaxWidth()) {
-                            Column(Modifier.padding(15.dp)) {
-                                Text(doc.content.contact.fullName.ifBlank { doc.name }, color = navy, fontWeight = FontWeight.Bold)
-                                Text(doc.content.contact.headline.ifBlank { "CV belum dilengkapi" }, fontSize = 12.sp, color = Color.Gray)
-                                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                    OutlinedButton(onClick = { viewModel.selectDocument(doc.id); page = 2 }) { Text("Edit") }
-                                    OutlinedButton(onClick = { viewModel.selectDocument(doc.id); page = 3 }) { Text("Lihat") }
-                                    OutlinedButton(onClick = { viewModel.deleteDocument(doc.id) }) { Text("Hapus") }
+                    // CV kosong peninggalan versi lama disembunyikan, bukan dihapus.
+                    val savedCvs = state.drafts.filter { doc ->
+                        val c = doc.content
+                        c.contact.fullName.isNotBlank() || c.contact.email.isNotBlank() ||
+                        c.contact.phone.isNotBlank() || c.contact.headline.isNotBlank() ||
+                        c.summary.isNotBlank() || c.experience.isNotEmpty() ||
+                        c.education.isNotEmpty() || c.skills.isNotEmpty() ||
+                        c.projects.isNotEmpty() || c.certifications.isNotEmpty()
+                    }.distinctBy { it.id }.sortedByDescending { it.updatedAt }
+                    savedCvs.forEachIndexed { index, doc ->
+                        var showMenu by remember(doc.id) { mutableStateOf(false) }
+                        var confirmDelete by remember(doc.id) { mutableStateOf(false) }
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(20.dp),
+                            colors = CardDefaults.cardColors(containerColor = Color.White),
+                            elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
+                        ) {
+                            Column(
+                                modifier = Modifier.fillMaxWidth().padding(18.dp),
+                                horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.spacedBy(10.dp)
+                            ) {
+                                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween,
+                                    verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                                    Surface(shape = RoundedCornerShape(50), color = Color(0xFFE6F9F9)) {
+                                        Text("${index + 1}", Modifier.padding(horizontal = 12.dp, vertical = 7.dp),
+                                            color = navy, fontWeight = FontWeight.Bold)
+                                    }
+                                    Box {
+                                        TextButton(onClick = { showMenu = true }) { Text("⋮", color = navy, fontSize = 23.sp) }
+                                        androidx.compose.material3.DropdownMenu(expanded = showMenu, onDismissRequest = { showMenu = false }) {
+                                            androidx.compose.material3.DropdownMenuItem(
+                                                text = { Text("Hapus CV") },
+                                                onClick = { showMenu = false; confirmDelete = true }
+                                            )
+                                        }
+                                    }
+                                }
+                                Surface(
+                                    modifier = Modifier.size(70.dp),
+                                    shape = RoundedCornerShape(50),
+                                    color = Color(0xFFE6F9F9)
+                                ) {
+                                    Box(contentAlignment = androidx.compose.ui.Alignment.Center) {
+                                        Text(doc.content.contact.fullName.trim().firstOrNull()?.uppercase() ?: "C",
+                                            fontSize = 30.sp, fontWeight = FontWeight.Bold, color = navy)
+                                    }
+                                }
+                                Text(doc.content.contact.fullName.ifBlank { doc.name },
+                                    fontSize = 19.sp, fontWeight = FontWeight.Bold, color = navy)
+                                if (doc.content.contact.email.isNotBlank()) {
+                                    Text(doc.content.contact.email, fontSize = 13.sp, color = Color(0xFF657695))
+                                }
+                                Text(
+                                    "Diperbarui: " + java.text.SimpleDateFormat("dd/MM/yyyy HH:mm", java.util.Locale("id", "ID"))
+                                        .format(java.util.Date(doc.updatedAt)),
+                                    fontSize = 11.sp, color = Color(0xFF657695)
+                                )
+                                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                                    Button(onClick = { viewModel.selectDocument(doc.id); page = 2 },
+                                        modifier = Modifier.weight(1f),
+                                        colors = ButtonDefaults.buttonColors(containerColor = orange),
+                                        shape = RoundedCornerShape(20.dp)) { Text("Edit") }
+                                    Button(onClick = { viewModel.selectDocument(doc.id); page = 3 },
+                                        modifier = Modifier.weight(1f),
+                                        colors = ButtonDefaults.buttonColors(containerColor = aqua),
+                                        shape = RoundedCornerShape(20.dp)) { Text("Lihat CV") }
                                 }
                             }
+                        }
+                        if (confirmDelete) {
+                            androidx.compose.material3.AlertDialog(
+                                onDismissRequest = { confirmDelete = false },
+                                title = { Text("Hapus CV?") },
+                                text = { Text("CV ini akan dihapus permanen dari perangkat.") },
+                                confirmButton = {
+                                    TextButton(onClick = { viewModel.deleteDocument(doc.id); confirmDelete = false }) {
+                                        Text("Hapus", color = orange)
+                                    }
+                                },
+                                dismissButton = { TextButton(onClick = { confirmDelete = false }) { Text("Batal") } }
+                            )
                         }
                     }
                 }
@@ -175,7 +252,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                     CvBuilderExperienceEditor(state.draft) { viewModel.updateContent(it) }
                     CvBuilderSkillsEditor(state.draft) { viewModel.updateContent(it) }
                     CvExtraEditor(state.draft) { viewModel.updateContent(it) }
-                    Button(onClick = { viewModel.saveDocument(); page = 3 }, modifier = Modifier.fillMaxWidth(),
+                    Button(onClick = { if (viewModel.saveDocument()) page = 3 }, modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Simpan & Lihat CV") }
                 }
                 3 -> {
