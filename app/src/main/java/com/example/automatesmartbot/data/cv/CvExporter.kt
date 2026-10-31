@@ -32,13 +32,13 @@ object CvExporter {
 
     fun exportPdf(context: Context, uri: Uri, content: CvContent, templateId: String = "ats_01") {
         context.contentResolver.openOutputStream(uri, "wt")?.use {
-            CvRenderer.writePdf(CvRenderer.layout(content, templateId), it)
+            CvRenderer.writePdf(context, CvRenderer.layout(content, templateId), it)
         } ?: error("Tidak dapat membuka lokasi penyimpanan")
     }
 
     fun exportLetter(context: Context, uri: Uri, content: String) {
         context.contentResolver.openOutputStream(uri, "wt")?.use {
-            CvRenderer.writePdf(CvRenderer.letterPages(content), it)
+            CvRenderer.writePdf(context, CvRenderer.letterPages(content), it)
         } ?: error("Tidak dapat membuka lokasi penyimpanan")
     }
 

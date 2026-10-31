@@ -16,6 +16,11 @@ data class AutoApplyEnableRequest(
 )
 
 interface ApiService {
+    @POST("gmail/oauth/start")
+    suspend fun startGmailOAuth(@Body request: Map<String, String> = emptyMap()): Response<ResponseBody>
+    @PUT("cv")
+    suspend fun uploadAutoApplyCv(@Body pdf: okhttp3.RequestBody): Response<ResponseBody>
+
     @GET("karirmate/candidates")
     suspend fun getKarirMateCandidates(): Response<ResponseBody>
 

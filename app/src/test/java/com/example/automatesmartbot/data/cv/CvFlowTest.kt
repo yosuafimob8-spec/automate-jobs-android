@@ -27,6 +27,7 @@ import java.io.File
 class CvFlowTest {
     private val app: Application get() = RuntimeEnvironment.getApplication()
     @Before fun clean() {
+        CvRenderer.initialize(app)
         listOf("cv_drafts", "cv_letters", "cv_photos", "cv_analyses").forEach { File(app.filesDir, it).deleteRecursively() }
         app.getSharedPreferences("cv_builder_active", 0).edit().clear().commit()
     }
@@ -107,6 +108,22 @@ class CvFlowTest {
         assertTrue(text.contains("Poste 85")); assertTrue(text.contains("FinalProjectDescription"))
         assertTrue(pages.flatMap { it.texts }.all { it.baseline < 795f })
     }
+    @Test fun actualPdfExportIsA4SelectableMultipageAndPreservesIndonesianText() {
+        val content = CvTemplates.sample.copy(experience = (1..70).map { CvExperience(title = "Peran $it", company = "Perusahaan $it", bullets = listOf("Pencapaian nyata $it — laporan dan arsip")) })
+        val pages = CvRenderer.layout(content, "professional_01")
+        val output = java.io.ByteArrayOutputStream()
+        CvRenderer.writePdf(app, pages, output)
+        PDDocument.load(output.toByteArray()).use { pdf ->
+            assertEquals(pages.size, pdf.numberOfPages)
+            assertTrue(pdf.numberOfPages > 1)
+            assertEquals(595f, pdf.getPage(0).mediaBox.width)
+            assertEquals(842f, pdf.getPage(0).mediaBox.height)
+            val text = PDFTextStripper().getText(pdf)
+            assertTrue(text.contains("Pencapaian nyata 70"))
+            assertTrue(text.contains("Dina Pratama"))
+        }
+        File("build/reports/cv-previews/verified-export.pdf").apply { parentFile!!.mkdirs(); writeBytes(output.toByteArray()) }
+    }
     @Test fun photoAppearsOnlyOnSupportedTemplates() {
         val file = File(app.filesDir, "photo.jpg")
         Bitmap.createBitmap(100, 100, Bitmap.Config.ARGB_8888).apply { eraseColor(Color.RED) }.let { b -> file.outputStream().use { b.compress(Bitmap.CompressFormat.JPEG, 100, it) } }
@@ -118,6 +135,23 @@ class CvFlowTest {
         }
         assertTrue(redPixels("professional_01") > 1000)
         assertEquals(0, redPixels("ats_01"))
+        val output = ByteArrayOutputStream()
+        CvRenderer.writePdf(app, CvRenderer.layout(c, "professional_01"), output)
+        File("build/reports/cv-previews/verified-photo.pdf").apply { parentFile!!.mkdirs(); writeBytes(output.toByteArray()) }
+        PDDocument.load(output.toByteArray()).use { pdf ->
+            val images = pdf.getPage(0).resources.xObjectNames.map { pdf.getPage(0).resources.getXObject(it) }
+                .filterIsInstance<com.tom_roush.pdfbox.pdmodel.graphics.image.PDImageXObject>()
+            // PDFBox Android's getImage decoder swaps R/B on this runtime. Verify the
+            // stored DeviceRGB stream itself; an independent PyMuPDF check also renders red.
+            assertTrue(images.any { image ->
+                if (image.colorSpace.numberOfComponents != 3 || image.bitsPerComponent != 8) false
+                else {
+                    val raw = image.cosObject.createInputStream().use { it.readBytes() }
+                    val offset = (80 * image.width + 112) * 3
+                    (raw[offset].toInt() and 255) > 220 && (raw[offset + 1].toInt() and 255) < 30
+                }
+            })
+        }
     }
     @Test fun coverLetterTypesUseRealFactsAndPersistEdits() {
         LetterType.entries.filter { it != LetterType.AI }.forEach { type ->

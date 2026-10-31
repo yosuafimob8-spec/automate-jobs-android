@@ -9,6 +9,12 @@ data class CvPage(val texts: List<CvDrawText>, val template: CvTemplate, val fir
 
 /** Layout once in A4 points; the exact same pages are painted into preview and PDF. */
 object CvRenderer {
+    private var regular = Typeface.DEFAULT
+    private var boldFace = Typeface.DEFAULT_BOLD
+    fun initialize(context: android.content.Context) {
+        regular = Typeface.createFromAsset(context.assets, "fonts/DejaVuSans.ttf")
+        boldFace = Typeface.createFromAsset(context.assets, "fonts/DejaVuSans-Bold.ttf")
+    }
     const val WIDTH = 595
     const val HEIGHT = 842
     private const val INK = 0xFF172744.toInt()
@@ -54,7 +60,7 @@ object CvRenderer {
         val paint = Paint(Paint.ANTI_ALIAS_FLAG)
         fun finish() { output += CvPage(text.toList(), template, first, c.contact.photoPath); text = mutableListOf(); first = false; y = 50f }
         fun line(value: String, size: Float = bodySize, bold: Boolean = false, color: Int = INK, x: Float = left, width: Float = right - x, centered: Boolean = false) {
-            paint.textSize = size; paint.typeface = if (bold) Typeface.DEFAULT_BOLD else Typeface.DEFAULT
+            paint.textSize = size; paint.typeface = if (bold) boldFace else regular
             for (paragraph in value.split('\n')) {
                 var rest = paragraph.trim()
                 if (rest.isEmpty()) { y += size * 0.8f; continue }
@@ -103,7 +109,7 @@ object CvRenderer {
 
     fun letterPages(content: String): List<CvPage> {
         val template = CvTemplates.all.first()
-        val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply { textSize = 12f }
+        val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply { textSize = 12f; typeface = regular }
         val pages = mutableListOf<CvPage>(); var lines = mutableListOf<CvDrawText>(); var y = 58f
         fun finish() { pages += CvPage(lines.toList(), template, pages.isEmpty()); lines = mutableListOf(); y = 58f }
         content.lines().forEach { paragraph ->
@@ -121,7 +127,7 @@ object CvRenderer {
         finish(); return pages
     }
 
-    fun draw(canvas: Canvas, page: CvPage, pageNumber: Int) {
+    fun draw(canvas: Canvas, page: CvPage, pageNumber: Int, includeText: Boolean = true) {
         canvas.drawColor(Color.WHITE)
         val p = Paint(Paint.ANTI_ALIAS_FLAG)
         p.color = page.template.accent
@@ -143,8 +149,8 @@ object CvRenderer {
             else -> Unit
         }
         page.texts.forEach { t ->
-            p.color = t.color; p.textSize = t.size; p.typeface = if (t.bold) Typeface.DEFAULT_BOLD else Typeface.DEFAULT
-            canvas.drawText(t.text, t.x, t.baseline, p)
+            p.color = t.color; p.textSize = t.size; p.typeface = if (t.bold) boldFace else regular
+            if (includeText) canvas.drawText(t.text, t.x, t.baseline, p)
             if (t.bold && t.size == 12f && page.template.layout == CvLayout.RULED) {
                 p.strokeWidth = 0.7f; canvas.drawLine(t.x, t.baseline + 4f, 553f, t.baseline + 4f, p)
             }
@@ -169,14 +175,34 @@ object CvRenderer {
             val canvas = Canvas(it); canvas.scale(width / WIDTH.toFloat(), width / WIDTH.toFloat()); draw(canvas, page, number)
         }
 
-    fun writePdf(pages: List<CvPage>, output: java.io.OutputStream) {
-        val document = PdfDocument()
-        try {
-            pages.forEachIndexed { i, data ->
-                val page = document.startPage(PdfDocument.PageInfo.Builder(WIDTH, HEIGHT, i + 1).create())
-                draw(page.canvas, data, i + 1); document.finishPage(page)
+    fun writePdf(context: android.content.Context, pages: List<CvPage>, output: java.io.OutputStream) {
+        com.tom_roush.pdfbox.android.PDFBoxResourceLoader.init(context)
+        initialize(context)
+        com.tom_roush.pdfbox.pdmodel.PDDocument().use { document ->
+            val normal = context.assets.open("fonts/DejaVuSans.ttf").use { com.tom_roush.pdfbox.pdmodel.font.PDType0Font.load(document, it) }
+            val bold = context.assets.open("fonts/DejaVuSans-Bold.ttf").use { com.tom_roush.pdfbox.pdmodel.font.PDType0Font.load(document, it) }
+            pages.forEachIndexed { index, data ->
+                val page = com.tom_roush.pdfbox.pdmodel.PDPage(com.tom_roush.pdfbox.pdmodel.common.PDRectangle(WIDTH.toFloat(), HEIGHT.toFloat()))
+                document.addPage(page)
+                com.tom_roush.pdfbox.pdmodel.PDPageContentStream(document, page).use { stream ->
+                    // Decorative geometry and photo use the same drawing code as the preview.
+                    // The CV text is embedded separately as selectable Unicode text.
+                    val bitmap = Bitmap.createBitmap(WIDTH, HEIGHT, Bitmap.Config.ARGB_8888)
+                    draw(Canvas(bitmap), data, index + 1, includeText = false)
+                    val background = com.tom_roush.pdfbox.pdmodel.graphics.image.LosslessFactory.createFromImage(document, bitmap)
+                    stream.drawImage(background, 0f, 0f, WIDTH.toFloat(), HEIGHT.toFloat())
+                    bitmap.recycle()
+                    data.texts.forEach { t ->
+                        stream.beginText()
+                        stream.setFont(if (t.bold) bold else normal, t.size)
+                        stream.setNonStrokingColor(Color.red(t.color), Color.green(t.color), Color.blue(t.color))
+                        stream.newLineAtOffset(t.x, HEIGHT - t.baseline)
+                        stream.showText(t.text)
+                        stream.endText()
+                    }
+                }
             }
-            document.writeTo(output)
-        } finally { document.close() }
+            document.save(output)
+        }
     }
 }

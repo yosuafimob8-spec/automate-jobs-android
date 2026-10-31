@@ -64,6 +64,38 @@ class FeatureUiTest {
         compose.runOnIdle { assertEquals("Preview Surat", vm.history.value.last()) }
         compose.onNodeWithText("Ekspor Surat PDF").performScrollTo().assertIsEnabled()
     }
+    @Test fun newCareerRoutesKeepOriginalBottomNavigation() {
+        val original = com.example.automatesmartbot.ui.navigation.bottomNavItems.map { it.route }
+        assertEquals(listOf("dashboard","cari_lowongan","kirim_lamaran","riwayat","profil"), original)
+        assertTrue(com.example.automatesmartbot.ui.navigation.appShellItems.any { it.route == "career_documents" })
+    }
+    @Test fun resignationEditorGeneratesEditableTextAndExportControl() {
+        compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { CareerLettersScreen {} } }
+        val inputs = compose.onAllNodes(hasSetTextAction())
+        inputs[0].performTextReplacement("Dina")
+        inputs[1].performScrollTo().performTextReplacement("PT Contoh")
+        inputs[2].performScrollTo().performTextReplacement("Admin")
+        inputs[3].performScrollTo().performTextReplacement("2026-10-31")
+        inputs[4].performScrollTo().performTextReplacement("2026-12-01")
+        compose.onNodeWithText("Buat Draf Resign").performScrollTo().performClick()
+        compose.onNodeWithText("Ekspor PDF").performScrollTo().assertIsEnabled()
+        compose.onNodeWithText("Preview A4").performScrollTo().performClick()
+        compose.onNodeWithText("Tutup Preview").assertExists()
+    }
+    @Test fun trainingEvaluationPersistsCompletionAndEnablesPdfCertificate() {
+        compose.activity.getSharedPreferences("career_training",0).edit().clear().commit()
+        compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { JobTrainingScreen() } }
+        compose.onAllNodes(hasSetTextAction())[0].performTextInput("Dina Peserta")
+        val course = com.example.automatesmartbot.data.career.TrainingCourses.all.first()
+        course.questions.forEach { q -> compose.onNodeWithText(q.options[q.correct]).performScrollTo().performClick() }
+        compose.onNodeWithText("Nilai & Simpan Penyelesaian").performScrollTo().performClick()
+        compose.onNodeWithText("Unduh Sertifikat PDF").performScrollTo().assertIsEnabled()
+        compose.runOnIdle {
+            val history = org.json.JSONArray(compose.activity.getSharedPreferences("career_training",0).getString("certificates","[]"))
+            assertEquals("Dina Peserta",history.getJSONObject(0).getString("name"))
+            assertEquals(100,history.getJSONObject(0).getInt("score"))
+        }
+    }
     @Test fun previousIsDisabledOnFirstQuestionAndChoiceSurvivesNextPrevious() {
         val session = JsonObject().apply { addProperty("id", "ui-test"); addProperty("remaining_seconds", 600) }
         var questions by mutableStateOf((0..9).map { n -> JsonObject().apply {

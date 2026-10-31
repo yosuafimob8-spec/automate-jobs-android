@@ -1,3 +1,5 @@
+> Audit awal/historis. Status terbaru, termasuk PDF yang kini diuji langsung, ada pada [laporan Termux dan dashboard](KARIRMATE_TERMUX_AND_CAREER_REPORT.md).
+
 # Laporan perbaikan KarirMate
 
 Basis audit: `main` pada `b0c7209a51d56a523d82047d73cb0b78c9710355`.

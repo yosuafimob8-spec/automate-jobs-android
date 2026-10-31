@@ -25,7 +25,7 @@ class CvPdfDeviceTest {
         val pages = CvRenderer.layout(content, "professional_01")
         val output = File(context.cacheDir, "native-cv-test.pdf")
         try {
-            output.outputStream().use { CvRenderer.writePdf(pages, it) }
+            output.outputStream().use { CvRenderer.writePdf(context, pages, it) }
             PDFBoxResourceLoader.init(context)
             PDDocument.load(output).use { pdf ->
                 assertTrue(pdf.numberOfPages > 1); assertEquals(pages.size, pdf.numberOfPages)
@@ -47,7 +47,7 @@ class CvPdfDeviceTest {
         val text = "Surat hasil edit pengguna\n\n" + (1..100).joinToString("\n") { "Paragraf $it dengan informasi yang ditulis pengguna." }
         val output = File(context.cacheDir, "letter-test.pdf")
         try {
-            output.outputStream().use { CvRenderer.writePdf(CvRenderer.letterPages(text), it) }
+            output.outputStream().use { CvRenderer.writePdf(context, CvRenderer.letterPages(text), it) }
             PDFBoxResourceLoader.init(context)
             PDDocument.load(output).use { pdf ->
                 assertTrue(pdf.numberOfPages > 1)

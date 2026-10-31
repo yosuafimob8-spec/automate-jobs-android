@@ -10,6 +10,10 @@ class AutoApplyConfirmationTest {
         assertTrue(AutoApplyConfirmation.consent(false, "2026-10-31T10:00:00Z", false))
         assertTrue(AutoApplyConfirmation.consent(false, null, true))
     }
+    @Test fun revokedServerConsentOverridesLocalCacheAndOldTimestamp() {
+        assertFalse(AutoApplyConfirmation.consentState(false,"2026-10-31T10:00:00Z",true))
+        assertTrue(AutoApplyConfirmation.consentState(true,null,false))
+    }
     @Test fun statusAloneIsNotGmailConfirmation() {
         assertFalse(AutoApplyConfirmation.sent("sent", "null"))
         assertFalse(AutoApplyConfirmation.sent("sent", ""))

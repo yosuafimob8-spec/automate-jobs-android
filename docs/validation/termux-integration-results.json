@@ -1,0 +1,15 @@
+{
+  "android_tests": 74,
+  "failures": 0,
+  "skipped": 0,
+  "lint": {
+    "Warning": 66
+  },
+  "apk_assembled": false,
+  "device_tests_executed": false,
+  "live_gmail_tested": false,
+  "backend_contract_tests": 13,
+  "termux_backend_tests": 28,
+  "real_emails_sent": 0,
+  "cron_modified": false
+}

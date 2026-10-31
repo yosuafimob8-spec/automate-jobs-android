@@ -35,7 +35,7 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
     val state = _state.asStateFlow()
     val history = savedState.getStateFlow("cv_history", listOf(CvNavigation.HOME))
 
-    init { loadDrafts() }
+    init { CvRenderer.initialize(application); loadDrafts() }
     fun navigate(page: String) { savedState["cv_history"] = CvNavigation.push(history.value, page) }
     fun goBack(): Boolean {
         if (history.value.size <= 1) return false

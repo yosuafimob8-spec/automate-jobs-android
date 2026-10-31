@@ -174,6 +174,10 @@ private fun MainDashboardContent(
         Screen.Dashboard.route -> "Beranda"
         Screen.CariLowongan.route -> "Cari Lowongan"
         Screen.KirimLamaran.route -> "Kirim Lamaran"
+        Screen.JobTraining.route -> "Pelatihan Kerja"
+        Screen.SalaryCalculator.route -> "Kalkulator Gaji"
+        Screen.CareerLetters.route -> "Surat Lamaran & Resign"
+        Screen.CareerDocuments.route -> "Dokumen Karier"
         Screen.CvBuilder.route -> cvHistory.last()
         Screen.LatihanPsikotes.route -> "Latihan Psikotes"
         Screen.AiInterview.route -> "AI Interview"
@@ -287,6 +291,18 @@ private fun MainDashboardContent(
                         }
                     }
                 )
+            }
+            composable(Screen.JobTraining.route) { JobTrainingScreen() }
+            composable(Screen.SalaryCalculator.route) { SalaryCalculatorScreen() }
+            composable(Screen.CareerLetters.route) {
+                CareerLettersScreen(onApplicationLetter = {
+                    cvViewModel.resetNavigation()
+                    cvViewModel.navigate("Pilih Jenis Surat")
+                    navController.navigate(Screen.CvBuilder.route) { launchSingleTop = true }
+                })
+            }
+            composable(Screen.CareerDocuments.route) {
+                CareerDocumentsScreen(onLegacyDocuments = { navController.navigate(Screen.SuratIzinDokumen.route) { launchSingleTop = true } })
             }
             composable(Screen.CvBuilder.route) {
                 CvBuilderScreen(viewModel = cvViewModel, onBack = cvBack)

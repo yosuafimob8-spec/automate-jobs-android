@@ -1,3 +1,5 @@
+> Laporan terbaru setelah integrasi arsip Termux dan fitur dashboard: [hasil implementasi dan tes](docs/KARIRMATE_TERMUX_AND_CAREER_REPORT.md).
+
 > Perbaikan aplikasi Android KarirMate: lihat [laporan implementasi dan batas pengujian](docs/KARIRMATE_REPAIR_REPORT.md).
 
 # AutoMate Jobs V2 — pencarian Jabodetabek

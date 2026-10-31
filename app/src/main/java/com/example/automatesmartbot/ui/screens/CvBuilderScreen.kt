@@ -54,7 +54,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                 withContext(Dispatchers.IO) {
                     val type = object : com.google.gson.reflect.TypeToken<List<CvPage>>() {}.type
                     val pages: List<CvPage> = com.google.gson.Gson().fromJson(java.io.File(snapshot).readText(), type)
-                    context.contentResolver.openOutputStream(uri, "wt")?.use { CvRenderer.writePdf(pages, it) } ?: error("Lokasi tidak dapat ditulis.")
+                    context.contentResolver.openOutputStream(uri, "wt")?.use { CvRenderer.writePdf(context, pages, it) } ?: error("Lokasi tidak dapat ditulis.")
                 }
                 viewModel.message("PDF berhasil disimpan. Buka melalui aplikasi File Android.")
             } catch (e: CancellationException) { throw e }

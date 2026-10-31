@@ -63,19 +63,19 @@ private data class StatItem(
 
 private val jobFeatures = listOf(
     DashboardFeature(
-        title = "Cari Lowongan",
-        subtitle = "Temukan lowongan yang sesuai",
+        title = "Pelatihan Kerja",
+        subtitle = "Belajar mandiri & sertifikat latihan",
         icon = Icons.Default.Work,
         accent = PrimaryBlue,
-        route = Screen.CariLowongan.route
+        route = Screen.JobTraining.route
     ),
     DashboardFeature(
         title = "Kirim Lamaran",
-        subtitle = "Pengiriman email belum aktif",
+        subtitle = "Gmail, persetujuan & antrean lamaran",
         icon = Icons.AutoMirrored.Filled.Send,
         accent = Color(0xFF22C55E),
         route = Screen.KirimLamaran.route,
-        statusLabel = "Belum tersedia"
+        statusLabel = null
     ),
     DashboardFeature(
         title = "CV Builder",
@@ -83,7 +83,7 @@ private val jobFeatures = listOf(
         icon = Icons.Default.Description,
         accent = Color(0xFF8B5CF6),
         route = Screen.CvBuilder.route,
-        statusLabel = "Segera Hadir"
+        statusLabel = null
     ),
     DashboardFeature(
         title = "Latihan Psikotes",
@@ -113,27 +113,27 @@ private val automationFeatures = listOf(
         statusLabel = "Segera Hadir"
     ),
     DashboardFeature(
-        title = "Riwayat Lamaran",
-        subtitle = "Pantau lamaran yang dikirim",
+        title = "Kalkulator Gaji",
+        subtitle = "Lembur, BPJS, PPh 21 & THR",
         icon = Icons.Default.History,
         accent = Color(0xFF6366F1),
-        route = Screen.Riwayat.route,
-        statusLabel = "Belum tersedia"
+        route = Screen.SalaryCalculator.route,
+        statusLabel = null
     ),
     DashboardFeature(
-        title = "Surat Izin & Dokumen Kerja",
-        subtitle = "Template dokumen kerja",
+        title = "Surat Lamaran & Resign",
+        subtitle = "Editor surat profesional & PDF",
         icon = Icons.Default.FolderShared,
         accent = Color(0xFF14B8A6),
-        route = Screen.SuratIzinDokumen.route,
-        statusLabel = "Segera Hadir"
+        route = Screen.CareerLetters.route,
+        statusLabel = null
     ),
     DashboardFeature(
-        title = "Profil & Pengaturan",
-        subtitle = "Kelola akun dan profil",
+        title = "Dokumen Karier",
+        subtitle = "Gabung, susun & putar PDF",
         icon = Icons.Default.Person,
         accent = Color(0xFFEAB308),
-        route = Screen.Profil.route
+        route = Screen.CareerDocuments.route
     )
 )
 

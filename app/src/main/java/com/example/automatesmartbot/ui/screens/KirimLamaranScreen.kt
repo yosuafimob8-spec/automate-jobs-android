@@ -1,6 +1,16 @@
 package com.example.automatesmartbot.ui.screens
 
 import androidx.compose.foundation.layout.*
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import com.example.automatesmartbot.data.cv.readBytesLimited
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -23,6 +33,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
     var consentSaved by remember { mutableStateOf(false) }
     var agreed by remember { mutableStateOf(false) }
     var enabled by remember { mutableStateOf(false) }
+    var operatorSendAllowed by remember { mutableStateOf(false) }
+    var cvUploaded by remember { mutableStateOf(false) }
     var gmailConnected by remember { mutableStateOf(false) }
     var statusLoaded by remember { mutableStateOf(false) }
     var busy by remember { mutableStateOf(false) }
@@ -32,13 +44,15 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
     suspend fun refresh() {
         statusLoaded = false
         val response = ApiClient.apiService.getAutoApplyStatus()
-        if (!response.isSuccessful) { response.errorBody()?.close(); error("Status Auto Apply gagal (${response.code()}).") }
+        if (!response.isSuccessful) { if (response.code() in listOf(401,403,409)) gmailConnected = false; response.errorBody()?.close(); error("Status Auto Apply gagal (${response.code()}). Periksa sesi dan otorisasi Gmail.") }
         val body = JSONObject(response.body()?.use { it.string() } ?: error("Status kosong."))
         require(body.has("gmail_connected") && body.has("auto_apply")) { "Status Auto Apply dari server belum lengkap." }
         enabled = body.optJSONObject("auto_apply")?.optBoolean("enabled") == true
         gmailConnected = body.optBoolean("gmail_connected")
+        cvUploaded = body.optBoolean("cv_uploaded")
+        operatorSendAllowed = body.optBoolean("operator_send_allowed")
         val a = body.optJSONObject("auto_apply")
-        consentSaved = AutoApplyConfirmation.consent(a?.optBoolean("consent_granted") == true, a?.optString("consent_at"), accountId?.let { prefs.getBoolean(it, false) } == true)
+        consentSaved = AutoApplyConfirmation.consentState(a?.opt("consent_granted") as? Boolean, a?.optString("consent_at"), accountId?.let { prefs.getBoolean(it, false) } == true)
         statusLoaded = true
     }
     suspend fun load() {
@@ -64,6 +78,28 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         catch (e: Exception) { message = e.message ?: "Koneksi terputus. Coba muat ulang." }
         finally { busy = false }
     }
+    val pdfPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri != null) scope.launch {
+            busy = true
+            try {
+                val bytes = withContext(Dispatchers.IO) {
+                    context.contentResolver.openInputStream(uri)?.use { it.readBytesLimited(2_200_000) } ?: error("PDF tidak dapat dibaca.")
+                }
+                require(bytes.take(5).toByteArray().toString(Charsets.US_ASCII) == "%PDF-") { "Pilih file PDF valid." }
+                val response = ApiClient.apiService.uploadAutoApplyCv(bytes.toRequestBody("application/pdf".toMediaType()))
+                if (!response.isSuccessful) { response.errorBody()?.close(); error("Upload CV ditolak (${response.code()}).") }
+                response.body()?.close(); refresh(); message = "CV tersimpan di backend untuk akun ini."
+            } catch (e: CancellationException) { throw e }
+            catch (e: Exception) { message = e.message ?: "Upload CV gagal." }
+            finally { busy = false }
+        }
+    }
+    val owner = LocalLifecycleOwner.current
+    DisposableEffect(owner) {
+        val observer = LifecycleEventObserver { _, event -> if (event == Lifecycle.Event.ON_RESUME) scope.launch { load() } }
+        owner.lifecycle.addObserver(observer)
+        onDispose { owner.lifecycle.removeObserver(observer) }
+    }
     LaunchedEffect(isPro) { load() }
     LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
         item {
@@ -74,8 +110,24 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
             if (message.isNotBlank()) Text(message, color = MaterialTheme.colorScheme.onSurface)
             TextButton(onClick = { scope.launch { load() } }, enabled = !busy && isOnline) { Text("Muat Ulang Status") }
-            Text(if (!statusLoaded) "Status belum tersedia" else "Gmail: ${if (gmailConnected) "Terhubung" else "Belum terhubung"} • Auto Apply: ${if (enabled) "Aktif" else "Jeda"}")
+            Text(if (!statusLoaded) "Status belum tersedia" else "Gmail: ${if (gmailConnected) "Terhubung" else "Belum terhubung"} • Izin Auto Apply: ${if (enabled) "Aktif" else "Jeda"}")
+            Text(if (operatorSendAllowed) "Izin operasional tersedia; jadwal pengiriman belum diverifikasi dari aplikasi." else "Pengiriman produksi belum diizinkan operator; izin akun dapat disimpan tanpa memulai pengiriman.")
             TextButton(onClick = onNavigateProfil) { Text("Periksa Profil & CV") }
+            Text(if (cvUploaded) "CV backend: tersimpan" else "CV backend: belum diunggah")
+            OutlinedButton(onClick = { pdfPicker.launch(arrayOf("application/pdf")) }, enabled = isOnline && !busy) { Text("Unggah / Ganti CV PDF") }
+            if (!gmailConnected) Button(onClick = { scope.launch {
+                busy = true
+                try {
+                    val response = ApiClient.apiService.startGmailOAuth()
+                    if (!response.isSuccessful) { response.errorBody()?.close(); error("OAuth belum dapat dimulai (${response.code()}).") }
+                    val url = JSONObject(response.body()?.use { it.string() } ?: "{}").getString("url")
+                    val uri = android.net.Uri.parse(url)
+                    require(uri.scheme == "https" && uri.host == "accounts.google.com" && uri.userInfo == null && uri.port in listOf(-1, 443)) { "URL otorisasi Google tidak valid." }
+                    context.startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, uri))
+                } catch (e: CancellationException) { throw e }
+                catch (e: Exception) { message = e.message ?: "OAuth gagal dimulai." }
+                finally { busy = false }
+            } }, enabled = isOnline && !busy) { Text("Hubungkan Gmail") }
         }
         item {
             Card {
@@ -98,12 +150,12 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                             if (enabled) {
                                 accountId?.let { prefs.edit().putBoolean(it, true).apply() }
                                 consentSaved = true
-                                message = "Auto Apply aktif menurut server."
+                                message = "Izin Auto Apply tersimpan. Pengiriman mengikuti konfigurasi dan jadwal yang disetujui operator."
                             } else message = "Server belum mengaktifkan Auto Apply."
                         } catch (e: CancellationException) { throw e }
                         catch (e: Exception) { message = e.message ?: "Aktivasi gagal. Muat ulang status sebelum mencoba lagi." }
                         finally { busy = false }
-                    } }, enabled = statusLoaded && gmailConnected && isPro && isOnline && !busy && !enabled && (agreed || consentSaved), modifier = Modifier.fillMaxWidth()) { Text(if (enabled) "Auto Apply Aktif" else "Aktifkan Auto Apply") }
+                    } }, enabled = statusLoaded && gmailConnected && cvUploaded && isPro && isOnline && !busy && !enabled && (agreed || consentSaved), modifier = Modifier.fillMaxWidth()) { Text(if (enabled) "Izin Auto Apply Tersimpan" else "Simpan Izin Auto Apply") }
                     OutlinedButton(onClick = { scope.launch {
                         busy = true
                         try {
