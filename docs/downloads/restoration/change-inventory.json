@@ -1,0 +1,59 @@
+{
+  "android": {
+    "base": "2d751b6ec584e3706f758826ce22fe3868f9dc3c",
+    "commit": "f1664e258d0e9394521c4d3414a18ec07232e16c",
+    "files": [
+      "app/src/main/assets/product_policy.json",
+      "app/src/main/assets/training_catalog.json",
+      "app/src/main/java/com/example/automatesmartbot/data/autoapply/AutoApplyReports.kt",
+      "app/src/main/java/com/example/automatesmartbot/data/career/PayrollCalculator.kt",
+      "app/src/main/java/com/example/automatesmartbot/data/career/PayrollForm.kt",
+      "app/src/main/java/com/example/automatesmartbot/data/career/TrainingLearning.kt",
+      "app/src/main/java/com/example/automatesmartbot/data/cv/CvWizard.kt",
+      "app/src/main/java/com/example/automatesmartbot/data/cv/PdfCvAnalyzer.kt",
+      "app/src/main/java/com/example/automatesmartbot/data/network/ApiService.kt",
+      "app/src/main/java/com/example/automatesmartbot/data/product/ProductPolicy.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/components/JourneyHeader.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/components/PayrollSources.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/screens/DashboardScreen.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/screens/JobTrainingScreen.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/screens/KirimLamaranScreen.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/screens/LatihanPsikotesScreen.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/screens/MainDashboardScreen.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/screens/PsychotestResultPanel.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/screens/RiwayatScreen.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/viewmodel/CvBuilderViewModel.kt",
+      "app/src/main/java/com/example/automatesmartbot/ui/viewmodel/PsychotestViewModel.kt",
+      "app/src/test/java/com/example/automatesmartbot/data/autoapply/AutoApplyReportsTest.kt",
+      "app/src/test/java/com/example/automatesmartbot/data/career/LearningStoreTest.kt",
+      "app/src/test/java/com/example/automatesmartbot/data/cv/RestorationFlowTest.kt",
+      "app/src/test/java/com/example/automatesmartbot/ui/screens/FeatureUiTest.kt",
+      "app/src/test/java/com/example/automatesmartbot/ui/screens/RestorationUiTest.kt",
+      "app/src/test/java/com/example/automatesmartbot/ui/viewmodel/PsychotestViewModelTest.kt",
+      "backend-contract/psychotest_access.py",
+      "backend-contract/psychotest_api.py",
+      "docs/restoration/REVIEW.md"
+    ]
+  },
+  "backend": {
+    "base": "dbfb30120a302da8a045e2d3e50e9ffa2f6ec193",
+    "commit": "42496e044896043f7e03484eb3f9471d1f2b0af0",
+    "files": [
+      "docs/restoration/REVIEW.md",
+      "termux/automate-ai/auto_apply_api.py",
+      "termux/automate-ai/auto_apply_diagnostics.py",
+      "termux/automate-ai/gmail_oauth_client.py",
+      "termux/automate-ai/phase511_controls.py",
+      "termux/automate-ai/phase512_sender.py",
+      "termux/automate-ai/phase57_queue.py",
+      "termux/automate-jobs-v2/psychotest_access.py",
+      "termux/automate-jobs-v2/psychotest_api.py",
+      "tests/test_auto_apply_restoration.py",
+      "tests/test_psychotest_access.py",
+      "tests/test_psychotest_api_access.py",
+      "tests/test_termux_auto_apply.py"
+    ]
+  }
+}

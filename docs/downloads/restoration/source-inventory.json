@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "operation": "read_only_source_inventory",
+  "does_not_verify_runtime_oauth_consent_or_cron": true,
+  "files": {
+    "automate-ai": [
+      {
+        "name": "gmail_oauth_client.py",
+        "present": true,
+        "readable": true,
+        "size_bytes": 3253,
+        "sha256": "f5041f18870fe9fab56e5302d21fbd6fc780462c4b74e553dcd8852cb3521851",
+        "imports": [
+          "os",
+          "pathlib",
+          "requests",
+          "urllib.parse"
+        ],
+        "syntax": "parseable"
+      },
+      {
+        "name": "phase512_sender.py",
+        "present": true,
+        "readable": true,
+        "size_bytes": 9633,
+        "sha256": "686cfc88c5e48a3ec1b2bf2f66a56a07c53515cb465d6ff8d4e8f282ddf5cd5c",
+        "imports": [
+          "argparse",
+          "auto_apply_api",
+          "base64",
+          "datetime",
+          "gmail_oauth_client",
+          "hashlib",
+          "json",
+          "karirmate_integrasi_final",
+          "os",
+          "pathlib",
+          "phase57_queue",
+          "phase5_config",
+          "pypdf",
+          "re",
+          "runtime_paths",
+          "sqlite3",
+          "zoneinfo"
+        ],
+        "syntax": "parseable"
+      },
+      {
+        "name": "phase511_controls.py",
+        "present": true,
+        "readable": true,
+        "size_bytes": 3619,
+        "sha256": "c85338294f18306baf316b6c6db58464672a44c5b957a88c969eb3198823519b",
+        "imports": [
+          "datetime",
+          "pathlib",
+          "phase512_sender",
+          "phase57_queue",
+          "phase5_config",
+          "runtime_paths",
+          "sqlite3"
+        ],
+        "syntax": "parseable"
+      },
+      {
+        "name": "phase57_queue.py",
+        "present": true,
+        "readable": true,
+        "size_bytes": 3836,
+        "sha256": "d135455897af217bb5fc4e88c01b44797419e2223bde1f31a20d2e7bac5a0986",
+        "imports": [
+          "runtime_paths",
+          "sqlite3"
+        ],
+        "syntax": "parseable"
+      },
+      {
+        "name": "phase5_config.py",
+        "present": true,
+        "readable": true,
+        "size_bytes": 1998,
+        "sha256": "2db981bf509cb06ba11f807b17c3f9f9518d64e06c0a828490915ec86f750db2",
+        "imports": [
+          "pathlib",
+          "runtime_paths",
+          "sqlite3"
+        ],
+        "syntax": "parseable"
+      },
+      {
+        "name": "phase53_auto.py",
+        "present": true,
+        "readable": true,
+        "size_bytes": 4812,
+        "sha256": "19054ff9d3c8346953c6018f7c76dc8fe663c0d16e0902afb0fe3b10b919a7e5",
+        "imports": [
+          "asyncio",
+          "html.parser",
+          "ipaddress",
+          "pathlib",
+          "re",
+          "requests",
+          "runtime_paths",
+          "socket",
+          "sqlite3",
+          "urllib.parse"
+        ],
+        "syntax": "parseable"
+      },
+      {
+        "name": "bot.py",
+        "present": true,
+        "readable": true,
+        "size_bytes": 39435,
+        "sha256": "cd271994732567d339e0c0602dff66012fdadd4dfd707fa54178db2c7a957268",
+        "imports": [
+          "asyncio",
+          "config",
+          "datetime",
+          "fcntl",
+          "github_search_engine",
+          "gmail_oauth_client",
+          "idjobs_feed",
+          "kalibrr_client",
+          "local_jobs",
+          "logging",
+          "pathlib",
+          "phase4_watch",
+          "phase511_controls",
+          "phase53_auto",
+          "phase5_config",
+          "re",
+          "search_engine",
+          "storage",
+          "telegram",
+          "telegram.error",
+          "telegram.ext",
+          "time",
+          "zoneinfo"
+        ],
+        "syntax": "parseable"
+      },
+      {
+        "name": "android_api.py",
+        "present": true,
+        "readable": true,
+        "size_bytes": 20378,
+        "sha256": "dee2c3c1d2df2f69337db06a2fb0d7663b53e11e67a24b213545e02edb7cd54e",
+        "imports": [
+          "account_access_policy",
+          "android_auth",
+          "auto_apply_api",
+          "functools",
+          "gmail_oauth_client",
+          "hashlib",
+          "http.server",
+          "idjobs_feed",
+          "json",
+          "karirmate_integrasi_final",
+          "pathlib",
+          "phase511_controls",
+          "runtime_paths",
+          "secrets",
+          "sqlite3",
+          "threading",
+          "time",
+          "urllib.parse"
+        ],
+        "syntax": "parseable"
+      }
+    ],
+    "automate-jobs-v2": [
+      {
+        "name": "http_api.py",
+        "present": true,
+        "readable": true,
+        "size_bytes": 28891,
+        "sha256": "5bbf795ace3ccb02a0cad298994caf7fc384a29e07f8778d725a1c9c2edee24a",
+        "imports": [
+          "application_methods",
+          "collections",
+          "company_catalog",
+          "company_search",
+          "concurrent.futures",
+          "copy",
+          "dataclasses",
+          "datetime",
+          "http.server",
+          "job_catalog",
+          "job_validation",
+          "json",
+          "live_sources",
+          "logging",
+          "math",
+          "re",
+          "search_engine",
+          "search_identity",
+          "threading",
+          "time",
+          "urllib.parse",
+          "uuid"
+        ],
+        "syntax": "parseable"
+      },
+      {
+        "name": "psychotest_api.py",
+        "present": true,
+        "readable": true,
+        "size_bytes": 18186,
+        "sha256": "9d0cd9a7f19e5ff30b1ba07fccbaed5c7026eaa4a4027019db9916cf6ee09163",
+        "imports": [
+          "__future__",
+          "collections",
+          "http.server",
+          "json",
+          "logging",
+          "math",
+          "psychotest_access",
+          "psychotest_policy",
+          "psychotest_service",
+          "re",
+          "search_identity",
+          "threading",
+          "time",
+          "urllib.parse"
+        ],
+        "syntax": "parseable"
+      }
+    ]
+  },
+  "expected_count": 10,
+  "present_count": 10,
+  "complete": true
+}

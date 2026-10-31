@@ -1,0 +1,740 @@
+From 42496e044896043f7e03484eb3f9471d1f2b0af0 Mon Sep 17 00:00:00 2001
+From: Ilham Ramdhani <ilhamramdhani763@gmail.com>
+Date: Sat, 31 Oct 2026 23:41:06 +0000
+Subject: [PATCH] Restore Auto Apply diagnostics, delivery reports, safe
+ simulation and PRO access
+
+---
+ docs/restoration/REVIEW.md                   |  40 ++++++
+ termux/automate-ai/auto_apply_api.py         |  99 ++++++++------
+ termux/automate-ai/auto_apply_diagnostics.py | 134 +++++++++++++++++++
+ termux/automate-ai/gmail_oauth_client.py     |   2 +-
+ termux/automate-ai/phase511_controls.py      |   4 +-
+ termux/automate-ai/phase512_sender.py        |  10 +-
+ termux/automate-ai/phase57_queue.py          |   5 +
+ termux/automate-jobs-v2/psychotest_access.py |  16 +++
+ termux/automate-jobs-v2/psychotest_api.py    |  10 +-
+ tests/test_auto_apply_restoration.py         | 130 ++++++++++++++++++
+ tests/test_psychotest_access.py              |  18 +++
+ tests/test_psychotest_api_access.py          |  38 ++++++
+ tests/test_termux_auto_apply.py              |   3 +-
+ 13 files changed, 454 insertions(+), 55 deletions(-)
+ create mode 100644 docs/restoration/REVIEW.md
+ create mode 100644 termux/automate-ai/auto_apply_diagnostics.py
+ create mode 100644 termux/automate-jobs-v2/psychotest_access.py
+ create mode 100644 tests/test_auto_apply_restoration.py
+ create mode 100644 tests/test_psychotest_access.py
+ create mode 100644 tests/test_psychotest_api_access.py
+
+diff --git a/docs/restoration/REVIEW.md b/docs/restoration/REVIEW.md
+new file mode 100644
+index 0000000..688c862
+--- /dev/null
++++ b/docs/restoration/REVIEW.md
+@@ -0,0 +1,40 @@
++# Auto Apply and psychotest restoration — review and rollout boundary
++
++This branch changes source code only. It does not change cron, credentials, existing production data, the Render deployment, or the operator live-send switch.
++
++## Auto Apply API
++
++All routes resolve the authenticated Android account to its existing Telegram candidate. A missing or invalid mapping returns HTTP 409 with `code: CANDIDATE_NOT_FOUND`; no candidate is created as a fallback.
++
++- `GET /auto-apply/status`: existing consent/Gmail/CV/operator state plus `diagnosis`, actionable `blockers`, and delivery `summary`. An unavailable Gmail status does not hide the account's saved consent or reporting data.
++- `GET /karirmate/candidates`: real matching contacts plus a structured diagnosis. Empty profile, unreadable/missing CV, no matching opportunities, no eligible contacts, and previously claimed contacts are distinct. Verified active opportunities are ordered before explicitly spontaneous applications.
++- `POST /auto-apply/simulate` with `{}`: read-only plan, maximum remaining daily quota, `mode: simulation`, `sent: 0`, `sending_enabled: false`. It makes no worker calls, queue inserts, claims, history entries, or consent changes. It is a planning simulation; live Gmail, subscription, schedule, worker capability and operator checks still apply when sending.
++- `GET /karirmate/report?period=today|7d|30d|all&offset=0`: account-scoped DB history, 100-row pages and `next_offset`, WIB date filters, confirmed sent totals, failed/pending/uncertain counts, effective remaining quota. Existing undated records remain accessible under `all`.
++
++A delivery is confirmed only with a nonempty Gmail message ID. Ambiguous transport errors stay `uncertain`, consume quota, and are never retried automatically. Do not label these errors as confirmed failures or successes. Legacy `sent` records without an ID are shown as uncertain; legacy undated uncertain records reserve quota conservatively. Pending recipients are deduplicated transactionally before insertion. Existing duplicate ready rows are cancelled when the sender encounters a claim; rows are retained.
++
++The original settings/consent timestamp is retained. No activation or simulation endpoint enables the operator switch or edits scheduling.
++
++## Psychotest access
++
++Short training keeps 10–20 real questions. A full session omits `question_count` and requires verified PRO; it uses the existing configured full length. FREE retains stored score/summary. PRO analysis/question explanations are filtered at both submit and result API boundaries, without altering stored results. All existing bank definitions remain unchanged.
++
++## Local verification
++
++`python -m pip install -r termux/requirements.txt` in a separate virtual environment, then:
++
++```sh
++python -B -m unittest discover -s tests -v
++```
++
++Tests use temporary SQLite/PDF fixtures and forbid outbound sender HTTP. API integration tests use loopback HTTP. Membership/identity and psychotest API access tests use explicit test fixtures; these do not supply the missing production modules.
++
++## Required before any production rollout
++
++The ten user-named Termux source files are present, but the repository is not a complete deployable snapshot. Still required: the existing `android_auth.py`, `account_access_policy.py`, `karirmate_integrasi_final.py`, `search_identity.py`, `psychotest_bank.py`, and `psychotest_skb.py`. The job/Telegram application also imports `application_methods`, `company_catalog`, `company_search`, `job_catalog`, `job_validation`, `live_sources`, `search_engine`, `idjobs_feed`, `github_search_engine`, `kalibrr_client`, `local_jobs`, `phase4_watch`, and `storage`. A sanitized configuration interface is needed for the missing `config` module; do not commit token values.
++
++The external Gmail worker source is absent. Its refresh behavior, Gmail scope, confirmed `message_id`, idempotency, and explicit spontaneous-application support must be reviewed against the real worker. Do not enable production to test these assumptions.
++
++Contacts need position, location and a traceable source in the existing user-owned tables. Active vacancies additionally need active/verified flags, evidence URL and expiry. Missing fields are reported, not fabricated. Do not alter production tables/data as part of this branch review.
++
++There is no evidence from the user's production database or installed APK in this test environment. The exact production data condition behind the old generic candidate message must be read from the new diagnostic response after an approved rollout. Source-level cause: previous API collapsed reasons to an empty list, and Android discarded the note.
+diff --git a/termux/automate-ai/auto_apply_api.py b/termux/automate-ai/auto_apply_api.py
+index 81eb57c..bbced81 100644
+--- a/termux/automate-ai/auto_apply_api.py
++++ b/termux/automate-ai/auto_apply_api.py
+@@ -4,15 +4,17 @@ import os
+ import sqlite3
+ import tempfile
+ from pathlib import Path
++from urllib.parse import parse_qs, urlsplit
++import auto_apply_diagnostics as diagnostics
+ from runtime_paths import DB, CV_DIR
+ import gmail_oauth_client
+ import phase5_config
+ import phase511_controls
+ 
+-ROUTES={'/auto-apply/status','/auto-apply/enable','/auto-apply/pause','/gmail/oauth/start','/cv','/cv/status','/karirmate/report','/karirmate/candidates','/karirmate/selection'}
++ROUTES={'/auto-apply/status','/auto-apply/enable','/auto-apply/pause','/auto-apply/simulate','/gmail/oauth/start','/cv','/cv/status','/karirmate/report','/karirmate/candidates','/karirmate/selection'}
+ 
+ class RequestError(Exception):
+-    def __init__(self,status,message): self.status,self.message=status,message
++    def __init__(self,status,message,code='BACKEND_ERROR'): self.status,self.message,self.code=status,message,code
+ 
+ def _body(handler,limit=8192,raw=False):
+     try: size=int(handler.headers.get('Content-Length','0'))
+@@ -31,55 +33,57 @@ def _identity(handler,require_pro=False):
+     if account_id is None: raise RequestError(401,'Sesi berakhir. Silakan masuk kembali.')
+     with sqlite3.connect(DB,timeout=30) as db:
+         row=db.execute('SELECT telegram_user_id FROM android_accounts WHERE id=?',(account_id,)).fetchone()
+-    if not row or row[0] is None: raise RequestError(409,'Tautkan akun Telegram sebelum menghubungkan Gmail.')
++    if not row or row[0] is None: raise RequestError(409,'Identitas kandidat belum terhubung. Tautkan akun Telegram pada Profil Pengguna.','CANDIDATE_NOT_FOUND')
+     if require_pro:
+         account=handler.account_status()
+         if not account: raise RequestError(401,'Sesi tidak valid.')
+         explicit=account.get('is_pro')
+         active=explicit if isinstance(explicit,bool) else str(account.get('membership','')).lower()=='pro'
+         if not active: raise RequestError(403,'Langganan PRO aktif diperlukan.')
+-    return account_id,int(row[0])
++    try:
++        uid=int(row[0])
++        if uid<=0: raise ValueError()
++    except (ValueError,TypeError):
++        raise RequestError(409,'Identitas kandidat tidak valid. Periksa penautan akun pada Profil Pengguna.','CANDIDATE_NOT_FOUND') from None
++    return account_id,uid
+ 
+-def _status(uid):
++def _status(account_id,uid):
+     cfg=phase5_config.get(uid)
+-    return {'success':True,'operator_send_allowed':os.environ.get('KARIRMATE_ALLOW_LIVE_SEND')=='1','schedule_status':'not_verified','gmail_connected':gmail_oauth_client.status(uid).get('connected') is True,
+-            'cv_uploaded':bool(cfg.get('cv_path') and Path(cfg['cv_path']).is_file()),
+-            'auto_apply':phase511_controls.state(uid)}
++    state=phase511_controls.state(uid)
++    blockers=[]
++    try:
++        gmail=gmail_oauth_client.status(uid)
++        connected=gmail.get('connected') is True
++        if not connected: blockers.append(diagnostics.diagnosis('GMAIL_NOT_CONNECTED','Gmail belum terhubung.','Hubungkan ulang Gmail melalui tombol Hubungkan Gmail.'))
++    except gmail_oauth_client.GmailReauthorizationRequired:
++        connected=False
++        blockers.append(diagnostics.diagnosis('GMAIL_REAUTHORIZATION_REQUIRED','Izin Gmail kedaluwarsa atau ditolak.','Hubungkan ulang Gmail; operator perlu memeriksa kunci layanan jika tetap ditolak.'))
++    except Exception:
++        connected=False
++        blockers.append(diagnostics.diagnosis('BACKEND_ERROR','Status Gmail belum dapat diverifikasi.','Periksa koneksi backend dan konfigurasi worker Gmail.'))
++    items,reason=candidates_with_diagnosis(account_id,uid)
++    if not items: blockers.append(reason)
++    if not state['consent_granted']: blockers.append(diagnostics.diagnosis('CONSENT_REQUIRED','Persetujuan Auto Apply belum tersimpan.','Baca dan setujui aktivasi satu kali.'))
++    elif not state['enabled']: blockers.append(diagnostics.diagnosis('AUTO_APPLY_PAUSED','Auto Apply sedang dijeda.','Aktifkan kembali untuk melanjutkan; persetujuan lama tetap tersimpan.'))
++    allowed=os.environ.get('KARIRMATE_ALLOW_LIVE_SEND')=='1'
++    if not allowed: blockers.append(diagnostics.diagnosis('PRODUCTION_SENDING_BLOCKED','Pengiriman produksi diblokir konfigurasi operator.','Operator harus meninjau konfigurasi dan mendapatkan persetujuan sebelum mengaktifkan pengiriman.'))
++    return dict(success=True,operator_send_allowed=allowed,schedule_status='not_verified',gmail_connected=connected,
++                cv_uploaded=bool(cfg.get('cv_path') and Path(cfg['cv_path']).is_file()),auto_apply=state,
++                diagnosis=reason,blockers=blockers,summary=diagnostics.delivery_report(uid)['summary'])
++
++def candidates_with_diagnosis(account_id,uid):
++    return diagnostics.selection(account_id,uid)
+ 
+ def candidates(account_id,uid):
+-    """Do not turn scraped emails or contacts without location into verified vacancies."""
+-    from candidate_selection import select_for_profile
+-    from phase512_sender import extract_cv_text
+-    cfg=phase5_config.get(uid)
+-    cv_path=Path(cfg.get('cv_path') or '')
+-    if not cv_path.is_file(): return [],'Unggah CV terlebih dahulu.'
+-    try: cv_text=extract_cv_text(cv_path)
+-    except (ValueError,ImportError): return [],'CV belum dapat diekstrak untuk pencocokan.'
+-    with sqlite3.connect(DB,timeout=30) as db:
+-        db.row_factory=sqlite3.Row
+-        profile=db.execute('SELECT desired_positions,preferred_locations FROM android_profiles WHERE account_id=?',(account_id,)).fetchone()
+-        if not profile: return [],'Lengkapi posisi dan lokasi pada profil.'
+-        positions=json.loads(profile['desired_positions']);locations=json.loads(profile['preferred_locations'])
+-        claimed={r[0] for r in db.execute('SELECT email FROM phase57_delivery_claims WHERE user_id=?',(uid,))}
+-        rows=[]
+-        for table in ('km_stage1_sources','km_companies'):
+-            columns={r[1] for r in db.execute(f'PRAGMA table_info({table})')}
+-            if not {'company','email','position','user_id'}<=columns: continue
+-            for row in db.execute(f'SELECT * FROM {table} WHERE user_id=? LIMIT 500',(uid,)):
+-                c=dict(row)
+-                if str(c.get('email') or '').strip().lower() in claimed: continue
+-                source=c.get('source_url') or c.get('source') or ''
+-                verified=c.get('vacancy_verified') in (True,1) and c.get('active') in (True,1)
+-                rows.append(dict(c,source_url=source,contact_source=source,kind='vacancy' if verified else 'spontaneous',vacancy_verified=verified,active=verified))
+-    import re
+-    rows=[r for r in rows if any(word in cv_text for word in re.findall(r'[a-z]{3,}',r['position'].casefold()))]
+-    return select_for_profile(rows,positions,locations), 'Kontak tanpa lokasi/posisi/sumber yang sesuai tidak dipilih. Tidak ada lowongan atau alamat email yang dikarang.'
++    # Keep CLI sender compatibility while giving HTTP clients structured diagnostics.
++    items,reason=candidates_with_diagnosis(account_id,uid)
++    return items,reason['message']
+ 
+ def handle(handler,path,method):
+     if path not in ROUTES: return False
+     try:
+-        account_id,uid=_identity(handler,require_pro=path in ('/auto-apply/enable','/karirmate/candidates'))
+-        if method=='GET' and path=='/auto-apply/status': data=_status(uid)
++        account_id,uid=_identity(handler,require_pro=path in ('/auto-apply/enable','/karirmate/candidates','/auto-apply/simulate'))
++        if method=='GET' and path=='/auto-apply/status': data=_status(account_id,uid)
+         elif method=='POST' and path=='/gmail/oauth/start':
+             _body(handler)
+             data={'success':True,'url':gmail_oauth_client.begin(uid)}
+@@ -114,15 +118,24 @@ def handle(handler,path,method):
+         elif method=='POST' and path=='/auto-apply/pause':
+             phase511_controls.pause(uid);data={'success':True,'auto_apply':phase511_controls.state(uid)}
+         elif method=='GET' and path=='/karirmate/report':
+-            data={'success':True,'items':phase511_controls.history(uid),'auto_apply':phase511_controls.state(uid)}
++            query=parse_qs(urlsplit(handler.path).query)
++            try:
++                offset=int(query.get('offset',['0'])[0])
++                if offset<0: raise ValueError()
++                report=diagnostics.delivery_report(uid,query.get('period',['today'])[0],offset)
++            except ValueError: raise RequestError(400,'Filternya tidak valid.') from None
++            data=dict(success=True,auto_apply=phase511_controls.state(uid),**report)
+         elif method=='GET' and path=='/karirmate/candidates':
+-            items,note=candidates(account_id,uid);data={'success':True,'items':items,'note':note,'sending_enabled':False}
++            items,reason=candidates_with_diagnosis(account_id,uid);data={'success':True,'items':items,'note':reason['message'],'diagnosis':reason,'sending_enabled':False}
++        elif method=='POST' and path=='/auto-apply/simulate':
++            _body(handler)
++            data=diagnostics.simulate(account_id,uid)
+         elif method=='GET' and path=='/karirmate/selection': data={'success':True,'selection':{'mode':'cv_and_location','decided_by':'backend','random_fallback':False}}
+         else: raise RequestError(405,'Metode tidak didukung untuk endpoint ini.')
+         handler.respond(200,data)
+-    except RequestError as exc: handler.respond(exc.status,{'success':False,'error':exc.message})
+-    except gmail_oauth_client.GmailReauthorizationRequired: handler.respond(409,{'success':False,'error':'Gmail perlu dihubungkan ulang.','reauthorization_required':True})
+-    except (ImportError,sqlite3.Error): handler.respond(503,{'success':False,'error':'Dependensi/skema backend belum tersedia; aktivasi ditolak.'})
++    except RequestError as exc: handler.respond(exc.status,{'success':False,'error':exc.message,'code':exc.code})
++    except gmail_oauth_client.GmailReauthorizationRequired: handler.respond(409,{'success':False,'error':'Gmail perlu dihubungkan ulang.','reauthorization_required':True,'code':'GMAIL_REAUTHORIZATION_REQUIRED'})
++    except (ImportError,sqlite3.Error): handler.respond(503,{'success':False,'code':'BACKEND_ERROR','error':'Dependensi/skema backend belum tersedia; aktivasi ditolak.'})
+     except Exception:
+-        handler.respond(503,{'success':False,'error':'Layanan belum dapat memproses permintaan. Periksa status sebelum mencoba ulang.'})
++        handler.respond(503,{'success':False,'code':'BACKEND_ERROR','error':'Layanan belum dapat memproses permintaan. Periksa status sebelum mencoba ulang.'})
+     return True
+diff --git a/termux/automate-ai/auto_apply_diagnostics.py b/termux/automate-ai/auto_apply_diagnostics.py
+new file mode 100644
+index 0000000..69f135c
+--- /dev/null
++++ b/termux/automate-ai/auto_apply_diagnostics.py
+@@ -0,0 +1,134 @@
++"""Read-only, account-scoped selection and reporting. Never contacts the Gmail worker."""
++import json
++import re
++import sqlite3
++from datetime import datetime, timedelta, timezone
++from pathlib import Path
++from zoneinfo import ZoneInfo
++from runtime_paths import DB
++
++WIB = ZoneInfo('Asia/Jakarta')
++
++def diagnosis(code, message, action, **details):
++    return dict(code=code, message=message, action=action, details=details)
++
++def connect():
++    return sqlite3.connect(f'file:{DB}?mode=ro', uri=True, timeout=30)
++
++def _list(value):
++    try:
++        items = json.loads(value or '[]')
++        return [s.strip() for s in items if isinstance(s, str) and s.strip()] if isinstance(items, list) else []
++    except (ValueError, TypeError):
++        return []
++
++def selection(account_id, uid):
++    from candidate_selection import select_for_profile
++    from phase512_sender import extract_cv_text
++    with connect() as db:
++        db.row_factory = sqlite3.Row
++        account = db.execute('SELECT telegram_user_id FROM android_accounts WHERE id=?', (account_id,)).fetchone()
++        if not account or account[0] != uid:
++            return [], diagnosis('CANDIDATE_NOT_FOUND', 'Identitas kandidat belum terhubung ke akun ini.', 'Tautkan akun Telegram pada profil; jangan membuat akun kandidat baru.')
++        profile = db.execute('SELECT desired_positions,preferred_locations FROM android_profiles WHERE account_id=?', (account_id,)).fetchone()
++        positions, locations = (_list(profile[0]), _list(profile[1])) if profile else ([], [])
++        if not positions or not locations:
++            return [], diagnosis('PROFILE_INCOMPLETE', 'Posisi tujuan atau lokasi kerja belum lengkap.', 'Lengkapi posisi dan lokasi di Profil Pengguna.')
++        cfg = db.execute('SELECT cv_path FROM phase5_config WHERE user_id=?', (uid,)).fetchone()
++        cv_path = Path(cfg[0] or '') if cfg else Path('')
++        if not cv_path.is_file():
++            return [], diagnosis('CV_NOT_AVAILABLE', 'CV kandidat belum tersedia di backend.', 'Unggah CV PDF melalui Kirim Lamaran.')
++        try:
++            cv_text = extract_cv_text(cv_path)
++        except ImportError:
++            return [], diagnosis('BACKEND_ERROR', 'Mesin ekstraksi PDF backend belum tersedia.', 'Operator perlu memasang dependensi pypdf.')
++        except Exception:
++            return [], diagnosis('CV_NOT_AVAILABLE', 'Teks CV belum dapat dibaca; pencocokan belum dijalankan.', 'Unggah PDF berbasis teks tanpa kata sandi. PDF scan memerlukan OCR.')
++        tables = {r[0] for r in db.execute("SELECT name FROM sqlite_master WHERE type='table'")}
++        claimed = {r[0].strip().lower() for r in db.execute('SELECT email FROM phase57_delivery_claims WHERE user_id=?', (uid,))} if 'phase57_delivery_claims' in tables else set()
++        rows, unsupported = [], []
++        for table in ('km_stage1_sources', 'km_companies'):
++            columns = {r[1] for r in db.execute(f'PRAGMA table_info({table})')}
++            if not {'company', 'email', 'position', 'user_id', 'location'} <= columns:
++                unsupported.append(table)
++                continue
++            for row in db.execute(f'SELECT * FROM {table} WHERE user_id=?', (uid,)):
++                c = dict(row)
++                source = c.get('source_url') or c.get('source') or c.get('contact_source') or ''
++                verified = c.get('vacancy_verified') in (True, 1) and c.get('active') in (True, 1)
++                rows.append(dict(c, source_url=source, contact_source=source,
++                                 kind='vacancy' if verified else 'spontaneous', vacancy_verified=verified, active=verified))
++        # Pending rows may outlive the source import, but must pass the same current profile rules.
++        if 'phase57_queue' in tables:
++            for row in db.execute("SELECT * FROM phase57_queue WHERE user_id=? AND status IN ('ready','queued')", (uid,)):
++                c = dict(row)
++                rows.append(dict(c, position=c['job_title'], source_url=c['job_url'],
++                                 vacancy_verified=c.get('kind') == 'vacancy', active=c.get('kind') == 'vacancy'))
++    matching = [r for r in rows if any(word in cv_text for word in re.findall(r'[a-z]{3,}', str(r.get('position') or '').casefold()))]
++    # Filter claims BEFORE selecting the first five, so the sixth contact can fill a free slot.
++    eligible = select_for_profile(matching, positions, locations)
++    available = select_for_profile([r for r in matching if str(r.get('email') or '').strip().lower() not in claimed], positions, locations)
++    if available:
++        vacancies = sum(r['kind'] == 'vacancy' for r in available)
++        return available, diagnosis('READY' if vacancies else 'READY_SPONTANEOUS',
++            'Penerima sesuai profil tersedia.' if vacancies else 'Tidak ada lowongan aktif terverifikasi; tersedia kontak untuk lamaran spontan.',
++            'Periksa rencana simulasi dan status izin pengiriman.', active_vacancies=vacancies,
++            spontaneous=len(available)-vacancies, missing_or_unsupported_tables=unsupported)
++    if eligible:
++        return [], diagnosis('ALL_RECIPIENTS_ALREADY_CONTACTED', 'Semua penerima yang sesuai sudah dihubungi atau memiliki pengiriman yang belum pasti.', 'Tambahkan kontak rekrutmen baru dengan sumber yang dapat diperiksa. Pengiriman tidak diulang otomatis.')
++    code = 'NO_MATCHING_VACANCY' if rows else 'NO_ELIGIBLE_RECIPIENT'
++    return [], diagnosis(code, 'Tidak ada lowongan atau kontak rekrutmen yang memenuhi posisi, lokasi, CV, dan bukti sumber.',
++        'Periksa posisi/lokasi profil dan data kontak perusahaan. Kontak tanpa sumber atau lokasi tidak dipilih.', missing_or_unsupported_tables=unsupported)
++
++def _datetime(value):
++    try:
++        dt = datetime.fromisoformat(value)
++        return dt.replace(tzinfo=timezone.utc) if dt.tzinfo is None else dt
++    except (ValueError, TypeError):
++        return None
++
++def delivery_report(uid, period='today', offset=0, now=None):
++    if period not in ('today', '7d', '30d', 'all'):
++        raise ValueError('Filter harus today, 7d, 30d, atau all.')
++    now = (now or datetime.now(timezone.utc)).astimezone(WIB)
++    days = {'today': 1, '7d': 7, '30d': 30}
++    start = datetime.combine(now.date()-timedelta(days=days.get(period, 1)-1), datetime.min.time(), WIB)
++    with connect() as db:
++        db.row_factory = sqlite3.Row
++        rows = db.execute('''SELECT id,company,job_title,email,status,created_at,claimed_at,sent_at,
++            gmail_message_id,error,kind,attempt_day FROM phase57_queue WHERE user_id=? ORDER BY id DESC''', (uid,)).fetchall()
++    items, selected, today = [], [], []
++    for row in rows:
++        item = dict(row)
++        original = item['status']
++        item['raw_status'] = original
++        item['status'] = {'ready': 'waiting', 'queued': 'waiting', 'sending': 'processing', 'cancelled': 'cancelled', 'blocked': 'configuration_blocked'}.get(original, original)
++        if original == 'sent' and str(item['gmail_message_id'] or '').strip().lower() in ('', 'null', 'none'):
++            item['status'] = 'uncertain'
++        item['timestamp'] = item['sent_at'] or item['claimed_at'] or item['created_at']
++        dt = _datetime(item['timestamp'])
++        # Pending rows have not failed or been sent even when production is blocked.
++        items.append(item)
++        if dt and dt.astimezone(WIB).date() == now.date(): today.append(item)
++        if period == 'all' or (dt and start <= dt.astimezone(WIB) <= now): selected.append(item)
++    def count(data, status): return sum(x['status'] in status for x in data)
++    summary = dict(target=5, sent_today=count(today, ('sent',)), failed_today=count(today, ('failed',)),
++                   pending=count(items, ('waiting', 'processing')), pending_today=count(today, ('waiting', 'processing')), uncertain=count(items, ('uncertain',)),
++                   total_sent=count(items, ('sent',)), filtered_count=len(selected))
++    return dict(items=selected[offset:offset+100], summary=summary, period=period, offset=offset,
++                next_offset=offset+100 if len(selected)>offset+100 else None, timezone='Asia/Jakarta')
++
++def simulate(account_id, uid, now=None):
++    """No writes, worker calls, settings changes, claims, or delivery history rows."""
++    from phase512_sender import quota_used
++    items, reason = selection(account_id, uid)
++    with connect() as db:
++        row = db.execute('SELECT enabled,daily_limit,consent_at FROM phase57_settings WHERE user_id=?', (uid,)).fetchone()
++        cfg = db.execute('SELECT auto_consent,daily_limit FROM phase5_config WHERE user_id=?', (uid,)).fetchone()
++        limit = max(0, min(5, row[1] if row else 5, cfg[1] if cfg else 5))
++        remaining = max(0, limit-quota_used(db, uid, now))
++        consent = bool(row and row[0] and row[2] and cfg and cfg[0])
++    plan = items[:remaining] if consent else []
++    return dict(success=True, mode='simulation', sending_enabled=False, sent=0, writes_performed=False,
++                plan=plan, remaining_today=remaining, diagnosis=reason, consent_granted=consent,
++                note='Simulasi tidak mengirim email atau mencatat status terkirim. Gmail, PRO, jadwal, kemampuan worker untuk lamaran spontan, dan izin operator diperiksa kembali saat pengiriman nyata.')
+diff --git a/termux/automate-ai/gmail_oauth_client.py b/termux/automate-ai/gmail_oauth_client.py
+index 2c98fe5..9c78509 100644
+--- a/termux/automate-ai/gmail_oauth_client.py
++++ b/termux/automate-ai/gmail_oauth_client.py
+@@ -60,6 +60,6 @@ def send_application(payload):
+     with requests.post(BASE + '/api/gmail/send-application', json=payload, headers={**headers(), 'Idempotency-Key': payload['job_key']}, timeout=(10, 55), allow_redirects=False) as response:
+         data = _json(response)
+         message_id = data.get('message_id')
+-        if response.status_code != 200 or data.get('success') is not True or not isinstance(message_id, str) or not message_id.strip() or message_id.strip().lower() == 'null':
++        if response.status_code != 200 or data.get('success') is not True or not isinstance(message_id, str) or not message_id.strip() or message_id.strip().lower() in ('null','none','undefined'):
+             raise GmailUnavailable('Gmail belum mengonfirmasi message ID. Periksa riwayat sebelum mengirim ulang.')
+         return message_id
+diff --git a/termux/automate-ai/phase511_controls.py b/termux/automate-ai/phase511_controls.py
+index 8a8f99c..5ad71ec 100644
+--- a/termux/automate-ai/phase511_controls.py
++++ b/termux/automate-ai/phase511_controls.py
+@@ -13,9 +13,9 @@ def state(uid):
+         row=db.execute('SELECT enabled,daily_limit,consent_at FROM phase57_settings WHERE user_id=?',(uid,)).fetchone()
+         counts=dict(db.execute('SELECT status,COUNT(*) FROM phase57_queue WHERE user_id=? GROUP BY status',(uid,)))
+         used=quota_used(db,uid)
+-        cfg=db.execute('SELECT auto_consent FROM phase5_config WHERE user_id=?',(uid,)).fetchone()
++        cfg=db.execute('SELECT auto_consent,daily_limit FROM phase5_config WHERE user_id=?',(uid,)).fetchone()
+         consent=bool(row and row[2] and cfg and cfg[0])
+-    limit=min(5,max(0,row[1])) if row else 5
++    limit=min(5,max(0,row[1]),max(0,cfg[1]) if cfg else 5) if row else 5
+     return {'enabled':bool(row and row[0] and consent),'limit':limit,
+             'consent_at':row[2] if consent else None,'consent_granted':consent,'counts':counts,
+             'quota_used_today':used,'remaining_today':max(0,limit-used),'scheduler_modified':False}
+diff --git a/termux/automate-ai/phase512_sender.py b/termux/automate-ai/phase512_sender.py
+index 9d8f274..a290aae 100644
+--- a/termux/automate-ai/phase512_sender.py
++++ b/termux/automate-ai/phase512_sender.py
+@@ -36,8 +36,8 @@ def _day(value):
+ 
+ def quota_used(db,uid,now=None):
+     today=(now or _now()).astimezone(WIB).date().isoformat()
+-    rows=db.execute("SELECT status,attempt_day,sent_at FROM phase57_queue WHERE user_id=? AND status IN ('sent','sending','uncertain')",(uid,))
+-    return sum(1 for status,attempt_day,sent_at in rows if (attempt_day or _day(sent_at)) == today or (status in ('sending','uncertain') and not attempt_day))
++    rows=db.execute("SELECT status,attempt_day,sent_at,gmail_message_id FROM phase57_queue WHERE user_id=? AND status IN ('sent','sending','uncertain')",(uid,))
++    return sum(1 for status,attempt_day,sent_at,message_id in rows if (attempt_day or _day(sent_at)) == today or ((status in ('sending','uncertain') or (status=='sent' and not message_id)) and not attempt_day and not _day(sent_at)))
+ 
+ def sent_today(db,uid):
+     today=_now().astimezone(WIB).date().isoformat()
+@@ -85,7 +85,9 @@ def _claim(uid,now,cv_text,allow_spontaneous=False):
+             if item['kind']=='spontaneous' and not allow_spontaneous: continue
+             if item['kind']=='vacancy' and (not item['evidence_url'] or not item['expires_at'] or item['expires_at']<=int(now.timestamp())): continue
+             try: db.execute('INSERT INTO phase57_delivery_claims VALUES(?,?,?)',(uid,email,item['id']))
+-            except sqlite3.IntegrityError: continue
++            except sqlite3.IntegrityError:
++                db.execute("UPDATE phase57_queue SET status='cancelled',error='ALL_RECIPIENTS_ALREADY_CONTACTED' WHERE id=? AND user_id=? AND status='ready'", (item['id'],uid))
++                continue
+             key=hashlib.sha256(f"{uid}\0{item['job_url']}\0{email}".encode()).hexdigest()
+             db.execute("UPDATE phase57_queue SET status='sending',attempt_day=?,claimed_at=?,job_key=?,error=NULL WHERE id=? AND status='ready'",(today,now.isoformat(),key,item['id']))
+             item.update(email=email,job_key=key)
+@@ -126,7 +128,7 @@ def send_batch(uid,name,*,sender=send_application,status_reader=gmail_status,pro
+             message_id=sender({'telegram_user_id':str(uid),'job_key':job['job_key'],'to':job['email'],
+                 'applicant_name':name.strip(),'job_title':job['job_title'],'company':job['company'],
+                 'application_kind':job['kind'],'pdf_base64':base64.b64encode(pdf).decode('ascii')})
+-            if not isinstance(message_id,str) or not message_id.strip() or message_id.strip().lower()=='null': raise ValueError('Missing Gmail message ID')
++            if not isinstance(message_id,str) or not message_id.strip() or message_id.strip().lower() in ('null','none','undefined'): raise ValueError('Missing Gmail message ID')
+         except Exception as exc:
+             # Only exception class is stored: never persist token-bearing provider error bodies.
+             with sqlite3.connect(DB,timeout=30) as db:
+diff --git a/termux/automate-ai/phase57_queue.py b/termux/automate-ai/phase57_queue.py
+index aec8e7d..3e2c5f6 100644
+--- a/termux/automate-ai/phase57_queue.py
++++ b/termux/automate-ai/phase57_queue.py
+@@ -39,10 +39,15 @@ def enqueue(uid, candidate):
+     if not candidate.get('location') or not candidate.get('position'):
+         raise ValueError('Lokasi/posisi kandidat belum tersedia.')
+     with sqlite3.connect(DB, timeout=30) as db:
++        db.execute('BEGIN IMMEDIATE')
++        email = candidate['email'].strip().lower()
++        if db.execute('SELECT 1 FROM phase57_delivery_claims WHERE user_id=? AND email=?', (uid,email)).fetchone(): return False
++        if db.execute("SELECT 1 FROM phase57_queue WHERE user_id=? AND lower(trim(email))=? AND status IN ('ready','queued','sending','sent','uncertain')", (uid,email)).fetchone(): return False
+         db.execute('''INSERT OR IGNORE INTO phase57_queue
+             (user_id,job_url,job_title,company,email,status,kind,location,evidence_url,expires_at,contact_source)
+             VALUES(?,?,?,?,?,'ready',?,?,?,?,?)''', (uid,candidate['source_url'],candidate['position'],candidate['company'],candidate['email'].strip().lower(),
+                 kind,candidate['location'],candidate.get('evidence_url',''),candidate.get('expires_at'),candidate['contact_source']))
++        return True
+ 
+ if __name__ == '__main__':
+     initialize()
+diff --git a/termux/automate-jobs-v2/psychotest_access.py b/termux/automate-jobs-v2/psychotest_access.py
+new file mode 100644
+index 0000000..2af47a3
+--- /dev/null
++++ b/termux/automate-jobs-v2/psychotest_access.py
+@@ -0,0 +1,16 @@
++"""Entitlements affect responses, never stored results. No data is removed from the DB."""
++from copy import deepcopy
++
++def is_pro(identity):
++    return identity.get('is_pro') is True or (identity.get('is_pro') is None and str(identity.get('membership', '')).lower() == 'pro')
++
++def result_for_access(response, identity):
++    value = deepcopy(response)
++    result = value.get('result')
++    if not isinstance(result, dict): return value
++    result['deep_analysis_available'] = is_pro(identity)
++    if not is_pro(identity):
++        # Summary score/motivation and persisted results remain available to FREE.
++        for field in ('questions', 'analysis', 'categories'):
++            result.pop(field, None)
++    return value
+diff --git a/termux/automate-jobs-v2/psychotest_api.py b/termux/automate-jobs-v2/psychotest_api.py
+index ce477fb..527c3af 100644
+--- a/termux/automate-jobs-v2/psychotest_api.py
++++ b/termux/automate-jobs-v2/psychotest_api.py
+@@ -11,6 +11,7 @@ import threading
+ import time
+ from urllib.parse import parse_qs, urlsplit
+ 
++from psychotest_access import result_for_access
+ from psychotest_service import API_VERSION, PsychotestError, PsychotestService
+ from search_identity import IdentityError, android_subject
+ 
+@@ -106,7 +107,7 @@ class PsychotestApi:
+         from psychotest_service import TESTS
+         from psychotest_policy import basic_mode
+         cfg = TESTS.get(test_id)
+-        if cfg and not basic_mode(cfg):
++        if question_count is None or (cfg and not basic_mode(cfg)):
+             self.require_pro(identity)
+         return self.service.start_session(test_id, subject, identity.get('account_id'), question_count=question_count)
+ 
+@@ -115,7 +116,7 @@ class PsychotestApi:
+         return self.service.active_sessions(subject)
+ 
+     def session(self, authorization, session_id, action=None, body=None):
+-        subject, _ = self.identity(authorization)
++        subject, identity = self.identity(authorization)
+         if action is None:
+             return self.service.get_session(session_id, subject)
+         if action == 'questions':
+@@ -128,11 +129,12 @@ class PsychotestApi:
+                 raise ApiError(400, 'INVALID_PARAMETERS', 'revision harus bilangan bulat positif atau nol')
+             return self.service.save_answers(session_id, subject, body['answers'], revision)
+         if action == 'submit':
+-            return self.service.submit(session_id, subject)
++            return result_for_access(self.service.submit(session_id, subject), identity)
+         if action == 'retry-wrong':
++            self.require_pro(identity)
+             return self.service.retry_wrong(session_id, subject)
+         if action == 'result':
+-            return self.service.result(session_id, subject)
++            return result_for_access(self.service.result(session_id, subject), identity)
+         raise ApiError(404, 'NOT_FOUND', 'Endpoint tidak ditemukan')
+ 
+     @staticmethod
+diff --git a/tests/test_auto_apply_restoration.py b/tests/test_auto_apply_restoration.py
+new file mode 100644
+index 0000000..c93ce15
+--- /dev/null
++++ b/tests/test_auto_apply_restoration.py
+@@ -0,0 +1,130 @@
++"""Real temporary SQLite/PDF fixtures; all outbound HTTP is forbidden by base fixture."""
++import json
++import sqlite3
++import unittest
++from unittest.mock import patch
++from datetime import datetime, timezone, timedelta
++from test_termux_auto_apply import TermuxAutoApplyTest, diagnostics, controls, config, adapter, oauth, sender, NOW
++
++class DiagnosticsTest(unittest.TestCase):
++    setUp = TermuxAutoApplyTest.setUp
++    enqueue = TermuxAutoApplyTest.enqueue
++    run_sender = TermuxAutoApplyTest.run_sender
++    # Reuse fixture, rather than rerun inherited tests in this suite.
++    def contact(self, n=1, **changes):
++        self.enqueue(n, **changes)
++
++    def test_found_missing_identity_and_profile(self):
++        self.contact()
++        self.assertEqual('READY', diagnostics.selection(1,7)[1]['code'])
++        self.assertEqual('CANDIDATE_NOT_FOUND', diagnostics.selection(99,7)[1]['code'])
++        with sqlite3.connect(self.db) as db:
++            db.execute("UPDATE android_profiles SET desired_positions='[]'")
++        self.assertEqual('PROFILE_INCOMPLETE', diagnostics.selection(1,7)[1]['code'])
++
++    def test_missing_cv_and_scanned_cv_have_no_fake_match(self):
++        config.set_cv(7,self.root/'missing.pdf')
++        self.assertEqual('CV_NOT_AVAILABLE', diagnostics.selection(1,7)[1]['code'])
++
++    def test_spontaneous_has_no_claim_of_active_vacancy(self):
++        self.contact(kind='spontaneous')
++        items, reason=diagnostics.selection(1,7)
++        self.assertEqual('READY_SPONTANEOUS',reason['code'])
++        self.assertEqual(0,reason['details']['active_vacancies'])
++        self.assertFalse(items[0]['vacancy_verified'])
++
++    def test_no_contacts_and_all_contacted_are_distinct(self):
++        self.assertEqual('NO_ELIGIBLE_RECIPIENT',diagnostics.selection(1,7)[1]['code'])
++        self.contact();self.run_sender()
++        # Source imports still contain a record after send.
++        with sqlite3.connect(self.db) as db:
++            db.execute('CREATE TABLE km_companies(user_id INTEGER,company TEXT,email TEXT,position TEXT,location TEXT,source TEXT)')
++            db.execute("INSERT INTO km_companies VALUES(7,'Test','hr1@example.com','Admin','Jakarta','https://example.com/careers')")
++        self.assertEqual('ALL_RECIPIENTS_ALREADY_CONTACTED',diagnostics.selection(1,7)[1]['code'])
++
++    def test_http_reports_simulation_and_identity_error_are_account_scoped(self):
++        from http.client import HTTPConnection
++        from http.server import ThreadingHTTPServer
++        import threading
++        import android_api
++        class Handler(android_api.API):
++            def authenticated_account(self): return 1 if self.headers.get('Authorization')=='Bearer fixture-session' else 99
++            def account_status(self): return {'is_pro':True}
++            def log_message(self,*args): pass
++        server=ThreadingHTTPServer(('127.0.0.1',0),Handler)
++        threading.Thread(target=server.serve_forever,daemon=True).start()
++        self.addCleanup(server.server_close);self.addCleanup(server.shutdown)
++        def request(method,path,auth=True):
++            connection=HTTPConnection('127.0.0.1',server.server_port)
++            connection.request(method,path,b'{}' if method=='POST' else None,{'Authorization':'Bearer fixture-session'} if auth else {})
++            response=connection.getresponse();body=json.loads(response.read());connection.close();return response.status,body
++        self.contact(1)
++        before=self.db.read_bytes()
++        self.assertEqual('simulation',request('POST','/auto-apply/simulate')[1]['mode'])
++        self.assertEqual(before,self.db.read_bytes())
++        self.assertEqual(200,request('GET','/karirmate/report?period=7d')[0])
++        self.assertEqual(400,request('GET','/karirmate/report?period=bad')[0])
++        self.assertEqual('CANDIDATE_NOT_FOUND',request('GET','/karirmate/candidates',False)[1]['code'])
++
++    def test_pending_recipient_is_not_queued_twice_across_imports(self):
++        self.enqueue(1,'HR@example.com');self.enqueue(2,'hr@example.com')
++        self.assertEqual(1,len(controls.history(7)))
++
++    def test_no_matching_location_and_unreadable_cv_are_actionable(self):
++        self.contact()
++        with sqlite3.connect(self.db) as db: db.execute('UPDATE android_profiles SET preferred_locations=?',(json.dumps(['Bandung']),))
++        self.assertEqual('NO_MATCHING_VACANCY',diagnostics.selection(1,7)[1]['code'])
++        with sqlite3.connect(self.db) as db: db.execute('UPDATE android_profiles SET preferred_locations=?',(json.dumps(['Jakarta']),))
++        with patch.object(sender,'extract_cv_text',side_effect=ValueError('scan fixture')):
++            self.assertEqual('CV_NOT_AVAILABLE',diagnostics.selection(1,7)[1]['code'])
++
++    def test_sixth_new_recipient_can_replace_claimed_first_five(self):
++        for n in range(8): self.contact(n)
++        self.run_sender()
++        items,_=diagnostics.selection(1,7)
++        self.assertEqual(3,len(items));self.assertTrue(all(x['email'] not in {f'hr{n}@example.com' for n in range(5)} for x in items))
++
++    def test_gmail_error_keeps_report_and_consent_visible(self):
++        with patch.object(oauth,'status',side_effect=oauth.GmailReauthorizationRequired('fixture')):
++            result=adapter._status(1,7)
++        self.assertTrue(result['auto_apply']['consent_granted']);self.assertIn('GMAIL_REAUTHORIZATION_REQUIRED',{x['code'] for x in result['blockers']})
++
++    def test_simulation_no_writes_no_send_no_fake_history(self):
++        for n in range(8): self.contact(n)
++        before=self.db.read_bytes()
++        plan=diagnostics.simulate(1,7,now=NOW)
++        self.assertEqual(5,len(plan['plan']));self.assertEqual(0,plan['sent'])
++        self.assertFalse(plan['sending_enabled']);self.assertEqual(before,self.db.read_bytes())
++        self.assertTrue(all(x['status']=='ready' for x in controls.history(7)))
++        self.run_sender();self.assertEqual([],diagnostics.simulate(1,7,now=NOW)['plan'])
++
++    def test_legacy_unconfirmed_without_date_reserves_quota(self):
++        with sqlite3.connect(self.db) as db:
++            db.execute("INSERT INTO phase57_queue(user_id,job_url,email,status) VALUES(7,'unknown','unknown@example.com','sent')")
++            self.assertEqual(1,sender.quota_used(db,7,NOW))
++        self.assertEqual(1,diagnostics.delivery_report(7,'all')['summary']['uncertain'])
++
++    def test_status_retains_operator_block_and_disconnected_gmail(self):
++        with patch.dict('os.environ',{},clear=True),patch.object(oauth,'status',return_value={'connected':False}):
++            result=adapter._status(1,7)
++        codes={x['code'] for x in result['blockers']}
++        self.assertIn('GMAIL_NOT_CONNECTED',codes);self.assertIn('PRODUCTION_SENDING_BLOCKED',codes)
++        self.assertTrue(result['auto_apply']['consent_granted'])
++
++    def test_confirmed_history_summary_filters_and_account_scope(self):
++        self.contact(1);self.contact(2)
++        self.run_sender()
++        with sqlite3.connect(self.db) as db:
++            db.execute("UPDATE phase57_queue SET sent_at=? WHERE id=(SELECT min(id) FROM phase57_queue)",((NOW-timedelta(days=8)).isoformat(),))
++            db.execute("INSERT INTO phase57_queue(user_id,job_url,email,status,sent_at) VALUES(7,'old','old@example.com','sent',?)",(NOW.isoformat(),))
++            db.execute("INSERT INTO phase57_queue(user_id,job_url,email,status,sent_at,gmail_message_id) VALUES(9,'other','secret@example.com','sent',?,'other-id')",(NOW.isoformat(),))
++        today=diagnostics.delivery_report(7,'today',now=NOW)
++        self.assertEqual(1,today['summary']['sent_today']);self.assertEqual(2,today['summary']['total_sent'])
++        self.assertEqual(2,len(today['items']));self.assertIn('uncertain',{x['status'] for x in today['items']})
++        self.assertEqual(2,len(diagnostics.delivery_report(7,'7d',now=NOW)['items']))
++        self.assertEqual(3,len(diagnostics.delivery_report(7,'30d',now=NOW)['items']))
++        self.assertNotIn('secret@example.com',json.dumps(diagnostics.delivery_report(7,'all')))
++        with self.assertRaises(ValueError):diagnostics.delivery_report(7,'invalid')
++
++# Imported base is intentionally removed from discovery; only original module owns baseline cases.
++del TermuxAutoApplyTest
+diff --git a/tests/test_psychotest_access.py b/tests/test_psychotest_access.py
+new file mode 100644
+index 0000000..df5931a
+--- /dev/null
++++ b/tests/test_psychotest_access.py
+@@ -0,0 +1,18 @@
++import sys
++from pathlib import Path
++import unittest
++sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'termux'/'automate-jobs-v2'))
++from psychotest_access import result_for_access
++
++class PsychotestAccessTest(unittest.TestCase):
++    def setUp(self):
++        self.saved = {'ok':True,'result':{'score':8,'max_score':10,'questions':[{'explanation':'real fixture'}],'categories':[{'percent':80}],'analysis':{'strengths':['logic']}}}
++    def test_free_keeps_score_but_not_pro_detail_without_mutating_persistence(self):
++        result = result_for_access(self.saved, {'is_pro':False})['result']
++        self.assertEqual(8,result['score']);self.assertNotIn('questions',result)
++        self.assertIn('questions',self.saved['result'])
++    def test_explicit_false_overrides_legacy_pro_string(self):
++        self.assertFalse(result_for_access(self.saved,{'is_pro':False,'membership':'pro'})['result']['deep_analysis_available'])
++    def test_server_verified_pro_retains_deep_analysis(self):
++        self.assertTrue(result_for_access(self.saved,{'is_pro':True})['result']['deep_analysis_available'])
++        self.assertEqual(self.saved['result']['analysis'],result_for_access(self.saved,{'is_pro':True})['result']['analysis'])
+diff --git a/tests/test_psychotest_api_access.py b/tests/test_psychotest_api_access.py
+new file mode 100644
+index 0000000..8a46676
+--- /dev/null
++++ b/tests/test_psychotest_api_access.py
+@@ -0,0 +1,38 @@
++"""Test API access boundaries with explicit service/identity fixtures, no real bank."""
++import importlib.util
++from pathlib import Path
++import sys
++import types
++import unittest
++from unittest.mock import patch
++
++ROOT=Path(__file__).resolve().parents[1]/'termux'/'automate-jobs-v2'
++sys.path.insert(0,str(ROOT))
++
++class PsychotestApiAccessTest(unittest.TestCase):
++    def setUp(self):
++        service=types.ModuleType('psychotest_service')
++        service.API_VERSION=1;service.PsychotestError=Exception;service.PsychotestService=object
++        service.TESTS={'logic':{'family':'private','categories':{'logic':10},'title':'Logika'}}
++        identity=types.ModuleType('search_identity');identity.IdentityError=Exception;identity.android_subject=lambda _:None
++        self.patcher=patch.dict(sys.modules,psychotest_service=service,search_identity=identity)
++        self.patcher.start();self.addCleanup(self.patcher.stop)
++        spec=importlib.util.spec_from_file_location('api_access_fixture',ROOT/'psychotest_api.py')
++        self.module=importlib.util.module_from_spec(spec);spec.loader.exec_module(self.module)
++        class Service:
++            def start_session(self,*args,**kwargs):return {'ok':True,'count':kwargs['question_count']}
++            def submit(self,*args):return {'ok':True,'result':{'score':10,'analysis':{'real':'fixture'},'questions':[{'explanation':'fixture'}]}}
++            result=submit
++        self.free=self.module.PsychotestApi(Service(),identity_resolver=lambda _:('android:1',{'account_id':1,'is_pro':False}))
++        self.pro=self.module.PsychotestApi(Service(),identity_resolver=lambda _:('android:2',{'account_id':2,'is_pro':True}))
++
++    def test_free_training_works_full_requires_pro_and_body_cannot_grant_access(self):
++        self.assertEqual(10,self.free.start('fixture',{'test_id':'logic','question_count':10})['count'])
++        with self.assertRaises(self.module.ApiError) as error:self.free.start('fixture',{'test_id':'logic','is_pro':True})
++        self.assertEqual(403,error.exception.status)
++        self.assertIsNone(self.pro.start('fixture',{'test_id':'logic'})['count'])
++
++    def test_submit_and_result_both_redact_only_pro_fields(self):
++        for action in ('submit','result'):
++            free=self.free.session('fixture','id',action)['result'];pro=self.pro.session('fixture','id',action)['result']
++            self.assertEqual(10,free['score']);self.assertNotIn('analysis',free);self.assertIn('analysis',pro)
+diff --git a/tests/test_termux_auto_apply.py b/tests/test_termux_auto_apply.py
+index 07e09cf..37c645c 100644
+--- a/tests/test_termux_auto_apply.py
++++ b/tests/test_termux_auto_apply.py
+@@ -22,6 +22,7 @@ import phase511_controls as controls
+ import phase512_sender as sender
+ import gmail_oauth_client as oauth
+ import auto_apply_api as adapter
++import auto_apply_diagnostics as diagnostics
+ import candidate_selection
+ import android_api
+ from pypdf import PdfWriter
+@@ -33,7 +34,7 @@ class TermuxAutoApplyTest(unittest.TestCase):
+     def setUp(self):
+         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
+         self.root=Path(self.temp.name);self.db=self.root/'fixture.sqlite'
+-        for module in (config,queue,controls,sender,adapter,android_api):
++        for module in (config,queue,controls,sender,adapter,android_api,diagnostics):
+             patcher=patch.object(module,'DB',self.db);patcher.start();self.addCleanup(patcher.stop)
+         patcher=patch.object(adapter,'CV_DIR',self.root/'cv');patcher.start();self.addCleanup(patcher.stop)
+         # Fail any accidental real HTTP operation in every test, including dry-run.
+-- 
+2.52.0
+

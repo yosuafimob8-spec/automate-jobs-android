@@ -1,0 +1,129 @@
+{
+  "android": {
+    "tests": 91,
+    "failures": 0,
+    "classes": [
+      {
+        "name": "com.example.automatesmartbot.data.cv.RestorationFlowTest",
+        "tests": 5,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.ui.screens.RestorationUiTest",
+        "tests": 6,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.ExampleUnitTest",
+        "tests": 1,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.psychotest.PsychotestPolicyTest",
+        "tests": 2,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.repository.ProfileSavePolicyTest",
+        "tests": 4,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.ui.screens.FeatureUiTest",
+        "tests": 6,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.cv.CvFlowTest",
+        "tests": 11,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.util.UrlSafetyTest",
+        "tests": 3,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.career.CareerPdfStoreTest",
+        "tests": 4,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.career.PayrollAndLettersTest",
+        "tests": 5,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.security.SessionPolicyTest",
+        "tests": 7,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.network.AutoApplyApiContractTest",
+        "tests": 2,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.autoapply.AutoApplyReportsTest",
+        "tests": 2,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.util.CvValidatorTest",
+        "tests": 9,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.career.LearningStoreTest",
+        "tests": 3,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.model.JobFiltersTest",
+        "tests": 4,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.model.MembershipTest",
+        "tests": 1,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.ui.navigation.NavigationPolicyTest",
+        "tests": 7,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.autoapply.AutoApplyConfirmationTest",
+        "tests": 3,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.ui.theme.ThemeContrastTest",
+        "tests": 1,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.ui.viewmodel.PsychotestViewModelTest",
+        "tests": 5,
+        "failures": 0
+      }
+    ]
+  },
+  "backend": {
+    "tests": 46,
+    "failures": 0
+  },
+  "python_contract": {
+    "tests": 13,
+    "failures": 0
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 71
+  },
+  "apk_built": false,
+  "production_email_sent": false,
+  "device_visual": "NOT TESTED",
+  "capture_attempt": "FAIL: Robolectric WindowCapture redraw timeout; removed capture-only helper and reran all behavioral tests"
+}
