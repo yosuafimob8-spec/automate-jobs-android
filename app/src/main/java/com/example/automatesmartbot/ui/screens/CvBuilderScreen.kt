@@ -107,6 +107,10 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
     val navy = Color(0xFF102650)
     val orange = Color(0xFFFF622B)
     val aqua = Color(0xFF19B9C3)
+    androidx.activity.compose.BackHandler(enabled = activeSection != null || page != 0) {
+        if (activeSection != null) activeSection = null
+        else page = when (page) { 3 -> 2; 2 -> 0; 4 -> 0; else -> 0 }
+    }
     val pages = listOf("CV Saya" to 0, "Template" to 1, "CV Analyst" to 4)
     Column(Modifier.fillMaxSize().background(Color(0xFFF8FBFE)).imePadding()) {
         Column(Modifier.fillMaxWidth().background(Color.White).padding(16.dp)) {
@@ -296,10 +300,10 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                             title = { Text("Preview • " + previewId.replace('_', ' ').uppercase(), color = navy) },
                             text = {
                                 Column(Modifier.fillMaxWidth().height(440.dp).verticalScroll(rememberScrollState())) {
-                                    CvTemplateArtwork(previewId, navy, aqua, Modifier.fillMaxWidth().height(310.dp))
+                                    CvBuilderPreview(state.draft, previewId)
                                     Spacer(Modifier.height(12.dp))
                                     Text(if (locked) "Template PRO • preview gratis, penggunaan memerlukan langganan aktif." else "Template gratis • siap dipilih.", color = navy)
-                                    Text("Preview merupakan contoh visual. Ekspor PDF khusus template masih dalam pengembangan.", fontSize = 11.sp, color = Color(0xFF66758D))
+                                    Text("Pratinjau memakai data CV Anda. Desain ekspor PDF khusus template belum tersedia.", fontSize = 11.sp, color = Color(0xFF66758D))
                                 }
                             },
                             confirmButton = {
@@ -404,7 +408,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                 }
                 else -> {
                     Text("CV Analyst", color = navy, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-                    Text("Periksa kesiapan CV dan kecocokan dengan lowongan.", color = Color.Gray, fontSize = 12.sp)
+                    Text("Periksa kelengkapan dan keterbacaan CV.", color = Color.Gray, fontSize = 12.sp)
                     KarirMateAnalystV25(
                         state = state,
                         jobTitle = jobTitle,
@@ -413,7 +417,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                         onJobTitleChange = { jobTitle = it },
                         onCompanyChange = { company = it },
                         onJobDescriptionChange = { jobDescription = it },
-                        onRun = { viewModel.runAtsCheck(jobTitle, company, jobDescription) },
+                        onRun = { viewModel.runAtsCheck("", "", "") },
                         onEdit = { page = 2 }
                     )
                     CvBuilderCoverLetterPanel(state, jobTitle, company) { viewModel.generateCoverLetter(jobTitle, company) }
@@ -918,18 +922,15 @@ private fun KarirMateAnalystV25(
                     Text("Upload CV", color = navy, fontWeight = FontWeight.Bold, fontSize = 18.sp)
                     OutlinedButton(onClick = { picker.launch(arrayOf("application/pdf")) },
                         modifier = Modifier.fillMaxWidth().height(94.dp)) {
-                        Text("↑  Pilih PDF dari HP", color = blue, fontWeight = FontWeight.Bold)
+                        Text("↑  Pilih PDF (belum dapat dianalisis)", color = blue, fontWeight = FontWeight.Bold)
                     }
                     if (chosenFile != null) {
                         Text("Dipilih: $chosenFile", color = navy, fontSize = 12.sp)
                         Text("Analisis isi PDF eksternal belum tersedia. Untuk sekarang, skor hanya berasal dari data CV Saya.",
                             color = orange, fontSize = 12.sp)
                     }
-                    Text("Cocokkan dengan Lowongan (opsional)", color = navy, fontWeight = FontWeight.Bold)
-                    OutlinedTextField(jobTitle, onJobTitleChange, label = { Text("Posisi pekerjaan") }, modifier = Modifier.fillMaxWidth())
-                    OutlinedTextField(company, onCompanyChange, label = { Text("Perusahaan") }, modifier = Modifier.fillMaxWidth())
-                    OutlinedTextField(jobDescription, onJobDescriptionChange, label = { Text("Deskripsi lowongan") },
-                        modifier = Modifier.fillMaxWidth(), minLines = 3)
+                    Text("Analisis memeriksa data CV Saya. Pembacaan isi PDF yang diunggah belum tersedia.",
+                        color = muted, fontSize = 12.sp)
                     Button(onClick = { onRun(); screen = "result" }, enabled = !state.isAnalyzing,
                         modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(containerColor = blue)) {

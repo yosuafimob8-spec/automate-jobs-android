@@ -108,8 +108,8 @@ fun LatihanPsikotesScreen(onExit: () -> Unit = {}) {
                         Shortcut("🏆 Peringkat 👑", Modifier.weight(1f)) { if (isPro) { vm.loadExtras(); page = "leaderboard" } else proNotice = true }
                     }
                 }
-                item { Text("FREE: semua kategori dasar • 10–20 soal/sesi • riwayat latihan", style = MaterialTheme.typography.bodySmall, color = ink) }
-                item { Text("PRO: simulasi lengkap, statistik, dan peringkat (belum aktif)", style = MaterialTheme.typography.bodySmall, color = ink) }
+                item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("Latihan Gratis", color = ink, fontWeight = FontWeight.Bold); Text("Semua kategori dasar • 10–20 soal per sesi • Riwayat latihan", color = ink, style = MaterialTheme.typography.bodySmall) } } }
+                item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("👑 Fitur PRO", color = ink, fontWeight = FontWeight.Bold); Text("Simulasi lengkap, statistik dan peringkat • Segera hadir", color = ink, style = MaterialTheme.typography.bodySmall) } } }
             }
             "catalog" -> Column(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp)) {
                 TextButton(onClick = { page = "home" }, contentPadding = PaddingValues(0.dp)) { Text("← Kembali ke Psikotes", color = teal) }
@@ -311,11 +311,11 @@ private fun ExamPanel(session: JsonObject, questions: List<JsonObject>, onAnswer
             }
         }
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            OutlinedButton(onClick = { index-- }, enabled = index > 0, modifier = Modifier.weight(1f).heightIn(min = 50.dp)) { Text("← Sebelumnya") }
+            OutlinedButton(onClick = { index-- }, enabled = index > 0, modifier = Modifier.weight(1f).heightIn(min = 50.dp)) { Text("Sebelumnya", color = ink) }
             if (index < questions.lastIndex) {
-                Button(onClick = { index++ }, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Selanjutnya →") }
+                Button(onClick = { index++ }, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Selanjutnya", color = Color.White) }
             } else {
-                Button(onClick = { confirm = true }, enabled = allAnswered && !submitted, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Selesaikan Tes") }
+                Button(onClick = { confirm = true }, enabled = allAnswered && !submitted, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Selesaikan Tes", color = Color.White) }
             }
         }
         if (index == questions.lastIndex && !allAnswered) Text("Jawab semua soal untuk menyelesaikan tes. Gunakan Sebelumnya untuk memeriksa jawaban.", color = Color(0xFF58657A), style = MaterialTheme.typography.bodySmall)
