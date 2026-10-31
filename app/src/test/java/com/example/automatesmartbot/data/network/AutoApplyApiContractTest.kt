@@ -1,0 +1,33 @@
+package com.example.automatesmartbot.data.network
+
+import kotlinx.coroutines.test.runTest
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
+import okhttp3.mockwebserver.MockResponse
+import okhttp3.mockwebserver.MockWebServer
+import org.junit.After
+import org.junit.Assert.*
+import org.junit.Before
+import org.junit.Test
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
+
+class AutoApplyApiContractTest {
+    private lateinit var server: MockWebServer
+    private lateinit var api: ApiService
+    @Before fun setup(){server=MockWebServer();server.start();api=Retrofit.Builder().baseUrl(server.url("/")).addConverterFactory(GsonConverterFactory.create()).build().create(ApiService::class.java)}
+    @After fun cleanup(){server.shutdown()}
+    @Test fun consentAndDailyLimitReachExistingEnableEndpoint()=runTest {
+        server.enqueue(MockResponse().setBody("{\"success\":true}"))
+        assertTrue(api.enableAutoApply(AutoApplyEnableRequest(true)).isSuccessful)
+        val request=server.takeRequest();assertEquals("/auto-apply/enable",request.path)
+        val text=request.body.readUtf8();assertTrue(text.contains("\"consent\":true"));assertTrue(text.contains("\"max_emails_per_day\":5"))
+    }
+    @Test fun oauthStartAndRawPdfUploadMatchBackendRoutes()=runTest {
+        server.enqueue(MockResponse().setBody("{\"url\":\"https://accounts.google.com/o/oauth2/v2/auth\"}"))
+        assertTrue(api.startGmailOAuth().isSuccessful);assertEquals("/gmail/oauth/start",server.takeRequest().path)
+        server.enqueue(MockResponse().setBody("{\"success\":true}"))
+        assertTrue(api.uploadAutoApplyCv("%PDF-fixture".toByteArray().toRequestBody("application/pdf".toMediaType())).isSuccessful)
+        val request=server.takeRequest();assertEquals("PUT",request.method);assertEquals("/cv",request.path);assertEquals("application/pdf",request.getHeader("Content-Type"));assertEquals("%PDF-fixture",request.body.readUtf8())
+    }
+}

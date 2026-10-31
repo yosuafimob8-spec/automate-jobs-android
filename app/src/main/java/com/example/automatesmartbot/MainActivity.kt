@@ -15,6 +15,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ApiClient.init(this)
+        com.example.automatesmartbot.data.cv.CvRenderer.initialize(this)
         enableEdgeToEdge()
         setContent {
             val context = LocalContext.current.applicationContext

@@ -3,7 +3,7 @@ name: Build Karir Mate APK
 on:
   workflow_dispatch:
   push:
-    branches: [main, master]
+    branches: [main, master, 'fix/karirmate-comprehensive-repair']
 
 jobs:
   build:
@@ -14,10 +14,10 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-      - name: Test and build debug APK
+      - name: Run Android unit tests and build debug APK
         run: |
           chmod +x gradlew
-          ./gradlew :app:assembleTermux --stacktrace
+          ./gradlew :app:testDebugUnitTest :app:assembleTermux --stacktrace
       - uses: actions/upload-artifact@v4
         with:
           name: Karir-Mate-debug-APK

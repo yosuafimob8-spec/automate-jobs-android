@@ -1,199 +1,191 @@
 package com.example.automatesmartbot.ui.screens
 
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.RequestBody.Companion.toRequestBody
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import com.example.automatesmartbot.data.cv.readBytesLimited
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.runtime.rememberCoroutineScope
-import com.example.automatesmartbot.data.network.ApiClient
-import kotlinx.coroutines.launch
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
-import com.example.automatesmartbot.ui.theme.DarkBackground
-import com.example.automatesmartbot.ui.theme.DarkSurface
-import com.example.automatesmartbot.ui.theme.ProGold
-import com.example.automatesmartbot.ui.theme.TextGray
-import com.example.automatesmartbot.ui.theme.TextWhite
-
-private val accent = Color(0xFFFF6428)
+import com.example.automatesmartbot.data.autoapply.AutoApplyConfirmation
+import com.example.automatesmartbot.data.network.ApiClient
+import com.example.automatesmartbot.data.network.AutoApplyEnableRequest
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.launch
+import org.json.JSONObject
 
 @Composable
-fun KirimLamaranScreen(
-    isPro: Boolean,
-    isOnline: Boolean,
-    onNavigateProfil: () -> Unit
-) {
+fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -> Unit) {
+    val context = LocalContext.current
+    val prefs = remember { context.getSharedPreferences("auto_apply_consent", 0) }
     val scope = rememberCoroutineScope()
-    var message by remember { mutableStateOf("") }
-    var statusText by remember { mutableStateOf("Memuat status...") }
-    var autoApplyEnabled by remember { mutableStateOf(false) }
-    var isProcessing by remember { mutableStateOf(false) }
-    LaunchedEffect(Unit) {
-        statusText = try {
-            val r = ApiClient.apiService.getAutoApplyStatus()
-            if (r.isSuccessful) {
-                val j = org.json.JSONObject(r.body()?.string() ?: "{}")
-                val a = j.optJSONObject("auto_apply")
-                autoApplyEnabled = a?.optBoolean("enabled") == true
-                "Gmail: " + (if (j.optBoolean("gmail_connected")) "Terhubung" else "Belum terhubung") + " | Auto Apply: " + (if (a?.optBoolean("enabled") == true) "Aktif" else "Jeda") + " | Terkirim: " + (a?.optJSONObject("counts")?.optInt("sent", 0) ?: 0)
-            } else "Status tidak tersedia (${r.code()})"
-        } catch (e: Exception) { "Koneksi API gagal" }
-    }
-    var emailStyle by remember { mutableStateOf("AI Smart Match") }
+    var accountId by remember { mutableStateOf<String?>(null) }
+    var consentSaved by remember { mutableStateOf(false) }
     var agreed by remember { mutableStateOf(false) }
-    val styles = listOf("Standar Profesional", "Menonjolkan Keahlian", "Menonjolkan Pengalaman", "AI Smart Match")
-
-    LazyColumn(
-        modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background),
-        contentPadding = PaddingValues(16.dp),
-        verticalArrangement = Arrangement.spacedBy(14.dp)
-    ) {
-        item {
-            Text("Kirim Lamaran Otomatis", color = MaterialTheme.colorScheme.onSurface, fontSize = 22.sp, fontWeight = FontWeight.Bold)
-            Text("AI mencari pekerjaan, mencocokkan CV, dan menyiapkan email lamaran.", color = Color(0xFF64748B), fontSize = 13.sp)
+    var enabled by remember { mutableStateOf(false) }
+    var operatorSendAllowed by remember { mutableStateOf(false) }
+    var cvUploaded by remember { mutableStateOf(false) }
+    var gmailConnected by remember { mutableStateOf(false) }
+    var statusLoaded by remember { mutableStateOf(false) }
+    var busy by remember { mutableStateOf(false) }
+    var message by remember { mutableStateOf("") }
+    var candidates by remember { mutableStateOf<List<JSONObject>>(emptyList()) }
+    var deliveries by remember { mutableStateOf<List<JSONObject>>(emptyList()) }
+    suspend fun refresh() {
+        statusLoaded = false
+        val response = ApiClient.apiService.getAutoApplyStatus()
+        if (!response.isSuccessful) { if (response.code() in listOf(401,403,409)) gmailConnected = false; response.errorBody()?.close(); error("Status Auto Apply gagal (${response.code()}). Periksa sesi dan otorisasi Gmail.") }
+        val body = JSONObject(response.body()?.use { it.string() } ?: error("Status kosong."))
+        require(body.has("gmail_connected") && body.has("auto_apply")) { "Status Auto Apply dari server belum lengkap." }
+        enabled = body.optJSONObject("auto_apply")?.optBoolean("enabled") == true
+        gmailConnected = body.optBoolean("gmail_connected")
+        cvUploaded = body.optBoolean("cv_uploaded")
+        operatorSendAllowed = body.optBoolean("operator_send_allowed")
+        val a = body.optJSONObject("auto_apply")
+        consentSaved = AutoApplyConfirmation.consentState(a?.opt("consent_granted") as? Boolean, a?.optString("consent_at"), accountId?.let { prefs.getBoolean(it, false) } == true)
+        statusLoaded = true
+    }
+    suspend fun load() {
+        busy = true
+        try {
+            val me = ApiClient.apiService.getMe()
+            accountId = me.takeIf { it.isSuccessful }?.body()?.id
+            me.errorBody()?.close()
+            refresh()
+            if (isPro) {
+                val response = ApiClient.apiService.getKarirMateCandidates()
+                if (response.isSuccessful) {
+                    val array = JSONObject(response.body()?.use { it.string() } ?: "{}").optJSONArray("items")
+                    candidates = if (array == null) emptyList() else (0 until array.length()).map { array.getJSONObject(it) }
+                } else { response.errorBody()?.close(); message = "Kandidat gagal dimuat (${response.code()})." }
+            }
+            val report = ApiClient.apiService.getKarirMateReport()
+            if (report.isSuccessful) {
+                val array = JSONObject(report.body()?.use { it.string() } ?: "{}").optJSONArray("items")
+                deliveries = if (array == null) emptyList() else (0 until array.length()).map { array.getJSONObject(it) }
+            } else report.errorBody()?.close()
+        } catch (e: CancellationException) { throw e }
+        catch (e: Exception) { message = e.message ?: "Koneksi terputus. Coba muat ulang." }
+        finally { busy = false }
+    }
+    val pdfPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri != null) scope.launch {
+            busy = true
+            try {
+                val bytes = withContext(Dispatchers.IO) {
+                    context.contentResolver.openInputStream(uri)?.use { it.readBytesLimited(2_200_000) } ?: error("PDF tidak dapat dibaca.")
+                }
+                require(bytes.take(5).toByteArray().toString(Charsets.US_ASCII) == "%PDF-") { "Pilih file PDF valid." }
+                val response = ApiClient.apiService.uploadAutoApplyCv(bytes.toRequestBody("application/pdf".toMediaType()))
+                if (!response.isSuccessful) { response.errorBody()?.close(); error("Upload CV ditolak (${response.code()}).") }
+                response.body()?.close(); refresh(); message = "CV tersimpan di backend untuk akun ini."
+            } catch (e: CancellationException) { throw e }
+            catch (e: Exception) { message = e.message ?: "Upload CV gagal." }
+            finally { busy = false }
         }
-
+    }
+    val owner = LocalLifecycleOwner.current
+    DisposableEffect(owner) {
+        val observer = LifecycleEventObserver { _, event -> if (event == Lifecycle.Event.ON_RESUME) scope.launch { load() } }
+        owner.lifecycle.addObserver(observer)
+        onDispose { owner.lifecycle.removeObserver(observer) }
+    }
+    LaunchedEffect(isPro) { load() }
+    LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
         item {
-            var refresh by remember { mutableIntStateOf(0) }
-            var result by remember { mutableStateOf("Memuat kandidat...") }
-
-            LaunchedEffect(refresh, isPro) {
-                if (!isPro) {
-                    result = "Khusus pengguna PRO"
-                } else {
-                    result = try {
-                        val r = ApiClient.apiService.getKarirMateCandidates()
-                        if (r.isSuccessful) {
-                            val j = org.json.JSONObject(r.body()?.string() ?: "{}")
-                            val arr = j.optJSONArray("items")
-                            if (arr == null || arr.length() == 0) {
-                                "Belum ada kandidat HR"
-                            } else {
-                                buildString {
-                                    append("Total kandidat: ${arr.length()}\n\n")
-                                    for (i in 0 until arr.length()) {
-                                        val x = arr.getJSONObject(i)
-                                        append(x.optString("company"))
-                                        append("\n")
-                                        append(x.optString("position"))
-                                        append("\n")
-                                        append(x.optString("email"))
-                                        append("\n\n")
-                                    }
-                                }
-                            }
-                        } else "Gagal mengambil kandidat: HTTP ${r.code()}"
-                    } catch (e: Exception) {
-                        "Koneksi gagal: ${e.message}"
-                    }
-                }
-            }
-
-            Card(
-                colors = CardDefaults.cardColors(
-                    containerColor = MaterialTheme.colorScheme.surface
-                )
-            ) {
-                Column(
-                    Modifier.padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    Text("Kandidat Email HR",
-                        fontWeight = FontWeight.Bold)
-                    Text(result)
-                    Button(
-                        onClick = { refresh++ },
-                        enabled = isPro && isOnline
-                    ) {
-                        Text("Refresh Kandidat")
-                    }
-                }
-            }
-        }
-
-        item {
-            Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
-                Column(Modifier.padding(16.dp)) {
-                    Text("1. Pencarian Otomatis Seluruh Indonesia", fontWeight = FontWeight.Bold)
-                    Text("Sistem memilih sendiri mode Sesuai CV atau Random. Tidak perlu mengatur posisi, kota, atau persentase kecocokan.")
-                }
-            }
+            Text("Kirim Lamaran Otomatis", style = MaterialTheme.typography.headlineSmall)
+            Text("Lowongan aktif yang sesuai CV dan lokasi didahulukan. Lamaran spontan harus menggunakan kontak perusahaan yang tersedia; tidak dianggap lowongan terverifikasi.")
         }
         item {
-            Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), shape = RoundedCornerShape(20.dp)) {
+            if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
+            if (message.isNotBlank()) Text(message, color = MaterialTheme.colorScheme.onSurface)
+            TextButton(onClick = { scope.launch { load() } }, enabled = !busy && isOnline) { Text("Muat Ulang Status") }
+            Text(if (!statusLoaded) "Status belum tersedia" else "Gmail: ${if (gmailConnected) "Terhubung" else "Belum terhubung"} • Izin Auto Apply: ${if (enabled) "Aktif" else "Jeda"}")
+            Text(if (operatorSendAllowed) "Izin operasional tersedia; jadwal pengiriman belum diverifikasi dari aplikasi." else "Pengiriman produksi belum diizinkan operator; izin akun dapat disimpan tanpa memulai pengiriman.")
+            TextButton(onClick = onNavigateProfil) { Text("Periksa Profil & CV") }
+            Text(if (cvUploaded) "CV backend: tersimpan" else "CV backend: belum diunggah")
+            OutlinedButton(onClick = { pdfPicker.launch(arrayOf("application/pdf")) }, enabled = isOnline && !busy) { Text("Unggah / Ganti CV PDF") }
+            if (!gmailConnected) Button(onClick = { scope.launch {
+                busy = true
+                try {
+                    val response = ApiClient.apiService.startGmailOAuth()
+                    if (!response.isSuccessful) { response.errorBody()?.close(); error("OAuth belum dapat dimulai (${response.code()}).") }
+                    val url = JSONObject(response.body()?.use { it.string() } ?: "{}").getString("url")
+                    val uri = android.net.Uri.parse(url)
+                    require(uri.scheme == "https" && uri.host == "accounts.google.com" && uri.userInfo == null && uri.port in listOf(-1, 443)) { "URL otorisasi Google tidak valid." }
+                    context.startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, uri))
+                } catch (e: CancellationException) { throw e }
+                catch (e: Exception) { message = e.message ?: "OAuth gagal dimulai." }
+                finally { busy = false }
+            } }, enabled = isOnline && !busy) { Text("Hubungkan Gmail") }
+        }
+        item {
+            Card {
                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("2. CV & Profil", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
-                    Text("CV dan informasi kontak akan digunakan untuk mencocokkan posisi dan menyusun lamaran. Integrasi pembacaan CV belum terhubung di layar ini.", color = Color(0xFF64748B), fontSize = 12.sp)
-                    TextButton(onClick = onNavigateProfil) { Text("Buka Profil / CV", color = ProGold) }
+                    Text("Persetujuan Auto Apply", style = MaterialTheme.typography.titleMedium)
+                    Text("Saya mengizinkan penggunaan CV dan profil untuk mengirim lamaran melalui Gmail, dengan batas yang diminta maksimal 5 email per hari. Persetujuan berlaku sampai Auto Apply dijeda. Pengiriman yang hasilnya belum pasti harus diperiksa sebelum dicoba ulang.")
+                    if (!consentSaved) Row {
+                        Checkbox(agreed, { agreed = it })
+                        Text("Saya menyetujui pengiriman otomatis", Modifier.padding(top = 12.dp))
+                    } else Text("Persetujuan akun telah tersimpan.")
+                    if (!gmailConnected) Text("Akun Gmail perlu terhubung sebelum pengiriman dapat diaktifkan.")
+                    if (!isPro) Text("Auto Apply memerlukan langganan PRO aktif.")
+                    Button(onClick = { scope.launch {
+                        busy = true
+                        try {
+                            val response = ApiClient.apiService.enableAutoApply(AutoApplyEnableRequest(consent = agreed || consentSaved))
+                            if (!response.isSuccessful) { response.errorBody()?.close(); error("Aktivasi ditolak (${response.code()}). Periksa izin Gmail dan langganan.") }
+                            response.body()?.close()
+                            refresh()
+                            if (enabled) {
+                                accountId?.let { prefs.edit().putBoolean(it, true).apply() }
+                                consentSaved = true
+                                message = "Izin Auto Apply tersimpan. Pengiriman mengikuti konfigurasi dan jadwal yang disetujui operator."
+                            } else message = "Server belum mengaktifkan Auto Apply."
+                        } catch (e: CancellationException) { throw e }
+                        catch (e: Exception) { message = e.message ?: "Aktivasi gagal. Muat ulang status sebelum mencoba lagi." }
+                        finally { busy = false }
+                    } }, enabled = statusLoaded && gmailConnected && cvUploaded && isPro && isOnline && !busy && !enabled && (agreed || consentSaved), modifier = Modifier.fillMaxWidth()) { Text(if (enabled) "Izin Auto Apply Tersimpan" else "Simpan Izin Auto Apply") }
+                    OutlinedButton(onClick = { scope.launch {
+                        busy = true
+                        try {
+                            val response = ApiClient.apiService.pauseAutoApply()
+                            if (!response.isSuccessful) { response.errorBody()?.close(); error("Gagal menjeda (${response.code()}).") }
+                            response.body()?.close(); refresh()
+                            message = if (enabled) "Server belum menjeda pengiriman." else "Auto Apply dijeda."
+                        } catch (e: CancellationException) { throw e }
+                        catch (e: Exception) { message = e.message ?: "Jeda gagal. Periksa status server." }
+                        finally { busy = false }
+                    } }, enabled = statusLoaded && enabled && !busy && isOnline, modifier = Modifier.fillMaxWidth()) { Text("Jeda Auto Apply") }
                 }
             }
         }
         item {
-            Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), shape = RoundedCornerShape(20.dp)) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                    Text("3. Gaya Email", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
-                    styles.forEach { style ->
-                        Row(Modifier.fillMaxWidth(), verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                            RadioButton(selected = emailStyle == style, onClick = { emailStyle = style }, colors = RadioButtonDefaults.colors(selectedColor = accent))
-                            Text(style, color = MaterialTheme.colorScheme.onSurface, fontSize = 13.sp)
-                        }
-                    }
-                }
+            Text("Kandidat dari server", style = MaterialTheme.typography.titleMedium)
+            if (candidates.isEmpty()) Text("Belum ada kandidat yang tersedia.")
+            candidates.forEach { c ->
+                Text("${c.optString("company")} • ${c.optString("position")}\n${c.optString("email")}")
+                Text(if (c.optBoolean("vacancy_verified") && c.optBoolean("active")) "Lowongan aktif menurut server" else "Kontak / peluang spontan; lowongan belum terverifikasi", color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         }
         item {
-            Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), shape = RoundedCornerShape(20.dp), border = BorderStroke(1.dp, Color(0xFFD8E9F5))) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    Text("4. Aktivasi Pengiriman", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
-                    Text(if (isPro) "Akun PRO" else "Fitur otomatis khusus PRO", color = ProGold, fontWeight = FontWeight.SemiBold)
-                    Text("Pengiriman memerlukan PRO aktif dan persetujuan. Status terkirim hanya setelah Gmail mengonfirmasi; hasil yang belum pasti tidak dikirim ulang otomatis.", color = Color(0xFF64748B), fontSize = 12.sp)
-                    Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
-                        Checkbox(checked = agreed, onCheckedChange = { agreed = it }, colors = CheckboxDefaults.colors(checkedColor = accent))
-                        Text("Saya menyetujui aturan pengiriman di atas", color = MaterialTheme.colorScheme.onSurface, fontSize = 12.sp)
-                    }
-                    if (!isOnline) Text("Offline: sambungkan internet untuk menjalankan pencarian.", color = Color(0xFFF87171), fontSize = 12.sp)
-                    Button(
-                        onClick = { scope.launch {
-                            isProcessing = true
-                            message = try {
-                                val r = ApiClient.apiService.enableAutoApply()
-                                if (r.isSuccessful) {
-                                    val status = ApiClient.apiService.getAutoApplyStatus()
-                                    if (status.isSuccessful) {
-                                        val j = org.json.JSONObject(status.body()?.string() ?: "{}")
-                                        val a = j.optJSONObject("auto_apply")
-                                        autoApplyEnabled = a?.optBoolean("enabled") == true
-                                        statusText = "Gmail: " + (if (j.optBoolean("gmail_connected")) "Terhubung" else "Belum terhubung") + " | Auto Apply: " + (if (autoApplyEnabled) "Aktif" else "Jeda") + " | Terkirim: " + (a?.optJSONObject("counts")?.optInt("sent", 0) ?: 0)
-                                        if (autoApplyEnabled) "Auto Apply berhasil diaktifkan" else "Auto Apply belum aktif"
-                                    } else "Gagal memuat status: ${status.code()}"
-                                } else "Aktivasi ditolak: ${r.code()}"
-                            } catch (e: Exception) {
-                                "Koneksi API gagal: ${e.message ?: "periksa jaringan"}"
-                            } finally {
-                                isProcessing = false
-                            }
-                        } },
-                        enabled = isPro && isOnline && agreed && !autoApplyEnabled && !isProcessing,
-                        colors = ButtonDefaults.buttonColors(disabledContainerColor = Color(0xFFD8E9F5), disabledContentColor = Color(0xFF64748B)),
-                        modifier = Modifier.fillMaxWidth().height(48.dp),
-                        shape = RoundedCornerShape(18.dp)
-                    ) { Text(if (autoApplyEnabled) "Auto Apply Sudah Aktif" else if (isProcessing) "Memproses..." else "Aktifkan Auto Apply") }
-                    Text(statusText, color = MaterialTheme.colorScheme.onSurface)
-                    TextButton(onClick = { scope.launch { message = try { val r = ApiClient.apiService.pauseAutoApply(); if (r.isSuccessful) { autoApplyEnabled = false; statusText = "Auto Apply: Jeda"; "Auto Apply dijeda" } else "Gagal menjeda: ${r.code()}" } catch (e: Exception) { "Koneksi API gagal" } } }) { Text("Jeda Auto Apply") }
-                    if (message.isNotEmpty()) Text(message, color = MaterialTheme.colorScheme.onSurface)
-                    if (!isPro) TextButton(onClick = onNavigateProfil) { Text("Lihat status PRO di Profil", color = ProGold) }
-                }
+            Text("Riwayat dari server", style = MaterialTheme.typography.titleMedium)
+            if (deliveries.isEmpty()) Text("Belum ada riwayat yang tersedia dari server.")
+            deliveries.forEach { d ->
+                val gmailId = d.optString("gmail_message_id").takeIf(AutoApplyConfirmation::hasReference) ?: d.optString("gmail_id")
+                val confirmed = AutoApplyConfirmation.sent(d.optString("status"), gmailId)
+                Text("${d.optString("company")} • ${if (confirmed) "Terkirim (Gmail)" else if (d.optString("status") == "sent") "Menunggu konfirmasi Gmail" else d.optString("status", "Belum dikonfirmasi")}")
             }
-        }
-        item {
-            Text("Pencarian dan penentuan mode dilakukan backend. Jadwal pengiriman hanya aktif setelah verifikasi PRO dan izin pengguna.", color = Color(0xFF64748B), fontSize = 11.sp)
         }
     }
 }

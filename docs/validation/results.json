@@ -1,0 +1,93 @@
+{
+  "base_commit": "b0c7209a51d56a523d82047d73cb0b78c9710355",
+  "branch": "fix/karirmate-comprehensive-repair",
+  "android_local": {
+    "tests": 58,
+    "failures": 0,
+    "skipped": 0,
+    "suites": [
+      {
+        "name": "com.example.automatesmartbot.ExampleUnitTest",
+        "tests": 1,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.autoapply.AutoApplyConfirmationTest",
+        "tests": 2,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.cv.CvFlowTest",
+        "tests": 10,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.model.JobFiltersTest",
+        "tests": 4,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.model.MembershipTest",
+        "tests": 1,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.psychotest.PsychotestPolicyTest",
+        "tests": 2,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.repository.ProfileSavePolicyTest",
+        "tests": 4,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.data.security.SessionPolicyTest",
+        "tests": 7,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.ui.navigation.NavigationPolicyTest",
+        "tests": 7,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.ui.screens.FeatureUiTest",
+        "tests": 3,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.ui.theme.ThemeContrastTest",
+        "tests": 1,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.ui.viewmodel.PsychotestViewModelTest",
+        "tests": 4,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.util.CvValidatorTest",
+        "tests": 9,
+        "failures": 0
+      },
+      {
+        "name": "com.example.automatesmartbot.util.UrlSafetyTest",
+        "tests": 3,
+        "failures": 0
+      }
+    ]
+  },
+  "python_local": {
+    "tests": 13,
+    "status": "PASS"
+  },
+  "lint": {
+    "Warning": 59
+  },
+  "native_pdf_device_tests": "NOT TESTED",
+  "live_gmail_oauth_and_delivery": "NOT TESTED",
+  "live_auth_profile_and_psychotest_backend": "NOT TESTED",
+  "github_actions_executed": false,
+  "real_emails_sent": 0
+}

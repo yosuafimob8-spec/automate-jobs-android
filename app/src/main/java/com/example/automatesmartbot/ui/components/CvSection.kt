@@ -87,7 +87,7 @@ fun CvSection(modifier: Modifier = Modifier) {
 
     Card(
         modifier = modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(containerColor = DarkSurface),
+        colors = CardDefaults.cardColors(containerColor = androidx.compose.material3.MaterialTheme.colorScheme.surface),
         shape = RoundedCornerShape(16.dp),
         border = BorderStroke(1.dp, CardBorder)
     ) {
@@ -107,17 +107,17 @@ fun CvSection(modifier: Modifier = Modifier) {
                     Icon(
                         imageVector = Icons.Default.Description,
                         contentDescription = null,
-                        tint = LightBlueAccent
+                        tint = androidx.compose.material3.MaterialTheme.colorScheme.primary
                     )
                     Text(
                         text = "CV",
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
-                        color = TextWhite
+                        color = androidx.compose.material3.MaterialTheme.colorScheme.onSurface
                     )
                 }
                 Surface(
-                    color = DarkSurfaceVariant,
+                    color = androidx.compose.material3.MaterialTheme.colorScheme.surfaceVariant,
                     shape = RoundedCornerShape(6.dp)
                 ) {
                     Text(
@@ -125,7 +125,7 @@ fun CvSection(modifier: Modifier = Modifier) {
                         modifier = Modifier.padding(horizontal = 7.dp, vertical = 4.dp),
                         fontSize = 9.sp,
                         fontWeight = FontWeight.Bold,
-                        color = LightBlueAccent
+                        color = androidx.compose.material3.MaterialTheme.colorScheme.primary
                     )
                 }
             }
@@ -134,7 +134,7 @@ fun CvSection(modifier: Modifier = Modifier) {
                 Text(
                     text = "Belum ada CV. Pilih file PDF maksimal 2 MB.",
                     fontSize = 12.sp,
-                    color = TextGray
+                    color = androidx.compose.material3.MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Button(
                     onClick = { picker.launch(arrayOf("application/pdf")) },
@@ -152,7 +152,7 @@ fun CvSection(modifier: Modifier = Modifier) {
                 }
             } else {
                 Surface(
-                    color = DarkBackground,
+                    color = androidx.compose.material3.MaterialTheme.colorScheme.background,
                     shape = RoundedCornerShape(10.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -164,14 +164,14 @@ fun CvSection(modifier: Modifier = Modifier) {
                             text = selection?.displayName.orEmpty(),
                             fontSize = 13.sp,
                             fontWeight = FontWeight.SemiBold,
-                            color = TextWhite,
+                            color = androidx.compose.material3.MaterialTheme.colorScheme.onSurface,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
                         Text(
                             text = "${CvValidator.formatSize(selection?.sizeBytes ?: 0L)} - tersimpan di perangkat",
                             fontSize = 11.sp,
-                            color = TextGray
+                            color = androidx.compose.material3.MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                 }
@@ -179,7 +179,7 @@ fun CvSection(modifier: Modifier = Modifier) {
                 Text(
                     text = "CV ini tidak dikirim otomatis. Anda tetap dapat mengganti atau menghapusnya kapan saja.",
                     fontSize = 11.sp,
-                    color = TextGray,
+                    color = androidx.compose.material3.MaterialTheme.colorScheme.onSurfaceVariant,
                     lineHeight = 16.sp
                 )
 
@@ -219,7 +219,7 @@ fun CvSection(modifier: Modifier = Modifier) {
                 Text(
                     text = message,
                     fontSize = 12.sp,
-                    color = Color(0xFFF87171),
+                    color = androidx.compose.material3.MaterialTheme.colorScheme.error,
                     fontWeight = FontWeight.Medium
                 )
             }

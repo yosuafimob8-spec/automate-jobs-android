@@ -130,7 +130,7 @@ fun CariLowonganScreen(
                             horizontalAlignment = Alignment.CenterHorizontally,
                             verticalArrangement = Arrangement.spacedBy(8.dp)
                         ) {
-                            Text(text = "Gagal memuat lowongan", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(0xFFEF4444))
+                            Text(text = "Gagal memuat lowongan", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.error)
                             Text(text = errorMessage ?: "Terjadi kesalahan", fontSize = 12.sp, color = Color(0xFF64748B))
                             Button(onClick = { triggerSearch() }, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3B82F6))) {
                                 Text("Coba Lagi")
@@ -245,7 +245,7 @@ fun CariLowonganScreen(
                                                 Text(
                                                     text = "Tautan tidak valid",
                                                     fontSize = 11.sp,
-                                                    color = Color(0xFFEF4444)
+                                                    color = MaterialTheme.colorScheme.error
                                                 )
                                             }
                                         }
@@ -323,7 +323,7 @@ private fun JobCard(job: com.example.automatesmartbot.data.model.JobsV2Job, cont
             Text(job.title ?: "Tanpa Judul", color = Color(0xFF17324D), fontWeight = FontWeight.Bold, fontSize = 15.sp)
             Text("${job.company ?: "Perusahaan"} | ${job.location ?: "Lokasi tidak diketahui"}", color = Color(0xFF64748B), fontSize = 12.sp)
             if (job.resultType == "spontaneous") {
-                Text(job.opportunityLabel ?: "Peluang Lamaran Spontan", color = Color(0xFFFBBF24), fontSize = 11.sp)
+                Text(job.opportunityLabel ?: "Peluang Lamaran Spontan", color = Color(0xFF805000), fontSize = 11.sp)
             }
             val action = job.applicationActions.firstOrNull { UrlSafety.safeHttpUrl(it.url) != null }
             if (action != null) {

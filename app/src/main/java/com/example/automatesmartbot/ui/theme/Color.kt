@@ -19,3 +19,5 @@ val TextGray = Color(0xFF94A3B8)
 val ProGold = Color(0xFFF59E0B)
 val FreeCyan = Color(0xFF06B6D4)
 val CardBorder = Color(0xFFB8D5F2)
+
+val ActionOrange = Color(0xFFC54814)

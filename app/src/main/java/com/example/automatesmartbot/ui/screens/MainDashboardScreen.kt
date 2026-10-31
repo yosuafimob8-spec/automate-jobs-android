@@ -39,8 +39,10 @@ import com.example.automatesmartbot.ui.navigation.bottomNavItems
 import com.example.automatesmartbot.ui.screens.auth.ForgotPasswordScreen
 import com.example.automatesmartbot.ui.screens.auth.LoginScreen
 import com.example.automatesmartbot.ui.screens.auth.RegisterScreen
+import com.example.automatesmartbot.ui.viewmodel.CvBuilderViewModel
 import com.example.automatesmartbot.ui.viewmodel.DashboardViewModel
 import com.example.automatesmartbot.ui.theme.ThemePreference
+import com.example.automatesmartbot.ui.theme.FixedCanvasTheme
 
 @Composable
 fun MainDashboardScreen(themePreference: ThemePreference) {
@@ -81,6 +83,8 @@ private fun MainDashboardContent(
     var checkedToken by remember { mutableStateOf<String?>(null) }
     val dashboardViewModel: DashboardViewModel = viewModel()
     val dashboardStatus by dashboardViewModel.status.collectAsState()
+    val cvViewModel: CvBuilderViewModel = viewModel(key = "cv_builder_${sessionToken?.hashCode() ?: 0}")
+    val cvHistory by cvViewModel.history.collectAsState()
 
     val navigateToDashboard: () -> Unit = {
         if (!navController.popBackStack(Screen.Dashboard.route, inclusive = false)) {
@@ -170,7 +174,11 @@ private fun MainDashboardContent(
         Screen.Dashboard.route -> "Beranda"
         Screen.CariLowongan.route -> "Cari Lowongan"
         Screen.KirimLamaran.route -> "Kirim Lamaran"
-        Screen.CvBuilder.route -> "CV Builder"
+        Screen.JobTraining.route -> "Pelatihan Kerja"
+        Screen.SalaryCalculator.route -> "Kalkulator Gaji"
+        Screen.CareerLetters.route -> "Surat Lamaran & Resign"
+        Screen.CareerDocuments.route -> "Dokumen Karier"
+        Screen.CvBuilder.route -> cvHistory.last()
         Screen.LatihanPsikotes.route -> "Latihan Psikotes"
         Screen.AiInterview.route -> "AI Interview"
         Screen.AiAgent.route -> "AI Agent"
@@ -186,10 +194,11 @@ private fun MainDashboardContent(
 
     val bottomNavRoutes = bottomNavItems.map { it.route }
     val appShellRoutes = appShellItems.map { it.route }
-    val showBottomBar = currentRoute in bottomNavRoutes
+    val showBottomBar = currentRoute in appShellRoutes
     val showTopBar = currentRoute in appShellRoutes
     val showBack = currentRoute in appShellRoutes && currentRoute != Screen.Dashboard.route
-    val onBack: (() -> Unit)? = if (showBack) navigateUpOrDashboard else null
+    val cvBack: () -> Unit = { if (!cvViewModel.goBack()) navigateUpOrDashboard() }
+    val onBack: (() -> Unit)? = if (!showBack) null else if (currentRoute == Screen.CvBuilder.route) cvBack else navigateUpOrDashboard
 
     BackHandler(enabled = currentRoute == Screen.OnboardingProfile.route) {
         navigateUpOrDashboard()
@@ -223,7 +232,10 @@ private fun MainDashboardContent(
                             label = { Text(screen.title, fontSize = 10.sp) },
                             selected = selected,
                             onClick = {
-                                if (!selected) {
+                                if (screen.route == Screen.Dashboard.route) {
+                                    cvViewModel.resetNavigation()
+                                    navigateToDashboard()
+                                } else if (!selected) {
                                     navController.navigate(screen.route) {
                                         popUpTo(Screen.Dashboard.route) { inclusive = false }
                                         launchSingleTop = true
@@ -251,17 +263,23 @@ private fun MainDashboardContent(
                 .padding(innerPadding)
         ) {
             composable(Screen.Dashboard.route) {
-                DashboardScreen(
-                    onNavigate = { route ->
-                        navController.navigate(route) {
-                            launchSingleTop = true
-                        }
-                    },
-                    viewModel = dashboardViewModel
-                )
+                FixedCanvasTheme(dark = false) {
+                    DashboardScreen(
+                        onNavigate = { route ->
+                            navController.navigate(route) {
+                                launchSingleTop = true
+                            }
+                        },
+                        viewModel = dashboardViewModel
+                    )
+
+                }
             }
             composable(Screen.CariLowongan.route) {
-                CariLowonganScreen(isPro = isPro)
+                FixedCanvasTheme(dark = false) {
+                    CariLowonganScreen(isPro = isPro)
+
+                }
             }
             composable(Screen.KirimLamaran.route) {
                 KirimLamaranScreen(
@@ -274,23 +292,47 @@ private fun MainDashboardContent(
                     }
                 )
             }
+            composable(Screen.JobTraining.route) { JobTrainingScreen() }
+            composable(Screen.SalaryCalculator.route) { SalaryCalculatorScreen() }
+            composable(Screen.CareerLetters.route) {
+                CareerLettersScreen(onApplicationLetter = {
+                    cvViewModel.resetNavigation()
+                    cvViewModel.navigate("Pilih Jenis Surat")
+                    navController.navigate(Screen.CvBuilder.route) { launchSingleTop = true }
+                })
+            }
+            composable(Screen.CareerDocuments.route) {
+                CareerDocumentsScreen(onLegacyDocuments = { navController.navigate(Screen.SuratIzinDokumen.route) { launchSingleTop = true } })
+            }
             composable(Screen.CvBuilder.route) {
-                CvBuilderScreen()
+                CvBuilderScreen(viewModel = cvViewModel, onBack = cvBack)
             }
             composable(Screen.LatihanPsikotes.route) {
-                LatihanPsikotesScreen(onExit = navigateUpOrDashboard)
+                LatihanPsikotesScreen(isPro = isPro, onExit = navigateUpOrDashboard)
             }
             composable(Screen.AiInterview.route) {
-                AiInterviewScreen()
+                FixedCanvasTheme(dark = false) {
+                    AiInterviewScreen()
+
+                }
             }
             composable(Screen.AiAgent.route) {
-                AiAgentScreen()
+                FixedCanvasTheme(dark = false) {
+                    AiAgentScreen()
+
+                }
             }
             composable(Screen.SuratIzinDokumen.route) {
-                SuratIzinDokumenScreen()
+                FixedCanvasTheme(dark = false) {
+                    SuratIzinDokumenScreen()
+
+                }
             }
             composable(Screen.Riwayat.route) {
-                RiwayatScreen()
+                FixedCanvasTheme(dark = false) {
+                    RiwayatScreen()
+
+                }
             }
             composable(Screen.Profil.route) {
                 ProfilScreen(
@@ -305,52 +347,64 @@ private fun MainDashboardContent(
                 )
             }
             composable(Screen.Login.route) {
-                LoginScreen(
-                    onNavigateRegister = {
-                        navController.navigate(Screen.Register.route) {
-                            launchSingleTop = true
+                FixedCanvasTheme(dark = true) {
+                    LoginScreen(
+                        onNavigateRegister = {
+                            navController.navigate(Screen.Register.route) {
+                                launchSingleTop = true
+                            }
+                        },
+                        onNavigateForgot = {
+                            navController.navigate(Screen.ForgotPassword.route) {
+                                launchSingleTop = true
+                            }
+                        },
+                        onLoginSuccess = { profileCompleted ->
+                            val newToken = sessionManager?.getValidToken()
+                            sessionToken = newToken
+                            checkedToken = newToken
+                            val target = NavigationPolicy.postLoginRoute(profileCompleted)
+                            navController.navigate(target) {
+                                popUpTo(Screen.Login.route) { inclusive = true }
+                                launchSingleTop = true
+                            }
                         }
-                    },
-                    onNavigateForgot = {
-                        navController.navigate(Screen.ForgotPassword.route) {
-                            launchSingleTop = true
-                        }
-                    },
-                    onLoginSuccess = { profileCompleted ->
-                        val newToken = sessionManager?.getValidToken()
-                        sessionToken = newToken
-                        checkedToken = newToken
-                        val target = NavigationPolicy.postLoginRoute(profileCompleted)
-                        navController.navigate(target) {
-                            popUpTo(Screen.Login.route) { inclusive = true }
-                            launchSingleTop = true
-                        }
-                    }
-                )
+                    )
+
+                }
             }
             composable(Screen.Register.route) {
-                RegisterScreen(
-                    onNavigateLogin = navigateToLogin,
-                    onRegisterSuccess = {
-                        navigateToLogin()
-                    }
-                )
+                FixedCanvasTheme(dark = true) {
+                    RegisterScreen(
+                        onNavigateLogin = navigateToLogin,
+                        onRegisterSuccess = {
+                            navigateToLogin()
+                        }
+                    )
+
+                }
             }
             composable(Screen.ForgotPassword.route) {
-                ForgotPasswordScreen(
-                    onNavigateLogin = navigateToLogin
-                )
+                FixedCanvasTheme(dark = true) {
+                    ForgotPasswordScreen(
+                        onNavigateLogin = navigateToLogin
+                    )
+
+                }
             }
             composable(Screen.OnboardingProfile.route) {
-                OnboardingProfileScreen(
-                    isOnline = isOnline,
-                    onBack = navigateUpOrDashboard,
-                    onProfileSaved = {
-                        checkedToken = sessionToken
-                        dashboardViewModel.loadStatus()
-                        navigateToDashboard()
-                    }
-                )
+                FixedCanvasTheme(dark = true) {
+                    OnboardingProfileScreen(
+                        isOnline = isOnline,
+                        onBack = navigateUpOrDashboard,
+                        onProfileSaved = {
+                            checkedToken = sessionToken
+                            dashboardViewModel.loadStatus()
+                            navigateToDashboard()
+                        }
+                    )
+
+                }
             }
         }
     }

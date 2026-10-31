@@ -14,6 +14,8 @@ import secrets
 import sqlite3
 import time
 
+from psychotest_policy import basic_mode, training_categories
+
 from psychotest_bank import (CATEGORY_LABELS, FAMILY_LABELS, FEATURES, PERSONALITY_DIMENSIONS,
                              TESTS, TEST_ORDER, build_questions)
 from psychotest_skb import SKB_FORMATIONS, SKB_SOURCE, SKB_VALIDATION
@@ -264,6 +266,9 @@ class PsychotestService:
             mode = {'test_id': test_id, 'title': cfg['title'], 'family': cfg['family'],
                     'family_label': FAMILY_LABELS[cfg['family']], 'kind': cfg['kind'],
                     'duration_seconds': cfg['duration'], 'question_count': sum(cfg['categories'].values()),
+                    'training_question_count': sum(training_categories(cfg).values()),
+                    'training_available': all(counts.get((cfg['family'], cat), 0) >= n for cat, n in training_categories(cfg).items()),
+                    'access_tier': 'free' if basic_mode(cfg) else 'pro',
                     'categories': mode_categories, 'available': not missing, 'missing': missing,
                     'score_scale': cfg['score_scale'], 'leaderboard': cfg['leaderboard'],
                     'official_reference': cfg.get('official_reference')}
@@ -322,21 +327,27 @@ class PsychotestService:
         summary['category'] = row['title']
         return summary
 
-    def start_session(self, test_id, subject, account_id=None):
-        return self._create_session(test_id, subject, account_id)
+    def start_session(self, test_id, subject, account_id=None, question_count=None):
+        return self._create_session(test_id, subject, account_id, question_count=question_count)
 
     def _create_session(self, test_id, subject, account_id=None, *, question_ids=None,
-                        source_entries=None, duration=None, title=None, retry_of=None):
+                        source_entries=None, duration=None, title=None, retry_of=None, question_count=None):
         if test_id not in TESTS:
             raise PsychotestError(404, 'TEST_NOT_FOUND', 'Tes tidak ditemukan')
         cfg = TESTS[test_id]
         if question_ids is None:
-            missing = self._availability(test_id)
+            try:
+                allocation = dict(cfg['categories']) if question_count is None else training_categories(cfg, question_count)
+            except ValueError as exc:
+                raise PsychotestError(400, 'INVALID_QUESTION_COUNT', str(exc)) from None
+            counts = self.store.counts()
+            missing = {category: {'needed': n, 'available': counts.get((cfg['family'], category), 0)}
+                       for category, n in allocation.items() if counts.get((cfg['family'], category), 0) < n}
             if missing:
                 raise PsychotestError(409, 'TEST_UNAVAILABLE', 'Bank soal belum mencukupi untuk mode ini',
                                       {'test_id': test_id, 'missing': missing})
             selected = []
-            for category, needed in cfg['categories'].items():
+            for category, needed in allocation.items():
                 pool = self.store.active_questions(cfg['family'], category)
                 if len(pool) < needed:
                     raise PsychotestError(409, 'TEST_UNAVAILABLE', 'Bank soal berubah dan tidak lagi mencukupi')
@@ -565,7 +576,7 @@ class PsychotestService:
             percent = round(earned_total / max_total * 100, 2) if max_total else 0
             label = 'Selesai'
         threshold = None
-        if cfg.get('official_reference') and cfg['kind'] == 'mixed_cat':
+        if cfg.get('official_reference') and cfg['kind'] == 'mixed_cat' and len(entries) == sum(cfg['categories'].values()):
             ref = cfg['official_reference']
             parts = {}
             met = True
@@ -621,6 +632,7 @@ class PsychotestService:
                   'wrong_count': None if cfg['kind'] == 'personality' else wrong_count,
                   'blank_count': blank_count, 'answered_count': len(entries) - blank_count,
                   'duration_used': duration_used, 'auto_submitted': auto,
+                  'practice_score': None if percent is None else max(1, min(100, round(percent))),
                   'result_label': label, 'categories': categories, 'threshold': threshold,
                   'scoring': scoring, 'personality': personality, 'analysis': analysis,
                   'questions': result_questions}

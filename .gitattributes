@@ -1,0 +1,3 @@
+# Generated mail patches must retain Git's exact context whitespace.
+# Actual source diffs remain reviewable in the PR; these copies are download artifacts.
+docs/downloads/*.patch -diff

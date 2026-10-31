@@ -1,0 +1,14 @@
+{
+  "KarirMate-Android.bundle": {
+    "bytes": 831085,
+    "sha256": "5313051a805483de8e913a666772bb5da2a1b96c438e375d5d59d6ace757dd66"
+  },
+  "KarirMate-Android.patch": {
+    "bytes": 1443499,
+    "sha256": "becf8d2d1994b3b7a696163f7d7a9f443e92a345fbdc57a275a1ba4cf3b1e42f"
+  },
+  "Laporan-Audit-KarirMate.pdf": {
+    "bytes": 96698,
+    "sha256": "ae507a12fb8f96fa008ce27db42747718d23859d686b7b5b369f51ad9d3d1f7e"
+  }
+}

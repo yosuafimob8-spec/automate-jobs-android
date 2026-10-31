@@ -7,7 +7,7 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-private val DarkColorScheme = darkColorScheme(
+val KarirMateDarkColors = darkColorScheme(
     primary = PrimaryBlue,
     onPrimary = TextWhite,
     primaryContainer = PrimaryBlueVariant,
@@ -22,7 +22,7 @@ private val DarkColorScheme = darkColorScheme(
     onSurfaceVariant = TextGray
 )
 
-private val LightColorScheme = lightColorScheme(
+val KarirMateLightColors = lightColorScheme(
     primary = RoyalBlue,
     onPrimary = TextWhite,
     primaryContainer = LightSurfaceVariant,
@@ -48,8 +48,20 @@ fun KarirMateTheme(
         ThemeMode.DARK -> true
     }
     MaterialTheme(
-        colorScheme = if (darkTheme) DarkColorScheme else LightColorScheme,
+        colorScheme = if (darkTheme) KarirMateDarkColors else KarirMateLightColors,
         typography = Typography,
         content = content
     )
+}
+
+/** Match inherited component text to screens that intentionally use a fixed canvas. */
+@Composable
+fun FixedCanvasTheme(dark: Boolean = false, content: @Composable () -> Unit) {
+    val colors = if (dark) KarirMateDarkColors else KarirMateLightColors
+    MaterialTheme(colorScheme = colors) {
+        androidx.compose.runtime.CompositionLocalProvider(
+            androidx.compose.material3.LocalContentColor provides colors.onSurface,
+            content = content
+        )
+    }
 }

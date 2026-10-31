@@ -24,3 +24,8 @@ keystore.properties
 key.properties
 secrets.properties
 google-services.json
+
+__pycache__/
+*.pyc
+
+.kotlin/
