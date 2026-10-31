@@ -89,6 +89,21 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
     val context = LocalContext.current
     var page by remember { mutableStateOf(0) }
     var activeSection by remember { mutableStateOf<String?>(null) }
+    var pageHistory by remember { mutableStateOf(listOf<Int>()) }
+    fun navigateTo(destination: Int) {
+        if (destination != page) {
+            pageHistory = pageHistory + page
+            page = destination
+        }
+    }
+    fun navigateBack() {
+        if (activeSection != null) { activeSection = null; return }
+        if (pageHistory.isNotEmpty()) {
+            page = pageHistory.last()
+            pageHistory = pageHistory.dropLast(1)
+        } else page = 0
+    }
+
     var jobTitle by remember { mutableStateOf("") }
     var company by remember { mutableStateOf("") }
     var jobDescription by remember { mutableStateOf("") }
@@ -108,8 +123,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
     val orange = Color(0xFFFF622B)
     val aqua = Color(0xFF19B9C3)
     androidx.activity.compose.BackHandler(enabled = activeSection != null || page != 0) {
-        if (activeSection != null) activeSection = null
-        else page = when (page) { 3 -> 2; 2 -> 0; 4 -> 0; else -> 0 }
+        navigateBack()
     }
     val pages = listOf("CV Saya" to 0, "Template" to 1, "CV Analyst" to 4)
     Column(Modifier.fillMaxSize().background(Color(0xFFF8FBFE)).imePadding()) {
@@ -127,7 +141,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                 val (label, destination) = pages[index]
                 val selected = page == destination || (destination == 0 && page == 2) || (destination == 0 && page == 3)
                 Surface(
-                    modifier = Modifier.clickable { page = destination },
+                    modifier = Modifier.clickable { navigateTo(destination) },
                     shape = RoundedCornerShape(20.dp),
                     color = if (selected) orange else Color(0xFFEDF2F8)
                 ) {
@@ -141,15 +155,15 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
             verticalArrangement = Arrangement.spacedBy(12.dp)) {
             state.message?.let { Text(it, color = aqua, fontSize = 12.sp) }
             if (page == 2 || page == 3) {
-                androidx.compose.material3.TextButton(onClick = { page = 0 }) {
-                    Text("‹ Kembali ke CV Saya", color = navy, fontWeight = FontWeight.SemiBold)
+                androidx.compose.material3.TextButton(onClick = { navigateBack() }) {
+                    Text("‹ Kembali", color = navy, fontWeight = FontWeight.SemiBold)
                 }
             }
             when (page) {
                 0 -> {
                     Text("CV Saya", color = navy, fontSize = 20.sp, fontWeight = FontWeight.Bold)
                     Button(
-                        onClick = { viewModel.newDocument(); page = 2 },
+                        onClick = { viewModel.newDocument(); navigateTo(2) },
                         modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(containerColor = orange),
                         shape = RoundedCornerShape(22.dp)
@@ -218,11 +232,11 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                                     fontSize = 11.sp, color = Color(0xFF657695)
                                 )
                                 Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                                    Button(onClick = { viewModel.selectDocument(doc.id); page = 2 },
+                                    Button(onClick = { viewModel.selectDocument(doc.id); navigateTo(2) },
                                         modifier = Modifier.weight(1f),
                                         colors = ButtonDefaults.buttonColors(containerColor = orange),
                                         shape = RoundedCornerShape(20.dp)) { Text("Edit") }
-                                    Button(onClick = { viewModel.selectDocument(doc.id); page = 3 },
+                                    Button(onClick = { viewModel.selectDocument(doc.id); navigateTo(3) },
                                         modifier = Modifier.weight(1f),
                                         colors = ButtonDefaults.buttonColors(containerColor = aqua),
                                         shape = RoundedCornerShape(20.dp)) { Text("Lihat CV") }
@@ -308,7 +322,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                             },
                             confirmButton = {
                                 Button(onClick = {
-                                    if (!locked) { viewModel.setTemplate(previewId); templatePreviewId = null; page = 2 }
+                                    if (!locked) { viewModel.setTemplate(previewId); templatePreviewId = null; navigateTo(2) }
                                 }, enabled = !locked, colors = ButtonDefaults.buttonColors(containerColor = orange)) {
                                     Text(if (locked) "Perlu PRO" else "Gunakan Template")
                                 }
@@ -318,7 +332,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                     }
                     Text("Catatan: desain miniatur adalah ilustrasi. Renderer ekspor khusus tiap template dan aktivasi langganan PRO belum terhubung.",
                         color = Color(0xFF66758D), fontSize = 11.sp)
-                    Button(onClick = { page = 2 }, modifier = Modifier.fillMaxWidth(),
+                    Button(onClick = { navigateTo(2) }, modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Lanjut ke Editor") }
                 }
                 2 -> {
@@ -355,7 +369,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                                 }
                             }
                         }
-                        Button(onClick = { if (viewModel.saveDocument()) page = 3 },
+                        Button(onClick = { if (viewModel.saveDocument()) navigateTo(3) },
                             modifier = Modifier.fillMaxWidth(),
                             colors = ButtonDefaults.buttonColors(containerColor = orange)) {
                             Text("Simpan & Lihat CV", color = Color.White)
@@ -404,7 +418,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                             colors = ButtonDefaults.buttonColors(containerColor = aqua)) { Text("DOCX") }
                     }
                     if (exportMessage.isNotBlank()) Text(exportMessage, color = navy)
-                    OutlinedButton(onClick = { page = 4 }, modifier = Modifier.fillMaxWidth()) { Text("Analisis CV") }
+                    OutlinedButton(onClick = { navigateTo(4) }, modifier = Modifier.fillMaxWidth()) { Text("Analisis CV") }
                 }
                 else -> {
                     Text("CV Analyst", color = navy, fontSize = 20.sp, fontWeight = FontWeight.Bold)
@@ -418,7 +432,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel = viewModel()) {
                         onCompanyChange = { company = it },
                         onJobDescriptionChange = { jobDescription = it },
                         onRun = { viewModel.runAtsCheck("", "", "") },
-                        onEdit = { page = 2 }
+                        onEdit = { navigateTo(2) }
                     )
                     CvBuilderCoverLetterPanel(state, jobTitle, company) { viewModel.generateCoverLetter(jobTitle, company) }
                 }
@@ -488,36 +502,61 @@ private fun CvBuilderBasicsEditor(
     onUpdate: ((CvContent) -> CvContent) -> Unit
 ) {
     Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        Text("Data Pribadi", fontWeight = FontWeight.Bold)
+        Text("Data Pribadi", fontWeight = FontWeight.Bold, color = Color(0xFF102650))
+        Text("Nama lengkap", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
         OutlinedTextField(
             value = draft.contact.fullName,
             onValueChange = { value -> onUpdate { it.copy(contact = it.contact.copy(fullName = value)) } },
-            label = { Text("Nama lengkap") },
-            modifier = Modifier.fillMaxWidth()
+            placeholder = { Text("Nama lengkap", color = Color(0xFF66758D)) },
+            modifier = Modifier.fillMaxWidth(),
+            colors = androidx.compose.material3.OutlinedTextFieldDefaults.colors(
+                focusedTextColor = Color(0xFF102650), unfocusedTextColor = Color(0xFF102650),
+                focusedBorderColor = Color(0xFF102650), unfocusedBorderColor = Color(0xFF8C99AB)
+            )
         )
+        Text("Posisi / profesi", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
         OutlinedTextField(
             value = draft.contact.headline,
             onValueChange = { value -> onUpdate { it.copy(contact = it.contact.copy(headline = value)) } },
-            label = { Text("Posisi / profesi") },
-            modifier = Modifier.fillMaxWidth()
+            placeholder = { Text("Posisi / profesi", color = Color(0xFF66758D)) },
+            modifier = Modifier.fillMaxWidth(),
+            colors = androidx.compose.material3.OutlinedTextFieldDefaults.colors(
+                focusedTextColor = Color(0xFF102650), unfocusedTextColor = Color(0xFF102650),
+                focusedBorderColor = Color(0xFF102650), unfocusedBorderColor = Color(0xFF8C99AB)
+            )
         )
+        Text("Email", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
         OutlinedTextField(
             value = draft.contact.email,
             onValueChange = { value -> onUpdate { it.copy(contact = it.contact.copy(email = value)) } },
-            label = { Text("Email") },
-            modifier = Modifier.fillMaxWidth()
+            placeholder = { Text("Email", color = Color(0xFF66758D)) },
+            modifier = Modifier.fillMaxWidth(),
+            colors = androidx.compose.material3.OutlinedTextFieldDefaults.colors(
+                focusedTextColor = Color(0xFF102650), unfocusedTextColor = Color(0xFF102650),
+                focusedBorderColor = Color(0xFF102650), unfocusedBorderColor = Color(0xFF8C99AB)
+            )
         )
+        Text("Nomor telepon", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
         OutlinedTextField(
             value = draft.contact.phone,
             onValueChange = { value -> onUpdate { it.copy(contact = it.contact.copy(phone = value)) } },
-            label = { Text("Nomor telepon") },
-            modifier = Modifier.fillMaxWidth()
+            placeholder = { Text("Nomor telepon", color = Color(0xFF66758D)) },
+            modifier = Modifier.fillMaxWidth(),
+            colors = androidx.compose.material3.OutlinedTextFieldDefaults.colors(
+                focusedTextColor = Color(0xFF102650), unfocusedTextColor = Color(0xFF102650),
+                focusedBorderColor = Color(0xFF102650), unfocusedBorderColor = Color(0xFF8C99AB)
+            )
         )
+        Text("Domisili", color = Color(0xFF102650), fontWeight = FontWeight.SemiBold)
         OutlinedTextField(
             value = draft.contact.location,
             onValueChange = { value -> onUpdate { it.copy(contact = it.contact.copy(location = value)) } },
-            label = { Text("Domisili") },
-            modifier = Modifier.fillMaxWidth()
+            placeholder = { Text("Domisili", color = Color(0xFF66758D)) },
+            modifier = Modifier.fillMaxWidth(),
+            colors = androidx.compose.material3.OutlinedTextFieldDefaults.colors(
+                focusedTextColor = Color(0xFF102650), unfocusedTextColor = Color(0xFF102650),
+                focusedBorderColor = Color(0xFF102650), unfocusedBorderColor = Color(0xFF8C99AB)
+            )
         )
     }
 }
@@ -990,6 +1029,8 @@ private fun KarirMateAnalystV25(
                     }
                     Button(onClick = onEdit, modifier = Modifier.fillMaxWidth(),
                         colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Perbaiki CV di Editor") }
+                    Text("Untuk membuat surat lamaran, kembali ke bagian Surat Lamaran di bawah hasil analisis.",
+                        color = navy, fontSize = 12.sp)
                 }
             }
             "history" -> {

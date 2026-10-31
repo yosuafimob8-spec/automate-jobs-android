@@ -311,7 +311,7 @@ private fun ExamPanel(session: JsonObject, questions: List<JsonObject>, onAnswer
             }
         }
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            OutlinedButton(onClick = { index-- }, enabled = index > 0, modifier = Modifier.weight(1f).heightIn(min = 50.dp)) { Text("Sebelumnya", color = ink) }
+            Button(onClick = { index-- }, enabled = index > 0, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange, disabledContainerColor = orange, disabledContentColor = Color.White)) { Text("Sebelumnya", color = Color.White) }
             if (index < questions.lastIndex) {
                 Button(onClick = { index++ }, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Selanjutnya", color = Color.White) }
             } else {
