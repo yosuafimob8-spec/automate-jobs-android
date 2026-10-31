@@ -77,7 +77,7 @@ class CvBuilderViewModel(application: Application) : AndroidViewModel(applicatio
     fun newDocument() {
         val created = emptyCvDocument()
         draftStore.save(created)
-        val drafts = draftStore.listDraftIds().mapNotNull { draftStore.load(it) } + created
+        val drafts = draftStore.listDraftIds().mapNotNull { draftStore.load(it) }
         _state.value = _state.value.copy(
             drafts = drafts,
             activeId = created.id,
@@ -85,7 +85,8 @@ class CvBuilderViewModel(application: Application) : AndroidViewModel(applicatio
             templateId = created.templateId,
             latexStyle = created.content.latexStyle,
             style = created.content.style,
-            saveState = "saved"
+            saveState = "saved",
+            message = "CV baru berhasil dibuat. Silakan isi data Anda."
         )
     }
 
