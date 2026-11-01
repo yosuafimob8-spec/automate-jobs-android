@@ -123,7 +123,7 @@ private suspend fun requestInterview(
         put("role", role)
         put("interviewer", interviewer)
         put("language", language)
-        put("cv_text", cv.take(6000))
+        put("cv_text", cv.take(1300))
         put("action", action)
         put("history", JSONArray().apply {
             history.forEach { turn ->
