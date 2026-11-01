@@ -28,6 +28,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.ui.Alignment
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.ui.text.font.FontWeight
@@ -166,6 +168,7 @@ private suspend fun requestInterview(
 fun AiInterviewScreen(isPro: Boolean = false) {
     val roles = listOf("Admin Warehouse", "Supervisor Logistik", "Staff Operasional", "Operator Produksi", "Sales", "Lainnya")
     var role by rememberSaveable { mutableStateOf(roles.first()) }
+    var interviewMode by rememberSaveable { mutableStateOf("text") }
     var language by rememberSaveable { mutableStateOf("id") }
     var cv by rememberSaveable { mutableStateOf("") }
     var cvLoaded by rememberSaveable { mutableStateOf(false) }
@@ -176,6 +179,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     var question by rememberSaveable { mutableStateOf("") }
     var answer by rememberSaveable { mutableStateOf("") }
     var history by remember { mutableStateOf(emptyList<InterviewTurn>()) }
+    var chatMessages by remember { mutableStateOf(emptyList<Pair<Boolean, String>>()) }
     var pendingQuestion by rememberSaveable { mutableStateOf("") }
     var feedback by rememberSaveable { mutableStateOf("") }
     var report by rememberSaveable { mutableStateOf("") }
@@ -221,7 +225,13 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 val accessToken = session.getValidToken() ?: throw IllegalStateException("Silakan login kembali.")
                 val serviceUrl = endpoint ?: throw IllegalStateException("Layanan AI Interview belum dikonfigurasi.")
                 val response = requestInterview(serviceUrl, accessToken, role, language, cv, action, turns)
-                history = if (response.awaitingAnswer) turns else turns.filterNot { it.answer.equals("lewati", ignoreCase = true) }
+                history = turns
+                if (action == "start") {
+                    chatMessages = listOf(false to response.question)
+                } else if (action == "reply") {
+                    val latest = turns.lastOrNull()?.answer.orEmpty()
+                    chatMessages = chatMessages + (true to latest) + (false to (response.feedback.takeIf { it.isNotBlank() }?.plus("\\n\\n") ?: "") + response.question)
+                }
                 feedback = buildString {
                     if (response.score != null) append("Nilai jawaban: ${response.score}/100\\n")
                     append(response.feedback)
@@ -264,6 +274,16 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     Text("Pilih posisi, bahasa, dan unggah CV untuk latihan yang sesuai pengalamanmu.", color = ink)
                 }
             }
+            Text("Pilih Mode Interview", color = ink, fontWeight = FontWeight.Bold)
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                FilterChip(selected = interviewMode == "text", onClick = { interviewMode = "text" }, label = { Text("💬 Interview Teks") })
+                FilterChip(selected = interviewMode == "video", onClick = { interviewMode = "video" }, label = { Text("🎥 Interview Video") })
+            }
+            if (interviewMode == "video") {
+                Card(shape = cardShape, colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF0E6))) {
+                    Text("🎥 Interview Video — Coming Soon\\nFitur simulasi video interview sedang disiapkan.", modifier = Modifier.padding(18.dp), color = ink)
+                }
+            }
             Text("Pilih posisi", color = ink, fontWeight = FontWeight.Bold)
             roles.forEach { item ->
                 Row {
@@ -285,8 +305,9 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             Text("File dibaca di HP. PDF scan perlu OCR. Maksimal 10 MB; AI memakai 6.000 karakter pertama.")
             OutlinedTextField(cv, { cv = it; cvLoaded = false }, label = { Text("Teks CV hasil ekstraksi") },
                 modifier = Modifier.fillMaxWidth(), minLines = 3)
-            Button(enabled = !loading && !cvReading && cv.isNotBlank() && BuildConfig.INTERVIEW_BASE_URL.isNotBlank(), colors = ButtonDefaults.buttonColors(containerColor = orange), shape = cardShape, modifier = Modifier.fillMaxWidth().height(54.dp), onClick = {
+            Button(enabled = interviewMode == "text" && !loading && !cvReading && cv.isNotBlank() && BuildConfig.INTERVIEW_BASE_URL.isNotBlank(), colors = ButtonDefaults.buttonColors(containerColor = orange), shape = cardShape, modifier = Modifier.fillMaxWidth().height(54.dp), onClick = {
                 history = emptyList()
+                chatMessages = emptyList()
                 pendingQuestion = ""
                 report = ""
                 feedback = ""
@@ -306,20 +327,34 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     started = false
                     question = ""
                     history = emptyList()
+                    chatMessages = emptyList()
                     pendingQuestion = ""
                     report = ""
                     feedback = ""
                 }) { Text("Mulai sesi baru") }
             } else {
-                Text(if (pendingQuestion.isNotBlank()) "Pertanyaan perlu dijawab" else "Pertanyaan ${history.size + 1}", color = teal, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
-                Card(shape = cardShape, colors = CardDefaults.cardColors(containerColor = Color.White), elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
-                    Column(Modifier.fillMaxWidth().padding(18.dp)) {
-                        Text("👩‍💼 KarirMate AI HR", color = ink, fontWeight = FontWeight.Bold)
-                        Spacer(Modifier.height(10.dp))
-                        Text(question, color = ink, style = MaterialTheme.typography.bodyLarge)
+                Text("💬 Interview Teks", color = teal, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                chatMessages.forEach { (fromCandidate, message) ->
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = if (fromCandidate) Arrangement.End else Arrangement.Start) {
+                        Card(
+                            modifier = Modifier.fillMaxWidth(0.88f),
+                            shape = RoundedCornerShape(
+                                topStart = 18.dp, topEnd = 18.dp,
+                                bottomStart = if (fromCandidate) 18.dp else 4.dp,
+                                bottomEnd = if (fromCandidate) 4.dp else 18.dp
+                            ),
+                            colors = CardDefaults.cardColors(containerColor = if (fromCandidate) Color(0xFFDDF7F8) else Color.White),
+                            elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+                        ) {
+                            Column(Modifier.padding(14.dp)) {
+                                Text(if (fromCandidate) "Anda" else "👩‍💼 AI HR", fontWeight = FontWeight.Bold, color = if (fromCandidate) teal else orange)
+                                Spacer(Modifier.height(5.dp))
+                                Text(message, color = ink)
+                            }
+                        }
                     }
                 }
-                if (feedback.isNotBlank()) Text(feedback)
+                if (feedback.isNotBlank() && chatMessages.isEmpty()) Text(feedback)
                 if (isPro) OutlinedButton(enabled = !loading, onClick = {
                     val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
                         putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
