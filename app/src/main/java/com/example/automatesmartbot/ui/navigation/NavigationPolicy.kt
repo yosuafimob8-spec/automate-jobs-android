@@ -6,7 +6,7 @@ object NavigationPolicy {
     }
 
     fun postLoginRoute(profileCompleted: Boolean?): String {
-        return if (profileCompleted == false) {
+        return if (profileCompleted != true) {
             Screen.OnboardingProfile.route
         } else {
             Screen.Dashboard.route
