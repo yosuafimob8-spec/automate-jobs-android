@@ -312,7 +312,7 @@ private fun MainDashboardContent(
             }
             composable(Screen.AiInterview.route) {
                 FixedCanvasTheme(dark = false) {
-                    AiInterviewScreen()
+                    AiInterviewScreen(isPro = isPro)
 
                 }
             }
