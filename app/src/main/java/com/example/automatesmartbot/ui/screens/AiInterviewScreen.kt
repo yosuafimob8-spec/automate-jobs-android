@@ -16,7 +16,6 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.text.input.PasswordVisualTransformation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -35,7 +34,7 @@ private data class InterviewReply(
 )
 
 private suspend fun requestInterview(
-    endpoint: String, testToken: String, role: String, language: String, cv: String,
+    endpoint: String, role: String, language: String, cv: String,
     action: String, history: List<InterviewTurn>
 ): InterviewReply = withContext(Dispatchers.IO) {
     require(endpoint.startsWith("https://") || endpoint.startsWith("http://10.0.2.2:")) {
@@ -58,7 +57,6 @@ private suspend fun requestInterview(
         readTimeout = 45000
         doOutput = true
         setRequestProperty("Content-Type", "application/json; charset=utf-8")
-        setRequestProperty("Authorization", "Bearer $testToken")
     }
     try {
         connection.outputStream.use { it.write(payload.toString().toByteArray(Charsets.UTF_8)) }
@@ -98,8 +96,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     var role by rememberSaveable { mutableStateOf(roles.first()) }
     var language by rememberSaveable { mutableStateOf("id") }
     var cv by rememberSaveable { mutableStateOf("") }
-    var endpoint by rememberSaveable { mutableStateOf("") }
-    var testToken by remember { mutableStateOf("") }
+    // Service address is app-managed; never ask end users for provider credentials.
+    val endpoint = "https://karirmate.invalid/interview/turn"
     var started by rememberSaveable { mutableStateOf(false) }
     var question by rememberSaveable { mutableStateOf("") }
     var answer by rememberSaveable { mutableStateOf("") }
@@ -125,7 +123,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
         error = ""
         scope.launch {
             try {
-                val response = requestInterview(endpoint.trim(), testToken, role, language, cv, action, turns)
+                val response = requestInterview(endpoint, role, language, cv, action, turns)
                 history = turns
                 feedback = buildString {
                     if (response.score != null) append("Nilai jawaban: ${response.score}/100\\n")
@@ -173,16 +171,13 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             }
             OutlinedTextField(cv, { cv = it }, label = { Text("Ringkasan CV / pengalaman (opsional)") },
                 modifier = Modifier.fillMaxWidth(), minLines = 3)
-            OutlinedTextField(endpoint, { endpoint = it }, label = { Text("Alamat API AI Interview (sementara untuk pengujian)") },
-                modifier = Modifier.fillMaxWidth(), singleLine = true)
-            OutlinedTextField(testToken, { testToken = it }, label = { Text("Token pengujian server") },
-                modifier = Modifier.fillMaxWidth(), singleLine = true, visualTransformation = PasswordVisualTransformation())
-            Button(enabled = !loading && endpoint.isNotBlank() && testToken.isNotBlank(), onClick = {
+            Button(enabled = !loading && !endpoint.contains(".invalid"), onClick = {
                 history = emptyList()
                 report = ""
                 feedback = ""
                 send("start", emptyList())
             }) { Text("Mulai wawancara AI") }
+            if (endpoint.contains(".invalid")) Text("Layanan AI Interview sedang disiapkan. Tidak perlu memasukkan API atau token.", color = MaterialTheme.colorScheme.secondary)
         } else {
             if (report.isNotBlank()) {
                 Text("Hasil evaluasi", style = MaterialTheme.typography.titleLarge)
