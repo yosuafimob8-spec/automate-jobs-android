@@ -1,9 +1,6 @@
 name: AI Interview Test APK
 
 on:
-  push:
-    branches:
-      - fix/profile-gate-unknown-status-20261101
   workflow_dispatch:
 
 jobs:
