@@ -30,6 +30,9 @@ val releasePsychotestBaseUrl = providers.gradleProperty("releasePsychotestBaseUr
         if (it.endsWith("/")) it else "$it/"
     }.orEmpty()
 
+val debugInterviewBaseUrl = providers.gradleProperty("debugInterviewBaseUrl").getOrElse("http://10.0.2.2:8790/")
+val releaseInterviewBaseUrl = providers.gradleProperty("releaseInterviewBaseUrl").getOrElse("")
+
 val generatedBrandRes = layout.buildDirectory.dir("generated/res/karirMate")
 val prepareBrandAssets by tasks.registering(Copy::class) {
     from(rootProject.file("design/Logo.jpeg"))
@@ -60,6 +63,7 @@ android {
             buildConfigField("String", "BASE_URL", "\"$debugApiBaseUrl\"")
             buildConfigField("String", "JOBS_V2_BASE_URL", "\"$debugJobsV2BaseUrl\"")
             buildConfigField("String", "PSYCHOTEST_BASE_URL", "\"$debugPsychotestBaseUrl\"")
+            buildConfigField("String", "INTERVIEW_BASE_URL", "\"$debugInterviewBaseUrl\"")
             manifestPlaceholders["usesCleartextTraffic"] = "true"
         }
         create("termux") {
@@ -69,6 +73,7 @@ android {
             buildConfigField("String", "BASE_URL", "\"http://127.0.0.1:8787/\"")
             buildConfigField("String", "JOBS_V2_BASE_URL", "\"http://127.0.0.1:8788/\"")
             buildConfigField("String", "PSYCHOTEST_BASE_URL", "\"http://127.0.0.1:8789/\"")
+            buildConfigField("String", "INTERVIEW_BASE_URL", "\"http://127.0.0.1:8790/\"")
             manifestPlaceholders["usesCleartextTraffic"] = "true"
         }
         release {
@@ -80,6 +85,7 @@ android {
             buildConfigField("String", "BASE_URL", "\"$releaseApiBaseUrl\"")
             buildConfigField("String", "JOBS_V2_BASE_URL", "\"$releaseJobsV2BaseUrl\"")
             buildConfigField("String", "PSYCHOTEST_BASE_URL", "\"$releasePsychotestBaseUrl\"")
+            buildConfigField("String", "INTERVIEW_BASE_URL", "\"$releaseInterviewBaseUrl\"")
             manifestPlaceholders["usesCleartextTraffic"] = "false"
         }
     }
