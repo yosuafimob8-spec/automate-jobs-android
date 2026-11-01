@@ -3,6 +3,13 @@ package com.example.automatesmartbot.ui.screens
 import com.example.automatesmartbot.BuildConfig
 import com.example.automatesmartbot.data.security.SessionManager
 import android.content.Intent
+import android.net.Uri
+import android.util.Xml
+import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
+import com.tom_roush.pdfbox.pdmodel.PDDocument
+import com.tom_roush.pdfbox.text.PDFTextStripper
+import java.util.zip.ZipInputStream
+import org.xmlpull.v1.XmlPullParser
 import android.speech.RecognizerIntent
 import android.speech.tts.TextToSpeech
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -25,6 +32,49 @@ import org.json.JSONArray
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
+
+
+private fun extractCv(context: android.content.Context, uri: Uri): String {
+    val mime = context.contentResolver.getType(uri).orEmpty()
+    val pdf = mime == "application/pdf"
+    val docx = mime == "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    require(pdf || docx) { "Pilih PDF atau DOCX." }
+    val bytes = context.contentResolver.openInputStream(uri)?.use { it.readNBytes(10 * 1024 * 1024 + 1) }
+        ?: error("CV tidak dapat dibuka.")
+    require(bytes.size <= 10 * 1024 * 1024) { "CV maksimal 10 MB." }
+    val text = if (pdf) {
+        PDFBoxResourceLoader.init(context.applicationContext)
+        PDDocument.load(bytes).use {
+            require(it.numberOfPages <= 40) { "CV maksimal 40 halaman." }
+            PDFTextStripper().getText(it)
+        }
+    } else {
+        val output = StringBuilder()
+        ZipInputStream(bytes.inputStream()).use { zip ->
+            var entry = zip.nextEntry
+            while (entry != null) {
+                if (entry.name == "word/document.xml") {
+                    val parser = Xml.newPullParser()
+                    parser.setInput(zip, "UTF-8")
+                    var event = parser.eventType
+                    while (event != XmlPullParser.END_DOCUMENT) {
+                        if (event == XmlPullParser.START_TAG && parser.name == "t") output.append(parser.nextText())
+                        else if (event == XmlPullParser.END_TAG && parser.name == "p") output.append('\\n')
+                        require(output.length <= 100000) { "Isi CV terlalu panjang." }
+                        event = parser.next()
+                    }
+                    break
+                }
+                zip.closeEntry()
+                entry = zip.nextEntry
+            }
+        }
+        output.toString()
+    }
+    val result = text.trim()
+    require(result.length >= 30) { "Teks CV tidak terbaca. PDF hasil scan memerlukan OCR." }
+    return result.take(6000)
+}
 
 private data class InterviewTurn(val question: String, val answer: String)
 private data class InterviewReply(
@@ -99,6 +149,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     var role by rememberSaveable { mutableStateOf(roles.first()) }
     var language by rememberSaveable { mutableStateOf("id") }
     var cv by rememberSaveable { mutableStateOf("") }
+    var cvLoaded by rememberSaveable { mutableStateOf(false) }
+    var cvReading by remember { mutableStateOf(false) }
     // Service address is app-managed; never ask end users for provider credentials.
     val endpoint = BuildConfig.INTERVIEW_BASE_URL.takeIf { it.isNotBlank() }?.trimEnd('/')?.plus("/interview/turn")
     var started by rememberSaveable { mutableStateOf(false) }
@@ -121,6 +173,23 @@ fun AiInterviewScreen(isPro: Boolean = false) {
         }
     }
     val scope = rememberCoroutineScope()
+    val cvPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri != null) {
+            cvReading = true
+            error = ""
+            scope.launch {
+                try {
+                    cv = withContext(Dispatchers.IO) { extractCv(context, uri) }
+                    cvLoaded = true
+                } catch (ex: Exception) {
+                    cvLoaded = false
+                    error = ex.message ?: "Gagal membaca CV."
+                } finally {
+                    cvReading = false
+                }
+            }
+        }
+    }
     fun send(action: String, turns: List<InterviewTurn>) {
         if (loading) return
         loading = true
@@ -175,9 +244,14 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 RadioButton(selected = language == "en", onClick = { language = "en" })
                 Text("English", Modifier.padding(top = 12.dp))
             }
-            OutlinedTextField(cv, { cv = it }, label = { Text("Ringkasan CV / pengalaman (opsional)") },
+            OutlinedButton(enabled = !cvReading && !loading, onClick = {
+                cvPicker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
+            }) { Text(if (cvReading) "Membaca CV..." else "Pilih CV PDF / DOCX") }
+            if (cvLoaded) Text("CV berhasil dibaca dan siap dipakai AI.")
+            Text("File dibaca di HP. PDF scan perlu OCR. Maksimal 10 MB; AI memakai 6.000 karakter pertama.")
+            OutlinedTextField(cv, { cv = it; cvLoaded = false }, label = { Text("Teks CV hasil ekstraksi") },
                 modifier = Modifier.fillMaxWidth(), minLines = 3)
-            Button(enabled = !loading && BuildConfig.INTERVIEW_BASE_URL.isNotBlank(), onClick = {
+            Button(enabled = !loading && !cvReading && cv.isNotBlank() && BuildConfig.INTERVIEW_BASE_URL.isNotBlank(), onClick = {
                 history = emptyList()
                 report = ""
                 feedback = ""
