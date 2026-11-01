@@ -100,7 +100,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     var language by rememberSaveable { mutableStateOf("id") }
     var cv by rememberSaveable { mutableStateOf("") }
     // Service address is app-managed; never ask end users for provider credentials.
-    val endpoint = BuildConfig.INTERVIEW_BASE_URL.trimEnd('/') + "/interview/turn"
+    val endpoint = BuildConfig.INTERVIEW_BASE_URL.takeIf { it.isNotBlank() }?.trimEnd('/')?.plus("/interview/turn")
     var started by rememberSaveable { mutableStateOf(false) }
     var question by rememberSaveable { mutableStateOf("") }
     var answer by rememberSaveable { mutableStateOf("") }
@@ -128,7 +128,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
         scope.launch {
             try {
                 val accessToken = session.getValidToken() ?: throw IllegalStateException("Silakan login kembali.")
-                val response = requestInterview(endpoint, accessToken, role, language, cv, action, turns)
+                val serviceUrl = endpoint ?: throw IllegalStateException("Layanan AI Interview belum dikonfigurasi.")
+                val response = requestInterview(serviceUrl, accessToken, role, language, cv, action, turns)
                 history = turns
                 feedback = buildString {
                     if (response.score != null) append("Nilai jawaban: ${response.score}/100\\n")
@@ -182,7 +183,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 feedback = ""
                 send("start", emptyList())
             }) { Text("Mulai wawancara AI") }
-            if (BuildConfig.INTERVIEW_BASE_URL.isBlank()) Text("Layanan AI Interview belum tersedia.", color = MaterialTheme.colorScheme.secondary)
+            if (endpoint == null) Text("Layanan AI Interview belum tersedia.", color = MaterialTheme.colorScheme.secondary)
         } else {
             if (report.isNotBlank()) {
                 Text("Hasil evaluasi", style = MaterialTheme.typography.titleLarge)
