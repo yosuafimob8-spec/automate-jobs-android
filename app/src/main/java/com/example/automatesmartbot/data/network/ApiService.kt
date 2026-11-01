@@ -16,6 +16,10 @@ data class AutoApplyEnableRequest(
 )
 
 interface ApiService {
+    @GET("companies/provinces") suspend fun companyProvinces(): Response<ResponseBody>
+    @GET("companies") suspend fun companies(@Query("province") province: String? = null, @Query("city") city: String? = null, @Query("industry") industry: String? = null, @Query("position") position: String? = null, @Query("offset") offset: Int = 0): Response<ResponseBody>
+    @GET("companies/stats") suspend fun companyStats(): Response<ResponseBody>
+
     @POST("gmail/oauth/start")
     suspend fun startGmailOAuth(@Body request: Map<String, String> = emptyMap()): Response<ResponseBody>
     @PUT("cv")
@@ -32,6 +36,9 @@ interface ApiService {
 
     @POST("auto-apply/simulate")
     suspend fun simulateAutoApply(@Body request: Map<String, String> = emptyMap()): Response<ResponseBody>
+
+    @POST("auto-apply/test-email-preview")
+    suspend fun testEmailPreview(@Body body: Map<String, String>): Response<ResponseBody>
 
     @POST("auto-apply/enable")
     suspend fun enableAutoApply(@Body request: AutoApplyEnableRequest): Response<ResponseBody>

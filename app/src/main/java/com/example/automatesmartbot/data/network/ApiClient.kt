@@ -2,6 +2,7 @@ package com.example.automatesmartbot.data.network
 
 import android.content.Context
 import com.example.automatesmartbot.BuildConfig
+import com.example.automatesmartbot.data.interview.InterviewApi
 import com.example.automatesmartbot.data.security.SessionManager
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -21,6 +22,7 @@ object ApiClient {
             jobsV2Api = BuildConfig.JOBS_V2_BASE_URL.takeIf { it.isNotBlank() }
                 ?.let { createJobsV2Api(sessionManager!!) }
             psychotestApi = createPsychotestApi(sessionManager!!)
+            interviewApi = createInterviewApi(sessionManager!!)
         }
     }
 
@@ -55,6 +57,11 @@ object ApiClient {
             .build()
     }
 
+    private fun createInterviewApi(sm: SessionManager): InterviewApi {
+        val client = OkHttpClient.Builder().addInterceptor(AuthInterceptor(sm)).connectTimeout(10, TimeUnit.SECONDS).readTimeout(90, TimeUnit.SECONDS).writeTimeout(60, TimeUnit.SECONDS).build()
+        return Retrofit.Builder().baseUrl(baseUrl).client(client).addConverterFactory(GsonConverterFactory.create()).build().create(InterviewApi::class.java)
+    }
+
     private fun createJobsV2Api(sm: SessionManager): JobsV2Api {
         val url = BuildConfig.JOBS_V2_BASE_URL
         val client = OkHttpClient.Builder()
@@ -82,6 +89,8 @@ object ApiClient {
         private set
 
     var jobsV2Api: JobsV2Api? = null
+        private set
+    var interviewApi: InterviewApi? = null
         private set
     var psychotestApi: PsychotestApi? = null
         private set

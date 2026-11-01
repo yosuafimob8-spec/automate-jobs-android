@@ -72,13 +72,13 @@ fun RiwayatScreen() {
 internal fun DeliverySummary(summary: JSONObject, quota: JSONObject) {
     Card(Modifier.fillMaxWidth()) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            Text("Pengiriman Hari Ini", style = MaterialTheme.typography.titleLarge)
+            Text("Penerimaan Gmail API Hari Ini", style = MaterialTheme.typography.titleLarge)
             Text("${summary.optInt("sent_today")} terkirim / target maksimal 5", style = MaterialTheme.typography.titleMedium)
             LinearProgressIndicator(progress = { (summary.optInt("sent_today") / 5f).coerceIn(0f, 1f) }, modifier = Modifier.fillMaxWidth())
             Text("Gagal hari ini: ${summary.optInt("failed_today")} · Tertunda seluruh antrean: ${summary.optInt("pending")}")
             Text("Total terkirim: ${summary.optInt("total_sent")} · Belum pasti: ${summary.optInt("uncertain")}")
             Text("Kuota terpakai/direservasi: ${quota.optInt("quota_used_today")} · Tersisa hari ini: ${quota.optInt("remaining_today")}")
-            Text("Status belum pasti tetap memakai kuota untuk mencegah kirim ganda.", style = MaterialTheme.typography.bodySmall)
+            Text("Gmail API menerima email bukan bukti email dibaca/diterima HR. Status belum pasti tetap memakai kuota untuk mencegah kirim ganda.", style = MaterialTheme.typography.bodySmall)
         }
     }
 }

@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 sealed class Screen(val route: String, val title: String, val icon: ImageVector) {
     object Dashboard : Screen("dashboard", "Beranda", Icons.Default.Dashboard)
     object CariLowongan : Screen("cari_lowongan", "Lowongan", Icons.Default.Work)
+    object CompanyDirectory : Screen("company_directory", "Database Perusahaan", Icons.Default.Work)
     object KirimLamaran : Screen("kirim_lamaran", "Lamaran", Icons.AutoMirrored.Filled.Send)
     object CvBuilder : Screen("cv_builder", "CV Builder", Icons.Default.Description)
     object LatihanPsikotes : Screen("latihan_psikotes", "Psikotes", Icons.Default.Psychology)
@@ -45,7 +46,7 @@ val bottomNavItems = listOf(
 )
 
 val detailNavItems = listOf(
-    Screen.JobTraining, Screen.SalaryCalculator, Screen.CareerLetters, Screen.CareerDocuments,
+    Screen.CompanyDirectory, Screen.JobTraining, Screen.SalaryCalculator, Screen.CareerLetters, Screen.CareerDocuments,
     Screen.CvBuilder,
     Screen.LatihanPsikotes,
     Screen.AiInterview,

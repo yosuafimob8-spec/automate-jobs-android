@@ -18,8 +18,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 class AutoApplyReportsTest {
     @Test fun unconfirmedSentAndDryRunCanNeverBecomeConfirmedDelivery() {
         assertTrue(DeliveryStatus.label(JSONObject("{\"status\":\"sent\"}")).startsWith("Belum pasti"))
-        assertTrue(DeliveryStatus.label(JSONObject("{\"status\":\"sent\",\"gmail_message_id\":\"gmail-real-confirmation\"}")).startsWith("Terkirim"))
-        assertFalse(DeliveryStatus.label(JSONObject("{\"status\":\"dry-run\"}")).startsWith("Terkirim"))
+        assertTrue(DeliveryStatus.label(JSONObject("{\"status\":\"sent\",\"gmail_message_id\":\"gmail-real-confirmation\"}")).startsWith("Diterima Gmail API"))
+        assertFalse(DeliveryStatus.label(JSONObject("{\"status\":\"dry-run\"}")).startsWith("Diterima Gmail API"))
     }
     @Test fun reportFiltersAndSimulationUseRealRoutesAndPreserveServerReason()=runTest {
         MockWebServer().use { server ->

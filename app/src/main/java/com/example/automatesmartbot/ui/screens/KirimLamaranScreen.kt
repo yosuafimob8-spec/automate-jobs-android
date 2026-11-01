@@ -14,6 +14,8 @@ import com.example.automatesmartbot.data.cv.readBytesLimited
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
+import com.example.automatesmartbot.ui.components.AppInput
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
@@ -25,7 +27,7 @@ import kotlinx.coroutines.launch
 import org.json.JSONObject
 
 @Composable
-fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -> Unit, onNavigateReports: () -> Unit = {}) {
+fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -> Unit, onNavigateReports: () -> Unit = {}, onNavigateCompanies: (() -> Unit)? = null) {
     val context = LocalContext.current
     val prefs = remember { context.getSharedPreferences("auto_apply_consent", 0) }
     val scope = rememberCoroutineScope()
@@ -40,6 +42,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
     var busy by remember { mutableStateOf(false) }
     var message by remember { mutableStateOf("") }
     var candidates by remember { mutableStateOf<List<JSONObject>>(emptyList()) }
+    var testRecipient by rememberSaveable { mutableStateOf("") }
+    var testPreview by remember { mutableStateOf<JSONObject?>(null) }
     var statusBody by remember { mutableStateOf(JSONObject()) }
     var candidateDiagnosis by remember { mutableStateOf(JSONObject()) }
     var simulation by remember { mutableStateOf<JSONObject?>(null) }
@@ -198,6 +202,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             }
         }
         item {
+            onNavigateCompanies?.let { TextButton(onClick = it) { Text("Periksa Database Perusahaan & Wilayah") } }
             Text("Kandidat dari server", style = MaterialTheme.typography.titleMedium)
             Text(candidateDiagnosis.optString("message").ifBlank { statusBody.optJSONObject("diagnosis")?.optString("message").orEmpty() })
             Text(candidateDiagnosis.optString("action"))
@@ -208,12 +213,27 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             }
         }
         item {
+            Card { Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text("Persiapan Satu Email Uji", style = MaterialTheme.typography.titleMedium)
+                Text("Tentukan penerima untuk ditinjau. Langkah ini tidak mengirim email; penerima, isi, dan lampiran CV harus disetujui sebelum pengiriman nyata.")
+                AppInput("Email penerima uji", testRecipient, { testRecipient = it; testPreview = null })
+                OutlinedButton(onClick = { scope.launch {
+                    busy = true
+                    try { testPreview = ApiClient.apiService.testEmailPreview(mapOf("recipient" to testRecipient.trim())).readJson().getJSONObject("preview") }
+                    catch (e: CancellationException) { throw e }
+                    catch (e: Exception) { message = e.message ?: "Pratinjau belum dapat disiapkan." }
+                    finally { busy = false }
+                } }, enabled = !busy && isOnline && testRecipient.isNotBlank()) { Text("Siapkan Pratinjau · Tanpa Mengirim") }
+                testPreview?.let { p -> Text("Kepada: ${p.text("to")}"); Text("Subjek: ${p.text("subject")}"); Text(p.text("body")); Text("Fingerprint CV: ${p.text("attachment_cv_sha256")}", style = MaterialTheme.typography.bodySmall); Text("ID review: ${p.text("review_id")}", style = MaterialTheme.typography.bodySmall); Text("Menunggu persetujuan penerima dan isi. Pengiriman belum dijalankan.") }
+            } }
+        }
+        item {
             Text("Riwayat dari server", style = MaterialTheme.typography.titleMedium)
             if (deliveries.isEmpty()) Text("Belum ada riwayat yang tersedia dari server.")
             deliveries.forEach { d ->
                 val gmailId = d.optString("gmail_message_id").takeIf(AutoApplyConfirmation::hasReference) ?: d.optString("gmail_id")
                 val confirmed = AutoApplyConfirmation.sent(d.optString("status"), gmailId)
-                Text("${d.optString("company")} • ${if (confirmed) "Terkirim (Gmail)" else if (d.optString("status") == "sent") "Menunggu konfirmasi Gmail" else d.optString("status", "Belum dikonfirmasi")}")
+                Text("${d.optString("company")} • ${if (confirmed) "Diterima Gmail API · belum membuktikan dibaca HR" else if (d.optString("status") == "sent") "Menunggu konfirmasi Gmail" else d.optString("status", "Belum dikonfirmasi")}")
             }
         }
     }

@@ -1,4 +1,7 @@
 package com.example.automatesmartbot.ui.screens
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Box
+import androidx.compose.material3.TextButton
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.layout.fillMaxSize
@@ -180,6 +183,7 @@ private fun MainDashboardContent(
         Screen.CareerDocuments.route -> "Dokumen Karier"
         Screen.CvBuilder.route -> cvHistory.last()
         Screen.LatihanPsikotes.route -> "Latihan Psikotes"
+        Screen.CompanyDirectory.route -> "Database Perusahaan"
         Screen.AiInterview.route -> "AI Interview"
         Screen.AiAgent.route -> "AI Agent"
         Screen.Riwayat.route -> "Riwayat Lamaran"
@@ -274,8 +278,10 @@ private fun MainDashboardContent(
             }
             composable(Screen.CariLowongan.route) {
                 FixedCanvasTheme(dark = false) {
-                    CariLowonganScreen(isPro = isPro)
-
+                    Column(Modifier.fillMaxSize()) {
+                        TextButton(onClick = { navController.navigate(Screen.CompanyDirectory.route) }) { Text("Database Perusahaan · Seluruh Indonesia") }
+                        Box(Modifier.weight(1f)) { CariLowonganScreen(isPro = isPro) }
+                    }
                 }
             }
             composable(Screen.KirimLamaran.route) {
@@ -287,9 +293,11 @@ private fun MainDashboardContent(
                             launchSingleTop = true
                         }
                     },
-                    onNavigateReports = { navController.navigate(Screen.Riwayat.route) { launchSingleTop = true } }
+                    onNavigateReports = { navController.navigate(Screen.Riwayat.route) { launchSingleTop = true } },
+                    onNavigateCompanies = { navController.navigate(Screen.CompanyDirectory.route) { launchSingleTop = true } }
                 )
             }
+            composable(Screen.CompanyDirectory.route) { CompanyDirectoryScreen() }
             composable(Screen.JobTraining.route) { JobTrainingScreen(cvViewModel, isPro) }
             composable(Screen.SalaryCalculator.route) { SalaryCalculatorScreen() }
             composable(Screen.CareerLetters.route) {
@@ -309,10 +317,7 @@ private fun MainDashboardContent(
                 LatihanPsikotesScreen(isPro = isPro, onExit = navigateUpOrDashboard)
             }
             composable(Screen.AiInterview.route) {
-                FixedCanvasTheme(dark = false) {
-                    AiInterviewScreen()
-
-                }
+                AiInterviewScreen(isPro = isPro, cv = cvViewModel.state.collectAsState().value.draft)
             }
             composable(Screen.AiAgent.route) {
                 FixedCanvasTheme(dark = false) {

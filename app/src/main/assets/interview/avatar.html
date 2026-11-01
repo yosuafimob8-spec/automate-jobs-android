@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; media-src blob:; connect-src 'none'"><style>body{margin:0;background:#10243b;color:white;font:16px sans-serif}video{width:100%;height:260px;object-fit:contain}#status{padding:12px}#subtitle{padding:12px;line-height:1.5;background:#17324d}</style></head><body><video id="avatar" autoplay playsinline></video><div id="status">Connecting to the approved avatar worker…</div><div id="subtitle"></div><script>
+let peer;
+const state=s=>document.getElementById('status').textContent=s;
+async function connect(iceServers){
+ try {
+  peer=new RTCPeerConnection({iceServers:iceServers||[]});
+  peer.addTransceiver('video',{direction:'recvonly'});peer.addTransceiver('audio',{direction:'recvonly'});
+  const media=new MediaStream();document.getElementById('avatar').srcObject=media;
+  peer.ontrack=e=>{media.addTrack(e.track);state('Avatar stream received');};
+  peer.onconnectionstatechange=()=>state('WebRTC: '+peer.connectionState);
+  await peer.setLocalDescription(await peer.createOffer());
+  await new Promise((resolve,reject)=>{if(peer.iceGatheringState==='complete')return resolve();const timer=setTimeout(()=>reject(new Error('ICE gathering timed out')),15000);peer.onicegatheringstatechange=()=>{if(peer.iceGatheringState==='complete'){clearTimeout(timer);resolve();}};});
+  KarirMate.onOffer(peer.localDescription.sdp);
+ } catch(e){state(e.message);KarirMate.onError(e.message);}
+}
+async function acceptAnswer(sdp){try{await peer.setRemoteDescription({type:'answer',sdp:sdp});}catch(e){state(e.message);KarirMate.onError(e.message);}}
+function setSubtitle(text){document.getElementById('subtitle').textContent=text;}
+function closeSession(){if(peer)peer.close();}
+</script></body></html>

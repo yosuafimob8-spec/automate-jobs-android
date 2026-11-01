@@ -26,8 +26,9 @@ data class DeliveryReport(val items: List<JSONObject>, val summary: JSONObject, 
 }
 object DeliveryStatus {
     fun label(item: JSONObject): String = when (item.text("status")) {
-        "sent" -> if (AutoApplyConfirmation.hasReference(item.text("gmail_message_id"))) "Terkirim · dikonfirmasi Gmail" else "Belum pasti · ID Gmail tidak tersedia"
-        "ready", "queued", "waiting" -> "Menunggu"
+        "sent" -> if (AutoApplyConfirmation.hasReference(item.text("gmail_message_id"))) "Diterima Gmail API · belum membuktikan dibaca HR" else "Belum pasti · ID Gmail tidak tersedia"
+        "ready", "prepared" -> "Disiapkan"
+        "queued", "waiting" -> "Dalam antrean"
         "sending", "processing" -> "Diproses"
         "failed" -> "Gagal"
         "cancelled" -> "Dibatalkan"
