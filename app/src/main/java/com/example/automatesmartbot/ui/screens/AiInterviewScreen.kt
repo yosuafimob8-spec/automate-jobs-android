@@ -68,17 +68,17 @@ private suspend fun requestInterview(
         }
         val response = JSONObject(connection.inputStream.bufferedReader().use { it.readText() })
         val finalReport = if (action == "finish") buildString {
-            append("Nilai: ${response.optInt("overall_score", 0)}/100\n\n")
+            append("Nilai: ${response.optInt("overall_score", 0)}/100\\n\\n")
             for (key in listOf("strengths", "improvements")) {
-                append(if (key == "strengths") "Kelebihan:\n" else "Yang perlu diperbaiki:\n")
+                append(if (key == "strengths") "Kelebihan:\\n" else "Yang perlu diperbaiki:\\n")
                 val items = response.optJSONArray(key) ?: JSONArray()
-                for (i in 0 until items.length()) append("• ${items.optString(i)}\n")
-                append("\n")
+                for (i in 0 until items.length()) append("• ${items.optString(i)}\\n")
+                append("\\n")
             }
-            append("Contoh jawaban: ${response.optString("example_answer")}\n\n")
+            append("Contoh jawaban: ${response.optString("example_answer")}\\n\\n")
             append(response.optString("encouragement"))
             val english = response.optString("english_feedback")
-            if (english.isNotBlank()) append("\n\nEnglish: $english")
+            if (english.isNotBlank()) append("\\n\\nEnglish: $english")
         } else ""
         InterviewReply(
             question = response.optString("question"),
@@ -132,9 +132,9 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 val response = requestInterview(serviceUrl, accessToken, role, language, cv, action, turns)
                 history = turns
                 feedback = buildString {
-                    if (response.score != null) append("Nilai jawaban: ${response.score}/100\n")
+                    if (response.score != null) append("Nilai jawaban: ${response.score}/100\\n")
                     append(response.feedback)
-                    if (response.improvement.isNotBlank()) append("\nSaran: ${response.improvement}")
+                    if (response.improvement.isNotBlank()) append("\\nSaran: ${response.improvement}")
                 }
                 if (action == "finish") {
                     report = response.finalReport
