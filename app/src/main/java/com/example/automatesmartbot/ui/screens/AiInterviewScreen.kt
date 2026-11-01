@@ -218,7 +218,10 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     val voiceLauncher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == android.app.Activity.RESULT_OK) {
             val spoken = result.data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)?.firstOrNull()
-            if (!spoken.isNullOrBlank()) answer = spoken
+            if (!spoken.isNullOrBlank()) {
+                answer = spoken
+                if (voiceMode) pendingSpeech = spoken
+            }
             else error = "Suara tidak terdeteksi. Coba lagi."
         }
     }
