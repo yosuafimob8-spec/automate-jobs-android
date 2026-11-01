@@ -2,6 +2,11 @@ name: AI Interview Test APK
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - 'fix/profile-gate-unknown-status-20261101'
+    paths:
+      - '.github/workflows/ai-interview-test-apk.yml'
 
 jobs:
   build:
