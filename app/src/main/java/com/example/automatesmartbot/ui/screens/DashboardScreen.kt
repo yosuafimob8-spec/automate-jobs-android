@@ -104,6 +104,7 @@ private val jobFeatures = listOf(
 )
 
 private val automationFeatures = listOf(
+    DashboardFeature(title = "WorkPedia", subtitle = "Istilah & Hak Karyawan", icon = Icons.Default.Description, accent = Color(0xFF9CE8E4), route = Screen.WorkPedia.route),
     DashboardFeature(
         title = "AI Agent",
         subtitle = "Otomasi dengan persetujuan Anda",
