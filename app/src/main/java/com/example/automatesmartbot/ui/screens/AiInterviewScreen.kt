@@ -461,7 +461,9 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             Row(Modifier.fillMaxWidth().background(Color.White).padding(10.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
                 OutlinedTextField(answer, { answer = it }, modifier = Modifier.weight(1f),
-                    placeholder = { Text("Ketik jawaban Anda...") }, maxLines = 4,
+                    placeholder = { Text("Ketik jawaban Anda...", color = muted) }, maxLines = 4,
+                    textStyle = androidx.compose.ui.text.TextStyle(color = ink),
+                    colors = OutlinedTextFieldDefaults.colors(focusedTextColor = ink, unfocusedTextColor = ink, cursorColor = orange, focusedContainerColor = Color.White, unfocusedContainerColor = Color.White),
                     shape = RoundedCornerShape(24.dp))
                 if (isPro) IconButton(onClick = {
                     val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
