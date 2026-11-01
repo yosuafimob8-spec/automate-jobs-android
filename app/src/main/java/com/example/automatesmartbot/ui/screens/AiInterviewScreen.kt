@@ -80,7 +80,7 @@ private fun extractCv(context: android.content.Context, uri: Uri): String {
                     var event = parser.eventType
                     while (event != XmlPullParser.END_DOCUMENT) {
                         if (event == XmlPullParser.START_TAG && parser.name == "t") output.append(parser.nextText())
-                        else if (event == XmlPullParser.END_TAG && parser.name == "p") output.append('\n')
+                        else if (event == XmlPullParser.END_TAG && parser.name == "p") output.append(10.toChar())
                         require(output.length <= 100000) { "Isi CV terlalu panjang." }
                         event = parser.next()
                     }
