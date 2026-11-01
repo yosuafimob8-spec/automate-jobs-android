@@ -159,26 +159,90 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 TextButton(onClick = { vm.loadCatalog(); page = "catalog" }) { Text("Pilih Tes Lagi") }
             }
             "result" -> result?.let { r ->
-                val actualScore = PsychotestPolicy.normalizedScore(r.get("score")?.takeUnless { it.isJsonNull }?.asDouble, r.get("max_score")?.takeUnless { it.isJsonNull }?.asDouble)
+                val actualScore = PsychotestPolicy.normalizedScore(
+                    r.get("score")?.takeUnless { it.isJsonNull }?.asDouble,
+                    r.get("max_score")?.takeUnless { it.isJsonNull }?.asDouble
+                )
+                val encouragement = when {
+                    actualScore == null -> "Terima kasih sudah mengenal dirimu lebih jauh! Setiap karakter punya kelebihan yang bisa dikembangkan."
+                    actualScore >= 90 -> "Luar biasa! Kemampuanmu sangat baik. Pertahankan prestasimu!"
+                    actualScore >= 75 -> "Kerja bagus! Kamu sudah berada di jalur yang tepat."
+                    actualScore >= 60 -> "Usahamu bagus! Terus berlatih untuk meningkatkan kemampuan."
+                    actualScore >= 40 -> "Jangan menyerah! Setiap latihan adalah kesempatan berkembang."
+                    else -> "Tetap semangat! Mulai dari dasar dan tingkatkan kemampuanmu sedikit demi sedikit."
+                }
                 LazyColumn(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-                    item { Text("Tes Selesai", color = ink, style = MaterialTheme.typography.headlineMedium) }
                     item {
-                        Info("Nilai latihan", actualScore?.let { "$it / 100" } ?: "Tes kepribadian tidak memiliki nilai benar/salah.")
+                        Text("🏆 Hasil & Insight", color = ink, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
                     }
                     item {
-                        Info("Evaluasi", when {
-                            actualScore == null -> "Hasil menggambarkan kecenderungan, bukan diagnosis psikologis."
-                            actualScore < 40 -> "Pelajari konsep dasar dan pembahasan. Tetap semangat; kemajuan dimulai dari latihan rutin."
-                            actualScore < 60 -> "Pemahaman mulai berkembang. Ulangi kategori yang sulit dan periksa ketelitian."
-                            actualScore < 80 -> "Hasil baik. Tingkatkan konsistensi dan pengelolaan waktu."
-                            else -> "Penguasaan sangat baik. Pertahankan latihan dan coba variasi soal."
-                        })
+                        Card(shape = RoundedCornerShape(24.dp), modifier = Modifier.fillMaxWidth(),
+                            colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF0E3))) {
+                            Column(Modifier.fillMaxWidth().padding(24.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                                Text("🏅", style = MaterialTheme.typography.displayMedium)
+                                Text("HASIL LATIHAN PSIKOTES", color = ink, fontWeight = FontWeight.Bold)
+                                if (actualScore != null) {
+                                    Text("$actualScore / 100", color = orange, fontWeight = FontWeight.ExtraBold,
+                                        style = MaterialTheme.typography.displayMedium)
+                                    LinearProgressIndicator(progress = { actualScore.coerceIn(0, 100) / 100f },
+                                        modifier = Modifier.fillMaxWidth().height(10.dp),
+                                        color = teal, trackColor = Color.White)
+                                } else {
+                                    Text("Asesmen Kepribadian", color = orange, style = MaterialTheme.typography.headlineSmall,
+                                        fontWeight = FontWeight.Bold)
+                                }
+                                Text(encouragement, color = ink, textAlign = TextAlign.Center,
+                                    style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Medium)
+                            }
+                        }
                     }
-                    item { Info("Penilaian server", "Benar: ${r.s("correct_count", "—")} • Salah: ${r.s("wrong_count", "—")} • Kosong: ${r.s("blank_count", "—")}. Nilai latihan dinormalisasi 1–100; bobot resmi tes tetap mengikuti server.") }
+                    item {
+                        Info("📋 Ringkasan Hasil",
+                            "Benar: ${r.s("correct_count", "—")}  •  Salah: ${r.s("wrong_count", "—")}  •  Kosong: ${r.s("blank_count", "—")}" +
+                            if (actualScore == null) "\nTes kepribadian tidak menggunakan nilai benar/salah." else
+                                "\nSkor latihan dinormalisasi ke skala 0–100; bobot resmi mengikuti server.")
+                    }
                     if (isPro) {
-                        items(r.getAsJsonArray("questions")?.map { it.asJsonObject }.orEmpty()) { q -> Info(q.s("prompt"), q.s("explanation", "Pembahasan tidak tersedia dari server.")) }
+                        item {
+                            Info("👑 PRO • Analisis Jawaban",
+                                "Pembahasan jawaban berdasarkan hasil dari server. Periksa setiap soal untuk memahami kesalahan.")
+                        }
+                        items(r.getAsJsonArray("questions")?.map { it.asJsonObject }.orEmpty()) { q ->
+                            Info(q.s("prompt"), q.s("explanation", "Pembahasan belum tersedia dari server."))
+                        }
+                        item {
+                            Info("🎯 Masukan Pengembangan • PRO", when {
+                                actualScore == null -> "Kenali kekuatan dan preferensi kerja dari hasil asesmen. Hasil ini bukan diagnosis psikologis."
+                                actualScore < 40 -> "Perkuat pemahaman dasar, tinjau soal yang keliru, dan latih kemampuan secara bertahap."
+                                actualScore < 60 -> "Fokus pada kategori yang paling sering salah. Ulangi latihan dan tingkatkan ketelitian."
+                                actualScore < 75 -> "Tingkatkan konsistensi, kelola waktu, dan telaah kembali alasan setiap jawaban."
+                                actualScore < 90 -> "Pertajam strategi menjawab soal sulit dan pertahankan latihan rutin."
+                                else -> "Tantang dirimu dengan variasi soal yang lebih kompleks dan pertahankan konsistensi."
+                            })
+                        }
+                    } else {
+                        item {
+                            Card(shape = RoundedCornerShape(20.dp), modifier = Modifier.fillMaxWidth(),
+                                colors = CardDefaults.cardColors(containerColor = Color(0xFFE5F8F9))) {
+                                Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                                    Text("🔒 Analisis Jawaban & Pengembangan", color = ink, fontWeight = FontWeight.Bold,
+                                        style = MaterialTheme.typography.titleMedium)
+                                    Text("Khusus PRO: pembahasan jawaban per soal dan rekomendasi pengembangan kemampuan.",
+                                        color = ink)
+                                    Text("👑 Buka Analisis Lengkap — PRO", color = orange, fontWeight = FontWeight.Bold)
+                                }
+                            }
+                        }
                     }
-                    item { Button(onClick = { page = "home"; vm.loadExtras(isPro) }, colors = ButtonDefaults.buttonColors(containerColor = orange, contentColor = Color.White)) { Text("Selesai") } }
+                    item {
+                        Button(onClick = { page = "home"; vm.loadExtras(isPro) },
+                            modifier = Modifier.fillMaxWidth().height(52.dp),
+                            shape = RoundedCornerShape(16.dp),
+                            colors = ButtonDefaults.buttonColors(containerColor = teal, contentColor = Color.White)) {
+                            Text("Coba Tes Lainnya")
+                        }
+                    }
                 }
             }
             "history" -> LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
