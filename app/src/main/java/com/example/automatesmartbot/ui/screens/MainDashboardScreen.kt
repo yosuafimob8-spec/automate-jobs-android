@@ -181,7 +181,6 @@ private fun MainDashboardContent(
         Screen.CvBuilder.route -> cvHistory.last()
         Screen.LatihanPsikotes.route -> "Latihan Psikotes"
         Screen.AiInterview.route -> "AI Interview"
-        Screen.AiAgent.route -> "AI Agent"
         Screen.WorkPedia.route -> "WorkPedia"
         Screen.Riwayat.route -> "Riwayat Lamaran"
         Screen.SuratIzinDokumen.route -> "Surat Izin & Dokumen Kerja"
@@ -318,12 +317,6 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.WorkPedia.route) { WorkPediaScreen(onExit = navigateUpOrDashboard) }
-            composable(Screen.AiAgent.route) {
-                FixedCanvasTheme(dark = false) {
-                    AiAgentScreen()
-
-                }
-            }
             composable(Screen.SuratIzinDokumen.route) {
                 FixedCanvasTheme(dark = false) {
                     SuratIzinDokumenScreen()
