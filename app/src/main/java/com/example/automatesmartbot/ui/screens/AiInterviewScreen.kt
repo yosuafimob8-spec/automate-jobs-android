@@ -26,6 +26,11 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.background
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.ui.text.font.FontWeight
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -241,14 +246,25 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             }
         }
     }
+    val orange = Color(0xFFFF712E)
+    val teal = Color(0xFF10B8BF)
+    val ink = Color(0xFF14284B)
+    val cardShape = RoundedCornerShape(22.dp)
     Column(
-        Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),
+        Modifier.fillMaxSize().background(Color(0xFFF7FBFD)).verticalScroll(rememberScrollState()).padding(18.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Text("AI Interview", style = MaterialTheme.typography.headlineSmall)
-        Text("Wawancara adaptif dengan AI. Membutuhkan server AI Interview aktif.")
+        Text("✦ Karir Mate", color = orange, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+        Text("AI Interview", color = ink, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+        Text("Latihan wawancara, tingkatkan percaya diri, raih karir impianmu!", color = Color(0xFF52657C))
         if (!started) {
-            Text("Pilih posisi")
+            Card(shape = cardShape, colors = CardDefaults.cardColors(containerColor = Color(0xFFE3F8FA))) {
+                Column(Modifier.fillMaxWidth().padding(18.dp)) {
+                    Text("🎯 Persiapan Hari Ini", color = ink, fontWeight = FontWeight.Bold)
+                    Text("Pilih posisi, bahasa, dan unggah CV untuk latihan yang sesuai pengalamanmu.", color = ink)
+                }
+            }
+            Text("Pilih posisi", color = ink, fontWeight = FontWeight.Bold)
             roles.forEach { item ->
                 Row {
                     RadioButton(selected = role == item, onClick = { role = item })
@@ -269,7 +285,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             Text("File dibaca di HP. PDF scan perlu OCR. Maksimal 10 MB; AI memakai 6.000 karakter pertama.")
             OutlinedTextField(cv, { cv = it; cvLoaded = false }, label = { Text("Teks CV hasil ekstraksi") },
                 modifier = Modifier.fillMaxWidth(), minLines = 3)
-            Button(enabled = !loading && !cvReading && cv.isNotBlank() && BuildConfig.INTERVIEW_BASE_URL.isNotBlank(), onClick = {
+            Button(enabled = !loading && !cvReading && cv.isNotBlank() && BuildConfig.INTERVIEW_BASE_URL.isNotBlank(), colors = ButtonDefaults.buttonColors(containerColor = orange), shape = cardShape, modifier = Modifier.fillMaxWidth().height(54.dp), onClick = {
                 history = emptyList()
                 pendingQuestion = ""
                 report = ""
@@ -279,8 +295,13 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             if (endpoint == null) Text("Layanan AI Interview belum tersedia.", color = MaterialTheme.colorScheme.secondary)
         } else {
             if (report.isNotBlank()) {
-                Text("Hasil evaluasi", style = MaterialTheme.typography.titleLarge)
-                Text(report)
+                Card(shape = cardShape, colors = CardDefaults.cardColors(containerColor = Color(0xFFE3F8FA))) {
+                    Column(Modifier.fillMaxWidth().padding(20.dp)) {
+                        Text("🏆 Hasil & Insight", color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                        Spacer(Modifier.height(12.dp))
+                        Text(report, color = ink)
+                    }
+                }
                 Button(onClick = {
                     started = false
                     question = ""
@@ -290,8 +311,14 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     feedback = ""
                 }) { Text("Mulai sesi baru") }
             } else {
-                Text(if (pendingQuestion.isNotBlank()) "Pertanyaan perlu dijawab" else "Pertanyaan ${history.size + 1}", style = MaterialTheme.typography.titleMedium)
-                Text(question)
+                Text(if (pendingQuestion.isNotBlank()) "Pertanyaan perlu dijawab" else "Pertanyaan ${history.size + 1}", color = teal, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                Card(shape = cardShape, colors = CardDefaults.cardColors(containerColor = Color.White), elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
+                    Column(Modifier.fillMaxWidth().padding(18.dp)) {
+                        Text("👩‍💼 KarirMate AI HR", color = ink, fontWeight = FontWeight.Bold)
+                        Spacer(Modifier.height(10.dp))
+                        Text(question, color = ink, style = MaterialTheme.typography.bodyLarge)
+                    }
+                }
                 if (feedback.isNotBlank()) Text(feedback)
                 if (isPro) OutlinedButton(enabled = !loading, onClick = {
                     val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
@@ -306,7 +333,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 else Text("Mode suara tersedia untuk pengguna PRO.")
                 OutlinedTextField(answer, { answer = it }, label = { Text("Jawaban Anda") },
                     modifier = Modifier.fillMaxWidth(), minLines = 4)
-                Button(enabled = !loading && answer.isNotBlank(), onClick = {
+                Button(enabled = !loading && answer.isNotBlank(), colors = ButtonDefaults.buttonColors(containerColor = orange), shape = cardShape, modifier = Modifier.fillMaxWidth(), onClick = {
                     send("reply", history + InterviewTurn(question, answer.trim()))
                 }) { Text("Kirim jawaban") }
                 OutlinedButton(enabled = !loading, onClick = {
