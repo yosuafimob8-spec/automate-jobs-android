@@ -211,12 +211,14 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     val context = LocalContext.current
     val session = remember(context) { SessionManager(context.applicationContext) }
     var ttsReady by remember { mutableStateOf(false) }
+    var voiceMode by rememberSaveable { mutableStateOf(false) }
     val tts = remember { TextToSpeech(context) { status -> ttsReady = status == TextToSpeech.SUCCESS } }
     DisposableEffect(tts) { onDispose { tts.stop(); tts.shutdown() } }
     val voiceLauncher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == android.app.Activity.RESULT_OK) {
             val spoken = result.data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)?.firstOrNull()
             if (!spoken.isNullOrBlank()) answer = spoken
+            else error = "Suara tidak terdeteksi. Coba lagi."
         }
     }
     val scope = rememberCoroutineScope()
@@ -269,7 +271,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 } else {
                     question = response.question
                     pendingQuestion = if (response.awaitingAnswer) response.question else ""
-                    if (isPro && ttsReady) {
+                    if (isPro && voiceMode && ttsReady) {
                         tts.language = if (language == "en") Locale.ENGLISH else Locale.forLanguageTag("id-ID")
                         tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
                     }
@@ -393,6 +395,11 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             }, modifier = Modifier.fillMaxWidth()) { Text(if (cvReading) "Membaca CV..." else "📄 Unggah CV PDF / DOCX (opsional)") }
             if (cvLoaded) Text("✓ CV siap digunakan untuk AI Interview", color = teal)
             Text("CV maksimal 10 MB; PDF scan memerlukan OCR.", color = muted, style = MaterialTheme.typography.bodySmall)
+            if (isPro) Row(verticalAlignment = Alignment.CenterVertically) {
+                Switch(checked = voiceMode, onCheckedChange = { voiceMode = it })
+                Spacer(Modifier.width(10.dp))
+                Text("Mode suara: AI membacakan pertanyaan", color = ink)
+            }
             Button(enabled = !loading && !cvReading && endpoint != null, modifier = Modifier.fillMaxWidth().height(56.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = orange), shape = RoundedCornerShape(16.dp),
                 onClick = {
@@ -472,6 +479,12 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     }
                     try { voiceLauncher.launch(intent) } catch (_: Exception) { error = "Pengenalan suara tidak tersedia." }
                 }) { Text("🎙") }
+                if (isPro && voiceMode) TextButton(onClick = {
+                    if (ttsReady && question.isNotBlank()) {
+                        tts.language = if (language == "en") Locale.ENGLISH else Locale.forLanguageTag("id-ID")
+                        tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-repeat")
+                    } else error = "Mesin pembaca suara belum siap di perangkat."
+                }) { Text("🔊") }
                 Button(enabled = !loading && answer.isNotBlank(), onClick = {
                     send("reply", history + InterviewTurn(question, answer.trim()))
                 }, colors = ButtonDefaults.buttonColors(containerColor = orange),
