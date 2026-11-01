@@ -106,14 +106,6 @@ private val jobFeatures = listOf(
 private val automationFeatures = listOf(
     DashboardFeature(title = "WorkPedia", subtitle = "Istilah & Hak Karyawan", icon = Icons.Default.Description, accent = Color(0xFF9CE8E4), route = Screen.WorkPedia.route),
     DashboardFeature(
-        title = "AI Agent",
-        subtitle = "Otomasi dengan persetujuan Anda",
-        icon = Icons.Default.SmartToy,
-        accent = Color(0xFFEC4899),
-        route = Screen.AiAgent.route,
-        statusLabel = "Segera Hadir"
-    ),
-    DashboardFeature(
         title = "Kalkulator Gaji",
         subtitle = "Lembur, BPJS, PPh 21 & THR",
         icon = Icons.Default.History,
