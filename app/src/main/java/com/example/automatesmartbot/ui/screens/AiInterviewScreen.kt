@@ -16,6 +16,7 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -92,7 +93,7 @@ private suspend fun requestInterview(
 }
 
 @Composable
-fun AiInterviewScreen() {
+fun AiInterviewScreen(isPro: Boolean = false) {
     val roles = listOf("Admin Warehouse", "Supervisor Logistik", "Staff Operasional", "Operator Produksi", "Sales", "Lainnya")
     var role by rememberSaveable { mutableStateOf(roles.first()) }
     var language by rememberSaveable { mutableStateOf("id") }
@@ -135,7 +136,7 @@ fun AiInterviewScreen() {
                     report = response.finalReport
                 } else {
                     question = response.question
-                    if (ttsReady) {
+                    if (isPro && ttsReady) {
                         tts.language = if (language == "en") Locale.ENGLISH else Locale.forLanguageTag("id-ID")
                         tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
                     }
@@ -175,7 +176,7 @@ fun AiInterviewScreen() {
             OutlinedTextField(endpoint, { endpoint = it }, label = { Text("Alamat API AI Interview (sementara untuk pengujian)") },
                 modifier = Modifier.fillMaxWidth(), singleLine = true)
             OutlinedTextField(testToken, { testToken = it }, label = { Text("Token pengujian server") },
-                modifier = Modifier.fillMaxWidth(), singleLine = true)
+                modifier = Modifier.fillMaxWidth(), singleLine = true, visualTransformation = PasswordVisualTransformation())
             Button(enabled = !loading && endpoint.isNotBlank() && testToken.isNotBlank(), onClick = {
                 history = emptyList()
                 report = ""
@@ -197,7 +198,7 @@ fun AiInterviewScreen() {
                 Text("Pertanyaan ${history.size + 1}", style = MaterialTheme.typography.titleMedium)
                 Text(question)
                 if (feedback.isNotBlank()) Text(feedback)
-                OutlinedButton(onClick = {
+                if (isPro) OutlinedButton(onClick = {
                     val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
                         putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
                         putExtra(RecognizerIntent.EXTRA_LANGUAGE, if (language == "en") "en-US" else "id-ID")
@@ -206,7 +207,8 @@ fun AiInterviewScreen() {
                     try { voiceLauncher.launch(intent) } catch (_: Exception) {
                         error = "Pengenalan suara tidak tersedia di perangkat ini."
                     }
-                }) { Text("🎙 Jawab dengan suara") }
+                }) { Text("🎙 Jawab dengan suara (PRO)") }
+                else Text("Mode suara tersedia untuk pengguna PRO.")
                 OutlinedTextField(answer, { answer = it }, label = { Text("Jawaban Anda") },
                     modifier = Modifier.fillMaxWidth(), minLines = 4)
                 Button(enabled = !loading && answer.isNotBlank(), onClick = {
