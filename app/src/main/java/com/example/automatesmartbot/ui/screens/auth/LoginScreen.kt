@@ -54,7 +54,7 @@ fun LoginScreen(
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 Text(
-                    text = "Masuk AutoMate",
+                    text = "Masuk KarirMate",
                     fontWeight = FontWeight.Bold,
                     fontSize = 22.sp,
                     color = Color.White
