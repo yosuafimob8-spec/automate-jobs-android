@@ -26,6 +26,7 @@ sealed class Screen(val route: String, val title: String, val icon: ImageVector)
     object CareerLetters : Screen("career_letters", "Surat Lamaran & Resign", Icons.Default.Description)
     object CareerDocuments : Screen("career_documents", "Dokumen Karier", Icons.Default.FolderShared)
     object AiInterview : Screen("ai_interview", "AI Interview", Icons.Default.Mic)
+    object WorkPedia : Screen("workpedia", "WorkPedia", Icons.Default.Description)
     object AiAgent : Screen("ai_agent", "AI Agent", Icons.Default.SmartToy)
     object Riwayat : Screen("riwayat", "Riwayat", Icons.Default.History)
     object SuratIzinDokumen : Screen("surat_izin_dokumen", "Dokumen", Icons.Default.FolderShared)
@@ -50,6 +51,7 @@ val detailNavItems = listOf(
     Screen.LatihanPsikotes,
     Screen.AiInterview,
     Screen.AiAgent,
+    Screen.WorkPedia,
     Screen.SuratIzinDokumen
 )
 
