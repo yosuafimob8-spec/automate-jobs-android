@@ -8,6 +8,7 @@ import android.util.Xml
 import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
 import com.tom_roush.pdfbox.pdmodel.PDDocument
 import com.tom_roush.pdfbox.text.PDFTextStripper
+import java.io.ByteArrayOutputStream
 import java.util.zip.ZipInputStream
 import org.xmlpull.v1.XmlPullParser
 import android.speech.RecognizerIntent
@@ -39,8 +40,17 @@ private fun extractCv(context: android.content.Context, uri: Uri): String {
     val pdf = mime == "application/pdf"
     val docx = mime == "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     require(pdf || docx) { "Pilih PDF atau DOCX." }
-    val bytes = context.contentResolver.openInputStream(uri)?.use { it.readNBytes(10 * 1024 * 1024 + 1) }
-        ?: error("CV tidak dapat dibuka.")
+    val bytes = context.contentResolver.openInputStream(uri)?.use { input ->
+        val output = ByteArrayOutputStream()
+        val buffer = ByteArray(8192)
+        while (true) {
+            val read = input.read(buffer)
+            if (read < 0) break
+            output.write(buffer, 0, read)
+            require(output.size() <= 10 * 1024 * 1024) { "CV maksimal 10 MB." }
+        }
+        output.toByteArray()
+    } ?: error("CV tidak dapat dibuka.")
     require(bytes.size <= 10 * 1024 * 1024) { "CV maksimal 10 MB." }
     val text = if (pdf) {
         PDFBoxResourceLoader.init(context.applicationContext)
