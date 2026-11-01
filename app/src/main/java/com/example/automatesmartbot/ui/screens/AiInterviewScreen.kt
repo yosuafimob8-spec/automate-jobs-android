@@ -142,7 +142,10 @@ private suspend fun requestInterview(
     try {
         connection.outputStream.use { it.write(payload.toString().toByteArray(Charsets.UTF_8)) }
         if (connection.responseCode !in 200..299) {
-            throw IllegalStateException("Layanan AI Interview belum siap (HTTP ${connection.responseCode}).")
+            val status = connection.responseCode
+            val details = connection.errorStream?.bufferedReader()?.use { it.readText() }.orEmpty()
+            val message = runCatching { JSONObject(details).optString("error") }.getOrDefault("")
+            throw IllegalStateException(if (message.isNotBlank()) "AI Interview (HTTP $status): $message" else "Layanan AI Interview belum siap (HTTP $status).")
         }
         val response = JSONObject(connection.inputStream.bufferedReader().use { it.readText() })
         val finalReport = if (action == "finish") buildString {
@@ -274,7 +277,11 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     answer = ""
                 }
             } catch (ex: Exception) {
-                error = ex.message ?: "Gagal menghubungi AI Interview."
+                error = when (ex) {
+                    is java.net.ConnectException -> "Server AI Interview tidak aktif. Jalankan layanan pada port 8790 di Termux."
+                    is java.net.SocketTimeoutException -> "Server AI Interview tidak merespons. Periksa layanan dan koneksi model AI."
+                    else -> ex.message ?: "Gagal menghubungi AI Interview."
+                }
             } finally {
                 loading = false
             }
