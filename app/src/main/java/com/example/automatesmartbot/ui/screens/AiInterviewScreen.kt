@@ -26,7 +26,7 @@ private data class InterviewReply(
 )
 
 private suspend fun requestInterview(
-    endpoint: String, role: String, language: String, cv: String,
+    endpoint: String, testToken: String, role: String, language: String, cv: String,
     action: String, history: List<InterviewTurn>
 ): InterviewReply = withContext(Dispatchers.IO) {
     require(endpoint.startsWith("https://") || endpoint.startsWith("http://10.0.2.2:")) {
@@ -49,6 +49,7 @@ private suspend fun requestInterview(
         readTimeout = 45000
         doOutput = true
         setRequestProperty("Content-Type", "application/json; charset=utf-8")
+        setRequestProperty("Authorization", "Bearer $testToken")
     }
     try {
         connection.outputStream.use { it.write(payload.toString().toByteArray(Charsets.UTF_8)) }
@@ -89,6 +90,7 @@ fun AiInterviewScreen() {
     var language by rememberSaveable { mutableStateOf("id") }
     var cv by rememberSaveable { mutableStateOf("") }
     var endpoint by rememberSaveable { mutableStateOf("") }
+    var testToken by remember { mutableStateOf("") }
     var started by rememberSaveable { mutableStateOf(false) }
     var question by rememberSaveable { mutableStateOf("") }
     var answer by rememberSaveable { mutableStateOf("") }
@@ -104,7 +106,7 @@ fun AiInterviewScreen() {
         error = ""
         scope.launch {
             try {
-                val response = requestInterview(endpoint.trim(), role, language, cv, action, turns)
+                val response = requestInterview(endpoint.trim(), testToken, role, language, cv, action, turns)
                 history = turns
                 feedback = buildString {
                     if (response.score != null) append("Nilai jawaban: ${response.score}/100\\n")
@@ -150,7 +152,9 @@ fun AiInterviewScreen() {
                 modifier = Modifier.fillMaxWidth(), minLines = 3)
             OutlinedTextField(endpoint, { endpoint = it }, label = { Text("Alamat API AI Interview (sementara untuk pengujian)") },
                 modifier = Modifier.fillMaxWidth(), singleLine = true)
-            Button(enabled = !loading && endpoint.isNotBlank(), onClick = {
+            OutlinedTextField(testToken, { testToken = it }, label = { Text("Token pengujian server") },
+                modifier = Modifier.fillMaxWidth(), singleLine = true)
+            Button(enabled = !loading && endpoint.isNotBlank() && testToken.isNotBlank(), onClick = {
                 history = emptyList()
                 report = ""
                 feedback = ""
