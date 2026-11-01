@@ -102,6 +102,16 @@ private val jobFeatures = listOf(
     )
 )
 
+private val interviewFeatures = listOf(
+    DashboardFeature(
+        title = "AI Interview",
+        subtitle = "Latihan wawancara teks dan suara",
+        icon = Icons.Default.Mic,
+        accent = Color(0xFF06B6D4),
+        route = Screen.AiInterview.route
+    )
+)
+
 private val automationFeatures = listOf(
     DashboardFeature(
         title = "Kalkulator Gaji",
@@ -175,6 +185,8 @@ fun DashboardScreen(
                 item { AccountStats(status = status) }
                 item { SectionHeader(title = "Cari Kerja & Persiapan", itemCount = jobFeatures.size) }
                 item { FeatureGrid(features = jobFeatures, onNavigate = onNavigate) }
+                item { SectionHeader(title = "Simulasi Wawancara", itemCount = interviewFeatures.size) }
+                item { FeatureGrid(features = interviewFeatures, onNavigate = onNavigate) }
                 item { SectionHeader(title = "Otomasi & Dokumen", itemCount = automationFeatures.size) }
                 item { FeatureGrid(features = automationFeatures, onNavigate = onNavigate) }
                 item { SectionHeader(title = "Aktivitas Terakhir") }
