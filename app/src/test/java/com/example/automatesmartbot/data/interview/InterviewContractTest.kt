@@ -30,6 +30,19 @@ class InterviewContractTest {
     private val dispatcher=StandardTestDispatcher()
     @Before fun setup(){ Dispatchers.setMain(dispatcher) }
     @After fun cleanup(){ Dispatchers.resetMain() }
+    @Test fun activeCvUsesSharedFactualContextWithoutSendingPrivateContacts()=runTest(dispatcher) {
+        MockWebServer().use { server ->
+            server.start()
+            val api=Retrofit.Builder().baseUrl(server.url("/")).addConverterFactory(GsonConverterFactory.create()).build().create(InterviewApi::class.java)
+            val cv=com.example.automatesmartbot.data.cv.CvContent(
+                contact=com.example.automatesmartbot.data.cv.CvContact(fullName="Private Person",email="private@example.com"),
+                summary="Pengalaman administrasi dokumen dan menyusun laporan mingguan dengan Excel.")
+            server.enqueue(MockResponse().setBody("{\"session\":{\"id\":\"session\",\"revision\":0}}"))
+            InterviewRepository(api).start(mapOf("cv" to cv,"use_backend_cv" to false))
+            val context=JSONObject(server.takeRequest().body.readUtf8()).getString("cv")
+            assertTrue(context.contains("Excel"));assertFalse(context.contains("private@example.com"));assertFalse(context.contains("Private Person"))
+        }
+    }
     @Test fun directoryFiltersAndOneEmailPreviewUseCorrectAuthenticatedApiRoutes()=runTest(dispatcher) {
         MockWebServer().use { server -> server.start(); val api=Retrofit.Builder().baseUrl(server.url("/")).addConverterFactory(GsonConverterFactory.create()).build().create(ApiService::class.java)
             server.enqueue(MockResponse().setBody("{\"success\":true,\"items\":[]}"));api.companies("93","Merauke","Logistik","Admin",50).readJson()

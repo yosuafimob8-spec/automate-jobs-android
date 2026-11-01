@@ -108,12 +108,15 @@ internal fun InterviewResult(result: JSONObject, pro: Boolean) {
         Text("${result.getInt("overall")}/100", style = MaterialTheme.typography.headlineLarge)
         listOf("quality" to "Kualitas jawaban", "relevance" to "Relevansi posisi", "communication" to "Komunikasi teks").forEach { (key, label) -> Text("$label: ${result.getInt(key)}/100"); LinearProgressIndicator(progress = { (result.getInt(key)/100f).coerceIn(0f,1f) }, modifier = Modifier.fillMaxWidth()) }
         Text("Metode: ${result.text("evaluation_method")}"); Text(result.text("note"))
+        if (result.text("evaluation_notice").isNotBlank()) Text(result.text("evaluation_notice"))
         listOf("strengths" to "Kelebihan", "weaknesses" to "Perlu ditingkatkan", "recommendations" to "Latihan berikutnya").forEach { (key,label) -> Text(label, style = MaterialTheme.typography.titleMedium); result.optJSONArray(key)?.let { a -> repeat(a.length()) { Text("• ${a.getString(it)}") } } }
         result.optJSONObject("english_feedback")?.let { en -> Text("English — ${en.text("basis")}"); Text(en.text("recommendation")); en.optJSONArray("patterns_to_review")?.let { if (it.length()>0) Text("Periksa pola: $it") } }
         if (pro) { Text("Analisis Mendalam · PRO", style = MaterialTheme.typography.titleMedium)
             result.optJSONArray("deep_analysis")?.let { turns -> repeat(turns.length()) { index ->
                 val turn = turns.getJSONObject(index)
                 Text("Jawaban ${index + 1}: kualitas ${turn.optInt("quality")}, relevansi ${turn.optInt("relevance")}, komunikasi ${turn.optInt("communication")}")
+                if (turn.text("feedback").isNotBlank()) Text(turn.text("feedback"))
+                turn.optJSONArray("evidence")?.let { evidence -> repeat(evidence.length()) { Text("• ${evidence.getString(it)}") } }
             } }
             ; if (result.text("improved_answer").isNotBlank()) Text(result.text("improved_answer")); result.optJSONArray("practice_plan")?.let { a -> repeat(a.length()) { Text("• ${a.getString(it)}") } } }
         else Text("Analisis mendalam dan perkembangan tersedia untuk PRO terverifikasi.")
