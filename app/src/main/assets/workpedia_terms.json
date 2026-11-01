@@ -1,1 +1,702 @@
-[{"id":"1","name":"PKWT","fullName":"PKWT","definition":"Istilah dunia kerja: PKWT. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"2","name":"PKWTT","fullName":"PKWTT","definition":"Istilah dunia kerja: PKWTT. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"3","name":"Probation","fullName":"Probation","definition":"Istilah dunia kerja: Probation. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"4","name":"Outsourcing","fullName":"Outsourcing","definition":"Istilah dunia kerja: Outsourcing. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"5","name":"Surat Peringatan","fullName":"Surat Peringatan","definition":"Istilah dunia kerja: Surat Peringatan. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"6","name":"PHK","fullName":"PHK","definition":"Istilah dunia kerja: PHK. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"7","name":"Pesangon","fullName":"Pesangon","definition":"Istilah dunia kerja: Pesangon. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"8","name":"UPMK","fullName":"UPMK","definition":"Istilah dunia kerja: UPMK. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"9","name":"UPH","fullName":"UPH","definition":"Istilah dunia kerja: UPH. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"10","name":"THR","fullName":"THR","definition":"Istilah dunia kerja: THR. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"11","name":"UMR","fullName":"UMR","definition":"Istilah dunia kerja: UMR. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"12","name":"UMP","fullName":"UMP","definition":"Istilah dunia kerja: UMP. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"13","name":"UMK","fullName":"UMK","definition":"Istilah dunia kerja: UMK. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"14","name":"UMSK","fullName":"UMSK","definition":"Istilah dunia kerja: UMSK. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"15","name":"Take Home Pay","fullName":"Take Home Pay","definition":"Istilah dunia kerja: Take Home Pay. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"16","name":"Gross Salary","fullName":"Gross Salary","definition":"Istilah dunia kerja: Gross Salary. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"17","name":"Net Salary","fullName":"Net Salary","definition":"Istilah dunia kerja: Net Salary. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"18","name":"Payroll","fullName":"Payroll","definition":"Istilah dunia kerja: Payroll. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Kontrak dan pengupahan"},{"id":"19","name":"Payslip","fullName":"Payslip","definition":"Istilah dunia kerja: Payslip. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"20","name":"Overtime","fullName":"Overtime","definition":"Istilah dunia kerja: Overtime. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"21","name":"Shift","fullName":"Shift","definition":"Istilah dunia kerja: Shift. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"22","name":"Roster","fullName":"Roster","definition":"Istilah dunia kerja: Roster. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"23","name":"Absensi","fullName":"Absensi","definition":"Istilah dunia kerja: Absensi. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"24","name":"Cuti Tahunan","fullName":"Cuti Tahunan","definition":"Istilah dunia kerja: Cuti Tahunan. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"25","name":"Cuti Melahirkan","fullName":"Cuti Melahirkan","definition":"Istilah dunia kerja: Cuti Melahirkan. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"26","name":"Cuti Haid","fullName":"Cuti Haid","definition":"Istilah dunia kerja: Cuti Haid. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"27","name":"Cuti Sakit","fullName":"Cuti Sakit","definition":"Istilah dunia kerja: Cuti Sakit. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"28","name":"BPJS Kesehatan","fullName":"BPJS Kesehatan","definition":"Istilah dunia kerja: BPJS Kesehatan. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"29","name":"BPJS Ketenagakerjaan","fullName":"BPJS Ketenagakerjaan","definition":"Istilah dunia kerja: BPJS Ketenagakerjaan. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"30","name":"JHT","fullName":"JHT","definition":"Istilah dunia kerja: JHT. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"31","name":"JP","fullName":"JP","definition":"Istilah dunia kerja: JP. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"32","name":"JKK","fullName":"JKK","definition":"Istilah dunia kerja: JKK. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"33","name":"JKM","fullName":"JKM","definition":"Istilah dunia kerja: JKM. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"34","name":"JKP","fullName":"JKP","definition":"Istilah dunia kerja: JKP. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"35","name":"PPh 21","fullName":"PPh 21","definition":"Istilah dunia kerja: PPh 21. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"36","name":"NPWP","fullName":"NPWP","definition":"Istilah dunia kerja: NPWP. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"37","name":"PTKP","fullName":"PTKP","definition":"Istilah dunia kerja: PTKP. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"38","name":"TER","fullName":"TER","definition":"Istilah dunia kerja: TER. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Hak dan administrasi"},{"id":"39","name":"KPI","fullName":"KPI","definition":"Istilah dunia kerja: KPI. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Operasional"},{"id":"40","name":"OKR","fullName":"OKR","definition":"Istilah dunia kerja: OKR. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Operasional"},{"id":"41","name":"SOP","fullName":"SOP","definition":"Istilah dunia kerja: SOP. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Operasional"},{"id":"42","name":"SLA","fullName":"SLA","definition":"Istilah dunia kerja: SLA. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Operasional"},{"id":"43","name":"K3","fullName":"K3","definition":"Istilah dunia kerja: K3. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Operasional"},{"id":"44","name":"APD","fullName":"APD","definition":"Istilah dunia kerja: APD. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Operasional"},{"id":"45","name":"P3K","fullName":"P3K","definition":"Istilah dunia kerja: P3K. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Operasional"},{"id":"46","name":"HSE","fullName":"HSE","definition":"Istilah dunia kerja: HSE. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Operasional"},{"id":"47","name":"HRD","fullName":"HRD","definition":"Istilah dunia kerja: HRD. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Operasional"},{"id":"48","name":"HRIS","fullName":"HRIS","definition":"Istilah dunia kerja: HRIS. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Operasional"},{"id":"49","name":"Onboarding","fullName":"Onboarding","definition":"Istilah dunia kerja: Onboarding. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"50","name":"Offboarding","fullName":"Offboarding","definition":"Istilah dunia kerja: Offboarding. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"51","name":"Resign","fullName":"Resign","definition":"Istilah dunia kerja: Resign. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"52","name":"Notice Period","fullName":"Notice Period","definition":"Istilah dunia kerja: Notice Period. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"53","name":"Exit Interview","fullName":"Exit Interview","definition":"Istilah dunia kerja: Exit Interview. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"54","name":"Job Description","fullName":"Job Description","definition":"Istilah dunia kerja: Job Description. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"55","name":"Job Specification","fullName":"Job Specification","definition":"Istilah dunia kerja: Job Specification. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"56","name":"Offering Letter","fullName":"Offering Letter","definition":"Istilah dunia kerja: Offering Letter. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"57","name":"LoA","fullName":"LoA","definition":"Istilah dunia kerja: LoA. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"58","name":"MCU","fullName":"MCU","definition":"Istilah dunia kerja: MCU. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"59","name":"Interview HR","fullName":"Interview HR","definition":"Istilah dunia kerja: Interview HR. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"60","name":"User Interview","fullName":"User Interview","definition":"Istilah dunia kerja: User Interview. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"61","name":"Psikotes","fullName":"Psikotes","definition":"Istilah dunia kerja: Psikotes. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"62","name":"Assessment Center","fullName":"Assessment Center","definition":"Istilah dunia kerja: Assessment Center. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"63","name":"Mutasi","fullName":"Mutasi","definition":"Istilah dunia kerja: Mutasi. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"64","name":"Promosi","fullName":"Promosi","definition":"Istilah dunia kerja: Promosi. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"65","name":"Demosi","fullName":"Demosi","definition":"Istilah dunia kerja: Demosi. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"66","name":"Disiplin Kerja","fullName":"Disiplin Kerja","definition":"Istilah dunia kerja: Disiplin Kerja. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"67","name":"Peraturan Perusahaan","fullName":"Peraturan Perusahaan","definition":"Istilah dunia kerja: Peraturan Perusahaan. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"68","name":"PKB","fullName":"PKB","definition":"Istilah dunia kerja: PKB. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"69","name":"Serikat Pekerja","fullName":"Serikat Pekerja","definition":"Istilah dunia kerja: Serikat Pekerja. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"},{"id":"70","name":"Bipartit","fullName":"Bipartit","definition":"Istilah dunia kerja: Bipartit. Pelajari penerapannya sesuai kebijakan perusahaan dan ketentuan yang berlaku.","category":"Karier dan hubungan kerja"}]
+[
+  {
+    "id": "1",
+    "name": "PKWT",
+    "fullName": "PKWT",
+    "definition": "Perjanjian kerja untuk jangka waktu atau pekerjaan tertentu.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Perjanjian kerja untuk jangka waktu atau pekerjaan tertentu.",
+    "example": "Contoh: istilah PKWT dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "2",
+    "name": "PKWTT",
+    "fullName": "PKWTT",
+    "definition": "Perjanjian kerja tanpa batas waktu tertentu.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Perjanjian kerja tanpa batas waktu tertentu.",
+    "example": "Contoh: istilah PKWTT dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "3",
+    "name": "Probation",
+    "fullName": "Probation",
+    "definition": "Masa percobaan kerja, dengan ketentuan khusus sesuai jenis perjanjian.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Masa percobaan kerja, dengan ketentuan khusus sesuai jenis perjanjian.",
+    "example": "Contoh: istilah Probation dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "4",
+    "name": "Outsourcing",
+    "fullName": "Outsourcing",
+    "definition": "Penyerahan sebagian pekerjaan kepada perusahaan penyedia jasa.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Penyerahan sebagian pekerjaan kepada perusahaan penyedia jasa.",
+    "example": "Contoh: istilah Outsourcing dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "5",
+    "name": "Surat Peringatan",
+    "fullName": "Surat Peringatan",
+    "definition": "Dokumen peringatan tertulis atas pelanggaran aturan kerja.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Dokumen peringatan tertulis atas pelanggaran aturan kerja.",
+    "example": "Contoh: istilah Surat Peringatan dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "6",
+    "name": "PHK",
+    "fullName": "PHK",
+    "definition": "Pengakhiran hubungan kerja antara pekerja dan pengusaha.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Pengakhiran hubungan kerja antara pekerja dan pengusaha.",
+    "example": "Contoh: istilah PHK dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "7",
+    "name": "Pesangon",
+    "fullName": "Pesangon",
+    "definition": "Pembayaran tertentu terkait pemutusan hubungan kerja.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Pembayaran tertentu terkait pemutusan hubungan kerja.",
+    "example": "Contoh: istilah Pesangon dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "8",
+    "name": "UPMK",
+    "fullName": "UPMK",
+    "definition": "Uang penghargaan masa kerja.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Uang penghargaan masa kerja.",
+    "example": "Contoh: istilah UPMK dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "9",
+    "name": "UPH",
+    "fullName": "UPH",
+    "definition": "Uang penggantian hak.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Uang penggantian hak.",
+    "example": "Contoh: istilah UPH dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "10",
+    "name": "THR",
+    "fullName": "THR",
+    "definition": "Tunjangan Hari Raya keagamaan.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Tunjangan Hari Raya keagamaan.",
+    "example": "Contoh: istilah THR dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "11",
+    "name": "UMR",
+    "fullName": "UMR",
+    "definition": "Istilah umum upah minimum regional, kini lazim memakai UMP atau UMK.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Istilah umum upah minimum regional, kini lazim memakai UMP atau UMK.",
+    "example": "Contoh: istilah UMR dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "12",
+    "name": "UMP",
+    "fullName": "UMP",
+    "definition": "Upah Minimum Provinsi.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Upah Minimum Provinsi.",
+    "example": "Contoh: istilah UMP dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "13",
+    "name": "UMK",
+    "fullName": "UMK",
+    "definition": "Upah Minimum Kabupaten/Kota.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Upah Minimum Kabupaten/Kota.",
+    "example": "Contoh: istilah UMK dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "14",
+    "name": "UMSK",
+    "fullName": "UMSK",
+    "definition": "Upah minimum sektoral kabupaten/kota bila ditetapkan.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Upah minimum sektoral kabupaten/kota bila ditetapkan.",
+    "example": "Contoh: istilah UMSK dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "15",
+    "name": "Take Home Pay",
+    "fullName": "Take Home Pay",
+    "definition": "Jumlah gaji yang diterima setelah potongan.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Jumlah gaji yang diterima setelah potongan.",
+    "example": "Contoh: istilah Take Home Pay dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "16",
+    "name": "Gross Salary",
+    "fullName": "Gross Salary",
+    "definition": "Gaji sebelum potongan.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Gaji sebelum potongan.",
+    "example": "Contoh: istilah Gross Salary dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "17",
+    "name": "Net Salary",
+    "fullName": "Net Salary",
+    "definition": "Gaji setelah potongan.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Gaji setelah potongan.",
+    "example": "Contoh: istilah Net Salary dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "18",
+    "name": "Payroll",
+    "fullName": "Payroll",
+    "definition": "Proses perhitungan dan pembayaran gaji.",
+    "category": "Kontrak dan pengupahan",
+    "simple": "Proses perhitungan dan pembayaran gaji.",
+    "example": "Contoh: istilah Payroll dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "19",
+    "name": "Payslip",
+    "fullName": "Payslip",
+    "definition": "Dokumen rincian gaji dan potongan.",
+    "category": "Hak dan administrasi",
+    "simple": "Dokumen rincian gaji dan potongan.",
+    "example": "Contoh: istilah Payslip dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "20",
+    "name": "Overtime",
+    "fullName": "Overtime",
+    "definition": "Kerja di luar waktu kerja yang ditentukan.",
+    "category": "Hak dan administrasi",
+    "simple": "Kerja di luar waktu kerja yang ditentukan.",
+    "example": "Contoh: istilah Overtime dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "21",
+    "name": "Shift",
+    "fullName": "Shift",
+    "definition": "Pembagian jam kerja bergiliran.",
+    "category": "Hak dan administrasi",
+    "simple": "Pembagian jam kerja bergiliran.",
+    "example": "Contoh: istilah Shift dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "22",
+    "name": "Roster",
+    "fullName": "Roster",
+    "definition": "Pola jadwal kerja berulang.",
+    "category": "Hak dan administrasi",
+    "simple": "Pola jadwal kerja berulang.",
+    "example": "Contoh: istilah Roster dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "23",
+    "name": "Absensi",
+    "fullName": "Absensi",
+    "definition": "Pencatatan kehadiran pekerja.",
+    "category": "Hak dan administrasi",
+    "simple": "Pencatatan kehadiran pekerja.",
+    "example": "Contoh: istilah Absensi dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "24",
+    "name": "Cuti Tahunan",
+    "fullName": "Cuti Tahunan",
+    "definition": "Hak istirahat tahunan sesuai ketentuan.",
+    "category": "Hak dan administrasi",
+    "simple": "Hak istirahat tahunan sesuai ketentuan.",
+    "example": "Contoh: istilah Cuti Tahunan dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "25",
+    "name": "Cuti Melahirkan",
+    "fullName": "Cuti Melahirkan",
+    "definition": "Istirahat pekerja terkait persalinan.",
+    "category": "Hak dan administrasi",
+    "simple": "Istirahat pekerja terkait persalinan.",
+    "example": "Contoh: istilah Cuti Melahirkan dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "26",
+    "name": "Cuti Haid",
+    "fullName": "Cuti Haid",
+    "definition": "Hak istirahat terkait nyeri haid sesuai ketentuan.",
+    "category": "Hak dan administrasi",
+    "simple": "Hak istirahat terkait nyeri haid sesuai ketentuan.",
+    "example": "Contoh: istilah Cuti Haid dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "27",
+    "name": "Cuti Sakit",
+    "fullName": "Cuti Sakit",
+    "definition": "Ketidakhadiran karena kondisi kesehatan sesuai ketentuan.",
+    "category": "Hak dan administrasi",
+    "simple": "Ketidakhadiran karena kondisi kesehatan sesuai ketentuan.",
+    "example": "Contoh: istilah Cuti Sakit dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "28",
+    "name": "BPJS Kesehatan",
+    "fullName": "BPJS Kesehatan",
+    "definition": "Program jaminan kesehatan nasional.",
+    "category": "Hak dan administrasi",
+    "simple": "Program jaminan kesehatan nasional.",
+    "example": "Contoh: istilah BPJS Kesehatan dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "29",
+    "name": "BPJS Ketenagakerjaan",
+    "fullName": "BPJS Ketenagakerjaan",
+    "definition": "Program jaminan sosial ketenagakerjaan.",
+    "category": "Hak dan administrasi",
+    "simple": "Program jaminan sosial ketenagakerjaan.",
+    "example": "Contoh: istilah BPJS Ketenagakerjaan dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "30",
+    "name": "JHT",
+    "fullName": "JHT",
+    "definition": "Jaminan Hari Tua.",
+    "category": "Hak dan administrasi",
+    "simple": "Jaminan Hari Tua.",
+    "example": "Contoh: istilah JHT dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "31",
+    "name": "JP",
+    "fullName": "JP",
+    "definition": "Jaminan Pensiun.",
+    "category": "Hak dan administrasi",
+    "simple": "Jaminan Pensiun.",
+    "example": "Contoh: istilah JP dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "32",
+    "name": "JKK",
+    "fullName": "JKK",
+    "definition": "Jaminan Kecelakaan Kerja.",
+    "category": "Hak dan administrasi",
+    "simple": "Jaminan Kecelakaan Kerja.",
+    "example": "Contoh: istilah JKK dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "33",
+    "name": "JKM",
+    "fullName": "JKM",
+    "definition": "Jaminan Kematian.",
+    "category": "Hak dan administrasi",
+    "simple": "Jaminan Kematian.",
+    "example": "Contoh: istilah JKM dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "34",
+    "name": "JKP",
+    "fullName": "JKP",
+    "definition": "Jaminan Kehilangan Pekerjaan.",
+    "category": "Hak dan administrasi",
+    "simple": "Jaminan Kehilangan Pekerjaan.",
+    "example": "Contoh: istilah JKP dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "35",
+    "name": "PPh 21",
+    "fullName": "PPh 21",
+    "definition": "Pajak Penghasilan Pasal 21.",
+    "category": "Hak dan administrasi",
+    "simple": "Pajak Penghasilan Pasal 21.",
+    "example": "Contoh: istilah PPh 21 dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "36",
+    "name": "NPWP",
+    "fullName": "NPWP",
+    "definition": "Nomor Pokok Wajib Pajak.",
+    "category": "Hak dan administrasi",
+    "simple": "Nomor Pokok Wajib Pajak.",
+    "example": "Contoh: istilah NPWP dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "37",
+    "name": "PTKP",
+    "fullName": "PTKP",
+    "definition": "Penghasilan Tidak Kena Pajak.",
+    "category": "Hak dan administrasi",
+    "simple": "Penghasilan Tidak Kena Pajak.",
+    "example": "Contoh: istilah PTKP dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "38",
+    "name": "TER",
+    "fullName": "TER",
+    "definition": "Tarif Efektif Rata-rata untuk pemotongan PPh 21.",
+    "category": "Hak dan administrasi",
+    "simple": "Tarif Efektif Rata-rata untuk pemotongan PPh 21.",
+    "example": "Contoh: istilah TER dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "39",
+    "name": "KPI",
+    "fullName": "KPI",
+    "definition": "Indikator utama penilaian kinerja.",
+    "category": "Operasional",
+    "simple": "Indikator utama penilaian kinerja.",
+    "example": "Contoh: istilah KPI dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "40",
+    "name": "OKR",
+    "fullName": "OKR",
+    "definition": "Objectives and Key Results, kerangka tujuan dan hasil terukur.",
+    "category": "Operasional",
+    "simple": "Objectives and Key Results, kerangka tujuan dan hasil terukur.",
+    "example": "Contoh: istilah OKR dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "41",
+    "name": "SOP",
+    "fullName": "SOP",
+    "definition": "Prosedur Operasional Standar.",
+    "category": "Operasional",
+    "simple": "Prosedur Operasional Standar.",
+    "example": "Contoh: istilah SOP dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "42",
+    "name": "SLA",
+    "fullName": "SLA",
+    "definition": "Service Level Agreement, kesepakatan tingkat layanan.",
+    "category": "Operasional",
+    "simple": "Service Level Agreement, kesepakatan tingkat layanan.",
+    "example": "Contoh: istilah SLA dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "43",
+    "name": "K3",
+    "fullName": "K3",
+    "definition": "Keselamatan dan Kesehatan Kerja.",
+    "category": "Operasional",
+    "simple": "Keselamatan dan Kesehatan Kerja.",
+    "example": "Contoh: istilah K3 dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "44",
+    "name": "APD",
+    "fullName": "APD",
+    "definition": "Alat Pelindung Diri.",
+    "category": "Operasional",
+    "simple": "Alat Pelindung Diri.",
+    "example": "Contoh: istilah APD dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "45",
+    "name": "P3K",
+    "fullName": "P3K",
+    "definition": "Pertolongan Pertama Pada Kecelakaan.",
+    "category": "Operasional",
+    "simple": "Pertolongan Pertama Pada Kecelakaan.",
+    "example": "Contoh: istilah P3K dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "46",
+    "name": "HSE",
+    "fullName": "HSE",
+    "definition": "Health Safety Environment, fungsi kesehatan keselamatan lingkungan.",
+    "category": "Operasional",
+    "simple": "Health Safety Environment, fungsi kesehatan keselamatan lingkungan.",
+    "example": "Contoh: istilah HSE dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "47",
+    "name": "HRD",
+    "fullName": "HRD",
+    "definition": "Human Resources Development, pengembangan SDM.",
+    "category": "Operasional",
+    "simple": "Human Resources Development, pengembangan SDM.",
+    "example": "Contoh: istilah HRD dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "48",
+    "name": "HRIS",
+    "fullName": "HRIS",
+    "definition": "Human Resources Information System, sistem informasi SDM.",
+    "category": "Operasional",
+    "simple": "Human Resources Information System, sistem informasi SDM.",
+    "example": "Contoh: istilah HRIS dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "49",
+    "name": "Onboarding",
+    "fullName": "Onboarding",
+    "definition": "Proses orientasi pekerja baru.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Proses orientasi pekerja baru.",
+    "example": "Contoh: istilah Onboarding dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "50",
+    "name": "Offboarding",
+    "fullName": "Offboarding",
+    "definition": "Proses administrasi ketika pekerja keluar.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Proses administrasi ketika pekerja keluar.",
+    "example": "Contoh: istilah Offboarding dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "51",
+    "name": "Resign",
+    "fullName": "Resign",
+    "definition": "Pengunduran diri dari pekerjaan.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Pengunduran diri dari pekerjaan.",
+    "example": "Contoh: istilah Resign dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "52",
+    "name": "Notice Period",
+    "fullName": "Notice Period",
+    "definition": "Jangka waktu pemberitahuan sebelum keluar.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Jangka waktu pemberitahuan sebelum keluar.",
+    "example": "Contoh: istilah Notice Period dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "53",
+    "name": "Exit Interview",
+    "fullName": "Exit Interview",
+    "definition": "Wawancara akhir saat pekerja keluar.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Wawancara akhir saat pekerja keluar.",
+    "example": "Contoh: istilah Exit Interview dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "54",
+    "name": "Job Description",
+    "fullName": "Job Description",
+    "definition": "Uraian tugas dan tanggung jawab jabatan.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Uraian tugas dan tanggung jawab jabatan.",
+    "example": "Contoh: istilah Job Description dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "55",
+    "name": "Job Specification",
+    "fullName": "Job Specification",
+    "definition": "Persyaratan kompetensi suatu jabatan.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Persyaratan kompetensi suatu jabatan.",
+    "example": "Contoh: istilah Job Specification dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "56",
+    "name": "Offering Letter",
+    "fullName": "Offering Letter",
+    "definition": "Surat penawaran kerja.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Surat penawaran kerja.",
+    "example": "Contoh: istilah Offering Letter dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "57",
+    "name": "LoA",
+    "fullName": "LoA",
+    "definition": "Letter of Acceptance, surat penerimaan atau persetujuan.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Letter of Acceptance, surat penerimaan atau persetujuan.",
+    "example": "Contoh: istilah LoA dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "58",
+    "name": "MCU",
+    "fullName": "MCU",
+    "definition": "Medical Check Up, pemeriksaan kesehatan.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Medical Check Up, pemeriksaan kesehatan.",
+    "example": "Contoh: istilah MCU dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "59",
+    "name": "Interview HR",
+    "fullName": "Interview HR",
+    "definition": "Wawancara dengan bagian SDM.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Wawancara dengan bagian SDM.",
+    "example": "Contoh: istilah Interview HR dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "60",
+    "name": "User Interview",
+    "fullName": "User Interview",
+    "definition": "Wawancara dengan calon atasan atau pengguna posisi.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Wawancara dengan calon atasan atau pengguna posisi.",
+    "example": "Contoh: istilah User Interview dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "61",
+    "name": "Psikotes",
+    "fullName": "Psikotes",
+    "definition": "Tes psikologi untuk kebutuhan seleksi.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Tes psikologi untuk kebutuhan seleksi.",
+    "example": "Contoh: istilah Psikotes dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "62",
+    "name": "Assessment Center",
+    "fullName": "Assessment Center",
+    "definition": "Penilaian kompetensi melalui beberapa metode.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Penilaian kompetensi melalui beberapa metode.",
+    "example": "Contoh: istilah Assessment Center dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "63",
+    "name": "Mutasi",
+    "fullName": "Mutasi",
+    "definition": "Perpindahan unit atau penempatan kerja.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Perpindahan unit atau penempatan kerja.",
+    "example": "Contoh: istilah Mutasi dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "64",
+    "name": "Promosi",
+    "fullName": "Promosi",
+    "definition": "Kenaikan jabatan.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Kenaikan jabatan.",
+    "example": "Contoh: istilah Promosi dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "65",
+    "name": "Demosi",
+    "fullName": "Demosi",
+    "definition": "Penurunan jabatan.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Penurunan jabatan.",
+    "example": "Contoh: istilah Demosi dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "66",
+    "name": "Disiplin Kerja",
+    "fullName": "Disiplin Kerja",
+    "definition": "Kepatuhan terhadap aturan dan tata tertib kerja.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Kepatuhan terhadap aturan dan tata tertib kerja.",
+    "example": "Contoh: istilah Disiplin Kerja dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "67",
+    "name": "Peraturan Perusahaan",
+    "fullName": "Peraturan Perusahaan",
+    "definition": "Aturan kerja internal yang ditetapkan perusahaan.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Aturan kerja internal yang ditetapkan perusahaan.",
+    "example": "Contoh: istilah Peraturan Perusahaan dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "68",
+    "name": "PKB",
+    "fullName": "PKB",
+    "definition": "Perjanjian Kerja Bersama antara pengusaha dan serikat pekerja.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Perjanjian Kerja Bersama antara pengusaha dan serikat pekerja.",
+    "example": "Contoh: istilah PKB dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "69",
+    "name": "Serikat Pekerja",
+    "fullName": "Serikat Pekerja",
+    "definition": "Organisasi pekerja untuk memperjuangkan kepentingan anggotanya.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Organisasi pekerja untuk memperjuangkan kepentingan anggotanya.",
+    "example": "Contoh: istilah Serikat Pekerja dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  },
+  {
+    "id": "70",
+    "name": "Bipartit",
+    "fullName": "Bipartit",
+    "definition": "Perundingan langsung antara pekerja atau serikat dan pengusaha.",
+    "category": "Karier dan hubungan kerja",
+    "simple": "Perundingan langsung antara pekerja atau serikat dan pengusaha.",
+    "example": "Contoh: istilah Bipartit dapat muncul dalam dokumen atau pembicaraan kerja.",
+    "source": "Informasi edukatif; periksa ketentuan ketenagakerjaan dan kebijakan perusahaan terbaru."
+  }
+]
