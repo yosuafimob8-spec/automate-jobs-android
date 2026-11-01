@@ -7,6 +7,10 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.border
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -57,6 +61,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
     var family by remember { mutableStateOf("all") }
     var proNotice by remember { mutableStateOf(false) }
     var freeNotice by remember { mutableStateOf(false) }
+    var proResultTab by rememberSaveable { mutableStateOf(0) }
     val basicCategories = listOf("logika", "numerik", "matematika", "verbal", "bahasa", "ketelitian", "deret", "pola", "spasial", "gambar", "kepribadian", "twk", "tiu", "tkp")
     fun basicMode(mode: JsonObject): Boolean {
         val name = mode.s("title").lowercase()
@@ -203,33 +208,69 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             if (actualScore == null) "\nTes kepribadian tidak menggunakan nilai benar/salah." else
                                 "\nSkor latihan dinormalisasi ke skala 0–100; bobot resmi mengikuti server.")
                     }
+                    item {
+                        val correct = r.n("correct_count")
+                        val wrong = r.n("wrong_count")
+                        val blank = r.n("blank_count")
+                        val total = correct + wrong + blank
+                        if (total > 0 && actualScore != null) {
+                            Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                                Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                                    Text("📊 Tingkat Ketepatan", color = ink, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium)
+                                    val accuracy = (correct.toFloat() / total).coerceIn(0f, 1f)
+                                    Text("${(accuracy * 100).toInt()}% jawaban benar", color = teal, fontWeight = FontWeight.Bold)
+                                    LinearProgressIndicator(progress = { accuracy }, modifier = Modifier.fillMaxWidth().height(12.dp), color = teal, trackColor = Color(0xFFE6F0F1))
+                                    Text("✓ Benar $correct    ✕ Salah $wrong    ○ Kosong $blank", color = ink)
+                                }
+                            }
+                        }
+                    }
                     if (isPro) {
                         item {
-                            Info("👑 PRO • Analisis Jawaban",
-                                "Pembahasan jawaban berdasarkan hasil dari server. Periksa setiap soal untuk memahami kesalahan.")
+                            Text("👑 Analisis Lengkap", color = ink, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleLarge)
+                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                                listOf("Analisis", "Pembahasan", "Pengembangan").forEachIndexed { tab, label ->
+                                    FilterChip(selected = proResultTab == tab, onClick = { proResultTab = tab },
+                                        modifier = Modifier.weight(1f), label = { Text(label, style = MaterialTheme.typography.labelSmall) },
+                                        colors = FilterChipDefaults.filterChipColors(selectedContainerColor = orange, selectedLabelColor = Color.White))
+                                }
+                            }
                         }
-                        items(r.getAsJsonArray("questions")?.map { it.asJsonObject }.orEmpty()) { q ->
-                            Info(q.s("prompt"), q.s("explanation", "Pembahasan belum tersedia dari server."))
-                        }
-                        item {
-                            Info("🎯 Masukan Pengembangan • PRO", when {
-                                actualScore == null -> "Kenali kekuatan dan preferensi kerja dari hasil asesmen. Hasil ini bukan diagnosis psikologis."
-                                actualScore < 40 -> "Perkuat pemahaman dasar, tinjau soal yang keliru, dan latih kemampuan secara bertahap."
-                                actualScore < 60 -> "Fokus pada kategori yang paling sering salah. Ulangi latihan dan tingkatkan ketelitian."
-                                actualScore < 75 -> "Tingkatkan konsistensi, kelola waktu, dan telaah kembali alasan setiap jawaban."
-                                actualScore < 90 -> "Pertajam strategi menjawab soal sulit dan pertahankan latihan rutin."
-                                else -> "Tantang dirimu dengan variasi soal yang lebih kompleks dan pertahankan konsistensi."
-                            })
+                        when (proResultTab) {
+                            0 -> {
+                                item { Info("📈 Profil Kemampuan", "Analisis berdasarkan jawaban dan skor dari sesi latihan ini.") }
+                                val answeredQuestions = r.getAsJsonArray("questions")?.map { it.asJsonObject }.orEmpty()
+                                if (answeredQuestions.isEmpty()) item { Info("Data Analisis", "Detail jawaban belum tersedia dari server. Tidak ada kesimpulan per kategori yang dapat ditampilkan.") }
+                                else items(answeredQuestions) { q ->
+                                    Info(q.s("prompt", "Soal"), q.s("explanation", "Penjelasan belum tersedia dari server."))
+                                }
+                            }
+                            1 -> {
+                                val answeredQuestions = r.getAsJsonArray("questions")?.map { it.asJsonObject }.orEmpty()
+                                if (answeredQuestions.isEmpty()) item { Info("📚 Pembahasan", "Pembahasan soal belum tersedia dari server.") }
+                                else itemsIndexed(answeredQuestions) { index, q ->
+                                    Info("Soal ${index + 1}: ${q.s("prompt", "Pertanyaan")}", q.s("explanation", "Pembahasan belum tersedia dari server."))
+                                }
+                            }
+                            else -> item {
+                                Info("🎯 Saran Pengembangan", when {
+                                    actualScore == null -> "Kenali preferensi kerja dan kekuatanmu dari asesmen ini. Hasil ini bukan diagnosis psikologis."
+                                    actualScore < 40 -> "Perkuat konsep dasar dan ulangi soal yang belum dipahami. Mulai dengan sesi pendek setiap hari."
+                                    actualScore < 60 -> "Tinjau kembali jawaban yang salah dan latih ketelitian sebelum meningkatkan kecepatan."
+                                    actualScore < 75 -> "Tingkatkan konsistensi dengan latihan bertimer dan telaah pembahasan soal."
+                                    actualScore < 90 -> "Pertajam strategi menjawab soal sulit dan pertahankan latihan rutin."
+                                    else -> "Pertahankan kemampuanmu dan coba variasi soal dengan tingkat kesulitan lebih tinggi."
+                                })
+                            }
                         }
                     } else {
                         item {
                             Card(shape = RoundedCornerShape(20.dp), modifier = Modifier.fillMaxWidth(),
-                                colors = CardDefaults.cardColors(containerColor = Color(0xFFE5F8F9))) {
+                                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF1E2))) {
                                 Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                                    Text("🔒 Analisis Jawaban & Pengembangan", color = ink, fontWeight = FontWeight.Bold,
+                                    Text("🔒 Analisis & Pengembangan • PRO", color = ink, fontWeight = FontWeight.Bold,
                                         style = MaterialTheme.typography.titleMedium)
-                                    Text("Khusus PRO: pembahasan jawaban per soal dan rekomendasi pengembangan kemampuan.",
-                                        color = ink)
+                                    Text("Lihat pembahasan jawaban per soal, evaluasi kemampuan, dan saran pengembangan.", color = ink)
                                     Text("👑 Buka Analisis Lengkap — PRO", color = orange, fontWeight = FontWeight.Bold)
                                 }
                             }
@@ -366,7 +407,18 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
                 Column(horizontalAlignment = Alignment.End) { Text("TERJAWAB", color = Color(0xFF58657A), style = MaterialTheme.typography.labelMedium); Text("$answered/${questions.size}", color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
             }
         }
-        Text("Soal ${index + 1} dari ${questions.size}", fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
+        Text("📝 Soal ${index + 1} dari ${questions.size}", fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
+        Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            questions.forEachIndexed { number, q ->
+                val hasAnswer = q.get("selected_option_id")?.takeUnless { it.isJsonNull } != null
+                val selectedNumber = number == index
+                Surface(modifier = Modifier.size(38.dp).clickable { index = number }, shape = RoundedCornerShape(10.dp),
+                    color = if (selectedNumber) orange else if (hasAnswer) Color(0xFFD8F4F2) else Color.White,
+                    border = androidx.compose.foundation.BorderStroke(1.dp, if (selectedNumber) orange else Color(0xFFDCE5EB))) {
+                    Box(contentAlignment = Alignment.Center) { Text("${number + 1}", color = if (selectedNumber) Color.White else ink, fontWeight = FontWeight.Bold) }
+                }
+            }
+        }
         LinearProgressIndicator(progress = { if (questions.isEmpty()) 0f else answered.toFloat() / questions.size }, modifier = Modifier.fillMaxWidth().height(7.dp), color = orange, trackColor = Color(0xFFE3EBF1))
         questions.getOrNull(index)?.let { q ->
             Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
