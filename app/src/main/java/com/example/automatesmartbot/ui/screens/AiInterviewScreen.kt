@@ -294,6 +294,13 @@ fun AiInterviewScreen(isPro: Boolean = false) {
         }
     }
 
+    LaunchedEffect(pendingSpeech, loading, started) {
+        val speech = pendingSpeech
+        if (speech != null && !loading && started && question.isNotBlank()) {
+            pendingSpeech = null
+            send("reply", history + InterviewTurn(question, speech.trim()))
+        }
+    }
     val orange = Color(0xFFFF712E)
     val teal = Color(0xFF10B8BF)
     val ink = Color(0xFF14284B)
