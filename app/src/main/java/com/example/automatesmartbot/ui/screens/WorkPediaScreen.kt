@@ -36,7 +36,10 @@ fun WorkPediaScreen(onExit: () -> Unit) {
         }
     }
     Column(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Text("WorkPedia", style = MaterialTheme.typography.headlineMedium, color = Color(0xFF17324D))
+        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+            Text("WorkPedia", style = MaterialTheme.typography.headlineMedium, color = Color(0xFF17324D))
+            TextButton(onClick = onExit) { Text("Tutup") }
+        }
         if (entries.isEmpty()) {
             Text("Data WorkPedia belum terpasang. Periksa aset workpedia_terms.json.", color = MaterialTheme.colorScheme.error)
         } else {
