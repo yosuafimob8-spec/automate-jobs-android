@@ -1,4 +1,4 @@
-name: AI Interview Test APK
+name: KarirMate Feature Branch Test APK
 
 on:
   workflow_dispatch:
