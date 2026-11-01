@@ -116,7 +116,7 @@ private suspend fun requestInterview(
     val connection = (URL(endpoint).openConnection() as HttpURLConnection).apply {
         requestMethod = "POST"
         connectTimeout = 15000
-        readTimeout = 45000
+        readTimeout = 130000
         doOutput = true
         setRequestProperty("Content-Type", "application/json; charset=utf-8")
         setRequestProperty("Authorization", "Bearer $accessToken")
