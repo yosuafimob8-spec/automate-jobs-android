@@ -1,0 +1,18 @@
+test_answer_revision_score_and_history_are_persisted (test_psychotest_service.PsychotestServiceTests.test_answer_revision_score_and_history_are_persisted) ... ok
+test_existing_full_session_contract_remains_unchanged (test_psychotest_service.PsychotestServiceTests.test_existing_full_session_contract_remains_unchanged) ... ok
+test_free_catalog_and_ten_question_session_use_real_unique_bank_rows (test_psychotest_service.PsychotestServiceTests.test_free_catalog_and_ten_question_session_use_real_unique_bank_rows) ... ok
+test_insufficient_bank_never_pads_fake_or_duplicate_questions (test_psychotest_service.PsychotestServiceTests.test_insufficient_bank_never_pads_fake_or_duplicate_questions) ... ok
+test_ambiguous_outcome_never_becomes_sent_or_retries (test_safety.AutoApplyTests.test_ambiguous_outcome_never_becomes_sent_or_retries) ... ok
+test_candidates_match_profile_location_and_prioritize_verified_active (test_safety.AutoApplyTests.test_candidates_match_profile_location_and_prioritize_verified_active) ... ok
+test_case_insensitive_persistent_duplicate_prevention (test_safety.AutoApplyTests.test_case_insensitive_persistent_duplicate_prevention) ... ok
+test_five_per_jakarta_calendar_day_with_next_day_reset (test_safety.AutoApplyTests.test_five_per_jakarta_calendar_day_with_next_day_reset) ... ok
+test_missing_gmail_id_is_not_delivery_confirmation (test_safety.AutoApplyTests.test_missing_gmail_id_is_not_delivery_confirmation) ... ok
+test_parallel_reservations_cannot_exceed_limit (test_safety.AutoApplyTests.test_parallel_reservations_cannot_exceed_limit) ... ok
+test_requires_explicit_consent (test_safety.AutoApplyTests.test_requires_explicit_consent) ... ok
+test_basic_modes_remain_free (test_safety.PsychotestTests.test_basic_modes_remain_free) ... ok
+test_training_has_ten_to_twenty_unique_sample_slots (test_safety.PsychotestTests.test_training_has_ten_to_twenty_unique_sample_slots) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.055s
+
+OK

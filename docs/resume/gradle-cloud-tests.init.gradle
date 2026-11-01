@@ -1,0 +1,15 @@
+import org.gradle.api.tasks.testing.Test
+
+gradle.projectsEvaluated {
+    allprojects {
+        tasks.withType(Test).configureEach {
+            systemProperty 'user.home', '/workspace/robolectric-user'
+            systemProperty 'robolectric.dependency.repo.url', 'https://repo.maven.apache.org/maven2'
+            ['http.proxyHost', 'https.proxyHost', 'http.proxyPort', 'https.proxyPort',
+             'javax.net.ssl.trustStore'].each { key ->
+                if (System.getProperty(key)) systemProperty key, System.getProperty(key)
+            }
+            systemProperty 'http.nonProxyHosts', 'localhost|127.*|[::1]'
+        }
+    }
+}
