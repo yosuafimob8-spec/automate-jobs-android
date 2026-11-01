@@ -25,13 +25,13 @@ class NavigationPolicyTest {
     }
 
     @Test
-    fun completeOrUnknownProfileGoesToDashboardAfterLogin() {
+    fun completedProfileGoesToDashboardAndUnknownGoesToOnboardingAfterLogin() {
         assertEquals(
             Screen.Dashboard.route,
             NavigationPolicy.postLoginRoute(profileCompleted = true)
         )
         assertEquals(
-            Screen.Dashboard.route,
+            Screen.OnboardingProfile.route,
             NavigationPolicy.postLoginRoute(profileCompleted = null)
         )
     }
