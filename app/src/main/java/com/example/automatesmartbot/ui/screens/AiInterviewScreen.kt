@@ -1,5 +1,13 @@
 package com.example.automatesmartbot.ui.screens
 
+import android.content.Intent
+import android.speech.RecognizerIntent
+import android.speech.tts.TextToSpeech
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.runtime.DisposableEffect
+import java.util.Locale
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -99,6 +107,16 @@ fun AiInterviewScreen() {
     var report by rememberSaveable { mutableStateOf("") }
     var error by rememberSaveable { mutableStateOf("") }
     var loading by remember { mutableStateOf(false) }
+    val context = LocalContext.current
+    var ttsReady by remember { mutableStateOf(false) }
+    val tts = remember { TextToSpeech(context) { status -> ttsReady = status == TextToSpeech.SUCCESS } }
+    DisposableEffect(tts) { onDispose { tts.stop(); tts.shutdown() } }
+    val voiceLauncher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == android.app.Activity.RESULT_OK) {
+            val spoken = result.data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)?.firstOrNull()
+            if (!spoken.isNullOrBlank()) answer = spoken
+        }
+    }
     val scope = rememberCoroutineScope()
     fun send(action: String, turns: List<InterviewTurn>) {
         if (loading) return
@@ -117,6 +135,10 @@ fun AiInterviewScreen() {
                     report = response.finalReport
                 } else {
                     question = response.question
+                    if (ttsReady) {
+                        tts.language = if (language == "en") Locale.ENGLISH else Locale.forLanguageTag("id-ID")
+                        tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
+                    }
                     started = true
                     answer = ""
                 }
@@ -175,6 +197,16 @@ fun AiInterviewScreen() {
                 Text("Pertanyaan ${history.size + 1}", style = MaterialTheme.typography.titleMedium)
                 Text(question)
                 if (feedback.isNotBlank()) Text(feedback)
+                OutlinedButton(onClick = {
+                    val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
+                        putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+                        putExtra(RecognizerIntent.EXTRA_LANGUAGE, if (language == "en") "en-US" else "id-ID")
+                        putExtra(RecognizerIntent.EXTRA_PROMPT, "Jawab pertanyaan wawancara")
+                    }
+                    try { voiceLauncher.launch(intent) } catch (_: Exception) {
+                        error = "Pengenalan suara tidak tersedia di perangkat ini."
+                    }
+                }) { Text("🎙 Jawab dengan suara") }
                 OutlinedTextField(answer, { answer = it }, label = { Text("Jawaban Anda") },
                     modifier = Modifier.fillMaxWidth(), minLines = 4)
                 Button(enabled = !loading && answer.isNotBlank(), onClick = {
