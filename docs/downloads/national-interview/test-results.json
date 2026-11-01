@@ -1,0 +1,40 @@
+{
+  "android": {
+    "unit_robolectric": {
+      "tests": 99,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lint": {
+      "errors": 0,
+      "warnings": 71
+    },
+    "compileDebugKotlin": "PASS",
+    "compileDebugAndroidTestKotlin": "PASS",
+    "python_psychotest_contract_tests": {
+      "tests": 13,
+      "failures": 0
+    },
+    "apk_built": false,
+    "device_instrumentation": "NOT TESTED",
+    "real_gmail": "NOT TESTED",
+    "real_llm_stt_tts_avatar": "NOT TESTED"
+  },
+  "backend": {
+    "backend_tests": {
+      "tests": 79,
+      "failures": 0,
+      "errors": 0
+    },
+    "python_ast": {
+      "files": 30,
+      "result": "PASS"
+    },
+    "external_transports": "TESTED WITH MOCK",
+    "local_http_sqlite_engine": "PASS using temporary databases and fixture identities",
+    "real_gmail": "NOT TESTED",
+    "real_llm_stt_tts_avatar": "NOT TESTED",
+    "production_changes": false
+  }
+}

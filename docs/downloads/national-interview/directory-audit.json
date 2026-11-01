@@ -1,0 +1,183 @@
+{
+  "checked_on": "2026-11-01",
+  "scope": "Development public-source snapshot; owner Termux workbook unavailable",
+  "counts": {
+    "companies": 113,
+    "emails": 116,
+    "owner_emails": 0,
+    "new_emails": 116,
+    "province_catalogue": 38,
+    "provinces_with_contacts": 10,
+    "incomplete_records": 90,
+    "recruitment_usable_emails": 55,
+    "usable_with_location_emails": 30,
+    "official_company_emails": 75,
+    "reference_emails_requiring_review": 41
+  },
+  "policies": {
+    "email_applications": 55,
+    "information_only": 20,
+    "needs_company_reverification": 41
+  },
+  "province_coverage": [
+    {
+      "province": "Aceh",
+      "emails": 0
+    },
+    {
+      "province": "Sumatera Utara",
+      "emails": 0
+    },
+    {
+      "province": "Sumatera Barat",
+      "emails": 0
+    },
+    {
+      "province": "Riau",
+      "emails": 1
+    },
+    {
+      "province": "Jambi",
+      "emails": 0
+    },
+    {
+      "province": "Sumatera Selatan",
+      "emails": 0
+    },
+    {
+      "province": "Bengkulu",
+      "emails": 0
+    },
+    {
+      "province": "Lampung",
+      "emails": 0
+    },
+    {
+      "province": "Kepulauan Bangka Belitung",
+      "emails": 0
+    },
+    {
+      "province": "Kepulauan Riau",
+      "emails": 16
+    },
+    {
+      "province": "DKI Jakarta",
+      "emails": 22
+    },
+    {
+      "province": "Jawa Barat",
+      "emails": 3
+    },
+    {
+      "province": "Jawa Tengah",
+      "emails": 2
+    },
+    {
+      "province": "Daerah Istimewa Yogyakarta",
+      "emails": 1
+    },
+    {
+      "province": "Jawa Timur",
+      "emails": 0
+    },
+    {
+      "province": "Banten",
+      "emails": 5
+    },
+    {
+      "province": "Bali",
+      "emails": 2
+    },
+    {
+      "province": "Nusa Tenggara Barat",
+      "emails": 0
+    },
+    {
+      "province": "Nusa Tenggara Timur",
+      "emails": 0
+    },
+    {
+      "province": "Kalimantan Barat",
+      "emails": 0
+    },
+    {
+      "province": "Kalimantan Tengah",
+      "emails": 0
+    },
+    {
+      "province": "Kalimantan Selatan",
+      "emails": 0
+    },
+    {
+      "province": "Kalimantan Timur",
+      "emails": 2
+    },
+    {
+      "province": "Kalimantan Utara",
+      "emails": 0
+    },
+    {
+      "province": "Sulawesi Utara",
+      "emails": 0
+    },
+    {
+      "province": "Sulawesi Tengah",
+      "emails": 0
+    },
+    {
+      "province": "Sulawesi Selatan",
+      "emails": 0
+    },
+    {
+      "province": "Sulawesi Tenggara",
+      "emails": 0
+    },
+    {
+      "province": "Gorontalo",
+      "emails": 0
+    },
+    {
+      "province": "Sulawesi Barat",
+      "emails": 0
+    },
+    {
+      "province": "Maluku",
+      "emails": 0
+    },
+    {
+      "province": "Maluku Utara",
+      "emails": 0
+    },
+    {
+      "province": "Papua",
+      "emails": 0
+    },
+    {
+      "province": "Papua Barat",
+      "emails": 1
+    },
+    {
+      "province": "Papua Selatan",
+      "emails": 0
+    },
+    {
+      "province": "Papua Tengah",
+      "emails": 0
+    },
+    {
+      "province": "Papua Pegunungan",
+      "emails": 0
+    },
+    {
+      "province": "Papua Barat Daya",
+      "emails": 0
+    }
+  ],
+  "incomplete_fields": {
+    "location": 61,
+    "province": 61,
+    "industry": 73
+  },
+  "owner_workbook_required": "~/automate-jobs-v2/perusahaan_jabodetabek_gabungan.xlsx",
+  "historical_owner_counts_verified": false
+}

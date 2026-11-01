@@ -1,0 +1,1120 @@
+From 87159e5e093807a92544150fa8dc553bea00ed2f Mon Sep 17 00:00:00 2001
+From: Ilham Ramdhani <ilhamramdhani763@gmail.com>
+Date: Sun, 1 Nov 2026 00:42:24 +0000
+Subject: [PATCH] feat: add national company search and CV-based interview
+ client
+
+---
+ app/src/main/AndroidManifest.xml              |   5 +
+ app/src/main/assets/interview/avatar.html     |  19 +++
+ .../data/autoapply/AutoApplyReports.kt        |   5 +-
+ .../data/interview/InterviewRepository.kt     |  31 ++++
+ .../data/network/ApiClient.kt                 |   9 ++
+ .../data/network/ApiService.kt                |   7 +
+ .../interview/AvatarInterviewView.kt          |  38 +++++
+ .../interview/InterviewVoiceControls.kt       | 104 ++++++++++++++
+ .../automatesmartbot/ui/navigation/Screen.kt  |   3 +-
+ .../ui/screens/AiInterviewScreen.kt           | 134 +++++++++++++++---
+ .../ui/screens/CompanyDirectoryScreen.kt      |  78 ++++++++++
+ .../ui/screens/KirimLamaranScreen.kt          |  24 +++-
+ .../ui/screens/MainDashboardScreen.kt         |  19 ++-
+ .../ui/screens/RiwayatScreen.kt               |   4 +-
+ .../ui/viewmodel/InterviewViewModel.kt        |  69 +++++++++
+ .../data/autoapply/AutoApplyReportsTest.kt    |   4 +-
+ .../data/interview/InterviewContractTest.kt   |  83 +++++++++++
+ .../ui/screens/NationalInterviewUiTest.kt     |  52 +++++++
+ docs/national-interview/android-checks.txt    |  71 ++++++++++
+ .../psychotest-contract-tests.txt             |  18 +++
+ docs/national-interview/test-results.json     |  22 +++
+ 21 files changed, 765 insertions(+), 34 deletions(-)
+ create mode 100644 app/src/main/assets/interview/avatar.html
+ create mode 100644 app/src/main/java/com/example/automatesmartbot/data/interview/InterviewRepository.kt
+ create mode 100644 app/src/main/java/com/example/automatesmartbot/ui/components/interview/AvatarInterviewView.kt
+ create mode 100644 app/src/main/java/com/example/automatesmartbot/ui/components/interview/InterviewVoiceControls.kt
+ create mode 100644 app/src/main/java/com/example/automatesmartbot/ui/screens/CompanyDirectoryScreen.kt
+ create mode 100644 app/src/main/java/com/example/automatesmartbot/ui/viewmodel/InterviewViewModel.kt
+ create mode 100644 app/src/test/java/com/example/automatesmartbot/data/interview/InterviewContractTest.kt
+ create mode 100644 app/src/test/java/com/example/automatesmartbot/ui/screens/NationalInterviewUiTest.kt
+ create mode 100644 docs/national-interview/android-checks.txt
+ create mode 100644 docs/national-interview/psychotest-contract-tests.txt
+ create mode 100644 docs/national-interview/test-results.json
+
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+index 19751b1..88488db 100644
+--- a/app/src/main/AndroidManifest.xml
++++ b/app/src/main/AndroidManifest.xml
+@@ -3,6 +3,11 @@
+     xmlns:tools="http://schemas.android.com/tools">
+ 
+     <uses-permission android:name="android.permission.INTERNET" />
++    <uses-permission android:name="android.permission.RECORD_AUDIO" />
++    <queries>
++        <intent><action android:name="android.speech.RecognitionService" /></intent>
++        <intent><action android:name="android.intent.action.TTS_SERVICE" /></intent>
++    </queries>
+ 
+     <application
+         android:allowBackup="true"
+diff --git a/app/src/main/assets/interview/avatar.html b/app/src/main/assets/interview/avatar.html
+new file mode 100644
+index 0000000..72d2488
+--- /dev/null
++++ b/app/src/main/assets/interview/avatar.html
+@@ -0,0 +1,19 @@
++<!doctype html><html lang="en"><head><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; media-src blob:; connect-src 'none'"><style>body{margin:0;background:#10243b;color:white;font:16px sans-serif}video{width:100%;height:260px;object-fit:contain}#status{padding:12px}#subtitle{padding:12px;line-height:1.5;background:#17324d}</style></head><body><video id="avatar" autoplay playsinline></video><div id="status">Connecting to the approved avatar worker…</div><div id="subtitle"></div><script>
++let peer;
++const state=s=>document.getElementById('status').textContent=s;
++async function connect(iceServers){
++ try {
++  peer=new RTCPeerConnection({iceServers:iceServers||[]});
++  peer.addTransceiver('video',{direction:'recvonly'});peer.addTransceiver('audio',{direction:'recvonly'});
++  const media=new MediaStream();document.getElementById('avatar').srcObject=media;
++  peer.ontrack=e=>{media.addTrack(e.track);state('Avatar stream received');};
++  peer.onconnectionstatechange=()=>state('WebRTC: '+peer.connectionState);
++  await peer.setLocalDescription(await peer.createOffer());
++  await new Promise((resolve,reject)=>{if(peer.iceGatheringState==='complete')return resolve();const timer=setTimeout(()=>reject(new Error('ICE gathering timed out')),15000);peer.onicegatheringstatechange=()=>{if(peer.iceGatheringState==='complete'){clearTimeout(timer);resolve();}};});
++  KarirMate.onOffer(peer.localDescription.sdp);
++ } catch(e){state(e.message);KarirMate.onError(e.message);}
++}
++async function acceptAnswer(sdp){try{await peer.setRemoteDescription({type:'answer',sdp:sdp});}catch(e){state(e.message);KarirMate.onError(e.message);}}
++function setSubtitle(text){document.getElementById('subtitle').textContent=text;}
++function closeSession(){if(peer)peer.close();}
++</script></body></html>
+diff --git a/app/src/main/java/com/example/automatesmartbot/data/autoapply/AutoApplyReports.kt b/app/src/main/java/com/example/automatesmartbot/data/autoapply/AutoApplyReports.kt
+index b609e64..092d951 100644
+--- a/app/src/main/java/com/example/automatesmartbot/data/autoapply/AutoApplyReports.kt
++++ b/app/src/main/java/com/example/automatesmartbot/data/autoapply/AutoApplyReports.kt
+@@ -26,8 +26,9 @@ data class DeliveryReport(val items: List<JSONObject>, val summary: JSONObject,
+ }
+ object DeliveryStatus {
+     fun label(item: JSONObject): String = when (item.text("status")) {
+-        "sent" -> if (AutoApplyConfirmation.hasReference(item.text("gmail_message_id"))) "Terkirim · dikonfirmasi Gmail" else "Belum pasti · ID Gmail tidak tersedia"
+-        "ready", "queued", "waiting" -> "Menunggu"
++        "sent" -> if (AutoApplyConfirmation.hasReference(item.text("gmail_message_id"))) "Diterima Gmail API · belum membuktikan dibaca HR" else "Belum pasti · ID Gmail tidak tersedia"
++        "ready", "prepared" -> "Disiapkan"
++        "queued", "waiting" -> "Dalam antrean"
+         "sending", "processing" -> "Diproses"
+         "failed" -> "Gagal"
+         "cancelled" -> "Dibatalkan"
+diff --git a/app/src/main/java/com/example/automatesmartbot/data/interview/InterviewRepository.kt b/app/src/main/java/com/example/automatesmartbot/data/interview/InterviewRepository.kt
+new file mode 100644
+index 0000000..1039f96
+--- /dev/null
++++ b/app/src/main/java/com/example/automatesmartbot/data/interview/InterviewRepository.kt
+@@ -0,0 +1,31 @@
++package com.example.automatesmartbot.data.interview
++
++import com.example.automatesmartbot.data.autoapply.readJson
++import okhttp3.ResponseBody
++import org.json.JSONObject
++import retrofit2.Response
++import retrofit2.http.*
++
++interface InterviewApi {
++    @GET("interviews/capabilities") suspend fun capabilities(): Response<ResponseBody>
++    @POST("interviews/sessions") suspend fun start(@Body settings: Map<String, @JvmSuppressWildcards Any>): Response<ResponseBody>
++    @GET("interviews/sessions/{id}") suspend fun session(@Path("id") id: String): Response<ResponseBody>
++    @POST("interviews/sessions/{id}/answers") suspend fun answer(@Path("id") id: String, @Body body: Map<String, @JvmSuppressWildcards Any>): Response<ResponseBody>
++    @POST("interviews/sessions/{id}/finish") suspend fun finish(@Path("id") id: String): Response<ResponseBody>
++    @GET("interviews/history") suspend fun history(): Response<ResponseBody>
++    @POST("interviews/sessions/{id}/webrtc") suspend fun offer(@Path("id") id: String, @Body body: Map<String, String>): Response<ResponseBody>
++    @POST("interviews/sessions/{id}/transcribe") suspend fun transcribe(@Path("id") id: String, @Body body: Map<String, String>): Response<ResponseBody>
++    @POST("interviews/sessions/{id}/speech") suspend fun speech(@Path("id") id: String): Response<ResponseBody>
++}
++
++class InterviewRepository(private val api: InterviewApi) {
++    suspend fun capabilities() = api.capabilities().readJson()
++    suspend fun start(settings: Map<String, Any>) = api.start(settings).readJson().getJSONObject("session")
++    suspend fun session(id: String) = api.session(id).readJson().getJSONObject("session")
++    suspend fun answer(id: String, body: Map<String, Any>) = api.answer(id, body).readJson().getJSONObject("session")
++    suspend fun finish(id: String) = api.finish(id).readJson().getJSONObject("session")
++    suspend fun history() = api.history().readJson()
++    suspend fun offer(id: String, sdp: String) = api.offer(id, mapOf("type" to "offer", "sdp" to sdp)).readJson()
++    suspend fun transcribe(id: String, audio: ByteArray, format: String): String = api.transcribe(id, mapOf("audio_base64" to android.util.Base64.encodeToString(audio, android.util.Base64.NO_WRAP), "audio_format" to format)).readJson().getString("text")
++    suspend fun speech(id: String): ByteArray = android.util.Base64.decode(api.speech(id).readJson().getString("audio_base64"), android.util.Base64.DEFAULT)
++}
+diff --git a/app/src/main/java/com/example/automatesmartbot/data/network/ApiClient.kt b/app/src/main/java/com/example/automatesmartbot/data/network/ApiClient.kt
+index 8e04748..a41c636 100644
+--- a/app/src/main/java/com/example/automatesmartbot/data/network/ApiClient.kt
++++ b/app/src/main/java/com/example/automatesmartbot/data/network/ApiClient.kt
+@@ -2,6 +2,7 @@ package com.example.automatesmartbot.data.network
+ 
+ import android.content.Context
+ import com.example.automatesmartbot.BuildConfig
++import com.example.automatesmartbot.data.interview.InterviewApi
+ import com.example.automatesmartbot.data.security.SessionManager
+ import okhttp3.OkHttpClient
+ import okhttp3.logging.HttpLoggingInterceptor
+@@ -21,6 +22,7 @@ object ApiClient {
+             jobsV2Api = BuildConfig.JOBS_V2_BASE_URL.takeIf { it.isNotBlank() }
+                 ?.let { createJobsV2Api(sessionManager!!) }
+             psychotestApi = createPsychotestApi(sessionManager!!)
++            interviewApi = createInterviewApi(sessionManager!!)
+         }
+     }
+ 
+@@ -55,6 +57,11 @@ object ApiClient {
+             .build()
+     }
+ 
++    private fun createInterviewApi(sm: SessionManager): InterviewApi {
++        val client = OkHttpClient.Builder().addInterceptor(AuthInterceptor(sm)).connectTimeout(10, TimeUnit.SECONDS).readTimeout(90, TimeUnit.SECONDS).writeTimeout(60, TimeUnit.SECONDS).build()
++        return Retrofit.Builder().baseUrl(baseUrl).client(client).addConverterFactory(GsonConverterFactory.create()).build().create(InterviewApi::class.java)
++    }
++
+     private fun createJobsV2Api(sm: SessionManager): JobsV2Api {
+         val url = BuildConfig.JOBS_V2_BASE_URL
+         val client = OkHttpClient.Builder()
+@@ -83,6 +90,8 @@ object ApiClient {
+ 
+     var jobsV2Api: JobsV2Api? = null
+         private set
++    var interviewApi: InterviewApi? = null
++        private set
+     var psychotestApi: PsychotestApi? = null
+         private set
+ }
+diff --git a/app/src/main/java/com/example/automatesmartbot/data/network/ApiService.kt b/app/src/main/java/com/example/automatesmartbot/data/network/ApiService.kt
+index 17992ad..82f4924 100644
+--- a/app/src/main/java/com/example/automatesmartbot/data/network/ApiService.kt
++++ b/app/src/main/java/com/example/automatesmartbot/data/network/ApiService.kt
+@@ -16,6 +16,10 @@ data class AutoApplyEnableRequest(
+ )
+ 
+ interface ApiService {
++    @GET("companies/provinces") suspend fun companyProvinces(): Response<ResponseBody>
++    @GET("companies") suspend fun companies(@Query("province") province: String? = null, @Query("city") city: String? = null, @Query("industry") industry: String? = null, @Query("position") position: String? = null, @Query("offset") offset: Int = 0): Response<ResponseBody>
++    @GET("companies/stats") suspend fun companyStats(): Response<ResponseBody>
++
+     @POST("gmail/oauth/start")
+     suspend fun startGmailOAuth(@Body request: Map<String, String> = emptyMap()): Response<ResponseBody>
+     @PUT("cv")
+@@ -33,6 +37,9 @@ interface ApiService {
+     @POST("auto-apply/simulate")
+     suspend fun simulateAutoApply(@Body request: Map<String, String> = emptyMap()): Response<ResponseBody>
+ 
++    @POST("auto-apply/test-email-preview")
++    suspend fun testEmailPreview(@Body body: Map<String, String>): Response<ResponseBody>
++
+     @POST("auto-apply/enable")
+     suspend fun enableAutoApply(@Body request: AutoApplyEnableRequest): Response<ResponseBody>
+ 
+diff --git a/app/src/main/java/com/example/automatesmartbot/ui/components/interview/AvatarInterviewView.kt b/app/src/main/java/com/example/automatesmartbot/ui/components/interview/AvatarInterviewView.kt
+new file mode 100644
+index 0000000..493f3bf
+--- /dev/null
++++ b/app/src/main/java/com/example/automatesmartbot/ui/components/interview/AvatarInterviewView.kt
+@@ -0,0 +1,38 @@
++package com.example.automatesmartbot.ui.components.interview
++
++import android.annotation.SuppressLint
++import android.webkit.JavascriptInterface
++import android.webkit.WebView
++import android.webkit.WebViewClient
++import androidx.compose.runtime.*
++import androidx.compose.ui.Modifier
++import androidx.compose.ui.platform.LocalContext
++import androidx.compose.ui.viewinterop.AndroidView
++import org.json.JSONArray
++import org.json.JSONObject
++
++/** Receives HR-avatar media only; candidate camera is never requested or evaluated. */
++@SuppressLint("SetJavaScriptEnabled")
++@Composable
++fun AvatarInterviewView(subtitle: String, answerSdp: String?, iceServers: JSONArray?, onOffer: (String) -> Unit, onError: (String) -> Unit, modifier: Modifier = Modifier) {
++    val context = LocalContext.current
++    val latestOffer by rememberUpdatedState(onOffer); val latestError by rememberUpdatedState(onError)
++    var pageReady by remember { mutableStateOf(false) }
++    val web = remember { WebView(context).apply {
++        settings.javaScriptEnabled = true; settings.allowFileAccess = false; settings.allowContentAccess = false
++        settings.mediaPlaybackRequiresUserGesture = false; settings.mixedContentMode = android.webkit.WebSettings.MIXED_CONTENT_NEVER_ALLOW
++        addJavascriptInterface(object {
++            @JavascriptInterface fun onOffer(sdp: String) { if (sdp.length <= 100000 && sdp.startsWith("v=0")) post { latestOffer(sdp) } }
++            @JavascriptInterface fun onError(message: String) { post { latestError("Video: ${message.take(300)}") } }
++        }, "KarirMate")
++        webViewClient = object : WebViewClient() {
++            override fun shouldOverrideUrlLoading(view: WebView?, request: android.webkit.WebResourceRequest?): Boolean = true
++            override fun onPageFinished(view: WebView?, url: String?) { pageReady = true; evaluateJavascript("connect(${iceServers ?: JSONArray()})", null) }
++        }
++        loadDataWithBaseURL("https://karirmate.invalid/", context.assets.open("interview/avatar.html").bufferedReader().use { it.readText() }, "text/html", "UTF-8", null)
++    } }
++    AndroidView(factory = { web }, modifier = modifier)
++    LaunchedEffect(pageReady, subtitle) { if (pageReady) web.evaluateJavascript("setSubtitle(${JSONObject.quote(subtitle)})", null) }
++    LaunchedEffect(pageReady, answerSdp) { if (pageReady && answerSdp != null) web.evaluateJavascript("acceptAnswer(${JSONObject.quote(answerSdp)})", null) }
++    DisposableEffect(web) { onDispose { web.evaluateJavascript("closeSession()", null); web.removeJavascriptInterface("KarirMate"); web.destroy() } }
++}
+diff --git a/app/src/main/java/com/example/automatesmartbot/ui/components/interview/InterviewVoiceControls.kt b/app/src/main/java/com/example/automatesmartbot/ui/components/interview/InterviewVoiceControls.kt
+new file mode 100644
+index 0000000..5f6b9e4
+--- /dev/null
++++ b/app/src/main/java/com/example/automatesmartbot/ui/components/interview/InterviewVoiceControls.kt
+@@ -0,0 +1,104 @@
++package com.example.automatesmartbot.ui.components.interview
++
++import android.Manifest
++import android.annotation.SuppressLint
++import android.content.Intent
++import android.content.pm.PackageManager
++import android.media.MediaPlayer
++import android.media.MediaRecorder
++import android.os.Build
++import android.os.Bundle
++import android.speech.RecognitionListener
++import android.speech.RecognizerIntent
++import android.speech.SpeechRecognizer
++import android.speech.tts.TextToSpeech
++import androidx.activity.compose.rememberLauncherForActivityResult
++import androidx.activity.result.contract.ActivityResultContracts
++import androidx.compose.foundation.layout.*
++import androidx.compose.material3.*
++import androidx.compose.runtime.*
++import androidx.compose.ui.Modifier
++import androidx.compose.ui.platform.LocalContext
++import androidx.compose.ui.unit.dp
++import androidx.core.content.ContextCompat
++import com.example.automatesmartbot.ui.viewmodel.InterviewViewModel
++import kotlinx.coroutines.CancellationException
++import kotlinx.coroutines.launch
++import java.io.File
++import java.util.Locale
++import java.util.UUID
++
++@Composable
++@SuppressLint("MissingPermission")
++fun InterviewVoiceControls(vm: InterviewViewModel, question: String, language: String, sttAvailable: Boolean, ttsAvailable: Boolean, busy: Boolean, autoSpeak: Boolean = true) {
++    val context = LocalContext.current; val scope = rememberCoroutineScope()
++    var ttsReady by remember { mutableStateOf(false) }; var listening by remember { mutableStateOf(false) }; var recording by remember { mutableStateOf(false) }
++    var recorder by remember { mutableStateOf<MediaRecorder?>(null) }; var recordingFile by remember { mutableStateOf<File?>(null) }; var playbackFile by remember { mutableStateOf<File?>(null) }; var player by remember { mutableStateOf<MediaPlayer?>(null) }
++    val tts = remember { TextToSpeech(context) { status -> ttsReady = status == TextToSpeech.SUCCESS } }
++    val recognizer = remember {
++        if (Build.VERSION.SDK_INT >= 31 && SpeechRecognizer.isOnDeviceRecognitionAvailable(context)) SpeechRecognizer.createOnDeviceSpeechRecognizer(context) else null
++    }
++    LaunchedEffect(question, language, ttsReady, autoSpeak) {
++        if (autoSpeak && ttsReady && question.isNotBlank() && tts.setLanguage(Locale.forLanguageTag(if (language == "en") "en-US" else "id-ID")) >= TextToSpeech.LANG_AVAILABLE) tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
++    }
++    DisposableEffect(recognizer) {
++        recognizer?.setRecognitionListener(object : RecognitionListener {
++            override fun onReadyForSpeech(params: Bundle?) { listening = true }
++            override fun onBeginningOfSpeech() {}
++            override fun onRmsChanged(rmsdB: Float) {}
++            override fun onBufferReceived(buffer: ByteArray?) {}
++            override fun onEndOfSpeech() { listening = false }
++            override fun onError(error: Int) { listening = false; vm.showError("Suara belum berhasil dibaca (kode $error). Jawaban dapat diketik; tidak diberi skor karena transkripsi gagal.") }
++            override fun onResults(results: Bundle?) { listening = false; results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)?.firstOrNull()?.let(vm::updateAnswer) }
++            override fun onPartialResults(partialResults: Bundle?) {}
++            override fun onEvent(eventType: Int, params: Bundle?) {}
++        })
++        onDispose { recognizer?.destroy() }
++    }
++    fun stopRecording() {
++        try {
++            runCatching { recorder?.stop() }; recorder?.release(); recorder = null; recording = false
++            val file = requireNotNull(recordingFile); val bytes = file.readBytes(); require(bytes.size <= 10_000_000) { "Audio melebihi 10 MB." }; file.delete(); recordingFile = null
++            vm.transcribe(bytes, "m4a")
++        } catch (e: Exception) { recorder?.release(); recorder = null; recording = false; recordingFile?.delete(); recordingFile = null; vm.showError("Rekaman belum dapat diproses. Coba lagi atau ketik jawaban.") }
++    }
++    fun startVoice() {
++        try {
++            tts.stop()
++            if (recognizer != null) {
++                recognizer.startListening(Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
++                    putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
++                    putExtra(RecognizerIntent.EXTRA_LANGUAGE, if (language == "en") "en-US" else "id-ID")
++                    putExtra(RecognizerIntent.EXTRA_PREFER_OFFLINE, true)
++                }); listening = true
++            } else if (sttAvailable) {
++                val file = File(context.cacheDir, "interview-${UUID.randomUUID()}.m4a")
++                @Suppress("DEPRECATION") val next = if (Build.VERSION.SDK_INT >= 31) MediaRecorder(context) else MediaRecorder()
++                recorder = next; recordingFile = file
++                next.setAudioSource(MediaRecorder.AudioSource.MIC); next.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4); next.setAudioEncoder(MediaRecorder.AudioEncoder.AAC); next.setAudioSamplingRate(16000); next.setAudioEncodingBitRate(48000); next.setOutputFile(file.path); next.setMaxDuration(90000); next.setOnInfoListener { _, what, _ -> if (what == MediaRecorder.MEDIA_RECORDER_INFO_MAX_DURATION_REACHED && recording) stopRecording() }; next.prepare(); next.start(); recording = true
++            } else vm.showError("Pengenalan suara offline tidak tersedia di perangkat dan layanan STT belum terhubung. Gunakan teks.")
++        } catch (e: Exception) { recorder?.release(); recorder = null; recordingFile?.delete(); recordingFile = null; recording = false; vm.showError(e.message ?: "Mikrofon belum tersedia.") }
++    }
++    val permission = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted -> if (granted) startVoice() else vm.showError("Izin mikrofon ditolak. Interview teks tetap tersedia.") }
++    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
++        Text("Jawaban suara ditranskripsi menjadi teks dan dapat diperiksa sebelum dikirim. Penilaian menggunakan teks, bukan aksen atau penampilan.")
++        Button(onClick = {
++            if (recording) stopRecording() else if (listening) { recognizer?.stopListening(); listening = false }
++            else if (ContextCompat.checkSelfPermission(context, Manifest.permission.RECORD_AUDIO) == PackageManager.PERMISSION_GRANTED) startVoice() else permission.launch(Manifest.permission.RECORD_AUDIO)
++        }, enabled = !busy && (recognizer != null || sttAvailable)) { Text(if (recording) "Hentikan & Transkripsi" else if (listening) "Hentikan Mendengarkan" else "Jawab dengan Suara") }
++        if (recognizer == null && !sttAvailable) Text("Suara belum tersedia: pasang layanan pengenalan offline atau hubungkan STT self-hosted.")
++        if (recording || listening) LinearProgressIndicator(Modifier.fillMaxWidth())
++        OutlinedButton(onClick = {
++            val supported = ttsReady && tts.setLanguage(Locale.forLanguageTag(if (language == "en") "en-US" else "id-ID")) >= TextToSpeech.LANG_AVAILABLE
++            if (supported) tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
++            else if (ttsAvailable) scope.launch {
++                try {
++                    player?.release(); playbackFile?.delete()
++                    val bytes = vm.questionAudio(); val file = File(context.cacheDir, "interview-speech-${UUID.randomUUID()}.wav"); file.writeBytes(bytes); playbackFile = file
++                    player = MediaPlayer().apply { setDataSource(file.path); setOnPreparedListener { it.start() }; prepareAsync() }
++                } catch (e: CancellationException) { throw e } catch (e: Exception) { vm.showError(e.message ?: "Suara pertanyaan belum tersedia.") }
++            } else vm.showError("Suara bahasa yang dipilih belum terpasang. Pertanyaan tetap tersedia sebagai teks.")
++        }, enabled = !busy && !recording && !listening && question.isNotBlank()) { Text("Dengarkan Pertanyaan") }
++    }
++    DisposableEffect(Unit) { onDispose { tts.stop(); tts.shutdown(); recorder?.runCatching { stop(); release() }; recordingFile?.delete(); player?.release(); playbackFile?.delete() } }
++}
+diff --git a/app/src/main/java/com/example/automatesmartbot/ui/navigation/Screen.kt b/app/src/main/java/com/example/automatesmartbot/ui/navigation/Screen.kt
+index eda60ae..a9459be 100644
+--- a/app/src/main/java/com/example/automatesmartbot/ui/navigation/Screen.kt
++++ b/app/src/main/java/com/example/automatesmartbot/ui/navigation/Screen.kt
+@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
+ sealed class Screen(val route: String, val title: String, val icon: ImageVector) {
+     object Dashboard : Screen("dashboard", "Beranda", Icons.Default.Dashboard)
+     object CariLowongan : Screen("cari_lowongan", "Lowongan", Icons.Default.Work)
++    object CompanyDirectory : Screen("company_directory", "Database Perusahaan", Icons.Default.Work)
+     object KirimLamaran : Screen("kirim_lamaran", "Lamaran", Icons.AutoMirrored.Filled.Send)
+     object CvBuilder : Screen("cv_builder", "CV Builder", Icons.Default.Description)
+     object LatihanPsikotes : Screen("latihan_psikotes", "Psikotes", Icons.Default.Psychology)
+@@ -45,7 +46,7 @@ val bottomNavItems = listOf(
+ )
+ 
+ val detailNavItems = listOf(
+-    Screen.JobTraining, Screen.SalaryCalculator, Screen.CareerLetters, Screen.CareerDocuments,
++    Screen.CompanyDirectory, Screen.JobTraining, Screen.SalaryCalculator, Screen.CareerLetters, Screen.CareerDocuments,
+     Screen.CvBuilder,
+     Screen.LatihanPsikotes,
+     Screen.AiInterview,
+diff --git a/app/src/main/java/com/example/automatesmartbot/ui/screens/AiInterviewScreen.kt b/app/src/main/java/com/example/automatesmartbot/ui/screens/AiInterviewScreen.kt
+index 0feaa72..66c36e8 100644
+--- a/app/src/main/java/com/example/automatesmartbot/ui/screens/AiInterviewScreen.kt
++++ b/app/src/main/java/com/example/automatesmartbot/ui/screens/AiInterviewScreen.kt
+@@ -1,23 +1,121 @@
+-﻿package com.example.automatesmartbot.ui.screens
++package com.example.automatesmartbot.ui.screens
+ 
+-import androidx.compose.material.icons.Icons
+-import androidx.compose.material.icons.filled.Mic
+-import androidx.compose.runtime.Composable
+-import androidx.compose.ui.graphics.Color
++import android.os.Build
++import android.speech.SpeechRecognizer
++import androidx.compose.foundation.horizontalScroll
++import androidx.compose.foundation.layout.*
++import androidx.compose.foundation.lazy.LazyColumn
++import androidx.compose.foundation.lazy.items
++import androidx.compose.foundation.rememberScrollState
++import androidx.compose.material3.*
++import androidx.compose.runtime.*
++import androidx.compose.runtime.saveable.rememberSaveable
++import androidx.compose.ui.Modifier
++import androidx.compose.ui.platform.LocalContext
++import androidx.compose.ui.unit.dp
++import androidx.lifecycle.viewmodel.compose.viewModel
++import com.example.automatesmartbot.data.autoapply.*
++import com.example.automatesmartbot.data.cv.CvContent
++import com.example.automatesmartbot.data.cv.hasUserText
++import com.example.automatesmartbot.ui.components.*
++import com.example.automatesmartbot.ui.components.interview.*
++import com.example.automatesmartbot.ui.viewmodel.InterviewViewModel
++import org.json.JSONObject
+ 
+ @Composable
+-fun AiInterviewScreen() {
+-    FeatureComingSoonScreen(
+-        title = "AI Interview",
+-        description = "Latih jawaban wawancara kerja dengan pertanyaan yang relevan dan umpan balik terarah.",
+-        icon = Icons.Default.Mic,
+-        accent = Color(0xFF06B6D4),
+-        bullets = listOf(
+-            "Pertanyaan wawancara sesuai posisi",
+-            "Latihan jawaban secara bertahap",
+-            "Umpan balik setelah sesi",
+-            "Sesi AI aktif setelah fitur tersedia"
+-        )
+-    )
++fun AiInterviewScreen(isPro: Boolean = false, cv: CvContent = CvContent(), vm: InterviewViewModel = viewModel()) {
++    val capabilities by vm.capabilities.collectAsState(); val session by vm.session.collectAsState(); val history by vm.history.collectAsState(); val error by vm.error.collectAsState(); val busy by vm.busy.collectAsState(); val answer by vm.answer.collectAsState(); val rtc by vm.webRtcAnswer.collectAsState()
++    var language by rememberSaveable { mutableStateOf("id") }; var position by rememberSaveable { mutableStateOf(cv.contact.headline) }; var difficulty by rememberSaveable { mutableStateOf("beginner") }; var interviewer by rememberSaveable { mutableStateOf("hr") }; var mode by rememberSaveable { mutableStateOf("text") }; var backendCv by rememberSaveable { mutableStateOf(!cv.hasUserText()) }; var showHistory by rememberSaveable { mutableStateOf(false) }; var confirmFinish by remember { mutableStateOf(false) }
++    val context = LocalContext.current
++    val localAsr = remember { Build.VERSION.SDK_INT >= 31 && SpeechRecognizer.isOnDeviceRecognitionAvailable(context) }
++    val serverPro = isPro && capabilities?.optBoolean("deep_analysis") == true
++    val voiceAvailable = serverPro && (localAsr || capabilities?.optBoolean("stt_available") == true)
++    val video = capabilities?.optJSONObject("video")
++    val videoAvailable = serverPro && video?.optBoolean("available") == true
++    LaunchedEffect(isPro) { vm.load() }
++    if (confirmFinish) AlertDialog(onDismissRequest = { confirmFinish = false }, title = { Text("Selesaikan sesi sekarang?") }, text = { Text("Jawaban yang sudah dikirim tetap tersimpan. Penilaian menggunakan jawaban yang tersedia.") }, confirmButton = { TextButton(onClick = { confirmFinish = false; vm.finish() }) { Text("Selesaikan") } }, dismissButton = { TextButton(onClick = { confirmFinish = false }) { Text("Lanjutkan") } })
++    Column(Modifier.fillMaxSize().imePadding()) {
++        if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
++        error?.let { Card(Modifier.fillMaxWidth().padding(12.dp)) { Column(Modifier.padding(12.dp)) { Text(it, color = MaterialTheme.colorScheme.error); Text("Jawaban yang diketik tetap disimpan. Sinkronkan sesi sebelum mencoba ulang jika respons terputus."); TextButton(onClick = { vm.sync() }, enabled = !busy) { Text("Sinkronkan Sesi") } } } }
++        if (showHistory) {
++            LazyColumn(Modifier.weight(1f), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
++                item { JourneyHeader("Riwayat Interview", "Hasil berasal dari sesi yang tersimpan pada akun Anda."); TextButton(onClick = { showHistory = false }) { Text("Kembali ke Interview") } }
++                history?.optJSONObject("progress")?.let { p -> item { Card { Column(Modifier.padding(16.dp)) { Text("Perkembangan · PRO", style = MaterialTheme.typography.titleMedium); Text("${p.optInt("sessions")} sesi · nilai terakhir ${p.optInt("latest")} · perubahan ${p.optInt("change")}"); Text(p.text("basis")) } } } }
++                val records = history?.objects("items").orEmpty()
++                if (records.isEmpty() && !busy) item { Text("Belum ada riwayat atau data belum berhasil dimuat."); OutlinedButton(onClick = { vm.loadHistory() }, enabled = !busy) { Text("Muat Ulang Riwayat") } }
++                items(records, key = { it.text("id") }) { r -> Card(onClick = { vm.openHistory(r.text("id")); showHistory = false }, modifier = Modifier.fillMaxWidth()) { Column(Modifier.padding(16.dp)) {
++                    Text(r.optJSONObject("settings")?.text("position").orEmpty(), style = MaterialTheme.typography.titleMedium); Text(r.text("created_at")); Text(r.text("status")); r.optJSONObject("result")?.let { Text("Nilai latihan: ${it.getInt("overall")}/100") }
++                } } }
++            }
++        } else if (session == null) {
++            LazyColumn(Modifier.weight(1f), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
++                item { JourneyHeader("AI Interview", "${if (serverPro) "PRO" else "FREE / menunggu verifikasi"} · Indonesia / English · berbasis CV") }
++                item { Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
++                    Text(if (capabilities?.text("question_engine") == "ollama") "Model pertanyaan self-hosted dikonfigurasi. Status provider aktual ditampilkan pada setiap sesi." else "Model AI self-hosted belum terhubung. Interview teks memakai mesin pertanyaan dan evaluasi terstruktur yang berfungsi tanpa GPU.")
++                    OutlinedButton(onClick = { vm.loadHistory(); showHistory = true }, enabled = !busy) { Text("Riwayat & Perkembangan") }
++                    InterviewChoice("Bahasa", listOf("id" to "Indonesia", "en" to "English"), language, { language = it })
++                    AppInput("Posisi pekerjaan *", position, { position = it })
++                    InterviewChoice("Tingkat kesulitan", listOf("beginner" to "Pemula", "intermediate" to "Menengah", "professional" to "Profesional"), difficulty, { difficulty = it })
++                    InterviewChoice("Pewawancara", listOf("hr" to "HRD", "user" to "User", "manager" to "Manajer"), interviewer, { interviewer = it })
++                    InterviewChoice("Mode", listOf("text" to "Teks · FREE", "voice" to "Suara · PRO", "video" to "Video Avatar · PRO"), mode, { mode = it })
++                    Text("FREE: interview teks dan penilaian dasar. PRO: pertanyaan adaptif, analisis mendalam, rekomendasi, suara/video bila layanan tersedia, serta perkembangan hasil.")
++                    if (!voiceAvailable) Text("Suara belum tersedia: perlu PRO terverifikasi dan pengenalan suara offline atau STT self-hosted.")
++                    if (!videoAvailable) Text("Video belum tersedia: ${video?.text("reason")?.ifBlank { "GPU worker dan avatar berizin belum terhubung" } ?: "status backend belum dimuat"}. Interview teks tetap tersedia.")
++                    Text("Sumber CV", style = MaterialTheme.typography.titleMedium)
++                    Row { RadioButton(!backendCv, { backendCv = false }, enabled = cv.hasUserText()); Text("CV aktif KarirMate${cv.contact.fullName.takeIf { it.isNotBlank() }?.let { " · $it" }.orEmpty()}", Modifier.padding(top = 12.dp)) }
++                    Row { RadioButton(backendCv, { backendCv = true }); Text("CV PDF yang tersimpan di backend", Modifier.padding(top = 12.dp)) }
++                    if (!cv.hasUserText()) Text("Belum ada data CV aktif. Pilih CV backend atau isi CV Builder terlebih dahulu.")
++                    Button(onClick = {
++                        val settings = mutableMapOf<String, Any>("language" to language, "position" to position, "difficulty" to difficulty, "interviewer" to interviewer, "mode" to mode, "use_backend_cv" to backendCv)
++                        if (!backendCv) settings["cv"] = cv
++                        vm.start(settings)
++                    }, enabled = !busy && capabilities != null && position.trim().length >= 2 && (mode == "text" || mode == "voice" && voiceAvailable || mode == "video" && videoAvailable), modifier = Modifier.fillMaxWidth().heightIn(min = 50.dp)) { Text("Mulai Interview") }
++                    TextButton(onClick = { vm.load() }, enabled = !busy) { Text("Periksa Ketersediaan Layanan") }
++                } }
++            }
++        } else {
++            val current = session!!; val settings = current.getJSONObject("settings"); val result = current.optJSONObject("result"); val completed = current.text("status") == "completed"
++            LazyColumn(Modifier.weight(1f), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
++                item { JourneyHeader(if (completed) "Hasil Interview" else "Pertanyaan ${current.getInt("question_number")}/${current.getInt("question_limit")}", "${settings.text("position")} · ${settings.text("language").uppercase()} · ${settings.text("mode")}", if (completed) 1f else current.getInt("question_number").toFloat()/current.getInt("question_limit")) }
++                item { Text("Provider pertanyaan: ${current.text("provider")}"); if (current.text("notice").isNotBlank()) Text(current.text("notice")) }
++                if (!completed) {
++                    item { Card { Text(current.getString("question"), Modifier.padding(20.dp), style = MaterialTheme.typography.titleLarge) } }
++                    if (settings.text("mode") == "video" && serverPro) item { AvatarInterviewView(current.getString("question"), rtc?.text("sdp"), video?.optJSONArray("ice_servers"), vm::offer, vm::showError, Modifier.fillMaxWidth().height(360.dp)) }
++                    if (settings.text("mode") in listOf("voice", "video") && serverPro) item { InterviewVoiceControls(vm, current.getString("question"), settings.text("language"), capabilities?.optBoolean("stt_available") == true, capabilities?.optBoolean("tts_available") == true, busy, autoSpeak = settings.text("mode") == "voice") }
++                    item { AppInput("Jawaban Anda — periksa sebelum dikirim", answer, vm::updateAnswer, minLines = 6) }
++                    item { TextButton(onClick = { confirmFinish = true }, enabled = !busy && current.objects("answers").isNotEmpty()) { Text("Selesaikan Sesi Lebih Awal") } }
++                } else if (result != null) {
++                    item { InterviewResult(result, serverPro) }
++                    item { OutlinedButton(onClick = { vm.loadHistory(); showHistory = true }) { Text("Lihat Riwayat & Perkembangan") }; Button(onClick = vm::newSetup) { Text("Interview Baru") } }
++                }
++                item { Text("Jawaban tersimpan", style = MaterialTheme.typography.titleMedium) }
++                items(current.objects("answers")) { turn -> Card { Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) { Text(turn.text("question"), style = MaterialTheme.typography.titleMedium); Text(turn.text("answer")) } } }
++            }
++            if (!completed) Surface(shadowElevation = 6.dp) { Column(Modifier.fillMaxWidth().padding(16.dp)) { Button(onClick = { vm.submit() }, enabled = !busy && answer.trim().length >= 3, modifier = Modifier.fillMaxWidth().heightIn(min = 50.dp)) { Text(if (busy) "Memproses..." else "Kirim Jawaban") } } }
++        }
++    }
+ }
+ 
++@Composable
++private fun InterviewChoice(label: String, choices: List<Pair<String, String>>, selected: String, onSelect: (String) -> Unit) {
++    Text(label, style = MaterialTheme.typography.titleSmall)
++    Row(Modifier.horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(8.dp)) { choices.forEach { (id, title) -> FilterChip(selected = selected == id, onClick = { onSelect(id) }, label = { Text(title) }) } }
++}
++
++@Composable
++internal fun InterviewResult(result: JSONObject, pro: Boolean) {
++    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
++        Text("${result.getInt("overall")}/100", style = MaterialTheme.typography.headlineLarge)
++        listOf("quality" to "Kualitas jawaban", "relevance" to "Relevansi posisi", "communication" to "Komunikasi teks").forEach { (key, label) -> Text("$label: ${result.getInt(key)}/100"); LinearProgressIndicator(progress = { (result.getInt(key)/100f).coerceIn(0f,1f) }, modifier = Modifier.fillMaxWidth()) }
++        Text("Metode: ${result.text("evaluation_method")}"); Text(result.text("note"))
++        listOf("strengths" to "Kelebihan", "weaknesses" to "Perlu ditingkatkan", "recommendations" to "Latihan berikutnya").forEach { (key,label) -> Text(label, style = MaterialTheme.typography.titleMedium); result.optJSONArray(key)?.let { a -> repeat(a.length()) { Text("• ${a.getString(it)}") } } }
++        result.optJSONObject("english_feedback")?.let { en -> Text("English — ${en.text("basis")}"); Text(en.text("recommendation")); en.optJSONArray("patterns_to_review")?.let { if (it.length()>0) Text("Periksa pola: $it") } }
++        if (pro) { Text("Analisis Mendalam · PRO", style = MaterialTheme.typography.titleMedium)
++            result.optJSONArray("deep_analysis")?.let { turns -> repeat(turns.length()) { index ->
++                val turn = turns.getJSONObject(index)
++                Text("Jawaban ${index + 1}: kualitas ${turn.optInt("quality")}, relevansi ${turn.optInt("relevance")}, komunikasi ${turn.optInt("communication")}")
++            } }
++            ; if (result.text("improved_answer").isNotBlank()) Text(result.text("improved_answer")); result.optJSONArray("practice_plan")?.let { a -> repeat(a.length()) { Text("• ${a.getString(it)}") } } }
++        else Text("Analisis mendalam dan perkembangan tersedia untuk PRO terverifikasi.")
++    }
++}
+diff --git a/app/src/main/java/com/example/automatesmartbot/ui/screens/CompanyDirectoryScreen.kt b/app/src/main/java/com/example/automatesmartbot/ui/screens/CompanyDirectoryScreen.kt
+new file mode 100644
+index 0000000..5675b4a
+--- /dev/null
++++ b/app/src/main/java/com/example/automatesmartbot/ui/screens/CompanyDirectoryScreen.kt
+@@ -0,0 +1,78 @@
++package com.example.automatesmartbot.ui.screens
++
++import androidx.compose.foundation.layout.*
++import androidx.compose.foundation.lazy.LazyColumn
++import androidx.compose.foundation.lazy.items
++import androidx.compose.material3.*
++import androidx.compose.runtime.*
++import androidx.compose.runtime.saveable.rememberSaveable
++import androidx.compose.ui.Modifier
++import androidx.compose.ui.platform.LocalUriHandler
++import androidx.compose.ui.unit.dp
++import com.example.automatesmartbot.data.autoapply.*
++import com.example.automatesmartbot.data.network.ApiClient
++import com.example.automatesmartbot.ui.components.AppInput
++import com.example.automatesmartbot.ui.components.JourneyHeader
++import kotlinx.coroutines.CancellationException
++import kotlinx.coroutines.launch
++import org.json.JSONObject
++
++@OptIn(ExperimentalMaterial3Api::class)
++@Composable
++fun CompanyDirectoryScreen() {
++    val scope = rememberCoroutineScope(); val links = LocalUriHandler.current
++    var provinces by remember { mutableStateOf<List<JSONObject>>(emptyList()) }
++    var province by rememberSaveable { mutableStateOf("") }; var city by rememberSaveable { mutableStateOf("") }; var industry by rememberSaveable { mutableStateOf("") }; var position by rememberSaveable { mutableStateOf("") }
++    var menu by remember { mutableStateOf(false) }; var busy by remember { mutableStateOf(false) }; var error by remember { mutableStateOf<String?>(null) }
++    var rows by remember { mutableStateOf<List<JSONObject>>(emptyList()) }; var stats by remember { mutableStateOf<JSONObject?>(null) }; var next by remember { mutableStateOf<Int?>(null) }; var total by remember { mutableStateOf<Int?>(null) }; var ownerStatus by remember { mutableStateOf("") }
++    var appliedFilters by remember { mutableStateOf<List<String>?>(null) }
++    suspend fun load(more: Boolean = false) {
++        if (busy) return
++        val filters = if (more) appliedFilters ?: return else listOf(province, city, industry, position)
++        busy = true; error = null
++        try {
++            if (provinces.isEmpty()) provinces = ApiClient.apiService.companyProvinces().readJson().objects("provinces")
++            val body = ApiClient.apiService.companies(filters[0].ifBlank { null }, filters[1].ifBlank { null }, filters[2].ifBlank { null }, filters[3].ifBlank { null }, if (more) next ?: 0 else 0).readJson()
++            appliedFilters = filters
++            rows = if (more) rows + body.objects("items") else body.objects("items"); stats = body.getJSONObject("stats"); total = body.getInt("total"); ownerStatus = body.text("owner_data_status"); next = if (body.isNull("next_offset")) null else body.getInt("next_offset")
++        } catch (e: CancellationException) { throw e } catch (e: Exception) { error = e.message ?: "Direktori belum dapat dimuat." } finally { busy = false }
++    }
++    LaunchedEffect(Unit) { load() }
++    LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
++        item { JourneyHeader("Database Perusahaan Indonesia", "Cari secara nasional. Wilayah tujuan Auto Apply tetap mengikuti preferensi profil Anda.") }
++        item { Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
++            ExposedDropdownMenuBox(expanded = menu, onExpandedChange = { if (!busy) menu = it }) {
++                OutlinedTextField(value = provinces.firstOrNull { it.text("code") == province }?.text("name") ?: "Semua provinsi", onValueChange = {}, readOnly = true, label = { Text("Provinsi") }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(menu) }, modifier = Modifier.menuAnchor(MenuAnchorType.PrimaryNotEditable).fillMaxWidth())
++                ExposedDropdownMenu(expanded = menu, onDismissRequest = { menu = false }) {
++                    DropdownMenuItem(text = { Text("Semua provinsi") }, onClick = { province = ""; menu = false })
++                    provinces.forEach { p -> DropdownMenuItem(text = { Text(p.text("name")) }, onClick = { province = p.text("code"); menu = false }) }
++                }
++            }
++            AppInput("Kota / kabupaten", city, { city = it }); AppInput("Industri", industry, { industry = it }); AppInput("Posisi yang dipublikasikan (opsional)", position, { position = it })
++            Text("Kontak rekrutmen umum dapat tidak mencantumkan posisi. Alamat tersebut tetap tampil jika filter posisi dikosongkan.", style = MaterialTheme.typography.bodySmall)
++            Button(onClick = { scope.launch { load() } }, enabled = !busy, modifier = Modifier.fillMaxWidth()) { Text("Cari / Segarkan") }
++            if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
++            error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
++        } }
++        stats?.let { s -> item { Card { Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
++            Text("${s.optInt("companies")} perusahaan · ${s.optInt("emails")} email unik", style = MaterialTheme.typography.titleMedium)
++            Text("Pemilik: ${s.optInt("owner_emails")} · Pencarian baru: ${s.optInt("new_emails")}")
++            if (ownerStatus == "account_not_linked") Text("Daftar pemilik belum dapat dibaca: tautkan akun Telegram pada profil.", color = MaterialTheme.colorScheme.error)
++            Text("Provinsi dengan kontak: ${s.optInt("provinces_with_contacts")} / katalog ${s.optInt("province_catalogue")}")
++            Text("Data belum lengkap: ${s.optInt("incomplete_records")} · hasil filter: ${total ?: 0}")
++            Text("Alamat yang dipublikasikan belum berarti ada lowongan aktif atau bahwa email akan diterima HR.")
++        } } } }
++        if (!busy && error == null && total == 0) item { Text("Belum ada kontak sesuai filter. Coba filter lain atau lengkapi lokasi/sumber pada data impor pemilik.") }
++        items(rows, key = { it.text("id") }) { r -> Card(Modifier.fillMaxWidth()) { Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
++            Text(r.text("company"), style = MaterialTheme.typography.titleMedium); Text(r.text("email"))
++            Text(r.text("location").ifBlank { "Lokasi belum tersedia" }); Text(r.text("industry").ifBlank { "Industri belum terverifikasi" })
++            Text(if (r.text("origin") == "owner_import") "Sumber: database / file pemilik" else "Sumber: publikasi rekrutmen")
++            Text("Pemeriksaan: ${r.text("checked_at")}", style = MaterialTheme.typography.bodySmall)
++            Text("Lowongan: ${r.text("vacancy_status")} · Penggunaan email: ${r.text("email_policy")}")
++            if ((r.optJSONArray("missing_fields")?.length() ?: 0) > 0) Text("Belum lengkap: ${r.optJSONArray("missing_fields")}", color = MaterialTheme.colorScheme.error)
++            if (r.text("source_url").startsWith("https://")) TextButton(onClick = { runCatching { links.openUri(r.text("source_url")) }.onFailure { error = "Sumber belum dapat dibuka." } }) { Text("Periksa Sumber") }
++            else Text(r.text("source_reference"), style = MaterialTheme.typography.bodySmall)
++        } } }
++        if (next != null) item { OutlinedButton(onClick = { scope.launch { load(true) } }, enabled = !busy && appliedFilters == listOf(province, city, industry, position)) { Text("Muat Berikutnya") } }
++    }
++}
+diff --git a/app/src/main/java/com/example/automatesmartbot/ui/screens/KirimLamaranScreen.kt b/app/src/main/java/com/example/automatesmartbot/ui/screens/KirimLamaranScreen.kt
+index 2596e67..ccdca28 100644
+--- a/app/src/main/java/com/example/automatesmartbot/ui/screens/KirimLamaranScreen.kt
++++ b/app/src/main/java/com/example/automatesmartbot/ui/screens/KirimLamaranScreen.kt
+@@ -14,6 +14,8 @@ import com.example.automatesmartbot.data.cv.readBytesLimited
+ import androidx.compose.foundation.lazy.LazyColumn
+ import androidx.compose.material3.*
+ import androidx.compose.runtime.*
++import androidx.compose.runtime.saveable.rememberSaveable
++import com.example.automatesmartbot.ui.components.AppInput
+ import androidx.compose.ui.Modifier
+ import androidx.compose.ui.platform.LocalContext
+ import androidx.compose.ui.unit.dp
+@@ -25,7 +27,7 @@ import kotlinx.coroutines.launch
+ import org.json.JSONObject
+ 
+ @Composable
+-fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -> Unit, onNavigateReports: () -> Unit = {}) {
++fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -> Unit, onNavigateReports: () -> Unit = {}, onNavigateCompanies: (() -> Unit)? = null) {
+     val context = LocalContext.current
+     val prefs = remember { context.getSharedPreferences("auto_apply_consent", 0) }
+     val scope = rememberCoroutineScope()
+@@ -40,6 +42,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
+     var busy by remember { mutableStateOf(false) }
+     var message by remember { mutableStateOf("") }
+     var candidates by remember { mutableStateOf<List<JSONObject>>(emptyList()) }
++    var testRecipient by rememberSaveable { mutableStateOf("") }
++    var testPreview by remember { mutableStateOf<JSONObject?>(null) }
+     var statusBody by remember { mutableStateOf(JSONObject()) }
+     var candidateDiagnosis by remember { mutableStateOf(JSONObject()) }
+     var simulation by remember { mutableStateOf<JSONObject?>(null) }
+@@ -198,6 +202,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
+             }
+         }
+         item {
++            onNavigateCompanies?.let { TextButton(onClick = it) { Text("Periksa Database Perusahaan & Wilayah") } }
+             Text("Kandidat dari server", style = MaterialTheme.typography.titleMedium)
+             Text(candidateDiagnosis.optString("message").ifBlank { statusBody.optJSONObject("diagnosis")?.optString("message").orEmpty() })
+             Text(candidateDiagnosis.optString("action"))
+@@ -207,13 +212,28 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
+                 Text(if (c.optBoolean("vacancy_verified") && c.optBoolean("active")) "Lowongan aktif menurut server" else "Kontak / peluang spontan; lowongan belum terverifikasi", color = MaterialTheme.colorScheme.onSurfaceVariant)
+             }
+         }
++        item {
++            Card { Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
++                Text("Persiapan Satu Email Uji", style = MaterialTheme.typography.titleMedium)
++                Text("Tentukan penerima untuk ditinjau. Langkah ini tidak mengirim email; penerima, isi, dan lampiran CV harus disetujui sebelum pengiriman nyata.")
++                AppInput("Email penerima uji", testRecipient, { testRecipient = it; testPreview = null })
++                OutlinedButton(onClick = { scope.launch {
++                    busy = true
++                    try { testPreview = ApiClient.apiService.testEmailPreview(mapOf("recipient" to testRecipient.trim())).readJson().getJSONObject("preview") }
++                    catch (e: CancellationException) { throw e }
++                    catch (e: Exception) { message = e.message ?: "Pratinjau belum dapat disiapkan." }
++                    finally { busy = false }
++                } }, enabled = !busy && isOnline && testRecipient.isNotBlank()) { Text("Siapkan Pratinjau · Tanpa Mengirim") }
++                testPreview?.let { p -> Text("Kepada: ${p.text("to")}"); Text("Subjek: ${p.text("subject")}"); Text(p.text("body")); Text("Fingerprint CV: ${p.text("attachment_cv_sha256")}", style = MaterialTheme.typography.bodySmall); Text("ID review: ${p.text("review_id")}", style = MaterialTheme.typography.bodySmall); Text("Menunggu persetujuan penerima dan isi. Pengiriman belum dijalankan.") }
++            } }
++        }
+         item {
+             Text("Riwayat dari server", style = MaterialTheme.typography.titleMedium)
+             if (deliveries.isEmpty()) Text("Belum ada riwayat yang tersedia dari server.")
+             deliveries.forEach { d ->
+                 val gmailId = d.optString("gmail_message_id").takeIf(AutoApplyConfirmation::hasReference) ?: d.optString("gmail_id")
+                 val confirmed = AutoApplyConfirmation.sent(d.optString("status"), gmailId)
+-                Text("${d.optString("company")} • ${if (confirmed) "Terkirim (Gmail)" else if (d.optString("status") == "sent") "Menunggu konfirmasi Gmail" else d.optString("status", "Belum dikonfirmasi")}")
++                Text("${d.optString("company")} • ${if (confirmed) "Diterima Gmail API · belum membuktikan dibaca HR" else if (d.optString("status") == "sent") "Menunggu konfirmasi Gmail" else d.optString("status", "Belum dikonfirmasi")}")
+             }
+         }
+     }
+diff --git a/app/src/main/java/com/example/automatesmartbot/ui/screens/MainDashboardScreen.kt b/app/src/main/java/com/example/automatesmartbot/ui/screens/MainDashboardScreen.kt
+index b1ebfe0..8a4aa57 100644
+--- a/app/src/main/java/com/example/automatesmartbot/ui/screens/MainDashboardScreen.kt
++++ b/app/src/main/java/com/example/automatesmartbot/ui/screens/MainDashboardScreen.kt
+@@ -1,4 +1,7 @@
+ package com.example.automatesmartbot.ui.screens
++import androidx.compose.foundation.layout.Column
++import androidx.compose.foundation.layout.Box
++import androidx.compose.material3.TextButton
+ 
+ import androidx.activity.compose.BackHandler
+ import androidx.compose.foundation.layout.fillMaxSize
+@@ -180,6 +183,7 @@ private fun MainDashboardContent(
+         Screen.CareerDocuments.route -> "Dokumen Karier"
+         Screen.CvBuilder.route -> cvHistory.last()
+         Screen.LatihanPsikotes.route -> "Latihan Psikotes"
++        Screen.CompanyDirectory.route -> "Database Perusahaan"
+         Screen.AiInterview.route -> "AI Interview"
+         Screen.AiAgent.route -> "AI Agent"
+         Screen.Riwayat.route -> "Riwayat Lamaran"
+@@ -274,8 +278,10 @@ private fun MainDashboardContent(
+             }
+             composable(Screen.CariLowongan.route) {
+                 FixedCanvasTheme(dark = false) {
+-                    CariLowonganScreen(isPro = isPro)
+-
++                    Column(Modifier.fillMaxSize()) {
++                        TextButton(onClick = { navController.navigate(Screen.CompanyDirectory.route) }) { Text("Database Perusahaan · Seluruh Indonesia") }
++                        Box(Modifier.weight(1f)) { CariLowonganScreen(isPro = isPro) }
++                    }
+                 }
+             }
+             composable(Screen.KirimLamaran.route) {
+@@ -287,9 +293,11 @@ private fun MainDashboardContent(
+                             launchSingleTop = true
+                         }
+                     },
+-                    onNavigateReports = { navController.navigate(Screen.Riwayat.route) { launchSingleTop = true } }
++                    onNavigateReports = { navController.navigate(Screen.Riwayat.route) { launchSingleTop = true } },
++                    onNavigateCompanies = { navController.navigate(Screen.CompanyDirectory.route) { launchSingleTop = true } }
+                 )
+             }
++            composable(Screen.CompanyDirectory.route) { CompanyDirectoryScreen() }
+             composable(Screen.JobTraining.route) { JobTrainingScreen(cvViewModel, isPro) }
+             composable(Screen.SalaryCalculator.route) { SalaryCalculatorScreen() }
+             composable(Screen.CareerLetters.route) {
+@@ -309,10 +317,7 @@ private fun MainDashboardContent(
+                 LatihanPsikotesScreen(isPro = isPro, onExit = navigateUpOrDashboard)
+             }
+             composable(Screen.AiInterview.route) {
+-                FixedCanvasTheme(dark = false) {
+-                    AiInterviewScreen()
+-
+-                }
++                AiInterviewScreen(isPro = isPro, cv = cvViewModel.state.collectAsState().value.draft)
+             }
+             composable(Screen.AiAgent.route) {
+                 FixedCanvasTheme(dark = false) {
+diff --git a/app/src/main/java/com/example/automatesmartbot/ui/screens/RiwayatScreen.kt b/app/src/main/java/com/example/automatesmartbot/ui/screens/RiwayatScreen.kt
+index e758d8e..a23d672 100644
+--- a/app/src/main/java/com/example/automatesmartbot/ui/screens/RiwayatScreen.kt
++++ b/app/src/main/java/com/example/automatesmartbot/ui/screens/RiwayatScreen.kt
+@@ -72,13 +72,13 @@ fun RiwayatScreen() {
+ internal fun DeliverySummary(summary: JSONObject, quota: JSONObject) {
+     Card(Modifier.fillMaxWidth()) {
+         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+-            Text("Pengiriman Hari Ini", style = MaterialTheme.typography.titleLarge)
++            Text("Penerimaan Gmail API Hari Ini", style = MaterialTheme.typography.titleLarge)
+             Text("${summary.optInt("sent_today")} terkirim / target maksimal 5", style = MaterialTheme.typography.titleMedium)
+             LinearProgressIndicator(progress = { (summary.optInt("sent_today") / 5f).coerceIn(0f, 1f) }, modifier = Modifier.fillMaxWidth())
+             Text("Gagal hari ini: ${summary.optInt("failed_today")} · Tertunda seluruh antrean: ${summary.optInt("pending")}")
+             Text("Total terkirim: ${summary.optInt("total_sent")} · Belum pasti: ${summary.optInt("uncertain")}")
+             Text("Kuota terpakai/direservasi: ${quota.optInt("quota_used_today")} · Tersisa hari ini: ${quota.optInt("remaining_today")}")
+-            Text("Status belum pasti tetap memakai kuota untuk mencegah kirim ganda.", style = MaterialTheme.typography.bodySmall)
++            Text("Gmail API menerima email bukan bukti email dibaca/diterima HR. Status belum pasti tetap memakai kuota untuk mencegah kirim ganda.", style = MaterialTheme.typography.bodySmall)
+         }
+     }
+ }
+diff --git a/app/src/main/java/com/example/automatesmartbot/ui/viewmodel/InterviewViewModel.kt b/app/src/main/java/com/example/automatesmartbot/ui/viewmodel/InterviewViewModel.kt
+new file mode 100644
+index 0000000..aa68461
+--- /dev/null
++++ b/app/src/main/java/com/example/automatesmartbot/ui/viewmodel/InterviewViewModel.kt
+@@ -0,0 +1,69 @@
++package com.example.automatesmartbot.ui.viewmodel
++
++import androidx.lifecycle.SavedStateHandle
++import androidx.lifecycle.ViewModel
++import androidx.lifecycle.viewModelScope
++import com.example.automatesmartbot.data.interview.InterviewRepository
++import com.example.automatesmartbot.data.network.ApiClient
++import kotlinx.coroutines.CancellationException
++import kotlinx.coroutines.flow.MutableStateFlow
++import kotlinx.coroutines.launch
++import org.json.JSONObject
++import java.util.UUID
++
++class InterviewViewModel @JvmOverloads constructor(private val saved: SavedStateHandle, private val repository: () -> InterviewRepository = { InterviewRepository(requireNotNull(ApiClient.interviewApi) { "Layanan interview belum diinisialisasi." }) }) : ViewModel() {
++    val capabilities = MutableStateFlow<JSONObject?>(null)
++    val session = MutableStateFlow<JSONObject?>(saved.get<String>("interview_session")?.let(::JSONObject))
++    val history = MutableStateFlow<JSONObject?>(null)
++    val error = MutableStateFlow<String?>(null)
++    val busy = MutableStateFlow(false)
++    val answer = saved.getStateFlow("interview_answer", "")
++    val webRtcAnswer = MutableStateFlow<JSONObject?>(null)
++    fun updateAnswer(text: String) { saved["interview_answer"] = text }
++    private fun store(value: JSONObject) {
++        val pending = saved.get<String>("pending_request")?.let(::JSONObject)
++        val turns = value.optJSONArray("answers")
++        val acknowledged = pending != null && turns != null && (0 until turns.length()).any {
++            turns.getJSONObject(it).optString("request_id") == pending.optString("request_id")
++        }
++        if (acknowledged) {
++            if (answer.value.trim() == pending!!.optString("answer")) saved["interview_answer"] = ""
++            saved.remove<String>("pending_request")
++        }
++        saved["interview_session"] = value.toString(); session.value = value
++    }
++    fun load() = request { repo -> capabilities.value = repo.capabilities(); session.value?.let { store(repo.session(it.getString("id"))) } }
++    fun start(settings: Map<String, Any>) = request { repo -> store(repo.start(settings)); saved["interview_answer"] = ""; saved.remove<String>("pending_request"); webRtcAnswer.value = null }
++    fun submit() = request { repo ->
++        val current = session.value ?: error("Sesi belum tersedia.")
++        val text = answer.value.trim(); require(text.length >= 3) { "Tuliskan jawaban terlebih dahulu." }
++        val pending = saved.get<String>("pending_request")?.let(::JSONObject)
++        val request = if (pending != null && pending.optString("answer") == text && pending.optInt("revision") == current.getInt("revision")) pending else JSONObject().put("request_id", UUID.randomUUID().toString()).put("answer", text).put("revision", current.getInt("revision"))
++        saved["pending_request"] = request.toString()
++        store(repo.answer(current.getString("id"), mapOf("answer" to request.getString("answer"), "request_id" to request.getString("request_id"), "revision" to request.getInt("revision"))))
++        saved["interview_answer"] = ""; saved.remove<String>("pending_request")
++    }
++    fun sync() = request { repo -> session.value?.let { store(repo.session(it.getString("id"))) } }
++    fun finish() = request { repo -> session.value?.let { store(repo.finish(it.getString("id"))) } }
++    fun loadHistory() = request { repo -> history.value = repo.history() }
++    fun openHistory(id: String) = request { repo -> val value = repo.session(id); saved.remove<String>("pending_request"); saved["interview_answer"] = ""; store(value); webRtcAnswer.value = null }
++    fun offer(sdp: String) = request { repo ->
++        val id = session.value?.getString("id") ?: error("Sesi video belum tersedia.")
++        webRtcAnswer.value = repo.offer(id, sdp); store(repo.session(id))
++    }
++    fun transcribe(audio: ByteArray, format: String) = request { repo ->
++        val id = session.value?.getString("id") ?: error("Sesi belum tersedia.")
++        updateAnswer(repo.transcribe(id, audio, format))
++    }
++    suspend fun questionAudio(): ByteArray = repository().speech(session.value?.getString("id") ?: error("Sesi belum tersedia."))
++    fun showError(value: String) { error.value = value }
++    fun newSetup() { saved.remove<String>("pending_request"); session.value = null; saved.remove<String>("interview_session"); saved["interview_answer"] = ""; webRtcAnswer.value = null }
++    private fun request(action: suspend (InterviewRepository) -> Unit) = viewModelScope.launch {
++        if (busy.value) return@launch
++        busy.value = true; error.value = null
++        try { action(repository()) }
++        catch (e: CancellationException) { throw e }
++        catch (e: Exception) { error.value = e.message ?: "Permintaan gagal. Jawaban Anda tetap disimpan." }
++        finally { busy.value = false }
++    }
++}
+diff --git a/app/src/test/java/com/example/automatesmartbot/data/autoapply/AutoApplyReportsTest.kt b/app/src/test/java/com/example/automatesmartbot/data/autoapply/AutoApplyReportsTest.kt
+index 50412cd..ad15fe4 100644
+--- a/app/src/test/java/com/example/automatesmartbot/data/autoapply/AutoApplyReportsTest.kt
++++ b/app/src/test/java/com/example/automatesmartbot/data/autoapply/AutoApplyReportsTest.kt
+@@ -18,8 +18,8 @@ import retrofit2.converter.gson.GsonConverterFactory
+ class AutoApplyReportsTest {
+     @Test fun unconfirmedSentAndDryRunCanNeverBecomeConfirmedDelivery() {
+         assertTrue(DeliveryStatus.label(JSONObject("{\"status\":\"sent\"}")).startsWith("Belum pasti"))
+-        assertTrue(DeliveryStatus.label(JSONObject("{\"status\":\"sent\",\"gmail_message_id\":\"gmail-real-confirmation\"}")).startsWith("Terkirim"))
+-        assertFalse(DeliveryStatus.label(JSONObject("{\"status\":\"dry-run\"}")).startsWith("Terkirim"))
++        assertTrue(DeliveryStatus.label(JSONObject("{\"status\":\"sent\",\"gmail_message_id\":\"gmail-real-confirmation\"}")).startsWith("Diterima Gmail API"))
++        assertFalse(DeliveryStatus.label(JSONObject("{\"status\":\"dry-run\"}")).startsWith("Diterima Gmail API"))
+     }
+     @Test fun reportFiltersAndSimulationUseRealRoutesAndPreserveServerReason()=runTest {
+         MockWebServer().use { server ->
+diff --git a/app/src/test/java/com/example/automatesmartbot/data/interview/InterviewContractTest.kt b/app/src/test/java/com/example/automatesmartbot/data/interview/InterviewContractTest.kt
+new file mode 100644
+index 0000000..0e9d3b4
+--- /dev/null
++++ b/app/src/test/java/com/example/automatesmartbot/data/interview/InterviewContractTest.kt
+@@ -0,0 +1,83 @@
++package com.example.automatesmartbot.data.interview
++
++import com.example.automatesmartbot.data.autoapply.readJson
++import com.example.automatesmartbot.data.network.ApiService
++import com.example.automatesmartbot.ui.viewmodel.InterviewViewModel
++import androidx.lifecycle.SavedStateHandle
++import kotlinx.coroutines.Dispatchers
++import kotlinx.coroutines.ExperimentalCoroutinesApi
++import kotlinx.coroutines.test.*
++import okhttp3.ResponseBody
++import okhttp3.ResponseBody.Companion.toResponseBody
++import okhttp3.mockwebserver.MockResponse
++import okhttp3.mockwebserver.MockWebServer
++import org.json.JSONObject
++import org.junit.After
++import org.junit.Assert.*
++import org.junit.Before
++import org.junit.Test
++import org.junit.runner.RunWith
++import org.robolectric.RobolectricTestRunner
++import org.robolectric.annotation.Config
++import retrofit2.Response
++import retrofit2.Retrofit
++import retrofit2.converter.gson.GsonConverterFactory
++
++@OptIn(ExperimentalCoroutinesApi::class)
++@RunWith(RobolectricTestRunner::class)
++@Config(sdk=[35])
++class InterviewContractTest {
++    private val dispatcher=StandardTestDispatcher()
++    @Before fun setup(){ Dispatchers.setMain(dispatcher) }
++    @After fun cleanup(){ Dispatchers.resetMain() }
++    @Test fun directoryFiltersAndOneEmailPreviewUseCorrectAuthenticatedApiRoutes()=runTest(dispatcher) {
++        MockWebServer().use { server -> server.start(); val api=Retrofit.Builder().baseUrl(server.url("/")).addConverterFactory(GsonConverterFactory.create()).build().create(ApiService::class.java)
++            server.enqueue(MockResponse().setBody("{\"success\":true,\"items\":[]}"));api.companies("93","Merauke","Logistik","Admin",50).readJson()
++            val search=server.takeRequest();assertTrue(search.path!!.contains("province=93"));assertTrue(search.path!!.contains("city=Merauke"));assertTrue(search.path!!.contains("offset=50"))
++            server.enqueue(MockResponse().setBody("{\"preview\":{\"sending_enabled\":false}}"));val preview=api.testEmailPreview(mapOf("recipient" to "fixture@example.com")).readJson();assertFalse(preview.getJSONObject("preview").getBoolean("sending_enabled"))
++            val request=server.takeRequest();assertEquals("/auto-apply/test-email-preview",request.path);assertTrue(request.body.readUtf8().contains("fixture@example.com"))
++        }
++    }
++    @Test fun interviewEndpointsCarryLanguageCvRevisionAndStableRequestIdentity()=runTest(dispatcher) {
++        MockWebServer().use { server -> server.start();val api=Retrofit.Builder().baseUrl(server.url("/")).addConverterFactory(GsonConverterFactory.create()).build().create(InterviewApi::class.java);val repo=InterviewRepository(api)
++            server.enqueue(MockResponse().setBody("{\"session\":{\"id\":\"session\",\"revision\":0}}"));repo.start(mapOf("language" to "en","mode" to "text","cv" to mapOf("summary" to "Actual user CV")))
++            val start=server.takeRequest();assertEquals("/interviews/sessions",start.path);val body=JSONObject(start.body.readUtf8());assertEquals("en",body.getString("language"));assertEquals("Actual user CV",body.getJSONObject("cv").getString("summary"))
++            server.enqueue(MockResponse().setBody("{\"session\":{\"id\":\"session\",\"revision\":1}}"));repo.answer("session",mapOf("answer" to "Actual answer","request_id" to "request-123","revision" to 0))
++            val answer=server.takeRequest();assertEquals("/interviews/sessions/session/answers",answer.path);assertEquals("request-123",JSONObject(answer.body.readUtf8()).getString("request_id"))
++            server.enqueue(MockResponse().setResponseCode(403).setBody("{\"code\":\"PRO_REQUIRED\",\"error\":\"PRO aktif diperlukan\"}"))
++            try {repo.offer("session","v=0 mock-offer");fail("Expected denial")}catch(e:IllegalStateException){assertTrue(e.message!!.contains("PRO_REQUIRED"))}
++        }
++    }
++    @Test fun offlineReplyRetainsTextAndRetriesSameRequestAcrossViewModelRestoration()=runTest(dispatcher) {
++        val api=FixtureInterviewApi();val repo=InterviewRepository(api);val saved=SavedStateHandle();val vm=InterviewViewModel(saved){repo}
++        vm.start(mapOf("language" to "id")).join();vm.updateAnswer("Saya mengelola administrasi dan laporan.");api.fail=true;vm.submit().join()
++        assertEquals("Saya mengelola administrasi dan laporan.",vm.answer.value);assertNotNull(vm.error.value)
++        val restored=InterviewViewModel(saved){repo};api.fail=false;restored.submit().join()
++        assertEquals(2,api.submitted.size);assertEquals(api.submitted[0]["request_id"],api.submitted[1]["request_id"]);assertEquals("",restored.answer.value);assertEquals(1,restored.session.value!!.getInt("revision"))
++    }
++    @Test fun syncAcknowledgementClearsOnlyTheAlreadyAcceptedDraft()=runTest(dispatcher) {
++        val api=FixtureInterviewApi();val saved=SavedStateHandle();val vm=InterviewViewModel(saved){InterviewRepository(api)}
++        vm.start(mapOf("language" to "id")).join();vm.updateAnswer("Jawaban telah diterima server tetapi respons terputus.");api.fail=true;vm.submit().join()
++        val pending=JSONObject(saved.get<String>("pending_request")!!)
++        api.serverSession=JSONObject().put("id","fixture-session").put("revision",1).put("status","active").put("answers",org.json.JSONArray().put(JSONObject().put("request_id",pending.getString("request_id"))))
++        vm.sync().join();assertEquals("",vm.answer.value);assertNull(saved.get<String>("pending_request"));assertEquals(1,api.submitted.size)
++    }
++    @Test fun providerFailureDoesNotCreateFakeInterviewOrScore()=runTest(dispatcher) {
++        val api=FixtureInterviewApi();val vm=InterviewViewModel(SavedStateHandle()){InterviewRepository(api)};api.failStart=true
++        vm.start(mapOf("language" to "id")).join();assertNull(vm.session.value);assertNotNull(vm.error.value)
++    }
++}
++
++private class FixtureInterviewApi: InterviewApi {
++    var fail=false;var failStart=false;var serverSession:JSONObject?=null;val submitted=mutableListOf<Map<String,Any>>()
++    private fun response(revision:Int=0):Response<ResponseBody> = Response.success("{\"session\":{\"id\":\"fixture-session\",\"revision\":$revision,\"status\":\"active\"}}".toResponseBody())
++    override suspend fun capabilities()=Response.success("{\"text\":true,\"deep_analysis\":false,\"question_engine\":\"structured_rules\"}".toResponseBody())
++    override suspend fun start(settings:Map<String,Any>):Response<ResponseBody>{if(failStart)throw java.io.IOException("Fixture offline");return response()}
++    override suspend fun session(id:String)=serverSession?.let { Response.success("{\"session\":$it}".toResponseBody()) } ?: response()
++    override suspend fun answer(id:String,body:Map<String,Any>):Response<ResponseBody>{submitted+=body;if(fail)throw java.io.IOException("Fixture response lost");return response(1)}
++    override suspend fun finish(id:String)=response(1)
++    override suspend fun history()=Response.success("{\"items\":[]}".toResponseBody())
++    override suspend fun offer(id:String,body:Map<String,String>)=Response.success("{\"sdp\":\"v=0 fixture\",\"type\":\"answer\"}".toResponseBody())
++    override suspend fun transcribe(id:String,body:Map<String,String>)=Response.success("{\"text\":\"Actual transcript\"}".toResponseBody())
++    override suspend fun speech(id:String)=Response.success("{\"audio_base64\":\"UklGRg==\"}".toResponseBody())
++}
+diff --git a/app/src/test/java/com/example/automatesmartbot/ui/screens/NationalInterviewUiTest.kt b/app/src/test/java/com/example/automatesmartbot/ui/screens/NationalInterviewUiTest.kt
+new file mode 100644
+index 0000000..1982639
+--- /dev/null
++++ b/app/src/test/java/com/example/automatesmartbot/ui/screens/NationalInterviewUiTest.kt
+@@ -0,0 +1,52 @@
++package com.example.automatesmartbot.ui.screens
++
++import androidx.activity.ComponentActivity
++import androidx.compose.foundation.layout.Box
++import androidx.compose.foundation.layout.size
++import androidx.compose.ui.Modifier
++import androidx.compose.ui.test.*
++import androidx.compose.ui.test.junit4.createAndroidComposeRule
++import androidx.compose.ui.unit.dp
++import androidx.lifecycle.SavedStateHandle
++import com.example.automatesmartbot.ui.theme.KarirMateTheme
++import com.example.automatesmartbot.ui.theme.ThemeMode
++import com.example.automatesmartbot.ui.viewmodel.InterviewViewModel
++import com.example.automatesmartbot.data.autoapply.DeliveryStatus
++import com.example.automatesmartbot.ui.navigation.*
++import org.json.JSONObject
++import org.junit.Assert.*
++import org.junit.Rule
++import org.junit.Test
++import org.junit.runner.RunWith
++import org.robolectric.RobolectricTestRunner
++import org.robolectric.annotation.Config
++import org.robolectric.annotation.GraphicsMode
++
++@RunWith(RobolectricTestRunner::class)
++@Config(sdk=[35])
++@GraphicsMode(GraphicsMode.Mode.NATIVE)
++class NationalInterviewUiTest {
++    @get:Rule val compose=createAndroidComposeRule<ComponentActivity>()
++    @Test fun storedTextSessionHasVisibleSubmitOnSmallDarkScreenAndPreservesDraft() {
++        val saved=SavedStateHandle(mapOf("interview_session" to """{"id":"fixture","revision":0,"status":"active","question_number":1,"question_limit":5,"provider":"structured_rules","question":"Ceritakan pengalaman administrasi yang benar-benar Anda miliki.","settings":{"position":"Admin","language":"id","mode":"text"},"answers":[]}"""))
++        val vm=InterviewViewModel(saved) { error("No network provider in this UI fixture") }
++        compose.setContent { KarirMateTheme(ThemeMode.DARK) { Box(Modifier.size(360.dp,640.dp)) { AiInterviewScreen(vm=vm) } } }
++        compose.onNode(hasScrollAction()).performScrollToNode(hasSetTextAction())
++        compose.onAllNodes(hasSetTextAction())[0].performTextInput("Pengalaman administrasi nyata.")
++        compose.onNodeWithText("Kirim Jawaban").assertIsDisplayed().assertIsEnabled()
++        compose.runOnIdle {assertEquals("Pengalaman administrasi nyata.",vm.answer.value)}
++    }
++    @Test fun interviewScoresDoNotExposeProExampleToFreeAndShowActualMethod() {
++        val result=JSONObject("""{"overall":70,"quality":72,"relevance":65,"communication":73,"evaluation_method":"structured_text_rules","note":"Berdasarkan teks, bukan penampilan","strengths":["Contoh relevan"],"weaknesses":["Perjelas hasil"],"recommendations":["Latih STAR"],"improved_answer":"PRO private example"}""")
++        compose.setContent { KarirMateTheme(ThemeMode.DARK) { InterviewResult(result,false) } }
++        compose.onNodeWithText("70/100").assertExists();compose.onNodeWithText("Metode: structured_text_rules").assertExists();compose.onNodeWithText("PRO private example").assertDoesNotExist()
++    }
++    @Test fun newDirectoryRouteRetainsAllFiveOriginalBottomTabsAndGmailStatusIsNotHrReceipt() {
++        assertEquals(listOf("dashboard","cari_lowongan","kirim_lamaran","riwayat","profil"),bottomNavItems.map{it.route})
++        assertTrue(appShellItems.any{it.route=="company_directory"})
++        val accepted=DeliveryStatus.label(JSONObject("""{"status":"sent","gmail_message_id":"fixture-confirmation"}"""))
++        assertTrue(accepted.startsWith("Diterima Gmail API"));assertTrue(accepted.contains("belum membuktikan dibaca HR"))
++        assertEquals("Disiapkan",DeliveryStatus.label(JSONObject("{\"status\":\"prepared\"}")))
++        assertEquals("Dalam antrean",DeliveryStatus.label(JSONObject("{\"status\":\"queued\"}")))
++    }
++}
+diff --git a/docs/national-interview/android-checks.txt b/docs/national-interview/android-checks.txt
+new file mode 100644
+index 0000000..ef0ece4
+--- /dev/null
++++ b/docs/national-interview/android-checks.txt
+@@ -0,0 +1,71 @@
++To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/9.6.0/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
++Daemon will be stopped at the end of the build
++Unable to initialize metrics, ensure /home/agent/.android is writable, details: /home/agent/.android/analytics.settings (No such file or directory)
++Reusing configuration cache.
++> Task :app:generateDebugAssets UP-TO-DATE
++> Task :app:prepareBrandAssets UP-TO-DATE
++> Task :app:preBuild UP-TO-DATE
++> Task :app:preDebugUnitTestBuild UP-TO-DATE
++> Task :app:preDebugBuild UP-TO-DATE
++> Task :app:generateDebugBuildConfig UP-TO-DATE
++> Task :app:generateDebugResources UP-TO-DATE
++> Task :app:packageDebugResources UP-TO-DATE
++> Task :app:javaPreCompileDebug UP-TO-DATE
++> Task :app:checkDebugAarMetadata UP-TO-DATE
++> Task :app:processDebugNavigationResources UP-TO-DATE
++> Task :app:mapDebugSourceSetPaths UP-TO-DATE
++> Task :app:compileDebugNavigationResources UP-TO-DATE
++> Task :app:parseDebugLocalResources UP-TO-DATE
++> Task :app:generateDebugRFile UP-TO-DATE
++> Task :app:mergeDebugResources UP-TO-DATE
++> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
++> Task :app:extractDeepLinksDebug UP-TO-DATE
++> Task :app:processDebugMainManifest UP-TO-DATE
++> Task :app:processDebugManifest UP-TO-DATE
++> Task :app:processDebugManifestForPackage UP-TO-DATE
++> Task :app:processDebugResources UP-TO-DATE
++> Task :app:javaPreCompileDebugUnitTest UP-TO-DATE
++> Task :app:mergeDebugAssets UP-TO-DATE
++> Task :app:packageDebugUnitTestForUnitTest UP-TO-DATE
++> Task :app:mergeDebugUnitTestManifest UP-TO-DATE
++> Task :app:processDebugUnitTestManifest UP-TO-DATE
++> Task :app:generateDebugUnitTestConfig UP-TO-DATE
++> Task :app:preDebugAndroidTestBuild SKIPPED
++> Task :app:extractProguardFiles UP-TO-DATE
++> Task :app:mergeDebugAndroidTestManifest UP-TO-DATE
++> Task :app:processDebugAndroidTestManifest UP-TO-DATE
++> Task :app:generateDebugAndroidTestBuildConfig UP-TO-DATE
++> Task :app:generateDebugAndroidTestResources UP-TO-DATE
++> Task :app:packageDebugAndroidTestResources UP-TO-DATE
++> Task :app:processDebugAndroidTestNavigationResources UP-TO-DATE
++> Task :app:parseDebugAndroidTestLocalResources UP-TO-DATE
++> Task :app:generateDebugAndroidTestRFile UP-TO-DATE
++> Task :app:compileDebugKotlin
++> Task :app:processDebugJavaRes UP-TO-DATE
++> Task :app:compileDebugJavaWithJavac UP-TO-DATE
++> Task :app:bundleDebugClassesToRuntimeJar
++> Task :app:bundleDebugClassesToCompileJar
++> Task :app:generateDebugLintReportModel
++> Task :app:generateDebugAndroidTestLintModel
++> Task :app:generateDebugUnitTestLintModel
++> Task :app:compileDebugUnitTestKotlin
++> Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
++> Task :app:processDebugUnitTestJavaRes UP-TO-DATE
++> Task :app:lintAnalyzeDebug
++> Task :app:testDebugUnitTest
++
++> Task :app:lintAnalyzeDebugAndroidTest
++Warning: Unable to initialize metrics, ensure /home/agent/.android is writable, details: /home/agent/.android/analytics.settings (No such file or directory)
++
++> Task :app:lintAnalyzeDebugUnitTest
++> Task :app:compileDebugAndroidTestKotlin
++
++> Task :app:lintReportDebug
++Wrote HTML report to file:///workspace/karirmate-national-android/app/build/reports/lint-results-debug.html
++Wrote SARIF report to file:///workspace/karirmate-national-android/app/build/reports/lint-results-debug.sarif
++
++> Task :app:lintDebug
++
++BUILD SUCCESSFUL in 1m 49s
++50 actionable tasks: 14 executed, 36 up-to-date
++Configuration cache entry reused.
+diff --git a/docs/national-interview/psychotest-contract-tests.txt b/docs/national-interview/psychotest-contract-tests.txt
+new file mode 100644
+index 0000000..5fabc63
+--- /dev/null
++++ b/docs/national-interview/psychotest-contract-tests.txt
+@@ -0,0 +1,18 @@
++test_answer_revision_score_and_history_are_persisted (test_psychotest_service.PsychotestServiceTests.test_answer_revision_score_and_history_are_persisted) ... ok
++test_existing_full_session_contract_remains_unchanged (test_psychotest_service.PsychotestServiceTests.test_existing_full_session_contract_remains_unchanged) ... ok
++test_free_catalog_and_ten_question_session_use_real_unique_bank_rows (test_psychotest_service.PsychotestServiceTests.test_free_catalog_and_ten_question_session_use_real_unique_bank_rows) ... ok
++test_insufficient_bank_never_pads_fake_or_duplicate_questions (test_psychotest_service.PsychotestServiceTests.test_insufficient_bank_never_pads_fake_or_duplicate_questions) ... ok
++test_ambiguous_outcome_never_becomes_sent_or_retries (test_safety.AutoApplyTests.test_ambiguous_outcome_never_becomes_sent_or_retries) ... ok
++test_candidates_match_profile_location_and_prioritize_verified_active (test_safety.AutoApplyTests.test_candidates_match_profile_location_and_prioritize_verified_active) ... ok
++test_case_insensitive_persistent_duplicate_prevention (test_safety.AutoApplyTests.test_case_insensitive_persistent_duplicate_prevention) ... ok
++test_five_per_jakarta_calendar_day_with_next_day_reset (test_safety.AutoApplyTests.test_five_per_jakarta_calendar_day_with_next_day_reset) ... ok
++test_missing_gmail_id_is_not_delivery_confirmation (test_safety.AutoApplyTests.test_missing_gmail_id_is_not_delivery_confirmation) ... ok
++test_parallel_reservations_cannot_exceed_limit (test_safety.AutoApplyTests.test_parallel_reservations_cannot_exceed_limit) ... ok
++test_requires_explicit_consent (test_safety.AutoApplyTests.test_requires_explicit_consent) ... ok
++test_basic_modes_remain_free (test_safety.PsychotestTests.test_basic_modes_remain_free) ... ok
++test_training_has_ten_to_twenty_unique_sample_slots (test_safety.PsychotestTests.test_training_has_ten_to_twenty_unique_sample_slots) ... ok
++
++----------------------------------------------------------------------
++Ran 13 tests in 0.071s
++
++OK
+diff --git a/docs/national-interview/test-results.json b/docs/national-interview/test-results.json
+new file mode 100644
+index 0000000..1defc64
+--- /dev/null
++++ b/docs/national-interview/test-results.json
+@@ -0,0 +1,22 @@
++{
++  "unit_robolectric": {
++    "tests": 99,
++    "failures": 0,
++    "errors": 0,
++    "skipped": 0
++  },
++  "lint": {
++    "errors": 0,
++    "warnings": 71
++  },
++  "compileDebugKotlin": "PASS",
++  "compileDebugAndroidTestKotlin": "PASS",
++  "python_psychotest_contract_tests": {
++    "tests": 13,
++    "failures": 0
++  },
++  "apk_built": false,
++  "device_instrumentation": "NOT TESTED",
++  "real_gmail": "NOT TESTED",
++  "real_llm_stt_tts_avatar": "NOT TESTED"
++}
+-- 
+2.52.0
+

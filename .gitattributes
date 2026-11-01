@@ -2,3 +2,4 @@
 # Actual source diffs remain reviewable in the PR; these copies are download artifacts.
 docs/downloads/*.patch -diff
 docs/downloads/restoration/*.patch -diff
+docs/downloads/national-interview/*.patch -diff
