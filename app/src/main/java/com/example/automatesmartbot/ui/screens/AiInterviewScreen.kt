@@ -216,7 +216,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 val accessToken = session.getValidToken() ?: throw IllegalStateException("Silakan login kembali.")
                 val serviceUrl = endpoint ?: throw IllegalStateException("Layanan AI Interview belum dikonfigurasi.")
                 val response = requestInterview(serviceUrl, accessToken, role, language, cv, action, turns)
-                history = turns
+                history = if (response.awaitingAnswer) turns else turns.filterNot { it.answer.equals("lewati", ignoreCase = true) }
                 feedback = buildString {
                     if (response.score != null) append("Nilai jawaban: ${response.score}/100\\n")
                     append(response.feedback)
