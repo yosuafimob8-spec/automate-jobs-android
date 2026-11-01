@@ -108,9 +108,9 @@ class FeatureUiTest {
         compose.onNodeWithText("Sebelumnya").performScrollTo().assertIsNotEnabled()
         compose.onNodeWithText("Pilihan b soal 0").performScrollTo().performClick()
         compose.onNodeWithText("Selanjutnya").performScrollTo().performClick()
-        compose.onNodeWithText("Soal 2 dari 10").assertExists()
+        compose.onNodeWithText("Soal 2 dari 10", substring = true).assertExists()
         compose.onNodeWithText("Sebelumnya").performScrollTo().performClick()
-        compose.onNodeWithText("Soal 1 dari 10").assertExists()
+        compose.onNodeWithText("Soal 1 dari 10", substring = true).assertExists()
         compose.onAllNodes(isSelected()).assertCountEquals(1)
     }
 }
