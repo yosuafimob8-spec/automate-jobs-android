@@ -384,9 +384,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             OutlinedButton(enabled = !cvReading && !loading, onClick = {
                 cvPicker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
             }, modifier = Modifier.fillMaxWidth()) { Text(if (cvReading) "Membaca CV..." else "📄 Unggah CV PDF / DOCX (opsional)") }
-            if (cvLoaded) Text("✓ CV berhasil dibaca", color = teal)
-            OutlinedTextField(cv, { cv = it; cvLoaded = false }, label = { Text("Teks CV (opsional)") },
-                modifier = Modifier.fillMaxWidth(), minLines = 2)
+            if (cvLoaded) Text("✓ CV siap digunakan untuk AI Interview", color = teal)
             Text("CV maksimal 10 MB; PDF scan memerlukan OCR.", color = muted, style = MaterialTheme.typography.bodySmall)
             Button(enabled = !loading && !cvReading && endpoint != null, modifier = Modifier.fillMaxWidth().height(56.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = orange), shape = RoundedCornerShape(16.dp),
@@ -399,6 +397,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     send("start", emptyList())
                 }) { Text("Mulai Interview Teks  ➜", fontWeight = FontWeight.Bold) }
             if (endpoint == null) Text("Layanan AI Interview belum tersedia.", color = MaterialTheme.colorScheme.error)
+            if (error.isNotBlank()) Text(error, color = MaterialTheme.colorScheme.error)
         }
     } else if (report.isNotBlank()) {
         Column(Modifier.fillMaxSize().background(Color(0xFFF8FBFC)).verticalScroll(rememberScrollState()).padding(20.dp),
