@@ -273,7 +273,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     pendingQuestion = if (response.awaitingAnswer) response.question else ""
                     if (isPro && voiceMode && ttsReady) {
                         tts.language = if (language == "en") Locale.ENGLISH else Locale.forLanguageTag("id-ID")
-                        tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
+                        tts.speak((response.feedback.takeIf { it.isNotBlank() }?.plus(". ") ?: "") + question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
                     }
                     started = true
                     answer = ""
@@ -398,7 +398,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             if (isPro) Row(verticalAlignment = Alignment.CenterVertically) {
                 Switch(checked = voiceMode, onCheckedChange = { voiceMode = it })
                 Spacer(Modifier.width(10.dp))
-                Text("Mode suara: AI membacakan pertanyaan", color = ink)
+                Text("Mode suara: AI membacakan pertanyaan. Gunakan mikrofon untuk menjawab.", color = ink)
             }
             Button(enabled = !loading && !cvReading && endpoint != null, modifier = Modifier.fillMaxWidth().height(56.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = orange), shape = RoundedCornerShape(16.dp),
@@ -409,7 +409,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     report = ""
                     feedback = ""
                     send("start", emptyList())
-                }) { Text("Mulai Interview Teks  ➜", fontWeight = FontWeight.Bold) }
+                }) { Text(if (voiceMode && isPro) "Mulai Interview Suara  ➜" else "Mulai Interview Teks  ➜", fontWeight = FontWeight.Bold) }
             if (endpoint == null) Text("Layanan AI Interview belum tersedia.", color = MaterialTheme.colorScheme.error)
             if (error.isNotBlank()) Text(error, color = MaterialTheme.colorScheme.error)
         }
