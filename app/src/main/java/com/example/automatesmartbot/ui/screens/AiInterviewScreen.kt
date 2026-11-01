@@ -106,13 +106,14 @@ private data class InterviewReply(
 
 private suspend fun requestInterview(
     endpoint: String, accessToken: String, role: String, language: String, cv: String,
-    action: String, history: List<InterviewTurn>
+    action: String, history: List<InterviewTurn>, interviewer: String
 ): InterviewReply = withContext(Dispatchers.IO) {
     require(endpoint.startsWith("https://") || endpoint.startsWith("http://10.0.2.2:") || endpoint.startsWith("http://127.0.0.1:")) {
         "Gunakan endpoint HTTPS untuk layanan AI Interview."
     }
     val payload = JSONObject().apply {
         put("role", role)
+        put("interviewer", interviewer)
         put("language", language)
         put("cv_text", cv.take(6000))
         put("action", action)
@@ -169,6 +170,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     val roles = listOf("Admin Warehouse", "Supervisor Logistik", "Staff Operasional", "Operator Produksi", "Sales", "Lainnya")
     var role by rememberSaveable { mutableStateOf(roles.first()) }
     var interviewMode by rememberSaveable { mutableStateOf("text") }
+    var interviewer by rememberSaveable { mutableStateOf("female") }
     var language by rememberSaveable { mutableStateOf("id") }
     var cv by rememberSaveable { mutableStateOf("") }
     var cvLoaded by rememberSaveable { mutableStateOf(false) }
@@ -224,7 +226,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             try {
                 val accessToken = session.getValidToken() ?: throw IllegalStateException("Silakan login kembali.")
                 val serviceUrl = endpoint ?: throw IllegalStateException("Layanan AI Interview belum dikonfigurasi.")
-                val response = requestInterview(serviceUrl, accessToken, role, language, cv, action, turns)
+                val response = requestInterview(serviceUrl, accessToken, role, language, cv, action, turns, interviewer)
                 history = turns
                 if (action == "start") {
                     chatMessages = listOf(false to response.question)
@@ -283,6 +285,11 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 Card(shape = cardShape, colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF0E6))) {
                     Text("🎥 Interview Video — Coming Soon\\nFitur simulasi video interview sedang disiapkan.", modifier = Modifier.padding(18.dp), color = ink)
                 }
+            }
+            Text("Pilih AI HR", color = ink, fontWeight = FontWeight.Bold)
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                FilterChip(selected = interviewer == "male", onClick = { interviewer = "male" }, label = { Text("Mr. ILHAM") })
+                FilterChip(selected = interviewer == "female", onClick = { interviewer = "female" }, label = { Text("Ms. Tanti") })
             }
             Text("Pilih posisi", color = ink, fontWeight = FontWeight.Bold)
             roles.forEach { item ->
@@ -347,7 +354,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                             elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                         ) {
                             Column(Modifier.padding(14.dp)) {
-                                Text(if (fromCandidate) "Anda" else "👩‍💼 AI HR", fontWeight = FontWeight.Bold, color = if (fromCandidate) teal else orange)
+                                Text(if (fromCandidate) "Anda" else if (interviewer == "male") "Mr. ILHAM" else "Ms. Tanti", fontWeight = FontWeight.Bold, color = if (fromCandidate) teal else orange)
                                 Spacer(Modifier.height(5.dp))
                                 Text(message, color = ink)
                             }
