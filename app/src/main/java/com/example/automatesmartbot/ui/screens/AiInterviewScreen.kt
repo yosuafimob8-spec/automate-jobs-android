@@ -92,7 +92,9 @@ private data class InterviewReply(
     val feedback: String = "",
     val score: Int? = null,
     val improvement: String = "",
-    val finalReport: String = ""
+    val finalReport: String = "",
+    val awaitingAnswer: Boolean = false,
+    val conversationState: String = ""
 )
 
 private suspend fun requestInterview(
@@ -146,7 +148,9 @@ private suspend fun requestInterview(
             score = if (response.has("answer_score") && !response.isNull("answer_score"))
                 response.optInt("answer_score") else null,
             improvement = response.optString("improvement"),
-            finalReport = finalReport
+            finalReport = finalReport,
+            awaitingAnswer = response.optBoolean("awaiting_answer", false),
+            conversationState = response.optString("conversation_state")
         )
     } finally {
         connection.disconnect()
@@ -167,6 +171,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     var question by rememberSaveable { mutableStateOf("") }
     var answer by rememberSaveable { mutableStateOf("") }
     var history by remember { mutableStateOf(emptyList<InterviewTurn>()) }
+    var pendingQuestion by rememberSaveable { mutableStateOf("") }
     var feedback by rememberSaveable { mutableStateOf("") }
     var report by rememberSaveable { mutableStateOf("") }
     var error by rememberSaveable { mutableStateOf("") }
@@ -185,6 +190,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     val scope = rememberCoroutineScope()
     val cvPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
         if (uri != null) {
+            cv = ""
+            cvLoaded = false
             cvReading = true
             error = ""
             scope.launch {
@@ -219,6 +226,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     report = response.finalReport
                 } else {
                     question = response.question
+                    pendingQuestion = if (response.awaitingAnswer) response.question else ""
                     if (isPro && ttsReady) {
                         tts.language = if (language == "en") Locale.ENGLISH else Locale.forLanguageTag("id-ID")
                         tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
@@ -263,6 +271,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 modifier = Modifier.fillMaxWidth(), minLines = 3)
             Button(enabled = !loading && !cvReading && cv.isNotBlank() && BuildConfig.INTERVIEW_BASE_URL.isNotBlank(), onClick = {
                 history = emptyList()
+                pendingQuestion = ""
                 report = ""
                 feedback = ""
                 send("start", emptyList())
@@ -276,11 +285,12 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     started = false
                     question = ""
                     history = emptyList()
+                    pendingQuestion = ""
                     report = ""
                     feedback = ""
                 }) { Text("Mulai sesi baru") }
             } else {
-                Text("Pertanyaan ${history.size + 1}", style = MaterialTheme.typography.titleMedium)
+                Text(if (pendingQuestion.isNotBlank()) "Pertanyaan perlu dijawab" else "Pertanyaan ${history.size + 1}", style = MaterialTheme.typography.titleMedium)
                 Text(question)
                 if (feedback.isNotBlank()) Text(feedback)
                 if (isPro) OutlinedButton(enabled = !loading, onClick = {
@@ -299,6 +309,9 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 Button(enabled = !loading && answer.isNotBlank(), onClick = {
                     send("reply", history + InterviewTurn(question, answer.trim()))
                 }) { Text("Kirim jawaban") }
+                OutlinedButton(enabled = !loading, onClick = {
+                    send("reply", history + InterviewTurn(question, "lewati"))
+                }) { Text("Lewati pertanyaan") }
                 OutlinedButton(enabled = !loading && (history.isNotEmpty() || answer.isNotBlank()), onClick = {
                     send("finish", history + (if (answer.isNotBlank()) listOf(InterviewTurn(question, answer.trim())) else emptyList()))
                 }) { Text("Akhiri dan lihat evaluasi") }
