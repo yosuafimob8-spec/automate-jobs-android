@@ -97,7 +97,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     Card(shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFFE4F8F7))) {
                         Row(Modifier.fillMaxWidth().height(122.dp).padding(14.dp), verticalAlignment = Alignment.CenterVertically) {
                             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                                Text("Psikotes", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
+                                Text("🧠 Psikotes", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
                                 Text("Latihan hari ini, siap menghadapi tes kerja besok!", color = ink, style = MaterialTheme.typography.bodySmall)
                             }
                             Text("🎯", style = MaterialTheme.typography.displayLarge)
@@ -118,8 +118,8 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
             }
             "catalog" -> Column(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp)) {
                 TextButton(onClick = { page = "home" }, contentPadding = PaddingValues(0.dp)) { Text("← Kembali ke Psikotes", color = teal) }
-                Text("Pilih Jenis Tes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = ink)
-                Text("Pilih latihan dan mulai kapan saja.", style = MaterialTheme.typography.bodySmall, color = Color(0xFF59667A))
+                Text(if (family == "private") "💼 Tes Kerja Swasta" else if (family == "cpns") "🏛️ Persiapan CPNS" else "Pilih Jenis Tes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = ink)
+                Text("Pilih latihan sesuai tujuanmu. Kerjakan soal, pantau progres, dan tingkatkan kemampuan.", style = MaterialTheme.typography.bodySmall, color = Color(0xFF59667A))
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.horizontalScroll(rememberScrollState())) {
                     listOf("Semua" to "all", "Swasta" to "private", "CPNS" to "cpns").forEach { (label, value) ->
                         FilterChip(selected = family == value, onClick = { family = value }, label = { Text(label) }, colors = FilterChipDefaults.filterChipColors(selectedContainerColor = orange, selectedLabelColor = Color.White))
@@ -250,19 +250,21 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 if (history.isEmpty()) item { Text("Belum ada riwayat.") }
                 items(history) {
                     val score = PsychotestPolicy.normalizedScore(it.get("score")?.takeUnless { x -> x.isJsonNull }?.asDouble, it.get("max_score")?.takeUnless { x -> x.isJsonNull }?.asDouble)
-                    Info(it.s("title", "Tes"), score?.let { value -> "Nilai: $value / 100" } ?: "Asesmen kepribadian")
+                    HistoryScoreCard(it.s("title", "Tes"), score)
                 }
             }
             "stats" -> if (isPro) Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 TextButton(onClick = { page = "home" }) { Text("← Kembali", color = teal) }
                 stats?.let {
-                    Info("Total Tes", it.s("total_tests", "0"))
-                    Info("Rata-rata", it.s("average_percent", "-"))
-                    Info("Peningkatan", it.s("improvement_percent", "-"))
+                    Text("📊 Statistik Latihan", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
+                    Info("📝 Total Tes", it.s("total_tests", "0"))
+                    Info("📈 Rata-rata Nilai", it.s("average_percent", "-"))
+                    Info("🚀 Peningkatan", it.s("improvement_percent", "-"))
                 } ?: Text("Belum ada statistik.")
             }
             "leaderboard" -> if (isPro) LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 item { TextButton(onClick = { page = "home" }) { Text("← Kembali", color = teal) } }
+                item { Text("🏆 Peringkat Peserta", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold) }
                 if (leaderboard.isEmpty()) item { Text("Belum ada peringkat.") }
                 items(leaderboard) { Info("🏆 ${it.s("alias", "Peserta")}", "Skor: ${it.s("score", "-")}") }
             }
@@ -392,5 +394,26 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
         }
         if (pendingCount > 0) TextButton(onClick = onSync, enabled = !submitting) { Text("Sinkronkan Jawaban ($pendingCount)") }
         if (index == questions.lastIndex && !allAnswered) Text("Jawab semua soal untuk menyelesaikan tes. Gunakan Sebelumnya untuk memeriksa jawaban.", color = Color(0xFF58657A), style = MaterialTheme.typography.bodySmall)
+    }
+}
+
+@Composable
+private fun HistoryScoreCard(title: String, score: Int?) {
+    Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White)) {
+        Row(Modifier.padding(18.dp), verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+            Box(Modifier.size(62.dp).background(Color(0xFFFFF0E3), RoundedCornerShape(16.dp)),
+                contentAlignment = Alignment.Center) {
+                Text(score?.toString() ?: "🧠", color = orange, fontWeight = FontWeight.ExtraBold,
+                    style = MaterialTheme.typography.headlineSmall)
+            }
+            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                Text(title, color = ink, fontWeight = FontWeight.Bold)
+                Text(if (score == null) "Asesmen kepribadian" else "Skor: $score / 100", color = teal)
+                if (score != null) LinearProgressIndicator(progress = { score.coerceIn(0, 100) / 100f },
+                    color = teal, trackColor = Color(0xFFE8F0F3), modifier = Modifier.fillMaxWidth())
+            }
+        }
     }
 }
