@@ -32,6 +32,10 @@ class CvRepository(
                 readResult.validation?.message ?: "CV tidak dapat dibaca."
             )
 
+        try { localStore.parseCv(uri) }
+        catch (e: CancellationException) { throw e }
+        catch (e: Exception) { return@withContext CvResult.Invalid(e.cvMessage("Teks CV tidak dapat dibaca.")) }
+
         localStore.persistReadPermission(uri)
         localStore.saveSelection(selection)
         CvResult.Success(selection)
@@ -58,6 +62,10 @@ class CvRepository(
             ?: return@withContext CvResult.Invalid("CV tidak dapat dibaca.")
         val currentSelection = localStore.read(uri).selection
             ?: return@withContext CvResult.Invalid("CV tidak valid. Pilih ulang file PDF maksimal 2 MB.")
+
+        try { localStore.parseCv(uri) }
+        catch (e: CancellationException) { throw e }
+        catch (e: Exception) { return@withContext CvResult.Invalid(e.cvMessage("Teks CV tidak dapat dibaca.")) }
 
         remoteAccess()?.let { remote ->
             try {

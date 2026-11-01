@@ -108,6 +108,8 @@ class CvSelectionStore(context: Context) {
         )
     }
 
+    fun parseCv(uri: Uri): ParsedCv = SharedCvParser.extract(appContext, uri)
+
     fun persistReadPermission(uri: Uri) {
         runCatching {
             appContext.contentResolver.takePersistableUriPermission(

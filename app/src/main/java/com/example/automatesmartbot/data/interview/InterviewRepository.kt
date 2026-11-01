@@ -1,6 +1,8 @@
 package com.example.automatesmartbot.data.interview
 
 import com.example.automatesmartbot.data.autoapply.readJson
+import com.example.automatesmartbot.data.cv.CvContent
+import com.example.automatesmartbot.data.cv.SharedCvParser
 import okhttp3.ResponseBody
 import org.json.JSONObject
 import retrofit2.Response
@@ -20,7 +22,12 @@ interface InterviewApi {
 
 class InterviewRepository(private val api: InterviewApi) {
     suspend fun capabilities() = api.capabilities().readJson()
-    suspend fun start(settings: Map<String, Any>) = api.start(settings).readJson().getJSONObject("session")
+    suspend fun start(settings: Map<String, Any>): JSONObject {
+        val cv = settings["cv"]
+        val payload = if (settings["use_backend_cv"] != true && cv is CvContent)
+            settings + ("cv" to SharedCvParser.interviewContext(cv)) else settings
+        return api.start(payload).readJson().getJSONObject("session")
+    }
     suspend fun session(id: String) = api.session(id).readJson().getJSONObject("session")
     suspend fun answer(id: String, body: Map<String, Any>) = api.answer(id, body).readJson().getJSONObject("session")
     suspend fun finish(id: String) = api.finish(id).readJson().getJSONObject("session")
