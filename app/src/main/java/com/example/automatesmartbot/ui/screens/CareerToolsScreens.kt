@@ -106,47 +106,168 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
 
 @Composable
 fun JobTrainingScreen() {
-    val context=LocalContext.current
-    val prefs=remember{context.getSharedPreferences("career_training",0)}
+    val context = LocalContext.current
+    val prefs = remember { context.getSharedPreferences("career_training", 0) }
     var courseId by rememberSaveable { mutableStateOf(TrainingCourses.all.first().id) }
-    val course=TrainingCourses.all.first{it.id==courseId}
-    var name by rememberSaveable { mutableStateOf(prefs.getString("name","").orEmpty()) }
-    var version by remember{mutableIntStateOf(0)}
-    var message by remember{mutableStateOf("")}
-    var certificate by remember{mutableStateOf<JSONObject?>(null)}
-    val answers=remember(courseId,version){JSONArray(prefs.getString("answers_$courseId","[]"))}
-    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
-        Text("Pelatihan Kerja",style=MaterialTheme.typography.titleLarge)
-        Text("Modul belajar mandiri KarirMate. Sertifikat adalah bukti penyelesaian latihan internal, bukan sertifikasi profesi/BNSP atau jaminan kerja.")
-        TrainingCourses.all.forEach{c->OutlinedButton(onClick={courseId=c.id;certificate=null}){Text(c.title)}}
-        AppInput("Nama peserta untuk sertifikat",name,{name=it;prefs.edit().putString("name",it).apply();certificate=null})
-        Text(course.title,style=MaterialTheme.typography.titleMedium)
-        course.lessons.forEach{(title,body)->Text(title,style=MaterialTheme.typography.titleSmall);Text(body)}
-        Text("Evaluasi pemahaman — minimal 80/100",style=MaterialTheme.typography.titleMedium)
-        course.questions.forEachIndexed{i,q->
-            Text("${i+1}. ${q.prompt}")
-            q.options.forEachIndexed{j,option->Row(Modifier.fillMaxWidth().selectable(selected=answers.optInt(i,-1)==j,role=Role.RadioButton,onClick={answers.put(i,j);prefs.edit().putString("answers_$courseId",answers.toString()).apply();version++;certificate=null})){RadioButton(answers.optInt(i,-1)==j,null);Text(option,Modifier.padding(top=12.dp))}}
-        }
-        Button(onClick={
-            val values=course.questions.indices.map{answers.optInt(it,-1).takeIf{n->n>=0}}
-            if(values.any{it==null}) message="Jawab semua pertanyaan terlebih dahulu."
-            else if(name.isBlank()) message="Isi nama peserta terlebih dahulu."
-            else{
-                val score=TrainingCourses.score(values,course.questions)
-                message="Hasil: $score/100. "+if(score>=80)"Latihan selesai." else "Baca kembali materi dan coba lagi."
-                if(score>=80){
-                    val item=JSONObject().put("id",UUID.randomUUID().toString()).put("name",name.trim()).put("course",course.title).put("date",LocalDate.now().toString()).put("score",score)
-                    val history=JSONArray(prefs.getString("certificates","[]"));history.put(item);prefs.edit().putString("certificates",history.toString()).apply();certificate=item
+    val course = TrainingCourses.all.first { it.id == courseId }
+    var name by rememberSaveable { mutableStateOf(prefs.getString("name", "").orEmpty()) }
+    var page by rememberSaveable(courseId) { mutableIntStateOf(-1) }
+    var version by remember { mutableIntStateOf(0) }
+    var message by remember { mutableStateOf("") }
+    var certificate by remember { mutableStateOf<JSONObject?>(null) }
+    val done = remember(courseId, version) {
+        prefs.getStringSet("done_$courseId", emptySet()).orEmpty().toSet()
+    }
+    val answers = remember(courseId, version) {
+        JSONArray(prefs.getString("answers_$courseId", "[]"))
+    }
+    val allDone = course.lessons.indices.all { it.toString() in done }
+    Column(
+        Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp)
+    ) {
+        Text("Akademi KarirMate", style = MaterialTheme.typography.headlineSmall)
+        Text("Belajar bertahap • latihan praktik • evaluasi • sertifikat penyelesaian")
+        Text("Sertifikat hanya membuktikan penyelesaian latihan internal KarirMate, bukan sertifikasi profesi/BNSP.")
+        if (page == -1) {
+            Text("Katalog Pelatihan", style = MaterialTheme.typography.titleLarge)
+            TrainingCourses.all.forEach { item ->
+                val completed = prefs.getStringSet("done_${item.id}", emptySet()).orEmpty().size
+                Card(onClick = { courseId = item.id; page = 0; message = ""; certificate = null },
+                    modifier = Modifier.fillMaxWidth()) {
+                    Column(Modifier.padding(16.dp)) {
+                        Text(item.title, style = MaterialTheme.typography.titleMedium)
+                        Text("$completed/${item.lessons.size} modul selesai")
+                        LinearProgressIndicator(
+                            progress = { (completed.toFloat() / item.lessons.size.coerceAtLeast(1)).coerceIn(0f, 1f) },
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                    }
                 }
             }
-        }){Text("Nilai & Simpan Penyelesaian")}
-        if(message.isNotBlank())Text(message)
-        certificate?.let{c->
-            val text="SERTIFIKAT PENYELESAIAN LATIHAN\n\nKarirMate\n\nDiberikan kepada:\n${c.getString("name")}\n\nTelah menyelesaikan modul belajar mandiri:\n${c.getString("course")}\n\nNilai evaluasi: ${c.getInt("score")}/100\nTanggal: ${c.getString("date")}\nID: ${c.getString("id")}\n\nBukti latihan internal KarirMate. Bukan sertifikasi profesi/BNSP dan bukan bukti akreditasi."
-            PdfExportButton(CvRenderer.letterPages(text),"KarirMate-Sertifikat-Latihan.pdf","Unduh Sertifikat PDF")
+        } else {
+            TextButton(onClick = { page = -1; certificate = null }) { Text("← Katalog Pelatihan") }
+            Text(course.title, style = MaterialTheme.typography.titleLarge)
+            Text("${done.size} dari ${course.lessons.size} modul diselesaikan")
+            LinearProgressIndicator(
+                progress = { (done.size.toFloat() / course.lessons.size.coerceAtLeast(1)).coerceIn(0f, 1f) },
+                modifier = Modifier.fillMaxWidth()
+            )
+            course.lessons.forEachIndexed { index, lesson ->
+                OutlinedButton(
+                    onClick = { page = index; message = "" },
+                    modifier = Modifier.fillMaxWidth()
+                ) { Text("${if (index.toString() in done) "✓" else "○"} Modul ${index + 1}: ${lesson.first}") }
+            }
+            if (page in course.lessons.indices) {
+                val lesson = course.lessons[page]
+                HorizontalDivider()
+                Text(lesson.first, style = MaterialTheme.typography.titleLarge)
+                Text(lesson.second)
+                Text("Latihan praktik", style = MaterialTheme.typography.titleMedium)
+                Text("Tuliskan satu contoh penerapan materi ini dalam pekerjaan atau proses melamar kerja.")
+                var practice by rememberSaveable(courseId, page) {
+                    mutableStateOf(prefs.getString("practice_${courseId}_$page", "").orEmpty())
+                }
+                OutlinedTextField(
+                    value = practice,
+                    onValueChange = {
+                        practice = it
+                        prefs.edit().putString("practice_${courseId}_$page", it).apply()
+                    },
+                    modifier = Modifier.fillMaxWidth(),
+                    minLines = 3,
+                    label = { Text("Jawaban latihan praktik") }
+                )
+                Button(
+                    enabled = practice.trim().length >= 20,
+                    onClick = {
+                        prefs.edit().putStringSet("done_$courseId", done + page.toString()).apply()
+                        version++
+                        message = "Modul selesai. Lanjutkan ke modul berikutnya."
+                        if (page < course.lessons.lastIndex) page++
+                        else page = course.lessons.size
+                    }
+                ) { Text("Selesaikan Modul") }
+            }
+            if (page == course.lessons.size) {
+                HorizontalDivider()
+                Text("Evaluasi Akhir • Minimal 80/100", style = MaterialTheme.typography.titleLarge)
+                if (!allDone) Text("Selesaikan seluruh modul dan latihan praktik sebelum mengikuti evaluasi.")
+                if (allDone) {
+                    AppInput("Nama pada sertifikat", name, {
+                        name = it
+                        prefs.edit().putString("name", it).apply()
+                    })
+                    course.questions.forEachIndexed { index, question ->
+                        Text("${index + 1}. ${question.prompt}")
+                        question.options.forEachIndexed { optionIndex, option ->
+                            Row(
+                                Modifier.fillMaxWidth().selectable(
+                                    selected = answers.optInt(index, -1) == optionIndex,
+                                    role = Role.RadioButton,
+                                    onClick = {
+                                        answers.put(index, optionIndex)
+                                        prefs.edit().putString("answers_$courseId", answers.toString()).apply()
+                                        version++
+                                    }
+                                )
+                            ) {
+                                RadioButton(answers.optInt(index, -1) == optionIndex, null)
+                                Text(option, Modifier.padding(top = 12.dp))
+                            }
+                        }
+                    }
+                    Button(onClick = {
+                        val selected = course.questions.indices.map { answers.optInt(it, -1) }
+                        when {
+                            name.isBlank() -> message = "Isi nama peserta."
+                            selected.any { it < 0 } -> message = "Jawab semua soal."
+                            else -> {
+                                val score = TrainingCourses.score(selected, course.questions)
+                                message = "Nilai evaluasi: $score/100. " +
+                                    if (score >= 80) "Lulus." else "Belum lulus. Ulangi materi."
+                                if (score >= 80) {
+                                    val existing = JSONArray(prefs.getString("certificates", "[]"))
+                                    val item = JSONObject()
+                                        .put("id", UUID.randomUUID().toString())
+                                        .put("courseId", courseId)
+                                        .put("name", name.trim())
+                                        .put("course", course.title)
+                                        .put("date", LocalDate.now().toString())
+                                        .put("score", score)
+                                    existing.put(item)
+                                    prefs.edit().putString("certificates", existing.toString()).apply()
+                                    certificate = item
+                                }
+                            }
+                        }
+                    }) { Text("Periksa Hasil & Sertifikat") }
+                }
+            }
         }
-        Text("Riwayat penyelesaian",style=MaterialTheme.typography.titleMedium)
-        val history=JSONArray(prefs.getString("certificates","[]"))
-        (history.length()-1 downTo 0).forEach{i->val c=history.getJSONObject(i);TextButton(onClick={certificate=c}){Text("${c.getString("course")} • ${c.getString("name")} • ${c.getString("date")}")}}
+        if (message.isNotBlank()) Text(message)
+        certificate?.let { item ->
+            val certificateText = "SERTIFIKAT PENYELESAIAN PELATIHAN\\n\\n" +
+                "KarirMate\\n\\nDiberikan kepada: ${item.optString("name")}\\n" +
+                "Pelatihan: ${item.optString("course")}\\n" +
+                "Nilai: ${item.optInt("score")}/100\\nTanggal: ${item.optString("date")}\\n" +
+                "ID: ${item.optString("id")}\\n\\n" +
+                "Bukti pelatihan internal KarirMate, bukan sertifikasi profesi/BNSP."
+            PdfExportButton(
+                CvRenderer.letterPages(certificateText),
+                "KarirMate-Sertifikat-Pelatihan.pdf",
+                "Ekspor Sertifikat PDF"
+            )
+        }
+        HorizontalDivider()
+        Text("Riwayat Sertifikat", style = MaterialTheme.typography.titleMedium)
+        val history = JSONArray(prefs.getString("certificates", "[]"))
+        (history.length() - 1 downTo 0).forEach { index ->
+            val item = history.getJSONObject(index)
+            TextButton(onClick = { certificate = item }) {
+                Text("${item.optString("course")} • ${item.optString("name")} • ${item.optString("date")}")
+            }
+        }
     }
 }
