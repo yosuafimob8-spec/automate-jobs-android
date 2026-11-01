@@ -1,5 +1,7 @@
 package com.example.automatesmartbot.ui.screens
 
+import com.example.automatesmartbot.BuildConfig
+import com.example.automatesmartbot.data.security.SessionManager
 import android.content.Intent
 import android.speech.RecognizerIntent
 import android.speech.tts.TextToSpeech
@@ -34,10 +36,10 @@ private data class InterviewReply(
 )
 
 private suspend fun requestInterview(
-    endpoint: String, role: String, language: String, cv: String,
+    endpoint: String, accessToken: String, role: String, language: String, cv: String,
     action: String, history: List<InterviewTurn>
 ): InterviewReply = withContext(Dispatchers.IO) {
-    require(endpoint.startsWith("https://") || endpoint.startsWith("http://10.0.2.2:")) {
+    require(endpoint.startsWith("https://") || endpoint.startsWith("http://10.0.2.2:") || endpoint.startsWith("http://127.0.0.1:")) {
         "Gunakan endpoint HTTPS untuk layanan AI Interview."
     }
     val payload = JSONObject().apply {
@@ -57,6 +59,7 @@ private suspend fun requestInterview(
         readTimeout = 45000
         doOutput = true
         setRequestProperty("Content-Type", "application/json; charset=utf-8")
+        setRequestProperty("Authorization", "Bearer $accessToken")
     }
     try {
         connection.outputStream.use { it.write(payload.toString().toByteArray(Charsets.UTF_8)) }
@@ -97,7 +100,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     var language by rememberSaveable { mutableStateOf("id") }
     var cv by rememberSaveable { mutableStateOf("") }
     // Service address is app-managed; never ask end users for provider credentials.
-    val endpoint = "https://karirmate.invalid/interview/turn"
+    val endpoint = BuildConfig.INTERVIEW_BASE_URL.trimEnd('/') + "/interview/turn"
     var started by rememberSaveable { mutableStateOf(false) }
     var question by rememberSaveable { mutableStateOf("") }
     var answer by rememberSaveable { mutableStateOf("") }
@@ -107,6 +110,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     var error by rememberSaveable { mutableStateOf("") }
     var loading by remember { mutableStateOf(false) }
     val context = LocalContext.current
+    val session = remember(context) { SessionManager(context.applicationContext) }
     var ttsReady by remember { mutableStateOf(false) }
     val tts = remember { TextToSpeech(context) { status -> ttsReady = status == TextToSpeech.SUCCESS } }
     DisposableEffect(tts) { onDispose { tts.stop(); tts.shutdown() } }
@@ -123,7 +127,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
         error = ""
         scope.launch {
             try {
-                val response = requestInterview(endpoint, role, language, cv, action, turns)
+                val accessToken = session.getValidToken() ?: throw IllegalStateException("Silakan login kembali.")
+                val response = requestInterview(endpoint, accessToken, role, language, cv, action, turns)
                 history = turns
                 feedback = buildString {
                     if (response.score != null) append("Nilai jawaban: ${response.score}/100\\n")
@@ -171,13 +176,13 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             }
             OutlinedTextField(cv, { cv = it }, label = { Text("Ringkasan CV / pengalaman (opsional)") },
                 modifier = Modifier.fillMaxWidth(), minLines = 3)
-            Button(enabled = !loading && !endpoint.contains(".invalid"), onClick = {
+            Button(enabled = !loading && BuildConfig.INTERVIEW_BASE_URL.isNotBlank(), onClick = {
                 history = emptyList()
                 report = ""
                 feedback = ""
                 send("start", emptyList())
             }) { Text("Mulai wawancara AI") }
-            if (endpoint.contains(".invalid")) Text("Layanan AI Interview sedang disiapkan. Tidak perlu memasukkan API atau token.", color = MaterialTheme.colorScheme.secondary)
+            if (BuildConfig.INTERVIEW_BASE_URL.isBlank()) Text("Layanan AI Interview belum tersedia.", color = MaterialTheme.colorScheme.secondary)
         } else {
             if (report.isNotBlank()) {
                 Text("Hasil evaluasi", style = MaterialTheme.typography.titleLarge)
