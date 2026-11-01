@@ -199,7 +199,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 Text("Pertanyaan ${history.size + 1}", style = MaterialTheme.typography.titleMedium)
                 Text(question)
                 if (feedback.isNotBlank()) Text(feedback)
-                if (isPro) OutlinedButton(onClick = {
+                if (isPro) OutlinedButton(enabled = !loading, onClick = {
                     val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
                         putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
                         putExtra(RecognizerIntent.EXTRA_LANGUAGE, if (language == "en") "en-US" else "id-ID")
@@ -216,7 +216,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     send("reply", history + InterviewTurn(question, answer.trim()))
                 }) { Text("Kirim jawaban") }
                 OutlinedButton(enabled = !loading && (history.isNotEmpty() || answer.isNotBlank()), onClick = {
-                    send("finish", history + InterviewTurn(question, answer.trim()))
+                    send("finish", history + (if (answer.isNotBlank()) listOf(InterviewTurn(question, answer.trim())) else emptyList()))
                 }) { Text("Akhiri dan lihat evaluasi") }
             }
         }
