@@ -94,17 +94,15 @@ private val jobFeatures = listOf(
         statusLabel = null
     ),
     DashboardFeature(
-        title = "AI Interview",
-        subtitle = "Latihan wawancara kerja",
-        icon = Icons.Default.Mic,
+        title = "WorkPedia",
+        subtitle = "Istilah dan hak pekerja",
+        icon = Icons.Default.Description,
         accent = Color(0xFF06B6D4),
-        route = Screen.AiInterview.route,
-        statusLabel = "Segera Hadir"
+        route = Screen.WorkPedia.route
     )
 )
 
 private val automationFeatures = listOf(
-    DashboardFeature(title = "WorkPedia", subtitle = "Istilah & Hak Karyawan", icon = Icons.Default.Description, accent = Color(0xFF9CE8E4), route = Screen.WorkPedia.route),
     DashboardFeature(
         title = "Kalkulator Gaji",
         subtitle = "Lembur, BPJS, PPh 21 & THR",
