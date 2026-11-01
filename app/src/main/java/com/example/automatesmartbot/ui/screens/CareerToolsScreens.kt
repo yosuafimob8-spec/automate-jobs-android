@@ -105,7 +105,7 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
 }
 
 @Composable
-fun JobTrainingScreen() {
+fun LegacyJobTrainingScreen() {
     val context = LocalContext.current
     val prefs = remember { context.getSharedPreferences("career_training", 0) }
     var courseId by rememberSaveable { mutableStateOf(TrainingCourses.all.first().id) }
