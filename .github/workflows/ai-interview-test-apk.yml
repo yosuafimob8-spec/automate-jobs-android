@@ -1,4 +1,4 @@
-name: KarirMate Feature Branch Test APK
+name: KarirMate Debug APK Verification
 
 on:
   workflow_dispatch:
