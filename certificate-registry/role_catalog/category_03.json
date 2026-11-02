@@ -1,0 +1,1046 @@
+[
+  {
+    "courseId": "role_sales_executive_basic",
+    "title": "Sales Executive • Basic",
+    "lessons": [
+      "Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Sales Executive.",
+      "Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Sales Executive.",
+      "Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Sales Executive.",
+      "Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Sales Executive.",
+      "Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Sales Executive."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sales Executive?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sales Executive?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sales Executive?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Sales Executive"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sales Executive?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Sales Executive",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_sales_executive_intermediate",
+    "title": "Sales Executive • Intermediate",
+    "lessons": [
+      "Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Sales Executive.",
+      "Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Sales Executive.",
+      "Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Sales Executive.",
+      "Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Sales Executive.",
+      "Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Sales Executive."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sales Executive?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sales Executive?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sales Executive?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Sales Executive"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sales Executive?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Sales Executive",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_sales_executive_advanced",
+    "title": "Sales Executive • Advanced",
+    "lessons": [
+      "Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Sales Executive.",
+      "Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Sales Executive.",
+      "Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Sales Executive.",
+      "Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Sales Executive.",
+      "Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Sales Executive."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sales Executive?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sales Executive?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sales Executive?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Sales Executive"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sales Executive?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Sales Executive",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_sales_counter_basic",
+    "title": "Sales Counter • Basic",
+    "lessons": [
+      "Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Sales Counter.",
+      "Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Sales Counter.",
+      "Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Sales Counter.",
+      "Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Sales Counter.",
+      "Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Sales Counter."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sales Counter?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sales Counter?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sales Counter?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Sales Counter"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sales Counter?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Sales Counter",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_sales_counter_intermediate",
+    "title": "Sales Counter • Intermediate",
+    "lessons": [
+      "Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Sales Counter.",
+      "Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Sales Counter.",
+      "Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Sales Counter.",
+      "Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Sales Counter.",
+      "Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Sales Counter."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sales Counter?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sales Counter?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sales Counter?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Sales Counter"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sales Counter?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Sales Counter",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_sales_counter_advanced",
+    "title": "Sales Counter • Advanced",
+    "lessons": [
+      "Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Sales Counter.",
+      "Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Sales Counter.",
+      "Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Sales Counter.",
+      "Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Sales Counter.",
+      "Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Sales Counter."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sales Counter?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sales Counter?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sales Counter?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Sales Counter"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sales Counter?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Sales Counter",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_marketing_staff_basic",
+    "title": "Marketing Staff • Basic",
+    "lessons": [
+      "Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Marketing Staff.",
+      "Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Marketing Staff.",
+      "Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Marketing Staff.",
+      "Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Marketing Staff.",
+      "Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Marketing Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Marketing Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Marketing Staff?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Marketing Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Marketing Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Marketing Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Marketing Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_marketing_staff_intermediate",
+    "title": "Marketing Staff • Intermediate",
+    "lessons": [
+      "Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Marketing Staff.",
+      "Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Marketing Staff.",
+      "Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Marketing Staff.",
+      "Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Marketing Staff.",
+      "Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Marketing Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Marketing Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Marketing Staff?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Marketing Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Marketing Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Marketing Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Marketing Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_marketing_staff_advanced",
+    "title": "Marketing Staff • Advanced",
+    "lessons": [
+      "Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Marketing Staff.",
+      "Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Marketing Staff.",
+      "Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Marketing Staff.",
+      "Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Marketing Staff.",
+      "Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Marketing Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Marketing Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Marketing Staff?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Marketing Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Marketing Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Marketing Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Marketing Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_digital_marketing_basic",
+    "title": "Digital Marketing • Basic",
+    "lessons": [
+      "Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Digital Marketing.",
+      "Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Digital Marketing.",
+      "Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Digital Marketing.",
+      "Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Digital Marketing.",
+      "Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Digital Marketing."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Digital Marketing?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Digital Marketing?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Digital Marketing?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Digital Marketing"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Digital Marketing?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Digital Marketing",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_digital_marketing_intermediate",
+    "title": "Digital Marketing • Intermediate",
+    "lessons": [
+      "Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Digital Marketing.",
+      "Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Digital Marketing.",
+      "Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Digital Marketing.",
+      "Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Digital Marketing.",
+      "Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Digital Marketing."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Digital Marketing?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Digital Marketing?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Digital Marketing?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Digital Marketing"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Digital Marketing?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Digital Marketing",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_digital_marketing_advanced",
+    "title": "Digital Marketing • Advanced",
+    "lessons": [
+      "Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Digital Marketing.",
+      "Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Digital Marketing.",
+      "Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Digital Marketing.",
+      "Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi Digital Marketing.",
+      "Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Digital Marketing."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Digital Marketing?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Digital Marketing?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Digital Marketing?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Digital Marketing"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Digital Marketing?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Digital Marketing",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_spg_spb_basic",
+    "title": "SPG / SPB • Basic",
+    "lessons": [
+      "Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan SPG / SPB.",
+      "Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja SPG / SPB.",
+      "Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja SPG / SPB.",
+      "Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi SPG / SPB.",
+      "Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan SPG / SPB."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi SPG / SPB?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk SPG / SPB?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk SPG / SPB?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja SPG / SPB"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk SPG / SPB?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan SPG / SPB",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_spg_spb_intermediate",
+    "title": "SPG / SPB • Intermediate",
+    "lessons": [
+      "Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan SPG / SPB.",
+      "Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja SPG / SPB.",
+      "Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja SPG / SPB.",
+      "Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi SPG / SPB.",
+      "Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan SPG / SPB."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi SPG / SPB?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk SPG / SPB?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk SPG / SPB?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja SPG / SPB"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk SPG / SPB?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan SPG / SPB",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_spg_spb_advanced",
+    "title": "SPG / SPB • Advanced",
+    "lessons": [
+      "Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan SPG / SPB.",
+      "Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja SPG / SPB.",
+      "Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja SPG / SPB.",
+      "Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut Bukti hasil: laporan insiden dan eskalasi SPG / SPB.",
+      "Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan SPG / SPB."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi SPG / SPB?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk SPG / SPB?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah mengidentifikasi kebutuhan pelanggan, menyampaikan penawaran dan mencatat tindak lanjut dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk SPG / SPB?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja SPG / SPB"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk SPG / SPB?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan SPG / SPB",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_sales_supervisor_basic",
+    "title": "Sales Supervisor • Basic",
+    "lessons": [
+      "Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Sales Supervisor.",
+      "Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Sales Supervisor.",
+      "Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Sales Supervisor.",
+      "Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Sales Supervisor.",
+      "Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Sales Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sales Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sales Supervisor?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sales Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Sales Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sales Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Sales Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_sales_supervisor_intermediate",
+    "title": "Sales Supervisor • Intermediate",
+    "lessons": [
+      "Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Sales Supervisor.",
+      "Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Sales Supervisor.",
+      "Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Sales Supervisor.",
+      "Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Sales Supervisor.",
+      "Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Sales Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sales Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sales Supervisor?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sales Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Sales Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sales Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Sales Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_sales_supervisor_advanced",
+    "title": "Sales Supervisor • Advanced",
+    "lessons": [
+      "Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CRM, katalog, quotation, pipeline Bukti hasil: checklist risiko dan kewenangan Sales Supervisor.",
+      "Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut Bukti hasil: bagan alur kerja Sales Supervisor.",
+      "Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada catatan kunjungan, quotation, status peluang Bukti hasil: contoh dokumen dan bukti kerja Sales Supervisor.",
+      "Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus keberatan pelanggan atau klaim produk tidak akurat saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Sales Supervisor.",
+      "Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran conversion rate, nilai pipeline, repeat order Bukti hasil: rencana pengukuran dan perbaikan Sales Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sales Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CRM, katalog, quotation, pipeline — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CRM, katalog, quotation, pipeline",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sales Supervisor?",
+        "options": [
+          "prospek, kualifikasi, presentasi, penawaran, tindak lanjut — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses prospek, kualifikasi, presentasi, penawaran, tindak lanjut",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sales Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan kunjungan, quotation, status peluang — contoh dokumen dan bukti kerja Sales Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi keberatan pelanggan atau klaim produk tidak akurat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sales Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "conversion rate, nilai pipeline, repeat order — rencana pengukuran dan perbaikan Sales Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
