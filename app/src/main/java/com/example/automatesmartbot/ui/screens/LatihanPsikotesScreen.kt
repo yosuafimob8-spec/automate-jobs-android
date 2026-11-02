@@ -207,29 +207,29 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     }
                     if (!resultAnalysisPage) {
                         item {
-                            Text("Hasil Psikotes", color = Color.Black, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
+                            Text("Hasil Psikotes", color = Color.Black, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Text("Berikut hasil psikotes kamu beserta ringkasannya.", color = Color(0xFF333333), modifier = Modifier.weight(1f))
-                                Text("📋✏️", style = MaterialTheme.typography.headlineLarge)
+                                Text("📋✏️", style = MaterialTheme.typography.displayMedium)
                             }
                         }
                         item {
                             MockupCard(borderColor = Color(0xFFFFC68A)) {
                                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                                    Text("🏅", style = MaterialTheme.typography.displayLarge)
+                                    Text("🏅", style = MaterialTheme.typography.displayLarge, modifier = Modifier.width(110.dp))
                                     Column {
                                         Text("Nilai Akhir", color = Color.Black, fontWeight = FontWeight.SemiBold)
-                                        Text(actualScore?.let { "$it /100" } ?: "—", color = Color.Black, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.Black)
+                                        Row(verticalAlignment = Alignment.Bottom) { Text(actualScore?.toString() ?: "—", color = Color.Black, style = MaterialTheme.typography.displayLarge, fontWeight = FontWeight.Black); Text(" /100", color = Color.Black, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Black) }
                                         Surface(color = Color(0xFF08BE72), shape = RoundedCornerShape(50)) { Text(rating, color = Color.White, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 14.dp, vertical = 5.dp)) }
                                     }
                                 }
                                 Spacer(Modifier.height(12.dp))
-                                Text("❝  $encouragement   🚀", color = Color(0xFF252525), modifier = Modifier.fillMaxWidth().background(Color(0xFFFFEED4), RoundedCornerShape(14.dp)).padding(12.dp))
+                                Row(Modifier.fillMaxWidth().background(Color(0xFFFFEED4), RoundedCornerShape(14.dp)).padding(12.dp), verticalAlignment = Alignment.CenterVertically) { Text("❝", color = Color(0xFFFF9D2B), style = MaterialTheme.typography.headlineLarge); Text(encouragement, modifier = Modifier.weight(1f), color = Color(0xFF252525), fontWeight = FontWeight.Medium); Text("🚀", style = MaterialTheme.typography.headlineMedium) }
                             }
                         }
                         item {
                             MockupCard {
-                                Text("🟧 Ringkasan Jawaban", fontWeight = FontWeight.ExtraBold, color = Color.Black, style = MaterialTheme.typography.titleMedium)
+                                Text("🟠 Ringkasan Jawaban", fontWeight = FontWeight.ExtraBold, color = Color.Black, style = MaterialTheme.typography.titleMedium)
                                 Spacer(Modifier.height(12.dp))
                                 Row(verticalAlignment = Alignment.CenterVertically) {
                                     Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(9.dp)) {
@@ -254,7 +254,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         }
                         item {
                             MockupCard {
-                                Text("🟧 Hasil per Kategori", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium)
+                                Text("🟠 Hasil per Kategori", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium)
                                 Spacer(Modifier.height(8.dp))
                                 val categories = r.getAsJsonArray("categories") ?: r.getAsJsonArray("category_scores")
                                 val categoryMap = mutableMapOf<String, Int>()
@@ -302,7 +302,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     } else {
                         item {
                             Row(verticalAlignment = Alignment.CenterVertically) {
-                                Text("Analisis Lengkap", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.headlineMedium, modifier = Modifier.weight(1f))
+                                Text("Analisis Lengkap", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.headlineLarge, modifier = Modifier.weight(1f))
                                 Surface(color = orange, shape = RoundedCornerShape(50)) { Text("👑 PRO", color = Color.White, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp)) }
                             }
                             Text("Evaluasi detail hasil psikotes, analisis jawaban, dan saran pengembangan khusus untukmu.", color = Color.Black)
@@ -384,7 +384,7 @@ private fun MockupCard(
         border = androidx.compose.foundation.BorderStroke(1.dp, borderColor),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
-        Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp), content = content)
+        Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp), content = content)
     }
 }
 
