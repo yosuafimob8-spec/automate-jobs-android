@@ -83,6 +83,30 @@ def submit_exam(conn, authenticated_user_id, course_id, answers, participant_nam
                                          course_title=title,completion_date=date.today().isoformat())
     return {"certificateId":certificate_id,"score":score,"registered":True}
 
+def expand_exam_questions(questions, course_title):
+    """Interim 20-question scenario bank based on five existing concepts."""
+    if len(questions) == 20:
+        return questions
+    if len(questions) != 5:
+        raise ValueError("expected five or twenty questions")
+    variants = [
+        "Dalam simulasi pekerjaan {course}, tindakan mana yang paling tepat? {prompt}",
+        "Saat memeriksa hasil pekerjaan {course}, jawaban mana yang sesuai? {prompt}",
+        "Dalam evaluasi praktik {course}, pilihan mana yang paling bertanggung jawab? {prompt}",
+    ]
+    result = list(questions)
+    for variant_index, template in enumerate(variants):
+        for index, question in enumerate(questions):
+            shift = (variant_index + index + 1) % len(question["options"])
+            options = question["options"][shift:] + question["options"][:shift]
+            result.append({
+                "prompt": template.format(course=course_title, prompt=question["prompt"]),
+                "options": options,
+                "correct": (question["correct"] - shift) % len(options),
+            })
+    return result
+
+
 def seed_trusted_catalog(conn, catalog_path=None):
     """Idempotent startup import of server-controlled, reviewed course material."""
     source = Path(catalog_path) if catalog_path else Path(__file__).with_name("trusted_catalog.json")
@@ -98,7 +122,7 @@ def seed_trusted_catalog(conn, catalog_path=None):
         course_id = item["courseId"]
         title = item["title"]
         lessons = item["lessons"]
-        questions = item["questions"]
+        questions = expand_exam_questions(item["questions"], title)
         if not isinstance(lessons, list) or not lessons or not isinstance(questions, list) or len(questions) < 5:
             raise ValueError("invalid course material")
         if any(not isinstance(q.get("prompt"), str) or len(q.get("options", [])) < 2 for q in questions):
@@ -106,9 +130,15 @@ def seed_trusted_catalog(conn, catalog_path=None):
         existing = conn.execute("SELECT title, lessons, questions FROM course_bank WHERE course_id=?", (course_id,)).fetchone()
         values = (title, json.dumps(lessons, ensure_ascii=False), json.dumps(questions, ensure_ascii=False))
         if existing:
-            if (existing[0], json.loads(existing[1]), json.loads(existing[2])) != (title, lessons, questions):
-                # Never silently change grading for an existing course.
+            stored_questions = json.loads(existing[2])
+            if (existing[0], json.loads(existing[1])) != (title, lessons):
                 raise ValueError("catalog version conflict: " + course_id)
+            if stored_questions != questions:
+                if len(stored_questions) == 5 and questions[:5] == stored_questions:
+                    conn.execute("UPDATE course_bank SET questions=? WHERE course_id=?",
+                                 (json.dumps(questions, ensure_ascii=False), course_id))
+                else:
+                    raise ValueError("catalog version conflict: " + course_id)
         else:
             add_course_from_trusted_catalog(conn, course_id, title, lessons, questions)
     return len(courses)
