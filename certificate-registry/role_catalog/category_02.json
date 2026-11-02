@@ -54,6 +54,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan ya",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jaba"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur ",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memval",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan ya"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jaba",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memval",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan ya",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jaba",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur ",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Basic, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memval"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -112,6 +247,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi ris",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional ",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jaba"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasu",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memval",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi ris"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional ",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jaba",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memval",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi ris",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jaba",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasu",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Intermediate, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memval"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -170,6 +440,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan ranc",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jaba"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prior",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memval",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan ranc",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jaba",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prior"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memval",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan ranc"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jaba",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prior",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Staff Administrasi • Advanced, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Staff Administrasi • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memval"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -228,6 +633,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berla",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus ",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. P",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi in",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berla"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus ",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi in",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berla",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. P",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Basic, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi in"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -286,6 +826,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan iden",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operas",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi in",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan iden",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi in",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan iden"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operas",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Intermediate, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi in"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -344,6 +1019,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak ak",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perb",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, da",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi in",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak ak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perb",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi in",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak ak",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perb"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, da",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Data Entry • Advanced, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Data Entry • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi in"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -402,6 +1212,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yan",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik ",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur d",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvali",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik ",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabat",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvali",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yan",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabat",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur d",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Basic, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvali"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -460,6 +1405,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risi",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional d",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvali",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional d",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabat",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvali",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risi",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabat",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Intermediate, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvali"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -518,6 +1598,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko,",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan ranca",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan priori",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvali",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko,"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan ranca",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabat",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan priori"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvali",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko,",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan ranca"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabat",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan priori",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Admin Operasional • Advanced, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Admin Operasional • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvali"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -576,6 +1791,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berla",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus ",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. P",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan ta",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berla"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus ",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan ta",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berla",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. P",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Basic, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan ta"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -634,6 +1984,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan iden",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operas",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan ta",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan iden",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan ta",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan iden"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operas",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Intermediate, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan ta"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -692,6 +2177,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak ak",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perb",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, da",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan ta",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak ak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perb",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan ta",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak ak",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perb"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, da",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Sekretaris • Advanced, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Sekretaris • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan ta"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -750,6 +2370,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik k",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabata"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur da",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalid",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik k",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabata",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalid",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik k"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabata",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur da",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Basic, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Basic",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalid"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -808,6 +2563,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risik",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional da",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabata"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus ",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalid",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional da",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabata",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalid",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risik",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabata",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus ",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Intermediate, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Intermediate",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalid"
+        ],
+        "correct": 2
       }
     ]
   },
@@ -866,6 +2756,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana menentukan urutan pemeriksaan pada tahap 1?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, ",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana menyiapkan bukti serah terima pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancan",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana mengecek ketidaksesuaian data pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabata"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana membuat catatan tindak lanjut pada tahap 4?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan priorit",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana mengevaluasi ketepatan hasil pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalid",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana memastikan hak akses dan kewenangan pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana menangani temuan saat proses berjalan pada tahap 2?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancan",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana memastikan kelengkapan dokumen pada tahap 3?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabata",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana membandingkan hasil dengan SOP pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan priorit"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana mencegah pengulangan kesalahan pada tahap 5?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalid",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana menelusuri sumber informasi pada tahap 1?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, ",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana memastikan kesiapan alat dan data pada tahap 2?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana memvalidasi laporan sebelum disetujui pada tahap 3?",
+        "options": [
+          "Gunakan prosedur dan bukti sesuai materi: Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabata",
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana menyampaikan kendala ke penanggung jawab pada tahap 4?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Gunakan prosedur dan bukti sesuai materi: Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan priorit",
+          "Mengubah data agar terlihat sesuai target tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam tugas Document Control • Advanced, bagaimana membuktikan perbaikan sudah efektif pada tahap 5?",
+        "options": [
+          "Langsung menyatakan selesai tanpa memeriksa hasil Document Control • Advanced",
+          "Mengubah data agar terlihat sesuai target tanpa bukti",
+          "Gunakan prosedur dan bukti sesuai materi: Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalid"
+        ],
+        "correct": 2
       }
     ]
   }
