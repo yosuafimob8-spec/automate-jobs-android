@@ -144,7 +144,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             if (isPro || freeEligible(mode)) { vm.start(mode.s("test_id"), (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20)); page = "exam" }
                             else if (basicMode(mode)) freeNotice = true
                             else proNotice = true
-                        }, enabled = !loading && (mode.get("training_available")?.asBoolean != false), modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
+                        }, enabled = !loading, modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
                             Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
                                 Box(Modifier.background(icon.second.copy(alpha = 0.13f), RoundedCornerShape(12.dp)).size(42.dp), contentAlignment = Alignment.Center) {
                                     Text(icon.first, style = MaterialTheme.typography.titleLarge)
