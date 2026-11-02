@@ -52,6 +52,18 @@ class TrainingServerGateway(
         return request("/training/courses/$courseId/questions")
     }
 
+    fun progress(courseId: String): JSONObject {
+        require(courseId.matches(Regex("[a-z0-9_]+")))
+        return request("/training/courses/$courseId/progress")
+    }
+
+    fun completeModule(courseId: String, index: Int, practice: String): JSONObject {
+        require(courseId.matches(Regex("[a-z0-9_]+")))
+        require(index >= 0 && practice.isNotBlank())
+        return request("/training/modules/complete", JSONObject()
+            .put("courseId", courseId).put("moduleIndex", index).put("practice", practice))
+    }
+
     fun submitExam(courseId: String, answers: List<Int>): JSONObject {
         require(courseId.matches(Regex("[a-z0-9_]+")))
         require(answers.isNotEmpty() && answers.all { it >= 0 })
