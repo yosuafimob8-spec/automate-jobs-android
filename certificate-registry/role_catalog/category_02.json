@@ -1,0 +1,872 @@
+[
+  {
+    "courseId": "role_staff_administrasi_basic",
+    "title": "Staff Administrasi • Basic",
+    "lessons": [
+      "Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Staff Administrasi.",
+      "Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Staff Administrasi.",
+      "Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Staff Administrasi.",
+      "Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Staff Administrasi.",
+      "Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Staff Administrasi."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Staff Administrasi?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Staff Administrasi?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Staff Administrasi?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Staff Administrasi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Staff Administrasi?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Staff Administrasi",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_staff_administrasi_intermediate",
+    "title": "Staff Administrasi • Intermediate",
+    "lessons": [
+      "Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Staff Administrasi.",
+      "Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Staff Administrasi.",
+      "Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Staff Administrasi.",
+      "Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Staff Administrasi.",
+      "Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Staff Administrasi."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Staff Administrasi?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Staff Administrasi?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Staff Administrasi?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Staff Administrasi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Staff Administrasi?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Staff Administrasi",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_staff_administrasi_advanced",
+    "title": "Staff Administrasi • Advanced",
+    "lessons": [
+      "Sebagai Staff Administrasi di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Staff Administrasi.",
+      "Simulasikan alur kerja Staff Administrasi: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Staff Administrasi.",
+      "Buat contoh dokumen Staff Administrasi menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Staff Administrasi.",
+      "Studi kasus Staff Administrasi: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Staff Administrasi.",
+      "Evaluasi pekerjaan Staff Administrasi dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Staff Administrasi."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Staff Administrasi?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Staff Administrasi?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Staff Administrasi?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Staff Administrasi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Staff Administrasi?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Staff Administrasi",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_data_entry_basic",
+    "title": "Data Entry • Basic",
+    "lessons": [
+      "Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Data Entry.",
+      "Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Data Entry.",
+      "Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Data Entry.",
+      "Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Data Entry.",
+      "Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Data Entry."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Data Entry?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Data Entry?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Data Entry?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Data Entry"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Data Entry?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Data Entry",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_data_entry_intermediate",
+    "title": "Data Entry • Intermediate",
+    "lessons": [
+      "Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Data Entry.",
+      "Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Data Entry.",
+      "Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Data Entry.",
+      "Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Data Entry.",
+      "Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Data Entry."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Data Entry?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Data Entry?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Data Entry?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Data Entry"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Data Entry?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Data Entry",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_data_entry_advanced",
+    "title": "Data Entry • Advanced",
+    "lessons": [
+      "Sebagai Data Entry di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Data Entry.",
+      "Simulasikan alur kerja Data Entry: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Data Entry.",
+      "Buat contoh dokumen Data Entry menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Data Entry.",
+      "Studi kasus Data Entry: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Data Entry.",
+      "Evaluasi pekerjaan Data Entry dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Data Entry."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Data Entry?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Data Entry?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Data Entry?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Data Entry"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Data Entry?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Data Entry",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_admin_operasional_basic",
+    "title": "Admin Operasional • Basic",
+    "lessons": [
+      "Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Admin Operasional.",
+      "Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Admin Operasional.",
+      "Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Admin Operasional.",
+      "Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Admin Operasional.",
+      "Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Admin Operasional."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Admin Operasional?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Admin Operasional?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Admin Operasional?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Admin Operasional"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Admin Operasional?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Admin Operasional",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_admin_operasional_intermediate",
+    "title": "Admin Operasional • Intermediate",
+    "lessons": [
+      "Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Admin Operasional.",
+      "Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Admin Operasional.",
+      "Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Admin Operasional.",
+      "Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Admin Operasional.",
+      "Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Admin Operasional."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Admin Operasional?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Admin Operasional?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Admin Operasional?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Admin Operasional"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Admin Operasional?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Admin Operasional",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_admin_operasional_advanced",
+    "title": "Admin Operasional • Advanced",
+    "lessons": [
+      "Sebagai Admin Operasional di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Admin Operasional.",
+      "Simulasikan alur kerja Admin Operasional: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Admin Operasional.",
+      "Buat contoh dokumen Admin Operasional menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Admin Operasional.",
+      "Studi kasus Admin Operasional: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Admin Operasional.",
+      "Evaluasi pekerjaan Admin Operasional dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Admin Operasional."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Admin Operasional?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Admin Operasional?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Admin Operasional?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Admin Operasional"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Admin Operasional?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Admin Operasional",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_sekretaris_basic",
+    "title": "Sekretaris • Basic",
+    "lessons": [
+      "Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Sekretaris.",
+      "Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Sekretaris.",
+      "Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Sekretaris.",
+      "Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Sekretaris.",
+      "Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Sekretaris."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sekretaris?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sekretaris?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sekretaris?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Sekretaris"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sekretaris?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Sekretaris",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_sekretaris_intermediate",
+    "title": "Sekretaris • Intermediate",
+    "lessons": [
+      "Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Sekretaris.",
+      "Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Sekretaris.",
+      "Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Sekretaris.",
+      "Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Sekretaris.",
+      "Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Sekretaris."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sekretaris?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sekretaris?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sekretaris?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Sekretaris"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sekretaris?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Sekretaris",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_sekretaris_advanced",
+    "title": "Sekretaris • Advanced",
+    "lessons": [
+      "Sebagai Sekretaris di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Sekretaris.",
+      "Simulasikan alur kerja Sekretaris: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Sekretaris.",
+      "Buat contoh dokumen Sekretaris menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Sekretaris.",
+      "Studi kasus Sekretaris: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Sekretaris.",
+      "Evaluasi pekerjaan Sekretaris dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Sekretaris."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Sekretaris?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Sekretaris?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah menjalankan tanggung jawab jabatan Sekretaris berdasarkan SOP yang berlaku dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Sekretaris?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Sekretaris"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Sekretaris?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Sekretaris",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_document_control_basic",
+    "title": "Document Control • Basic",
+    "lessons": [
+      "Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Document Control.",
+      "Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Document Control.",
+      "Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Document Control.",
+      "Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Document Control.",
+      "Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Document Control."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Document Control?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Document Control?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Document Control?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Document Control"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Document Control?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Document Control",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_document_control_intermediate",
+    "title": "Document Control • Intermediate",
+    "lessons": [
+      "Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Document Control.",
+      "Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Document Control.",
+      "Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Document Control.",
+      "Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Document Control.",
+      "Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Document Control."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Document Control?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Document Control?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Document Control?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Document Control"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Document Control?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Document Control",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_document_control_advanced",
+    "title": "Document Control • Advanced",
+    "lessons": [
+      "Sebagai Document Control di bidang Administrasi Perkantoran, pelajari alat dan istilah: spreadsheet, email, sistem arsip. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip Bukti hasil: checklist risiko dan kewenangan Document Control.",
+      "Simulasikan alur kerja Document Control: terima permintaan, validasi data, proses dokumen, arsip. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip Bukti hasil: bagan alur kerja Document Control.",
+      "Buat contoh dokumen Document Control menggunakan: notulen, register surat, formulir persetujuan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada notulen, register surat, formulir persetujuan Bukti hasil: contoh dokumen dan bukti kerja Document Control.",
+      "Studi kasus Document Control: dokumen ganda atau data penerima tidak sesuai. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus dokumen ganda atau data penerima tidak sesuai saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Document Control.",
+      "Evaluasi pekerjaan Document Control dengan indikator akurasi data, SLA dokumen, waktu proses. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi data, SLA dokumen, waktu proses Bukti hasil: rencana pengukuran dan perbaikan Document Control."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Document Control?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet, email, sistem arsip — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet, email, sistem arsip",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Document Control?",
+        "options": [
+          "terima permintaan, validasi data, proses dokumen, arsip — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses terima permintaan, validasi data, proses dokumen, arsip",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Document Control?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "notulen, register surat, formulir persetujuan — contoh dokumen dan bukti kerja Document Control"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi dokumen ganda atau data penerima tidak sesuai, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Document Control?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi data, SLA dokumen, waktu proses — rencana pengukuran dan perbaikan Document Control",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
