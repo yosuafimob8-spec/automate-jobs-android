@@ -128,7 +128,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("👑 Fitur PRO", color = ink, fontWeight = FontWeight.Bold); Text("Simulasi lengkap, statistik dan peringkat untuk langganan aktif", color = ink, style = MaterialTheme.typography.bodySmall) } } }
             }
             "catalog" -> Column(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp)) {
-                TextButton(onClick = { page = "home" }, contentPadding = PaddingValues(0.dp)) { Text("← Kembali ke Psikotes", color = teal) }
+                TextButton(onClick = { back() }, contentPadding = PaddingValues(0.dp)) { Text("← Kembali ke Psikotes", color = teal) }
                 Text(if (family == "private") "💼 Tes Kerja Swasta" else if (family == "cpns") "🏛️ Persiapan CPNS" else "Pilih Jenis Tes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = ink)
                 Text("Pilih latihan sesuai tujuanmu. Kerjakan soal, pantau progres, dan tingkatkan kemampuan.", style = MaterialTheme.typography.bodySmall, color = Color(0xFF59667A))
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.horizontalScroll(rememberScrollState())) {
@@ -201,7 +201,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 ) {
                     item {
                         Row(verticalAlignment = Alignment.CenterVertically) {
-                            TextButton(onClick = { if (resultAnalysisPage) resultAnalysisPage = false else page = "catalog" }) {
+                            TextButton(onClick = { back() }) {
                                 Text("←", color = Color.Black, style = MaterialTheme.typography.titleLarge)
                             }
                             Text("🟧 Karir", color = orange, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
@@ -383,7 +383,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 }
             }
             "history" -> LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                item { TextButton(onClick = { page = "home" }) { Text("← Kembali", color = teal) } }
+                item { TextButton(onClick = { back() }) { Text("← Kembali", color = teal) } }
                 if (history.isEmpty()) item { Text("Belum ada riwayat.") }
                 items(history) {
                     val score = PsychotestPolicy.normalizedScore(it.get("score")?.takeUnless { x -> x.isJsonNull }?.asDouble, it.get("max_score")?.takeUnless { x -> x.isJsonNull }?.asDouble)
