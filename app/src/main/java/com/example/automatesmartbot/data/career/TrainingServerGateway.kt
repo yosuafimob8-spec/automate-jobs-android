@@ -1,5 +1,6 @@
 package com.example.automatesmartbot.data.career
 
+import com.example.automatesmartbot.data.network.ApiClient
 import org.json.JSONArray
 import org.json.JSONObject
 import java.net.HttpURLConnection
@@ -10,7 +11,10 @@ import java.net.URL
  * from the application's auth layer; never embed a registry admin token in Android.
  * Not wired into JobTrainingScreen until the backend session verifier is available.
  */
-class TrainingServerGateway(private val baseUrl: String, private val accessToken: () -> String?) {
+class TrainingServerGateway(
+    private val baseUrl: String,
+    private val accessToken: () -> String? = { ApiClient.getSessionManager()?.getValidToken() }
+) {
     init {
         require(baseUrl.startsWith("https://") && !baseUrl.contains("?") && !baseUrl.contains("#")) {
             "Training server requires HTTPS"
