@@ -627,6 +627,141 @@
           "Diberi nama konsisten"
         ],
         "correct": 2
+      },
+      {
+        "prompt": "Jika data pelanggan terkirim ke penerima salah?",
+        "options": [
+          "Laporkan insiden dan ikuti prosedur",
+          "Biarkan tanpa tindak lanjut",
+          "Sebarkan ke grup lain"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Cara mencegah baris ganda pada spreadsheet?",
+        "options": [
+          "Salin semua baris lagi",
+          "Gunakan identitas unik dan cek duplikat",
+          "Hapus semua kolom"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Apa manfaat validasi data pada formulir?",
+        "options": [
+          "Membuat file lebih besar",
+          "Menghapus catatan audit",
+          "Membatasi input agar sesuai format"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dokumen masuk tanpa tanggal perlu ditangani dengan?",
+        "options": [
+          "Konfirmasi dan lengkapi metadata",
+          "Mengisi tanggal sembarangan",
+          "Membuangnya"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana menangani revisi dokumen?",
+        "options": [
+          "Menimpa tanpa catatan",
+          "Simpan versi dan riwayat perubahan",
+          "Mengirim semua versi tanpa keterangan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Apa fungsi SUM pada spreadsheet?",
+        "options": [
+          "Mengurutkan nama",
+          "Mencari alamat email",
+          "Menjumlahkan nilai numerik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika angka laporan berbeda dengan sumber?",
+        "options": [
+          "Telusuri dan koreksi dengan catatan",
+          "Ubah agar terlihat bagus",
+          "Abaikan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Apa isi notulen rapat yang berguna?",
+        "options": [
+          "Percakapan pribadi",
+          "Keputusan, PIC dan tenggat",
+          "Hanya nama ruangan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Sebelum surat resmi dikirim, periksa?",
+        "options": [
+          "Warna ikon",
+          "Riwayat media sosial",
+          "Penerima, tanggal, nomor dan lampiran"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Mengapa akses file kerja perlu dibatasi?",
+        "options": [
+          "Mengurangi risiko kebocoran data",
+          "Mempersulit pekerjaan tanpa alasan",
+          "Menghapus tanggung jawab"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika laporan diminta ketika data belum lengkap?",
+        "options": [
+          "Mengarang angka",
+          "Jelaskan status dan keterbatasan data",
+          "Menyembunyikan kekurangan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Agenda rapat efektif berisi?",
+        "options": [
+          "Tanpa tujuan",
+          "Hanya nama peserta",
+          "Topik, tujuan dan alokasi waktu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pivot table digunakan untuk?",
+        "options": [
+          "Merangkum data berdasarkan kategori",
+          "Menyimpan kata sandi",
+          "Menggantikan pencadangan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika email mencurigakan meminta login?",
+        "options": [
+          "Klik tautan langsung",
+          "Verifikasi pengirim lewat kanal resmi",
+          "Teruskan ke seluruh kontak"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Cara menentukan prioritas tugas administrasi?",
+        "options": [
+          "Berdasarkan warna map",
+          "Kerjakan yang termudah saja",
+          "Pertimbangkan urgensi, dampak dan tenggat"
+        ],
+        "correct": 2
       }
     ]
   },
