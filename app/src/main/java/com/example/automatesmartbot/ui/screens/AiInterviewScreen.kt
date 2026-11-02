@@ -5,8 +5,6 @@ import androidx.activity.compose.BackHandler
 import com.example.automatesmartbot.BuildConfig
 import com.example.automatesmartbot.data.security.SessionManager
 import android.content.Intent
-import android.media.MediaPlayer
-import java.io.File
 import android.net.Uri
 import android.util.Xml
 import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
@@ -49,26 +47,6 @@ import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
 
-
-private suspend fun fetchVoxSpeech(context: android.content.Context, text: String, language: String): File = withContext(Dispatchers.IO) {
-    val conn = (URL("http://127.0.0.1:18791/tts").openConnection() as HttpURLConnection).apply {
-        requestMethod = "POST"
-        connectTimeout = 1200
-        readTimeout = 25000
-        doOutput = true
-        setRequestProperty("Content-Type", "application/json; charset=utf-8")
-    }
-    try {
-        val payload = JSONObject().put("text", text.take(500)).put("language", language).toString()
-        conn.outputStream.use { it.write(payload.toByteArray(Charsets.UTF_8)) }
-        if (conn.responseCode != 200) throw IllegalStateException("VoxCPM2 unavailable")
-        val output = File.createTempFile("karirmate_voice_", ".wav", context.cacheDir)
-        try {
-            conn.inputStream.use { input -> output.outputStream().use { input.copyTo(it) } }
-            output
-        } catch (ex: Exception) { output.delete(); throw ex }
-    } finally { conn.disconnect() }
-}
 
 private fun extractCv(context: android.content.Context, uri: Uri): String {
     val mime = context.contentResolver.getType(uri).orEmpty()
@@ -247,34 +225,22 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     }
     var pendingSpeech by remember { mutableStateOf<String?>(null) }
     val tts = remember { TextToSpeech(context) { status -> ttsReady = status == TextToSpeech.SUCCESS } }
-    var audioPlayer by remember { mutableStateOf<MediaPlayer?>(null) }
-    val voiceScope = rememberCoroutineScope()
     fun speakQuestion(spokenText: String) {
         if (!voiceMode || spokenText.isBlank()) return
-        audioPlayer?.release()
-        audioPlayer = null
-        tts.stop()
-        voiceScope.launch {
-            val audio = runCatching { fetchVoxSpeech(context, spokenText, language) }.getOrNull()
-            if (audio != null) {
-                runCatching {
-                    val player = MediaPlayer()
-                    player.setDataSource(audio.absolutePath)
-                    player.setOnCompletionListener { it.release(); audio.delete(); if (audioPlayer === it) audioPlayer = null }
-                    player.prepare()
-                    audioPlayer = player
-                    player.start()
-                }.onFailure {
-                    audio.delete()
-                    if (ttsReady) tts.speak(spokenText, TextToSpeech.QUEUE_FLUSH, null, "interview-fallback")
-                }
-            } else if (ttsReady) {
-                tts.language = selectedLocale
-                tts.speak(spokenText, TextToSpeech.QUEUE_FLUSH, null, "interview-fallback")
-            }
+        if (!ttsReady) {
+            pendingSpeech = null
+            error = "Mesin suara Android belum siap. Periksa pengaturan Text-to-Speech perangkat."
+            return
         }
+        val availability = tts.setLanguage(selectedLocale)
+        if (availability == TextToSpeech.LANG_MISSING_DATA || availability == TextToSpeech.LANG_NOT_SUPPORTED) {
+            error = if (language == "en") "Suara bahasa Inggris belum tersedia di perangkat." else "Suara bahasa Indonesia belum tersedia. Pasang data suara di pengaturan Text-to-Speech."
+            return
+        }
+        tts.stop()
+        tts.speak(spokenText, TextToSpeech.QUEUE_FLUSH, null, "karirmate-interview")
     }
-    DisposableEffect(tts) { onDispose { audioPlayer?.release(); tts.stop(); tts.shutdown() } }
+    DisposableEffect(tts) { onDispose { tts.stop(); tts.shutdown() } }
     LaunchedEffect(ttsReady, language) {
         if (ttsReady) {
             tts.language = selectedLocale
