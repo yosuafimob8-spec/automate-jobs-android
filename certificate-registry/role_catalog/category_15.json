@@ -1,0 +1,872 @@
+[
+  {
+    "courseId": "role_persiapan_melamar_kerja_basic",
+    "title": "Persiapan Melamar Kerja • Basic",
+    "lessons": [
+      "Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Persiapan Melamar Kerja.",
+      "Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Persiapan Melamar Kerja.",
+      "Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Persiapan Melamar Kerja.",
+      "Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Persiapan Melamar Kerja.",
+      "Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Persiapan Melamar Kerja."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Persiapan Melamar Kerja?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Persiapan Melamar Kerja?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Persiapan Melamar Kerja?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Persiapan Melamar Kerja"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Persiapan Melamar Kerja?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Persiapan Melamar Kerja",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_persiapan_melamar_kerja_intermediate",
+    "title": "Persiapan Melamar Kerja • Intermediate",
+    "lessons": [
+      "Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Persiapan Melamar Kerja.",
+      "Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Persiapan Melamar Kerja.",
+      "Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Persiapan Melamar Kerja.",
+      "Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Persiapan Melamar Kerja.",
+      "Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Persiapan Melamar Kerja."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Persiapan Melamar Kerja?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Persiapan Melamar Kerja?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Persiapan Melamar Kerja?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Persiapan Melamar Kerja"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Persiapan Melamar Kerja?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Persiapan Melamar Kerja",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_persiapan_melamar_kerja_advanced",
+    "title": "Persiapan Melamar Kerja • Advanced",
+    "lessons": [
+      "Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Persiapan Melamar Kerja.",
+      "Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Persiapan Melamar Kerja.",
+      "Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Persiapan Melamar Kerja.",
+      "Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Persiapan Melamar Kerja.",
+      "Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Persiapan Melamar Kerja."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Persiapan Melamar Kerja?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Persiapan Melamar Kerja?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Persiapan Melamar Kerja berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Persiapan Melamar Kerja?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Persiapan Melamar Kerja"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Persiapan Melamar Kerja?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Persiapan Melamar Kerja",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_komunikasi_wawancara_basic",
+    "title": "Komunikasi Wawancara • Basic",
+    "lessons": [
+      "Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Komunikasi Wawancara.",
+      "Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Komunikasi Wawancara.",
+      "Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Komunikasi Wawancara.",
+      "Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Komunikasi Wawancara.",
+      "Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Komunikasi Wawancara."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Komunikasi Wawancara?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Komunikasi Wawancara?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Komunikasi Wawancara?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Komunikasi Wawancara"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Komunikasi Wawancara?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Komunikasi Wawancara",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_komunikasi_wawancara_intermediate",
+    "title": "Komunikasi Wawancara • Intermediate",
+    "lessons": [
+      "Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Komunikasi Wawancara.",
+      "Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Komunikasi Wawancara.",
+      "Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Komunikasi Wawancara.",
+      "Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Komunikasi Wawancara.",
+      "Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Komunikasi Wawancara."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Komunikasi Wawancara?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Komunikasi Wawancara?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Komunikasi Wawancara?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Komunikasi Wawancara"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Komunikasi Wawancara?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Komunikasi Wawancara",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_komunikasi_wawancara_advanced",
+    "title": "Komunikasi Wawancara • Advanced",
+    "lessons": [
+      "Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Komunikasi Wawancara.",
+      "Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Komunikasi Wawancara.",
+      "Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Komunikasi Wawancara.",
+      "Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Komunikasi Wawancara.",
+      "Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Komunikasi Wawancara."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Komunikasi Wawancara?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Komunikasi Wawancara?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Wawancara berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Komunikasi Wawancara?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Komunikasi Wawancara"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Komunikasi Wawancara?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Komunikasi Wawancara",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_leadership_basic",
+    "title": "Leadership • Basic",
+    "lessons": [
+      "Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Leadership.",
+      "Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Leadership.",
+      "Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Leadership.",
+      "Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Leadership.",
+      "Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Leadership."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Leadership?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Leadership?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Leadership?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Leadership"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Leadership?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Leadership",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_leadership_intermediate",
+    "title": "Leadership • Intermediate",
+    "lessons": [
+      "Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Leadership.",
+      "Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Leadership.",
+      "Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Leadership.",
+      "Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Leadership.",
+      "Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Leadership."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Leadership?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Leadership?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Leadership?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Leadership"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Leadership?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Leadership",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_leadership_advanced",
+    "title": "Leadership • Advanced",
+    "lessons": [
+      "Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Leadership.",
+      "Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Leadership.",
+      "Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Leadership.",
+      "Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Leadership.",
+      "Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Leadership."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Leadership?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Leadership?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Leadership?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Leadership"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Leadership?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Leadership",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_komunikasi_profesional_basic",
+    "title": "Komunikasi Profesional • Basic",
+    "lessons": [
+      "Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Komunikasi Profesional.",
+      "Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Komunikasi Profesional.",
+      "Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Komunikasi Profesional.",
+      "Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Komunikasi Profesional.",
+      "Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Komunikasi Profesional."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Komunikasi Profesional?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Komunikasi Profesional?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Komunikasi Profesional?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Komunikasi Profesional"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Komunikasi Profesional?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Komunikasi Profesional",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_komunikasi_profesional_intermediate",
+    "title": "Komunikasi Profesional • Intermediate",
+    "lessons": [
+      "Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Komunikasi Profesional.",
+      "Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Komunikasi Profesional.",
+      "Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Komunikasi Profesional.",
+      "Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Komunikasi Profesional.",
+      "Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Komunikasi Profesional."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Komunikasi Profesional?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Komunikasi Profesional?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Komunikasi Profesional?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Komunikasi Profesional"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Komunikasi Profesional?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Komunikasi Profesional",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_komunikasi_profesional_advanced",
+    "title": "Komunikasi Profesional • Advanced",
+    "lessons": [
+      "Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Komunikasi Profesional.",
+      "Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Komunikasi Profesional.",
+      "Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Komunikasi Profesional.",
+      "Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Komunikasi Profesional.",
+      "Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Komunikasi Profesional."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Komunikasi Profesional?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Komunikasi Profesional?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Komunikasi Profesional berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Komunikasi Profesional?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Komunikasi Profesional"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Komunikasi Profesional?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Komunikasi Profesional",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_manajemen_waktu_basic",
+    "title": "Manajemen Waktu • Basic",
+    "lessons": [
+      "Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Manajemen Waktu.",
+      "Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Manajemen Waktu.",
+      "Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Manajemen Waktu.",
+      "Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Manajemen Waktu.",
+      "Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Manajemen Waktu."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Manajemen Waktu?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Manajemen Waktu?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Manajemen Waktu?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Manajemen Waktu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Manajemen Waktu?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Manajemen Waktu",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_manajemen_waktu_intermediate",
+    "title": "Manajemen Waktu • Intermediate",
+    "lessons": [
+      "Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Manajemen Waktu.",
+      "Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Manajemen Waktu.",
+      "Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Manajemen Waktu.",
+      "Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Manajemen Waktu.",
+      "Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Manajemen Waktu."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Manajemen Waktu?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Manajemen Waktu?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Manajemen Waktu?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Manajemen Waktu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Manajemen Waktu?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Manajemen Waktu",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_manajemen_waktu_advanced",
+    "title": "Manajemen Waktu • Advanced",
+    "lessons": [
+      "Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar Bukti hasil: checklist risiko dan kewenangan Manajemen Waktu.",
+      "Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan Bukti hasil: bagan alur kerja Manajemen Waktu.",
+      "Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku pada CV, catatan wawancara, rencana pengembangan Bukti hasil: contoh dokumen dan bukti kerja Manajemen Waktu.",
+      "Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus jawaban tidak relevan atau target belajar terlewat saat menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Manajemen Waktu.",
+      "Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku dengan ukuran ketercapaian target, kualitas latihan, konsistensi Bukti hasil: rencana pengukuran dan perbaikan Manajemen Waktu."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Manajemen Waktu?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "CV, kalender, catatan STAR, target belajar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku menggunakan CV, kalender, catatan STAR, target belajar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Manajemen Waktu?",
+        "options": [
+          "rencana, latihan, umpan balik, perbaikan — Urutkan langkah menjalankan tanggung jawab jabatan Manajemen Waktu berdasarkan SOP yang berlaku dalam proses rencana, latihan, umpan balik, perbaikan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Manajemen Waktu?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "CV, catatan wawancara, rencana pengembangan — contoh dokumen dan bukti kerja Manajemen Waktu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi jawaban tidak relevan atau target belajar terlewat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Manajemen Waktu?",
+        "options": [
+          "Rumor tanpa data",
+          "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Manajemen Waktu",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
