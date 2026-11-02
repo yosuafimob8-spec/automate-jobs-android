@@ -286,7 +286,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     question = response.question
                     pendingQuestion = if (response.awaitingAnswer) response.question else ""
                     if (voiceMode && ttsReady) {
-                        tts.language = if (language == "en") Locale.ENGLISH else Locale.forLanguageTag("id-ID")
+                        tts.language = if (language == "en") Locale.US else Locale.forLanguageTag("id-ID")
                         val speechStatus = tts.speak((response.feedback.takeIf { it.isNotBlank() }?.plus(". ") ?: "") + question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
                         if (speechStatus == TextToSpeech.ERROR) error = "Pembaca suara gagal. Pertanyaan tetap tersedia sebagai teks."
                     }
@@ -423,7 +423,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 }
             }
             Text("CV maksimal 10 MB; PDF scan memerlukan OCR.", color = muted, style = MaterialTheme.typography.bodySmall)
-            if (voiceMode) Text("Mode suara: AI membacakan pertanyaan. Jawab dengan mikrofon atau ketik.", color = ink)
+            if (voiceMode) Text("Mode suara: AI membacakan pertanyaan. Jawab menggunakan mikrofon.", color = ink)
             Button(enabled = !loading && !cvReading && endpoint != null, modifier = Modifier.fillMaxWidth().height(56.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = orange), shape = RoundedCornerShape(16.dp),
                 onClick = {
@@ -491,7 +491,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             if (error.isNotBlank()) Text(error, Modifier.padding(horizontal = 16.dp), color = MaterialTheme.colorScheme.error)
             Row(Modifier.fillMaxWidth().background(Color.White).padding(10.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-                OutlinedTextField(answer, { answer = it }, modifier = Modifier.weight(1f),
+                if (!voiceMode) OutlinedTextField(answer, { answer = it }, modifier = Modifier.weight(1f),
                     placeholder = { Text("Ketik jawaban Anda...", color = muted) }, maxLines = 4,
                     textStyle = androidx.compose.ui.text.TextStyle(color = ink),
                     colors = OutlinedTextFieldDefaults.colors(focusedTextColor = ink, unfocusedTextColor = ink, cursorColor = orange, focusedContainerColor = Color.White, unfocusedContainerColor = Color.White),
@@ -509,7 +509,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                         tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-repeat")
                     } else error = "Mesin pembaca suara belum siap di perangkat."
                 }) { Text("🔊") }
-                Button(enabled = !loading && answer.isNotBlank(), onClick = {
+                if (!voiceMode) Button(enabled = !loading && answer.isNotBlank(), onClick = {
                     send("reply", history + InterviewTurn(question, answer.trim()))
                 }, colors = ButtonDefaults.buttonColors(containerColor = orange),
                     contentPadding = PaddingValues(12.dp)) { Text("➤") }
