@@ -54,6 +54,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Operator Produksi • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, a",
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Operator Produksi • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Operator Produksi • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Operator Produksi • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Operator Produksi • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Operator Produksi • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Operator Produksi • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Operator Produksi • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Operator Produksi • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Operator Produksi • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Operator Produksi • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, a",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Operator Produksi • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Operator Produksi • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Operator Produksi • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Operator Produksi • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Melewati pemeriksaan Operator Produksi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -112,6 +247,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Operator Produksi • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan ",
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Operator Produksi • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Operator Produksi • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Operator Produksi • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Operator Produksi • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Operator Produksi • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Operator Produksi • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Operator Produksi • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Operator Produksi • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Operator Produksi • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Operator Produksi • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Operator Produksi • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Operator Produksi • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Operator Produksi • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Operator Produksi • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Melewati pemeriksaan Operator Produksi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -170,6 +440,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Operator Produksi • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risi",
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Operator Produksi • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Operator Produksi • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Operator Produksi • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Operator Produksi • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Operator Produksi • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Operator Produksi • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Operator Produksi • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Operator Produksi • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Operator Produksi • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Operator Produksi • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risi",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Operator Produksi • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Operator Produksi • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Operator Produksi • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Operator Produksi • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Melewati pemeriksaan Operator Produksi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -228,6 +633,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Control • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, ala",
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Control • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Control • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Control • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Control • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Control • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, ala"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Control • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Control • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Control • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Control • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Control • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, ala",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Control • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Control • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Control • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Control • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Melewati pemeriksaan Quality Control • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -286,6 +826,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Control • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan pr",
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Control • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Control • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Control • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Control • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Control • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan pr"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Control • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Control • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Control • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Control • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Control • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan pr",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Control • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Control • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Control • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Control • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Melewati pemeriksaan Quality Control • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -344,6 +1019,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Control • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risiko",
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Control • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Control • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Control • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Control • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Control • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risiko"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Control • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Control • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Control • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Control • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Control • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risiko",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Control • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Control • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Control • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Control • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Melewati pemeriksaan Quality Control • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -402,6 +1212,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Assurance • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, a",
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Assurance • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Assurance • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Assurance • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Assurance • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Assurance • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Assurance • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Assurance • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Assurance • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Assurance • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Assurance • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, a",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Assurance • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Assurance • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Assurance • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Assurance • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Melewati pemeriksaan Quality Assurance • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -460,6 +1405,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Assurance • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan ",
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Assurance • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Assurance • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Assurance • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Assurance • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Assurance • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Assurance • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Assurance • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Assurance • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Assurance • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Assurance • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Assurance • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Assurance • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Assurance • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Assurance • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Melewati pemeriksaan Quality Assurance • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -518,6 +1598,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Assurance • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risi",
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Assurance • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Assurance • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Assurance • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Assurance • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Assurance • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Assurance • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Assurance • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Assurance • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Assurance • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Quality Assurance • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risi",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Quality Assurance • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Quality Assurance • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Quality Assurance • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Quality Assurance • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Melewati pemeriksaan Quality Assurance • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -576,6 +1791,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Leader • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, a",
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Leader • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Leader • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Leader • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Leader • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Leader • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Leader • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Leader • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Leader • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Leader • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Leader • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, a",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Leader • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Leader • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Leader • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Leader • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Melewati pemeriksaan Production Leader • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -634,6 +1984,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Leader • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan ",
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Leader • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Leader • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Leader • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Leader • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Leader • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Leader • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Leader • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Leader • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Leader • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Leader • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Leader • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Leader • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Leader • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Leader • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Melewati pemeriksaan Production Leader • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -692,6 +2177,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Leader • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risi",
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Leader • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Leader • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Leader • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Leader • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Leader • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Leader • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Leader • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Leader • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Leader • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Leader • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risi",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Leader • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Leader • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Leader • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Leader • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bu",
+          "Melewati pemeriksaan Production Leader • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -750,6 +2370,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Supervisor • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konse",
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Supervisor • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui."
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Supervisor • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. P",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Supervisor • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melak",
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Supervisor • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Supervisor • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konse"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Supervisor • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui.",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Supervisor • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. P",
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Supervisor • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Supervisor • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Supervisor • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konse",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Supervisor • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui.",
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Supervisor • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Supervisor • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melak",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Supervisor • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Melewati pemeriksaan Production Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -808,6 +2563,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Supervisor • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terap",
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Supervisor • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui."
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Supervisor • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. P",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Supervisor • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melak",
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Supervisor • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Supervisor • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terap"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Supervisor • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui.",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Supervisor • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. P",
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Supervisor • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Supervisor • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Supervisor • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terap",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Supervisor • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui.",
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Supervisor • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Supervisor • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melak",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Supervisor • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Melewati pemeriksaan Production Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -866,6 +2756,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Supervisor • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis ",
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Supervisor • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui."
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Supervisor • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. P",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Supervisor • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melak",
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Supervisor • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Supervisor • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Supervisor • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui.",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Supervisor • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. P",
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Supervisor • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Supervisor • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Production Supervisor • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Production Supervisor • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui.",
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Production Supervisor • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Production Supervisor • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melak",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Production Supervisor • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Melewati pemeriksaan Production Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   }
