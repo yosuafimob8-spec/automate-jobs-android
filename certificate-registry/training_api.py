@@ -109,7 +109,15 @@ class TrainingApiMixin:
                 with self.training_connection() as conn:
                     result = submit_exam(conn, user_id, payload.get("courseId"), payload.get("answers"), name)
                 self.reply(200, result)
-            except (ValueError, TypeError):
+            except ValueError as exc:
+                reason = str(exc)
+                if reason == "passing grade required":
+                    self.reply(422, {"error":"exam_not_passed", "message":"Nilai belum mencapai 80/100. Silakan ulangi ujian."})
+                elif reason == "modules incomplete":
+                    self.reply(409, {"error":"modules_incomplete", "message":"Selesaikan semua modul sebelum mengikuti ujian."})
+                else:
+                    self.reply(400, {"error":"invalid_or_incomplete_assessment"})
+            except TypeError:
                 self.reply(400, {"error":"invalid_or_incomplete_assessment"})
             except __import__("sqlite3").IntegrityError:
                 self.reply(409, {"error":"concurrent_or_duplicate_submission"})
