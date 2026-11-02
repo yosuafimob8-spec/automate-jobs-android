@@ -86,6 +86,21 @@ class Handler(BaseHTTPRequestHandler):
 
     def do_GET(self):
         url = urlsplit(self.path)
+        if url.path == "/certificate":
+            cid = parse_qs(url.query).get("id", [""])[0]
+            record = verify(cid)
+            valid = record is not None and not record["revoked"]
+            title = "Sertifikat terdaftar" if valid else "Sertifikat tidak terverifikasi"
+            fields = ("name", "course", "date", "score", "id")
+            details = "".join("<p><b>" + key + ":</b> " + str(record[key]).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;") + "</p>" for key in fields) if valid else ""
+            body = ("<!doctype html><html><meta charset=utf-8><title>KarirMate</title><h1>KarirMate</h1><h2>" + title + "</h2>" + details + "<p>Sertifikat pelatihan internal, bukan sertifikasi BNSP.</p></html>").encode()
+            self.send_response(200 if valid else 404)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+            return
         if url.path == "/health":
             return self.reply(200, {"status": "ok"})
         if url.path == "/verify":
