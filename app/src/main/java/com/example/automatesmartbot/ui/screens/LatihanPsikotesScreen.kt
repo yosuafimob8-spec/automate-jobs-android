@@ -235,7 +235,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                     Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(9.dp)) {
                                         ScoreRow("✅ Jawaban Benar", "$correct")
                                         ScoreRow("❌ Jawaban Salah", "$wrong")
-                                        ScoreRow("📝 Kosong", "$blank")
+                                        
                                         ScoreRow("📋 Total Soal", "$total")
                                     }
                                     Spacer(Modifier.width(12.dp))
@@ -247,14 +247,14 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                             }
                                             Text("$accuracy%", color = Color.Black, fontWeight = FontWeight.Black, style = MaterialTheme.typography.titleLarge)
                                         }
-                                        Text("Ketepatan", color = Color.Black, style = MaterialTheme.typography.labelSmall)
+                                        Text("Tingkat\nKetepatan", color = Color.Black, textAlign = TextAlign.Center, style = MaterialTheme.typography.labelSmall)
                                     }
                                 }
                             }
                         }
                         item {
                             MockupCard {
-                                Text("📊 Hasil per Kategori", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium)
+                                Text("🟧 Hasil per Kategori", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium)
                                 Spacer(Modifier.height(8.dp))
                                 val categories = r.getAsJsonArray("categories") ?: r.getAsJsonArray("category_scores")
                                 val categoryMap = mutableMapOf<String, Int>()
@@ -284,13 +284,13 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         item {
                             MockupCard(tint = Color(0xFFFFF4E4), borderColor = Color(0xFFFFB966), onClick = { if (isPro) resultAnalysisPage = true else proNotice = true }) {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Text("🔒", style = MaterialTheme.typography.headlineMedium)
+                                    Text("🔐", style = MaterialTheme.typography.headlineMedium)
                                     Spacer(Modifier.width(10.dp))
                                     Column(Modifier.weight(1f)) {
-                                        Text("Analisis & Pengembangan  PRO", color = Color.Black, fontWeight = FontWeight.ExtraBold)
-                                        Text("Lihat analisis jawaban, evaluasi kemampuan, dan saran pengembangan.", color = Color.Black, style = MaterialTheme.typography.bodySmall)
+                                        Text("Analisis & Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold)
+                                        Text("Lihat analisis jawaban per soal, evaluasi kemampuan, dan saran pengembangan.", color = Color.Black, style = MaterialTheme.typography.bodySmall)
                                     }
-                                    Text("›", color = orange, style = MaterialTheme.typography.headlineMedium)
+                                    Surface(color = orange, shape = RoundedCornerShape(50)) { Text("PRO", color = Color.White, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)) }
                                 }
                             }
                         }
@@ -321,9 +321,9 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         }
                         when (analysisTab) {
                             0 -> {
-                                item { MockupCard { Text("📊 Profil Kemampuan", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium); Text("Ketepatan $accuracy% dari $total soal. $correct jawaban benar dan $wrong salah. Hasil ini merupakan latihan, bukan penilaian rekrutmen resmi.", color = Color.DarkGray) } }
-                                item { MockupCard(tint = Color(0xFFEAFBF3)) { Text("👍 Kekuatan Utama", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text(if (correct > 0) "Kamu berhasil menjawab $correct soal dengan tepat. Pelajari kembali pola jawaban yang sudah dikuasai." else "Terus bangun pemahaman konsep melalui latihan bertahap.", color = Color.DarkGray) } }
-                                item { MockupCard(tint = Color(0xFFFFEEF0)) { Text("🎯 Area Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text("Tinjau $wrong jawaban salah, pahami alasannya, dan latih manajemen waktu.", color = Color.DarkGray) } }
+                                item { MockupCard { Text("📊 Profil Kemampuan", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium); Text("Dari $total soal, kamu menjawab $correct soal dengan benar dan $wrong salah ($accuracy% ketepatan). Evaluasi ini berdasarkan jawaban latihanmu, bukan penilaian rekrutmen resmi.", color = Color.DarkGray) } }
+                                item { MockupCard(tint = Color(0xFFEAFBF3)) { Text("👍 Kekuatan Utama", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text(if (correct > 0) "✓ $correct jawaban benar dari $total soal.\n✓ Pertahankan konsep yang sudah dikuasai.\n✓ Bangun konsistensi dan ketelitian saat berlatih." else "Terus bangun pemahaman konsep melalui latihan bertahap.", color = Color.DarkGray) } }
+                                item { MockupCard(tint = Color(0xFFFFEEF0)) { Text("🎯 Area Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text("✓ Pelajari kembali $wrong jawaban yang salah.\n✓ Tingkatkan ketelitian dan pemahaman konsep.\n✓ Latih strategi manajemen waktu saat mengerjakan soal.", color = Color.DarkGray) } }
                             }
                             1 -> {
                                 val details = r.getAsJsonArray("questions")?.mapNotNull { if (it.isJsonObject) it.asJsonObject else null }.orEmpty()
