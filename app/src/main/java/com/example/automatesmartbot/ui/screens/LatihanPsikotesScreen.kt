@@ -58,6 +58,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
     var family by remember { mutableStateOf("all") }
     var proNotice by remember { mutableStateOf(false) }
     var freeNotice by remember { mutableStateOf(false) }
+    var previousPage by rememberSaveable { mutableStateOf("home") }
     val basicCategories = listOf("logika", "numerik", "matematika", "verbal", "bahasa", "ketelitian", "deret", "pola", "spasial", "gambar", "kepribadian", "twk", "tiu", "tkp")
     fun basicMode(mode: JsonObject): Boolean {
         val name = mode.s("title").lowercase()
@@ -73,9 +74,11 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
         else if (session != null && result == null && page == "home") page = "exam"
     }
     fun back() {
+        if (proNotice) { proNotice = false; return }
+        if (freeNotice) { freeNotice = false; return }
         page = when (page) {
             "home" -> { onExit(); "home" }
-            "catalog" -> "home"
+            "catalog" -> if (previousPage == "home") "home" else previousPage
             "exam" -> "catalog"
             "result" -> if (resultAnalysisPage) { resultAnalysisPage = false; "result" } else "catalog"
             "history", "stats", "leaderboard" -> "home"
@@ -108,8 +111,8 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         }
                     }
                 }
-                item { CompactRoute("💼", "Tes Kerja Swasta", "Logika, numerik, verbal, dan kemampuan kerja", listOf(orange, Color(0xFFFFA168))) { family = "private"; page = "catalog" } }
-                item { CompactRoute("🏛️", "Persiapan CPNS", "TWK, TIU, TKP, simulasi CAT, dan SKB", listOf(blue, teal)) { family = "cpns"; page = "catalog" } }
+                item { CompactRoute("💼", "Tes Kerja Swasta", "Logika, numerik, verbal, dan kemampuan kerja", listOf(orange, Color(0xFFFFA168))) { family = "private"; previousPage = "home"; page = "catalog" } }
+                item { CompactRoute("🏛️", "Persiapan CPNS", "TWK, TIU, TKP, simulasi CAT, dan SKB", listOf(blue, teal)) { family = "cpns"; previousPage = "home"; page = "catalog" } }
                 item {
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         Shortcut("🕘 Riwayat", Modifier.weight(1f)) { vm.loadExtras(isPro); page = "history" }
@@ -121,7 +124,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("👑 Fitur PRO", color = ink, fontWeight = FontWeight.Bold); Text("Simulasi lengkap, statistik dan peringkat untuk langganan aktif", color = ink, style = MaterialTheme.typography.bodySmall) } } }
             }
             "catalog" -> Column(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp)) {
-                TextButton(onClick = { page = "home" }, contentPadding = PaddingValues(0.dp)) { Text("← Kembali ke Psikotes", color = teal) }
+                TextButton(onClick = { back() }, contentPadding = PaddingValues(0.dp)) { Text("← Kembali ke Psikotes", color = teal) }
                 Text("Pilih Jenis Tes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = ink)
                 Text("Pilih latihan dan mulai kapan saja.", style = MaterialTheme.typography.bodySmall, color = Color(0xFF59667A))
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.horizontalScroll(rememberScrollState())) {
@@ -140,16 +143,16 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         val title = mode.s("title", "Tes")
                         val icon = testIcon(title)
                         Card(onClick = {
-                            if (isPro || freeEligible(mode)) { vm.start(mode.s("test_id"), (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20)); page = "exam" }
+                            if (isPro || freeEligible(mode)) { val requested = if (isPro) mode.n("question_count").takeIf { it > 0 } ?: 20 else (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20); vm.start(mode.s("test_id"), requested); page = "exam" }
                             else if (basicMode(mode)) freeNotice = true
                             else proNotice = true
-                        }, enabled = !loading && (mode.get("training_available")?.asBoolean != false), modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
+                        }, enabled = !loading && (isPro || mode.get("training_available")?.asBoolean != false), modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
                             Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
                                 Box(Modifier.background(icon.second.copy(alpha = 0.13f), RoundedCornerShape(12.dp)).size(42.dp), contentAlignment = Alignment.Center) {
                                     Text(icon.first, style = MaterialTheme.typography.titleLarge)
                                 }
                                 Text(title, fontWeight = FontWeight.Bold, color = ink, maxLines = 2, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
-                                Text("${(if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20)} soal  •  ${mode.n("duration_seconds") / 60} menit", color = Color(0xFF58657A), style = MaterialTheme.typography.labelSmall)
+                                Text("${(if (isPro) mode.n("question_count").takeIf { it > 0 } ?: 20 else (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20))} soal  •  ${mode.n("duration_seconds") / 60} menit", color = Color(0xFF58657A), style = MaterialTheme.typography.labelSmall)
                                 Text(if (freeEligible(mode)) "FREE • Mulai →" else if (basicMode(mode)) "FREE • 10–20 soal saja" else "👑 PRO", color = if (freeEligible(mode)) teal else orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodySmall)
                             }
                         }
@@ -193,7 +196,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 ) {
                     item {
                         Row(verticalAlignment = Alignment.CenterVertically) {
-                            TextButton(onClick = { if (resultAnalysisPage) resultAnalysisPage = false else page = "catalog" }) {
+                            TextButton(onClick = { back() }) {
                                 Text("←", color = Color.Black, style = MaterialTheme.typography.titleLarge)
                             }
                             Text("🟠 KarirMate", color = Color(0xFF007F78), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
@@ -343,7 +346,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 }
             }
             "history" -> LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                item { TextButton(onClick = { page = "home" }) { Text("← Kembali", color = teal) } }
+                item { TextButton(onClick = { back() }) { Text("← Kembali", color = teal) } }
                 if (history.isEmpty()) item { Text("Belum ada riwayat.") }
                 items(history) {
                     val score = PsychotestPolicy.normalizedScore(it.get("score")?.takeUnless { x -> x.isJsonNull }?.asDouble, it.get("max_score")?.takeUnless { x -> x.isJsonNull }?.asDouble)
