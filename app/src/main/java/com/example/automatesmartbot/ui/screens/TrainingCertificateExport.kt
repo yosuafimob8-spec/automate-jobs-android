@@ -81,12 +81,12 @@ fun TrainingCertificateExport(item: JSONObject) {
                         signature("Tanti kurnia", "Training Manager", 207f)
                         signature("Ilham Ramdhan", "Program Director", 633f)
                         val qrPayload = TrainingCertificateIdentity.payload(item.optString("id"), item.optString("courseId"), item.optString("date"), item.optInt("score"))
-                        val qr = QRCodeWriter().encode(qrPayload, BarcodeFormat.QR_CODE, 70, 70)
-                        val cell = 0.85f
+                        val qr = QRCodeWriter().encode(qrPayload, BarcodeFormat.QR_CODE, 104, 104)
+                        val cell = 0.92f
                         paint.style = Paint.Style.FILL
                         for (y in 0 until qr.height) for (x in 0 until qr.width) {
                             paint.color = if (qr[x, y]) Color.BLACK else Color.WHITE
-                            canvas.drawRect(383f + x * cell, 410f + y * cell, 383f + (x + 1) * cell, 410f + (y + 1) * cell, paint)
+                            canvas.drawRect(373f + x * cell, 402f + y * cell, 373f + (x + 1) * cell, 402f + (y + 1) * cell, paint)
                         }
                         text("Tanggal: ${item.optString("date")}  •  ID: ${item.optString("id").take(16)}", 538f, 10f)
                         text("QR berisi data identitas sertifikat; belum ada verifikasi daring.", 550f, 9f)
