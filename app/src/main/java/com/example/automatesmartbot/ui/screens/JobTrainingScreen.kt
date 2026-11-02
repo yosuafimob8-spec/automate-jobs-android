@@ -201,14 +201,14 @@ fun JobTrainingScreen() {
                         }
                     }
                     TrainingHeroIllustration(Modifier.fillMaxWidth())
-                    Text("Jelajahi Posisi Pekerjaan", fontSize = 19.sp, fontWeight = FontWeight.Bold)
-                    Text("${TrainingPositions.groups.size} bidang • ${TrainingPositions.count} posisi tersedia")
+                    Text("Jelajahi Posisi Pekerjaan", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = darkTraining)
+                    Text("${TrainingPositions.groups.size} bidang • ${TrainingPositions.count} posisi tersedia", color = darkTraining)
                     TrainingPositions.groups.forEachIndexed { index, group ->
                         OutlinedButton(colors = trainingButtonColors, onClick = { selectedCategory = index; stage = "positions" }, modifier = Modifier.fillMaxWidth()) {
-                            Text("${group.category}  (${group.positions.size} posisi)")
+                            Text("${group.category}  (${group.positions.size} posisi)", color = darkTraining, fontWeight = FontWeight.SemiBold)
                         }
                     }
-                    Text("Pilih Kategori Pelatihan", fontSize = 19.sp, fontWeight = FontWeight.Bold)
+                    Text("Pilih Kategori Pelatihan", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = darkTraining)
                     TrainingCourses.all.chunked(2).forEach { row ->
                         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                             row.forEach { item ->
@@ -219,7 +219,7 @@ fun JobTrainingScreen() {
                                 ) {
                                     Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
                                         Text("▣", color = orangeTraining, fontSize = 28.sp)
-                                        Text(item.title, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, fontSize = 13.sp)
+                                        Text(item.title, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, fontSize = 13.sp, color = darkTraining)
                                     }
                                 }
                             }
@@ -232,10 +232,10 @@ fun JobTrainingScreen() {
                 "positions" -> {
                     val group = TrainingPositions.groups[selectedCategory]
                     Text(group.category, fontSize = 25.sp, fontWeight = FontWeight.Bold, color = darkTraining)
-                    Text("Pilih posisi yang ingin dipelajari")
+                    Text("Pilih posisi yang ingin dipelajari", color = darkTraining)
                     group.positions.forEach { position ->
                         TrainingCard {
-                            Text(position, fontWeight = FontWeight.Bold)
+                            Text(position, fontWeight = FontWeight.Bold, color = darkTraining)
                             TrainingLevel.entries.forEach { level ->
                                 val training = TrainingPathways.courseFor(position, level)
                                 val previous = when (level) {
