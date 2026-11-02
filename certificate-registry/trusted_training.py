@@ -87,8 +87,13 @@ def seed_trusted_catalog(conn, catalog_path=None):
     """Idempotent startup import of server-controlled, reviewed course material."""
     source = Path(catalog_path) if catalog_path else Path(__file__).with_name("trusted_catalog.json")
     courses = json.loads(source.read_text(encoding="utf-8"))
+    if catalog_path is None:
+        for role_file in sorted(Path(__file__).with_name("role_catalog").glob("category_*.json")):
+            courses.extend(json.loads(role_file.read_text(encoding="utf-8")))
     if not isinstance(courses, list) or not courses:
         raise ValueError("empty trusted catalog")
+    if len({item["courseId"] for item in courses}) != len(courses):
+        raise ValueError("duplicate course IDs")
     for item in courses:
         course_id = item["courseId"]
         title = item["title"]
