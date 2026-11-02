@@ -48,6 +48,7 @@ val detailNavItems = listOf(
     Screen.JobTraining, Screen.SalaryCalculator, Screen.CareerLetters, Screen.CareerDocuments,
     Screen.CvBuilder,
     Screen.LatihanPsikotes,
+    Screen.AiInterview,
     Screen.WorkPedia,
     Screen.SuratIzinDokumen
 )
