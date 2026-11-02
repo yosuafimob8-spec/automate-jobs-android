@@ -40,6 +40,7 @@ private val tealTraining = Color(0xFF009F89)
 private val paleTraining = Color(0xFFF6F9FC)
 private val trainingDisabledText = Color(0xFF475569)
 private val trainingButtonColors @Composable get() = ButtonDefaults.outlinedButtonColors(
+    containerColor = Color.White,
     contentColor = darkTraining,
     disabledContentColor = Color(0xFF475569),
     disabledContainerColor = Color(0xFFF1F5F9)
@@ -215,7 +216,7 @@ fun JobTrainingScreen() {
             when (stage) {
                 "catalog" -> {
                     Text("Pelatihan Kerja", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
-                    Text("Tingkatkan skill, kuasai kompetensi, dan dapatkan sertifikat penyelesaian.")
+                    Text("Tingkatkan skill, kuasai kompetensi, dan dapatkan sertifikat penyelesaian.", color = darkTraining)
                     Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFEEDB), contentColor = darkTraining), shape = RoundedCornerShape(20.dp)) {
                         Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             Text("Siapkan Karier Impianmu Lewat Pelatihan Terarah", fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
@@ -228,7 +229,7 @@ fun JobTrainingScreen() {
                     Text("Jelajahi Posisi Pekerjaan", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = darkTraining)
                     Text("${TrainingPositions.groups.size} bidang • ${TrainingPositions.count} posisi tersedia", color = darkTraining)
                     TrainingPositions.groups.forEachIndexed { index, group ->
-                        OutlinedButton(colors = trainingButtonColors, onClick = { selectedCategory = index; stage = "positions" }, modifier = Modifier.fillMaxWidth()) {
+                        OutlinedButton(colors = trainingButtonColors, onClick = { selectedCategory = index; stage = "positions" }, modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)) {
                             Text("${group.category}  (${group.positions.size} posisi)", color = darkTraining, fontWeight = FontWeight.SemiBold)
                         }
                     }
@@ -250,8 +251,8 @@ fun JobTrainingScreen() {
                             if (row.size == 1) Spacer(Modifier.weight(1f))
                         }
                     }
-                    Text("Sertifikat penyelesaian adalah bukti latihan internal, bukan sertifikasi kompetensi resmi BNSP.", fontSize = 12.sp)
-                    OutlinedButton(colors = trainingButtonColors, onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth()) { Text("Lihat Riwayat Sertifikat") }
+                    Text("Sertifikat penyelesaian adalah bukti latihan internal, bukan sertifikasi kompetensi resmi BNSP.", fontSize = 12.sp, color = darkTraining)
+                    OutlinedButton(colors = trainingButtonColors, onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)) { Text("Lihat Riwayat Sertifikat") }
                 }
                 "positions" -> {
                     val group = TrainingPositions.groups[selectedCategory]
@@ -287,7 +288,7 @@ fun JobTrainingScreen() {
                 }
                 "modules" -> {
                     Text(course.title, fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
-                    if (selectedPosition.isNotBlank()) Text("Posisi pilihan: $selectedPosition")
+                    if (selectedPosition.isNotBlank()) Text("Posisi pilihan: $selectedPosition", color = darkTraining)
                     TrainingCard {
                         Text("Pelajari materi dan selesaikan seluruh modul", fontWeight = FontWeight.Bold, color = darkTraining)
                         Text("${course.lessons.size} Modul  •  Evaluasi Akhir  •  Sertifikat", color = darkTraining)
@@ -334,7 +335,7 @@ fun JobTrainingScreen() {
                             }
                         }
                     }
-                    if (message.isNotBlank()) Text(message)
+                    if (message.isNotBlank()) Text(message, color = darkTraining)
                 }
                 "lesson" -> {
                     Text("Modul ${module + 1}", color = orangeTraining, fontWeight = FontWeight.Bold)
