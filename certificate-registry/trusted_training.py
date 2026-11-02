@@ -3,6 +3,7 @@ Authentication must be supplied by the host server; never trust user_id from a r
 The course bank and module progress are server-owned. No admin token in the app.
 """
 import json
+from pathlib import Path
 import sqlite3
 import uuid
 from datetime import date
@@ -81,3 +82,28 @@ def submit_exam(conn, authenticated_user_id, course_id, answers, participant_nam
     certificate_id = issue_from_attempt(conn,attempt_id=attempt_id,name=participant_name.strip(),
                                          course_title=title,completion_date=date.today().isoformat())
     return {"certificateId":certificate_id,"score":score,"registered":True}
+
+def seed_trusted_catalog(conn, catalog_path=None):
+    """Idempotent startup import of server-controlled, reviewed course material."""
+    source = Path(catalog_path) if catalog_path else Path(__file__).with_name("trusted_catalog.json")
+    courses = json.loads(source.read_text(encoding="utf-8"))
+    if not isinstance(courses, list) or not courses:
+        raise ValueError("empty trusted catalog")
+    for item in courses:
+        course_id = item["courseId"]
+        title = item["title"]
+        lessons = item["lessons"]
+        questions = item["questions"]
+        if not isinstance(lessons, list) or not lessons or not isinstance(questions, list) or len(questions) < 5:
+            raise ValueError("invalid course material")
+        if any(not isinstance(q.get("prompt"), str) or len(q.get("options", [])) < 2 for q in questions):
+            raise ValueError("invalid question content")
+        existing = conn.execute("SELECT title, lessons, questions FROM course_bank WHERE course_id=?", (course_id,)).fetchone()
+        values = (title, json.dumps(lessons, ensure_ascii=False), json.dumps(questions, ensure_ascii=False))
+        if existing:
+            if existing != values:
+                # Never silently change grading for an existing course.
+                raise ValueError("catalog version conflict: " + course_id)
+        else:
+            add_course_from_trusted_catalog(conn, course_id, title, lessons, questions)
+    return len(courses)
