@@ -62,8 +62,13 @@ private fun TrainingAction(label: String, enabled: Boolean = true, onClick: () -
         enabled = enabled,
         modifier = Modifier.fillMaxWidth().height(52.dp),
         shape = RoundedCornerShape(13.dp),
-        colors = ButtonDefaults.buttonColors(containerColor = orangeTraining)
-    ) { Text(label, fontWeight = FontWeight.Bold) }
+        colors = ButtonDefaults.buttonColors(
+            containerColor = orangeTraining,
+            contentColor = Color.White,
+            disabledContainerColor = Color(0xFFE2E8F0),
+            disabledContentColor = darkTraining
+        )
+    ) { Text(label, fontWeight = FontWeight.Bold, color = if (enabled) Color.White else darkTraining) }
 }
 
 @Composable
@@ -165,6 +170,7 @@ fun JobTrainingScreen() {
             message += ". Belum lulus; selesaikan modul dan ulangi evaluasi."
         }
     }
+    CompositionLocalProvider(LocalContentColor provides darkTraining) {
     Column(Modifier.fillMaxSize().background(paleTraining)) {
         Row(
             Modifier.fillMaxWidth().background(Color.White).padding(16.dp),
@@ -192,7 +198,7 @@ fun JobTrainingScreen() {
                 "catalog" -> {
                     Text("Pelatihan Kerja", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
                     Text("Tingkatkan skill, kuasai kompetensi, dan dapatkan sertifikat penyelesaian.")
-                    Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFEEDB)), shape = RoundedCornerShape(20.dp)) {
+                    Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFEEDB), contentColor = darkTraining), shape = RoundedCornerShape(20.dp)) {
                         Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             Text("Siapkan Karier Impianmu Lewat Pelatihan Terarah", fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
                             listOf("✓ Materi praktis", "✓ Latihan & evaluasi", "✓ Sertifikat penyelesaian KarirMate").forEach {
@@ -215,7 +221,7 @@ fun JobTrainingScreen() {
                                 Card(
                                     modifier = Modifier.weight(1f).height(120.dp).clickable { choose(item.id) },
                                     shape = RoundedCornerShape(16.dp),
-                                    colors = CardDefaults.cardColors(containerColor = Color.White)
+                                    colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining)
                                 ) {
                                     Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
                                         Text("▣", color = orangeTraining, fontSize = 28.sp)
@@ -386,7 +392,7 @@ fun JobTrainingScreen() {
                             Card(
                                 onClick = { saveAnswer(questionIndex, index) },
                                 modifier = Modifier.fillMaxWidth(),
-                                colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFEAD7) else Color.White),
+                                colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFEAD7) else Color.White, contentColor = darkTraining),
                                 border = BorderStroke(1.dp, if (selected) orangeTraining else Color(0xFFE1E5EA))
                             ) {
                                 Row(Modifier.padding(10.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -408,7 +414,12 @@ fun JobTrainingScreen() {
                                 else stage = "submit"
                             },
                             modifier = Modifier.weight(1f),
-                            colors = ButtonDefaults.buttonColors(containerColor = orangeTraining)
+                            colors = ButtonDefaults.buttonColors(
+            containerColor = orangeTraining,
+            contentColor = Color.White,
+            disabledContainerColor = Color(0xFFE2E8F0),
+            disabledContentColor = darkTraining
+        )
                         ) { Text(if (questionIndex == course.questions.lastIndex) "Selesai" else "Berikutnya ›") }
                     }
                 }
@@ -430,7 +441,7 @@ fun JobTrainingScreen() {
                         Card(
                             modifier = Modifier.fillMaxWidth(),
                             border = BorderStroke(2.dp, Color(0xFFFFB447)),
-                            colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFBF5)),
+                            colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFBF5), contentColor = darkTraining),
                             shape = RoundedCornerShape(16.dp)
                         ) {
                             Column(
@@ -499,5 +510,6 @@ fun JobTrainingScreen() {
                 }
             }
         }
+    }
     }
 }
