@@ -84,79 +84,10 @@ def submit_exam(conn, authenticated_user_id, course_id, answers, participant_nam
     return {"certificateId":certificate_id,"score":score,"registered":True}
 
 def expand_exam_questions(questions, course_title, lessons=None):
-    """Generate distinct applied competency checks from role training modules.
-
-    Core courses use twenty manually authored questions from trusted_catalog.json.
-    Role courses assess fifteen additional decision skills, not paraphrases
-    of the five original concept questions.
-    """
-    if len(questions) == 20:
-        return questions
-    if len(questions) != 5:
-        raise ValueError("expected five or twenty questions")
-    scenarios = [
-        ("Sebelum mulai praktik {role}, bagaimana memastikan risiko kerja terkendali?",
-         "Periksa bahaya, APD, batas kewenangan dan SOP yang berlaku", "Mulai tanpa pemeriksaan", "Serahkan seluruh penilaian risiko ke pelanggan"),
-        ("Ketika alat kerja {role} memberikan hasil tidak wajar, apa langkah awal?",
-         "Hentikan penggunaan untuk hasil terkait dan periksa kondisi atau kalibrasi", "Anggap hasil pasti benar", "Ubah hasil agar sesuai target"),
-        ("Saat menerima akses sistem baru untuk tugas {role}, apa yang perlu dipastikan?",
-         "Hak akses sesuai tanggung jawab dan persetujuan yang sah", "Memakai akun rekan tanpa izin", "Membagikan sandi untuk mempercepat proses"),
-        ("Ketika urutan proses {role} belum jelas, bagaimana mencegah kesalahan?",
-         "Rujuk prosedur dan pastikan prasyarat sebelum melanjutkan", "Lewati pemeriksaan awal", "Kerjakan tahap akhir terlebih dahulu"),
-        ("Saat hasil tahap sebelumnya belum diverifikasi pada pekerjaan {role}, apa yang tepat?",
-         "Tahan serah terima dan verifikasi titik kontrol", "Teruskan agar terlihat cepat", "Hapus bukti pekerjaan"),
-        ("Jika terjadi perubahan mendadak pada pekerjaan {role}, apa yang harus dilakukan?",
-         "Catat perubahan, nilai dampak dan minta persetujuan sesuai kewenangan", "Mengubah seluruh rencana tanpa catatan", "Mengabaikan informasi perubahan"),
-        ("Dokumen kerja {role} tidak memiliki nomor referensi, apa tindakan tepat?",
-         "Lengkapi referensi yang dapat ditelusuri sebelum finalisasi", "Buat nomor palsu", "Buang seluruh dokumen"),
-        ("Ada dua sumber data berbeda dalam laporan {role}, bagaimana menyikapinya?",
-         "Cocokkan dengan bukti sumber dan dokumentasikan koreksi", "Pilih angka tertinggi tanpa alasan", "Hapus data yang berbeda"),
-        ("Saat menyimpan bukti pekerjaan {role}, apa yang perlu dijaga?",
-         "Keutuhan, tanggal, identitas dokumen dan keterlacakan", "Simpan tanpa nama dan tanggal", "Ubah bukti setelah disetujui"),
-        ("Jika dokumen {role} memuat data pribadi, bagaimana membagikannya?",
-         "Hanya kepada pihak berwenang melalui kanal yang disetujui", "Unggah ke ruang publik", "Kirim ke semua kontak"),
-        ("Ketika insiden terjadi dalam praktik {role}, apa prioritas pertama?",
-         "Amankan orang dan proses sebelum melanjutkan investigasi", "Teruskan pekerjaan tanpa penilaian", "Sembunyikan insiden"),
-        ("Jika penyebab masalah {role} belum diketahui, apa pendekatan tepat?",
-         "Kumpulkan fakta dan pisahkan dugaan dari temuan", "Tetapkan pihak bersalah tanpa bukti", "Ubah catatan agar masalah hilang"),
-        ("Masalah {role} berada di luar kewenangan Anda, apa tindakan benar?",
-         "Eskalasi kepada penanggung jawab dengan bukti dan dampaknya", "Ambil keputusan di luar kewenangan", "Tutup kasus tanpa pemberitahuan"),
-        ("Sebelum menetapkan target kinerja {role}, apa yang diperlukan?",
-         "Data awal, definisi indikator dan periode pengukuran", "Angka target acak", "Hanya opini tanpa data"),
-        ("Setelah perbaikan proses {role} diterapkan, bagaimana menilai keberhasilannya?",
-         "Bandingkan indikator sebelum dan sesudah dengan bukti", "Anggap berhasil tanpa pengukuran", "Hapus laporan lama"),
-    ]
-    lessons = lessons or []
-    def lesson_topic(index):
-        if index >= len(lessons):
-            return course_title
-        return lessons[index].split(".")[0].strip()[:150]
-    def lesson_detail(index):
-        if index >= len(lessons):
-            return course_title
-        lesson = lessons[index]
-        if index == 0 and "alat dan istilah: " in lesson:
-            return lesson.split("alat dan istilah: ", 1)[1].split(". Untuk", 1)[0]
-        if index == 1 and ": " in lesson:
-            return lesson.split(": ", 1)[1].split(". Tuliskan", 1)[0]
-        if index == 2 and "menggunakan: " in lesson:
-            return lesson.split("menggunakan: ", 1)[1].split(". Cantumkan", 1)[0]
-        if index == 3 and ": " in lesson:
-            return lesson.split(": ", 1)[1].split(". Jelaskan", 1)[0]
-        if index == 4 and "indikator " in lesson:
-            return lesson.split("indikator ", 1)[1].split(". Tentukan", 1)[0]
-        return lesson_topic(index)
-    result = list(questions)
-    for index, (prompt, correct, wrong_a, wrong_b) in enumerate(scenarios):
-        options = [correct, wrong_a, wrong_b]
-        shift = index % 3
-        options = options[shift:] + options[:shift]
-        result.append({
-            "prompt": prompt.format(role=course_title) + " Kasus: " + lesson_detail(index % max(1, len(lessons))),
-            "options": options,
-            "correct": (3 - shift) % 3,
-        })
-    return result
+    """Reject incomplete exams instead of padding with generic questions."""
+    if len(questions) != 20:
+        raise ValueError("course requires 20 authored questions: " + course_title)
+    return questions
 
 
 def seed_trusted_catalog(conn, catalog_path=None):
