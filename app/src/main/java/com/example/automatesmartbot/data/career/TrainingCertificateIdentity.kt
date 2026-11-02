@@ -15,6 +15,18 @@ object TrainingCertificateIdentity {
         }
         return baseUrl.trimEnd('/') + "/certificate?id=" + id
     }
+    /** Never use a local completion as proof of online registration. */
+    fun verifiedPublicUrl(
+        id: String,
+        baseUrl: String,
+        serverRegistered: Boolean,
+        serverRevoked: Boolean
+    ): String {
+        require(serverRegistered && !serverRevoked) {
+            "QR online hanya untuk sertifikat aktif yang telah diterbitkan server"
+        }
+        return publicUrl(id, baseUrl)
+    }
     fun payload(id: String, courseId: String, date: String, score: Int): String {
         require(id.matches(Regex("[a-fA-F0-9-]{36}"))) { "ID sertifikat tidak valid" }
         require(courseId.matches(Regex("[a-z0-9_]+"))) { "Kode pelatihan tidak valid" }
