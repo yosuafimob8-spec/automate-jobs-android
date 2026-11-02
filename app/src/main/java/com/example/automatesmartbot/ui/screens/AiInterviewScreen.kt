@@ -144,7 +144,7 @@ private suspend fun requestInterview(
         if (connection.responseCode !in 200..299) {
             val status = connection.responseCode
             val details = connection.errorStream?.bufferedReader()?.use { it.readText() }.orEmpty()
-            val message = runCatching { JSONObject(details).optString("error") }.getOrDefault("")
+            val message = runCatching { JSONObject(details).let { it.optString("detail").ifBlank { it.optString("error") } } }.getOrDefault("")
             throw IllegalStateException(if (message.isNotBlank()) "AI Interview (HTTP $status): $message" else "Layanan AI Interview belum siap (HTTP $status).")
         }
         val response = JSONObject(connection.inputStream.bufferedReader().use { it.readText() })
