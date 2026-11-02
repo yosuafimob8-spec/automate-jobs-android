@@ -1,0 +1,872 @@
+[
+  {
+    "courseId": "role_kasir_basic",
+    "title": "Kasir • Basic",
+    "lessons": [
+      "Sebagai Kasir di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Kasir.",
+      "Simulasikan alur kerja Kasir: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Kasir.",
+      "Buat contoh dokumen Kasir menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Kasir.",
+      "Studi kasus Kasir: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Kasir.",
+      "Evaluasi pekerjaan Kasir dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Kasir."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kasir?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kasir?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kasir?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Kasir"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kasir?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Kasir",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kasir_intermediate",
+    "title": "Kasir • Intermediate",
+    "lessons": [
+      "Sebagai Kasir di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Kasir.",
+      "Simulasikan alur kerja Kasir: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Kasir.",
+      "Buat contoh dokumen Kasir menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Kasir.",
+      "Studi kasus Kasir: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Kasir.",
+      "Evaluasi pekerjaan Kasir dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Kasir."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kasir?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kasir?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kasir?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Kasir"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kasir?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Kasir",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kasir_advanced",
+    "title": "Kasir • Advanced",
+    "lessons": [
+      "Sebagai Kasir di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Kasir.",
+      "Simulasikan alur kerja Kasir: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Kasir.",
+      "Buat contoh dokumen Kasir menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Kasir.",
+      "Studi kasus Kasir: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Kasir.",
+      "Evaluasi pekerjaan Kasir dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Kasir."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kasir?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kasir?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Kasir berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kasir?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Kasir"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kasir?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Kasir",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_finance_admin_basic",
+    "title": "Finance Admin • Basic",
+    "lessons": [
+      "Sebagai Finance Admin di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Finance Admin.",
+      "Simulasikan alur kerja Finance Admin: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Finance Admin.",
+      "Buat contoh dokumen Finance Admin menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Finance Admin.",
+      "Studi kasus Finance Admin: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Finance Admin.",
+      "Evaluasi pekerjaan Finance Admin dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Finance Admin."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Finance Admin?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Finance Admin?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Finance Admin?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Finance Admin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Finance Admin?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Finance Admin",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_finance_admin_intermediate",
+    "title": "Finance Admin • Intermediate",
+    "lessons": [
+      "Sebagai Finance Admin di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Finance Admin.",
+      "Simulasikan alur kerja Finance Admin: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Finance Admin.",
+      "Buat contoh dokumen Finance Admin menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Finance Admin.",
+      "Studi kasus Finance Admin: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Finance Admin.",
+      "Evaluasi pekerjaan Finance Admin dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Finance Admin."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Finance Admin?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Finance Admin?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Finance Admin?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Finance Admin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Finance Admin?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Finance Admin",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_finance_admin_advanced",
+    "title": "Finance Admin • Advanced",
+    "lessons": [
+      "Sebagai Finance Admin di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Finance Admin.",
+      "Simulasikan alur kerja Finance Admin: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Finance Admin.",
+      "Buat contoh dokumen Finance Admin menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Finance Admin.",
+      "Studi kasus Finance Admin: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Finance Admin.",
+      "Evaluasi pekerjaan Finance Admin dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Finance Admin."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Finance Admin?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Finance Admin?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Finance Admin?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Finance Admin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Finance Admin?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Finance Admin",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_accounting_staff_basic",
+    "title": "Accounting Staff • Basic",
+    "lessons": [
+      "Sebagai Accounting Staff di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Accounting Staff.",
+      "Simulasikan alur kerja Accounting Staff: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Accounting Staff.",
+      "Buat contoh dokumen Accounting Staff menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Accounting Staff.",
+      "Studi kasus Accounting Staff: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Accounting Staff.",
+      "Evaluasi pekerjaan Accounting Staff dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Accounting Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Accounting Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Accounting Staff?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Accounting Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Accounting Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Accounting Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Accounting Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_accounting_staff_intermediate",
+    "title": "Accounting Staff • Intermediate",
+    "lessons": [
+      "Sebagai Accounting Staff di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Accounting Staff.",
+      "Simulasikan alur kerja Accounting Staff: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Accounting Staff.",
+      "Buat contoh dokumen Accounting Staff menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Accounting Staff.",
+      "Studi kasus Accounting Staff: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Accounting Staff.",
+      "Evaluasi pekerjaan Accounting Staff dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Accounting Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Accounting Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Accounting Staff?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Accounting Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Accounting Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Accounting Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Accounting Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_accounting_staff_advanced",
+    "title": "Accounting Staff • Advanced",
+    "lessons": [
+      "Sebagai Accounting Staff di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Accounting Staff.",
+      "Simulasikan alur kerja Accounting Staff: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Accounting Staff.",
+      "Buat contoh dokumen Accounting Staff menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Accounting Staff.",
+      "Studi kasus Accounting Staff: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Accounting Staff.",
+      "Evaluasi pekerjaan Accounting Staff dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Accounting Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Accounting Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Accounting Staff?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Accounting Staff berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Accounting Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Accounting Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Accounting Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Accounting Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_account_payable_basic",
+    "title": "Account Payable • Basic",
+    "lessons": [
+      "Sebagai Account Payable di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Account Payable.",
+      "Simulasikan alur kerja Account Payable: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Account Payable.",
+      "Buat contoh dokumen Account Payable menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Account Payable.",
+      "Studi kasus Account Payable: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Account Payable.",
+      "Evaluasi pekerjaan Account Payable dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Account Payable."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Account Payable?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Account Payable?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Account Payable?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Account Payable"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Account Payable?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Account Payable",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_account_payable_intermediate",
+    "title": "Account Payable • Intermediate",
+    "lessons": [
+      "Sebagai Account Payable di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Account Payable.",
+      "Simulasikan alur kerja Account Payable: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Account Payable.",
+      "Buat contoh dokumen Account Payable menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Account Payable.",
+      "Studi kasus Account Payable: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Account Payable.",
+      "Evaluasi pekerjaan Account Payable dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Account Payable."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Account Payable?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Account Payable?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Account Payable?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Account Payable"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Account Payable?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Account Payable",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_account_payable_advanced",
+    "title": "Account Payable • Advanced",
+    "lessons": [
+      "Sebagai Account Payable di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Account Payable.",
+      "Simulasikan alur kerja Account Payable: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Account Payable.",
+      "Buat contoh dokumen Account Payable menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Account Payable.",
+      "Studi kasus Account Payable: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Account Payable.",
+      "Evaluasi pekerjaan Account Payable dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Account Payable."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Account Payable?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Account Payable?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Account Payable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Account Payable?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Account Payable"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Account Payable?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Account Payable",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_account_receivable_basic",
+    "title": "Account Receivable • Basic",
+    "lessons": [
+      "Sebagai Account Receivable di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Account Receivable.",
+      "Simulasikan alur kerja Account Receivable: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Account Receivable.",
+      "Buat contoh dokumen Account Receivable menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Account Receivable.",
+      "Studi kasus Account Receivable: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Account Receivable.",
+      "Evaluasi pekerjaan Account Receivable dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Account Receivable."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Account Receivable?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Account Receivable?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Account Receivable?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Account Receivable"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Account Receivable?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Account Receivable",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_account_receivable_intermediate",
+    "title": "Account Receivable • Intermediate",
+    "lessons": [
+      "Sebagai Account Receivable di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Account Receivable.",
+      "Simulasikan alur kerja Account Receivable: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Account Receivable.",
+      "Buat contoh dokumen Account Receivable menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Account Receivable.",
+      "Studi kasus Account Receivable: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Account Receivable.",
+      "Evaluasi pekerjaan Account Receivable dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Account Receivable."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Account Receivable?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Account Receivable?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Account Receivable?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Account Receivable"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Account Receivable?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Account Receivable",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_account_receivable_advanced",
+    "title": "Account Receivable • Advanced",
+    "lessons": [
+      "Sebagai Account Receivable di bidang Finance & Accounting, pelajari alat dan istilah: spreadsheet keuangan, bukti transaksi, jurnal. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal Bukti hasil: checklist risiko dan kewenangan Account Receivable.",
+      "Simulasikan alur kerja Account Receivable: verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan Bukti hasil: bagan alur kerja Account Receivable.",
+      "Buat contoh dokumen Account Receivable menggunakan: invoice, kuitansi, jurnal, laporan rekonsiliasi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku pada invoice, kuitansi, jurnal, laporan rekonsiliasi Bukti hasil: contoh dokumen dan bukti kerja Account Receivable.",
+      "Studi kasus Account Receivable: selisih kas atau invoice duplikat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau invoice duplikat saat menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Account Receivable.",
+      "Evaluasi pekerjaan Account Receivable dengan indikator akurasi rekonsiliasi, aging piutang, ketepatan laporan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku dengan ukuran akurasi rekonsiliasi, aging piutang, ketepatan laporan Bukti hasil: rencana pengukuran dan perbaikan Account Receivable."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Account Receivable?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "spreadsheet keuangan, bukti transaksi, jurnal — Identifikasi risiko saat menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku menggunakan spreadsheet keuangan, bukti transaksi, jurnal",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Account Receivable?",
+        "options": [
+          "verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan — Urutkan langkah menjalankan tanggung jawab jabatan Account Receivable berdasarkan SOP yang berlaku dalam proses verifikasi dokumen, pencatatan, rekonsiliasi, persetujuan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Account Receivable?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "invoice, kuitansi, jurnal, laporan rekonsiliasi — contoh dokumen dan bukti kerja Account Receivable"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau invoice duplikat, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Account Receivable?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi rekonsiliasi, aging piutang, ketepatan laporan — rencana pengukuran dan perbaikan Account Receivable",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
