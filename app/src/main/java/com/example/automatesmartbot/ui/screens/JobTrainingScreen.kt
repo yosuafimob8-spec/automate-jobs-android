@@ -50,7 +50,7 @@ private fun TrainingCard(content: @Composable ColumnScope.() -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(20.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining),
         elevation = CardDefaults.cardElevation(2.dp)
     ) { Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp), content = content) }
 }
@@ -265,15 +265,15 @@ fun JobTrainingScreen() {
                     Text(course.title, fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
                     if (selectedPosition.isNotBlank()) Text("Posisi pilihan: $selectedPosition")
                     TrainingCard {
-                        Text("Pelajari materi dan selesaikan seluruh modul", fontWeight = FontWeight.Bold)
-                        Text("${course.lessons.size} Modul  •  Evaluasi Akhir  •  Sertifikat")
+                        Text("Pelajari materi dan selesaikan seluruh modul", fontWeight = FontWeight.Bold, color = darkTraining)
+                        Text("${course.lessons.size} Modul  •  Evaluasi Akhir  •  Sertifikat", color = darkTraining)
                         LinearProgressIndicator(
                             progress = { completed.size.toFloat() / course.lessons.size.coerceAtLeast(1) },
                             modifier = Modifier.fillMaxWidth(),
                             color = orangeTraining
                         )
                     }
-                    Text("Daftar Modul", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+                    Text("Daftar Modul", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = darkTraining)
                     course.lessons.forEachIndexed { i, lesson ->
                         val done = i.toString() in completed
                         val unlocked = i == 0 || (i - 1).toString() in completed
@@ -281,14 +281,14 @@ fun JobTrainingScreen() {
                             onClick = { if (unlocked) { module = i; stage = "lesson" } },
                             enabled = unlocked,
                             modifier = Modifier.fillMaxWidth(),
-                            colors = CardDefaults.cardColors(containerColor = Color.White, disabledContainerColor = Color(0xFFF1F5F9), disabledContentColor = trainingDisabledText),
+                            colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining, disabledContainerColor = Color(0xFFF1F5F9), disabledContentColor = trainingDisabledText),
                             shape = RoundedCornerShape(14.dp)
                         ) {
                             Row(Modifier.padding(15.dp), verticalAlignment = Alignment.CenterVertically) {
                                 Text(if (done) "✓" else if (unlocked) "▶" else "🔒", color = if (done) tealTraining else orangeTraining)
                                 Spacer(Modifier.width(12.dp))
-                                Text(lesson.first, Modifier.weight(1f), fontWeight = FontWeight.SemiBold)
-                                Text(if (done) "Selesai" else if (unlocked) "Mulai" else "Terkunci", fontSize = 11.sp)
+                                Text(lesson.first, Modifier.weight(1f), fontWeight = FontWeight.SemiBold, color = if (unlocked) darkTraining else trainingDisabledText)
+                                Text(if (done) "Selesai" else if (unlocked) "Mulai" else "Terkunci", fontSize = 11.sp, color = if (unlocked) darkTraining else trainingDisabledText)
                             }
                         }
                     }
