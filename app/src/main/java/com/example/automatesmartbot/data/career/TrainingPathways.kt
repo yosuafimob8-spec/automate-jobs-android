@@ -19,6 +19,7 @@ object TrainingPathways {
             TrainingLevel.INTERMEDIATE -> "terapkan prosedur pada kasus operasional dan identifikasi penyimpangan"
             TrainingLevel.ADVANCED -> "analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur"
         }
+        val specialization = TrainingRoleSpecialization.forPosition(position)
         val lessons = common.mapIndexed { i, topic ->
             val content = when (i) {
                 0 -> "Sebagai $position di bidang $category, pelajari alat dan istilah: ${domain.tool}. Untuk tingkat ${level.label}, $depth. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja."
@@ -27,14 +28,14 @@ object TrainingPathways {
                 3 -> "Studi kasus $position: ${domain.incident}. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat ${level.label}, $depth."
                 else -> "Evaluasi pekerjaan $position dengan indikator ${domain.metric}. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti."
             }
-            topic to content
+            topic to (content + " Praktik khusus jabatan: " + specialization.tasks[i] + " Bukti hasil: " + specialization.deliverables[i] + ".")
         }
         val questions = listOf(
-            TrainingQuestion("Perangkat atau istilah yang relevan bagi $position?", listOf("Tidak perlu memahami alat", domain.tool, "Gunakan data tanpa izin"), 1),
-            TrainingQuestion("Alur kerja yang sesuai untuk $position?", listOf(domain.workflow, "Abaikan verifikasi", "Langsung tutup pekerjaan tanpa bukti"), 0),
-            TrainingQuestion("Dokumen kerja yang relevan untuk $position?", listOf("Catatan palsu", "Data tanpa izin", domain.record), 2),
+            TrainingQuestion("Perangkat atau istilah yang relevan bagi $position?", listOf("Tidak perlu memahami alat", domain.tool + " — " + specialization.tasks[0], "Gunakan data tanpa izin"), 1),
+            TrainingQuestion("Alur kerja yang sesuai untuk $position?", listOf(domain.workflow + " — " + specialization.tasks[1], "Abaikan verifikasi", "Langsung tutup pekerjaan tanpa bukti"), 0),
+            TrainingQuestion("Dokumen kerja yang relevan untuk $position?", listOf("Catatan palsu", "Data tanpa izin", domain.record + " — " + specialization.deliverables[2]), 2),
             TrainingQuestion("Jika terjadi ${domain.incident}, apa yang tepat?", listOf("Verifikasi, dokumentasikan, dan eskalasi sesuai SOP", "Sembunyikan kejadian", "Ubah data diam-diam"), 0),
-            TrainingQuestion("Indikator kinerja yang relevan untuk $position?", listOf("Rumor tanpa data", domain.metric, "Tidak perlu mengukur hasil"), 1)
+            TrainingQuestion("Indikator kinerja yang relevan untuk $position?", listOf("Rumor tanpa data", domain.metric + " — " + specialization.deliverables[4], "Tidak perlu mengukur hasil"), 1)
         )
         return TrainingCourse(
             "role_" + position.lowercase().replace(Regex("[^a-z0-9]+"), "_") + "_" + level.name.lowercase(),
