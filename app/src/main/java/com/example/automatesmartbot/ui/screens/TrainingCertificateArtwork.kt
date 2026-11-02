@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.Typeface
+import com.example.automatesmartbot.R
 import com.example.automatesmartbot.BuildConfig
 import com.example.automatesmartbot.data.career.TrainingCertificateIdentity
 import com.google.zxing.BarcodeFormat
