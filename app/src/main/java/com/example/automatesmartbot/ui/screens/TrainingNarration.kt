@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import java.util.Locale
@@ -24,19 +25,20 @@ fun TrainingNarration(title: String, body: String) {
     LaunchedEffect(ready) {
         if (ready) tts.language = Locale("id", "ID")
     }
-    Card(modifier = Modifier.fillMaxWidth()) {
+    val ink = Color(0xFF152D43)
+    Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = ink)) {
         Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            Text("🔊 Materi Audio Interaktif", style = MaterialTheme.typography.titleMedium)
-            Text("Dengarkan narasi materi secara otomatis. Ini audio pembelajaran, bukan video.")
+            Text("🔊 Materi Audio Interaktif", style = MaterialTheme.typography.titleMedium, color = ink)
+            Text("Dengarkan narasi materi secara otomatis. Ini audio pembelajaran, bukan video.", color = ink)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(enabled = ready, onClick = {
                     tts.speak("$title. $body", TextToSpeech.QUEUE_FLUSH, null, "training-lesson")
                     speaking = true
-                }) { Text(if (speaking) "Putar Ulang" else "Dengarkan") }
+                }, colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1769D2), contentColor = Color.White, disabledContainerColor = Color(0xFFE2E8F0), disabledContentColor = ink)) { Text(if (speaking) "Putar Ulang" else "Dengarkan", color = if (ready) Color.White else ink) }
                 OutlinedButton(enabled = ready && speaking, onClick = {
                     tts.stop()
                     speaking = false
-                }) { Text("Berhenti") }
+                }, colors = ButtonDefaults.outlinedButtonColors(contentColor = ink, disabledContentColor = ink, disabledContainerColor = Color(0xFFF1F5F9))) { Text("Berhenti", color = ink) }
             }
         }
     }
