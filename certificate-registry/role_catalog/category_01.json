@@ -1,0 +1,1220 @@
+[
+  {
+    "courseId": "role_admin_warehouse_basic",
+    "title": "Admin Warehouse • Basic",
+    "lessons": [
+      "Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Admin Warehouse.",
+      "Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Admin Warehouse.",
+      "Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Admin Warehouse.",
+      "Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Admin Warehouse.",
+      "Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Admin Warehouse."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Admin Warehouse?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Admin Warehouse?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Admin Warehouse?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Admin Warehouse"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Admin Warehouse?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Admin Warehouse",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_admin_warehouse_intermediate",
+    "title": "Admin Warehouse • Intermediate",
+    "lessons": [
+      "Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Admin Warehouse.",
+      "Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Admin Warehouse.",
+      "Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Admin Warehouse.",
+      "Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Admin Warehouse.",
+      "Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Admin Warehouse."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Admin Warehouse?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Admin Warehouse?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Admin Warehouse?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Admin Warehouse"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Admin Warehouse?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Admin Warehouse",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_admin_warehouse_advanced",
+    "title": "Admin Warehouse • Advanced",
+    "lessons": [
+      "Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Admin Warehouse.",
+      "Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Admin Warehouse.",
+      "Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Admin Warehouse.",
+      "Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi Admin Warehouse.",
+      "Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Admin Warehouse."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Admin Warehouse?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Admin Warehouse?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Admin Warehouse?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Admin Warehouse"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Admin Warehouse?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Admin Warehouse",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_staff_warehouse_basic",
+    "title": "Staff Warehouse • Basic",
+    "lessons": [
+      "Sebagai Staff Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Staff Warehouse.",
+      "Simulasikan alur kerja Staff Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Staff Warehouse.",
+      "Buat contoh dokumen Staff Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Staff Warehouse.",
+      "Studi kasus Staff Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Staff Warehouse.",
+      "Evaluasi pekerjaan Staff Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Staff Warehouse."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Staff Warehouse?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Staff Warehouse?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Staff Warehouse?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Staff Warehouse"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Staff Warehouse?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Staff Warehouse",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_staff_warehouse_intermediate",
+    "title": "Staff Warehouse • Intermediate",
+    "lessons": [
+      "Sebagai Staff Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Staff Warehouse.",
+      "Simulasikan alur kerja Staff Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Staff Warehouse.",
+      "Buat contoh dokumen Staff Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Staff Warehouse.",
+      "Studi kasus Staff Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Staff Warehouse.",
+      "Evaluasi pekerjaan Staff Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Staff Warehouse."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Staff Warehouse?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Staff Warehouse?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Staff Warehouse?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Staff Warehouse"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Staff Warehouse?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Staff Warehouse",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_staff_warehouse_advanced",
+    "title": "Staff Warehouse • Advanced",
+    "lessons": [
+      "Sebagai Staff Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Staff Warehouse.",
+      "Simulasikan alur kerja Staff Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Staff Warehouse.",
+      "Buat contoh dokumen Staff Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Staff Warehouse.",
+      "Studi kasus Staff Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Staff Warehouse.",
+      "Evaluasi pekerjaan Staff Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Staff Warehouse."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Staff Warehouse?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Staff Warehouse?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Staff Warehouse?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Staff Warehouse"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Staff Warehouse?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Staff Warehouse",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_picker_basic",
+    "title": "Picker • Basic",
+    "lessons": [
+      "Sebagai Picker di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Picker.",
+      "Simulasikan alur kerja Picker: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Picker.",
+      "Buat contoh dokumen Picker menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Picker.",
+      "Studi kasus Picker: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Picker.",
+      "Evaluasi pekerjaan Picker dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Picker."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Picker?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Picker?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Picker?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Picker"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Picker?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Picker",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_picker_intermediate",
+    "title": "Picker • Intermediate",
+    "lessons": [
+      "Sebagai Picker di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Picker.",
+      "Simulasikan alur kerja Picker: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Picker.",
+      "Buat contoh dokumen Picker menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Picker.",
+      "Studi kasus Picker: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Picker.",
+      "Evaluasi pekerjaan Picker dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Picker."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Picker?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Picker?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Picker?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Picker"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Picker?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Picker",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_picker_advanced",
+    "title": "Picker • Advanced",
+    "lessons": [
+      "Sebagai Picker di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Picker.",
+      "Simulasikan alur kerja Picker: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Picker.",
+      "Buat contoh dokumen Picker menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Picker.",
+      "Studi kasus Picker: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Picker.",
+      "Evaluasi pekerjaan Picker dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Picker."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Picker?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Picker?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Picker?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Picker"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Picker?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Picker",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_packer_basic",
+    "title": "Packer • Basic",
+    "lessons": [
+      "Sebagai Packer di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Packer.",
+      "Simulasikan alur kerja Packer: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Packer.",
+      "Buat contoh dokumen Packer menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Packer.",
+      "Studi kasus Packer: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Packer.",
+      "Evaluasi pekerjaan Packer dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Packer."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Packer?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Packer?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Packer?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Packer"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Packer?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Packer",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_packer_intermediate",
+    "title": "Packer • Intermediate",
+    "lessons": [
+      "Sebagai Packer di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Packer.",
+      "Simulasikan alur kerja Packer: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Packer.",
+      "Buat contoh dokumen Packer menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Packer.",
+      "Studi kasus Packer: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Packer.",
+      "Evaluasi pekerjaan Packer dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Packer."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Packer?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Packer?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Packer?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Packer"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Packer?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Packer",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_packer_advanced",
+    "title": "Packer • Advanced",
+    "lessons": [
+      "Sebagai Packer di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Packer.",
+      "Simulasikan alur kerja Packer: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Packer.",
+      "Buat contoh dokumen Packer menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Packer.",
+      "Studi kasus Packer: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Packer.",
+      "Evaluasi pekerjaan Packer dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Packer."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Packer?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Packer?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah menjalankan tanggung jawab jabatan Packer berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Packer?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Packer"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Packer?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Packer",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_inventory_control_basic",
+    "title": "Inventory Control • Basic",
+    "lessons": [
+      "Sebagai Inventory Control di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Inventory Control.",
+      "Simulasikan alur kerja Inventory Control: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Inventory Control.",
+      "Buat contoh dokumen Inventory Control menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Inventory Control.",
+      "Studi kasus Inventory Control: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Inventory Control.",
+      "Evaluasi pekerjaan Inventory Control dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Inventory Control."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Inventory Control?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Inventory Control?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Inventory Control?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Inventory Control"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Inventory Control?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Inventory Control",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_inventory_control_intermediate",
+    "title": "Inventory Control • Intermediate",
+    "lessons": [
+      "Sebagai Inventory Control di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Inventory Control.",
+      "Simulasikan alur kerja Inventory Control: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Inventory Control.",
+      "Buat contoh dokumen Inventory Control menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Inventory Control.",
+      "Studi kasus Inventory Control: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Inventory Control.",
+      "Evaluasi pekerjaan Inventory Control dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Inventory Control."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Inventory Control?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Inventory Control?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Inventory Control?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Inventory Control"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Inventory Control?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Inventory Control",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_inventory_control_advanced",
+    "title": "Inventory Control • Advanced",
+    "lessons": [
+      "Sebagai Inventory Control di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Inventory Control.",
+      "Simulasikan alur kerja Inventory Control: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Inventory Control.",
+      "Buat contoh dokumen Inventory Control menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Inventory Control.",
+      "Studi kasus Inventory Control: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Inventory Control.",
+      "Evaluasi pekerjaan Inventory Control dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Inventory Control."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Inventory Control?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Inventory Control?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Inventory Control?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Inventory Control"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Inventory Control?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Inventory Control",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_warehouse_supervisor_basic",
+    "title": "Warehouse Supervisor • Basic",
+    "lessons": [
+      "Sebagai Warehouse Supervisor di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Warehouse Supervisor.",
+      "Simulasikan alur kerja Warehouse Supervisor: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Warehouse Supervisor.",
+      "Buat contoh dokumen Warehouse Supervisor menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Warehouse Supervisor.",
+      "Studi kasus Warehouse Supervisor: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Warehouse Supervisor.",
+      "Evaluasi pekerjaan Warehouse Supervisor dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Warehouse Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Warehouse Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Warehouse Supervisor?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Warehouse Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Warehouse Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Warehouse Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Warehouse Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_warehouse_supervisor_intermediate",
+    "title": "Warehouse Supervisor • Intermediate",
+    "lessons": [
+      "Sebagai Warehouse Supervisor di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Warehouse Supervisor.",
+      "Simulasikan alur kerja Warehouse Supervisor: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Warehouse Supervisor.",
+      "Buat contoh dokumen Warehouse Supervisor menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Warehouse Supervisor.",
+      "Studi kasus Warehouse Supervisor: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Warehouse Supervisor.",
+      "Evaluasi pekerjaan Warehouse Supervisor dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Warehouse Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Warehouse Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Warehouse Supervisor?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Warehouse Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Warehouse Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Warehouse Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Warehouse Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_warehouse_supervisor_advanced",
+    "title": "Warehouse Supervisor • Advanced",
+    "lessons": [
+      "Sebagai Warehouse Supervisor di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Warehouse Supervisor.",
+      "Simulasikan alur kerja Warehouse Supervisor: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Warehouse Supervisor.",
+      "Buat contoh dokumen Warehouse Supervisor menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Warehouse Supervisor.",
+      "Studi kasus Warehouse Supervisor: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Warehouse Supervisor.",
+      "Evaluasi pekerjaan Warehouse Supervisor dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Warehouse Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Warehouse Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Warehouse Supervisor?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Warehouse Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Warehouse Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Warehouse Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Warehouse Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kepala_gudang_basic",
+    "title": "Kepala Gudang • Basic",
+    "lessons": [
+      "Sebagai Kepala Gudang di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Kepala Gudang.",
+      "Simulasikan alur kerja Kepala Gudang: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Kepala Gudang.",
+      "Buat contoh dokumen Kepala Gudang menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Kepala Gudang.",
+      "Studi kasus Kepala Gudang: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Kepala Gudang.",
+      "Evaluasi pekerjaan Kepala Gudang dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Kepala Gudang."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kepala Gudang?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kepala Gudang?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kepala Gudang?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Kepala Gudang"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kepala Gudang?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Kepala Gudang",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kepala_gudang_intermediate",
+    "title": "Kepala Gudang • Intermediate",
+    "lessons": [
+      "Sebagai Kepala Gudang di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Kepala Gudang.",
+      "Simulasikan alur kerja Kepala Gudang: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Kepala Gudang.",
+      "Buat contoh dokumen Kepala Gudang menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Kepala Gudang.",
+      "Studi kasus Kepala Gudang: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Kepala Gudang.",
+      "Evaluasi pekerjaan Kepala Gudang dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Kepala Gudang."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kepala Gudang?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kepala Gudang?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kepala Gudang?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Kepala Gudang"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kepala Gudang?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Kepala Gudang",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kepala_gudang_advanced",
+    "title": "Kepala Gudang • Advanced",
+    "lessons": [
+      "Sebagai Kepala Gudang di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi Bukti hasil: checklist risiko dan kewenangan Kepala Gudang.",
+      "Simulasikan alur kerja Kepala Gudang: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch Bukti hasil: bagan alur kerja Kepala Gudang.",
+      "Buat contoh dokumen Kepala Gudang menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada surat jalan, kartu stok, berita acara selisih Bukti hasil: contoh dokumen dan bukti kerja Kepala Gudang.",
+      "Studi kasus Kepala Gudang: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus barang rusak atau stok fisik berbeda dengan WMS saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Kepala Gudang.",
+      "Evaluasi pekerjaan Kepala Gudang dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran akurasi stok, ketepatan picking, lead time Bukti hasil: rencana pengukuran dan perbaikan Kepala Gudang."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kepala Gudang?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan WMS, barcode scanner, SKU, rak lokasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kepala Gudang?",
+        "options": [
+          "receiving, putaway, picking, packing, dispatch — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses receiving, putaway, picking, packing, dispatch",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kepala Gudang?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Kepala Gudang"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kepala Gudang?",
+        "options": [
+          "Rumor tanpa data",
+          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Kepala Gudang",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
