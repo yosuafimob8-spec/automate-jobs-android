@@ -2,6 +2,11 @@ package com.example.automatesmartbot.data.career
 
 /** Offline QR identification; it does not assert authenticity against a remote registry. */
 object TrainingCertificateIdentity {
+    fun verifyLocal(payload: String, certificates: List<String>): Boolean {
+        val parts = payload.split("|")
+        if (parts.size != 6 || parts[0] != "KarirMate" || parts[1] != "INTERNAL") return false
+        return certificates.contains(payload)
+    }
     fun payload(id: String, courseId: String, date: String, score: Int): String {
         require(id.matches(Regex("[a-fA-F0-9-]{36}"))) { "ID sertifikat tidak valid" }
         require(courseId.matches(Regex("[a-z0-9_]+"))) { "Kode pelatihan tidak valid" }
