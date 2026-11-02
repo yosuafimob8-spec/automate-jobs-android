@@ -130,6 +130,7 @@ fun JobTrainingScreen() {
                             }
                         }
                     }
+                    TrainingHeroIllustration(Modifier.fillMaxWidth())
                     Text("Pilih Kategori Pelatihan", fontSize = 19.sp, fontWeight = FontWeight.Bold)
                     TrainingCourses.all.chunked(2).forEach { row ->
                         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -186,6 +187,7 @@ fun JobTrainingScreen() {
                 "lesson" -> {
                     Text("Modul ${module + 1}", color = orangeTraining, fontWeight = FontWeight.Bold)
                     Text(course.lessons[module].first, fontSize = 24.sp, fontWeight = FontWeight.Bold)
+                    TrainingLessonVisual(course.lessons[module].first)
                     TrainingCard {
                         Text("Tujuan Pembelajaran", fontWeight = FontWeight.Bold)
                         Text("✓ Memahami materi dan penerapannya di dunia kerja.", color = tealTraining)
