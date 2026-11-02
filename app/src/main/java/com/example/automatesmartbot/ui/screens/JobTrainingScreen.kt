@@ -300,6 +300,8 @@ fun JobTrainingScreen() {
                                 Text("Telah menyelesaikan pelatihan")
                                 Text(item.optString("course"), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
                                 Text("Dengan hasil akhir ${item.optInt("score")}/100")
+                                Text("Training Manager: Tanti kurnia", fontWeight = FontWeight.SemiBold)
+                                Text("Program Director: Ilham Ramdhan", fontWeight = FontWeight.SemiBold)
                                 Text("Tanggal: ${item.optString("date")}", fontSize = 12.sp)
                                 Text("ID: ${item.optString("id")}", fontSize = 10.sp)
                                 Text("Sertifikat Pelatihan Internal KarirMate. Bukan sertifikasi kompetensi resmi (BNSP).", fontSize = 10.sp, textAlign = TextAlign.Center)
