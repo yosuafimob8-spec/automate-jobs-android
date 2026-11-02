@@ -204,184 +204,184 @@
     ],
     "questions": [
       {
-        "prompt": "Perangkat atau istilah yang relevan bagi Admin Warehouse?",
+        "prompt": "WMS menunjukkan 100 unit SKU A, tetapi hasil cycle count 96 unit. Langkah investigasi pertama?",
         "options": [
-          "Tidak perlu memahami alat",
-          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan WMS, barcode scanner, SKU, rak lokasi",
-          "Gunakan data tanpa izin"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Alur kerja yang sesuai untuk Admin Warehouse?",
-        "options": [
-          "receiving, putaway, picking, packing, dispatch — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses receiving, putaway, picking, packing, dispatch",
-          "Abaikan verifikasi",
-          "Langsung tutup pekerjaan tanpa bukti"
+          "Periksa histori transaksi, lokasi bin, dan dokumen pergerakan SKU A",
+          "Langsung tambahkan 4 unit ke fisik",
+          "Hapus transaksi hari sebelumnya"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dokumen kerja yang relevan untuk Admin Warehouse?",
+        "prompt": "Ada dua surat jalan dengan nomor sama untuk penerimaan berbeda. Apa yang dilakukan?",
         "options": [
-          "Catatan palsu",
-          "Data tanpa izin",
-          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Admin Warehouse"
+          "Posting keduanya tanpa pemeriksaan",
+          "Tahan posting duplikat dan verifikasi referensi PO serta penerimaan aktual",
+          "Gabungkan jumlah tanpa jejak dokumen"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "PO memesan 120 unit, pemasok mengirim 10 karton berisi 10 unit. Berapa kekurangannya?",
+        "options": [
+          "10 unit",
+          "0 unit",
+          "20 unit"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "prompt": "Barang dikembalikan pelanggan tanpa nomor order yang jelas. Apa tindakan tepat?",
         "options": [
-          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
-          "Sembunyikan kejadian",
-          "Ubah data diam-diam"
+          "Tempatkan di area retur dan telusuri referensi sebelum menambah stok tersedia",
+          "Langsung jual kembali",
+          "Masukkan ke lokasi picking tanpa pemeriksaan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Indikator kinerja yang relevan untuk Admin Warehouse?",
+        "prompt": "SKU memiliki masa kedaluwarsa berbeda. Metode pengeluaran mana yang paling sesuai?",
         "options": [
-          "Rumor tanpa data",
-          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Admin Warehouse",
-          "Tidak perlu mengukur hasil"
+          "LIFO tanpa melihat kedaluwarsa",
+          "FEFO berdasarkan tanggal kedaluwarsa terdekat",
+          "Pilih kemasan paling baru"
         ],
         "correct": 1
       },
       {
-        "prompt": "Dalam pemeriksaan awal, informasi apa yang wajib diverifikasi dari materi berikut? (Admin Warehouse • Intermediate; tahap 1)",
+        "prompt": "Bagaimana menangani selisih antara hasil scan dan jumlah fisik saat picking?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, ha",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 0
-      },
-      {
-        "prompt": "Saat menyusun urutan kerja, tindakan apa yang tepat menurut prosedur berikut? (Admin Warehouse • Intermediate; tahap 2)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Intermediate: Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi ",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Pada pengisian dokumen, bukti apa yang harus disiapkan sesuai materi berikut? (Admin Warehouse • Intermediate; tahap 3)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak"
+          "Ubah jumlah order agar cocok",
+          "Tutup picking meski berbeda",
+          "Hitung ulang, periksa transaksi dan eskalasi selisih sebelum konfirmasi"
         ],
         "correct": 2
       },
       {
-        "prompt": "Ketika terjadi penyimpangan, tindakan apa yang paling sesuai dengan studi kasus berikut? (Admin Warehouse • Intermediate; tahap 4)",
+        "prompt": "Satu penerimaan tercatat dua kali di WMS. Apa risiko utamanya?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus oper",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi"
+          "Saldo stok sistem lebih tinggi dari persediaan sebenarnya",
+          "Saldo stok pasti turun",
+          "Tidak memengaruhi stok"
         ],
         "correct": 0
       },
       {
-        "prompt": "Saat menilai hasil pekerjaan, indikator apa yang harus dicatat dari materi berikut? (Admin Warehouse • Intermediate; tahap 5)",
+        "prompt": "Barang dari pemasok berbeda tercampur dalam satu lokasi. Data apa yang penting untuk traceability?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Intermediate: Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi"
+          "Nama petugas kebersihan",
+          "SKU, lot/batch, asal pemasok, dan lokasi penyimpanan",
+          "Warna palet"
         ],
         "correct": 1
       },
       {
-        "prompt": "Jika petugas baru menjalankan tahap ini, bagaimana memastikan langkahnya benar? (Admin Warehouse • Intermediate; tahap 1)",
+        "prompt": "Bagaimana memastikan penyesuaian stok memiliki jejak audit?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, ha"
+          "Edit saldo tanpa alasan",
+          "Hapus riwayat perhitungan",
+          "Lampirkan hasil hitung, alasan selisih, dan persetujuan sesuai kewenangan"
         ],
         "correct": 2
       },
       {
-        "prompt": "Saat serah terima pekerjaan ini, apa yang harus dapat ditelusuri? (Admin Warehouse • Intermediate; tahap 2)",
+        "prompt": "WMS menunjukkan status allocated untuk 30 unit. Apa artinya secara operasional?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi ",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi"
+          "Unit telah dialokasikan untuk kebutuhan/order tertentu dan tidak bebas dijanjikan ulang",
+          "Barang sudah pasti diterima pelanggan",
+          "Barang dinyatakan rusak"
         ],
         "correct": 0
       },
       {
-        "prompt": "Jika ada data tidak cocok pada proses ini, tindakan apa yang paling tepat? (Admin Warehouse • Intermediate; tahap 3)",
+        "prompt": "Picking selesai tetapi manifest ekspedisi tidak mencantumkan satu order. Apa yang diperiksa?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Intermediate: Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi"
+          "Kirim semua tanpa manifest",
+          "Cocokkan order, label paket, dan daftar serah terima sebelum dispatch",
+          "Batalkan seluruh pengiriman otomatis"
         ],
         "correct": 1
       },
       {
-        "prompt": "Sebelum menyetujui hasil pada proses ini, apa yang perlu dipastikan? (Admin Warehouse • Intermediate; tahap 4)",
+        "prompt": "Bagaimana memeriksa ketepatan laporan inbound harian?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus oper"
+          "Gunakan total dari satu dokumen saja",
+          "Samakan semua angka dengan target",
+          "Rekonsiliasi PO, penerimaan fisik, transaksi WMS, dan dokumen selisih"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi keterlambatan pada tahap ini, bagaimana melaporkannya? (Admin Warehouse • Intermediate; tahap 5)",
+        "prompt": "Pada transfer antar-gudang, barang sudah keluar tetapi belum diterima tujuan. Status apa yang perlu dipantau?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi"
+          "In transit sampai ada bukti penerimaan gudang tujuan",
+          "Available di kedua gudang",
+          "Lost tanpa investigasi"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam audit internal atas proses ini, catatan apa yang paling relevan? (Admin Warehouse • Intermediate; tahap 1)",
+        "prompt": "Ada 8 lokasi bin untuk satu SKU. Bagaimana menyusun cycle count yang bisa ditelusuri?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Intermediate: Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, ha",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi"
+          "Hitung satu bin lalu kalikan delapan",
+          "Hitung per bin, catat identitas lokasi dan hasil sebelum konsolidasi",
+          "Ambil saldo sistem sebagai hasil fisik"
         ],
         "correct": 1
       },
       {
-        "prompt": "Ketika sistem atau alat terkait tidak tersedia, apa langkah aman? (Admin Warehouse • Intermediate; tahap 2)",
+        "prompt": "Barang rusak saat unloading dan pengirim meminta tanda terima penuh. Apa tindakan tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi "
+          "Tandatangani penerimaan sempurna tanpa catatan",
+          "Buang barang tanpa berita acara",
+          "Catat kerusakan dan kuantitas aktual pada bukti penerimaan sesuai prosedur"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika rekan kerja meminta melewati pemeriksaan ini, apa respons yang tepat? (Admin Warehouse • Intermediate; tahap 3)",
+        "prompt": "Kapan stock adjustment seharusnya dilakukan?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi"
+          "Setelah selisih diverifikasi dan disetujui sesuai matriks otorisasi",
+          "Setiap kali saldo berbeda tanpa pemeriksaan",
+          "Saat target akurasi belum tercapai"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam simulasi kesalahan pada tahap ini, bagaimana mencegah pengulangan? (Admin Warehouse • Intermediate; tahap 4)",
+        "prompt": "Bagaimana membedakan order short shipped dan order belum dipicking?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Intermediate: Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus oper",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi"
+          "Keduanya selalu sama",
+          "Periksa kuantitas terkirim terhadap order serta status proses picking",
+          "Lihat nama kurir saja"
         ],
         "correct": 1
       },
       {
-        "prompt": "Setelah pekerjaan ini selesai, apa dasar evaluasi yang dapat dipertanggungjawabkan? (Admin Warehouse • Intermediate; tahap 5)",
+        "prompt": "Satu SKU berpindah lokasi tanpa scan transfer. Bagaimana menelusuri masalah?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Intermediate",
-          "Ubah hasil atau dokumen Admin Warehouse • Intermediate agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi"
+          "Hapus lokasi lama",
+          "Tambahkan stok pada kedua lokasi",
+          "Bandingkan histori lokasi, bukti perpindahan, dan hasil cek fisik"
         ],
         "correct": 2
+      },
+      {
+        "prompt": "Untuk laporan aging inventory, data apa yang perlu digabungkan?",
+        "options": [
+          "Tanggal penerimaan/lot, saldo tersedia, dan umur simpan atau pergerakan",
+          "Jam istirahat operator",
+          "Jumlah kendaraan parkir"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Apa pemeriksaan akhir sebelum mengirim laporan stok ke manajemen?",
+        "options": [
+          "Hapus semua catatan selisih",
+          "Validasi cut-off transaksi, saldo, pengecualian, dan bukti rekonsiliasi",
+          "Gunakan angka kemarin tanpa pengecekan"
+        ],
+        "correct": 1
       }
     ]
   },
