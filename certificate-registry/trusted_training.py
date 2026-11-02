@@ -179,6 +179,11 @@ def seed_trusted_catalog(conn, catalog_path=None):
             raise ValueError("invalid course material")
         if any(not isinstance(q.get("prompt"), str) or len(q.get("options", [])) < 2 for q in questions):
             raise ValueError("invalid question content")
+        if len(questions) != 20 or len({q["prompt"] for q in questions}) != 20:
+            raise ValueError("exam must contain twenty distinct questions: " + course_id)
+        if any(type(q.get("correct")) is not int or q["correct"] not in range(len(q["options"]))
+               or len(q["options"]) != len(set(q["options"])) for q in questions):
+            raise ValueError("invalid exam answer choices: " + course_id)
         existing = conn.execute("SELECT title, lessons, questions FROM course_bank WHERE course_id=?", (course_id,)).fetchone()
         values = (title, json.dumps(lessons, ensure_ascii=False), json.dumps(questions, ensure_ascii=False))
         if existing:
