@@ -106,7 +106,7 @@ def seed_trusted_catalog(conn, catalog_path=None):
         existing = conn.execute("SELECT title, lessons, questions FROM course_bank WHERE course_id=?", (course_id,)).fetchone()
         values = (title, json.dumps(lessons, ensure_ascii=False), json.dumps(questions, ensure_ascii=False))
         if existing:
-            if existing != values:
+            if (existing[0], json.loads(existing[1]), json.loads(existing[2])) != (title, lessons, questions):
                 # Never silently change grading for an existing course.
                 raise ValueError("catalog version conflict: " + course_id)
         else:
