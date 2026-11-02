@@ -1,0 +1,872 @@
+[
+  {
+    "courseId": "role_store_crew_basic",
+    "title": "Store Crew • Basic",
+    "lessons": [
+      "Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Store Crew.",
+      "Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Store Crew.",
+      "Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Store Crew.",
+      "Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Store Crew.",
+      "Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Store Crew."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Store Crew?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Store Crew?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Store Crew?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Store Crew"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Store Crew?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Store Crew",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_store_crew_intermediate",
+    "title": "Store Crew • Intermediate",
+    "lessons": [
+      "Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Store Crew.",
+      "Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Store Crew.",
+      "Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Store Crew.",
+      "Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Store Crew.",
+      "Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Store Crew."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Store Crew?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Store Crew?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Store Crew?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Store Crew"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Store Crew?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Store Crew",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_store_crew_advanced",
+    "title": "Store Crew • Advanced",
+    "lessons": [
+      "Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Store Crew.",
+      "Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Store Crew.",
+      "Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Store Crew.",
+      "Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Store Crew.",
+      "Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Store Crew."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Store Crew?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Store Crew?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah menjalankan tanggung jawab jabatan Store Crew berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Store Crew?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Store Crew"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Store Crew?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Store Crew",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_pramuniaga_basic",
+    "title": "Pramuniaga • Basic",
+    "lessons": [
+      "Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Pramuniaga.",
+      "Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Pramuniaga.",
+      "Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Pramuniaga.",
+      "Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Pramuniaga.",
+      "Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Pramuniaga."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Pramuniaga?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Pramuniaga?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Pramuniaga?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Pramuniaga"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Pramuniaga?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Pramuniaga",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_pramuniaga_intermediate",
+    "title": "Pramuniaga • Intermediate",
+    "lessons": [
+      "Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Pramuniaga.",
+      "Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Pramuniaga.",
+      "Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Pramuniaga.",
+      "Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Pramuniaga.",
+      "Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Pramuniaga."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Pramuniaga?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Pramuniaga?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Pramuniaga?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Pramuniaga"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Pramuniaga?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Pramuniaga",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_pramuniaga_advanced",
+    "title": "Pramuniaga • Advanced",
+    "lessons": [
+      "Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Pramuniaga.",
+      "Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Pramuniaga.",
+      "Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Pramuniaga.",
+      "Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Pramuniaga.",
+      "Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Pramuniaga."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Pramuniaga?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Pramuniaga?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah menjalankan tanggung jawab jabatan Pramuniaga berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Pramuniaga?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Pramuniaga"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Pramuniaga?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Pramuniaga",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kasir_retail_basic",
+    "title": "Kasir Retail • Basic",
+    "lessons": [
+      "Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Kasir Retail.",
+      "Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Kasir Retail.",
+      "Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Kasir Retail.",
+      "Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Kasir Retail.",
+      "Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Kasir Retail."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kasir Retail?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kasir Retail?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kasir Retail?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Kasir Retail"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kasir Retail?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Kasir Retail",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kasir_retail_intermediate",
+    "title": "Kasir Retail • Intermediate",
+    "lessons": [
+      "Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Kasir Retail.",
+      "Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Kasir Retail.",
+      "Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Kasir Retail.",
+      "Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Kasir Retail.",
+      "Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Kasir Retail."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kasir Retail?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kasir Retail?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kasir Retail?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Kasir Retail"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kasir Retail?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Kasir Retail",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kasir_retail_advanced",
+    "title": "Kasir Retail • Advanced",
+    "lessons": [
+      "Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Kasir Retail.",
+      "Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Kasir Retail.",
+      "Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Kasir Retail.",
+      "Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Kasir Retail.",
+      "Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Kasir Retail."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kasir Retail?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kasir Retail?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah menjalankan tanggung jawab jabatan Kasir Retail berdasarkan SOP yang berlaku dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kasir Retail?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Kasir Retail"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kasir Retail?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Kasir Retail",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_store_supervisor_basic",
+    "title": "Store Supervisor • Basic",
+    "lessons": [
+      "Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Store Supervisor.",
+      "Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Store Supervisor.",
+      "Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Store Supervisor.",
+      "Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Store Supervisor.",
+      "Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Store Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Store Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Store Supervisor?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Store Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Store Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Store Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Store Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_store_supervisor_intermediate",
+    "title": "Store Supervisor • Intermediate",
+    "lessons": [
+      "Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Store Supervisor.",
+      "Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Store Supervisor.",
+      "Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Store Supervisor.",
+      "Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Store Supervisor.",
+      "Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Store Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Store Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Store Supervisor?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Store Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Store Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Store Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Store Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_store_supervisor_advanced",
+    "title": "Store Supervisor • Advanced",
+    "lessons": [
+      "Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Store Supervisor.",
+      "Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Store Supervisor.",
+      "Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Store Supervisor.",
+      "Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Store Supervisor.",
+      "Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Store Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Store Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Store Supervisor?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Store Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Store Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Store Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Store Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kepala_toko_basic",
+    "title": "Kepala Toko • Basic",
+    "lessons": [
+      "Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Kepala Toko.",
+      "Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Kepala Toko.",
+      "Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Kepala Toko.",
+      "Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Kepala Toko.",
+      "Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Kepala Toko."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kepala Toko?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kepala Toko?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kepala Toko?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Kepala Toko"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kepala Toko?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Kepala Toko",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kepala_toko_intermediate",
+    "title": "Kepala Toko • Intermediate",
+    "lessons": [
+      "Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Kepala Toko.",
+      "Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Kepala Toko.",
+      "Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Kepala Toko.",
+      "Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Kepala Toko.",
+      "Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Kepala Toko."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kepala Toko?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kepala Toko?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kepala Toko?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Kepala Toko"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kepala Toko?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Kepala Toko",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kepala_toko_advanced",
+    "title": "Kepala Toko • Advanced",
+    "lessons": [
+      "Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko Bukti hasil: checklist risiko dan kewenangan Kepala Toko.",
+      "Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas Bukti hasil: bagan alur kerja Kepala Toko.",
+      "Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada laporan penjualan, retur, kas harian Bukti hasil: contoh dokumen dan bukti kerja Kepala Toko.",
+      "Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus selisih kas atau barang hilang saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Kepala Toko.",
+      "Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran sales per shift, shrinkage, akurasi kas Bukti hasil: rencana pengukuran dan perbaikan Kepala Toko."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kepala Toko?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "POS, barcode, stok toko — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan POS, barcode, stok toko",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kepala Toko?",
+        "options": [
+          "buka toko, display, transaksi, stok, tutup kas — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses buka toko, display, transaksi, stok, tutup kas",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kepala Toko?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "laporan penjualan, retur, kas harian — contoh dokumen dan bukti kerja Kepala Toko"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi selisih kas atau barang hilang, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kepala Toko?",
+        "options": [
+          "Rumor tanpa data",
+          "sales per shift, shrinkage, akurasi kas — rencana pengukuran dan perbaikan Kepala Toko",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
