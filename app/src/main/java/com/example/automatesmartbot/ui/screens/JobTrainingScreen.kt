@@ -306,7 +306,7 @@ fun JobTrainingScreen() {
                             }
                         }
                         val pdfText = "SERTIFIKAT PENYELESAIAN PELATIHAN\\n\\nKarirMate\\n\\nDiberikan kepada: ${item.optString("name")}\\n\\nTelah menyelesaikan pelatihan: ${item.optString("course")}\\n\\nHasil akhir: ${item.optInt("score")}/100\\nTanggal: ${item.optString("date")}\\nID: ${item.optString("id")}\\n\\nSertifikat internal KarirMate, bukan sertifikasi profesi/BNSP."
-                        PdfExportButton(CvRenderer.letterPages(pdfText), "KarirMate-Sertifikat-Pelatihan.pdf", "⬇ Unduh Sertifikat (PDF)")
+                        TrainingCertificateExport(item)
                     }
                     OutlinedButton(onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth()) { Text("Lihat Riwayat Sertifikat") }
                 }
