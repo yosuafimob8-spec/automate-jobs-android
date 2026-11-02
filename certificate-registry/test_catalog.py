@@ -21,16 +21,16 @@ class CatalogTests(unittest.TestCase):
 
     def test_all_android_courses_are_server_owned(self):
         count = seed_trusted_catalog(self.conn)
-        self.assertEqual(count, 6)
+        self.assertEqual(count, 240)
         rows = self.conn.execute("SELECT course_id, lessons, questions FROM course_bank").fetchall()
-        self.assertEqual(len(rows), 6)
+        self.assertEqual(len(rows), 240)
         for course_id, lessons, questions in rows:
             self.assertGreaterEqual(len(json.loads(lessons)), 3)
             self.assertEqual(len(json.loads(questions)), 5)
             self.assertEqual(len(public_questions(self.conn, course_id)), 5)
             self.assertTrue(all("correct" not in q for q in public_questions(self.conn, course_id)))
-        self.assertEqual(seed_trusted_catalog(self.conn), 6)
-        self.assertEqual(self.conn.execute("SELECT COUNT(*) FROM course_bank").fetchone()[0], 6)
+        self.assertEqual(seed_trusted_catalog(self.conn), 240)
+        self.assertEqual(self.conn.execute("SELECT COUNT(*) FROM course_bank").fetchone()[0], 240)
 
     def test_catalog_changes_cannot_silently_replace_grading(self):
         seed_trusted_catalog(self.conn)
