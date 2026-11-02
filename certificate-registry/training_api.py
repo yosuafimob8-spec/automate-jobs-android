@@ -115,6 +115,10 @@ class TrainingApiMixin:
                     self.reply(422, {"error":"exam_not_passed", "message":"Nilai belum mencapai 80/100. Silakan ulangi ujian."})
                 elif reason == "modules incomplete":
                     self.reply(409, {"error":"modules_incomplete", "message":"Selesaikan semua modul sebelum mengikuti ujian."})
+                elif reason == "authenticated identity and name required":
+                    self.reply(400, {"error":"authenticated_name_required"})
+                elif reason in ("invalid answers", "invalid assessment"):
+                    self.reply(400, {"error":"invalid_answers"})
                 else:
                     self.reply(400, {"error":"invalid_or_incomplete_assessment"})
             except TypeError:
