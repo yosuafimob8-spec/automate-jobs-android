@@ -79,9 +79,12 @@ class RegistryTests(unittest.TestCase):
             with urlopen(base + "/certificate?id=" + self.record["id"], timeout=3) as page:
                 self.assertEqual(page.status, 200)
                 self.assertIn(b"KarirMate", page.read())
-            with server.connect() as conn:
-                conn.execute("UPDATE certificates SET revoked=1 WHERE id=?", (self.record["id"],))
+            self.assertEqual(request("/revoke", {"id": self.record["id"]})[0], 401)
+            self.assertEqual(request("/revoke", {"id": self.record["id"]}, "test-secret-only")[0], 200)
             self.assertFalse(request("/verify?id=" + self.record["id"])[1]["valid"])
+            with self.assertRaises(HTTPError) as exc:
+                urlopen(base + "/certificate?id=" + self.record["id"], timeout=3)
+            self.assertEqual(exc.exception.code, 404)
         finally:
             httpd.shutdown()
             httpd.server_close()
