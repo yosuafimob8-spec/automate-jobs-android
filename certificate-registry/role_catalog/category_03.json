@@ -54,6 +54,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ide",
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ide"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ide",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengabaikan prosedur Sales Executive • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Basic tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -112,6 +247,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasio",
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasio"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasio",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengabaikan prosedur Sales Executive • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Intermediate tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -170,6 +440,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan ",
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Executive di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan ",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Executive: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Executive menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Executive: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Executive • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Executive dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengabaikan prosedur Sales Executive • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Executive • Advanced tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -228,6 +633,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ident",
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ident"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingk",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdas",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ident",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingk",
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdas",
+          "Mengabaikan prosedur Sales Counter • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Basic tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -286,6 +826,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasiona",
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasiona"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingk",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdas",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasiona",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingk",
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdas",
+          "Mengabaikan prosedur Sales Counter • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Intermediate tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -344,6 +1019,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan ra",
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan ra"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingk",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdas",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Counter di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan ra",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Counter: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingk",
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Counter menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Counter: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Counter • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Counter dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdas",
+          "Mengabaikan prosedur Sales Counter • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Counter • Advanced tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -402,6 +1212,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ide",
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ide"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ide",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengabaikan prosedur Marketing Staff • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Basic tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -460,6 +1405,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasio",
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasio"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasio",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengabaikan prosedur Marketing Staff • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Intermediate tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -518,6 +1598,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan ",
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan ",
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Marketing Staff di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan ",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Marketing Staff: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Marketing Staff menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Marketing Staff: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Marketing Staff • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Marketing Staff dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mengabaikan prosedur Marketing Staff • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Marketing Staff • Advanced tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -576,6 +1791,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. I",
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan ",
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan be"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. I"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan be",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. I",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan ",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan be",
+          "Mengabaikan prosedur Digital Marketing • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Basic tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -634,6 +1984,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operas",
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan ",
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan be"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan be",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operas",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan ",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan be",
+          "Mengabaikan prosedur Digital Marketing • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Intermediate tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -692,6 +2177,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, da",
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan ",
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan be"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan be",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Digital Marketing di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, da",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Digital Marketing: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Digital Marketing menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Digital Marketing: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan ",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Digital Marketing • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Digital Marketing dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan be",
+          "Mengabaikan prosedur Digital Marketing • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Digital Marketing • Advanced tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -750,6 +2370,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifik",
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat B"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi",
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat B",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifik",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat B",
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Mengabaikan prosedur SPG / SPB • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Basic tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -808,6 +2563,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional da",
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat I"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi",
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat I",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional da",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat I",
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Mengabaikan prosedur SPG / SPB • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Intermediate tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -866,6 +2756,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancan",
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat A"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi",
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat A",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai SPG / SPB di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancan",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja SPG / SPB: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat A",
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen SPG / SPB menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus SPG / SPB: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada SPG / SPB • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan SPG / SPB dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarka",
+          "Mengabaikan prosedur SPG / SPB • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil SPG / SPB • Advanced tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -924,6 +2949,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Id",
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Id"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan",
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Id",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Basic, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mengabaikan prosedur Sales Supervisor • Basic untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Basic tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -982,6 +3142,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasi",
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan",
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasi",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Intermediate, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mengabaikan prosedur Sales Supervisor • Intermediate untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Intermediate tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -1040,6 +3335,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan",
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana memastikan tahapan kerja dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana menangani kendala dalam skenario 1?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 1?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana memastikan tahapan kerja dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 2?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan",
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana menangani kendala dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 2?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana mengecek kebutuhan pelanggan dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Sebagai Sales Supervisor di bidang Sales & Marketing, pelajari alat dan istilah: CRM, katalog, quotation, pipeline. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana memastikan tahapan kerja dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Simulasikan alur kerja Sales Supervisor: prospek, kualifikasi, presentasi, penawaran, tindak lanjut. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana menyiapkan bukti transaksi dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti",
+          "Laksanakan langkah terverifikasi sesuai materi: Buat contoh dokumen Sales Supervisor menggunakan: catatan kunjungan, quotation, status peluang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana menangani kendala dalam skenario 3?",
+        "options": [
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Laksanakan langkah terverifikasi sesuai materi: Studi kasus Sales Supervisor: keberatan pelanggan atau klaim produk tidak akurat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Sales Supervisor • Advanced, bagaimana mengukur hasil pekerjaan dalam skenario 3?",
+        "options": [
+          "Laksanakan langkah terverifikasi sesuai materi: Evaluasi pekerjaan Sales Supervisor dengan indikator conversion rate, nilai pipeline, repeat order. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mengabaikan prosedur Sales Supervisor • Advanced untuk mempercepat pekerjaan",
+          "Mengubah hasil Sales Supervisor • Advanced tanpa bukti"
+        ],
+        "correct": 0
       }
     ]
   }
