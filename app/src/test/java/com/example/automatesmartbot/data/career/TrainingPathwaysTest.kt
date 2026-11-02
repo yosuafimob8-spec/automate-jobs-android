@@ -8,6 +8,7 @@ class TrainingPathwaysTest {
         assertEquals(15, TrainingPositions.groups.size)
         assertEquals(TrainingPositions.groups.map { it.category }.toSet(), TrainingDomainContent.categories())
         assertEquals(78, TrainingPositions.count)
+        assertEquals(TrainingPositions.groups.flatMap { it.positions }.toSet(), TrainingRoleSpecialization.positions())
         val ids = mutableSetOf<String>()
         TrainingPositions.groups.forEach { group ->
             group.positions.forEach { position ->
@@ -19,6 +20,12 @@ class TrainingPathwaysTest {
                     assertEquals(5, course.lessons.size)
                     assertEquals(5, course.questions.size)
                     assertTrue(course.lessons.all { it.second.contains(position) })
+                    val specialization = TrainingRoleSpecialization.forPosition(position)
+                    assertEquals(5, specialization.tasks.size)
+                    assertEquals(5, specialization.deliverables.size)
+                    specialization.tasks.forEachIndexed { index, task ->
+                        assertTrue(course.lessons[index].second.contains(task))
+                    }
                     val domain = TrainingDomainContent.forCategory(group.category)
                     assertTrue(course.lessons[0].second.contains(domain.tool))
                     assertTrue(course.lessons[1].second.contains(domain.workflow))
