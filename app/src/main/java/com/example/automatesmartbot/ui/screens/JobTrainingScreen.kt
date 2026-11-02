@@ -38,6 +38,7 @@ private val orangeTraining = Color(0xFFFF690D)
 private val darkTraining = Color(0xFF152D43)
 private val tealTraining = Color(0xFF009F89)
 private val paleTraining = Color(0xFFF6F9FC)
+private val trainingDisabledText = Color(0xFF475569)
 
 @Composable
 private fun TrainingCard(content: @Composable ColumnScope.() -> Unit) {
@@ -244,12 +245,13 @@ fun JobTrainingScreen() {
                                 OutlinedButton(
                                     enabled = unlocked,
                                     modifier = Modifier.fillMaxWidth(),
+                                    colors = ButtonDefaults.outlinedButtonColors(contentColor = darkTraining, disabledContentColor = trainingDisabledText, disabledContainerColor = Color(0xFFF1F5F9)),
                                     onClick = {
                                         selectedPosition = position
                                         selectedLevel = level.name
                                         choose(training.id)
                                     }
-                                ) { Text(if (unlocked) "Mulai ${level.label}" else "🔒 ${level.label} — selesaikan tingkat sebelumnya") }
+                                ) { Text(if (unlocked) "Mulai ${level.label}" else "🔒 ${level.label} — selesaikan tingkat sebelumnya", color = if (unlocked) darkTraining else trainingDisabledText) }
                             }
                         }
                     }
@@ -274,7 +276,7 @@ fun JobTrainingScreen() {
                             onClick = { if (unlocked) { module = i; stage = "lesson" } },
                             enabled = unlocked,
                             modifier = Modifier.fillMaxWidth(),
-                            colors = CardDefaults.cardColors(containerColor = Color.White),
+                            colors = CardDefaults.cardColors(containerColor = Color.White, disabledContainerColor = Color(0xFFF1F5F9), disabledContentColor = trainingDisabledText),
                             shape = RoundedCornerShape(14.dp)
                         ) {
                             Row(Modifier.padding(15.dp), verticalAlignment = Alignment.CenterVertically) {
