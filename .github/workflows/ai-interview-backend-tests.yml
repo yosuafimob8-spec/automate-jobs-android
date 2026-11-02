@@ -1,0 +1,22 @@
+name: AI Interview Backend Tests Only
+on:
+  push:
+    branches:
+      - fix/ai-interview-two-way-20261102
+    paths:
+      - backend-contract/interview_api.py
+      - backend-contract/tests/test_interview_api.py
+      - .github/workflows/ai-interview-backend-tests.yml
+  workflow_dispatch:
+jobs:
+  interview-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install test dependencies
+        run: pip install fastapi 'httpx>=0.27,<1' 'pydantic>=2' pytest
+      - name: Run interview backend tests (no Android build)
+        run: python -m pytest -q backend-contract/tests/test_interview_api.py
