@@ -1,8 +1,6 @@
 import os
-import sqlite3
 import tempfile
 import unittest
-from unittest.mock import patch
 import server
 from trusted_training import initialize, add_course_from_trusted_catalog, mark_module_complete, public_questions, submit_exam
 
