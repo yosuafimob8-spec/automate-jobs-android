@@ -39,6 +39,11 @@ private val darkTraining = Color(0xFF152D43)
 private val tealTraining = Color(0xFF009F89)
 private val paleTraining = Color(0xFFF6F9FC)
 private val trainingDisabledText = Color(0xFF475569)
+private val trainingButtonColors @Composable get() = ButtonDefaults.outlinedButtonColors(
+    contentColor = darkTraining,
+    disabledContentColor = Color(0xFF475569),
+    disabledContainerColor = Color(0xFFF1F5F9)
+)
 
 @Composable
 private fun TrainingCard(content: @Composable ColumnScope.() -> Unit) {
@@ -199,7 +204,7 @@ fun JobTrainingScreen() {
                     Text("Jelajahi Posisi Pekerjaan", fontSize = 19.sp, fontWeight = FontWeight.Bold)
                     Text("${TrainingPositions.groups.size} bidang • ${TrainingPositions.count} posisi tersedia")
                     TrainingPositions.groups.forEachIndexed { index, group ->
-                        OutlinedButton(onClick = { selectedCategory = index; stage = "positions" }, modifier = Modifier.fillMaxWidth()) {
+                        OutlinedButton(colors = trainingButtonColors, onClick = { selectedCategory = index; stage = "positions" }, modifier = Modifier.fillMaxWidth()) {
                             Text("${group.category}  (${group.positions.size} posisi)")
                         }
                     }
@@ -222,7 +227,7 @@ fun JobTrainingScreen() {
                         }
                     }
                     Text("Sertifikat penyelesaian adalah bukti latihan internal, bukan sertifikasi kompetensi resmi BNSP.", fontSize = 12.sp)
-                    OutlinedButton(onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth()) { Text("Lihat Riwayat Sertifikat") }
+                    OutlinedButton(colors = trainingButtonColors, onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth()) { Text("Lihat Riwayat Sertifikat") }
                 }
                 "positions" -> {
                     val group = TrainingPositions.groups[selectedCategory]
@@ -392,7 +397,7 @@ fun JobTrainingScreen() {
                         }
                     }
                     Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                        OutlinedButton(
+                        OutlinedButton(colors = trainingButtonColors, 
                             onClick = { questionIndex-- },
                             enabled = questionIndex > 0,
                             modifier = Modifier.weight(1f)
@@ -416,7 +421,7 @@ fun JobTrainingScreen() {
                     Text("Nilai minimal kelulusan: 80/100")
                     TrainingAction("Lihat Hasil") { evaluate() }
                     if (message.isNotBlank()) Text(message, color = orangeTraining)
-                    OutlinedButton(onClick = { stage = "exam"; questionIndex = 0 }) { Text("Ulangi Soal") }
+                    OutlinedButton(colors = trainingButtonColors, onClick = { stage = "exam"; questionIndex = 0 }) { Text("Ulangi Soal") }
                 }
                 "certificate" -> {
                     Text("Sertifikat Penyelesaian", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
@@ -453,7 +458,7 @@ fun JobTrainingScreen() {
                         val pdfText = "SERTIFIKAT PENYELESAIAN PELATIHAN\\n\\nKarirMate\\n\\nDiberikan kepada: ${item.optString("name")}\\n\\nTelah menyelesaikan pelatihan: ${item.optString("course")}\\n\\nHasil akhir: ${item.optInt("score")}/100\\nTanggal: ${item.optString("date")}\\nID: ${item.optString("id")}\\n\\nSertifikat internal KarirMate, bukan sertifikasi profesi/BNSP."
                         TrainingCertificateExport(item)
                     }
-                    OutlinedButton(onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth()) { Text("Lihat Riwayat Sertifikat") }
+                    OutlinedButton(colors = trainingButtonColors, onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth()) { Text("Lihat Riwayat Sertifikat") }
                 }
                 "history" -> {
                     Text("Riwayat Sertifikat", fontSize = 26.sp, fontWeight = FontWeight.Bold)
@@ -467,7 +472,7 @@ fun JobTrainingScreen() {
                         label = { Text("Isi QR sertifikat") },
                         modifier = Modifier.fillMaxWidth()
                     )
-                    OutlinedButton(onClick = {
+                    OutlinedButton(colors = trainingButtonColors, onClick = {
                         val known = (0 until history.length()).mapNotNull { index ->
                             val record = history.optJSONObject(index) ?: return@mapNotNull null
                             runCatching {
@@ -490,7 +495,7 @@ fun JobTrainingScreen() {
                             TextButton(onClick = { certificate = item; stage = "certificate" }) { Text("Buka Sertifikat") }
                         }
                     }
-                    OutlinedButton(onClick = { stage = "catalog" }) { Text("Kembali ke Katalog") }
+                    OutlinedButton(colors = trainingButtonColors, onClick = { stage = "catalog" }) { Text("Kembali ke Katalog") }
                 }
             }
         }
