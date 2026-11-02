@@ -41,7 +41,7 @@ class PsychotestViewModel @JvmOverloads constructor(private val savedState: Save
     fun start(testId: String, questionCount: Int) = request { api -> lock.withLock {
         result.value = null; questions.value = emptyList(); session.value = null
         pending.clear(); savePending()
-        val body = api.start(JsonObject().apply { addProperty("test_id", testId); addProperty("question_count", questionCount.coerceIn(10, 20)) }).bodyOrError()
+        val body = api.start(JsonObject().apply { addProperty("test_id", testId); addProperty("question_count", questionCount.coerceIn(10, 110)) }).bodyOrError()
         val current = requireNotNull(body.getAsJsonObject("session")) { "Sesi tidak tersedia." }
         val id = current.get("id").asString
         savedState["psychotest_session"] = id
