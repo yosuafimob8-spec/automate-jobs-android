@@ -83,7 +83,7 @@ def audit(report_path=None):
             "review_queue": [{"courseId": cid, "generic_count": generic_by_course[cid], "questions": len(qs)} for cid, qs in sorted(course_locations.items(), key=lambda kv: (-generic_by_course[kv[0]], kv[0]))],
         }
         report_path.parent.mkdir(parents=True, exist_ok=True)
-        report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+        report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"Machine-readable report: {report_path}")
     for p, locations in sorted(repeated_prompts.items(), key=lambda x: -len(x[1]))[:25]:
         print(f"DUP x{len(locations)}: {p[:120]} :: {', '.join(locations[:5])}")
