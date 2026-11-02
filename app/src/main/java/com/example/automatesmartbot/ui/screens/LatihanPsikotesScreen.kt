@@ -210,13 +210,13 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             Text("Hasil Psikotes", color = Color.Black, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Text("Berikut hasil psikotes kamu beserta ringkasannya.", color = Color(0xFF333333), modifier = Modifier.weight(1f))
-                                Text("📋✏️", style = MaterialTheme.typography.displayMedium)
+                                Text("📋✏️", style = MaterialTheme.typography.displayLarge)
                             }
                         }
                         item {
                             MockupCard(borderColor = Color(0xFFFFC68A)) {
                                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                                    Text("🏅", style = MaterialTheme.typography.displayLarge, modifier = Modifier.width(110.dp))
+                                    MedalIllustration(Modifier.size(120.dp))
                                     Column {
                                         Text("Nilai Akhir", color = Color.Black, fontWeight = FontWeight.SemiBold)
                                         Row(verticalAlignment = Alignment.Bottom) { Text(actualScore?.toString() ?: "—", color = Color.Black, style = MaterialTheme.typography.displayLarge, fontWeight = FontWeight.Black); Text(" /100", color = Color.Black, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Black) }
@@ -224,7 +224,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                     }
                                 }
                                 Spacer(Modifier.height(12.dp))
-                                Row(Modifier.fillMaxWidth().background(Color(0xFFFFEED4), RoundedCornerShape(14.dp)).padding(12.dp), verticalAlignment = Alignment.CenterVertically) { Text("❝", color = Color(0xFFFF9D2B), style = MaterialTheme.typography.headlineLarge); Text(encouragement, modifier = Modifier.weight(1f), color = Color(0xFF252525), fontWeight = FontWeight.Medium); Text("🚀", style = MaterialTheme.typography.headlineMedium) }
+                                Row(Modifier.fillMaxWidth().background(Color(0xFFFFEED4), RoundedCornerShape(14.dp)).padding(12.dp), verticalAlignment = Alignment.CenterVertically) { Text("❝", color = Color(0xFFFF9D2B), style = MaterialTheme.typography.headlineLarge); Text(encouragement, modifier = Modifier.weight(1f), color = Color(0xFF252525), fontWeight = FontWeight.Medium); Text("🚀", style = MaterialTheme.typography.displaySmall) }
                             }
                         }
                         item {
@@ -388,6 +388,45 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
     }
     }
 
+
+@Composable
+private fun MedalIllustration(modifier: Modifier = Modifier) {
+    Canvas(modifier) {
+        val cx = size.width / 2f
+        val cy = size.height * 0.40f
+        val radius = size.minDimension * 0.30f
+        val left = androidx.compose.ui.graphics.Path().apply {
+            moveTo(cx - radius * 0.85f, cy + radius * 0.5f)
+            lineTo(cx - radius * 1.10f, size.height * 0.97f)
+            lineTo(cx - radius * 0.45f, size.height * 0.80f)
+            lineTo(cx, size.height * 0.97f)
+            close()
+        }
+        drawPath(left, Color(0xFFFF6227))
+        val right = androidx.compose.ui.graphics.Path().apply {
+            moveTo(cx + radius * 0.15f, cy + radius * 0.5f)
+            lineTo(cx + radius * 0.80f, size.height * 0.97f)
+            lineTo(cx + radius * 0.95f, size.height * 0.80f)
+            lineTo(cx + radius * 1.25f, size.height * 0.88f)
+            lineTo(cx + radius * 0.80f, cy + radius * 0.30f)
+            close()
+        }
+        drawPath(right, Color(0xFFFF3C24))
+        drawCircle(Color(0xFFFFB000), radius * 1.12f, androidx.compose.ui.geometry.Offset(cx, cy))
+        drawCircle(Color(0xFFFFE06B), radius * 0.96f, androidx.compose.ui.geometry.Offset(cx, cy))
+        drawCircle(Color(0xFFFFA400), radius * 0.78f, androidx.compose.ui.geometry.Offset(cx, cy))
+        val star = androidx.compose.ui.graphics.Path()
+        for (i in 0 until 10) {
+            val angle = Math.PI * (i.toDouble() / 5.0 - 0.5)
+            val rr = if (i % 2 == 0) radius * 0.64f else radius * 0.27f
+            val x = cx + (kotlin.math.cos(angle) * rr).toFloat()
+            val y = cy + (kotlin.math.sin(angle) * rr).toFloat()
+            if (i == 0) star.moveTo(x, y) else star.lineTo(x, y)
+        }
+        star.close()
+        drawPath(star, Color(0xFFFFF2A6))
+    }
+}
 
 @Composable
 private fun MockupCard(
