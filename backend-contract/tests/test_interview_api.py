@@ -16,7 +16,7 @@ class FakeResponse:
     def raise_for_status(self):
         return None
     def json(self):
-        return {"message": {"content": '{"question":"Ceritakan keputusan yang Anda ambil saat stok tidak sesuai.","feedback":"Jawaban menyebut selisih stok.","answer_score":82,"improvement":"Jelaskan langkah verifikasi.","awaiting_answer":true}'}}
+        return {"choices": [{"message": {"content": '{"question":"Ceritakan keputusan yang Anda ambil saat stok tidak sesuai.","feedback":"Jawaban menyebut selisih stok.","answer_score":82,"improvement":"Jelaskan langkah verifikasi.","awaiting_answer":true}'}}]}
 
 
 class FakeClient:
