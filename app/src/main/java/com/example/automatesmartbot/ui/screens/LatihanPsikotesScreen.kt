@@ -182,7 +182,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     }
                     item {
                         Card(shape = RoundedCornerShape(24.dp), modifier = Modifier.fillMaxWidth(),
-                            colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF0E3))) {
+                            colors = CardDefaults.cardColors(containerColor = Color.White)) {
                             Column(Modifier.fillMaxWidth().padding(24.dp),
                                 horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(10.dp)) {
                                 Text(if (actualScore != null && actualScore >= 75) "🏆" else "📊", style = MaterialTheme.typography.displayMedium)
@@ -192,7 +192,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                         style = MaterialTheme.typography.displayMedium)
                                     LinearProgressIndicator(progress = { actualScore.coerceIn(0, 100) / 100f },
                                         modifier = Modifier.fillMaxWidth().height(10.dp),
-                                        color = teal, trackColor = Color.White)
+                                        color = orange, trackColor = Color(0xFFFFE5D6))
                                 } else {
                                     Text("Asesmen Kepribadian", color = orange, style = MaterialTheme.typography.headlineSmall,
                                         fontWeight = FontWeight.Bold)
