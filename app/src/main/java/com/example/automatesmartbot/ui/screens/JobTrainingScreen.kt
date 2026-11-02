@@ -457,30 +457,37 @@ fun JobTrainingScreen() {
                     certificate?.let { item ->
                         Card(
                             modifier = Modifier.fillMaxWidth(),
-                            border = BorderStroke(2.dp, Color(0xFFFFB447)),
-                            colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFBF5), contentColor = darkTraining),
-                            shape = RoundedCornerShape(16.dp)
+                            border = BorderStroke(2.dp, Color(0xFFD6A34D)),
+                            colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFDF8), contentColor = darkTraining),
+                            shape = RoundedCornerShape(4.dp)
                         ) {
                             Column(
-                                Modifier.fillMaxWidth().padding(20.dp),
+                                Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 20.dp),
                                 horizontalAlignment = Alignment.CenterHorizontally,
-                                verticalArrangement = Arrangement.spacedBy(10.dp)
+                                verticalArrangement = Arrangement.spacedBy(7.dp)
                             ) {
-                                Text("▣ KarirMate", color = orangeTraining, fontSize = 24.sp, fontWeight = FontWeight.ExtraBold)
-                                Text("🏅", fontSize = 48.sp)
-                                Text("SERTIFIKAT", fontSize = 27.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
-                                Text("PENYELESAIAN PELATIHAN", fontWeight = FontWeight.Bold)
-                                Text("Diberikan kepada")
-                                Text(item.optString("name"), fontSize = 23.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
-                                HorizontalDivider()
-                                Text("Telah menyelesaikan pelatihan")
-                                Text(item.optString("course"), fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
-                                Text("Dengan hasil akhir ${item.optInt("score")}/100")
-                                Text("Training Manager: Tanti kurnia", fontWeight = FontWeight.SemiBold)
-                                Text("Program Director: Ilham Ramdhan", fontWeight = FontWeight.SemiBold)
-                                Text("Tanggal: ${item.optString("date")}", fontSize = 12.sp)
-                                Text("ID: ${item.optString("id")}", fontSize = 10.sp)
-                                Text("Sertifikat Pelatihan Internal KarirMate. Bukan sertifikasi kompetensi resmi (BNSP).", fontSize = 10.sp, textAlign = TextAlign.Center)
+                                Text("KARIRMATE", color = orangeTraining, fontSize = 17.sp, fontWeight = FontWeight.ExtraBold, letterSpacing = 2.sp)
+                                Text("PROGRAM PELATIHAN KERJA DIGITAL", fontSize = 10.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.sp)
+                                HorizontalDivider(color = Color(0xFFD6A34D), thickness = 1.dp)
+                                Text("SERTIFIKAT", fontSize = 29.sp, fontWeight = FontWeight.Bold, letterSpacing = 2.sp)
+                                Text("PENYELESAIAN PELATIHAN", fontSize = 12.sp, fontWeight = FontWeight.SemiBold, letterSpacing = 1.sp)
+                                Text("Dengan ini diberikan kepada", fontSize = 11.sp)
+                                Text(item.optString("name").ifBlank { "Nama peserta belum tersedia" }, fontSize = 22.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+                                HorizontalDivider(modifier = Modifier.fillMaxWidth(0.8f), color = Color(0xFFD6A34D))
+                                Text("Atas keberhasilan menyelesaikan program pelatihan", fontSize = 11.sp, textAlign = TextAlign.Center)
+                                Text(item.optString("course"), fontSize = 17.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+                                Text("Nilai akhir: ${item.optInt("score")}/100  •  Status: LULUS", fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
+                                Spacer(Modifier.height(6.dp))
+                                Text("Diterbitkan oleh KarirMate  •  ${item.optString("date")}", fontSize = 11.sp)
+                                Text("Nomor sertifikat", fontSize = 10.sp)
+                                Text(item.optString("id"), fontSize = 10.sp, fontWeight = FontWeight.SemiBold, textAlign = TextAlign.Center)
+                                HorizontalDivider(color = Color(0xFFD6A34D))
+                                Text(
+                                    if (item.optBoolean("serverRegistered")) "Verifikasi keaslian tersedia melalui registri KarirMate."
+                                    else "Identitas sertifikat dapat diperiksa pada riwayat perangkat ini.",
+                                    fontSize = 10.sp, textAlign = TextAlign.Center
+                                )
+                                Text("Sertifikat pelatihan internal KarirMate • Bukan sertifikasi kompetensi BNSP.", fontSize = 9.sp, textAlign = TextAlign.Center, color = Color(0xFF526374))
                             }
                         }
                         val pdfText = "SERTIFIKAT PENYELESAIAN PELATIHAN\\n\\nKarirMate\\n\\nDiberikan kepada: ${item.optString("name")}\\n\\nTelah menyelesaikan pelatihan: ${item.optString("course")}\\n\\nHasil akhir: ${item.optInt("score")}/100\\nTanggal: ${item.optString("date")}\\nID: ${item.optString("id")}\\n\\nSertifikat internal KarirMate, bukan sertifikasi profesi/BNSP."
