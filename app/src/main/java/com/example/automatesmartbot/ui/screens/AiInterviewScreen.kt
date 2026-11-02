@@ -1,5 +1,7 @@
 package com.example.automatesmartbot.ui.screens
 
+import androidx.activity.compose.BackHandler
+
 import com.example.automatesmartbot.BuildConfig
 import com.example.automatesmartbot.data.security.SessionManager
 import android.content.Intent
@@ -213,6 +215,13 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     val session = remember(context) { SessionManager(context.applicationContext) }
     var ttsReady by remember { mutableStateOf(false) }
     val voiceMode = interviewMode == "voice"
+    BackHandler(enabled = started || showPreparation || report.isNotBlank()) {
+        when {
+            report.isNotBlank() -> { report = ""; started = false; showPreparation = true }
+            started -> { started = false; showPreparation = true }
+            showPreparation -> showPreparation = false
+        }
+    }
     var pendingSpeech by remember { mutableStateOf<String?>(null) }
     val tts = remember { TextToSpeech(context) { status -> ttsReady = status == TextToSpeech.SUCCESS } }
     DisposableEffect(tts) { onDispose { tts.stop(); tts.shutdown() } }
@@ -409,17 +418,17 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             }
             Text("Bahasa", color = ink, fontWeight = FontWeight.Bold)
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                FilterChip(selected = language == "id", onClick = { language = "id" }, label = { Text("Indonesia") })
-                FilterChip(selected = language == "en", onClick = { language = "en" }, label = { Text("English") })
+                FilterChip(selected = language == "id", onClick = { language = "id" }, label = { Text("Indonesia", color = ink) })
+                FilterChip(selected = language == "en", onClick = { language = "en" }, label = { Text("English", color = ink) })
             }
             OutlinedButton(enabled = !cvReading && !loading, onClick = {
                 cvPicker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
-            }, modifier = Modifier.fillMaxWidth()) { Text(if (cvReading) "Membaca CV..." else "📄 Unggah CV PDF / DOCX (opsional)") }
+            }, modifier = Modifier.fillMaxWidth()) { Text(if (cvReading) "Membaca CV..." else "📄 Unggah CV PDF / DOCX (opsional)", color = ink) }
             if (cvLoaded) {
                 Text("✓ CV: $cvFileName", color = ink, fontWeight = FontWeight.Bold)
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    OutlinedButton(onClick = { cvPicker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document")) }) { Text("Ganti CV") }
-                    OutlinedButton(onClick = { cv = ""; cvLoaded = false; cvFileName = "" }) { Text("Hapus CV") }
+                    OutlinedButton(onClick = { cvPicker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document")) }) { Text("Ganti CV", color = ink) }
+                    OutlinedButton(onClick = { cv = ""; cvLoaded = false; cvFileName = "" }) { Text("Hapus CV", color = ink) }
                 }
             }
             Text("CV maksimal 10 MB; PDF scan memerlukan OCR.", color = muted, style = MaterialTheme.typography.bodySmall)
@@ -433,7 +442,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     report = ""
                     feedback = ""
                     send("start", emptyList())
-                }) { Text(if (voiceMode) "Mulai Interview Suara  ➜" else "Mulai Interview Teks  ➜", fontWeight = FontWeight.Bold) }
+                }) { Text(if (voiceMode) "Mulai Interview Suara  ➜" else "Mulai Interview Teks  ➜", color = Color.White, fontWeight = FontWeight.Bold) }
             if (endpoint == null) Text("Layanan AI Interview belum tersedia.", color = MaterialTheme.colorScheme.error)
             if (error.isNotBlank()) Text(error, color = MaterialTheme.colorScheme.error)
         }
@@ -457,7 +466,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 OutlinedButton(onClick = { resetSession(); showPreparation = true }, modifier = Modifier.weight(1f)) { Text("↻ Ulangi") }
                 Button(onClick = { showResultDetails = !showResultDetails }, modifier = Modifier.weight(1f),
-                    colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text(if (showResultDetails) "Tutup Detail" else "Lihat Detail") }
+                    colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text(if (showResultDetails) "Tutup Detail" else "Lihat Detail", color = Color.White) }
             }
         }
     } else {
@@ -502,17 +511,17 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                         putExtra(RecognizerIntent.EXTRA_LANGUAGE, if (language == "en") "en-US" else "id-ID")
                     }
                     try { voiceLauncher.launch(intent) } catch (_: Exception) { error = "Pengenalan suara tidak tersedia." }
-                }) { Text("🎙") }
+                }) { Text("🎙", color = ink) }
                 if (voiceMode) TextButton(onClick = {
                     if (ttsReady && question.isNotBlank()) {
                         tts.language = if (language == "en") Locale.ENGLISH else Locale.forLanguageTag("id-ID")
                         tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-repeat")
                     } else error = "Mesin pembaca suara belum siap di perangkat."
-                }) { Text("🔊") }
+                }) { Text("🔊", color = ink) }
                 if (!voiceMode) Button(enabled = !loading && answer.isNotBlank(), onClick = {
                     send("reply", history + InterviewTurn(question, answer.trim()))
                 }, colors = ButtonDefaults.buttonColors(containerColor = orange),
-                    contentPadding = PaddingValues(12.dp)) { Text("➤") }
+                    contentPadding = PaddingValues(12.dp)) { Text("➤", color = Color.White) }
             }
             Row(Modifier.fillMaxWidth().background(Color.White).padding(horizontal = 12.dp, vertical = 4.dp),
                 horizontalArrangement = Arrangement.SpaceBetween) {
