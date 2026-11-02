@@ -85,10 +85,23 @@ class FeatureUiTest {
     @Test fun trainingEvaluationPersistsCompletionAndEnablesPdfCertificate() {
         compose.activity.getSharedPreferences("career_training",0).edit().clear().commit()
         compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { JobTrainingScreen() } }
-        compose.onAllNodes(hasSetTextAction())[0].performTextInput("Dina Peserta")
         val course = com.example.automatesmartbot.data.career.TrainingCourses.all.first()
-        course.questions.forEach { q -> compose.onNodeWithText(q.options[q.correct]).performScrollTo().performClick() }
-        compose.onNodeWithText("Nilai & Simpan Penyelesaian").performScrollTo().performClick()
+        // Follow the real catalog -> lesson -> practice -> exam -> certificate flow.
+        compose.onNodeWithText(course.title).performScrollTo().performClick()
+        val practice = "Saya akan periksa data yang masuk, melakukan verifikasi sumber informasi, mencatat setiap temuan secara lengkap, lalu melapor kepada penanggung jawab agar langkah perbaikan dapat dievaluasi dengan benar dan pekerjaan berjalan sesuai prosedur."
+        course.lessons.forEach { lesson ->
+            compose.onNodeWithText(lesson.first).performScrollTo().performClick()
+            compose.onNodeWithText("Lanjut ke Latihan →").performScrollTo().performClick()
+            compose.onAllNodes(hasSetTextAction())[0].performTextInput(practice)
+            compose.onNodeWithText("Kumpulkan Jawaban").performScrollTo().performClick()
+        }
+        compose.onNodeWithText("Evaluasi Akhir →").performScrollTo().performClick()
+        course.questions.forEachIndexed { index, q ->
+            compose.onNodeWithText(q.options[q.correct]).performScrollTo().performClick()
+            compose.onNodeWithText(if (index == course.questions.lastIndex) "Selesai" else "Berikutnya ›").performScrollTo().performClick()
+        }
+        compose.onAllNodes(hasSetTextAction())[0].performTextInput("Dina Peserta")
+        compose.onNodeWithText("Lihat Hasil").performScrollTo().performClick()
         compose.onNodeWithText("Unduh Sertifikat PDF").performScrollTo().assertIsEnabled()
         compose.runOnIdle {
             val history = org.json.JSONArray(compose.activity.getSharedPreferences("career_training",0).getString("certificates","[]"))
