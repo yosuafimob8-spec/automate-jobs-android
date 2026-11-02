@@ -7,9 +7,6 @@ object TrainingPractice {
         val words = answer.trim().split(Regex("\\s+")).filter { it.isNotBlank() }
         if (words.size < 20) return Result(false, "Jelaskan kasus dengan minimal 20 kata.")
         if (answer.trim().length < 120) return Result(false, "Tambahkan rincian langkah kerja dan hasil yang diharapkan.")
-        val normalized = answer.lowercase()
-        val actionWords = listOf("periksa", "cek", "catat", "lapor", "verifikasi", "analisis", "evaluasi", "komunikasi", "koordinasi", "identifikasi", "lakukan")
-        if (actionWords.none { it in normalized }) return Result(false, "Sebutkan tindakan konkret, misalnya memeriksa, mencatat, atau melapor.")
         return Result(true, "Jawaban memenuhi kriteria kelengkapan awal. Ini bukan penilaian kompetensi oleh asesor.")
     }
 }
