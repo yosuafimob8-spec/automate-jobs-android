@@ -13,6 +13,7 @@ object TrainingPathways {
     fun courseFor(position: String, level: TrainingLevel): TrainingCourse {
         require(TrainingPositions.groups.any { position in it.positions }) { "Posisi tidak tersedia" }
         val category = TrainingPositions.groups.first { position in it.positions }.category
+        val domain = TrainingDomainContent.forCategory(category)
         val depth = when (level) {
             TrainingLevel.BASIC -> "kenali konsep, alat, dan prosedur dasar"
             TrainingLevel.INTERMEDIATE -> "terapkan prosedur pada kasus operasional dan identifikasi penyimpangan"
@@ -20,20 +21,20 @@ object TrainingPathways {
         }
         val lessons = common.mapIndexed { i, topic ->
             val content = when (i) {
-                0 -> "Dalam posisi $position pada bidang $category, $depth. Pelajari aturan keselamatan, kerahasiaan data, dan batas kewenangan. Laporkan bahaya dan jangan melakukan tindakan yang tidak berizin."
-                1 -> "Petakan pekerjaan $position dari penerimaan tugas, persiapan alat dan data, pelaksanaan, pemeriksaan hasil, sampai serah terima. $depth. Ikuti SOP perusahaan yang berlaku."
-                2 -> "Catat tanggal, pihak terkait, bukti pekerjaan, dan hasil verifikasi untuk tugas $position. Gunakan format resmi dan batasi akses data. $depth."
-                3 -> "Saat menemukan selisih atau kendala pada tugas $position, hentikan tindakan berisiko, verifikasi fakta, dokumentasikan masalah, lalu eskalasi sesuai SOP. $depth."
-                else -> "Tinjau mutu, ketepatan waktu, keamanan, dan kepuasan pemangku kepentingan pada pekerjaan $position. Gunakan indikator yang dapat diperiksa. $depth."
+                0 -> "Sebagai $position di bidang $category, pelajari alat dan istilah: ${domain.tool}. Untuk tingkat ${level.label}, $depth. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja."
+                1 -> "Simulasikan alur kerja $position: ${domain.workflow}. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ${level.label}, $depth."
+                2 -> "Buat contoh dokumen $position menggunakan: ${domain.record}. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas."
+                3 -> "Studi kasus $position: ${domain.incident}. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat ${level.label}, $depth."
+                else -> "Evaluasi pekerjaan $position dengan indikator ${domain.metric}. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti."
             }
             topic to content
         }
         val questions = listOf(
-            TrainingQuestion("Apa tindakan pertama ketika menemukan bahaya dalam tugas $position?", listOf("Mengabaikannya", "Mengikuti SOP keselamatan dan melapor", "Menyembunyikannya"), 1),
-            TrainingQuestion("Bagaimana alur kerja $position yang benar?", listOf("Persiapan, pelaksanaan, verifikasi, serah terima", "Langsung selesai tanpa pemeriksaan", "Menghapus catatan"), 0),
-            TrainingQuestion("Dokumentasi pekerjaan harus?", listOf("Dibuat-buat", "Disebarkan tanpa izin", "Akurat dan sesuai hak akses"), 2),
-            TrainingQuestion("Jika ditemukan selisih dalam pekerjaan?", listOf("Verifikasi, catat, dan eskalasi", "Ubah data diam-diam", "Abaikan"), 0),
-            TrainingQuestion("Peningkatan kualitas sebaiknya berdasarkan?", listOf("Tebakan", "Data hasil kerja yang terukur", "Rumor"), 1)
+            TrainingQuestion("Perangkat atau istilah yang relevan bagi $position?", listOf("Tidak perlu memahami alat", domain.tool, "Gunakan data tanpa izin"), 1),
+            TrainingQuestion("Alur kerja yang sesuai untuk $position?", listOf(domain.workflow, "Abaikan verifikasi", "Langsung tutup pekerjaan tanpa bukti"), 0),
+            TrainingQuestion("Dokumen kerja yang relevan untuk $position?", listOf("Catatan palsu", "Data tanpa izin", domain.record), 2),
+            TrainingQuestion("Jika terjadi ${domain.incident}, apa yang tepat?", listOf("Verifikasi, dokumentasikan, dan eskalasi sesuai SOP", "Sembunyikan kejadian", "Ubah data diam-diam"), 0),
+            TrainingQuestion("Indikator kinerja yang relevan untuk $position?", listOf("Rumor tanpa data", domain.metric, "Tidak perlu mengukur hasil"), 1)
         )
         return TrainingCourse(
             "role_" + position.lowercase().replace(Regex("[^a-z0-9]+"), "_") + "_" + level.name.lowercase(),
