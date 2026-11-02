@@ -44,6 +44,17 @@ class TrustedTrainingTests(unittest.TestCase):
             submit_exam(self.conn,"user-1","warehouse",[1]*5,"Peserta")
         self.assertEqual(self.conn.execute("SELECT COUNT(*) FROM certificates").fetchone()[0],0)
 
+    def test_uncommitted_issuance_rolls_back_entirely(self):
+        for i in range(2):
+            mark_module_complete(self.conn,"user-1","warehouse",i,server_verified=True)
+        self.conn.commit()
+        with self.assertRaises(RuntimeError):
+            with self.conn:
+                submit_exam(self.conn,"user-1","warehouse",[0]*5,"Peserta")
+                raise RuntimeError("simulate downstream failure")
+        self.assertEqual(self.conn.execute("SELECT COUNT(*) FROM certificates").fetchone()[0],0)
+        self.assertEqual(self.conn.execute("SELECT COUNT(*) FROM training_attempts").fetchone()[0],0)
+
     def test_success_issued_once_and_revocation_reflected(self):
         for i in range(2):
             mark_module_complete(self.conn,"user-1","warehouse",i,server_verified=True)
