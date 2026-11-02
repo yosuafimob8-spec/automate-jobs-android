@@ -397,184 +397,184 @@
     ],
     "questions": [
       {
-        "prompt": "Perangkat atau istilah yang relevan bagi Admin Warehouse?",
+        "prompt": "Tingkat akurasi stok turun dari 99,2% ke 96,8% dalam sebulan. Analisis awal apa yang paling berguna?",
         "options": [
-          "Tidak perlu memahami alat",
-          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan WMS, barcode scanner, SKU, rak lokasi",
-          "Gunakan data tanpa izin"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Alur kerja yang sesuai untuk Admin Warehouse?",
-        "options": [
-          "receiving, putaway, picking, packing, dispatch — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses receiving, putaway, picking, packing, dispatch",
-          "Abaikan verifikasi",
-          "Langsung tutup pekerjaan tanpa bukti"
+          "Bandingkan log transaksi, cycle count, dan lokasi penyumbang selisih",
+          "Ubah seluruh stok sistem agar sama dengan angka perkiraan",
+          "Hentikan semua penerimaan tanpa mencari sumber selisih"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dokumen kerja yang relevan untuk Admin Warehouse?",
+        "prompt": "Dua pengguna WMS memakai akun bersama untuk melakukan stock adjustment. Risiko pengendalian utamanya?",
         "options": [
-          "Catatan palsu",
-          "Data tanpa izin",
-          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Admin Warehouse"
+          "Penghitungan karton menjadi lebih cepat",
+          "Jejak pelaku perubahan stok tidak dapat dipertanggungjawabkan",
+          "Rak gudang otomatis berpindah lokasi"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Hasil cycle count menunjukkan selisih berulang hanya di bin B-12. Langkah investigasi yang tepat?",
+        "options": [
+          "Hapus riwayat perpindahan barang di bin tersebut",
+          "Tutup lokasi bin selamanya tanpa pemeriksaan",
+          "Telusuri scan putaway, picking, dan transfer khusus bin B-12"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "prompt": "Selisih inbound paling sering terjadi pada pemasok tertentu. Tindakan pencegahan yang terukur?",
         "options": [
-          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
-          "Sembunyikan kejadian",
-          "Ubah data diam-diam"
+          "Catat jenis selisih per PO dan evaluasi kepatuhan pengepakan pemasok",
+          "Terima seluruh barang tanpa pemeriksaan agar antrean berkurang",
+          "Ganti seluruh kode SKU tanpa persetujuan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Indikator kinerja yang relevan untuk Admin Warehouse?",
+        "prompt": "Barang mendekati kedaluwarsa tetap tersimpan sementara batch baru sudah keluar. Kontrol apa yang perlu diaudit?",
         "options": [
-          "Rumor tanpa data",
-          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Admin Warehouse",
-          "Tidak perlu mengukur hasil"
+          "Urutan warna rak penyimpanan",
+          "Aturan FEFO, tanggal kedaluwarsa, dan log override picking",
+          "Jumlah kursi petugas inbound"
         ],
         "correct": 1
       },
       {
-        "prompt": "Dalam pemeriksaan awal, informasi apa yang wajib diverifikasi dari materi berikut? (Admin Warehouse • Advanced; tahap 1)",
+        "prompt": "Tim menemukan 14 adjustment stok bernilai tinggi tanpa bukti persetujuan. Apa prioritas Admin Warehouse?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak a",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 0
-      },
-      {
-        "prompt": "Saat menyusun urutan kerja, tindakan apa yang tepat menurut prosedur berikut? (Admin Warehouse • Advanced; tahap 2)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Advanced: Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yan",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Pada pengisian dokumen, bukti apa yang harus disiapkan sesuai materi berikut? (Admin Warehouse • Advanced; tahap 3)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak"
+          "Setujui semua adjustment secara massal",
+          "Hapus transaksi agar laporan bersih",
+          "Tahan adjustment baru yang tidak sah dan eskalasi transaksi berisiko"
         ],
         "correct": 2
       },
       {
-        "prompt": "Ketika terjadi penyimpangan, tindakan apa yang paling sesuai dengan studi kasus berikut? (Admin Warehouse • Advanced; tahap 4)",
+        "prompt": "Penerimaan 2.000 unit sudah di-posting, tetapi 150 unit belum melewati QC. Perbaikan alur yang tepat?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, ",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Gunakan status karantina dan batasi stok tersedia sampai QC selesai",
+          "Gabungkan stok QC dengan stok layak jual tanpa penanda",
+          "Catat 150 unit sebagai barang terkirim"
         ],
         "correct": 0
       },
       {
-        "prompt": "Saat menilai hasil pekerjaan, indikator apa yang harus dicatat dari materi berikut? (Admin Warehouse • Advanced; tahap 5)",
+        "prompt": "Saat audit, total stok SKU sama tetapi tersebar di bin yang berbeda dari WMS. Apa risiko utama?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Advanced: Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Tidak ada risiko selama total unit sama",
+          "Kesalahan picking dan ketidakakuratan penelusuran lokasi",
+          "Kebutuhan label pengiriman otomatis hilang"
         ],
         "correct": 1
       },
       {
-        "prompt": "Jika petugas baru menjalankan tahap ini, bagaimana memastikan langkahnya benar? (Admin Warehouse • Advanced; tahap 1)",
+        "prompt": "Dua gudang mencatat transfer antar-lokasi pada tanggal berbeda. Bagaimana melakukan rekonsiliasi?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak a"
+          "Bandingkan nomor transfer, bukti keluar, bukti terima, dan waktu posting",
+          "Gunakan hanya catatan gudang asal tanpa bukti penerimaan",
+          "Samakan tanggal dengan menghapus semua transaksi"
         ],
         "correct": 2
       },
       {
-        "prompt": "Saat serah terima pekerjaan ini, apa yang harus dapat ditelusuri? (Admin Warehouse • Advanced; tahap 2)",
+        "prompt": "Satu operator memiliki tingkat salah scan tertinggi pada shift malam. Pendekatan perbaikan yang adil?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yan",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Langsung ubah semua log operator",
+          "Bandingkan volume kerja, perangkat, SOP, dan pola kesalahan sebelum coaching",
+          "Hapus target akurasi untuk seluruh shift"
         ],
         "correct": 0
       },
       {
-        "prompt": "Jika ada data tidak cocok pada proses ini, tindakan apa yang paling tepat? (Admin Warehouse • Advanced; tahap 3)",
+        "prompt": "Dashboard menunjukkan inventory accuracy 98%, tetapi 30 SKU kritis sering kosong. Analisis apa yang diperlukan?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Advanced: Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Abaikan SKU kritis karena akurasi keseluruhan tinggi",
+          "Hitung ulang hanya SKU dengan nilai paling kecil",
+          "Pisahkan akurasi berdasarkan SKU kritis dan telusuri stok tersedia versus stok teralokasi"
         ],
         "correct": 1
       },
       {
-        "prompt": "Sebelum menyetujui hasil pada proses ini, apa yang perlu dipastikan? (Admin Warehouse • Advanced; tahap 4)",
+        "prompt": "Proses putaway sering tertunda karena lokasi penuh. Keputusan berbasis data yang tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, "
+          "Analisis utilisasi bin, kapasitas, dan frekuensi perpindahan sebelum relokasi",
+          "Tumpuk barang di jalur evakuasi agar cepat selesai",
+          "Ubah kapasitas sistem tanpa memeriksa kapasitas fisik"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi keterlambatan pada tahap ini, bagaimana melaporkannya? (Admin Warehouse • Advanced; tahap 5)",
+        "prompt": "Pemasok menolak klaim kekurangan 18 unit setelah POD ditandatangani penuh. Perbaikan kontrol apa yang paling efektif?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Hilangkan proses tanda terima barang",
+          "Wajibkan pencatatan pengecualian dan foto bukti sebelum POD final",
+          "Terima kekurangan sebagai penjualan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam audit internal atas proses ini, catatan apa yang paling relevan? (Admin Warehouse • Advanced; tahap 1)",
+        "prompt": "Dalam audit ditemukan SKU duplikat dengan deskripsi berbeda. Tindakan master-data yang tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Advanced: Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak a",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Gabungkan SKU langsung tanpa validasi dampak transaksi",
+          "Buat SKU baru untuk setiap karton",
+          "Karantina perubahan master, validasi identitas produk, dan minta persetujuan pemilik data"
         ],
         "correct": 1
       },
       {
-        "prompt": "Ketika sistem atau alat terkait tidak tersedia, apa langkah aman? (Admin Warehouse • Advanced; tahap 2)",
+        "prompt": "KPI picking meningkat, tetapi komplain salah barang juga naik. Bagaimana mengevaluasi kinerja?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yan"
+          "Gunakan kombinasi produktivitas, akurasi picking, dan tingkat retur",
+          "Nilai hanya jumlah order per jam",
+          "Hentikan pencatatan komplain pelanggan"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika rekan kerja meminta melewati pemeriksaan ini, apa respons yang tepat? (Admin Warehouse • Advanced; tahap 3)",
+        "prompt": "Stok negatif muncul pada SKU tertentu setelah integrasi marketplace. Akar masalah apa yang perlu diuji?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Warna tampilan marketplace",
+          "Urutan sinkronisasi order, reservasi stok, dan waktu posting transaksi",
+          "Jadwal istirahat tim packing saja"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam simulasi kesalahan pada tahap ini, bagaimana mencegah pengulangan? (Admin Warehouse • Advanced; tahap 4)",
+        "prompt": "Perusahaan ingin mengurangi selisih stok tanpa menghentikan operasional. Strategi cycle count yang tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Advanced: Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, ",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Hitung seluruh gudang setiap jam",
+          "Hilangkan hitung fisik karena ada WMS",
+          "Prioritaskan SKU berisiko tinggi berdasarkan nilai, pergerakan, dan riwayat selisih"
         ],
         "correct": 1
       },
       {
-        "prompt": "Setelah pekerjaan ini selesai, apa dasar evaluasi yang dapat dipertanggungjawabkan? (Admin Warehouse • Advanced; tahap 5)",
+        "prompt": "Audit menemukan pembatalan transaksi penerimaan setelah barang sudah dipakai picking. Apa tindakan korektif?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Advanced",
-          "Ubah hasil atau dokumen Admin Warehouse • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi"
+          "Telusuri rantai transaksi dan lakukan koreksi terkendali dengan otorisasi",
+          "Buat penerimaan palsu untuk menutup selisih",
+          "Hapus bukti picking terkait"
         ],
         "correct": 2
+      },
+      {
+        "prompt": "Saat sistem WMS mati selama dua jam, bagaimana menjaga integritas data saat pemulihan?",
+        "options": [
+          "Masukkan seluruh transaksi dengan satu nomor referensi",
+          "Gunakan log manual bernomor unik lalu rekonsiliasi sebelum posting ulang",
+          "Abaikan transaksi yang terjadi selama gangguan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Manajemen meminta bukti bahwa perbaikan inbound efektif setelah 30 hari. Data pembanding yang layak?",
+        "options": [
+          "Jumlah rapat yang dilakukan tim",
+          "Pendapat satu operator tanpa data",
+          "Baseline dan hasil sesudah perbaikan untuk akurasi penerimaan, selisih, dan waktu proses"
+        ],
+        "correct": 1
       }
     ]
   },
