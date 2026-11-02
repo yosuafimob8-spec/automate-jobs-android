@@ -152,7 +152,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     }
                 }
             }
-            "exam" -> if (session != null && questions.size in 10..20) {
+            "exam" -> if (session != null && questions.isNotEmpty() && questions.size <= 110) {
                 ExamPanel(session!!, questions, submitting, pendingCount, vm::answer, vm::submit, { vm.syncAnswers() })
             } else Column(Modifier.padding(16.dp)) {
                 Text(if (loading) "Memuat sesi dan soal..." else "Sesi belum dapat dibuka. Periksa koneksi atau konfigurasi bank soal.", color = ink)
