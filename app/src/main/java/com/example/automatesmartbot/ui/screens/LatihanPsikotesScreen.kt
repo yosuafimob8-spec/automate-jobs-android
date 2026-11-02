@@ -207,35 +207,35 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     }
                     if (!resultAnalysisPage) {
                         item {
-                            Text("Hasil Psikotes", color = Color.Black, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
+                            Text("Hasil Psikotes", color = Color.Black, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Text("Berikut hasil psikotes kamu beserta ringkasannya.", color = Color(0xFF333333), modifier = Modifier.weight(1f))
-                                Text("📋✏️", style = MaterialTheme.typography.headlineLarge)
+                                Text("📋✏️", style = MaterialTheme.typography.displayLarge)
                             }
                         }
                         item {
                             MockupCard(borderColor = Color(0xFFFFC68A)) {
                                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                                    Text("🏅", style = MaterialTheme.typography.displayLarge)
+                                    MedalIllustration(Modifier.size(120.dp))
                                     Column {
                                         Text("Nilai Akhir", color = Color.Black, fontWeight = FontWeight.SemiBold)
-                                        Text(actualScore?.let { "$it /100" } ?: "—", color = Color.Black, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.Black)
+                                        Row(verticalAlignment = Alignment.Bottom) { Text(actualScore?.toString() ?: "—", color = Color.Black, style = MaterialTheme.typography.displayLarge, fontWeight = FontWeight.Black); Text(" /100", color = Color.Black, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Black) }
                                         Surface(color = Color(0xFF08BE72), shape = RoundedCornerShape(50)) { Text(rating, color = Color.White, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 14.dp, vertical = 5.dp)) }
                                     }
                                 }
                                 Spacer(Modifier.height(12.dp))
-                                Text("❝  $encouragement   🚀", color = Color(0xFF252525), modifier = Modifier.fillMaxWidth().background(Color(0xFFFFEED4), RoundedCornerShape(14.dp)).padding(12.dp))
+                                Row(Modifier.fillMaxWidth().background(Color(0xFFFFEED4), RoundedCornerShape(14.dp)).padding(12.dp), verticalAlignment = Alignment.CenterVertically) { Text("❝", color = Color(0xFFFF9D2B), style = MaterialTheme.typography.headlineLarge); Text(encouragement, modifier = Modifier.weight(1f), color = Color(0xFF252525), fontWeight = FontWeight.Medium); Text("🚀", style = MaterialTheme.typography.displaySmall) }
                             }
                         }
                         item {
                             MockupCard {
-                                Text("🟧 Ringkasan Jawaban", fontWeight = FontWeight.ExtraBold, color = Color.Black, style = MaterialTheme.typography.titleMedium)
+                                Text("🟠 Ringkasan Jawaban", fontWeight = FontWeight.ExtraBold, color = Color.Black, style = MaterialTheme.typography.titleMedium)
                                 Spacer(Modifier.height(12.dp))
                                 Row(verticalAlignment = Alignment.CenterVertically) {
                                     Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(9.dp)) {
                                         ScoreRow("✅ Jawaban Benar", "$correct")
                                         ScoreRow("❌ Jawaban Salah", "$wrong")
-                                        ScoreRow("📝 Kosong", "$blank")
+                                        
                                         ScoreRow("📋 Total Soal", "$total")
                                     }
                                     Spacer(Modifier.width(12.dp))
@@ -247,14 +247,14 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                             }
                                             Text("$accuracy%", color = Color.Black, fontWeight = FontWeight.Black, style = MaterialTheme.typography.titleLarge)
                                         }
-                                        Text("Ketepatan", color = Color.Black, style = MaterialTheme.typography.labelSmall)
+                                        Text("Tingkat\nKetepatan", color = Color.Black, textAlign = TextAlign.Center, style = MaterialTheme.typography.labelSmall)
                                     }
                                 }
                             }
                         }
                         item {
                             MockupCard {
-                                Text("📊 Hasil per Kategori", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium)
+                                Text("🟠 Hasil per Kategori", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium)
                                 Spacer(Modifier.height(8.dp))
                                 val categories = r.getAsJsonArray("categories") ?: r.getAsJsonArray("category_scores")
                                 val categoryMap = mutableMapOf<String, Int>()
@@ -284,13 +284,13 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         item {
                             MockupCard(tint = Color(0xFFFFF4E4), borderColor = Color(0xFFFFB966), onClick = { if (isPro) resultAnalysisPage = true else proNotice = true }) {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Text("🔒", style = MaterialTheme.typography.headlineMedium)
+                                    Text("🔐", style = MaterialTheme.typography.headlineMedium)
                                     Spacer(Modifier.width(10.dp))
                                     Column(Modifier.weight(1f)) {
-                                        Text("Analisis & Pengembangan  PRO", color = Color.Black, fontWeight = FontWeight.ExtraBold)
-                                        Text("Lihat analisis jawaban, evaluasi kemampuan, dan saran pengembangan.", color = Color.Black, style = MaterialTheme.typography.bodySmall)
+                                        Text("Analisis & Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold)
+                                        Text("Lihat analisis jawaban per soal, evaluasi kemampuan, dan saran pengembangan.", color = Color.Black, style = MaterialTheme.typography.bodySmall)
                                     }
-                                    Text("›", color = orange, style = MaterialTheme.typography.headlineMedium)
+                                    Surface(color = orange, shape = RoundedCornerShape(50)) { Text("PRO", color = Color.White, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)) }
                                 }
                             }
                         }
@@ -302,7 +302,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     } else {
                         item {
                             Row(verticalAlignment = Alignment.CenterVertically) {
-                                Text("Analisis Lengkap", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.headlineMedium, modifier = Modifier.weight(1f))
+                                Text("Analisis Lengkap", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.headlineLarge, modifier = Modifier.weight(1f))
                                 Surface(color = orange, shape = RoundedCornerShape(50)) { Text("👑 PRO", color = Color.White, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp)) }
                             }
                             Text("Evaluasi detail hasil psikotes, analisis jawaban, dan saran pengembangan khusus untukmu.", color = Color.Black)
@@ -321,9 +321,30 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         }
                         when (analysisTab) {
                             0 -> {
-                                item { MockupCard { Text("📊 Profil Kemampuan", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium); Text("Ketepatan $accuracy% dari $total soal. $correct jawaban benar dan $wrong salah. Hasil ini merupakan latihan, bukan penilaian rekrutmen resmi.", color = Color.DarkGray) } }
-                                item { MockupCard(tint = Color(0xFFEAFBF3)) { Text("👍 Kekuatan Utama", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text(if (correct > 0) "Kamu berhasil menjawab $correct soal dengan tepat. Pelajari kembali pola jawaban yang sudah dikuasai." else "Terus bangun pemahaman konsep melalui latihan bertahap.", color = Color.DarkGray) } }
-                                item { MockupCard(tint = Color(0xFFFFEEF0)) { Text("🎯 Area Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text("Tinjau $wrong jawaban salah, pahami alasannya, dan latih manajemen waktu.", color = Color.DarkGray) } }
+                                item {
+                                    MockupCard {
+                                        Text("📊  Profil Kemampuan", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                        Text("Dari $total soal, kamu menjawab $correct soal dengan benar dan $wrong salah. Tingkat ketepatanmu $accuracy%. Evaluasi ini menunjukkan hasil latihan berdasarkan jawaban yang tersedia.", color = Color(0xFF222222), style = MaterialTheme.typography.bodyMedium)
+                                    }
+                                }
+                                item {
+                                    MockupCard(tint = Color(0xFFEAFBF3)) {
+                                        Text("👍  Kekuatan Utama", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                        Text("🟢  $correct jawaban berhasil dikerjakan dengan tepat.\n🟢  Pertahankan konsep yang sudah kamu kuasai.\n🟢  Latih konsistensi dan ketelitian dalam menjawab.", color = Color(0xFF202020), style = MaterialTheme.typography.bodyMedium)
+                                    }
+                                }
+                                item {
+                                    MockupCard(tint = Color(0xFFFFEDF0)) {
+                                        Text("🎯  Area Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                        Text("🔴  Tinjau kembali $wrong jawaban yang belum tepat.\n🔴  Tingkatkan kecepatan dan pemahaman konsep.\n🔴  Latih strategi manajemen waktu saat mengerjakan soal.", color = Color(0xFF202020), style = MaterialTheme.typography.bodyMedium)
+                                    }
+                                }
+                                item {
+                                    MockupCard(tint = Color(0xFFFFF5D5)) {
+                                        Text("💡  Saran Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                        Text("🟡  Rutin latihan soal sesuai kategori yang perlu ditingkatkan.\n🟡  Gunakan simulasi psikotes dengan timer.\n🟡  Pelajari pola soal yang sering muncul pada seleksi kerja.\n🟡  Jaga fokus dan kondisi fisik sebelum tes.", color = Color(0xFF202020), style = MaterialTheme.typography.bodyMedium)
+                                    }
+                                }
                             }
                             1 -> {
                                 val details = r.getAsJsonArray("questions")?.mapNotNull { if (it.isJsonObject) it.asJsonObject else null }.orEmpty()
@@ -369,6 +390,45 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
 
 
 @Composable
+private fun MedalIllustration(modifier: Modifier = Modifier) {
+    Canvas(modifier) {
+        val cx = size.width / 2f
+        val cy = size.height * 0.40f
+        val radius = size.minDimension * 0.30f
+        val left = androidx.compose.ui.graphics.Path().apply {
+            moveTo(cx - radius * 0.85f, cy + radius * 0.5f)
+            lineTo(cx - radius * 1.10f, size.height * 0.97f)
+            lineTo(cx - radius * 0.45f, size.height * 0.80f)
+            lineTo(cx, size.height * 0.97f)
+            close()
+        }
+        drawPath(left, Color(0xFFFF6227))
+        val right = androidx.compose.ui.graphics.Path().apply {
+            moveTo(cx + radius * 0.15f, cy + radius * 0.5f)
+            lineTo(cx + radius * 0.80f, size.height * 0.97f)
+            lineTo(cx + radius * 0.95f, size.height * 0.80f)
+            lineTo(cx + radius * 1.25f, size.height * 0.88f)
+            lineTo(cx + radius * 0.80f, cy + radius * 0.30f)
+            close()
+        }
+        drawPath(right, Color(0xFFFF3C24))
+        drawCircle(Color(0xFFFFB000), radius * 1.12f, androidx.compose.ui.geometry.Offset(cx, cy))
+        drawCircle(Color(0xFFFFE06B), radius * 0.96f, androidx.compose.ui.geometry.Offset(cx, cy))
+        drawCircle(Color(0xFFFFA400), radius * 0.78f, androidx.compose.ui.geometry.Offset(cx, cy))
+        val star = androidx.compose.ui.graphics.Path()
+        for (i in 0 until 10) {
+            val angle = Math.PI * (i.toDouble() / 5.0 - 0.5)
+            val rr = if (i % 2 == 0) radius * 0.64f else radius * 0.27f
+            val x = cx + (kotlin.math.cos(angle) * rr).toFloat()
+            val y = cy + (kotlin.math.sin(angle) * rr).toFloat()
+            if (i == 0) star.moveTo(x, y) else star.lineTo(x, y)
+        }
+        star.close()
+        drawPath(star, Color(0xFFFFF2A6))
+    }
+}
+
+@Composable
 private fun MockupCard(
     tint: Color = Color.White,
     borderColor: Color = Color(0xFFE2E8EF),
@@ -384,7 +444,7 @@ private fun MockupCard(
         border = androidx.compose.foundation.BorderStroke(1.dp, borderColor),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
-        Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp), content = content)
+        Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp), content = content)
     }
 }
 
