@@ -1,0 +1,1046 @@
+[
+  {
+    "courseId": "role_barista_basic",
+    "title": "Barista • Basic",
+    "lessons": [
+      "Sebagai Barista di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Barista.",
+      "Simulasikan alur kerja Barista: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Barista.",
+      "Buat contoh dokumen Barista menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Barista.",
+      "Studi kasus Barista: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Barista.",
+      "Evaluasi pekerjaan Barista dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Barista."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Barista?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Barista?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Barista?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Barista"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Barista?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Barista",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_barista_intermediate",
+    "title": "Barista • Intermediate",
+    "lessons": [
+      "Sebagai Barista di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Barista.",
+      "Simulasikan alur kerja Barista: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Barista.",
+      "Buat contoh dokumen Barista menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Barista.",
+      "Studi kasus Barista: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Barista.",
+      "Evaluasi pekerjaan Barista dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Barista."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Barista?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Barista?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Barista?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Barista"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Barista?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Barista",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_barista_advanced",
+    "title": "Barista • Advanced",
+    "lessons": [
+      "Sebagai Barista di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Barista.",
+      "Simulasikan alur kerja Barista: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Barista.",
+      "Buat contoh dokumen Barista menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Barista.",
+      "Studi kasus Barista: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Barista.",
+      "Evaluasi pekerjaan Barista dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Barista."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Barista?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Barista?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Barista berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Barista?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Barista"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Barista?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Barista",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_waiter_basic",
+    "title": "Waiter • Basic",
+    "lessons": [
+      "Sebagai Waiter di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Waiter.",
+      "Simulasikan alur kerja Waiter: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Waiter.",
+      "Buat contoh dokumen Waiter menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Waiter.",
+      "Studi kasus Waiter: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Waiter.",
+      "Evaluasi pekerjaan Waiter dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Waiter."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Waiter?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Waiter?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Waiter?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Waiter"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Waiter?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Waiter",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_waiter_intermediate",
+    "title": "Waiter • Intermediate",
+    "lessons": [
+      "Sebagai Waiter di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Waiter.",
+      "Simulasikan alur kerja Waiter: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Waiter.",
+      "Buat contoh dokumen Waiter menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Waiter.",
+      "Studi kasus Waiter: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Waiter.",
+      "Evaluasi pekerjaan Waiter dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Waiter."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Waiter?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Waiter?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Waiter?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Waiter"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Waiter?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Waiter",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_waiter_advanced",
+    "title": "Waiter • Advanced",
+    "lessons": [
+      "Sebagai Waiter di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Waiter.",
+      "Simulasikan alur kerja Waiter: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Waiter.",
+      "Buat contoh dokumen Waiter menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Waiter.",
+      "Studi kasus Waiter: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Waiter.",
+      "Evaluasi pekerjaan Waiter dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Waiter."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Waiter?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Waiter?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Waiter berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Waiter?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Waiter"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Waiter?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Waiter",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kitchen_crew_basic",
+    "title": "Kitchen Crew • Basic",
+    "lessons": [
+      "Sebagai Kitchen Crew di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Kitchen Crew.",
+      "Simulasikan alur kerja Kitchen Crew: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Kitchen Crew.",
+      "Buat contoh dokumen Kitchen Crew menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Kitchen Crew.",
+      "Studi kasus Kitchen Crew: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Kitchen Crew.",
+      "Evaluasi pekerjaan Kitchen Crew dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Kitchen Crew."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kitchen Crew?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kitchen Crew?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kitchen Crew?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Kitchen Crew"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kitchen Crew?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Kitchen Crew",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kitchen_crew_intermediate",
+    "title": "Kitchen Crew • Intermediate",
+    "lessons": [
+      "Sebagai Kitchen Crew di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Kitchen Crew.",
+      "Simulasikan alur kerja Kitchen Crew: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Kitchen Crew.",
+      "Buat contoh dokumen Kitchen Crew menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Kitchen Crew.",
+      "Studi kasus Kitchen Crew: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Kitchen Crew.",
+      "Evaluasi pekerjaan Kitchen Crew dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Kitchen Crew."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kitchen Crew?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kitchen Crew?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kitchen Crew?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Kitchen Crew"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kitchen Crew?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Kitchen Crew",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kitchen_crew_advanced",
+    "title": "Kitchen Crew • Advanced",
+    "lessons": [
+      "Sebagai Kitchen Crew di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Kitchen Crew.",
+      "Simulasikan alur kerja Kitchen Crew: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Kitchen Crew.",
+      "Buat contoh dokumen Kitchen Crew menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Kitchen Crew.",
+      "Studi kasus Kitchen Crew: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Kitchen Crew.",
+      "Evaluasi pekerjaan Kitchen Crew dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Kitchen Crew."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kitchen Crew?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kitchen Crew?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Kitchen Crew berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kitchen Crew?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Kitchen Crew"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kitchen Crew?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Kitchen Crew",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_cook_basic",
+    "title": "Cook • Basic",
+    "lessons": [
+      "Sebagai Cook di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Cook.",
+      "Simulasikan alur kerja Cook: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Cook.",
+      "Buat contoh dokumen Cook menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Cook.",
+      "Studi kasus Cook: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Cook.",
+      "Evaluasi pekerjaan Cook dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Cook."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Cook?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Cook?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Cook?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Cook"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Cook?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Cook",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_cook_intermediate",
+    "title": "Cook • Intermediate",
+    "lessons": [
+      "Sebagai Cook di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Cook.",
+      "Simulasikan alur kerja Cook: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Cook.",
+      "Buat contoh dokumen Cook menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Cook.",
+      "Studi kasus Cook: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Cook.",
+      "Evaluasi pekerjaan Cook dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Cook."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Cook?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Cook?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Cook?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Cook"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Cook?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Cook",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_cook_advanced",
+    "title": "Cook • Advanced",
+    "lessons": [
+      "Sebagai Cook di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Cook.",
+      "Simulasikan alur kerja Cook: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Cook.",
+      "Buat contoh dokumen Cook menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Cook.",
+      "Studi kasus Cook: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Cook.",
+      "Evaluasi pekerjaan Cook dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Cook."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Cook?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Cook?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Cook berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Cook?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Cook"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Cook?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Cook",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_baker_basic",
+    "title": "Baker • Basic",
+    "lessons": [
+      "Sebagai Baker di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Baker.",
+      "Simulasikan alur kerja Baker: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Baker.",
+      "Buat contoh dokumen Baker menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Baker.",
+      "Studi kasus Baker: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Baker.",
+      "Evaluasi pekerjaan Baker dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Baker."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Baker?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Baker?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Baker?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Baker"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Baker?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Baker",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_baker_intermediate",
+    "title": "Baker • Intermediate",
+    "lessons": [
+      "Sebagai Baker di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Baker.",
+      "Simulasikan alur kerja Baker: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Baker.",
+      "Buat contoh dokumen Baker menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Baker.",
+      "Studi kasus Baker: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Baker.",
+      "Evaluasi pekerjaan Baker dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Baker."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Baker?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Baker?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Baker?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Baker"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Baker?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Baker",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_baker_advanced",
+    "title": "Baker • Advanced",
+    "lessons": [
+      "Sebagai Baker di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Baker.",
+      "Simulasikan alur kerja Baker: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Baker.",
+      "Buat contoh dokumen Baker menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Baker.",
+      "Studi kasus Baker: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Baker.",
+      "Evaluasi pekerjaan Baker dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Baker."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Baker?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Baker?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah menjalankan tanggung jawab jabatan Baker berdasarkan SOP yang berlaku dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Baker?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Baker"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Baker?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Baker",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_restaurant_supervisor_basic",
+    "title": "Restaurant Supervisor • Basic",
+    "lessons": [
+      "Sebagai Restaurant Supervisor di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Restaurant Supervisor.",
+      "Simulasikan alur kerja Restaurant Supervisor: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Restaurant Supervisor.",
+      "Buat contoh dokumen Restaurant Supervisor menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Restaurant Supervisor.",
+      "Studi kasus Restaurant Supervisor: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Restaurant Supervisor.",
+      "Evaluasi pekerjaan Restaurant Supervisor dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Restaurant Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Restaurant Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Restaurant Supervisor?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Restaurant Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Restaurant Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Restaurant Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Restaurant Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_restaurant_supervisor_intermediate",
+    "title": "Restaurant Supervisor • Intermediate",
+    "lessons": [
+      "Sebagai Restaurant Supervisor di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Restaurant Supervisor.",
+      "Simulasikan alur kerja Restaurant Supervisor: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Restaurant Supervisor.",
+      "Buat contoh dokumen Restaurant Supervisor menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Restaurant Supervisor.",
+      "Studi kasus Restaurant Supervisor: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Restaurant Supervisor.",
+      "Evaluasi pekerjaan Restaurant Supervisor dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Restaurant Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Restaurant Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Restaurant Supervisor?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Restaurant Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Restaurant Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Restaurant Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Restaurant Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_restaurant_supervisor_advanced",
+    "title": "Restaurant Supervisor • Advanced",
+    "lessons": [
+      "Sebagai Restaurant Supervisor di bidang Food & Beverage, pelajari alat dan istilah: resep standar, termometer, POS, checklist sanitasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan resep standar, termometer, POS, checklist sanitasi Bukti hasil: checklist risiko dan kewenangan Restaurant Supervisor.",
+      "Simulasikan alur kerja Restaurant Supervisor: mise en place, produksi, pelayanan, sanitasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses mise en place, produksi, pelayanan, sanitasi Bukti hasil: bagan alur kerja Restaurant Supervisor.",
+      "Buat contoh dokumen Restaurant Supervisor menggunakan: catatan suhu, bahan baku, pesanan, waste. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada catatan suhu, bahan baku, pesanan, waste Bukti hasil: contoh dokumen dan bukti kerja Restaurant Supervisor.",
+      "Studi kasus Restaurant Supervisor: alergen tidak tercatat atau suhu penyimpanan tidak aman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus alergen tidak tercatat atau suhu penyimpanan tidak aman saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Restaurant Supervisor.",
+      "Evaluasi pekerjaan Restaurant Supervisor dengan indikator food cost, waste, waktu layanan. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran food cost, waste, waktu layanan Bukti hasil: rencana pengukuran dan perbaikan Restaurant Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Restaurant Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "resep standar, termometer, POS, checklist sanitasi — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan resep standar, termometer, POS, checklist sanitasi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Restaurant Supervisor?",
+        "options": [
+          "mise en place, produksi, pelayanan, sanitasi — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses mise en place, produksi, pelayanan, sanitasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Restaurant Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "catatan suhu, bahan baku, pesanan, waste — contoh dokumen dan bukti kerja Restaurant Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alergen tidak tercatat atau suhu penyimpanan tidak aman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Restaurant Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "food cost, waste, waktu layanan — rencana pengukuran dan perbaikan Restaurant Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
