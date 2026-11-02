@@ -11,6 +11,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -499,12 +500,11 @@ fun JobTrainingScreen() {
                         Text("Pratinjau sertifikat • geser horizontal untuk melihat ukuran landscape", fontSize = 12.sp, color = darkTraining)
                         Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState())) {
                             androidx.compose.foundation.Canvas(Modifier.width(620.dp).height(438.dp)) {
-                                drawContext.canvas.nativeCanvas.apply {
-                                    save()
-                                    scale(size.width / 842f, size.height / 595f)
-                                    TrainingCertificateArtwork.draw(this, item)
-                                    restore()
-                                }
+                                val androidCanvas = drawContext.canvas.nativeCanvas
+                                androidCanvas.save()
+                                androidCanvas.scale(size.width / 842f, size.height / 595f)
+                                TrainingCertificateArtwork.draw(androidCanvas, item)
+                                androidCanvas.restore()
                             }
                         }
                         TrainingCertificateExport(item)
