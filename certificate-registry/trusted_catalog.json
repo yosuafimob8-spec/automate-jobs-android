@@ -436,6 +436,141 @@
           "Selera pribadi"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Barang diterima dengan kemasan rusak, langkah tepat?",
+        "options": [
+          "Dokumentasikan, pisahkan dan laporkan",
+          "Langsung masukkan stok siap jual",
+          "Abaikan kerusakan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Apa fungsi kode lokasi rak gudang?",
+        "options": [
+          "Menentukan gaji",
+          "Mempermudah penelusuran dan picking",
+          "Menggantikan stok opname"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Barang dengan tanggal kedaluwarsa berbeda sebaiknya dikeluarkan berdasarkan?",
+        "options": [
+          "Warna kemasan",
+          "Ukuran karton",
+          "FEFO, tanggal kedaluwarsa terdekat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Ketika forklift melintas, apa tindakan pejalan kaki?",
+        "options": [
+          "Gunakan jalur aman dan ikuti rambu",
+          "Berjalan di bawah muatan",
+          "Mendekat untuk membantu tanpa izin"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Apa yang harus diverifikasi saat picking?",
+        "options": [
+          "Warna seragam picker",
+          "SKU dan jumlah sesuai daftar",
+          "Nama pengemudi saja"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Jika barang berada di rak yang salah?",
+        "options": [
+          "Biarkan sampai akhir tahun",
+          "Hapus catatan lokasinya",
+          "Verifikasi barang dan catat koreksi lokasi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Mengapa kapasitas maksimum pallet harus dipatuhi?",
+        "options": [
+          "Mencegah beban jatuh dan kecelakaan",
+          "Supaya label terlihat bagus",
+          "Untuk mempercepat kerja tanpa alat"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Sebelum paket ditutup, apa yang diperiksa?",
+        "options": [
+          "Nomor meja kerja",
+          "Isi, kuantitas dan pelindung barang",
+          "Jadwal shift besok"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Saat selisih stok ditemukan, data apa ditelusuri?",
+        "options": [
+          "Daftar tamu",
+          "Warna rak",
+          "Riwayat penerimaan, pengeluaran dan retur"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Apa fungsi area karantina di gudang?",
+        "options": [
+          "Memisahkan barang bermasalah dari stok layak",
+          "Menambah stok tersedia",
+          "Menyimpan barang tanpa identitas"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika label pengiriman tidak terbaca?",
+        "options": [
+          "Kirim tanpa label",
+          "Cetak ulang dan verifikasi alamat",
+          "Tebak alamat tujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana proses awal retur barang?",
+        "options": [
+          "Langsung jual kembali",
+          "Buang tanpa berita acara",
+          "Periksa kondisi dan kategorikan sesuai prosedur"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Apa manfaat cycle counting?",
+        "options": [
+          "Mendeteksi ketidaksesuaian stok secara berkala",
+          "Menghapus kebutuhan pencatatan",
+          "Mengganti seluruh penerimaan barang"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Saat mengangkat barang berat secara manual?",
+        "options": [
+          "Memutar pinggang mendadak",
+          "Gunakan teknik aman atau alat bantu",
+          "Memaksakan beban di luar kemampuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Mengapa nomor batch dicatat?",
+        "options": [
+          "Untuk menentukan warna rak",
+          "Untuk dekorasi dokumen",
+          "Untuk ketertelusuran barang dan penanganan masalah"
+        ],
+        "correct": 2
       }
     ]
   },
