@@ -54,6 +54,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, k",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan ",
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, k",
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti",
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, k"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung",
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan ",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -110,6 +245,141 @@
           "Rumor tanpa data",
           "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Persiapan Melamar Kerja",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermed",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan ",
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermed",
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti",
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermed"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung",
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan ",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Intermediate agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -170,6 +440,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan ",
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced",
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti",
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Persiapan Melamar Kerja di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Persiapan Melamar Kerja: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tin",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Persiapan Melamar Kerja menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung",
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Persiapan Melamar Kerja: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Persiapan Melamar Kerja • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Persiapan Melamar Kerja • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Persiapan Melamar Kerja dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan ",
+          "Ubah catatan hasil Persiapan Melamar Kerja • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -226,6 +631,141 @@
           "Rumor tanpa data",
           "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Komunikasi Wawancara",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kena",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ja"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, d",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tin",
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kena",
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ja",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, d",
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kena"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ja",
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tin",
+          "Ubah catatan hasil Komunikasi Wawancara • Basic agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -286,6 +826,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediat",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ja"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, d",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tin",
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediat",
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ja",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, d",
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ja",
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tin",
+          "Ubah catatan hasil Komunikasi Wawancara • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -342,6 +1017,141 @@
           "Rumor tanpa data",
           "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Komunikasi Wawancara",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, a",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ja"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, d",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tin",
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, a",
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ja",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, d",
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Wawancara di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Wawancara: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Wawancara menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ja",
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Wawancara: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Wawancara • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Wawancara • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Wawancara dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tin",
+          "Ubah catatan hasil Komunikasi Wawancara • Advanced agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -402,6 +1212,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kenali konsep,",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, k",
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuk",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perb",
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kenali konsep,",
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, k"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuk",
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perb"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kenali konsep,"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, k",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perb",
+          "Ubah catatan hasil Leadership • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -458,6 +1403,141 @@
           "Rumor tanpa data",
           "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Leadership",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediate, terapka",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermed",
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuk",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perb",
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediate, terapka",
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermed"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuk",
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perb"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediate, terapka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermed",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perb",
+          "Ubah catatan hasil Leadership • Intermediate agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -518,6 +1598,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, analisis ri",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced",
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuk",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perb",
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, analisis ri",
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuk",
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perb"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Leadership di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, analisis ri"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Leadership: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Leadership menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Leadership: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Leadership • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Leadership • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Leadership dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perb",
+          "Ubah catatan hasil Leadership • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -574,6 +1789,141 @@
           "Rumor tanpa data",
           "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Komunikasi Profesional",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, ke",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti,",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan t",
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, ke",
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti,",
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, ke"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti,"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan t",
+          "Ubah catatan hasil Komunikasi Profesional • Basic agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -634,6 +1984,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermedi",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti,",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan t",
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermedi",
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti,",
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermedi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti,"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan t",
+          "Ubah catatan hasil Komunikasi Profesional • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -690,6 +2175,141 @@
           "Rumor tanpa data",
           "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Komunikasi Profesional",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced,",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti,",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan t",
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced,",
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti,",
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Komunikasi Profesional di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced,"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Komunikasi Profesional: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Komunikasi Profesional menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Komunikasi Profesional: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti,"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Komunikasi Profesional • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Komunikasi Profesional • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Komunikasi Profesional dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan t",
+          "Ubah catatan hasil Komunikasi Profesional • Advanced agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -750,6 +2370,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kenali ko",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Bas",
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan me",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kenali ko",
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Bas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan me",
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Basic, kenali ko"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Bas",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan me"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Ubah catatan hasil Manajemen Waktu • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -808,6 +2563,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediate, te",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Int",
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan me",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediate, te",
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Int"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan me",
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Intermediate, te"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Int",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan me"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Ubah catatan hasil Manajemen Waktu • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -864,6 +2754,141 @@
           "Rumor tanpa data",
           "ketercapaian target, kualitas latihan, konsistensi — rencana pengukuran dan perbaikan Manajemen Waktu",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, analis",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Adv",
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan me",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, analis",
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Adv"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan me",
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Manajemen Waktu di bidang Soft Skills & Pengembangan Karier, pelajari alat dan istilah: CV, kalender, catatan STAR, target belajar. Untuk tingkat Advanced, analis"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Manajemen Waktu: rencana, latihan, umpan balik, perbaikan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Adv",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Manajemen Waktu menggunakan: CV, catatan wawancara, rencana pengembangan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Manajemen Waktu: jawaban tidak relevan atau target belajar terlewat. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan me"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Manajemen Waktu • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Manajemen Waktu • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Manajemen Waktu dengan indikator ketercapaian target, kualitas latihan, konsistensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Ubah catatan hasil Manajemen Waktu • Advanced agar terlihat sesuai"
         ],
         "correct": 1
       }
