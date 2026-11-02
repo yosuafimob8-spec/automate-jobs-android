@@ -2,6 +2,7 @@ package com.example.automatesmartbot.ui.screens
 
 import android.graphics.Paint
 import android.graphics.Color
+import com.example.automatesmartbot.data.career.TrainingCertificateIdentity
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
 import android.graphics.Typeface
@@ -79,7 +80,7 @@ fun TrainingCertificateExport(item: JSONObject) {
                         }
                         signature("Tanti kurnia", "Training Manager", 207f)
                         signature("Ilham Ramdhan", "Program Director", 633f)
-                        val qrPayload = "KarirMate|INTERNAL|${item.optString("id")}|${item.optString("courseId")}|${item.optString("date")}|${item.optInt("score")}"
+                        val qrPayload = TrainingCertificateIdentity.payload(item.optString("id"), item.optString("courseId"), item.optString("date"), item.optInt("score"))
                         val qr = QRCodeWriter().encode(qrPayload, BarcodeFormat.QR_CODE, 70, 70)
                         val cell = 0.85f
                         paint.style = Paint.Style.FILL
