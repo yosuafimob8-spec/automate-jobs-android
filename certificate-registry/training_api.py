@@ -119,10 +119,12 @@ class TrainingApiMixin:
                     self.reply(400, {"error":"authenticated_name_required"})
                 elif reason in ("invalid answers", "invalid assessment"):
                     self.reply(400, {"error":"invalid_answers"})
+                elif reason == "unknown course":
+                    self.reply(404, {"error":"unknown_course", "message":"Kursus tidak ditemukan di katalog server."})
                 else:
-                    self.reply(400, {"error":"invalid_or_incomplete_assessment"})
-            except TypeError:
-                self.reply(400, {"error":"invalid_or_incomplete_assessment"})
+                    self.reply(400, {"error":"invalid_or_incomplete_assessment", "detail":reason})
+            except (TypeError, KeyError, json.JSONDecodeError):
+                self.reply(400, {"error":"invalid_or_incomplete_assessment", "message":"Format data ujian tidak valid."})
             except __import__("sqlite3").IntegrityError:
                 self.reply(409, {"error":"concurrent_or_duplicate_submission"})
             return True
