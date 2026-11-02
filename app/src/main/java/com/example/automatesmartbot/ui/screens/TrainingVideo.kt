@@ -24,7 +24,11 @@ fun TrainingVideo(courseId: String, lessonIndex: Int, title: String = "", script
                 Text(title, color = androidx.compose.ui.graphics.Color.White, style = MaterialTheme.typography.titleLarge)
                 var section by remember(courseId, lessonIndex) { mutableIntStateOf(0) }
                 val segments = remember(script) {
-                    script.chunked(220).ifEmpty { listOf("Pelajari materi berikut.") }
+                    script.split(Regex("(?<=\\.)\\s+")).fold(mutableListOf<String>()) { pages, sentence ->
+                        if (pages.isEmpty() || pages.last().length + sentence.length > 170) pages.add(sentence)
+                        else pages[pages.lastIndex] = pages.last() + " " + sentence
+                        pages
+                    }.ifEmpty { mutableListOf("Pelajari materi berikut.") }
                 }
                 Text(segments[section.coerceIn(0, segments.lastIndex)], color = androidx.compose.ui.graphics.Color.White)
                 Text("Slide ${section + 1} / ${segments.size}", color = androidx.compose.ui.graphics.Color.LightGray)
