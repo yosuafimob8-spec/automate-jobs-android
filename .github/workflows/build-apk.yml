@@ -1,9 +1,7 @@
-name: Build Karir Mate APK
+name: Build Karir Mate APK - Canonical (Manual Only)
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main, master, 'fix/karirmate-comprehensive-repair', 'fix/profile-gate-unknown-status-20261101', 'fix/from-apk61-latest-features-20261102']
 
 jobs:
   build:
