@@ -13,7 +13,7 @@ object TrainingCertificateIdentity {
         require(baseUrl.startsWith("https://") && !baseUrl.contains("?") && !baseUrl.contains("#")) {
             "Verifikasi publik wajib menggunakan HTTPS"
         }
-        return baseUrl.trimEnd('/') + "/certificate?id=" + id
+        return baseUrl.trimEnd('/') + "/verify?id=" + id
     }
     /** Never use a local completion as proof of online registration. */
     fun verifiedPublicUrl(
