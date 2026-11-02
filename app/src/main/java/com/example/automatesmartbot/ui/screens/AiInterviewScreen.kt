@@ -24,6 +24,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import java.util.Locale
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import org.json.JSONObject
+import org.json.JSONArray
+import java.net.HttpURLConnection
+import java.net.URL
 
 private val InterviewOrange = Color(0xFFFF792E)
 private val InterviewNavy = Color(0xFF172943)
@@ -47,6 +54,10 @@ private fun makeInterviewQuestions(role: String, english: Boolean): List<String>
 @Composable
 fun AiInterviewScreen() {
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+    var loading by remember { mutableStateOf(false) }
+    var aiQuestion by remember { mutableStateOf("") }
+    val conversation = remember { mutableStateListOf<Pair<String,String>>() }
     var page by remember { mutableStateOf("menu") }
     var mode by remember { mutableStateOf("text") }
     var position by remember { mutableStateOf(InterviewPositions.first()) }
@@ -97,6 +108,45 @@ fun AiInterviewScreen() {
             ttsReady = false
         }
     }
+    fun requestAiQuestion() {
+        if (loading) return
+        loading = true
+        error = null
+        val history = conversation.toList()
+        val selectedRole = role
+        val selectedLanguage = if (english) "English" else "Indonesia"
+        scope.launch {
+            val result = withContext(Dispatchers.IO) {
+                runCatching {
+                    val host = if (android.os.Build.FINGERPRINT.contains("generic")) "10.0.2.2" else "127.0.0.1"
+                    val connection = URL("http://$host:8790/interview/next").openConnection() as HttpURLConnection
+                    try {
+                        connection.requestMethod = "POST"
+                        connection.connectTimeout = 5000
+                        connection.readTimeout = 50000
+                        connection.doOutput = true
+                        connection.setRequestProperty("Content-Type", "application/json")
+                        val messages = JSONArray()
+                        history.forEach { (speaker, message) ->
+                            messages.put(JSONObject().put("role", speaker).put("content", message))
+                        }
+                        val body = JSONObject().put("role", selectedRole).put("language", selectedLanguage).put("history", messages)
+                        connection.outputStream.use { it.write(body.toString().toByteArray(Charsets.UTF_8)) }
+                        val stream = if (connection.responseCode in 200..299) connection.inputStream else connection.errorStream
+                        val json = JSONObject(stream.bufferedReader().use { it.readText() })
+                        if (connection.responseCode !in 200..299) throw IllegalStateException(json.optString("error", "Layanan AI tidak tersedia"))
+                        json.getString("question").also { require(it.isNotBlank()) }
+                    } finally { connection.disconnect() }
+                }
+            }
+            loading = false
+            result.onSuccess { question ->
+                aiQuestion = question
+                conversation.add("assistant" to question)
+                page = "session"
+            }.onFailure { error = "AI belum terhubung: ${it.message ?: "periksa backend AI"}" }
+        }
+    }
     fun back() {
         tts?.stop()
         page = when (page) {
@@ -117,7 +167,7 @@ fun AiInterviewScreen() {
             error = "Paket suara bahasa yang dipilih belum tersedia."
             return
         }
-        if (engine.speak(questions[questionIndex], TextToSpeech.QUEUE_FLUSH, null, "interview-question") == TextToSpeech.ERROR)
+        if (engine.speak(aiQuestion, TextToSpeech.QUEUE_FLUSH, null, "interview-question") == TextToSpeech.ERROR)
             error = "Gagal membacakan pertanyaan."
     }
 
@@ -167,29 +217,30 @@ fun AiInterviewScreen() {
                         }
                     }
                 }
-                Text("CV hanya dipilih sebagai referensi pengguna; isi CV belum dianalisis otomatis.", style = MaterialTheme.typography.bodySmall)
+                Text("CV belum dianalisis otomatis. Interview membutuhkan layanan AI lokal aktif.", style = MaterialTheme.typography.bodySmall)
                 Button(
                     onClick = {
                         if (role.isBlank()) error = "Isi nama posisi terlebih dahulu."
                         else {
                             error = null
                             responses.clear()
+                            conversation.clear()
                             questionIndex = 0
                             answer = ""
-                            page = "session"
+                            requestAiQuestion()
                         }
                     },
-                    enabled = role.isNotBlank(),
+                    enabled = role.isNotBlank() && !loading,
                     modifier = Modifier.fillMaxWidth(),
                     colors = ButtonDefaults.buttonColors(containerColor = InterviewOrange)
-                ) { Text(if (mode == "voice") "Mulai Interview Suara" else "Mulai Interview Teks") }
+                ) { Text(if (loading) "Menghubungi AI..." else if (mode == "voice") "Mulai Interview Suara" else "Mulai Interview Teks") }
                 if (role.isBlank()) Text("Isi nama posisi agar sesi bisa dimulai.", color = MaterialTheme.colorScheme.error)
             }
             "session" -> {
                 Text(if (mode == "voice") "Interview Suara" else "Interview Teks", style = MaterialTheme.typography.headlineMedium, color = InterviewNavy)
-                Text("Pertanyaan ${questionIndex + 1} dari ${questions.size} • $role")
+                Text("Pertanyaan ${questionIndex + 1} • $role")
                 Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF2E9)), modifier = Modifier.fillMaxWidth()) {
-                    Text(questions[questionIndex], modifier = Modifier.padding(18.dp), style = MaterialTheme.typography.titleLarge)
+                    Text(aiQuestion, modifier = Modifier.padding(18.dp), style = MaterialTheme.typography.titleLarge)
                 }
                 if (mode == "voice") {
                     OutlinedButton(onClick = { speak() }) { Text("Dengarkan Pertanyaan") }
@@ -209,26 +260,27 @@ fun AiInterviewScreen() {
                     onClick = {
                         if (answer.isNotBlank()) {
                             responses.add(answer.trim())
+                            conversation.add("user" to answer.trim())
                             answer = ""
                             tts?.stop()
-                            if (questionIndex == questions.lastIndex) page = "finished"
-                            else questionIndex++
+                            if (questionIndex >= 9) page = "finished"
+                            else { questionIndex++; requestAiQuestion() }
                         }
                     },
-                    enabled = answer.isNotBlank(),
+                    enabled = answer.isNotBlank() && !loading,
                     modifier = Modifier.fillMaxWidth(),
                     colors = ButtonDefaults.buttonColors(containerColor = InterviewOrange)
-                ) { Text(if (questionIndex == questions.lastIndex) "Selesaikan Interview" else "Simpan Jawaban & Lanjut") }
+                ) { Text(if (loading) "AI sedang menyiapkan pertanyaan..." else if (questionIndex >= 9) "Selesaikan Interview" else "Kirim Jawaban ke AI & Lanjut") }
             }
             "finished" -> {
                 Text("Latihan Selesai", style = MaterialTheme.typography.headlineMedium, color = InterviewNavy)
                 Text("${responses.size} jawaban tercatat dalam sesi ini.")
                 responses.forEachIndexed { index, response ->
-                    Text("${index + 1}. ${questions[index]}", fontWeight = FontWeight.Bold)
+                    Text("${index + 1}. ${conversation.getOrNull(index * 2)?.second ?: "Pertanyaan"}", fontWeight = FontWeight.Bold)
                     Text(response)
                     HorizontalDivider()
                 }
-                Text("Ini latihan lokal. Belum ada analisis CV, pertanyaan dinamis AI, atau penilaian AI.", style = MaterialTheme.typography.bodySmall)
+                Text("Pertanyaan dibuat model AI berdasarkan jawaban. Penilaian AI dan analisis isi CV belum tersedia.", style = MaterialTheme.typography.bodySmall)
                 Button(onClick = { page = "setup" }, colors = ButtonDefaults.buttonColors(containerColor = InterviewOrange)) { Text("Latihan Lagi") }
             }
         }
