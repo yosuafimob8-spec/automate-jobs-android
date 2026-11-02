@@ -51,7 +51,7 @@ import java.net.URL
 
 
 private suspend fun fetchVoxSpeech(context: android.content.Context, text: String, language: String): File = withContext(Dispatchers.IO) {
-    val conn = (URL("http://127.0.0.1:8791/tts").openConnection() as HttpURLConnection).apply {
+    val conn = (URL("http://127.0.0.1:18791/tts").openConnection() as HttpURLConnection).apply {
         requestMethod = "POST"
         connectTimeout = 1200
         readTimeout = 25000
