@@ -18,6 +18,8 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
 import com.example.automatesmartbot.data.career.TrainingCourses
 import com.example.automatesmartbot.data.career.TrainingPositions
+import com.example.automatesmartbot.data.career.TrainingPathways
+import com.example.automatesmartbot.data.career.TrainingLevel
 import com.example.automatesmartbot.data.cv.CvRenderer
 import com.example.automatesmartbot.ui.components.PdfExportButton
 import org.json.JSONArray
@@ -56,10 +58,16 @@ fun JobTrainingScreen() {
     val context = LocalContext.current
     val prefs = remember { context.getSharedPreferences("career_training", 0) }
     var courseId by rememberSaveable { mutableStateOf(TrainingCourses.all.first().id) }
-    val course = TrainingCourses.all.first { it.id == courseId }
+    val course = remember(courseId) {
+        TrainingCourses.all.firstOrNull { it.id == courseId } ?: TrainingPositions.groups.asSequence()
+            .flatMap { it.positions.asSequence() }
+            .flatMap { position -> TrainingLevel.entries.asSequence().map { TrainingPathways.courseFor(position, it) } }
+            .firstOrNull { it.id == courseId } ?: TrainingCourses.all.first()
+    }
     var stage by rememberSaveable { mutableStateOf("catalog") }
     var selectedCategory by rememberSaveable { mutableStateOf(0) }
     var selectedPosition by rememberSaveable { mutableStateOf("") }
+    var selectedLevel by rememberSaveable { mutableStateOf(TrainingLevel.BASIC.name) }
     var module by rememberSaveable { mutableIntStateOf(0) }
     var questionIndex by rememberSaveable { mutableIntStateOf(0) }
     var version by remember { mutableIntStateOf(0) }
@@ -170,14 +178,26 @@ fun JobTrainingScreen() {
                     group.positions.forEach { position ->
                         TrainingCard {
                             Text(position, fontWeight = FontWeight.Bold)
-                            if (group.linkedCourseId != null) {
-                                Text("Materi dasar bidang ini tersedia.")
-                                TrainingAction("Mulai Pelatihan") {
-                                    selectedPosition = position
-                                    choose(group.linkedCourseId)
+                            TrainingLevel.entries.forEach { level ->
+                                val training = TrainingPathways.courseFor(position, level)
+                                val previous = when (level) {
+                                    TrainingLevel.BASIC -> null
+                                    TrainingLevel.INTERMEDIATE -> TrainingPathways.courseFor(position, TrainingLevel.BASIC).id
+                                    TrainingLevel.ADVANCED -> TrainingPathways.courseFor(position, TrainingLevel.INTERMEDIATE).id
                                 }
-                            } else {
-                                Text("Materi khusus posisi ini sedang disiapkan.", color = darkTraining)
+                                val history = JSONArray(prefs.getString("certificates", "[]"))
+                                val unlocked = previous == null || (0 until history.length()).any {
+                                    history.optJSONObject(it)?.optString("courseId") == previous
+                                }
+                                OutlinedButton(
+                                    enabled = unlocked,
+                                    modifier = Modifier.fillMaxWidth(),
+                                    onClick = {
+                                        selectedPosition = position
+                                        selectedLevel = level.name
+                                        choose(training.id)
+                                    }
+                                ) { Text(if (unlocked) "Mulai ${level.label}" else "🔒 ${level.label} — selesaikan tingkat sebelumnya") }
                             }
                         }
                     }
