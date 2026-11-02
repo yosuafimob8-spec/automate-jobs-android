@@ -48,25 +48,32 @@ fun TrainingCertificateExport(item: JSONObject) {
                         val orange = android.graphics.Color.rgb(255, 106, 15)
                         val gold = android.graphics.Color.rgb(207, 149, 35)
                         val dark = android.graphics.Color.rgb(25, 46, 65)
-                        canvas.drawColor(android.graphics.Color.rgb(255, 251, 245))
+                        canvas.drawColor(android.graphics.Color.rgb(255, 253, 247))
+                        paint.style = Paint.Style.FILL
+                        paint.color = dark
+                        canvas.drawRect(0f, 0f, 842f, 24f, paint)
+                        canvas.drawRect(0f, 567f, 842f, 595f, paint)
+                        paint.color = orange
+                        canvas.drawRect(0f, 24f, 842f, 29f, paint)
+                        canvas.drawRect(0f, 562f, 842f, 567f, paint)
                         paint.color = gold
                         paint.style = Paint.Style.STROKE
                         paint.strokeWidth = 5f
-                        canvas.drawRoundRect(22f, 22f, 820f, 573f, 14f, 14f, paint)
+                        canvas.drawRoundRect(22f, 41f, 820f, 554f, 8f, 8f, paint)
                         paint.strokeWidth = 1.5f
-                        canvas.drawRoundRect(33f, 33f, 809f, 562f, 10f, 10f, paint)
+                        canvas.drawRoundRect(31f, 50f, 811f, 545f, 6f, 6f, paint)
                         paint.style = Paint.Style.FILL
-                        text("KarirMate", 93f, 30f, orange, true)
-                        text("SERTIFIKAT", 154f, 46f, dark, true)
+                        text("K A R I R M A T E", 93f, 22f, orange, true)
+                        text("S E R T I F I K A T", 154f, 43f, dark, true)
                         text("PENYELESAIAN PELATIHAN", 184f, 19f, dark, true)
-                        text("Diberikan kepada", 230f, 16f)
-                        text(item.optString("name").take(44), 268f, 30f, dark, true)
+                        text("Dengan ini menyatakan bahwa", 230f, 16f)
+                        text(item.optString("name").take(44), 268f, 38f, orange, true)
                         paint.color = gold
                         paint.strokeWidth = 1.5f
                         canvas.drawLine(230f, 280f, 612f, 280f, paint)
-                        text("Telah menyelesaikan pelatihan", 313f, 16f)
+                        text("Telah berhasil menyelesaikan program pelatihan kerja digital", 313f, 16f)
                         text(item.optString("course").take(55), 344f, 23f, dark, true)
-                        text("Dengan hasil akhir ${item.optInt("score")}/100", 373f, 17f)
+                        text("Nilai akhir: ${item.optInt("score")}/100   •   Status: LULUS", 373f, 17f)
                         paint.color = gold
                         paint.strokeWidth = 1.2f
                         canvas.drawLine(110f, 467f, 305f, 467f, paint)
@@ -94,7 +101,7 @@ fun TrainingCertificateExport(item: JSONObject) {
                         }
                         text("Tanggal: ${item.optString("date")}  •  ID: ${item.optString("id")}", 538f, 10f)
                         text(if (item.optBoolean("serverRegistered")) "Pindai QR untuk verifikasi sertifikat melalui server KarirMate." else "QR identitas lokal; bukan verifikasi online.", 550f, 9f)
-                        text("Sertifikat pelatihan internal KarirMate, bukan sertifikasi kompetensi resmi BNSP.", 563f, 9f)
+                        text("Pelatihan internal KarirMate • Bukan sertifikasi kompetensi BNSP.", 550f, 9f)
                         document.finishPage(page)
                         context.contentResolver.openOutputStream(uri, "wt")?.use { document.writeTo(it) }
                             ?: error("Gagal membuka lokasi penyimpanan")
