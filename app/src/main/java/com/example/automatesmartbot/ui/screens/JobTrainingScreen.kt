@@ -503,7 +503,7 @@ fun JobTrainingScreen() {
                                 val androidCanvas = drawContext.canvas.nativeCanvas
                                 androidCanvas.save()
                                 androidCanvas.scale(size.width / 842f, size.height / 595f)
-                                TrainingCertificateArtwork.draw(androidCanvas, item)
+                                TrainingCertificateArtwork.draw(androidCanvas, item, context)
                                 androidCanvas.restore()
                             }
                         }
