@@ -1,11 +1,11 @@
 """KarirMate AI Interview: contextual, multi-turn LLM service.
 
-Run: pip install fastapi uvicorn httpx\nLocal llama.cpp: llama-server --host 127.0.0.1 --port 11434 --alias gemma3:1b
-     INTERVIEW_LLM_URL=http://127.0.0.1:11434/api/chat INTERVIEW_LLM_MODEL=gemma3:1b \
-       uvicorn interview_api:app --host 0.0.0.0 --port 8790
+Run: pip install fastapi uvicorn httpx
+     llama-server --host 127.0.0.1 --port 11434 --alias gemma3:1b
+     uvicorn interview_api:app --host 127.0.0.1 --port 8790
 
 The endpoint is intentionally authenticated through an external bearer verifier.
-Set INTERVIEW_AUTH_URL to an existing authentication verification endpoint.
+Defaults to the existing KarirMate authentication verifier on port 8787 (/auth/me).
 """
 import json
 import os
@@ -19,7 +19,7 @@ from pydantic import BaseModel, Field
 app = FastAPI(title="KarirMate Interview API")
 LLM_URL = os.getenv("INTERVIEW_LLM_URL", "http://127.0.0.1:11434/v1/chat/completions")
 LLM_MODEL = os.getenv("INTERVIEW_LLM_MODEL", "gemma3:1b")
-AUTH_URL = os.getenv("INTERVIEW_AUTH_URL", "")
+AUTH_URL = os.getenv("INTERVIEW_AUTH_URL", "http://127.0.0.1:8787/auth/me")
 
 
 class Turn(BaseModel):
