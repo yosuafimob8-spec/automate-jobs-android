@@ -1,6 +1,6 @@
 """KarirMate AI Interview: contextual, multi-turn LLM service.
 
-Run: pip install fastapi uvicorn httpx
+Run: pip install fastapi uvicorn httpx\nLocal llama.cpp: llama-server --host 127.0.0.1 --port 11434 --alias gemma3:1b
      INTERVIEW_LLM_URL=http://127.0.0.1:11434/api/chat INTERVIEW_LLM_MODEL=gemma3:1b \
        uvicorn interview_api:app --host 0.0.0.0 --port 8790
 
@@ -17,7 +17,7 @@ from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel, Field
 
 app = FastAPI(title="KarirMate Interview API")
-LLM_URL = os.getenv("INTERVIEW_LLM_URL", "http://127.0.0.1:11434/api/chat")
+LLM_URL = os.getenv("INTERVIEW_LLM_URL", "http://127.0.0.1:11434/v1/chat/completions")
 LLM_MODEL = os.getenv("INTERVIEW_LLM_MODEL", "gemma3:1b")
 AUTH_URL = os.getenv("INTERVIEW_AUTH_URL", "")
 
@@ -114,12 +114,12 @@ async def interview(req: Request, authorization: str | None = Header(default=Non
         try:
             response = await client.post(
                 LLM_URL,
-                json={"model": LLM_MODEL, "messages": prompt(req), "stream": False, "format": "json",
-                      "options": {"temperature": 0.65, "num_predict": 700}},
+                json={"model": LLM_MODEL, "messages": prompt(req), "stream": False,
+                      "response_format": {"type": "json_object"}, "temperature": 0.65, "max_tokens": 700},
                 timeout=120,
             )
             response.raise_for_status()
-            raw = response.json().get("message", {}).get("content", "")
+            raw = response.json().get("choices", [{}])[0].get("message", {}).get("content", "")
         except (httpx.HTTPError, ValueError) as exc:
             raise HTTPException(503, "Model AI tidak dapat dihubungi") from exc
     data = parse_json(raw)
