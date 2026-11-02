@@ -36,7 +36,7 @@ fun TrainingCertificateExport(item: JSONObject) {
                         val page = document.startPage(PdfDocument.PageInfo.Builder(width, height, 1).create())
                         val canvas = page.canvas
                         canvas.scale(width / 842f, height / 595f)
-                        TrainingCertificateArtwork.draw(canvas, item)
+                        TrainingCertificateArtwork.draw(canvas, item, context)
                         document.finishPage(page)
                         context.contentResolver.openOutputStream(uri, "wt")?.use { document.writeTo(it) }
                             ?: error("Gagal membuka lokasi penyimpanan")
