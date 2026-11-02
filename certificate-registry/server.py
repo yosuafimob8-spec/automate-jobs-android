@@ -1,11 +1,11 @@
 """KarirMate certificate registry prototype. Run behind HTTPS reverse proxy in production.
 Registration requires REGISTRY_ADMIN_TOKEN; public verification is read-only.
 """
-import hashlib
 import hmac
 import json
 import os
 import re
+import uuid
 import sqlite3
 from datetime import datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -37,6 +37,10 @@ def validate(record):
     score = record.get("score")
     if not isinstance(cid, str) or not ID_RE.fullmatch(cid):
         raise ValueError("invalid id")
+    try:
+        uuid.UUID(cid)
+    except (ValueError, AttributeError):
+        raise ValueError("invalid uuid")
     if not isinstance(course_id, str) or not COURSE_RE.fullmatch(course_id):
         raise ValueError("invalid course id")
     if not isinstance(name, str) or not 1 <= len(name.strip()) <= 150:
@@ -79,7 +83,6 @@ class Handler(BaseHTTPRequestHandler):
         self.send_response(code)
         self.send_header("Content-Type", "application/json; charset=utf-8")
         self.send_header("Cache-Control", "no-store")
-        self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
         self.wfile.write(body)
@@ -114,7 +117,7 @@ class Handler(BaseHTTPRequestHandler):
         return self.reply(404, {"error": "not_found"})
 
     def do_POST(self):
-        if self.path != "/certificates":
+        if self.path not in ("/certificates", "/revoke"):
             return self.reply(404, {"error": "not_found"})
         auth = self.headers.get("Authorization", "")
         if not TOKEN or not hmac.compare_digest(auth, "Bearer " + TOKEN):
@@ -124,6 +127,15 @@ class Handler(BaseHTTPRequestHandler):
             if size < 1 or size > 8192:
                 return self.reply(413, {"error": "invalid_size"})
             payload = json.loads(self.rfile.read(size))
+            if self.path == "/revoke":
+                cid = payload.get("id") if isinstance(payload, dict) else None
+                if not isinstance(cid, str) or not ID_RE.fullmatch(cid):
+                    return self.reply(400, {"error": "invalid_id"})
+                with connect() as conn:
+                    result = conn.execute("UPDATE certificates SET revoked=1 WHERE id=?", (cid,))
+                    if result.rowcount == 0:
+                        return self.reply(404, {"error": "not_found"})
+                return self.reply(200, {"id": cid, "revoked": True})
             cid = register(payload)
             return self.reply(201, {"id": cid, "registered": True})
         except (ValueError, KeyError, json.JSONDecodeError) as exc:
