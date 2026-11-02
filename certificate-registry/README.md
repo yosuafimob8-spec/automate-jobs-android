@@ -25,3 +25,14 @@ curl 'http://127.0.0.1:8792/verify?id=123e4567-e89b-12d3-a456-426614174000'
 ```
 
 **Important:** The Android app currently stores completion in local SharedPreferences. A public registry **cannot securely trust a client-generated certificate**. Before public launch, move final exam grading, course completion validation, and certificate issuance to an authenticated backend; register only server-verified completions. Never put the admin token in Android. Current QR contains offline identity fields, not an HTTPS verification URL; the QR format must be updated after the public HTTPS verification domain is configured. No live verification site has been deployed.
+
+## Release gates (must be completed before public verification)
+
+1. Deploy the registry behind a public HTTPS domain with a durable, backed-up database and a strong admin secret stored only on the server.
+2. Move exam scoring, module-completion checks and certificate issuance to authenticated server endpoints. **Do not register client-submitted completion claims as trusted.**
+3. Publish a minimal public verification page showing status, course, date and certificate ID. Treat participant names as personal data; disclose only with explicit consent and an appropriate privacy policy.
+4. Change QR to the actual HTTPS verification URL only after the domain and trusted issuance are live. Previously issued offline QR codes remain offline identity payloads and should not be described as online-verifiable.
+5. Execute the feature-branch GitHub Actions training tests, inspect their actual result, and manually check the Android training-to-PDF flow on a device. Unit tests do not prove device UI or PDF rendering.
+6. Add rate limiting, monitoring, certificate revocation administration, audit records, and backup/restore validation before public launch.
+
+The feature branch workflow runs unit tests only; it does not assemble an APK. This prototype has **not** been deployed to a live public service.
