@@ -1,0 +1,872 @@
+[
+  {
+    "courseId": "role_operator_produksi_basic",
+    "title": "Operator Produksi • Basic",
+    "lessons": [
+      "Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Operator Produksi.",
+      "Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Operator Produksi.",
+      "Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Operator Produksi.",
+      "Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Operator Produksi.",
+      "Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Operator Produksi."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Operator Produksi?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Operator Produksi?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Operator Produksi?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Operator Produksi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Operator Produksi?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Operator Produksi",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_operator_produksi_intermediate",
+    "title": "Operator Produksi • Intermediate",
+    "lessons": [
+      "Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Operator Produksi.",
+      "Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Operator Produksi.",
+      "Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Operator Produksi.",
+      "Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Operator Produksi.",
+      "Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Operator Produksi."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Operator Produksi?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Operator Produksi?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Operator Produksi?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Operator Produksi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Operator Produksi?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Operator Produksi",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_operator_produksi_advanced",
+    "title": "Operator Produksi • Advanced",
+    "lessons": [
+      "Sebagai Operator Produksi di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Operator Produksi.",
+      "Simulasikan alur kerja Operator Produksi: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Operator Produksi.",
+      "Buat contoh dokumen Operator Produksi menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Operator Produksi.",
+      "Studi kasus Operator Produksi: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Operator Produksi.",
+      "Evaluasi pekerjaan Operator Produksi dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Operator Produksi."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Operator Produksi?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Operator Produksi?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah menjalankan tanggung jawab jabatan Operator Produksi berdasarkan SOP yang berlaku dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Operator Produksi?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Operator Produksi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Operator Produksi?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Operator Produksi",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_quality_control_basic",
+    "title": "Quality Control • Basic",
+    "lessons": [
+      "Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Quality Control.",
+      "Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Quality Control.",
+      "Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Quality Control.",
+      "Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Quality Control.",
+      "Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Quality Control."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Quality Control?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Quality Control?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Quality Control?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Quality Control"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Quality Control?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Quality Control",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_quality_control_intermediate",
+    "title": "Quality Control • Intermediate",
+    "lessons": [
+      "Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Quality Control.",
+      "Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Quality Control.",
+      "Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Quality Control.",
+      "Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Quality Control.",
+      "Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Quality Control."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Quality Control?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Quality Control?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Quality Control?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Quality Control"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Quality Control?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Quality Control",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_quality_control_advanced",
+    "title": "Quality Control • Advanced",
+    "lessons": [
+      "Sebagai Quality Control di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Quality Control.",
+      "Simulasikan alur kerja Quality Control: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Quality Control.",
+      "Buat contoh dokumen Quality Control menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Quality Control.",
+      "Studi kasus Quality Control: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Quality Control.",
+      "Evaluasi pekerjaan Quality Control dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Quality Control."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Quality Control?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Quality Control?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Quality Control?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Quality Control"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Quality Control?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Quality Control",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_quality_assurance_basic",
+    "title": "Quality Assurance • Basic",
+    "lessons": [
+      "Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Quality Assurance.",
+      "Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Quality Assurance.",
+      "Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Quality Assurance.",
+      "Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Quality Assurance.",
+      "Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Quality Assurance."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Quality Assurance?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Quality Assurance?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Quality Assurance?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Quality Assurance"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Quality Assurance?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Quality Assurance",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_quality_assurance_intermediate",
+    "title": "Quality Assurance • Intermediate",
+    "lessons": [
+      "Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Quality Assurance.",
+      "Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Quality Assurance.",
+      "Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Quality Assurance.",
+      "Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Quality Assurance.",
+      "Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Quality Assurance."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Quality Assurance?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Quality Assurance?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Quality Assurance?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Quality Assurance"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Quality Assurance?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Quality Assurance",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_quality_assurance_advanced",
+    "title": "Quality Assurance • Advanced",
+    "lessons": [
+      "Sebagai Quality Assurance di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Quality Assurance.",
+      "Simulasikan alur kerja Quality Assurance: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Quality Assurance.",
+      "Buat contoh dokumen Quality Assurance menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Quality Assurance.",
+      "Studi kasus Quality Assurance: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Quality Assurance.",
+      "Evaluasi pekerjaan Quality Assurance dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Quality Assurance."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Quality Assurance?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Quality Assurance?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Quality Assurance?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Quality Assurance"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Quality Assurance?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Quality Assurance",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_production_leader_basic",
+    "title": "Production Leader • Basic",
+    "lessons": [
+      "Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Production Leader.",
+      "Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Production Leader.",
+      "Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Production Leader.",
+      "Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Production Leader.",
+      "Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Production Leader."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Production Leader?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Production Leader?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Production Leader?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Production Leader"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Production Leader?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Production Leader",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_production_leader_intermediate",
+    "title": "Production Leader • Intermediate",
+    "lessons": [
+      "Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Production Leader.",
+      "Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Production Leader.",
+      "Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Production Leader.",
+      "Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Production Leader.",
+      "Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Production Leader."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Production Leader?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Production Leader?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Production Leader?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Production Leader"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Production Leader?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Production Leader",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_production_leader_advanced",
+    "title": "Production Leader • Advanced",
+    "lessons": [
+      "Sebagai Production Leader di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Production Leader.",
+      "Simulasikan alur kerja Production Leader: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Production Leader.",
+      "Buat contoh dokumen Production Leader menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Production Leader.",
+      "Studi kasus Production Leader: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Production Leader.",
+      "Evaluasi pekerjaan Production Leader dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Production Leader."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Production Leader?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Production Leader?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Production Leader?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Production Leader"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Production Leader?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Production Leader",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_production_supervisor_basic",
+    "title": "Production Supervisor • Basic",
+    "lessons": [
+      "Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Production Supervisor.",
+      "Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Production Supervisor.",
+      "Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Production Supervisor.",
+      "Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Production Supervisor.",
+      "Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Production Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Production Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Production Supervisor?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Production Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Production Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Production Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Production Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_production_supervisor_intermediate",
+    "title": "Production Supervisor • Intermediate",
+    "lessons": [
+      "Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Production Supervisor.",
+      "Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Production Supervisor.",
+      "Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Production Supervisor.",
+      "Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Production Supervisor.",
+      "Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Production Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Production Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Production Supervisor?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Production Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Production Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Production Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Production Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_production_supervisor_advanced",
+    "title": "Production Supervisor • Advanced",
+    "lessons": [
+      "Sebagai Production Supervisor di bidang Produksi & Manufaktur, pelajari alat dan istilah: work instruction, mesin produksi, check sheet. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet Bukti hasil: checklist risiko dan kewenangan Production Supervisor.",
+      "Simulasikan alur kerja Production Supervisor: persiapan line, produksi, pemeriksaan, serah terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima Bukti hasil: bagan alur kerja Production Supervisor.",
+      "Buat contoh dokumen Production Supervisor menggunakan: batch record, hasil QC, downtime log. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada batch record, hasil QC, downtime log Bukti hasil: contoh dokumen dan bukti kerja Production Supervisor.",
+      "Studi kasus Production Supervisor: produk cacat atau mesin berhenti mendadak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus produk cacat atau mesin berhenti mendadak saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Production Supervisor.",
+      "Evaluasi pekerjaan Production Supervisor dengan indikator yield, defect rate, OEE. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran yield, defect rate, OEE Bukti hasil: rencana pengukuran dan perbaikan Production Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Production Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work instruction, mesin produksi, check sheet — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan work instruction, mesin produksi, check sheet",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Production Supervisor?",
+        "options": [
+          "persiapan line, produksi, pemeriksaan, serah terima — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses persiapan line, produksi, pemeriksaan, serah terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Production Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "batch record, hasil QC, downtime log — contoh dokumen dan bukti kerja Production Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi produk cacat atau mesin berhenti mendadak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Production Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "yield, defect rate, OEE — rencana pengukuran dan perbaikan Production Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
