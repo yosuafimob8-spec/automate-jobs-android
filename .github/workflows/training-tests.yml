@@ -14,7 +14,7 @@ jobs:
           distribution: temurin
           java-version: '21'
       - name: Test certificate registry (Python, no APK)
-        run: cd certificate-registry && python3 -m unittest -v test_server.py test_trusted_training.py test_training_api.py
+        run: cd certificate-registry && python3 -m unittest -v test_server.py test_trusted_training.py test_training_api.py test_training_http.py
       - name: Validate training content and run unit tests (no APK)
         run: |
           chmod +x gradlew
