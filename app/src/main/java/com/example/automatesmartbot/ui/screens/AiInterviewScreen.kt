@@ -215,6 +215,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     val session = remember(context) { SessionManager(context.applicationContext) }
     var ttsReady by remember { mutableStateOf(false) }
     val voiceMode = interviewMode == "voice"
+    val selectedLocale = if (language == "en") Locale.US else Locale.forLanguageTag("id-ID")
     BackHandler(enabled = started || showPreparation || report.isNotBlank()) {
         when {
             report.isNotBlank() -> { report = ""; started = false; showPreparation = true }
@@ -225,6 +226,13 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     var pendingSpeech by remember { mutableStateOf<String?>(null) }
     val tts = remember { TextToSpeech(context) { status -> ttsReady = status == TextToSpeech.SUCCESS } }
     DisposableEffect(tts) { onDispose { tts.stop(); tts.shutdown() } }
+    LaunchedEffect(ttsReady, language) {
+        if (ttsReady) {
+            tts.language = selectedLocale
+            tts.setSpeechRate(0.90f)
+            tts.setPitch(1.02f)
+        }
+    }
     val voiceLauncher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == android.app.Activity.RESULT_OK) {
             val spoken = result.data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)?.firstOrNull()
@@ -295,8 +303,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     question = response.question
                     pendingQuestion = if (response.awaitingAnswer) response.question else ""
                     if (voiceMode && ttsReady) {
-                        tts.language = if (language == "en") Locale.US else Locale.forLanguageTag("id-ID")
-                        val speechStatus = tts.speak((response.feedback.takeIf { it.isNotBlank() }?.plus(". ") ?: "") + question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
+                        tts.language = selectedLocale
+                        val speechStatus = tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
                         if (speechStatus == TextToSpeech.ERROR) error = "Pembaca suara gagal. Pertanyaan tetap tersedia sebagai teks."
                     }
                     started = true
@@ -416,7 +424,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     Text(item, Modifier.clickable { role = item }, color = ink)
                 }
             }
-            Text("Bahasa", color = ink, fontWeight = FontWeight.Bold)
+            Text("Bahasa Interview", color = ink, fontWeight = FontWeight.Bold)
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 FilterChip(selected = language == "id", onClick = { language = "id" }, label = { Text("Indonesia", color = ink) })
                 FilterChip(selected = language == "en", onClick = { language = "en" }, label = { Text("English", color = ink) })
@@ -432,7 +440,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 }
             }
             Text("CV maksimal 10 MB; PDF scan memerlukan OCR.", color = muted, style = MaterialTheme.typography.bodySmall)
-            if (voiceMode) Text("Mode suara: AI membacakan pertanyaan. Jawab menggunakan mikrofon.", color = ink)
+            if (voiceMode) Text("Mode suara: AI membacakan pertanyaan. Jawab hanya melalui mikrofon.", color = ink)
             Button(enabled = !loading && !cvReading && endpoint != null, modifier = Modifier.fillMaxWidth().height(56.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = orange), shape = RoundedCornerShape(16.dp),
                 onClick = {
@@ -495,7 +503,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                         }
                     }
                 }
-                if (loading) item { CircularProgressIndicator(color = teal) }
+                if (loading) item { Row(Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) { CircularProgressIndicator(Modifier.size(22.dp), color = teal, strokeWidth = 2.dp); Spacer(Modifier.width(10.dp)); Text("AI sedang menyiapkan respons...", color = ink) } }
             }
             if (error.isNotBlank()) Text(error, Modifier.padding(horizontal = 16.dp), color = MaterialTheme.colorScheme.error)
             Row(Modifier.fillMaxWidth().background(Color.White).padding(10.dp),
@@ -505,16 +513,16 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     textStyle = androidx.compose.ui.text.TextStyle(color = ink),
                     colors = OutlinedTextFieldDefaults.colors(focusedTextColor = ink, unfocusedTextColor = ink, cursorColor = orange, focusedContainerColor = Color.White, unfocusedContainerColor = Color.White),
                     shape = RoundedCornerShape(24.dp))
-                if (voiceMode) IconButton(onClick = {
+                if (voiceMode) IconButton(enabled = !loading, onClick = {
                     val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
                         putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
                         putExtra(RecognizerIntent.EXTRA_LANGUAGE, if (language == "en") "en-US" else "id-ID")
                     }
                     try { voiceLauncher.launch(intent) } catch (_: Exception) { error = "Pengenalan suara tidak tersedia." }
                 }) { Text("🎙", color = ink) }
-                if (voiceMode) TextButton(onClick = {
+                if (voiceMode) TextButton(enabled = !loading, onClick = {
                     if (ttsReady && question.isNotBlank()) {
-                        tts.language = if (language == "en") Locale.ENGLISH else Locale.forLanguageTag("id-ID")
+                        tts.language = selectedLocale
                         tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-repeat")
                     } else error = "Mesin pembaca suara belum siap di perangkat."
                 }) { Text("🔊", color = ink) }
