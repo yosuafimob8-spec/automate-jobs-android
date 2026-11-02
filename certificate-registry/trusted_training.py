@@ -83,7 +83,7 @@ def submit_exam(conn, authenticated_user_id, course_id, answers, participant_nam
                                          course_title=title,completion_date=date.today().isoformat())
     return {"certificateId":certificate_id,"score":score,"registered":True}
 
-def expand_exam_questions(questions, course_title):
+def expand_exam_questions(questions, course_title, lessons=None):
     """Generate distinct applied competency checks from role training modules.
 
     Core courses use twenty manually authored questions from trusted_catalog.json.
@@ -126,13 +126,18 @@ def expand_exam_questions(questions, course_title):
         ("Setelah perbaikan proses {role} diterapkan, bagaimana menilai keberhasilannya?",
          "Bandingkan indikator sebelum dan sesudah dengan bukti", "Anggap berhasil tanpa pengukuran", "Hapus laporan lama"),
     ]
+    lessons = lessons or []
+    def lesson_topic(index):
+        if index >= len(lessons):
+            return course_title
+        return lessons[index].split(".")[0].strip()[:150]
     result = list(questions)
     for index, (prompt, correct, wrong_a, wrong_b) in enumerate(scenarios):
         options = [correct, wrong_a, wrong_b]
         shift = index % 3
         options = options[shift:] + options[:shift]
         result.append({
-            "prompt": prompt.format(role=course_title),
+            "prompt": prompt.format(role=course_title) + " Konteks materi: " + lesson_topic(index % max(1, len(lessons))),
             "options": options,
             "correct": (3 - shift) % 3,
         })
@@ -154,7 +159,7 @@ def seed_trusted_catalog(conn, catalog_path=None):
         course_id = item["courseId"]
         title = item["title"]
         lessons = item["lessons"]
-        questions = expand_exam_questions(item["questions"], title)
+        questions = expand_exam_questions(item["questions"], title, lessons)
         if not isinstance(lessons, list) or not lessons or not isinstance(questions, list) or len(questions) < 5:
             raise ValueError("invalid course material")
         if any(not isinstance(q.get("prompt"), str) or len(q.get("options", [])) < 2 for q in questions):
