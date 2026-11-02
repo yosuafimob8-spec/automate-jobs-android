@@ -82,11 +82,10 @@ class FeatureUiTest {
         compose.onNodeWithText("Preview A4").performScrollTo().performClick()
         compose.onNodeWithText("Tutup Preview").assertExists()
     }
-    @Test fun trainingEvaluationPersistsCompletionAndEnablesPdfCertificate() {
-        compose.activity.getSharedPreferences("career_training",0).edit().clear().commit()
+    @Test fun legacyTrainingCourseDoesNotIssueCertificateWithoutTwentyQuestions() {
+        compose.activity.getSharedPreferences("career_training", 0).edit().clear().commit()
         compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { JobTrainingScreen() } }
         val course = com.example.automatesmartbot.data.career.TrainingCourses.all.first()
-        // Follow the real catalog -> lesson -> practice -> exam -> certificate flow.
         compose.onNodeWithText(course.title).performScrollTo().performClick()
         val practice = "Saya akan periksa data yang masuk, melakukan verifikasi sumber informasi, mencatat setiap temuan secara lengkap, lalu melapor kepada penanggung jawab agar langkah perbaikan dapat dievaluasi dengan benar dan pekerjaan berjalan sesuai prosedur."
         course.lessons.forEach { lesson ->
@@ -96,17 +95,11 @@ class FeatureUiTest {
             compose.onNodeWithText("Kumpulkan Jawaban").performScrollTo().performClick()
         }
         compose.onNodeWithText("Evaluasi Akhir →").performScrollTo().performClick()
-        course.questions.forEachIndexed { index, q ->
-            compose.onNodeWithText(q.options[q.correct]).performScrollTo().performClick()
-            compose.onNodeWithText(if (index == course.questions.lastIndex) "Selesai" else "Berikutnya ›").performScrollTo().performClick()
-        }
-        compose.onAllNodes(hasSetTextAction())[0].performTextInput("Dina Peserta")
-        compose.onNodeWithText("Lihat Hasil").performScrollTo().performClick()
-        compose.onNodeWithText("⬇ Unduh Sertifikat (PDF)").performScrollTo().assertIsEnabled()
+        // Legacy catalog courses contain five questions; production requires 20.
+        compose.onNodeWithText("Bank soal 20 pertanyaan belum tersedia untuk kursus ini.", substring = true).assertExists()
         compose.runOnIdle {
-            val history = org.json.JSONArray(compose.activity.getSharedPreferences("career_training",0).getString("certificates","[]"))
-            assertEquals("Dina Peserta",history.getJSONObject(0).getString("name"))
-            assertEquals(100,history.getJSONObject(0).getInt("score"))
+            val history = org.json.JSONArray(compose.activity.getSharedPreferences("career_training", 0).getString("certificates", "[]"))
+            assertEquals(0, history.length())
         }
     }
     @Test fun previousIsDisabledOnFirstQuestionAndChoiceSurvivesNextPrevious() {
