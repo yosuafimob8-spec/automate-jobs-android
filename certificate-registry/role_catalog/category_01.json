@@ -2713,184 +2713,184 @@
     ],
     "questions": [
       {
-        "prompt": "Perangkat atau istilah yang relevan bagi Inventory Control?",
+        "prompt": "Hasil cycle count SKU A 480 unit, WMS 500 unit. Berapa tingkat akurasi stok berdasarkan jumlah sistem?",
         "options": [
-          "Tidak perlu memahami alat",
-          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan WMS, barcode scanner, SKU, rak lokasi",
-          "Gunakan data tanpa izin"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Alur kerja yang sesuai untuk Inventory Control?",
-        "options": [
-          "receiving, putaway, picking, packing, dispatch — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses receiving, putaway, picking, packing, dispatch",
-          "Abaikan verifikasi",
-          "Langsung tutup pekerjaan tanpa bukti"
+          "96%",
+          "104%",
+          "20%"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dokumen kerja yang relevan untuk Inventory Control?",
+        "prompt": "Selisih stok berulang pada SKU dengan banyak transaksi transfer. Data apa yang diperiksa pertama?",
         "options": [
-          "Catatan palsu",
-          "Data tanpa izin",
-          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Inventory Control"
+          "Jumlah pengunjung gudang",
+          "Riwayat scan transfer, lokasi asal-tujuan, dan waktu posting",
+          "Harga kemasan karton"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Stok negatif muncul setiap malam setelah sinkronisasi marketplace. Hipotesis yang perlu diuji?",
+        "options": [
+          "Tinggi rak penyimpanan",
+          "Jumlah alat tulis shift malam",
+          "Urutan reservasi order dan posting pengurangan stok"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "prompt": "Dalam audit ditemukan 12 adjustment tanpa alasan yang tercatat. Kontrol yang harus diperkuat?",
         "options": [
-          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
-          "Sembunyikan kejadian",
-          "Ubah data diam-diam"
+          "Wajibkan kode alasan, bukti, dan persetujuan untuk adjustment",
+          "Beri akses adjustment kepada semua pengguna",
+          "Hapus log perubahan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Indikator kinerja yang relevan untuk Inventory Control?",
+        "prompt": "Produk batch B kedaluwarsa lebih dulu daripada batch A, tetapi WMS memprioritaskan A. Apa tindakan?",
         "options": [
-          "Rumor tanpa data",
-          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Inventory Control",
-          "Tidak perlu mengukur hasil"
+          "Biarkan karena A lebih mudah dijangkau",
+          "Periksa konfigurasi FEFO dan tanggal kedaluwarsa pada master batch",
+          "Ubah semua tanggal menjadi sama"
         ],
         "correct": 1
       },
       {
-        "prompt": "Dalam pemeriksaan awal, informasi apa yang wajib diverifikasi dari materi berikut? (Inventory Control • Advanced; tahap 1)",
+        "prompt": "SKU yang sama tercatat dalam dua unit pengukuran berbeda. Risiko utama yang perlu dicegah?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Sebagai Inventory Control di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 0
-      },
-      {
-        "prompt": "Saat menyusun urutan kerja, tindakan apa yang tepat menurut prosedur berikut? (Inventory Control • Advanced; tahap 2)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Inventory Control • Advanced: Simulasikan alur kerja Inventory Control: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Pada pengisian dokumen, bukti apa yang harus disiapkan sesuai materi berikut? (Inventory Control • Advanced; tahap 3)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Buat contoh dokumen Inventory Control menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: L"
+          "Warna label tidak konsisten",
+          "Jam kerja operator berubah",
+          "Konversi karton-ke-unit salah dan menyebabkan selisih stok"
         ],
         "correct": 2
       },
       {
-        "prompt": "Ketika terjadi penyimpangan, tindakan apa yang paling sesuai dengan studi kasus berikut? (Inventory Control • Advanced; tahap 4)",
+        "prompt": "Inventory Control menerima laporan barang rusak yang belum dipisahkan dari stok jual. Apa tindakan tepat?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Studi kasus Inventory Control: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi"
+          "Karantina fisik dan sistem, lalu rekonsiliasi status stok",
+          "Masukkan barang rusak ke stok tersedia",
+          "Hapus laporan kerusakan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Saat menilai hasil pekerjaan, indikator apa yang harus dicatat dari materi berikut? (Inventory Control • Advanced; tahap 5)",
+        "prompt": "Satu lokasi memiliki 40 unit fisik, sistem 60 unit, dan 15 unit sedang dalam transfer terbuka. Apa yang harus dilakukan?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Inventory Control • Advanced: Evaluasi pekerjaan Inventory Control dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi"
+          "Langsung adjustment minus 20 unit",
+          "Telusuri transfer terbuka dan waktu cut-off sebelum menetapkan selisih",
+          "Anggap 15 unit sudah terjual"
         ],
         "correct": 1
       },
       {
-        "prompt": "Jika petugas baru menjalankan tahap ini, bagaimana memastikan langkahnya benar? (Inventory Control • Advanced; tahap 1)",
+        "prompt": "Kebijakan ABC menghitung SKU bernilai tinggi lebih sering. Dasar pemilihan SKU A yang tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Sebagai Inventory Control di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak"
+          "Jumlah huruf dalam nama produk",
+          "Warna kemasan produk",
+          "Nilai konsumsi atau pergerakan dan dampak finansial SKU"
         ],
         "correct": 2
       },
       {
-        "prompt": "Saat serah terima pekerjaan ini, apa yang harus dapat ditelusuri? (Inventory Control • Advanced; tahap 2)",
+        "prompt": "Stock opname dimulai saat receiving masih berjalan tanpa cut-off. Risiko apa yang harus dikendalikan?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Simulasikan alur kerja Inventory Control: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi"
+          "Transaksi selama hitung dapat terhitung ganda atau terlewat",
+          "Semua SKU otomatis berubah menjadi batch baru",
+          "Harga pembelian selalu turun"
         ],
         "correct": 0
       },
       {
-        "prompt": "Jika ada data tidak cocok pada proses ini, tindakan apa yang paling tepat? (Inventory Control • Advanced; tahap 3)",
+        "prompt": "Terdapat 120 SKU, 30 di antaranya termasuk prioritas A. Jika semua A harus dihitung mingguan, berapa hitungan SKU A per minggu?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Inventory Control • Advanced: Buat contoh dokumen Inventory Control menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: L",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi"
+          "15 SKU",
+          "30 SKU",
+          "90 SKU"
         ],
         "correct": 1
       },
       {
-        "prompt": "Sebelum menyetujui hasil pada proses ini, apa yang perlu dipastikan? (Inventory Control • Advanced; tahap 4)",
+        "prompt": "Audit menemukan akses WMS mantan karyawan masih aktif. Apa tindakan kontrol akses yang tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Studi kasus Inventory Control: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas"
+          "Bagikan akun ke pengganti",
+          "Gunakan akun untuk koreksi historis",
+          "Nonaktifkan akses dan telaah log transaksi terkait"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi keterlambatan pada tahap ini, bagaimana melaporkannya? (Inventory Control • Advanced; tahap 5)",
+        "prompt": "Selisih antara stok sistem dan fisik hanya muncul pada pesanan retur. Proses apa yang perlu diuji?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Evaluasi pekerjaan Inventory Control dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi"
+          "Alur retur, inspeksi kualitas, dan posting kembali ke stok",
+          "Jadwal pengiriman pemasok baru",
+          "Ukuran label ekspedisi"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam audit internal atas proses ini, catatan apa yang paling relevan? (Inventory Control • Advanced; tahap 1)",
+        "prompt": "Barang serial-numbered hilang tetapi jumlah total SKU tetap sesuai. Apa risiko yang masih ada?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Inventory Control • Advanced: Sebagai Inventory Control di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi"
+          "Tidak ada karena total sama",
+          "Ketertelusuran unit individual dan klaim garansi terganggu",
+          "Berat karton berubah otomatis"
         ],
         "correct": 1
       },
       {
-        "prompt": "Ketika sistem atau alat terkait tidak tersedia, apa langkah aman? (Inventory Control • Advanced; tahap 2)",
+        "prompt": "Data stok tersedia menunjukkan 100 unit, tetapi 70 unit sudah dialokasikan dan 20 unit dikarantina. Berapa unit bebas dipakai?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Simulasikan alur kerja Inventory Control: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y"
+          "30 unit",
+          "20 unit",
+          "10 unit"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika rekan kerja meminta melewati pemeriksaan ini, apa respons yang tepat? (Inventory Control • Advanced; tahap 3)",
+        "prompt": "Setelah koreksi stok, audit meminta bukti sebelum-sesudah. Dokumen apa yang harus disiapkan?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Buat contoh dokumen Inventory Control menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: L",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi"
+          "Hasil hitung fisik, log transaksi, alasan koreksi, dan persetujuan",
+          "Hanya tangkapan layar saldo akhir",
+          "Catatan lisan tanpa tanggal"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam simulasi kesalahan pada tahap ini, bagaimana mencegah pengulangan? (Inventory Control • Advanced; tahap 4)",
+        "prompt": "Perbedaan jumlah stok terjadi karena integrasi ERP-WMS mengirim transaksi dua kali. Kontrol pencegahan apa yang tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Inventory Control • Advanced: Studi kasus Inventory Control: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi"
+          "Menonaktifkan seluruh sinkronisasi permanen",
+          "Gunakan ID transaksi unik dan mekanisme idempotensi pada integrasi",
+          "Menghapus nomor referensi transaksi"
         ],
         "correct": 1
       },
       {
-        "prompt": "Setelah pekerjaan ini selesai, apa dasar evaluasi yang dapat dipertanggungjawabkan? (Inventory Control • Advanced; tahap 5)",
+        "prompt": "Barang dipindah dari bin D-01 ke D-02 tanpa scan, tetapi saldo SKU total tidak berubah. Risiko operasional utama?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Inventory Control • Advanced",
-          "Ubah hasil atau dokumen Inventory Control • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Evaluasi pekerjaan Inventory Control dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan"
+          "Tidak ada karena total stok sama",
+          "Harga jual barang berubah",
+          "Ketidakakuratan lokasi menyebabkan salah picking dan waktu pencarian naik"
         ],
         "correct": 2
+      },
+      {
+        "prompt": "Satu SKU memiliki saldo 250 unit, penjualan rata-rata 25 unit per hari, tanpa inbound. Berapa hari cakupan stok?",
+        "options": [
+          "10 hari",
+          "25 hari",
+          "100 hari"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Manajemen ingin mengukur hasil perbaikan akurasi inventory setelah 6 minggu. KPI apa yang paling kuat?",
+        "options": [
+          "Jumlah rapat inventaris",
+          "Tren selisih stok per SKU, nilai adjustment, dan akurasi cycle count",
+          "Jumlah pesan di grup kerja"
+        ],
+        "correct": 1
       }
     ]
   },
