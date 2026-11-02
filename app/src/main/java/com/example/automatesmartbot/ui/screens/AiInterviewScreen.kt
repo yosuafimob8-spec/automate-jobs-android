@@ -31,6 +31,9 @@ import org.json.JSONObject
 import org.json.JSONArray
 import java.net.HttpURLConnection
 import java.net.URL
+import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
+import com.tom_roush.pdfbox.pdmodel.PDDocument
+import com.tom_roush.pdfbox.text.PDFTextStripper
 
 private val InterviewOrange = Color(0xFFFF792E)
 private val InterviewNavy = Color(0xFF172943)
@@ -57,6 +60,8 @@ fun AiInterviewScreen() {
     val scope = rememberCoroutineScope()
     var loading by remember { mutableStateOf(false) }
     var aiQuestion by remember { mutableStateOf("") }
+    var cvText by remember { mutableStateOf("") }
+    var evaluation by remember { mutableStateOf("") }
     val conversation = remember { mutableStateListOf<Pair<String,String>>() }
     var page by remember { mutableStateOf("menu") }
     var mode by remember { mutableStateOf("text") }
@@ -84,6 +89,23 @@ fun AiInterviewScreen() {
             runCatching { context.contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION) }
             cvUri = uri
             cvName = name ?: uri.lastPathSegment ?: "CV.pdf"
+            cvText = ""
+            scope.launch {
+                val extracted = withContext(Dispatchers.IO) {
+                    runCatching {
+                        PDFBoxResourceLoader.init(context.applicationContext)
+                        context.contentResolver.openInputStream(uri)?.use { input ->
+                            PDDocument.load(input).use { document ->
+                                PDFTextStripper().getText(document).take(6000).trim()
+                            }
+                        }.orEmpty()
+                    }
+                }
+                extracted.onSuccess {
+                    cvText = it
+                    if (it.isBlank()) error = "PDF tidak memiliki teks yang dapat dibaca."
+                }.onFailure { error = "Gagal membaca CV: ${it.message}" }
+            }
         }
     }
     val speech = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -108,18 +130,19 @@ fun AiInterviewScreen() {
             ttsReady = false
         }
     }
-    fun requestAiQuestion() {
+    fun requestAiQuestion(evaluate: Boolean = false) {
         if (loading) return
         loading = true
         error = null
         val history = conversation.toList()
+        val selectedCv = cvText
         val selectedRole = role
         val selectedLanguage = if (english) "English" else "Indonesia"
         scope.launch {
             val result = withContext(Dispatchers.IO) {
                 runCatching {
                     val host = if (android.os.Build.FINGERPRINT.contains("generic")) "10.0.2.2" else "127.0.0.1"
-                    val connection = URL("http://$host:8790/interview/next").openConnection() as HttpURLConnection
+                    val connection = URL("http://$host:8790/interview/" + if (evaluate) "evaluate" else "next").openConnection() as HttpURLConnection
                     try {
                         connection.requestMethod = "POST"
                         connection.connectTimeout = 5000
@@ -130,20 +153,25 @@ fun AiInterviewScreen() {
                         history.forEach { (speaker, message) ->
                             messages.put(JSONObject().put("role", speaker).put("content", message))
                         }
-                        val body = JSONObject().put("role", selectedRole).put("language", selectedLanguage).put("history", messages)
+                        val body = JSONObject().put("role", selectedRole).put("language", selectedLanguage).put("history", messages).put("cv_text", selectedCv)
                         connection.outputStream.use { it.write(body.toString().toByteArray(Charsets.UTF_8)) }
                         val stream = if (connection.responseCode in 200..299) connection.inputStream else connection.errorStream
                         val json = JSONObject(stream.bufferedReader().use { it.readText() })
                         if (connection.responseCode !in 200..299) throw IllegalStateException(json.optString("error", "Layanan AI tidak tersedia"))
-                        json.getString("question").also { require(it.isNotBlank()) }
+                        json.getString(if (evaluate) "evaluation" else "question").also { require(it.isNotBlank()) }
                     } finally { connection.disconnect() }
                 }
             }
             loading = false
             result.onSuccess { question ->
-                aiQuestion = question
-                conversation.add("assistant" to question)
-                page = "session"
+                if (evaluate) {
+                    evaluation = question
+                    page = "finished"
+                } else {
+                    aiQuestion = question
+                    conversation.add("assistant" to question)
+                    page = "session"
+                }
             }.onFailure { error = "AI belum terhubung: ${it.message ?: "periksa backend AI"}" }
         }
     }
@@ -212,12 +240,12 @@ fun AiInterviewScreen() {
                             Text(cvName ?: "CV dipilih", color = InterviewNavy, fontWeight = FontWeight.Bold, maxLines = 3, overflow = TextOverflow.Ellipsis)
                             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                                 OutlinedButton(onClick = { picker.launch(arrayOf("application/pdf")) }) { Text("Ganti CV") }
-                                OutlinedButton(onClick = { cvUri = null; cvName = null }) { Text("Hapus CV") }
+                                OutlinedButton(onClick = { cvUri = null; cvName = null; cvText = "" }) { Text("Hapus CV") }
                             }
                         }
                     }
                 }
-                Text("CV belum dianalisis otomatis. Interview membutuhkan layanan AI lokal aktif.", style = MaterialTheme.typography.bodySmall)
+                Text("CV akan dibaca dari PDF berbasis teks dan digunakan AI sebagai konteks. Layanan AI lokal harus aktif.", style = MaterialTheme.typography.bodySmall)
                 Button(
                     onClick = {
                         if (role.isBlank()) error = "Isi nama posisi terlebih dahulu."
@@ -226,6 +254,7 @@ fun AiInterviewScreen() {
                             responses.clear()
                             conversation.clear()
                             questionIndex = 0
+                            evaluation = ""
                             answer = ""
                             requestAiQuestion()
                         }
@@ -263,7 +292,7 @@ fun AiInterviewScreen() {
                             conversation.add("user" to answer.trim())
                             answer = ""
                             tts?.stop()
-                            if (questionIndex >= 9) page = "finished"
+                            if (questionIndex >= 9) requestAiQuestion(evaluate = true)
                             else { questionIndex++; requestAiQuestion() }
                         }
                     },
@@ -280,7 +309,8 @@ fun AiInterviewScreen() {
                     Text(response)
                     HorizontalDivider()
                 }
-                Text("Pertanyaan dibuat model AI berdasarkan jawaban. Penilaian AI dan analisis isi CV belum tersedia.", style = MaterialTheme.typography.bodySmall)
+                Text("Evaluasi AI", fontWeight = FontWeight.Bold)
+                Text(evaluation.ifBlank { "Evaluasi belum tersedia." })
                 Button(onClick = { page = "setup" }, colors = ButtonDefaults.buttonColors(containerColor = InterviewOrange)) { Text("Latihan Lagi") }
             }
         }
