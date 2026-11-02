@@ -1,0 +1,872 @@
+[
+  {
+    "courseId": "role_teknisi_basic",
+    "title": "Teknisi • Basic",
+    "lessons": [
+      "Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Teknisi.",
+      "Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Teknisi.",
+      "Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Teknisi.",
+      "Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Teknisi.",
+      "Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Teknisi."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Teknisi?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Teknisi?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Teknisi?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Teknisi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Teknisi?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Teknisi",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_teknisi_intermediate",
+    "title": "Teknisi • Intermediate",
+    "lessons": [
+      "Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Teknisi.",
+      "Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Teknisi.",
+      "Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Teknisi.",
+      "Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Teknisi.",
+      "Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Teknisi."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Teknisi?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Teknisi?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Teknisi?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Teknisi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Teknisi?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Teknisi",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_teknisi_advanced",
+    "title": "Teknisi • Advanced",
+    "lessons": [
+      "Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Teknisi.",
+      "Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Teknisi.",
+      "Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Teknisi.",
+      "Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Teknisi.",
+      "Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Teknisi."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Teknisi?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Teknisi?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Teknisi?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Teknisi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Teknisi?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Teknisi",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_maintenance_staff_basic",
+    "title": "Maintenance Staff • Basic",
+    "lessons": [
+      "Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Maintenance Staff.",
+      "Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Maintenance Staff.",
+      "Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Maintenance Staff.",
+      "Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Maintenance Staff.",
+      "Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Maintenance Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Maintenance Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Maintenance Staff?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Maintenance Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Maintenance Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Maintenance Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Maintenance Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_maintenance_staff_intermediate",
+    "title": "Maintenance Staff • Intermediate",
+    "lessons": [
+      "Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Maintenance Staff.",
+      "Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Maintenance Staff.",
+      "Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Maintenance Staff.",
+      "Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Maintenance Staff.",
+      "Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Maintenance Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Maintenance Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Maintenance Staff?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Maintenance Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Maintenance Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Maintenance Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Maintenance Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_maintenance_staff_advanced",
+    "title": "Maintenance Staff • Advanced",
+    "lessons": [
+      "Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Maintenance Staff.",
+      "Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Maintenance Staff.",
+      "Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Maintenance Staff.",
+      "Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Maintenance Staff.",
+      "Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Maintenance Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Maintenance Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Maintenance Staff?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Maintenance Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Maintenance Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Maintenance Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Maintenance Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_electrical_technician_basic",
+    "title": "Electrical Technician • Basic",
+    "lessons": [
+      "Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Electrical Technician.",
+      "Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Electrical Technician.",
+      "Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Electrical Technician.",
+      "Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Electrical Technician.",
+      "Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Electrical Technician."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Electrical Technician?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Electrical Technician?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Electrical Technician?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Electrical Technician"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Electrical Technician?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Electrical Technician",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_electrical_technician_intermediate",
+    "title": "Electrical Technician • Intermediate",
+    "lessons": [
+      "Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Electrical Technician.",
+      "Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Electrical Technician.",
+      "Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Electrical Technician.",
+      "Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Electrical Technician.",
+      "Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Electrical Technician."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Electrical Technician?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Electrical Technician?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Electrical Technician?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Electrical Technician"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Electrical Technician?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Electrical Technician",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_electrical_technician_advanced",
+    "title": "Electrical Technician • Advanced",
+    "lessons": [
+      "Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Electrical Technician.",
+      "Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Electrical Technician.",
+      "Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Electrical Technician.",
+      "Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Electrical Technician.",
+      "Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Electrical Technician."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Electrical Technician?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Electrical Technician?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Electrical Technician?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Electrical Technician"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Electrical Technician?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Electrical Technician",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_mechanical_technician_basic",
+    "title": "Mechanical Technician • Basic",
+    "lessons": [
+      "Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Mechanical Technician.",
+      "Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Mechanical Technician.",
+      "Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Mechanical Technician.",
+      "Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Mechanical Technician.",
+      "Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Mechanical Technician."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Mechanical Technician?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Mechanical Technician?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Mechanical Technician?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Mechanical Technician"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Mechanical Technician?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Mechanical Technician",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_mechanical_technician_intermediate",
+    "title": "Mechanical Technician • Intermediate",
+    "lessons": [
+      "Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Mechanical Technician.",
+      "Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Mechanical Technician.",
+      "Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Mechanical Technician.",
+      "Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Mechanical Technician.",
+      "Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Mechanical Technician."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Mechanical Technician?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Mechanical Technician?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Mechanical Technician?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Mechanical Technician"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Mechanical Technician?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Mechanical Technician",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_mechanical_technician_advanced",
+    "title": "Mechanical Technician • Advanced",
+    "lessons": [
+      "Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Mechanical Technician.",
+      "Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Mechanical Technician.",
+      "Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Mechanical Technician.",
+      "Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Mechanical Technician.",
+      "Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Mechanical Technician."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Mechanical Technician?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Mechanical Technician?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Mechanical Technician?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Mechanical Technician"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Mechanical Technician?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Mechanical Technician",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_engineering_staff_basic",
+    "title": "Engineering Staff • Basic",
+    "lessons": [
+      "Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Engineering Staff.",
+      "Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Engineering Staff.",
+      "Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Engineering Staff.",
+      "Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Engineering Staff.",
+      "Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Engineering Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Engineering Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Engineering Staff?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Engineering Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Engineering Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Engineering Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Engineering Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_engineering_staff_intermediate",
+    "title": "Engineering Staff • Intermediate",
+    "lessons": [
+      "Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Engineering Staff.",
+      "Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Engineering Staff.",
+      "Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Engineering Staff.",
+      "Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Engineering Staff.",
+      "Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Engineering Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Engineering Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Engineering Staff?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Engineering Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Engineering Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Engineering Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Engineering Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_engineering_staff_advanced",
+    "title": "Engineering Staff • Advanced",
+    "lessons": [
+      "Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku menggunakan work order, multimeter, checklist inspeksi Bukti hasil: checklist risiko dan kewenangan Engineering Staff.",
+      "Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi Bukti hasil: bagan alur kerja Engineering Staff.",
+      "Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku pada maintenance log, work order, riwayat suku cadang Bukti hasil: contoh dokumen dan bukti kerja Engineering Staff.",
+      "Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus kerusakan berulang atau bahaya listrik saat menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Engineering Staff.",
+      "Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku dengan ukuran MTTR, MTBF, kepatuhan preventive maintenance Bukti hasil: rencana pengukuran dan perbaikan Engineering Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Engineering Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "work order, multimeter, checklist inspeksi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku menggunakan work order, multimeter, checklist inspeksi",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Engineering Staff?",
+        "options": [
+          "inspeksi, isolasi energi, perbaikan, uji fungsi — Urutkan langkah menjalankan tanggung jawab jabatan Engineering Staff berdasarkan SOP yang berlaku dalam proses inspeksi, isolasi energi, perbaikan, uji fungsi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Engineering Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "maintenance log, work order, riwayat suku cadang — contoh dokumen dan bukti kerja Engineering Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi kerusakan berulang atau bahaya listrik, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Engineering Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "MTTR, MTBF, kepatuhan preventive maintenance — rencana pengukuran dan perbaikan Engineering Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
