@@ -334,16 +334,19 @@ fun JobTrainingScreen() {
                 "exam" -> {
                     Text("Evaluasi Akhir", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
                     Text(course.title)
-                    Text("Soal ${questionIndex + 1} dari ${course.questions.size}", fontWeight = FontWeight.Bold)
+                    Text("Soal ${questionIndex + 1} dari ${serverQuestions?.length() ?: course.questions.size}", fontWeight = FontWeight.Bold)
                     LinearProgressIndicator(
-                        progress = { (questionIndex + 1f) / course.questions.size.coerceAtLeast(1) },
+                        progress = { (questionIndex + 1f) / (serverQuestions?.length() ?: course.questions.size).coerceAtLeast(1) },
                         modifier = Modifier.fillMaxWidth(),
                         color = orangeTraining
                     )
-                    val q = course.questions[questionIndex]
+                    val remoteQuestion = serverQuestions?.optJSONObject(questionIndex)
+                    val q = course.questions.getOrNull(questionIndex)
+                    val questionPrompt = remoteQuestion?.optString("prompt") ?: q?.prompt.orEmpty()
+                    val questionOptions = remoteQuestion?.optJSONArray("options")?.let { array -> (0 until array.length()).map { array.getString(it) } } ?: q?.options.orEmpty()
                     TrainingCard {
-                        Text("${questionIndex + 1}. ${q.prompt}", fontWeight = FontWeight.Bold, fontSize = 18.sp)
-                        q.options.forEachIndexed { index, option ->
+                        Text("${questionIndex + 1}. ${questionPrompt}", fontWeight = FontWeight.Bold, fontSize = 18.sp)
+                        questionOptions.forEachIndexed { index, option ->
                             val selected = answers.optInt(questionIndex, -1) == index
                             Card(
                                 onClick = { saveAnswer(questionIndex, index) },
@@ -366,7 +369,7 @@ fun JobTrainingScreen() {
                         ) { Text("‹ Sebelumnya") }
                         Button(
                             onClick = {
-                                if (questionIndex < course.questions.lastIndex) questionIndex++
+                                if (questionIndex < (serverQuestions?.length() ?: course.questions.size) - 1) questionIndex++
                                 else stage = "submit"
                             },
                             modifier = Modifier.weight(1f),
