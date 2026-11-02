@@ -976,184 +976,184 @@
     ],
     "questions": [
       {
-        "prompt": "Perangkat atau istilah yang relevan bagi Staff Warehouse?",
+        "prompt": "Pada pergantian shift, 6 pallet belum memiliki status lokasi di WMS. Apa tindakan serah terima paling aman?",
         "options": [
-          "Tidak perlu memahami alat",
-          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi",
-          "Gunakan data tanpa izin"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Alur kerja yang sesuai untuk Staff Warehouse?",
-        "options": [
-          "receiving, putaway, picking, packing, dispatch — Urutkan langkah menjalankan tanggung jawab jabatan Staff Warehouse berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch",
-          "Abaikan verifikasi",
-          "Langsung tutup pekerjaan tanpa bukti"
+          "Catat ID pallet, lokasi fisik, dan status transaksi untuk direkonsiliasi",
+          "Masukkan semua pallet ke lokasi acak",
+          "Tandai selesai tanpa pemeriksaan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dokumen kerja yang relevan untuk Staff Warehouse?",
+        "prompt": "Forklift dan pejalan kaki melintasi jalur yang sama saat bongkar muat. Apa prioritas perbaikan?",
         "options": [
-          "Catatan palsu",
-          "Data tanpa izin",
-          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Staff Warehouse"
+          "Menambah target bongkar muat",
+          "Pisahkan jalur dan terapkan pengendalian lalu lintas area kerja",
+          "Memindahkan APD ke ruang kantor"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Tim receiving mencatat 240 unit, sedangkan packing list menyebut 12 karton x 24 unit. Berapa selisihnya?",
+        "options": [
+          "12 unit",
+          "24 unit",
+          "48 unit"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "prompt": "Dua pallet dengan nomor batch berbeda diletakkan di lokasi yang sama tanpa pembatas. Apa risiko terbesar?",
         "options": [
-          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
-          "Sembunyikan kejadian",
-          "Ubah data diam-diam"
+          "Ketertelusuran batch dan pengeluaran FEFO terganggu",
+          "Jumlah rak otomatis bertambah",
+          "Barcode pemasok berubah"
         ],
         "correct": 0
       },
       {
-        "prompt": "Indikator kinerja yang relevan untuk Staff Warehouse?",
+        "prompt": "Target putaway 30 menit sering terlewati karena antrean scanner. Tindakan berbasis data yang tepat?",
         "options": [
-          "Rumor tanpa data",
-          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Staff Warehouse",
-          "Tidak perlu mengukur hasil"
+          "Menghilangkan scan lokasi",
+          "Ukur waktu antrean dan tingkat pemakaian scanner sebelum menambah perangkat",
+          "Menghapus laporan keterlambatan"
         ],
         "correct": 1
       },
       {
-        "prompt": "Dalam pemeriksaan awal, informasi apa yang wajib diverifikasi dari materi berikut? (Staff Warehouse • Advanced; tahap 1)",
+        "prompt": "Pallet dengan label kapasitas 600 kg hendak diisi 15 karton @45 kg. Keputusan yang benar?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Sebagai Staff Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak a",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 0
-      },
-      {
-        "prompt": "Saat menyusun urutan kerja, tindakan apa yang tepat menurut prosedur berikut? (Staff Warehouse • Advanced; tahap 2)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Staff Warehouse • Advanced: Simulasikan alur kerja Staff Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yan",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Pada pengisian dokumen, bukti apa yang harus disiapkan sesuai materi berikut? (Staff Warehouse • Advanced; tahap 3)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Buat contoh dokumen Staff Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak"
+          "Muat karena karton hanya 15",
+          "Tambah pengikat agar berat tidak dihitung",
+          "Jangan muat: total 675 kg melebihi kapasitas"
         ],
         "correct": 2
       },
       {
-        "prompt": "Ketika terjadi penyimpangan, tindakan apa yang paling sesuai dengan studi kasus berikut? (Staff Warehouse • Advanced; tahap 4)",
+        "prompt": "Saat picking ditemukan kemasan sobek tetapi SKU dan jumlah benar. Apa langkah yang tepat?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Studi kasus Staff Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, ",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Pisahkan barang, laporkan kerusakan, dan minta penggantian sesuai SOP",
+          "Kirim karena jumlah sudah benar",
+          "Tutup kemasan tanpa mencatat kerusakan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Saat menilai hasil pekerjaan, indikator apa yang harus dicatat dari materi berikut? (Staff Warehouse • Advanced; tahap 5)",
+        "prompt": "Area staging penuh sehingga barang keluar menghalangi akses APAR. Apa tindakan pertama?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Staff Warehouse • Advanced: Evaluasi pekerjaan Staff Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Tunggu sampai ekspedisi datang",
+          "Buka kembali akses keselamatan dan pindahkan barang ke area yang disetujui",
+          "Tandai jalur sebagai gudang sementara"
         ],
         "correct": 1
       },
       {
-        "prompt": "Jika petugas baru menjalankan tahap ini, bagaimana memastikan langkahnya benar? (Staff Warehouse • Advanced; tahap 1)",
+        "prompt": "Satu pallet sudah keluar dari receiving tetapi belum tercatat di putaway. Bagaimana melacaknya?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Sebagai Staff Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak a"
+          "Kurangi stok sistem secara manual",
+          "Buat nomor batch baru",
+          "Telusuri scan transfer, petugas, dan lokasi staging terakhir"
         ],
         "correct": 2
       },
       {
-        "prompt": "Saat serah terima pekerjaan ini, apa yang harus dapat ditelusuri? (Staff Warehouse • Advanced; tahap 2)",
+        "prompt": "Hasil cycle count SKU X adalah 185 unit, sistem 200 unit. Berapa persentase selisih terhadap stok sistem?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Simulasikan alur kerja Staff Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yan",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "7,5%",
+          "15%",
+          "92,5%"
         ],
         "correct": 0
       },
       {
-        "prompt": "Jika ada data tidak cocok pada proses ini, tindakan apa yang paling tepat? (Staff Warehouse • Advanced; tahap 3)",
+        "prompt": "Kurir mengambil 9 koli, manifest tercetak 10 koli. Apa tindakan sebelum serah terima?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Staff Warehouse • Advanced: Buat contoh dokumen Staff Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Tetap tanda tangan lengkap",
+          "Hitung ulang, koreksi manifest, dan catat pengecualian",
+          "Buat manifest baru tanpa nomor referensi"
         ],
         "correct": 1
       },
       {
-        "prompt": "Sebelum menyetujui hasil pada proses ini, apa yang perlu dipastikan? (Staff Warehouse • Advanced; tahap 4)",
+        "prompt": "Tumpukan karton di rak tampak miring setelah dipindahkan. Apa tindakan paling aman?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Studi kasus Staff Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, "
+          "Biarkan sampai akhir shift",
+          "Tambahkan karton agar lebih padat",
+          "Amankan area dan lakukan penataan ulang dengan alat yang sesuai"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi keterlambatan pada tahap ini, bagaimana melaporkannya? (Staff Warehouse • Advanced; tahap 5)",
+        "prompt": "Barang retur pelanggan bercampur dengan stok layak jual. Bagaimana memulihkan kontrol?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Evaluasi pekerjaan Staff Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Pisahkan area karantina dan verifikasi status QC sebelum stok tersedia",
+          "Langsung keluarkan barang retur untuk order baru",
+          "Hapus label retur agar tidak membingungkan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam audit internal atas proses ini, catatan apa yang paling relevan? (Staff Warehouse • Advanced; tahap 1)",
+        "prompt": "Selisih picking paling sering terjadi pada dua SKU dengan kemasan mirip. Perbaikan proses apa yang tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Staff Warehouse • Advanced: Sebagai Staff Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak a",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Hapus salah satu SKU dari WMS",
+          "Perjelas label lokasi dan wajibkan verifikasi barcode SKU saat picking",
+          "Kurangi jumlah petugas pengecekan"
         ],
         "correct": 1
       },
       {
-        "prompt": "Ketika sistem atau alat terkait tidak tersedia, apa langkah aman? (Staff Warehouse • Advanced; tahap 2)",
+        "prompt": "Saat hujan, lantai unloading basah dan licin. Bagaimana menyesuaikan pekerjaan?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Simulasikan alur kerja Staff Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yan"
+          "Percepat bongkar muat tanpa pengaman",
+          "Lewati inspeksi kondisi lantai",
+          "Batasi akses, pasang penanda, dan keringkan area sebelum operasi aman"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika rekan kerja meminta melewati pemeriksaan ini, apa respons yang tepat? (Staff Warehouse • Advanced; tahap 3)",
+        "prompt": "Laporan harian mencatat 36 order dipicking, 32 diserahkan ke packing, 2 dibatalkan. Berapa order perlu ditelusuri?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Buat contoh dokumen Staff Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "2 order",
+          "4 order",
+          "6 order"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam simulasi kesalahan pada tahap ini, bagaimana mencegah pengulangan? (Staff Warehouse • Advanced; tahap 4)",
+        "prompt": "Seorang petugas melewati scan lokasi untuk mengejar target. Tindakan supervisor shift yang tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Staff Warehouse • Advanced: Studi kasus Staff Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, ",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi"
+          "Membiarkan jika target tercapai",
+          "Hentikan penyimpangan, koreksi jejak transaksi, dan lakukan pembinaan",
+          "Hapus transaksi agar tidak tercatat"
         ],
         "correct": 1
       },
       {
-        "prompt": "Setelah pekerjaan ini selesai, apa dasar evaluasi yang dapat dipertanggungjawabkan? (Staff Warehouse • Advanced; tahap 5)",
+        "prompt": "Rak A-03 memiliki batas 900 kg, beban terukur 970 kg. Apa keputusan yang benar?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Staff Warehouse • Advanced",
-          "Ubah hasil atau dokumen Staff Warehouse • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Evaluasi pekerjaan Staff Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan"
+          "Tambah pallet penyeimbang",
+          "Tunggu audit bulanan",
+          "Batasi akses dan kurangi beban dengan prosedur pemindahan aman"
         ],
         "correct": 2
+      },
+      {
+        "prompt": "Pada akhir shift, ada 4 dokumen penerimaan belum ditandatangani tetapi barang sudah masuk rak. Apa tindak lanjut?",
+        "options": [
+          "Rekonsiliasi fisik dan dokumen, minta verifikasi pihak berwenang",
+          "Isi tanda tangan atas nama penerima",
+          "Hapus dokumen yang belum lengkap"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Tim diminta meningkatkan kecepatan inbound tanpa menurunkan akurasi. KPI pasangan yang tepat?",
+        "options": [
+          "Jumlah jam lembur saja",
+          "Waktu siklus penerimaan dan persentase selisih penerimaan",
+          "Jumlah foto gudang per shift"
+        ],
+        "correct": 1
       }
     ]
   },
