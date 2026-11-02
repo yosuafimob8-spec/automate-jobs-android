@@ -16,6 +16,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
+import com.example.automatesmartbot.data.career.TrainingServerGateway
+import com.example.automatesmartbot.data.network.ApiClient
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import com.example.automatesmartbot.data.career.TrainingCourses
 import com.example.automatesmartbot.data.career.TrainingPositions
 import com.example.automatesmartbot.data.career.TrainingPathways
@@ -58,6 +63,11 @@ private fun TrainingAction(label: String, enabled: Boolean = true, onClick: () -
 @Composable
 fun JobTrainingScreen() {
     val context = LocalContext.current
+    val trainingScope = rememberCoroutineScope()
+    val trainingApi = remember { ApiClient.getBaseUrl().takeIf { it.startsWith("https://") }?.let { TrainingServerGateway(it) } }
+    var serverQuestions by remember { mutableStateOf<JSONArray?>(null) }
+    var serverModules by remember { mutableStateOf<Set<Int>>(emptySet()) }
+    var trainingBusy by remember { mutableStateOf(false) }
     val prefs = remember { context.getSharedPreferences("career_training", 0) }
     var courseId by rememberSaveable { mutableStateOf(TrainingCourses.all.first().id) }
     val course = remember(courseId) {
