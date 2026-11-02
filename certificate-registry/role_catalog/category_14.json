@@ -54,6 +54,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, dan ",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba",
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, dan ",
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, dan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Ubah catatan hasil Housekeeping • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -110,6 +245,141 @@
           "Rumor tanpa data",
           "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Housekeeping",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedur ",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In",
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedur ",
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedur "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Ubah catatan hasil Housekeeping • Intermediate agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -170,6 +440,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, tentu",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad",
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, tentu",
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, tentu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Housekeeping • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Housekeeping • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Ubah catatan hasil Housekeeping • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -226,6 +631,141 @@
           "Rumor tanpa data",
           "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Receptionist",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, dan ",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba",
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, dan ",
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, dan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Ubah catatan hasil Receptionist • Basic agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -286,6 +826,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedur ",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In",
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedur ",
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedur "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Ubah catatan hasil Receptionist • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -342,6 +1017,141 @@
           "Rumor tanpa data",
           "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Receptionist",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, tentu",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad",
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, tentu",
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala",
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, tentu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. ",
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskala"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Receptionist • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Receptionist • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan p",
+          "Ubah catatan hasil Receptionist • Advanced agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -402,6 +1212,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, ",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, ",
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Ubah catatan hasil Front Desk Agent • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -458,6 +1403,141 @@
           "Rumor tanpa data",
           "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Front Desk Agent",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prose",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prose",
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prose"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Ubah catatan hasil Front Desk Agent • Intermediate agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -518,6 +1598,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, t",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, t",
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Front Desk Agent • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Front Desk Agent • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Ubah catatan hasil Front Desk Agent • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -574,6 +1789,141 @@
           "Rumor tanpa data",
           "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Room Attendant",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, da",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, da",
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab",
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Ubah catatan hasil Room Attendant • Basic agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -634,6 +1984,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedu",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedu",
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab",
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Ubah catatan hasil Room Attendant • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -690,6 +2175,141 @@
           "Rumor tanpa data",
           "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Room Attendant",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, ten",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, ten",
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, ten"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab",
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Room Attendant • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Room Attendant • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Ubah catatan hasil Room Attendant • Advanced agar terlihat sesuai"
         ],
         "correct": 1
       }
@@ -750,6 +2370,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, ",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, ",
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Basic, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Basic tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Ubah catatan hasil Hotel Supervisor • Basic agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -808,6 +2563,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prose",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prose",
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prose"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Intermediate, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Intermediate tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Ubah catatan hasil Hotel Supervisor • Intermediate agar terlihat sesuai"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -864,6 +2754,141 @@
           "Rumor tanpa data",
           "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Hotel Supervisor",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana menyiapkan alat dan area dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, t",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana menjalankan urutan tugas dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana membuat catatan kerja dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 1?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 1?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana menyiapkan alat dan area dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, t",
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana menjalankan urutan tugas dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana membuat catatan kerja dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 2?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 2?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana menyiapkan alat dan area dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana menjalankan urutan tugas dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana membuat catatan kerja dalam kasus 3?",
+        "options": [
+          "Gunakan SOP dan bukti sesuai materi: Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jaw",
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana menyelesaikan penyimpangan dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai",
+          "Gunakan SOP dan bukti sesuai materi: Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada Hotel Supervisor • Advanced, bagaimana mengevaluasi mutu hasil dalam kasus 3?",
+        "options": [
+          "Lewati prosedur Hotel Supervisor • Advanced tanpa pemeriksaan",
+          "Gunakan SOP dan bukti sesuai materi: Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindak",
+          "Ubah catatan hasil Hotel Supervisor • Advanced agar terlihat sesuai"
         ],
         "correct": 1
       }
