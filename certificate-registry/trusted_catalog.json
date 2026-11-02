@@ -243,6 +243,141 @@
           "Menghindari pertanyaan"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Jika wawancara dilakukan daring, apa yang perlu diuji sebelumnya?",
+        "options": [
+          "Kamera, mikrofon dan koneksi internet",
+          "Hanya warna latar belakang",
+          "Jumlah peserta lain"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana menjawab pertanyaan tentang kelemahan diri?",
+        "options": [
+          "Mengaku tidak punya kelemahan",
+          "Sebut kelemahan nyata dan upaya memperbaikinya",
+          "Menyalahkan atasan lama"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Saat diminta contoh kerja tim, informasi apa yang penting?",
+        "options": [
+          "Hanya nama anggota",
+          "Mengklaim semua hasil sendiri",
+          "Peran pribadi, tindakan bersama dan hasil"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Ketika ditanya ekspektasi gaji, respons yang tepat?",
+        "options": [
+          "Berikan kisaran berdasarkan riset dan tanggung jawab",
+          "Sebut angka acak",
+          "Menghindari pembahasan selamanya"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Mengapa kandidat sebaiknya mengajukan pertanyaan di akhir wawancara?",
+        "options": [
+          "Untuk menguji urusan pribadi pewawancara",
+          "Memahami tanggung jawab dan harapan posisi",
+          "Untuk meminta jaminan diterima"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Jika tidak tahu jawaban teknis saat wawancara?",
+        "options": [
+          "Menebak tanpa dasar",
+          "Mengalihkan pembicaraan",
+          "Jujur dan jelaskan cara mencari solusinya"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana menjelaskan alasan pindah kerja secara profesional?",
+        "options": [
+          "Fokus pada perkembangan dan kesesuaian peran",
+          "Membocorkan rahasia perusahaan lama",
+          "Menghina rekan lama"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Apa yang perlu disiapkan untuk pertanyaan berbasis kompetensi?",
+        "options": [
+          "Cerita rekaan",
+          "Contoh situasi, tindakan dan hasil yang terukur",
+          "Jawaban yang sama untuk semua pertanyaan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Jika pewawancara menyela jawaban, apa yang dilakukan?",
+        "options": [
+          "Berbicara lebih keras",
+          "Mengabaikan pertanyaan",
+          "Berhenti sejenak dan mendengarkan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana menyampaikan pencapaian kerja?",
+        "options": [
+          "Sebut hasil yang benar-benar dapat dijelaskan",
+          "Mengarang angka tinggi",
+          "Menghapus kontribusi tim"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika terlambat akibat kendala mendadak?",
+        "options": [
+          "Tidak memberi kabar",
+          "Segera memberi informasi dan meminta solusi jadwal",
+          "Menyalahkan pewawancara"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Apa tindakan yang wajar setelah wawancara?",
+        "options": [
+          "Mengirim pesan setiap jam",
+          "Meminta akses data internal",
+          "Mengirim ucapan terima kasih singkat jika sesuai"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Saat menceritakan konflik kerja, apa fokus jawaban?",
+        "options": [
+          "Penyelesaian profesional dan pembelajaran",
+          "Kesalahan pribadi rekan",
+          "Keinginan membalas"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana menjelaskan pengalaman gagal?",
+        "options": [
+          "Menyembunyikan fakta",
+          "Jelaskan pembelajaran dan perbaikan yang dilakukan",
+          "Mengubah cerita menjadi sukses palsu"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Apa yang menunjukkan kesiapan untuk suatu posisi?",
+        "options": [
+          "Membahas hobi tanpa kaitan",
+          "Menghindari tugas utama",
+          "Menghubungkan kemampuan dengan kebutuhan jabatan"
+        ],
+        "correct": 2
       }
     ]
   },
