@@ -2,6 +2,8 @@
 Registration requires REGISTRY_ADMIN_TOKEN; public verification is read-only.
 """
 import hmac
+from training_api import TrainingApiMixin
+from trusted_training import initialize
 import json
 import os
 import re
@@ -77,7 +79,10 @@ def verify(cid):
         return None
     return dict(zip(("id","name","course","courseId","date","score","revoked"), row))
 
-class Handler(BaseHTTPRequestHandler):
+class Handler(TrainingApiMixin, BaseHTTPRequestHandler):
+    def training_connection(self):
+        return connect()
+
     def reply(self, code, payload):
         body = json.dumps(payload, ensure_ascii=False).encode()
         self.send_response(code)
@@ -88,6 +93,8 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_GET(self):
+        if self.path.startswith('/training/'):
+            return self.handle_training()
         url = urlsplit(self.path)
         if url.path == "/certificate":
             cid = parse_qs(url.query).get("id", [""])[0]
@@ -117,6 +124,8 @@ class Handler(BaseHTTPRequestHandler):
         return self.reply(404, {"error": "not_found"})
 
     def do_POST(self):
+        if self.path.startswith('/training/'):
+            return self.handle_training()
         if self.path not in ("/certificates", "/revoke"):
             return self.reply(404, {"error": "not_found"})
         auth = self.headers.get("Authorization", "")
@@ -146,5 +155,6 @@ class Handler(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     if not TOKEN:
         raise SystemExit("Set REGISTRY_ADMIN_TOKEN before starting.")
-    connect().close()
+    with connect() as conn:
+        initialize(conn)
     ThreadingHTTPServer(("127.0.0.1", int(os.getenv("PORT", "8792"))), Handler).serve_forever()
