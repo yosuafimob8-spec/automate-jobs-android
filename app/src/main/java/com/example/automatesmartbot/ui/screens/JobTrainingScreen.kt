@@ -21,6 +21,7 @@ import com.example.automatesmartbot.data.career.TrainingPositions
 import com.example.automatesmartbot.data.career.TrainingPathways
 import com.example.automatesmartbot.data.career.TrainingLevel
 import com.example.automatesmartbot.data.career.TrainingPractice
+import com.example.automatesmartbot.data.career.TrainingCertificateIdentity
 import com.example.automatesmartbot.data.cv.CvRenderer
 import com.example.automatesmartbot.ui.components.PdfExportButton
 import org.json.JSONArray
@@ -374,6 +375,29 @@ fun JobTrainingScreen() {
                     Text("Riwayat Sertifikat", fontSize = 26.sp, fontWeight = FontWeight.Bold)
                     val history = JSONArray(prefs.getString("certificates", "[]"))
                     if (history.length() == 0) Text("Belum ada sertifikat.")
+                    var qrInput by rememberSaveable { mutableStateOf("") }
+                    var qrFeedback by remember { mutableStateOf("") }
+                    OutlinedTextField(
+                        value = qrInput,
+                        onValueChange = { qrInput = it; qrFeedback = "" },
+                        label = { Text("Isi QR sertifikat") },
+                        modifier = Modifier.fillMaxWidth()
+                    )
+                    OutlinedButton(onClick = {
+                        val known = (0 until history.length()).mapNotNull { index ->
+                            val record = history.optJSONObject(index) ?: return@mapNotNull null
+                            runCatching {
+                                TrainingCertificateIdentity.payload(
+                                    record.optString("id"), record.optString("courseId"),
+                                    record.optString("date"), record.optInt("score")
+                                )
+                            }.getOrNull()
+                        }
+                        qrFeedback = if (TrainingCertificateIdentity.verifyLocal(qrInput.trim(), known))
+                            "Cocok dengan riwayat pada perangkat ini."
+                        else "Tidak ditemukan di perangkat ini; belum ada registri online."
+                    }) { Text("Periksa Identitas Sertifikat") }
+                    if (qrFeedback.isNotBlank()) Text(qrFeedback)
                     (history.length() - 1 downTo 0).forEach { i ->
                         val item = history.getJSONObject(i)
                         TrainingCard {
