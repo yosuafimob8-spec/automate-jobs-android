@@ -7,6 +7,9 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.border
+import androidx.compose.foundation.Canvas
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -196,31 +199,35 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             TextButton(onClick = { if (resultAnalysisPage) resultAnalysisPage = false else page = "catalog" }) {
                                 Text("←", color = Color.Black, style = MaterialTheme.typography.titleLarge)
                             }
-                            Text("🟠 KarirMate", color = Color(0xFF007F78), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                            Text("🟧 Karir", color = orange, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                            Text("Mate", color = Color(0xFF008A81), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
                         }
                     }
                     if (!resultAnalysisPage) {
                         item {
                             Text("Hasil Psikotes", color = Color.Black, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
-                            Text("Berikut hasil psikotes kamu beserta ringkasannya.", color = Color(0xFF333333))
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text("Berikut hasil psikotes kamu beserta ringkasannya.", color = Color(0xFF333333), modifier = Modifier.weight(1f))
+                                Text("📋✏️", style = MaterialTheme.typography.headlineLarge)
+                            }
                         }
                         item {
-                            MockupCard(tint = Color(0xFFFFF7EB), borderColor = Color(0xFFFFC68A)) {
+                            MockupCard(borderColor = Color(0xFFFFC68A)) {
                                 Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
                                     Text("🏅", style = MaterialTheme.typography.displayLarge)
                                     Column {
                                         Text("Nilai Akhir", color = Color.Black, fontWeight = FontWeight.SemiBold)
                                         Text(actualScore?.let { "$it /100" } ?: "—", color = Color.Black, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.Black)
-                                        Text(rating, color = Color(0xFF009F74), fontWeight = FontWeight.Bold)
+                                        Surface(color = Color(0xFF08BE72), shape = RoundedCornerShape(50)) { Text(rating, color = Color.White, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 14.dp, vertical = 5.dp)) }
                                     }
                                 }
                                 Spacer(Modifier.height(12.dp))
-                                Text("💬  $encouragement", color = Color(0xFF252525), modifier = Modifier.fillMaxWidth().background(Color(0xFFFFEED4), RoundedCornerShape(14.dp)).padding(12.dp))
+                                Text("❝  $encouragement   🚀", color = Color(0xFF252525), modifier = Modifier.fillMaxWidth().background(Color(0xFFFFEED4), RoundedCornerShape(14.dp)).padding(12.dp))
                             }
                         }
                         item {
                             MockupCard {
-                                Text("🟠 Ringkasan Jawaban", fontWeight = FontWeight.ExtraBold, color = Color.Black, style = MaterialTheme.typography.titleMedium)
+                                Text("🟧 Ringkasan Jawaban", fontWeight = FontWeight.ExtraBold, color = Color.Black, style = MaterialTheme.typography.titleMedium)
                                 Spacer(Modifier.height(12.dp))
                                 Row(verticalAlignment = Alignment.CenterVertically) {
                                     Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(9.dp)) {
@@ -231,7 +238,11 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                     }
                                     Spacer(Modifier.width(12.dp))
                                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Box(Modifier.size(88.dp).border(9.dp, Color(0xFF00A98D), RoundedCornerShape(50)), contentAlignment = Alignment.Center) {
+                                        Box(Modifier.size(96.dp), contentAlignment = Alignment.Center) {
+                                            Canvas(Modifier.fillMaxSize()) {
+                                                drawArc(Color(0xFFDCE8EA), 0f, 360f, false, style = Stroke(11.dp.toPx(), cap = StrokeCap.Round))
+                                                drawArc(Color(0xFF00AA89), -90f, 360f * accuracy.coerceIn(0, 100) / 100f, false, style = Stroke(11.dp.toPx(), cap = StrokeCap.Round))
+                                            }
                                             Text("$accuracy%", color = Color.Black, fontWeight = FontWeight.Black, style = MaterialTheme.typography.titleLarge)
                                         }
                                         Text("Ketepatan", color = Color.Black, style = MaterialTheme.typography.labelSmall)
@@ -244,17 +255,25 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                 Text("📊 Hasil per Kategori", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium)
                                 Spacer(Modifier.height(8.dp))
                                 val categories = r.getAsJsonArray("categories") ?: r.getAsJsonArray("category_scores")
-                                if (categories == null || categories.size() == 0) {
-                                    Text("Rincian kategori belum tersedia dari server.", color = Color.DarkGray)
-                                } else {
-                                    categories.forEach { element ->
-                                        if (element.isJsonObject) {
-                                            val cat = element.asJsonObject
-                                            val label = cat.s("name", cat.s("category", "Kategori"))
-                                            val value = cat.n("percent").takeIf { it > 0 } ?: cat.n("score")
-                                            Text("$label  •  $value", color = Color.Black)
-                                            LinearProgressIndicator(progress = { (value / 100f).coerceIn(0f, 1f) }, modifier = Modifier.fillMaxWidth().height(7.dp), color = Color(0xFF00A98D), trackColor = Color(0xFFE8EEF1))
-                                            Spacer(Modifier.height(8.dp))
+                                val categoryMap = mutableMapOf<String, Int>()
+                                categories?.forEach { element ->
+                                    if (element.isJsonObject) {
+                                        val cat = element.asJsonObject
+                                        val label = cat.s("name", cat.s("category", ""))
+                                        val value = if (cat.has("percent")) cat.n("percent") else cat.n("score")
+                                        categoryMap[label.lowercase()] = value.coerceIn(0, 100)
+                                    }
+                                }
+                                listOf("🧠" to "Logika", "🔢" to "Numerik", "📖" to "Verbal", "👤" to "Kepribadian", "📋" to "SKD", "📚" to "SKB").forEach { (icon, label) ->
+                                    val score = categoryMap.entries.firstOrNull { (key, _) -> key.contains(label.lowercase()) }?.value
+                                    Row(Modifier.fillMaxWidth().padding(vertical = 5.dp), verticalAlignment = Alignment.CenterVertically) {
+                                        Text(icon, modifier = Modifier.width(34.dp))
+                                        Text(label, color = Color.Black, modifier = Modifier.width(100.dp), style = MaterialTheme.typography.bodyMedium)
+                                        if (score != null) {
+                                            LinearProgressIndicator(progress = { score / 100f }, modifier = Modifier.weight(1f).height(9.dp), color = Color(0xFF00A98D), trackColor = Color(0xFFE4ECF0), strokeCap = StrokeCap.Round)
+                                            Text("$score%", modifier = Modifier.width(52.dp), textAlign = TextAlign.End, color = Color.Black, fontWeight = FontWeight.Bold)
+                                        } else {
+                                            Text("Belum diuji", modifier = Modifier.weight(1f), color = Color.Gray, textAlign = TextAlign.End, style = MaterialTheme.typography.bodySmall)
                                         }
                                     }
                                 }
@@ -263,10 +282,10 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         item {
                             MockupCard(tint = Color(0xFFFFF4E4), borderColor = Color(0xFFFFB966), onClick = { if (isPro) resultAnalysisPage = true else proNotice = true }) {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Text("💡", style = MaterialTheme.typography.headlineMedium)
+                                    Text("🔒", style = MaterialTheme.typography.headlineMedium)
                                     Spacer(Modifier.width(10.dp))
                                     Column(Modifier.weight(1f)) {
-                                        Text("Analisis & Pengembangan  👑 PRO", color = Color.Black, fontWeight = FontWeight.ExtraBold)
+                                        Text("Analisis & Pengembangan  PRO", color = Color.Black, fontWeight = FontWeight.ExtraBold)
                                         Text("Lihat analisis jawaban, evaluasi kemampuan, dan saran pengembangan.", color = Color.Black, style = MaterialTheme.typography.bodySmall)
                                     }
                                     Text("›", color = orange, style = MaterialTheme.typography.headlineMedium)
@@ -282,7 +301,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         item {
                             Row(verticalAlignment = Alignment.CenterVertically) {
                                 Text("Analisis Lengkap", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.headlineMedium, modifier = Modifier.weight(1f))
-                                Text("👑 PRO", color = orange, fontWeight = FontWeight.Bold)
+                                Surface(color = orange, shape = RoundedCornerShape(50)) { Text("👑 PRO", color = Color.White, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 14.dp, vertical = 6.dp)) }
                             }
                             Text("Evaluasi detail hasil psikotes, analisis jawaban, dan saran pengembangan khusus untukmu.", color = Color.Black)
                         }
