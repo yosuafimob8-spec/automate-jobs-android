@@ -520,6 +520,22 @@ fun JobTrainingScreen() {
                                 Text("Nilai akhir: ${item.optInt("score")}/100  •  Status: LULUS", fontSize = 12.sp, fontWeight = FontWeight.SemiBold)
                                 Spacer(Modifier.height(6.dp))
                                 Text("Diterbitkan oleh KarirMate  •  ${item.optString("date")}", fontSize = 11.sp)
+                                HorizontalDivider(color = Color(0xFFD6A34D))
+                                Text("✦  PENGESAHAN PENYELESAIAN PELATIHAN  ✦", fontSize = 10.sp, fontWeight = FontWeight.Bold, color = orangeTraining, textAlign = TextAlign.Center)
+                                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.Bottom) {
+                                    Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
+                                        Text("Tanti Kurnia", fontSize = 13.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+                                        Text("Training Manager", fontSize = 10.sp, textAlign = TextAlign.Center)
+                                    }
+                                    Column(Modifier.weight(0.65f), horizontalAlignment = Alignment.CenterHorizontally) {
+                                        Text("▦", fontSize = 27.sp, color = darkTraining)
+                                        Text(if (item.optBoolean("serverRegistered")) "Verifikasi QR pada PDF" else "QR identitas pada PDF", fontSize = 8.sp, textAlign = TextAlign.Center)
+                                    }
+                                    Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
+                                        Text("Ilham Ramdhani", fontSize = 13.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+                                        Text("Program Director", fontSize = 10.sp, textAlign = TextAlign.Center)
+                                    }
+                                }
                                 Text("Nomor sertifikat", fontSize = 10.sp)
                                 Text(item.optString("id"), fontSize = 10.sp, fontWeight = FontWeight.SemiBold, textAlign = TextAlign.Center)
                                 HorizontalDivider(color = Color(0xFFD6A34D))
