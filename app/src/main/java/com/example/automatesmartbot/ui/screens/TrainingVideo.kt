@@ -31,14 +31,14 @@ fun TrainingVideo(courseId: String, lessonIndex: Int, title: String = "", script
                     }.ifEmpty { mutableListOf("Pelajari materi berikut.") }
                 }
                 Text(segments[section.coerceIn(0, segments.lastIndex)], color = androidx.compose.ui.graphics.Color.White)
-                Text("Slide ${section + 1} / ${segments.size}", color = androidx.compose.ui.graphics.Color.LightGray)
+                Text("Slide ${section + 1} / ${segments.size}", color = androidx.compose.ui.graphics.Color.White)
                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    OutlinedButton(enabled = section > 0, onClick = { section-- }) { Text("Sebelumnya") }
-                    OutlinedButton(enabled = section < segments.lastIndex, onClick = { section++ }) { Text("Berikutnya") }
+                    OutlinedButton(enabled = section > 0, onClick = { section-- }, colors = ButtonDefaults.outlinedButtonColors(contentColor = androidx.compose.ui.graphics.Color.White, disabledContentColor = androidx.compose.ui.graphics.Color.White)) { Text("Sebelumnya", color = androidx.compose.ui.graphics.Color.White) }
+                    OutlinedButton(enabled = section < segments.lastIndex, onClick = { section++ }, colors = ButtonDefaults.outlinedButtonColors(contentColor = androidx.compose.ui.graphics.Color.White, disabledContentColor = androidx.compose.ui.graphics.Color.White)) { Text("Berikutnya", color = androidx.compose.ui.graphics.Color.White) }
                 }
             }
         }
-        Text("Slide pembelajaran tersedia; video MP4 khusus modul belum tersedia.")
+        Text("Slide pembelajaran tersedia; video MP4 khusus modul belum tersedia.", color = androidx.compose.ui.graphics.Color(0xFF152D43))
         return
     }
     AndroidView(factory = { ctx ->
