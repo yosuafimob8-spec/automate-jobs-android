@@ -1,0 +1,340 @@
+[
+  {
+    "courseId": "job_readiness",
+    "title": "Persiapan Melamar Kerja",
+    "lessons": [
+      "Membaca lowongan",
+      "Menyusun CV",
+      "Email profesional"
+    ],
+    "questions": [
+      {
+        "prompt": "Sumber lowongan yang perlu diperiksa pertama?",
+        "options": [
+          "Situs karier resmi perusahaan",
+          "Pesan berantai tanpa sumber",
+          "Akun anonim"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pernyataan CV yang tepat?",
+        "options": [
+          "Mengarang pengalaman agar cocok",
+          "Mencantumkan pengalaman yang benar-benar dimiliki",
+          "Menyalin CV orang lain"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Subjek email lamaran sebaiknya?",
+        "options": [
+          "Kosong",
+          "TOLONG BACA!!!",
+          "Menyebut posisi dan nama pelamar"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Sebelum mengirim PDF, Anda perlu?",
+        "options": [
+          "Memeriksa isi, kontak dan keterbacaannya",
+          "Mengirim file rusak",
+          "Menghilangkan kontak"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika perekrut meminta biaya tidak jelas?",
+        "options": [
+          "Langsung transfer",
+          "Verifikasi melalui kanal resmi terlebih dahulu",
+          "Bagikan OTP"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "interview",
+    "title": "Komunikasi Wawancara",
+    "lessons": [
+      "Persiapan",
+      "Metode STAR",
+      "Mendengarkan aktif"
+    ],
+    "questions": [
+      {
+        "prompt": "STAR berarti?",
+        "options": [
+          "Situasi, tugas, tindakan, hasil",
+          "Sekadar menyebut jabatan",
+          "Menghafal jawaban palsu"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika pertanyaan belum jelas?",
+        "options": [
+          "Menebak dan mengarang",
+          "Meminta klarifikasi",
+          "Memotong pewawancara"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Contoh pengalaman yang dipakai sebaiknya?",
+        "options": [
+          "Cerita fiktif",
+          "Pekerjaan orang lain",
+          "Pengalaman nyata Anda"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Sebelum wawancara?",
+        "options": [
+          "Mempelajari perusahaan dan posisi",
+          "Mengabaikan deskripsi kerja",
+          "Menyebarkan data rahasia"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Saat belum menguasai suatu alat?",
+        "options": [
+          "Mengaku ahli",
+          "Jelaskan tingkat penguasaan dan rencana belajar",
+          "Menghindari pertanyaan"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "warehouse",
+    "title": "Logistik & Warehouse",
+    "lessons": [
+      "Keselamatan gudang",
+      "Penerimaan barang",
+      "Penyimpanan dan FIFO",
+      "Picking dan packing",
+      "Stock opname"
+    ],
+    "questions": [
+      {
+        "prompt": "Saat barang diterima, langkah pertama?",
+        "options": [
+          "Langsung simpan",
+          "Cocokkan dokumen dan kondisi",
+          "Buang surat jalan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "FIFO berarti?",
+        "options": [
+          "Barang masuk lebih dulu keluar lebih dulu",
+          "Barang terbaru selalu keluar dulu",
+          "Stok tanpa label"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika stok fisik berbeda dengan sistem?",
+        "options": [
+          "Ubah diam-diam",
+          "Abaikan",
+          "Investigasi dan laporkan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Picking list digunakan untuk?",
+        "options": [
+          "Menentukan barang yang diambil",
+          "Menghapus stok",
+          "Mengatur gaji"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "APD digunakan berdasarkan?",
+        "options": [
+          "Warna seragam",
+          "Risiko pekerjaan",
+          "Selera pribadi"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "administration",
+    "title": "Administrasi Perkantoran",
+    "lessons": [
+      "Dokumen kerja",
+      "Spreadsheet dasar",
+      "Komunikasi profesional"
+    ],
+    "questions": [
+      {
+        "prompt": "Dokumen rahasia sebaiknya?",
+        "options": [
+          "Dibagikan bebas",
+          "Diberi akses sesuai kebutuhan",
+          "Diupload ke publik"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Filter spreadsheet berguna untuk?",
+        "options": [
+          "Menyaring data",
+          "Menghapus semua data",
+          "Mengganti kata sandi"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Email profesional perlu?",
+        "options": [
+          "Subjek jelas",
+          "Tanpa penerima",
+          "Lampiran salah"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Sebelum kirim laporan?",
+        "options": [
+          "Cek data",
+          "Asal kirim",
+          "Hilangkan tanggal"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Arsip sebaiknya?",
+        "options": [
+          "Tidak diberi nama",
+          "Disimpan acak",
+          "Diberi nama konsisten"
+        ],
+        "correct": 2
+      }
+    ]
+  },
+  {
+    "courseId": "sales",
+    "title": "Sales & Marketing",
+    "lessons": [
+      "Memahami pelanggan",
+      "Komunikasi penjualan",
+      "Tindak lanjut"
+    ],
+    "questions": [
+      {
+        "prompt": "Langkah awal penjualan?",
+        "options": [
+          "Pahami kebutuhan",
+          "Paksa membeli",
+          "Abaikan pelanggan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Klaim produk harus?",
+        "options": [
+          "Dilebihkan",
+          "Akurat dan bisa dibuktikan",
+          "Dikarang"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Keberatan pelanggan sebaiknya?",
+        "options": [
+          "Didengarkan",
+          "Diabaikan",
+          "Dibalas marah"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Follow-up harus?",
+        "options": [
+          "Spam tiap jam",
+          "Tanpa catatan",
+          "Relevan dan menghormati izin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Catatan peluang digunakan untuk?",
+        "options": [
+          "Melacak tindak lanjut",
+          "Membocorkan data",
+          "Menghapus riwayat"
+        ],
+        "correct": 0
+      }
+    ]
+  },
+  {
+    "courseId": "customer_service",
+    "title": "Pelayanan Pelanggan",
+    "lessons": [
+      "Mendengarkan aktif",
+      "Penanganan keluhan",
+      "Eskalasi"
+    ],
+    "questions": [
+      {
+        "prompt": "Saat pelanggan mengeluh?",
+        "options": [
+          "Potong pembicaraan",
+          "Dengarkan dan konfirmasi",
+          "Abaikan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Janji solusi sebaiknya?",
+        "options": [
+          "Realistis",
+          "Tidak mungkin",
+          "Tanpa batas waktu"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Masalah di luar kewenangan?",
+        "options": [
+          "Sembunyikan",
+          "Eskalasi sesuai prosedur",
+          "Hapus bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Catatan keluhan berisi?",
+        "options": [
+          "Fakta dan kronologi",
+          "Rumor",
+          "Data palsu"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Komunikasi pelanggan harus?",
+        "options": [
+          "Kasar",
+          "Menyalahkan",
+          "Sopan dan jelas"
+        ],
+        "correct": 2
+      }
+    ]
+  }
+]
