@@ -78,6 +78,8 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
         else if (session != null && result == null && page == "home") page = "exam"
     }
     fun back() {
+        if (proNotice) { proNotice = false; return }
+        if (freeNotice) { freeNotice = false; return }
         page = when (page) {
             "home" -> { onExit(); "home" }
             "catalog" -> "home"
@@ -145,7 +147,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         val title = mode.s("title", "Tes")
                         val icon = testIcon(title)
                         Card(onClick = {
-                            if (isPro || freeEligible(mode)) { vm.start(mode.s("test_id"), (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20)); page = "exam" }
+                            if (isPro || freeEligible(mode)) { val requestedCount = if (isPro && !freeEligible(mode)) mode.n("question_count").coerceIn(10, 110) else (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20); vm.start(mode.s("test_id"), requestedCount); page = "exam" }
                             else if (basicMode(mode)) freeNotice = true
                             else proNotice = true
                         }, enabled = !loading, modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
@@ -154,7 +156,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                     Text(icon.first, style = MaterialTheme.typography.titleLarge)
                                 }
                                 Text(title, fontWeight = FontWeight.Bold, color = ink, maxLines = 2, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
-                                Text("${(if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20)} soal  •  ${mode.n("duration_seconds") / 60} menit", color = Color(0xFF58657A), style = MaterialTheme.typography.labelSmall)
+                                Text("${(if (isPro && !freeEligible(mode)) mode.n("question_count").coerceIn(10, 110) else (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20))} soal  •  ${mode.n("duration_seconds") / 60} menit", color = Color(0xFF58657A), style = MaterialTheme.typography.labelSmall)
                                 Text(if (freeEligible(mode)) "FREE • Mulai →" else if (basicMode(mode)) "FREE • 10–20 soal saja" else "👑 PRO", color = if (freeEligible(mode)) teal else orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodySmall)
                             }
                         }
@@ -574,7 +576,7 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
         questions.getOrNull(index)?.let { q ->
             Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                 Column(Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text(q.s("prompt"), fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
+                    Text(q.s("prompt", q.s("question", "Soal tidak tersedia")), fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
                     (q.getAsJsonArray("options")?.map { it.asJsonObject } ?: emptyList()).forEach { option ->
                         val selected = q.s("selected_option_id") == option.s("id")
                         Card(onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFE8DC) else Color(0xFFF7FAFD)), border = androidx.compose.foundation.BorderStroke(if (selected) 2.dp else 1.dp, if (selected) orange else Color(0xFFD9E3ED))) {
