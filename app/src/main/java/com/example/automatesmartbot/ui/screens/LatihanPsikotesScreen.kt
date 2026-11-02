@@ -249,9 +249,6 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                 }
                             }
                         }
-                        AnimatedVisibility(visible = showReview) {
-                            // Answer details are rendered as lazy items below.
-                        }
                         if (showReview) {
                             val details = r.getAsJsonArray("questions")?.mapNotNull { if (it.isJsonObject) it.asJsonObject else null }.orEmpty()
                             if (details.isEmpty()) item {
