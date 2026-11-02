@@ -457,7 +457,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     } else if (report.isNotBlank()) {
         Column(Modifier.fillMaxSize().background(Color(0xFFF8FBFC)).verticalScroll(rememberScrollState()).padding(20.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)) {
-            Text("←  Hasil Interview", modifier = Modifier.clickable { resetSession() }, color = ink,
+            Text("←  Hasil Interview", modifier = Modifier.clickable { report = ""; started = false; showPreparation = true }, color = ink,
                 fontWeight = FontWeight.Bold, style = MaterialTheme.typography.headlineSmall)
             Card(shape = shape, colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF0E3))) {
                 Column(Modifier.fillMaxWidth().padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
