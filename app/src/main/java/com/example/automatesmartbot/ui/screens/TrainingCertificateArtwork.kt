@@ -70,37 +70,18 @@ internal object TrainingCertificateArtwork {
         label("pada program pelatihan kerja digital:", 421f, 330f, 14f)
         label(item.optString("course"), 421f, 363f, 26f, navy, true)
         label("Nilai akhir: ${item.optInt("score")}/100    |    Status: LULUS", 421f, 390f, 16f, navy, true)
-        // Certificate-only stylized signatory marks; not a reproduction of a legal signature.
-        fun elegantMark(text: String, centerX: Float, baseline: Float, size: Float) {
-            val ink = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-                color = navy
-                typeface = Typeface.create("cursive", Typeface.BOLD_ITALIC)
-                textSize = size
-                textAlign = Paint.Align.CENTER
-                isSubpixelText = true
+        // Scalable vector artwork matching the approved navy calligraphy design.
+        // Rendered identically in the on-screen preview and the exported PDF.
+        fun signatory(drawableId: Int, left: Int, top: Int, right: Int, bottom: Int) {
+            context.getDrawable(drawableId)?.mutate()?.apply {
+                setBounds(left, top, right, bottom)
+                draw(canvas)
             }
-            canvas.drawText(text, centerX, baseline, ink)
-            val flourish = Path().apply {
-                moveTo(centerX - 90f, baseline + 7f)
-                cubicTo(centerX - 38f, baseline - 5f, centerX + 24f, baseline + 20f, centerX + 93f, baseline - 1f)
-            }
-            val pen = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-                color = navy
-                style = Paint.Style.STROKE
-                strokeWidth = 1.6f
-                strokeCap = Paint.Cap.ROUND
-            }
-            canvas.drawPath(flourish, pen)
-            pen.color = gold
-            pen.strokeWidth = 1.7f
-            val accent = Path().apply {
-                moveTo(centerX - 46f, baseline + 15f)
-                cubicTo(centerX - 10f, baseline + 4f, centerX + 39f, baseline + 15f, centerX + 75f, baseline + 7f)
-            }
-            canvas.drawPath(accent, pen)
         }
-        elegantMark("T. Kurnia", 196f, 445f, 37f)
-        elegantMark("I. R", 646f, 444f, 49f)
+        signatory(R.drawable.certificate_tanti_kurnia, 95, 392, 297, 464)
+        signatory(R.drawable.certificate_ilham_ramdhani, 545, 392, 747, 464)
+        line(150f, 459f, 240f, 459f, gold, 1.3f)
+        line(600f, 459f, 690f, 459f, gold, 1.3f)
         line(97f, 469f, 295f, 469f, orange, 1.5f)
         line(547f, 469f, 745f, 469f, orange, 1.5f)
         label("Tanti Kurnia", 196f, 489f, 16f, navy, true)
