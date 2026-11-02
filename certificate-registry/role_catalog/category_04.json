@@ -1,0 +1,698 @@
+[
+  {
+    "courseId": "role_customer_service_basic",
+    "title": "Customer Service • Basic",
+    "lessons": [
+      "Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Customer Service.",
+      "Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Customer Service.",
+      "Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Customer Service.",
+      "Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Customer Service.",
+      "Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Customer Service."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Customer Service?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Customer Service?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Customer Service?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Customer Service"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Customer Service?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Customer Service",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_customer_service_intermediate",
+    "title": "Customer Service • Intermediate",
+    "lessons": [
+      "Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Customer Service.",
+      "Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Customer Service.",
+      "Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Customer Service.",
+      "Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Customer Service.",
+      "Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Customer Service."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Customer Service?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Customer Service?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Customer Service?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Customer Service"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Customer Service?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Customer Service",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_customer_service_advanced",
+    "title": "Customer Service • Advanced",
+    "lessons": [
+      "Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Customer Service.",
+      "Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Customer Service.",
+      "Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Customer Service.",
+      "Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Customer Service.",
+      "Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Customer Service."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Customer Service?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Customer Service?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Customer Service berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Customer Service?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Customer Service"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Customer Service?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Customer Service",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_call_center_agent_basic",
+    "title": "Call Center Agent • Basic",
+    "lessons": [
+      "Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Call Center Agent.",
+      "Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Call Center Agent.",
+      "Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Call Center Agent.",
+      "Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Call Center Agent.",
+      "Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Call Center Agent."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Call Center Agent?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Call Center Agent?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Call Center Agent?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Call Center Agent"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Call Center Agent?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Call Center Agent",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_call_center_agent_intermediate",
+    "title": "Call Center Agent • Intermediate",
+    "lessons": [
+      "Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Call Center Agent.",
+      "Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Call Center Agent.",
+      "Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Call Center Agent.",
+      "Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Call Center Agent.",
+      "Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Call Center Agent."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Call Center Agent?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Call Center Agent?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Call Center Agent?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Call Center Agent"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Call Center Agent?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Call Center Agent",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_call_center_agent_advanced",
+    "title": "Call Center Agent • Advanced",
+    "lessons": [
+      "Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Call Center Agent.",
+      "Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Call Center Agent.",
+      "Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Call Center Agent.",
+      "Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Call Center Agent.",
+      "Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Call Center Agent."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Call Center Agent?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Call Center Agent?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Call Center Agent berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Call Center Agent?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Call Center Agent"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Call Center Agent?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Call Center Agent",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_customer_relation_officer_basic",
+    "title": "Customer Relation Officer • Basic",
+    "lessons": [
+      "Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Customer Relation Officer.",
+      "Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Customer Relation Officer.",
+      "Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Customer Relation Officer.",
+      "Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Customer Relation Officer.",
+      "Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Customer Relation Officer."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Customer Relation Officer?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Customer Relation Officer?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Customer Relation Officer?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Customer Relation Officer"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Customer Relation Officer?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Customer Relation Officer",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_customer_relation_officer_intermediate",
+    "title": "Customer Relation Officer • Intermediate",
+    "lessons": [
+      "Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Customer Relation Officer.",
+      "Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Customer Relation Officer.",
+      "Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Customer Relation Officer.",
+      "Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Customer Relation Officer.",
+      "Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Customer Relation Officer."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Customer Relation Officer?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Customer Relation Officer?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Customer Relation Officer?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Customer Relation Officer"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Customer Relation Officer?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Customer Relation Officer",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_customer_relation_officer_advanced",
+    "title": "Customer Relation Officer • Advanced",
+    "lessons": [
+      "Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Customer Relation Officer.",
+      "Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Customer Relation Officer.",
+      "Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Customer Relation Officer.",
+      "Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Customer Relation Officer.",
+      "Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Customer Relation Officer."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Customer Relation Officer?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Customer Relation Officer?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Customer Relation Officer berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Customer Relation Officer?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Customer Relation Officer"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Customer Relation Officer?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Customer Relation Officer",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_front_office_basic",
+    "title": "Front Office • Basic",
+    "lessons": [
+      "Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Front Office.",
+      "Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Front Office.",
+      "Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Front Office.",
+      "Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Front Office.",
+      "Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Front Office."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Front Office?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Front Office?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Front Office?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Front Office"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Front Office?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Front Office",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_front_office_intermediate",
+    "title": "Front Office • Intermediate",
+    "lessons": [
+      "Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Front Office.",
+      "Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Front Office.",
+      "Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Front Office.",
+      "Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Front Office.",
+      "Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Front Office."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Front Office?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Front Office?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Front Office?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Front Office"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Front Office?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Front Office",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_front_office_advanced",
+    "title": "Front Office • Advanced",
+    "lessons": [
+      "Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan Bukti hasil: checklist risiko dan kewenangan Front Office.",
+      "Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan Bukti hasil: bagan alur kerja Front Office.",
+      "Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku pada nomor tiket, kronologi, SLA, hasil resolusi Bukti hasil: contoh dokumen dan bukti kerja Front Office.",
+      "Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus pelanggan marah atau tiket melewati SLA saat menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Front Office.",
+      "Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku dengan ukuran first response time, resolution time, CSAT Bukti hasil: rencana pengukuran dan perbaikan Front Office."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Front Office?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing, FAQ, CRM, kanal layanan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku menggunakan ticketing, FAQ, CRM, kanal layanan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Front Office?",
+        "options": [
+          "terima keluhan, verifikasi, solusi, eskalasi, penutupan — Urutkan langkah menjalankan tanggung jawab jabatan Front Office berdasarkan SOP yang berlaku dalam proses terima keluhan, verifikasi, solusi, eskalasi, penutupan",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Front Office?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "nomor tiket, kronologi, SLA, hasil resolusi — contoh dokumen dan bukti kerja Front Office"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi pelanggan marah atau tiket melewati SLA, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Front Office?",
+        "options": [
+          "Rumor tanpa data",
+          "first response time, resolution time, CSAT — rencana pengukuran dan perbaikan Front Office",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
