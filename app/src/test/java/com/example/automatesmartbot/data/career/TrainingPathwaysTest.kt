@@ -6,6 +6,7 @@ import org.junit.Test
 class TrainingPathwaysTest {
     @Test fun allPositionsHaveThreeDistinctLevels() {
         assertEquals(15, TrainingPositions.groups.size)
+        assertEquals(TrainingPositions.groups.map { it.category }.toSet(), TrainingDomainContent.categories())
         assertEquals(78, TrainingPositions.count)
         val ids = mutableSetOf<String>()
         TrainingPositions.groups.forEach { group ->
@@ -18,6 +19,12 @@ class TrainingPathwaysTest {
                     assertEquals(5, course.lessons.size)
                     assertEquals(5, course.questions.size)
                     assertTrue(course.lessons.all { it.second.contains(position) })
+                    val domain = TrainingDomainContent.forCategory(group.category)
+                    assertTrue(course.lessons[0].second.contains(domain.tool))
+                    assertTrue(course.lessons[1].second.contains(domain.workflow))
+                    assertTrue(course.lessons[2].second.contains(domain.record))
+                    assertTrue(course.lessons[3].second.contains(domain.incident))
+                    assertTrue(course.lessons[4].second.contains(domain.metric))
                     assertEquals(100, TrainingCourses.score(course.questions.map { it.correct }, course.questions))
                     assertEquals(0, TrainingCourses.score(course.questions.map { (it.correct + 1) % it.options.size }, course.questions))
                 }
