@@ -6,6 +6,7 @@ object TrainingPractice {
     fun assess(answer: String): Result {
         val words = answer.trim().split(Regex("\\s+")).filter { it.isNotBlank() }
         if (words.size < 20) return Result(false, "Jelaskan kasus dengan minimal 20 kata.")
+        if (words.distinctBy { it.lowercase().trim { ch -> !ch.isLetterOrDigit() } }.filter { it.isNotBlank() }.size < 10) return Result(false, "Jawaban terlalu berulang; jelaskan langkah kerja dengan kata yang beragam.")
         if (answer.trim().length < 120) return Result(false, "Tambahkan rincian langkah kerja dan hasil yang diharapkan.")
         return Result(true, "Jawaban memenuhi kriteria kelengkapan awal. Ini bukan penilaian kompetensi oleh asesor.")
     }
