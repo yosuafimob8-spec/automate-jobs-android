@@ -54,6 +54,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
     val submitting by vm.submitting.collectAsState()
     val pendingCount by vm.pendingCount.collectAsState()
     var page by rememberSaveable { mutableStateOf("home") }
+    var resultAnalysisPage by rememberSaveable { mutableStateOf(false) }
     var family by remember { mutableStateOf("all") }
     var proNotice by remember { mutableStateOf(false) }
     var freeNotice by remember { mutableStateOf(false) }
@@ -74,7 +75,10 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
     fun back() {
         page = when (page) {
             "home" -> { onExit(); "home" }
-            "exam" -> "exam"
+            "catalog" -> "home"
+            "exam" -> "catalog"
+            "result" -> if (resultAnalysisPage) { resultAnalysisPage = false; "result" } else "catalog"
+            "history", "stats", "leaderboard" -> "home"
             else -> "home"
         }
     }
@@ -168,7 +172,6 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 val blank = r.n("blank_count")
                 val total = correct + wrong + blank
                 val accuracy = if (total > 0) correct * 100 / total else 0
-                var analysisPage by rememberSaveable { mutableStateOf(false) }
                 var analysisTab by rememberSaveable { mutableStateOf(0) }
                 val rating = when {
                     actualScore == null -> "Asesmen Kepribadian"
@@ -190,13 +193,13 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 ) {
                     item {
                         Row(verticalAlignment = Alignment.CenterVertically) {
-                            TextButton(onClick = { if (analysisPage) analysisPage = false else { page = "home"; vm.loadExtras(isPro) } }) {
+                            TextButton(onClick = { if (resultAnalysisPage) resultAnalysisPage = false else page = "catalog" }) {
                                 Text("←", color = Color.Black, style = MaterialTheme.typography.titleLarge)
                             }
                             Text("🟠 KarirMate", color = Color(0xFF007F78), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
                         }
                     }
-                    if (!analysisPage) {
+                    if (!resultAnalysisPage) {
                         item {
                             Text("Hasil Psikotes", color = Color.Black, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
                             Text("Berikut hasil psikotes kamu beserta ringkasannya.", color = Color(0xFF333333))
@@ -258,7 +261,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             }
                         }
                         item {
-                            MockupCard(tint = Color(0xFFFFF4E4), borderColor = Color(0xFFFFB966), onClick = { if (isPro) analysisPage = true else proNotice = true }) {
+                            MockupCard(tint = Color(0xFFFFF4E4), borderColor = Color(0xFFFFB966), onClick = { if (isPro) resultAnalysisPage = true else proNotice = true }) {
                                 Row(verticalAlignment = Alignment.CenterVertically) {
                                     Text("💡", style = MaterialTheme.typography.headlineMedium)
                                     Spacer(Modifier.width(10.dp))
