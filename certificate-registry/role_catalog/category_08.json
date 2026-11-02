@@ -54,6 +54,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Teknisi • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat, dan prose",
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Teknisi • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Teknisi • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pas",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Teknisi • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pa",
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Teknisi • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Teknisi • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat, dan prose"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Teknisi • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basi",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Teknisi • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pas",
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Teknisi • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pa"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Teknisi • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Teknisi • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat, dan prose",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Teknisi • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basi",
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Teknisi • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Teknisi • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pa",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Teknisi • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Melewati pemeriksaan Teknisi • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -112,6 +247,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Teknisi • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan prosedur pada ",
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Teknisi • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Inte"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Teknisi • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pas",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Teknisi • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pa",
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Teknisi • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Teknisi • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan prosedur pada "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Teknisi • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Inte",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Teknisi • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pas",
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Teknisi • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pa"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Teknisi • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Teknisi • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan prosedur pada ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Teknisi • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Inte",
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Teknisi • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Teknisi • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pa",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Teknisi • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Melewati pemeriksaan Teknisi • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -170,6 +440,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Teknisi • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, tentukan p",
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Teknisi • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Adva"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Teknisi • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pas",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Teknisi • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pa",
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Teknisi • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Teknisi • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, tentukan p"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Teknisi • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Adva",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Teknisi • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pas",
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Teknisi • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pa"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Teknisi • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Teknisi • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Teknisi di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, tentukan p",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Teknisi • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Teknisi: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Adva",
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Teknisi • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Teknisi menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Teknisi • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Teknisi: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pa",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Teknisi • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Teknisi dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Melewati pemeriksaan Teknisi • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -228,6 +633,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Maintenance Staff • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat,",
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Maintenance Staff • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Maintenance Staff • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Maintenance Staff • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Maintenance Staff • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Maintenance Staff • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat,"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Maintenance Staff • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Maintenance Staff • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Maintenance Staff • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Maintenance Staff • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Maintenance Staff • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat,",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Maintenance Staff • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Maintenance Staff • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Maintenance Staff • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Maintenance Staff • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Melewati pemeriksaan Maintenance Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -286,6 +826,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Maintenance Staff • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan pros",
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Maintenance Staff • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Maintenance Staff • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Maintenance Staff • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Maintenance Staff • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Maintenance Staff • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan pros"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Maintenance Staff • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Maintenance Staff • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Maintenance Staff • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Maintenance Staff • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Maintenance Staff • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan pros",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Maintenance Staff • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Maintenance Staff • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Maintenance Staff • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Maintenance Staff • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Melewati pemeriksaan Maintenance Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -344,6 +1019,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Maintenance Staff • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, ",
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Maintenance Staff • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Maintenance Staff • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Maintenance Staff • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Maintenance Staff • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Maintenance Staff • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Maintenance Staff • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Maintenance Staff • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Maintenance Staff • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Maintenance Staff • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Maintenance Staff • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Maintenance Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Maintenance Staff • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Maintenance Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Maintenance Staff • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Maintenance Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Maintenance Staff • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Maintenance Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Maintenance Staff • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Maintenance Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Melewati pemeriksaan Maintenance Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -402,6 +1212,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Electrical Technician • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, a",
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Electrical Technician • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Electrical Technician • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Electrical Technician • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Electrical Technician • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Electrical Technician • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Electrical Technician • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Electrical Technician • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Electrical Technician • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Electrical Technician • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Electrical Technician • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, a",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Electrical Technician • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Electrical Technician • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Electrical Technician • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Electrical Technician • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Melewati pemeriksaan Electrical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -460,6 +1405,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Electrical Technician • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan ",
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Electrical Technician • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Electrical Technician • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Electrical Technician • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Electrical Technician • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Electrical Technician • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Electrical Technician • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Electrical Technician • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Electrical Technician • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Electrical Technician • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Electrical Technician • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Electrical Technician • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Electrical Technician • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Electrical Technician • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Electrical Technician • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Melewati pemeriksaan Electrical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -518,6 +1598,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Electrical Technician • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risi",
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Electrical Technician • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Electrical Technician • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Electrical Technician • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Electrical Technician • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Electrical Technician • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Electrical Technician • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Electrical Technician • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Electrical Technician • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Electrical Technician • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Electrical Technician • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Electrical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risi",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Electrical Technician • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Electrical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Electrical Technician • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Electrical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Electrical Technician • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Electrical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Electrical Technician • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Electrical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Melewati pemeriksaan Electrical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -576,6 +1791,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Mechanical Technician • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, a",
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Mechanical Technician • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Mechanical Technician • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Mechanical Technician • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Mechanical Technician • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Mechanical Technician • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Mechanical Technician • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Mechanical Technician • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Mechanical Technician • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Mechanical Technician • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Mechanical Technician • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, a",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Mechanical Technician • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Mechanical Technician • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Mechanical Technician • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Mechanical Technician • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Melewati pemeriksaan Mechanical Technician • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -634,6 +1984,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Mechanical Technician • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan ",
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Mechanical Technician • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Mechanical Technician • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Mechanical Technician • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Mechanical Technician • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Mechanical Technician • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Mechanical Technician • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Mechanical Technician • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Mechanical Technician • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Mechanical Technician • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Mechanical Technician • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Mechanical Technician • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Mechanical Technician • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Mechanical Technician • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Mechanical Technician • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Melewati pemeriksaan Mechanical Technician • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -692,6 +2177,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Mechanical Technician • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risi",
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Mechanical Technician • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Mechanical Technician • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Mechanical Technician • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Mechanical Technician • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Mechanical Technician • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Mechanical Technician • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Mechanical Technician • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg",
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Mechanical Technician • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Mechanical Technician • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Mechanical Technician • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Mechanical Technician di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risi",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Mechanical Technician • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Mechanical Technician: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Mechanical Technician • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Mechanical Technician menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penangg"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Mechanical Technician • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Mechanical Technician: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakuka",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Mechanical Technician • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Mechanical Technician dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan",
+          "Melewati pemeriksaan Mechanical Technician • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -750,6 +2370,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Engineering Staff • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat,",
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Engineering Staff • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Engineering Staff • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Engineering Staff • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Engineering Staff • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Engineering Staff • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat,"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Engineering Staff • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Engineering Staff • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Engineering Staff • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Engineering Staff • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Engineering Staff • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Basic, kenali konsep, alat,",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Engineering Staff • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Engineering Staff • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Engineering Staff • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Engineering Staff • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Melewati pemeriksaan Engineering Staff • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -808,6 +2563,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Engineering Staff • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan pros",
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Engineering Staff • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Engineering Staff • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Engineering Staff • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Engineering Staff • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Engineering Staff • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan pros"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Engineering Staff • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Engineering Staff • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Engineering Staff • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Engineering Staff • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Engineering Staff • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Intermediate, terapkan pros",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Engineering Staff • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Engineering Staff • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Engineering Staff • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Engineering Staff • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Melewati pemeriksaan Engineering Staff • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -866,6 +2756,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Engineering Staff • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, ",
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Engineering Staff • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Engineering Staff • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Engineering Staff • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Engineering Staff • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Engineering Staff • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Engineering Staff • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Engineering Staff • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung ",
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Engineering Staff • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Engineering Staff • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Engineering Staff • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Engineering Staff di bidang Teknik & Maintenance, pelajari alat dan istilah: work order, multimeter, checklist inspeksi. Untuk tingkat Advanced, analisis risiko, ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Engineering Staff • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Engineering Staff: inspeksi, isolasi energi, perbaikan, uji fungsi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ti",
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Engineering Staff • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Engineering Staff menggunakan: maintenance log, work order, riwayat suku cadang. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Engineering Staff • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Engineering Staff: kerusakan berulang atau bahaya listrik. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Engineering Staff • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Engineering Staff dengan indikator MTTR, MTBF, kepatuhan preventive maintenance. Tentukan baseline, target realistis, cara pengukuran, dan tindakan per",
+          "Melewati pemeriksaan Engineering Staff • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   }
