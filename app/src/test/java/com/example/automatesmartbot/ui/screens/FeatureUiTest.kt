@@ -102,7 +102,7 @@ class FeatureUiTest {
         }
         compose.onAllNodes(hasSetTextAction())[0].performTextInput("Dina Peserta")
         compose.onNodeWithText("Lihat Hasil").performScrollTo().performClick()
-        compose.onNodeWithText("Unduh Sertifikat PDF").performScrollTo().assertIsEnabled()
+        compose.onNodeWithText("⬇ Unduh Sertifikat (PDF)").performScrollTo().assertIsEnabled()
         compose.runOnIdle {
             val history = org.json.JSONArray(compose.activity.getSharedPreferences("career_training",0).getString("certificates","[]"))
             assertEquals("Dina Peserta",history.getJSONObject(0).getString("name"))
