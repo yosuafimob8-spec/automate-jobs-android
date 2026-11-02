@@ -147,7 +147,15 @@ fun JobTrainingScreen() {
                     certificate = item
                     stage = "certificate"
                     message = "Sertifikat terverifikasi server."
-                } catch (e: Exception) { message = "Ujian server gagal: ${e.message}" }
+                } catch (e: Exception) {
+                    val detail = e.message.orEmpty()
+                    message = when {
+                        "exam_not_passed" in detail -> "Nilai belum mencapai 80/100. Silakan ulangi ujian."
+                        "modules_incomplete" in detail -> "Progres modul belum lengkap di server. Kembali ke daftar modul dan selesaikan modul yang belum tersimpan."
+                        "invalid_or_incomplete_assessment" in detail -> "Data ujian belum lengkap atau tidak sesuai. Periksa jawaban lalu ulangi ujian."
+                        else -> "Ujian gagal diproses. Periksa koneksi dan coba lagi."
+                    }
+                }
                 finally { trainingBusy = false }
             }
             return
