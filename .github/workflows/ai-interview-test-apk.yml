@@ -1,12 +1,7 @@
-name: KarirMate APK Test Validation
+name: KarirMate APK Test Validation - Manual Only
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - 'fix/profile-gate-unknown-status-20261101'
-    paths:
-      - '.github/workflows/ai-interview-test-apk.yml'
 
 jobs:
   build:
