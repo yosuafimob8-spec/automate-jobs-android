@@ -33,6 +33,11 @@ val releasePsychotestBaseUrl = providers.gradleProperty("releasePsychotestBaseUr
 val debugInterviewBaseUrl = providers.gradleProperty("debugInterviewBaseUrl").getOrElse("http://10.0.2.2:8790/")
 val releaseInterviewBaseUrl = providers.gradleProperty("releaseInterviewBaseUrl").getOrElse("")
 
+val debugTrainingBaseUrl = providers.gradleProperty("debugTrainingBaseUrl").getOrElse("")
+val releaseTrainingBaseUrl = providers.gradleProperty("releaseTrainingBaseUrl").getOrElse("")
+require(debugTrainingBaseUrl.isEmpty() || debugTrainingBaseUrl.startsWith("https://"))
+require(releaseTrainingBaseUrl.isEmpty() || releaseTrainingBaseUrl.startsWith("https://"))
+
 val generatedBrandRes = layout.buildDirectory.dir("generated/res/karirMate")
 val prepareBrandAssets by tasks.registering(Copy::class) {
     from(rootProject.file("design/Logo.jpeg"))
@@ -64,6 +69,7 @@ android {
             buildConfigField("String", "JOBS_V2_BASE_URL", "\"$debugJobsV2BaseUrl\"")
             buildConfigField("String", "PSYCHOTEST_BASE_URL", "\"$debugPsychotestBaseUrl\"")
             buildConfigField("String", "INTERVIEW_BASE_URL", "\"$debugInterviewBaseUrl\"")
+            buildConfigField("String", "TRAINING_BASE_URL", "\"$debugTrainingBaseUrl\"")
             manifestPlaceholders["usesCleartextTraffic"] = "true"
         }
         create("termux") {
@@ -74,6 +80,7 @@ android {
             buildConfigField("String", "JOBS_V2_BASE_URL", "\"http://127.0.0.1:8788/\"")
             buildConfigField("String", "PSYCHOTEST_BASE_URL", "\"http://127.0.0.1:8789/\"")
             buildConfigField("String", "INTERVIEW_BASE_URL", "\"http://127.0.0.1:8790/\"")
+            buildConfigField("String", "TRAINING_BASE_URL", "\"$debugTrainingBaseUrl\"")
             manifestPlaceholders["usesCleartextTraffic"] = "true"
         }
         release {
@@ -86,6 +93,7 @@ android {
             buildConfigField("String", "JOBS_V2_BASE_URL", "\"$releaseJobsV2BaseUrl\"")
             buildConfigField("String", "PSYCHOTEST_BASE_URL", "\"$releasePsychotestBaseUrl\"")
             buildConfigField("String", "INTERVIEW_BASE_URL", "\"$releaseInterviewBaseUrl\"")
+            buildConfigField("String", "TRAINING_BASE_URL", "\"$releaseTrainingBaseUrl\"")
             manifestPlaceholders["usesCleartextTraffic"] = "false"
         }
     }
