@@ -1,4 +1,4 @@
-"""Local VoxCPM2 TTS for KarirMate. Run only on loopback: uvicorn backend_contract:app --host 127.0.0.1 --port 8791 (see command below)."""
+"""Local VoxCPM2 TTS for KarirMate. From backend-contract/: uvicorn voxcpm2_tts_api:app --host 127.0.0.1 --port 8791."""
 import io
 import os
 import threading
