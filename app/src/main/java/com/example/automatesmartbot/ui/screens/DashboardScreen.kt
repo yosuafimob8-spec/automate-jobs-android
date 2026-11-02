@@ -99,19 +99,11 @@ private val jobFeatures = listOf(
         icon = Icons.Default.Mic,
         accent = Color(0xFF06B6D4),
         route = Screen.AiInterview.route,
-        statusLabel = "Segera Hadir"
+        statusLabel = null
     )
 )
 
 private val automationFeatures = listOf(
-    DashboardFeature(
-        title = "AI Agent",
-        subtitle = "Otomasi dengan persetujuan Anda",
-        icon = Icons.Default.SmartToy,
-        accent = Color(0xFFEC4899),
-        route = Screen.AiAgent.route,
-        statusLabel = "Segera Hadir"
-    ),
     DashboardFeature(
         title = "Kalkulator Gaji",
         subtitle = "Lembur, BPJS, PPh 21 & THR",
