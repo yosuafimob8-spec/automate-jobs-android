@@ -343,6 +343,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     if (response.improvement.isNotBlank()) append("\\nSaran: ${response.improvement}")
                 }
                 if (action == "finish") {
+                    started = false
                     report = response.finalReport
                     resultScore = response.overallScore ?: 0
                     resultStrengths = response.strengths
@@ -401,7 +402,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             }
         }
     }
-    if (!started && !showPreparation) {
+    if (!started && !showPreparation && report.isBlank()) {
         Column(Modifier.fillMaxSize().background(Color(0xFFF8FBFC)).verticalScroll(rememberScrollState())) {
             Row(Modifier.fillMaxWidth().padding(20.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                 Text("◧ KarirMate", color = orange, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.headlineSmall)
@@ -442,7 +443,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
 
             }
         }
-    } else if (!started) {
+    } else if (!started && report.isBlank()) {
         Column(Modifier.fillMaxSize().background(Color(0xFFF8FBFC)).verticalScroll(rememberScrollState()).padding(20.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)) {
             Text("←  Pilih Interviewer", modifier = Modifier.clickable { showPreparation = false }, color = ink,
