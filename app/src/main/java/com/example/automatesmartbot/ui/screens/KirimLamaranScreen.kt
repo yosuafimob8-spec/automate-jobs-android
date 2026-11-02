@@ -44,7 +44,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
     suspend fun refresh() {
         statusLoaded = false
         val response = ApiClient.apiService.getAutoApplyStatus()
-        if (!response.isSuccessful) { if (response.code() in listOf(401,403,409)) gmailConnected = false; response.errorBody()?.close(); error("Status Auto Apply gagal (${response.code()}). Periksa sesi dan otorisasi Gmail.") }
+        if (!response.isSuccessful) { if (response.code() in listOf(401,403)) gmailConnected = false; response.errorBody()?.close(); error("Status Auto Apply gagal (${response.code()}). Periksa sesi dan otorisasi Gmail.") }
         val body = JSONObject(response.body()?.use { it.string() } ?: error("Status kosong."))
         require(body.has("gmail_connected") && body.has("auto_apply")) { "Status Auto Apply dari server belum lengkap." }
         enabled = body.optJSONObject("auto_apply")?.optBoolean("enabled") == true
