@@ -31,8 +31,13 @@ def tts(req: SpeechRequest):
                 _model = VoxCPM.from_pretrained(MODEL_ID, load_denoiser=False, optimize=False, device="cpu")
             import soundfile as sf
             wav = _model.generate(text=req.text, cfg_value=2.0, inference_timesteps=10)
+            if isinstance(wav, tuple):
+                wav = wav[0]
+            if hasattr(wav, "detach"):
+                wav = wav.detach().cpu().numpy()
+            rate = getattr(_model, "sample_rate", None) or getattr(getattr(_model, "tts_model", None), "sample_rate", None) or 16000
             output = io.BytesIO()
-            sf.write(output, wav, _model.tts_model.sample_rate, format="WAV")
+            sf.write(output, wav, int(rate), format="WAV")
             return Response(output.getvalue(), media_type="audio/wav")
     except Exception as exc:
         raise HTTPException(503, "VoxCPM2 unavailable: " + type(exc).__name__) from exc
