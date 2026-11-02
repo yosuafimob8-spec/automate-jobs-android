@@ -54,6 +54,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akura",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, ",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akura"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, ",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akura",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Basic, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -112,6 +247,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan i",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akura",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan i",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akura"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan i"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akura",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Intermediate, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -170,6 +440,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang p",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akura",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang p",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akura"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Service di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang p"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Service: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Service menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akura",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Service: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Service • Advanced, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Service dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukt",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Service • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -228,6 +633,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikas",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic,"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akur",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingka",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan buk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikas",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic,",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akur"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingka",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan buk",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic,",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akur",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Basic, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan buk",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -286,6 +826,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan ",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interm"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akur",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingka",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan buk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan ",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interm",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akur"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingka",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan buk",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interm",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akur",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Intermediate, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan buk",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -344,6 +1019,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang ",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanc"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akur",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingka",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan buk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang ",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanc",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akur"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingka",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan buk",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Call Center Agent di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Call Center Agent: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanc",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Call Center Agent menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akur",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Call Center Agent: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Call Center Agent • Advanced, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Call Center Agent dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan buk",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Call Center Agent • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -402,6 +1212,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ide",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pad",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasa"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ide",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pad",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasa",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Ide"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Basic, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasa",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -460,6 +1405,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasio",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pad",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasa"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasio",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pad",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasa",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasio"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Intermediate, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasa",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -518,6 +1598,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan ",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pad",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasa"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan ",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pad",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasa",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Customer Relation Officer di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Customer Relation Officer: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingka",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Customer Relation Officer menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Customer Relation Officer: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Customer Relation Officer • Advanced, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Customer Relation Officer dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasa",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Customer Relation Officer • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -576,6 +1791,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi ris",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kena"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat se",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Bas",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi ris",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kena",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat se"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Bas",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. P",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi ris"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kena",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat se",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Bas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Basic, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. P",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Basic tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -634,6 +1984,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan ident",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat se",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Int",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan ident",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediat",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat se"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Int",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. P",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan ident"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediat",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat se",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Int"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Intermediate, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. P",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Intermediate tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -692,6 +2177,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perba",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana memastikan alur layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 1?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat se",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana menangani keluhan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Adv",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana menilai mutu layanan pada kasus 1?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perba",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana memastikan alur layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, a",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat se"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana menangani keluhan pada kasus 2?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Adv",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana menilai mutu layanan pada kasus 2?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. P",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana mengidentifikasi kebutuhan pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Sebagai Front Office di bidang Customer Service, pelajari alat dan istilah: ticketing, FAQ, CRM, kanal layanan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perba"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana memastikan alur layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Simulasikan alur kerja Front Office: terima keluhan, verifikasi, solusi, eskalasi, penutupan. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, a",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana mencatat interaksi pelanggan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Buat contoh dokumen Front Office menggunakan: nomor tiket, kronologi, SLA, hasil resolusi. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat se",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana menangani keluhan pada kasus 3?",
+        "options": [
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian",
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Studi kasus Front Office: pelanggan marah atau tiket melewati SLA. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Adv"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Dalam layanan Front Office • Advanced, bagaimana menilai mutu layanan pada kasus 3?",
+        "options": [
+          "Verifikasi dan dokumentasikan langkah sesuai materi: Evaluasi pekerjaan Front Office dengan indikator first response time, resolution time, CSAT. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. P",
+          "Mengabaikan keluhan atau kebutuhan tanpa konfirmasi",
+          "Menutup tiket Front Office • Advanced tanpa mencatat bukti penyelesaian"
+        ],
+        "correct": 0
       }
     ]
   }
