@@ -80,8 +80,8 @@ fun TrainingCertificateExport(item: JSONObject) {
                             paint.textSize = 12f
                             canvas.drawText(role, x, 508f, paint)
                         }
-                        signature("KarirMate", "Penyelenggara Pelatihan", 207f)
-                        signature("KarirMate", "Penerbit Sertifikat", 633f)
+                        signature("Tanti Kurnia", "Training Manager", 207f)
+                        signature("Ilham Ramdhani", "Program Director", 633f)
                         val qrPayload = if (item.optBoolean("serverRegistered") && BuildConfig.TRAINING_BASE_URL.startsWith("https://"))
                             TrainingCertificateIdentity.verifiedPublicUrl(item.optString("id"), BuildConfig.TRAINING_BASE_URL, true, false)
                         else TrainingCertificateIdentity.payload(item.optString("id"), item.optString("courseId"), item.optString("date"), item.optInt("score"))
