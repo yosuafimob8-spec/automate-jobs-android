@@ -11,184 +11,184 @@
     ],
     "questions": [
       {
-        "prompt": "Perangkat atau istilah yang relevan bagi Admin Warehouse?",
+        "prompt": "Dokumen apa yang dibandingkan saat barang dari pemasok tiba di gudang?",
         "options": [
-          "Tidak perlu memahami alat",
-          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan WMS, barcode scanner, SKU, rak lokasi",
-          "Gunakan data tanpa izin"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Alur kerja yang sesuai untuk Admin Warehouse?",
-        "options": [
-          "receiving, putaway, picking, packing, dispatch — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses receiving, putaway, picking, packing, dispatch",
-          "Abaikan verifikasi",
-          "Langsung tutup pekerjaan tanpa bukti"
+          "Purchase order, surat jalan, dan jumlah fisik",
+          "Daftar hadir karyawan",
+          "Laporan penjualan bulanan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dokumen kerja yang relevan untuk Admin Warehouse?",
+        "prompt": "Saat memindai barcode penerimaan, SKU yang muncul berbeda dari label kemasan. Apa tindakan pertama?",
         "options": [
-          "Catatan palsu",
-          "Data tanpa izin",
-          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Admin Warehouse"
+          "Ganti label agar cocok dengan layar",
+          "Tahan pencatatan dan cocokkan kode dengan dokumen serta barang",
+          "Terima sebagai SKU yang paling mirip"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Barang datang 12 karton, tiap karton 24 unit. Berapa unit yang dicatat jika semuanya sesuai?",
+        "options": [
+          "36 unit",
+          "240 unit",
+          "288 unit"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "prompt": "Apa fungsi lokasi bin dalam WMS?",
         "options": [
-          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
-          "Sembunyikan kejadian",
-          "Ubah data diam-diam"
+          "Menunjukkan lokasi penyimpanan spesifik suatu barang",
+          "Menentukan harga jual barang",
+          "Menghitung gaji operator"
         ],
         "correct": 0
       },
       {
-        "prompt": "Indikator kinerja yang relevan untuk Admin Warehouse?",
+        "prompt": "Pada saat receiving, satu karton terlihat basah. Apa yang perlu dicatat?",
         "options": [
-          "Rumor tanpa data",
-          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Admin Warehouse",
-          "Tidak perlu mengukur hasil"
+          "Hanya nama sopir",
+          "Kondisi kemasan, jumlah terdampak, dan bukti foto sebelum keputusan penerimaan",
+          "Jumlah seluruh rak kosong"
         ],
         "correct": 1
       },
       {
-        "prompt": "Dalam pemeriksaan awal, informasi apa yang wajib diverifikasi dari materi berikut? (Admin Warehouse • Basic; tahap 1)",
+        "prompt": "Mengapa nomor batch dicatat untuk produk yang memiliki masa kedaluwarsa?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berl",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 0
-      },
-      {
-        "prompt": "Saat menyusun urutan kerja, tindakan apa yang tepat menurut prosedur berikut? (Admin Warehouse • Basic; tahap 2)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Basic: Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: ",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Pada pengisian dokumen, bukti apa yang harus disiapkan sesuai materi berikut? (Admin Warehouse • Basic; tahap 3)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak"
+          "Agar barcode lebih pendek",
+          "Agar semua produk dianggap sama",
+          "Agar lot dapat ditelusuri saat penarikan atau pemeriksaan"
         ],
         "correct": 2
       },
       {
-        "prompt": "Ketika terjadi penyimpangan, tindakan apa yang paling sesuai dengan studi kasus berikut? (Admin Warehouse • Basic; tahap 4)",
+        "prompt": "Apa beda stok fisik dan stok sistem?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar.",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi"
+          "Stok fisik dihitung di lokasi, stok sistem adalah saldo yang tercatat",
+          "Stok fisik selalu lebih besar",
+          "Keduanya selalu identik tanpa penghitungan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Saat menilai hasil pekerjaan, indikator apa yang harus dicatat dari materi berikut? (Admin Warehouse • Basic; tahap 5)",
+        "prompt": "Surat jalan menunjukkan 50 unit, tetapi fisik hanya 48 unit. Berapa selisih yang perlu dilaporkan?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Basic: Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi"
+          "Lebih 2 unit",
+          "Kurang 2 unit",
+          "Tidak ada selisih"
         ],
         "correct": 1
       },
       {
-        "prompt": "Jika petugas baru menjalankan tahap ini, bagaimana memastikan langkahnya benar? (Admin Warehouse • Basic; tahap 1)",
+        "prompt": "Kapan transaksi penerimaan sebaiknya diposting ke WMS?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berl"
+          "Sebelum truk tiba",
+          "Ketika pemasok mengirim pesan saja",
+          "Setelah barang dan dokumen diverifikasi sesuai prosedur"
         ],
         "correct": 2
       },
       {
-        "prompt": "Saat serah terima pekerjaan ini, apa yang harus dapat ditelusuri? (Admin Warehouse • Basic; tahap 2)",
+        "prompt": "Barang sudah diterima, tetapi belum ditempatkan ke rak. Status operasional apa yang paling tepat?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: ",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi"
+          "Menunggu putaway",
+          "Sudah terkirim ke pelanggan",
+          "Sudah selesai stock opname"
         ],
         "correct": 0
       },
       {
-        "prompt": "Jika ada data tidak cocok pada proses ini, tindakan apa yang paling tepat? (Admin Warehouse • Basic; tahap 3)",
+        "prompt": "Saat mencetak label lokasi, apa yang wajib cocok dengan instruksi putaway?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Basic: Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi"
+          "Nama akun media sosial",
+          "Kode lokasi dan identitas SKU",
+          "Warna seragam petugas"
         ],
         "correct": 1
       },
       {
-        "prompt": "Sebelum menyetujui hasil pada proses ini, apa yang perlu dipastikan? (Admin Warehouse • Basic; tahap 4)",
+        "prompt": "Apa kegunaan kartu stok manual jika gudang juga memakai WMS?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar."
+          "Menggantikan seluruh bukti transaksi",
+          "Mengubah saldo tanpa otorisasi",
+          "Sebagai catatan kontrol sesuai prosedur untuk menelusuri pergerakan"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi keterlambatan pada tahap ini, bagaimana melaporkannya? (Admin Warehouse • Basic; tahap 5)",
+        "prompt": "Pada proses picking, apa yang dicocokkan sebelum barang diserahkan ke packing?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi"
+          "SKU, jumlah, dan nomor pesanan",
+          "Nama kurir saja",
+          "Tanggal masuk kerja picker"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam audit internal atas proses ini, catatan apa yang paling relevan? (Admin Warehouse • Basic; tahap 1)",
+        "prompt": "Pelanggan memesan 8 unit tetapi hasil picking baru 6 unit. Apa yang dicatat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Basic: Sebagai Admin Warehouse di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berl",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi"
+          "Pesanan lengkap 8 unit",
+          "Kekurangan 2 unit dan status pemenuhan pesanan",
+          "Stok bertambah 2 unit"
         ],
         "correct": 1
       },
       {
-        "prompt": "Ketika sistem atau alat terkait tidak tersedia, apa langkah aman? (Admin Warehouse • Basic; tahap 2)",
+        "prompt": "Apa tujuan melakukan scan saat barang berpindah dari rak ke area dispatch?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Simulasikan alur kerja Admin Warehouse: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: "
+          "Menghapus riwayat lokasi",
+          "Mengubah kode produk",
+          "Mencatat perpindahan dan menjaga ketertelusuran barang"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika rekan kerja meminta melewati pemeriksaan ini, apa respons yang tepat? (Admin Warehouse • Basic; tahap 3)",
+        "prompt": "Dokumen apa yang biasanya menyertai barang keluar untuk pengiriman?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Buat contoh dokumen Admin Warehouse menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lak",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi"
+          "Surat jalan atau delivery order",
+          "Formulir cuti",
+          "Kartu akses tamu"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam simulasi kesalahan pada tahap ini, bagaimana mencegah pengulangan? (Admin Warehouse • Basic; tahap 4)",
+        "prompt": "Dua produk memiliki kemasan serupa tetapi SKU berbeda. Bagaimana mencegah salah kirim?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Verifikasi langkah dan hasil berdasarkan materi Admin Warehouse • Basic: Studi kasus Admin Warehouse: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar.",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi"
+          "Pilih berdasarkan warna kemasan",
+          "Periksa barcode dan SKU pada order sebelum konfirmasi",
+          "Gabungkan kedua SKU di sistem"
         ],
         "correct": 1
       },
       {
-        "prompt": "Setelah pekerjaan ini selesai, apa dasar evaluasi yang dapat dipertanggungjawabkan? (Admin Warehouse • Basic; tahap 5)",
+        "prompt": "Jika WMS tidak bisa diakses saat penerimaan, apa yang dilakukan?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Admin Warehouse • Basic",
-          "Ubah hasil atau dokumen Admin Warehouse • Basic agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Evaluasi pekerjaan Admin Warehouse dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi"
+          "Mencatat angka perkiraan tanpa bukti",
+          "Mengabaikan seluruh barang yang datang",
+          "Gunakan prosedur pencatatan darurat yang disetujui dan rekonsiliasi setelah sistem pulih"
         ],
         "correct": 2
+      },
+      {
+        "prompt": "Apa arti FIFO dalam pengeluaran persediaan?",
+        "options": [
+          "Barang yang masuk lebih dahulu diprioritaskan keluar lebih dahulu",
+          "Barang terbaru selalu keluar dulu",
+          "Barang termahal keluar dulu"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Sebelum menutup laporan harian gudang, apa yang perlu direkonsiliasi?",
+        "options": [
+          "Jumlah pengikut media sosial",
+          "Transaksi masuk-keluar, dokumen pendukung, dan saldo terkait",
+          "Jadwal libur tahun depan"
+        ],
+        "correct": 1
       }
     ]
   },
