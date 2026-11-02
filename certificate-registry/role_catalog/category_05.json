@@ -1,0 +1,872 @@
+[
+  {
+    "courseId": "role_hr_admin_basic",
+    "title": "HR Admin • Basic",
+    "lessons": [
+      "Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan HR Admin.",
+      "Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja HR Admin.",
+      "Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja HR Admin.",
+      "Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi HR Admin.",
+      "Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan HR Admin."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi HR Admin?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk HR Admin?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk HR Admin?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja HR Admin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk HR Admin?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Admin",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_hr_admin_intermediate",
+    "title": "HR Admin • Intermediate",
+    "lessons": [
+      "Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan HR Admin.",
+      "Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja HR Admin.",
+      "Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja HR Admin.",
+      "Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi HR Admin.",
+      "Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan HR Admin."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi HR Admin?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk HR Admin?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk HR Admin?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja HR Admin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk HR Admin?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Admin",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_hr_admin_advanced",
+    "title": "HR Admin • Advanced",
+    "lessons": [
+      "Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan HR Admin.",
+      "Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja HR Admin.",
+      "Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja HR Admin.",
+      "Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih Bukti hasil: laporan insiden dan eskalasi HR Admin.",
+      "Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan HR Admin."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi HR Admin?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk HR Admin?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah memvalidasi input, mencatat bukti, menjaga versi dokumen dan menyelesaikan selisih dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk HR Admin?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja HR Admin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk HR Admin?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Admin",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_recruitment_staff_basic",
+    "title": "Recruitment Staff • Basic",
+    "lessons": [
+      "Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan Recruitment Staff.",
+      "Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja Recruitment Staff.",
+      "Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja Recruitment Staff.",
+      "Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Recruitment Staff.",
+      "Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan Recruitment Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Recruitment Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Recruitment Staff?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Recruitment Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja Recruitment Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Recruitment Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan Recruitment Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_recruitment_staff_intermediate",
+    "title": "Recruitment Staff • Intermediate",
+    "lessons": [
+      "Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan Recruitment Staff.",
+      "Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja Recruitment Staff.",
+      "Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja Recruitment Staff.",
+      "Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Recruitment Staff.",
+      "Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan Recruitment Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Recruitment Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Recruitment Staff?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Recruitment Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja Recruitment Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Recruitment Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan Recruitment Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_recruitment_staff_advanced",
+    "title": "Recruitment Staff • Advanced",
+    "lessons": [
+      "Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan Recruitment Staff.",
+      "Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja Recruitment Staff.",
+      "Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja Recruitment Staff.",
+      "Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Recruitment Staff.",
+      "Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan Recruitment Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Recruitment Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Recruitment Staff?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah menjalankan tanggung jawab jabatan Recruitment Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Recruitment Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja Recruitment Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Recruitment Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan Recruitment Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_hr_generalist_basic",
+    "title": "HR Generalist • Basic",
+    "lessons": [
+      "Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan HR Generalist.",
+      "Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja HR Generalist.",
+      "Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja HR Generalist.",
+      "Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi HR Generalist.",
+      "Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan HR Generalist."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi HR Generalist?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk HR Generalist?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk HR Generalist?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja HR Generalist"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk HR Generalist?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Generalist",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_hr_generalist_intermediate",
+    "title": "HR Generalist • Intermediate",
+    "lessons": [
+      "Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan HR Generalist.",
+      "Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja HR Generalist.",
+      "Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja HR Generalist.",
+      "Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi HR Generalist.",
+      "Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan HR Generalist."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi HR Generalist?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk HR Generalist?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk HR Generalist?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja HR Generalist"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk HR Generalist?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Generalist",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_hr_generalist_advanced",
+    "title": "HR Generalist • Advanced",
+    "lessons": [
+      "Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan HR Generalist.",
+      "Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja HR Generalist.",
+      "Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja HR Generalist.",
+      "Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi HR Generalist.",
+      "Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan HR Generalist."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi HR Generalist?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk HR Generalist?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah menjalankan tanggung jawab jabatan HR Generalist berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk HR Generalist?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja HR Generalist"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk HR Generalist?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Generalist",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_payroll_staff_basic",
+    "title": "Payroll Staff • Basic",
+    "lessons": [
+      "Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan Payroll Staff.",
+      "Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja Payroll Staff.",
+      "Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja Payroll Staff.",
+      "Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Payroll Staff.",
+      "Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan Payroll Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Payroll Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Payroll Staff?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Payroll Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja Payroll Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Payroll Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan Payroll Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_payroll_staff_intermediate",
+    "title": "Payroll Staff • Intermediate",
+    "lessons": [
+      "Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan Payroll Staff.",
+      "Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja Payroll Staff.",
+      "Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja Payroll Staff.",
+      "Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Payroll Staff.",
+      "Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan Payroll Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Payroll Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Payroll Staff?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Payroll Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja Payroll Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Payroll Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan Payroll Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_payroll_staff_advanced",
+    "title": "Payroll Staff • Advanced",
+    "lessons": [
+      "Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan Payroll Staff.",
+      "Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja Payroll Staff.",
+      "Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja Payroll Staff.",
+      "Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Payroll Staff.",
+      "Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan Payroll Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Payroll Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Payroll Staff?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah menjalankan tanggung jawab jabatan Payroll Staff berdasarkan SOP yang berlaku dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Payroll Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja Payroll Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Payroll Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan Payroll Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_hr_supervisor_basic",
+    "title": "HR Supervisor • Basic",
+    "lessons": [
+      "Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan HR Supervisor.",
+      "Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja HR Supervisor.",
+      "Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja HR Supervisor.",
+      "Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi HR Supervisor.",
+      "Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan HR Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi HR Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk HR Supervisor?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk HR Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja HR Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk HR Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_hr_supervisor_intermediate",
+    "title": "HR Supervisor • Intermediate",
+    "lessons": [
+      "Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan HR Supervisor.",
+      "Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja HR Supervisor.",
+      "Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja HR Supervisor.",
+      "Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi HR Supervisor.",
+      "Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan HR Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi HR Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk HR Supervisor?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk HR Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja HR Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk HR Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_hr_supervisor_advanced",
+    "title": "HR Supervisor • Advanced",
+    "lessons": [
+      "Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan ATS, HRIS, formulir karyawan Bukti hasil: checklist risiko dan kewenangan HR Supervisor.",
+      "Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding Bukti hasil: bagan alur kerja HR Supervisor.",
+      "Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada data kandidat, kontrak, absensi, berkas personalia Bukti hasil: contoh dokumen dan bukti kerja HR Supervisor.",
+      "Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus data kandidat bocor atau dokumen belum lengkap saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi HR Supervisor.",
+      "Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran time to hire, ketepatan payroll, retensi Bukti hasil: rencana pengukuran dan perbaikan HR Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi HR Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ATS, HRIS, formulir karyawan — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan ATS, HRIS, formulir karyawan",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk HR Supervisor?",
+        "options": [
+          "permintaan tenaga kerja, seleksi, administrasi, onboarding — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses permintaan tenaga kerja, seleksi, administrasi, onboarding",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk HR Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "data kandidat, kontrak, absensi, berkas personalia — contoh dokumen dan bukti kerja HR Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi data kandidat bocor atau dokumen belum lengkap, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk HR Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
