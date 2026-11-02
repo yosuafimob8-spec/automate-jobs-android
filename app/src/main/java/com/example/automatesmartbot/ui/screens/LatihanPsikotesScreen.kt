@@ -321,9 +321,30 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         }
                         when (analysisTab) {
                             0 -> {
-                                item { MockupCard { Text("📊 Profil Kemampuan", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium); Text("Dari $total soal, kamu menjawab $correct soal dengan benar dan $wrong salah ($accuracy% ketepatan). Evaluasi ini berdasarkan jawaban latihanmu, bukan penilaian rekrutmen resmi.", color = Color.DarkGray) } }
-                                item { MockupCard(tint = Color(0xFFEAFBF3)) { Text("👍 Kekuatan Utama", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text(if (correct > 0) "✓ $correct jawaban benar dari $total soal.\n✓ Pertahankan konsep yang sudah dikuasai.\n✓ Bangun konsistensi dan ketelitian saat berlatih." else "Terus bangun pemahaman konsep melalui latihan bertahap.", color = Color.DarkGray) } }
-                                item { MockupCard(tint = Color(0xFFFFEEF0)) { Text("🎯 Area Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text("✓ Pelajari kembali $wrong jawaban yang salah.\n✓ Tingkatkan ketelitian dan pemahaman konsep.\n✓ Latih strategi manajemen waktu saat mengerjakan soal.", color = Color.DarkGray) } }
+                                item {
+                                    MockupCard {
+                                        Text("📊  Profil Kemampuan", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                        Text("Dari $total soal, kamu menjawab $correct soal dengan benar dan $wrong salah. Tingkat ketepatanmu $accuracy%. Evaluasi ini menunjukkan hasil latihan berdasarkan jawaban yang tersedia.", color = Color(0xFF222222), style = MaterialTheme.typography.bodyMedium)
+                                    }
+                                }
+                                item {
+                                    MockupCard(tint = Color(0xFFEAFBF3)) {
+                                        Text("👍  Kekuatan Utama", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                        Text("🟢  $correct jawaban berhasil dikerjakan dengan tepat.\n🟢  Pertahankan konsep yang sudah kamu kuasai.\n🟢  Latih konsistensi dan ketelitian dalam menjawab.", color = Color(0xFF202020), style = MaterialTheme.typography.bodyMedium)
+                                    }
+                                }
+                                item {
+                                    MockupCard(tint = Color(0xFFFFEDF0)) {
+                                        Text("🎯  Area Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                        Text("🔴  Tinjau kembali $wrong jawaban yang belum tepat.\n🔴  Tingkatkan kecepatan dan pemahaman konsep.\n🔴  Latih strategi manajemen waktu saat mengerjakan soal.", color = Color(0xFF202020), style = MaterialTheme.typography.bodyMedium)
+                                    }
+                                }
+                                item {
+                                    MockupCard(tint = Color(0xFFFFF5D5)) {
+                                        Text("💡  Saran Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                        Text("🟡  Rutin latihan soal sesuai kategori yang perlu ditingkatkan.\n🟡  Gunakan simulasi psikotes dengan timer.\n🟡  Pelajari pola soal yang sering muncul pada seleksi kerja.\n🟡  Jaga fokus dan kondisi fisik sebelum tes.", color = Color(0xFF202020), style = MaterialTheme.typography.bodyMedium)
+                                    }
+                                }
                             }
                             1 -> {
                                 val details = r.getAsJsonArray("questions")?.mapNotNull { if (it.isJsonObject) it.asJsonObject else null }.orEmpty()
