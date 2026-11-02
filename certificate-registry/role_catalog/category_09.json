@@ -54,6 +54,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada IT Support • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur da",
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada IT Support • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada IT Support • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada IT Support • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada IT Support • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan b"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada IT Support • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada IT Support • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada IT Support • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada IT Support • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada IT Support • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan b",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada IT Support • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur da",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada IT Support • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada IT Support • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada IT Support • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada IT Support • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan b",
+          "Melewati pemeriksaan IT Support • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -112,6 +247,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada IT Support • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasus ",
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada IT Support • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada IT Support • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada IT Support • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada IT Support • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan b"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada IT Support • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasus "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada IT Support • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada IT Support • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada IT Support • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada IT Support • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan b",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada IT Support • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasus ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada IT Support • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada IT Support • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada IT Support • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada IT Support • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan b",
+          "Melewati pemeriksaan IT Support • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -170,6 +440,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada IT Support • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan priorit",
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada IT Support • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada IT Support • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada IT Support • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada IT Support • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan b"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada IT Support • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan priorit"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada IT Support • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada IT Support • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika",
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada IT Support • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada IT Support • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan b",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada IT Support • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan priorit",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada IT Support • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada t",
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada IT Support • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada IT Support • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eska",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada IT Support • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan b",
+          "Melewati pemeriksaan IT Support • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -228,6 +633,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Helpdesk IT • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur d",
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Helpdesk IT • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Helpdesk IT • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Helpdesk IT • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan esk",
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Helpdesk IT • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Helpdesk IT • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Helpdesk IT • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Helpdesk IT • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Helpdesk IT • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan esk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Helpdesk IT • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Helpdesk IT • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur d",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Helpdesk IT • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Helpdesk IT • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Helpdesk IT • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan esk",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Helpdesk IT • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ",
+          "Melewati pemeriksaan Helpdesk IT • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -286,6 +826,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Helpdesk IT • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasus",
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Helpdesk IT • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Helpdesk IT • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Helpdesk IT • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan esk",
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Helpdesk IT • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Helpdesk IT • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasus"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Helpdesk IT • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Helpdesk IT • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Helpdesk IT • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan esk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Helpdesk IT • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Helpdesk IT • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasus",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Helpdesk IT • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Helpdesk IT • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Helpdesk IT • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan esk",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Helpdesk IT • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ",
+          "Melewati pemeriksaan Helpdesk IT • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -344,6 +1019,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Helpdesk IT • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan priori",
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Helpdesk IT • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Helpdesk IT • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Helpdesk IT • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan esk",
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Helpdesk IT • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Helpdesk IT • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan priori"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Helpdesk IT • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Helpdesk IT • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Helpdesk IT • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan esk"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Helpdesk IT • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Helpdesk IT • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan priori",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Helpdesk IT • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ",
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Helpdesk IT • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Helpdesk IT • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan esk",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Helpdesk IT • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ",
+          "Melewati pemeriksaan Helpdesk IT • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -402,6 +1212,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Web Developer • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur",
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Web Developer • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Web Developer • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Past",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Web Developer • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Web Developer • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Web Developer • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Web Developer • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Web Developer • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Past",
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Web Developer • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Web Developer • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaika",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Web Developer • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Web Developer • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Web Developer • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Past"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Web Developer • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Web Developer • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaika",
+          "Melewati pemeriksaan Web Developer • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -460,6 +1405,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Web Developer • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kas",
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Web Developer • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Web Developer • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Past",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Web Developer • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Web Developer • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Web Developer • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Web Developer • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Web Developer • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Past",
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Web Developer • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Web Developer • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaika",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Web Developer • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kas",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Web Developer • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Web Developer • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Past"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Web Developer • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Web Developer • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaika",
+          "Melewati pemeriksaan Web Developer • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -518,6 +1598,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Web Developer • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan prio",
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Web Developer • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Web Developer • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Past",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Web Developer • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Web Developer • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaika"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Web Developer • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan prio"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Web Developer • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Web Developer • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Past",
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Web Developer • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Web Developer • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaika",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Web Developer • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan prio",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Web Developer • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pad",
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Web Developer • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Past"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Web Developer • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan e",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Web Developer • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaika",
+          "Melewati pemeriksaan Web Developer • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -576,6 +1791,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Software Tester • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosed",
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Software Tester • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Software Tester • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pa",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Software Tester • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Software Tester • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbai"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Software Tester • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosed"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Software Tester • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. P",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Software Tester • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pa",
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Software Tester • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Software Tester • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Software Tester • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosed",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Software Tester • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. P",
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Software Tester • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pa"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Software Tester • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Software Tester • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbai",
+          "Melewati pemeriksaan Software Tester • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -634,6 +1984,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Software Tester • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada k",
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Software Tester • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Software Tester • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pa",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Software Tester • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Software Tester • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbai"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Software Tester • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada k"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Software Tester • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. P",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Software Tester • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pa",
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Software Tester • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Software Tester • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Software Tester • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada k",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Software Tester • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. P",
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Software Tester • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pa"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Software Tester • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Software Tester • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbai",
+          "Melewati pemeriksaan Software Tester • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -692,6 +2177,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Software Tester • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan pr",
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Software Tester • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Software Tester • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pa",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Software Tester • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Software Tester • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbai"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Software Tester • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan pr"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Software Tester • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. P",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Software Tester • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pa",
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Software Tester • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Software Tester • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Software Tester • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan pr",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Software Tester • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. P",
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Software Tester • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pa"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Software Tester • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Software Tester • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbai",
+          "Melewati pemeriksaan Software Tester • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -750,6 +2370,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Data Analyst • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur ",
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Data Analyst • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Data Analyst • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Data Analyst • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Data Analyst • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Data Analyst • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Data Analyst • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Data Analyst • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Data Analyst • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Data Analyst • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Data Analyst • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Data Analyst • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada",
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Data Analyst • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Data Analyst • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Data Analyst • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Melewati pemeriksaan Data Analyst • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -808,6 +2563,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Data Analyst • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasu",
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Data Analyst • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Data Analyst • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Data Analyst • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Data Analyst • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Data Analyst • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasu"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Data Analyst • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Data Analyst • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Data Analyst • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Data Analyst • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Data Analyst • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasu",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Data Analyst • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada",
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Data Analyst • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Data Analyst • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Data Analyst • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Melewati pemeriksaan Data Analyst • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -866,6 +2756,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Data Analyst • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan prior",
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Data Analyst • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Data Analyst • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Data Analyst • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Data Analyst • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Data Analyst • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan prior"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Data Analyst • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Data Analyst • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti",
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Data Analyst • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Data Analyst • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Data Analyst • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan prior",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Data Analyst • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada",
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Data Analyst • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pasti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Data Analyst • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan es",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Data Analyst • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Melewati pemeriksaan Data Analyst • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   }
