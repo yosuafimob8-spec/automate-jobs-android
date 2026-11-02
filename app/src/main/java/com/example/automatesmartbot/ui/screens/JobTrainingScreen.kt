@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
 import com.example.automatesmartbot.data.career.TrainingServerGateway
-import com.example.automatesmartbot.data.network.ApiClient
+import com.example.automatesmartbot.BuildConfig
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -64,7 +64,7 @@ private fun TrainingAction(label: String, enabled: Boolean = true, onClick: () -
 fun JobTrainingScreen() {
     val context = LocalContext.current
     val trainingScope = rememberCoroutineScope()
-    val trainingApi = remember { ApiClient.getBaseUrl().takeIf { it.startsWith("https://") }?.let { TrainingServerGateway(it) } }
+    val trainingApi = remember { BuildConfig.TRAINING_BASE_URL.takeIf { it.startsWith("https://") }?.let { TrainingServerGateway(it) } }
     var serverQuestions by remember { mutableStateOf<JSONArray?>(null) }
     var serverModules by remember { mutableStateOf<Set<Int>>(emptySet()) }
     var trainingBusy by remember { mutableStateOf(false) }
