@@ -1,5 +1,6 @@
 package com.example.automatesmartbot.ui.screens
 
+import com.example.automatesmartbot.BuildConfig
 import android.graphics.Paint
 import android.graphics.Color
 import com.example.automatesmartbot.data.career.TrainingCertificateIdentity
@@ -30,10 +31,11 @@ fun TrainingCertificateExport(item: JSONObject) {
                 withContext(Dispatchers.IO) {
                     val document = PdfDocument()
                     try {
-                        val width = 842
-                        val height = 595
+                        val width = 1191
+                        val height = 842
                         val page = document.startPage(PdfDocument.PageInfo.Builder(width, height, 1).create())
                         val canvas = page.canvas
+                        canvas.scale(width / 842f, height / 595f)
                         val paint = Paint(Paint.ANTI_ALIAS_FLAG)
                         fun text(value: String, y: Float, size: Float, color: Int = android.graphics.Color.BLACK, bold: Boolean = false) {
                             paint.color = color
@@ -41,7 +43,7 @@ fun TrainingCertificateExport(item: JSONObject) {
                             paint.typeface = if (bold) Typeface.create(Typeface.DEFAULT, Typeface.BOLD) else Typeface.DEFAULT
                             paint.style = Paint.Style.FILL
                             paint.textAlign = Paint.Align.CENTER
-                            canvas.drawText(value, width / 2f, y, paint)
+                            canvas.drawText(value, 421f, y, paint)
                         }
                         val orange = android.graphics.Color.rgb(255, 106, 15)
                         val gold = android.graphics.Color.rgb(207, 149, 35)
@@ -78,9 +80,11 @@ fun TrainingCertificateExport(item: JSONObject) {
                             paint.textSize = 12f
                             canvas.drawText(role, x, 508f, paint)
                         }
-                        signature("Tanti kurnia", "Training Manager", 207f)
-                        signature("Ilham Ramdhan", "Program Director", 633f)
-                        val qrPayload = TrainingCertificateIdentity.payload(item.optString("id"), item.optString("courseId"), item.optString("date"), item.optInt("score"))
+                        signature("KarirMate", "Penyelenggara Pelatihan", 207f)
+                        signature("KarirMate", "Penerbit Sertifikat", 633f)
+                        val qrPayload = if (item.optBoolean("serverRegistered") && BuildConfig.TRAINING_BASE_URL.startsWith("https://"))
+                            TrainingCertificateIdentity.verifiedPublicUrl(item.optString("id"), BuildConfig.TRAINING_BASE_URL, true, false)
+                        else TrainingCertificateIdentity.payload(item.optString("id"), item.optString("courseId"), item.optString("date"), item.optInt("score"))
                         val qr = QRCodeWriter().encode(qrPayload, BarcodeFormat.QR_CODE, 104, 104)
                         val cell = 0.92f
                         paint.style = Paint.Style.FILL
@@ -88,8 +92,8 @@ fun TrainingCertificateExport(item: JSONObject) {
                             paint.color = if (qr[x, y]) Color.BLACK else Color.WHITE
                             canvas.drawRect(373f + x * cell, 402f + y * cell, 373f + (x + 1) * cell, 402f + (y + 1) * cell, paint)
                         }
-                        text("Tanggal: ${item.optString("date")}  •  ID: ${item.optString("id").take(16)}", 538f, 10f)
-                        text("QR berisi data identitas sertifikat; belum ada verifikasi daring.", 550f, 9f)
+                        text("Tanggal: ${item.optString("date")}  •  ID: ${item.optString("id")}", 538f, 10f)
+                        text(if (item.optBoolean("serverRegistered")) "Pindai QR untuk verifikasi sertifikat melalui server KarirMate." else "QR identitas lokal; bukan verifikasi online.", 550f, 9f)
                         text("Sertifikat pelatihan internal KarirMate, bukan sertifikasi kompetensi resmi BNSP.", 563f, 9f)
                         document.finishPage(page)
                         context.contentResolver.openOutputStream(uri, "wt")?.use { document.writeTo(it) }
