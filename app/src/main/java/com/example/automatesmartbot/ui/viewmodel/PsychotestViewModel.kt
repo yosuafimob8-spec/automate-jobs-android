@@ -113,7 +113,7 @@ class PsychotestViewModel @JvmOverloads constructor(private val savedState: Save
             pending.clear(); savePending(); return
         }
         val loadedQuestions = body.getAsJsonArray("questions")?.map { it.asJsonObject }.orEmpty()
-        require(loadedQuestions.size in 10..20) { "Server mengembalikan ${loadedQuestions.size} soal. Sesi latihan memerlukan 10–20 soal; perbarui konfigurasi bank soal." }
+        require(loadedQuestions.isNotEmpty() && loadedQuestions.size <= 110) { "Server mengembalikan jumlah soal tidak valid (${loadedQuestions.size})." }
         questions.value = loadedQuestions
         applyPending()
     }
