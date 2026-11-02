@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-cd "$(dirname "$0")/.."
+cd "${KARIRMATE_REPO_DIR:-$(dirname "$0")/..}"
 REPO="$PWD"
 proot-distro login ubuntu --bind "$REPO:/opt/karirmate" -- bash -lc '
 set -e
