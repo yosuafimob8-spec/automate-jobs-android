@@ -56,6 +56,18 @@ class TrainingHttpIntegrationTests(unittest.TestCase):
         self.assertEqual(self.call("/training/courses/warehouse/questions")[0], 401)
         self.assertEqual(self.call("/training/exams", {"courseId":"warehouse","answers":[0]*5})[0], 401)
 
+    def test_server_progress_and_module_submission(self):
+        code, progress = self.call("/training/courses/warehouse/progress", token="valid")
+        self.assertEqual(code, 200)
+        self.assertEqual(progress["completedModules"], [0])
+        self.assertEqual(progress["totalModules"], 1)
+        code, result = self.call("/training/modules/complete", {
+            "courseId":"warehouse", "moduleIndex":0,
+            "practice":"Saya memeriksa kondisi barang dan surat jalan sebelum penerimaan gudang. Kemudian saya menghitung jumlah SKU, mencatat selisih, melaporkan kerusakan kepada atasan, serta memperbarui catatan stok secara teliti sesuai prosedur perusahaan."
+        }, token="valid")
+        self.assertEqual(code, 200)
+        self.assertTrue(result["completed"])
+
     def test_authenticated_exam_issues_verifiable_certificate(self):
         code, questions = self.call("/training/courses/warehouse/questions", token="valid")
         self.assertEqual(code, 200)
