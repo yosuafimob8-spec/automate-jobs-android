@@ -1,6 +1,10 @@
 package com.example.automatesmartbot.ui.screens
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.animateIntAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -181,6 +185,11 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 val accuracy = if (total > 0) correct * 100 / total else 0
                 var analysisTab by rememberSaveable { mutableStateOf(0) }
                 var showReview by rememberSaveable { mutableStateOf(false) }
+                var selectedCategory by rememberSaveable { mutableStateOf("") }
+                var animateResults by remember { mutableStateOf(false) }
+                LaunchedEffect(r) { animateResults = true }
+                val animatedScore by animateIntAsState(targetValue = if (animateResults) (actualScore ?: 0).coerceIn(0, 100) else 0, animationSpec = tween(1000), label = "score")
+                val animatedAccuracy by animateFloatAsState(targetValue = if (animateResults) accuracy.coerceIn(0, 100) / 100f else 0f, animationSpec = tween(1100), label = "accuracy")
                 val rating = when {
                     actualScore == null -> "Asesmen Kepribadian"
                     actualScore >= 80 -> "Baik Sekali"
@@ -219,13 +228,13 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                     Row(verticalAlignment = Alignment.CenterVertically) {
                                         Column(Modifier.weight(1f)) {
                                             Text("Nilai Akhir", color = ink, fontWeight = FontWeight.Medium)
-                                            Text("${actualScore?.toString() ?: "—"} / 100", color = ink, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
+                                            Text("${if (actualScore == null) "—" else animatedScore.toString()} / 100", color = ink, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
                                         }
                                         Surface(color = teal, shape = RoundedCornerShape(50)) {
                                             Text(rating, color = Color.White, modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
                                         }
                                     }
-                                    LinearProgressIndicator(progress = { (actualScore ?: 0).coerceIn(0, 100) / 100f }, modifier = Modifier.fillMaxWidth().height(10.dp), color = teal, trackColor = Color.White, strokeCap = StrokeCap.Round)
+                                    LinearProgressIndicator(progress = { animatedScore / 100f }, modifier = Modifier.fillMaxWidth().height(10.dp), color = teal, trackColor = Color.White, strokeCap = StrokeCap.Round)
                                     Text(encouragement, color = ink, style = MaterialTheme.typography.bodyMedium)
                                 }
                             }
@@ -239,6 +248,9 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                     Text("Pembahasan PRO", maxLines = 1)
                                 }
                             }
+                        }
+                        AnimatedVisibility(visible = showReview) {
+                            // Answer details are rendered as lazy items below.
                         }
                         if (showReview) {
                             val details = r.getAsJsonArray("questions")?.mapNotNull { if (it.isJsonObject) it.asJsonObject else null }.orEmpty()
@@ -269,9 +281,9 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                         Box(Modifier.size(96.dp), contentAlignment = Alignment.Center) {
                                             Canvas(Modifier.fillMaxSize()) {
                                                 drawArc(Color(0xFFDCE8EA), 0f, 360f, false, style = Stroke(11.dp.toPx(), cap = StrokeCap.Round))
-                                                drawArc(Color(0xFF00AA89), -90f, 360f * accuracy.coerceIn(0, 100) / 100f, false, style = Stroke(11.dp.toPx(), cap = StrokeCap.Round))
+                                                drawArc(Color(0xFF00AA89), -90f, 360f * animatedAccuracy, false, style = Stroke(11.dp.toPx(), cap = StrokeCap.Round))
                                             }
-                                            Text("$accuracy%", color = Color.Black, fontWeight = FontWeight.Black, style = MaterialTheme.typography.titleLarge)
+                                            Text("${(animatedAccuracy * 100).toInt()}%", color = Color.Black, fontWeight = FontWeight.Black, style = MaterialTheme.typography.titleLarge)
                                         }
                                         Text("Tingkat\nKetepatan", color = Color.Black, textAlign = TextAlign.Center, style = MaterialTheme.typography.labelSmall)
                                     }
@@ -296,10 +308,16 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                     Text("Data hasil kategori belum tersedia.", color = Color.Gray)
                                 }
                                 categoryMap.forEach { (label, score) ->
-                                    Row(Modifier.fillMaxWidth().padding(vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                                    val expanded = selectedCategory == label
+                                    Column(Modifier.fillMaxWidth().clickable { selectedCategory = if (expanded) "" else label }.padding(vertical = 8.dp)) {
+                                    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                                         Text(label.replaceFirstChar { it.uppercase() }, color = ink, modifier = Modifier.width(110.dp), style = MaterialTheme.typography.bodyMedium)
                                         LinearProgressIndicator(progress = { score / 100f }, modifier = Modifier.weight(1f).height(9.dp), color = teal, trackColor = Color(0xFFE4ECF0), strokeCap = StrokeCap.Round)
-                                        Text("$score%", modifier = Modifier.width(54.dp), textAlign = TextAlign.End, color = ink, fontWeight = FontWeight.Bold)
+                                        Text("$score%  ${if (expanded) "⌃" else "⌄"}", modifier = Modifier.width(70.dp), textAlign = TextAlign.End, color = ink, fontWeight = FontWeight.Bold)
+                                    }
+                                    AnimatedVisibility(visible = expanded) {
+                                        Text(if (score >= 80) "Kekuatanmu di kategori ini sudah sangat baik. Pertahankan latihan rutin." else if (score >= 60) "Kemampuan cukup baik. Latih kembali soal yang masih keliru." else "Prioritaskan latihan kategori ini, mulai dari soal dasar lalu tingkatkan kesulitan.", color = ink, style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 8.dp, bottom = 4.dp))
+                                    }
                                     }
                                 }
                             }
