@@ -19,6 +19,18 @@ class TrainingCertificateIdentityTest {
         assertFalse(TrainingCertificateIdentity.verifyLocal("fake", listOf(valid)))
     }
 
+    @Test fun publicVerificationUrlRequiresHttps() {
+        val id = "123e4567-e89b-12d3-a456-426614174000"
+        assertEquals("https://verify.example.org/certificate?id=$id",
+            TrainingCertificateIdentity.publicUrl(id, "https://verify.example.org/"))
+        assertThrows(IllegalArgumentException::class.java) {
+            TrainingCertificateIdentity.publicUrl(id, "http://example.org")
+        }
+        assertThrows(IllegalArgumentException::class.java) {
+            TrainingCertificateIdentity.publicUrl("bad", "https://verify.example.org")
+        }
+    }
+
     @Test(expected = IllegalArgumentException::class)
     fun invalidCertificateIdRejected() {
         TrainingCertificateIdentity.payload("invalid", "role_admin_basic", "2026-11-02", 80)
