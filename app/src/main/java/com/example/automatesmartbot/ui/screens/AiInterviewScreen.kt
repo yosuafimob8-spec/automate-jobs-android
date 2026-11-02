@@ -256,6 +256,11 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 val response = requestInterview(serviceUrl, accessToken, role, language, cv, action, turns, interviewer)
                 history = turns
                 if (action == "start") {
+                    report = ""
+                    resultScore = 0
+                    resultStrengths = emptyList()
+                    resultImprovements = emptyList()
+                    resultAdvice = ""
                     chatMessages = listOf(false to response.question)
                 } else if (action == "reply") {
                     val latest = turns.lastOrNull()?.answer.orEmpty()
