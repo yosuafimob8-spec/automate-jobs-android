@@ -7,7 +7,7 @@ import os
 import urllib.error
 import urllib.request
 from urllib.parse import urlsplit
-from trusted_training import initialize, public_questions, submit_exam
+from trusted_training import public_questions, submit_exam, mark_module_complete
 
 MAX_BODY = 8192
 
@@ -63,6 +63,39 @@ class TrainingApiMixin:
                 self.reply(200, {"courseId":course_id, "questions":questions})
             except ValueError:
                 self.reply(404, {"error":"unknown_course"})
+            return True
+        if self.command == "GET" and path.startswith("/training/courses/") and path.endswith("/progress"):
+            course_id = path[len("/training/courses/"):-len("/progress")]
+            with self.training_connection() as conn:
+                row = conn.execute("SELECT lessons FROM course_bank WHERE course_id=?", (course_id,)).fetchone()
+                if row is None:
+                    self.reply(404, {"error":"unknown_course"})
+                    return True
+                completed = [r[0] for r in conn.execute(
+                    "SELECT module_index FROM module_progress WHERE user_id=? AND course_id=? ORDER BY module_index",
+                    (user_id, course_id))]
+            self.reply(200, {"courseId":course_id, "completedModules":completed,
+                             "totalModules":len(json.loads(row[0]))})
+            return True
+        if self.command == "POST" and path == "/training/modules/complete":
+            try:
+                size = int(self.headers.get("Content-Length", "0"))
+                if not 1 <= size <= MAX_BODY:
+                    self.reply(413, {"error":"invalid_size"})
+                    return True
+                payload = json.loads(self.rfile.read(size))
+                course_id = payload.get("courseId")
+                module_index = payload.get("moduleIndex")
+                response = payload.get("practice")
+                if not isinstance(response, str) or len(response.strip()) < 100:
+                    raise ValueError("practice response too short")
+                if len(set(response.lower().split())) < 15:
+                    raise ValueError("practice response lacks detail")
+                with self.training_connection() as conn:
+                    mark_module_complete(conn, user_id, course_id, module_index, server_verified=True)
+                self.reply(200, {"completed":True, "courseId":course_id, "moduleIndex":module_index})
+            except (ValueError, TypeError, AttributeError):
+                self.reply(400, {"error":"invalid_practice_or_module"})
             return True
         if self.command == "POST" and path == "/training/exams":
             try:
