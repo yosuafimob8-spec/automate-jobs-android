@@ -1009,6 +1009,141 @@
           "Sopan dan jelas"
         ],
         "correct": 2
+      },
+      {
+        "prompt": "Jika informasi keluhan pelanggan belum lengkap?",
+        "options": [
+          "Ajukan pertanyaan klarifikasi",
+          "Langsung menyalahkan pelanggan",
+          "Tutup tiket"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana menentukan prioritas keluhan kritis?",
+        "options": [
+          "Berdasarkan suara paling keras",
+          "Nilai dampak dan urgensi sesuai SLA",
+          "Berdasarkan nama pelanggan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Jika solusi membutuhkan waktu?",
+        "options": [
+          "Janji selesai segera tanpa dasar",
+          "Tidak memberi kabar",
+          "Berikan estimasi realistis dan pembaruan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Saat pelanggan marah?",
+        "options": [
+          "Tetap tenang dan fokus pada masalah",
+          "Membalas dengan emosi",
+          "Memotong pembicaraan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Mengapa nomor tiket penting?",
+        "options": [
+          "Untuk mengganti identitas",
+          "Memudahkan pelacakan penanganan",
+          "Untuk menyembunyikan status"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Jika permintaan di luar kebijakan?",
+        "options": [
+          "Langsung menyetujui",
+          "Menyalahkan sistem",
+          "Jelaskan batasan dan opsi yang diperbolehkan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Sebelum memberikan informasi akun pelanggan?",
+        "options": [
+          "Verifikasi identitas sesuai prosedur",
+          "Berikan kepada siapa pun",
+          "Meminta kata sandi lengkap"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika keluhan serupa terjadi berulang?",
+        "options": [
+          "Tutup semua laporan",
+          "Catat pola dan eskalasi akar masalah",
+          "Hapus riwayat"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Apa tujuan konfirmasi di akhir percakapan?",
+        "options": [
+          "Menambah durasi saja",
+          "Menghindari dokumentasi",
+          "Memastikan solusi dan langkah berikutnya dipahami"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Respons layanan tertulis yang baik?",
+        "options": [
+          "Bahasa jelas, empatik dan spesifik",
+          "Singkatan membingungkan",
+          "Jawaban tidak relevan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika pelanggan meminta kompensasi?",
+        "options": [
+          "Janji jumlah apa pun",
+          "Periksa kebijakan dan kewenangan",
+          "Tolak tanpa mendengar"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Apa fungsi basis pengetahuan layanan?",
+        "options": [
+          "Menyimpan gosip",
+          "Menggantikan semua petugas",
+          "Panduan solusi yang konsisten"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika pelanggan kembali menghubungi untuk kasus sama?",
+        "options": [
+          "Periksa riwayat tiket lebih dahulu",
+          "Mulai dari nol tanpa catatan",
+          "Menyalahkan pelanggan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Kapan tiket layanan dapat ditutup?",
+        "options": [
+          "Ketika petugas bosan",
+          "Setelah penyelesaian atau status akhir sesuai prosedur",
+          "Segera setelah dibuat"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Apa yang perlu dicatat ketika eskalasi kasus?",
+        "options": [
+          "Hanya nama petugas",
+          "Opini tanpa bukti",
+          "Gejala, tindakan yang dicoba dan dampak"
+        ],
+        "correct": 2
       }
     ]
   }
