@@ -300,7 +300,21 @@ fun JobTrainingScreen() {
                     )
                     val practiceResult = TrainingPractice.assess(practice)
                     Text(practiceResult.feedback, color = if (practiceResult.accepted) tealTraining else orangeTraining)
-                    TrainingAction("Kumpulkan Jawaban", enabled = practiceResult.accepted) { completeModule() }
+                    TrainingAction("Kumpulkan Jawaban", enabled = practiceResult.accepted && !trainingBusy) {
+                        if (trainingApi == null) completeModule()
+                        else {
+                            trainingBusy = true
+                            trainingScope.launch {
+                                try {
+                                    withContext(Dispatchers.IO) { trainingApi.completeModule(courseId, module, practice) }
+                                    serverModules = serverModules + module
+                                    completeModule()
+                                } catch (e: Exception) { message = "Modul belum tersimpan di server: ${e.message}" }
+                                finally { trainingBusy = false }
+                            }
+                        }
+                    }
+                    if (message.isNotBlank()) Text(message)
                 }
                 "exam" -> {
                     Text("Evaluasi Akhir", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
