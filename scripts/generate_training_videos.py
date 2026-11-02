@@ -21,7 +21,7 @@ for block in blocks:
         if target.exists():
             continue
         title_text = "\\n".join(textwrap.wrap(title, 24))
-        description = "\\n".join(textwrap.wrap(body, 38)[:7])
+        description = "\\n".join(textwrap.wrap(body.replace(":", " - ").replace("\u0027", ""), 38)[:7])
         filter_text = (
             "drawbox=x=24:y=24:w=592:h=312:color=white@0.10:t=fill,"
             "drawtext=text='KarirMate | PELATIHAN KERJA':fontcolor=0xFFB86B:fontsize=23:x=45:y=45,"
