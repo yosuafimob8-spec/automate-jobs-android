@@ -3,7 +3,7 @@ Registration requires REGISTRY_ADMIN_TOKEN; public verification is read-only.
 """
 import hmac
 from training_api import TrainingApiMixin
-from trusted_training import initialize
+from trusted_training import initialize, seed_trusted_catalog
 import json
 import os
 import re
@@ -157,4 +157,5 @@ if __name__ == "__main__":
         raise SystemExit("Set REGISTRY_ADMIN_TOKEN before starting.")
     with connect() as conn:
         initialize(conn)
+        seed_trusted_catalog(conn)
     ThreadingHTTPServer(("127.0.0.1", int(os.getenv("PORT", "8792"))), Handler).serve_forever()
