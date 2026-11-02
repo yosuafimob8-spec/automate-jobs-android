@@ -188,6 +188,7 @@ fun JobTrainingScreen() {
                     Text("Modul ${module + 1}", color = orangeTraining, fontWeight = FontWeight.Bold)
                     Text(course.lessons[module].first, fontSize = 24.sp, fontWeight = FontWeight.Bold)
                     TrainingLessonVisual(course.lessons[module].first)
+                    TrainingVideo(courseId, module)
                     TrainingNarration(course.lessons[module].first, course.lessons[module].second)
                     TrainingCard {
                         Text("Tujuan Pembelajaran", fontWeight = FontWeight.Bold)
