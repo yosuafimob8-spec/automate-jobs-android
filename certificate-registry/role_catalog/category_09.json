@@ -1,0 +1,872 @@
+[
+  {
+    "courseId": "role_it_support_basic",
+    "title": "IT Support • Basic",
+    "lessons": [
+      "Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan IT Support.",
+      "Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja IT Support.",
+      "Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja IT Support.",
+      "Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi IT Support.",
+      "Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan IT Support."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi IT Support?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk IT Support?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk IT Support?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja IT Support"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk IT Support?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan IT Support",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_it_support_intermediate",
+    "title": "IT Support • Intermediate",
+    "lessons": [
+      "Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan IT Support.",
+      "Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja IT Support.",
+      "Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja IT Support.",
+      "Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi IT Support.",
+      "Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan IT Support."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi IT Support?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk IT Support?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk IT Support?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja IT Support"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk IT Support?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan IT Support",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_it_support_advanced",
+    "title": "IT Support • Advanced",
+    "lessons": [
+      "Sebagai IT Support di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan IT Support.",
+      "Simulasikan alur kerja IT Support: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja IT Support.",
+      "Buat contoh dokumen IT Support menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja IT Support.",
+      "Studi kasus IT Support: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi IT Support.",
+      "Evaluasi pekerjaan IT Support dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan IT Support."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi IT Support?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk IT Support?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan IT Support berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk IT Support?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja IT Support"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk IT Support?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan IT Support",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_helpdesk_it_basic",
+    "title": "Helpdesk IT • Basic",
+    "lessons": [
+      "Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Helpdesk IT.",
+      "Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Helpdesk IT.",
+      "Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Helpdesk IT.",
+      "Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Helpdesk IT.",
+      "Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Helpdesk IT."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Helpdesk IT?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Helpdesk IT?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Helpdesk IT?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Helpdesk IT"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Helpdesk IT?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Helpdesk IT",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_helpdesk_it_intermediate",
+    "title": "Helpdesk IT • Intermediate",
+    "lessons": [
+      "Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Helpdesk IT.",
+      "Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Helpdesk IT.",
+      "Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Helpdesk IT.",
+      "Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Helpdesk IT.",
+      "Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Helpdesk IT."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Helpdesk IT?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Helpdesk IT?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Helpdesk IT?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Helpdesk IT"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Helpdesk IT?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Helpdesk IT",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_helpdesk_it_advanced",
+    "title": "Helpdesk IT • Advanced",
+    "lessons": [
+      "Sebagai Helpdesk IT di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Helpdesk IT.",
+      "Simulasikan alur kerja Helpdesk IT: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Helpdesk IT.",
+      "Buat contoh dokumen Helpdesk IT menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Helpdesk IT.",
+      "Studi kasus Helpdesk IT: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Helpdesk IT.",
+      "Evaluasi pekerjaan Helpdesk IT dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Helpdesk IT."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Helpdesk IT?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Helpdesk IT?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan Helpdesk IT berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Helpdesk IT?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Helpdesk IT"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Helpdesk IT?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Helpdesk IT",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_web_developer_basic",
+    "title": "Web Developer • Basic",
+    "lessons": [
+      "Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Web Developer.",
+      "Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Web Developer.",
+      "Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Web Developer.",
+      "Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Web Developer.",
+      "Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Web Developer."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Web Developer?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Web Developer?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Web Developer?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Web Developer"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Web Developer?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Web Developer",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_web_developer_intermediate",
+    "title": "Web Developer • Intermediate",
+    "lessons": [
+      "Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Web Developer.",
+      "Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Web Developer.",
+      "Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Web Developer.",
+      "Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Web Developer.",
+      "Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Web Developer."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Web Developer?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Web Developer?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Web Developer?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Web Developer"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Web Developer?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Web Developer",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_web_developer_advanced",
+    "title": "Web Developer • Advanced",
+    "lessons": [
+      "Sebagai Web Developer di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Web Developer.",
+      "Simulasikan alur kerja Web Developer: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Web Developer.",
+      "Buat contoh dokumen Web Developer menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Web Developer.",
+      "Studi kasus Web Developer: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Web Developer.",
+      "Evaluasi pekerjaan Web Developer dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Web Developer."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Web Developer?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Web Developer?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan Web Developer berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Web Developer?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Web Developer"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Web Developer?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Web Developer",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_software_tester_basic",
+    "title": "Software Tester • Basic",
+    "lessons": [
+      "Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Software Tester.",
+      "Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Software Tester.",
+      "Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Software Tester.",
+      "Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Software Tester.",
+      "Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Software Tester."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Software Tester?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Software Tester?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Software Tester?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Software Tester"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Software Tester?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Software Tester",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_software_tester_intermediate",
+    "title": "Software Tester • Intermediate",
+    "lessons": [
+      "Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Software Tester.",
+      "Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Software Tester.",
+      "Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Software Tester.",
+      "Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Software Tester.",
+      "Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Software Tester."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Software Tester?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Software Tester?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Software Tester?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Software Tester"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Software Tester?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Software Tester",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_software_tester_advanced",
+    "title": "Software Tester • Advanced",
+    "lessons": [
+      "Sebagai Software Tester di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Software Tester.",
+      "Simulasikan alur kerja Software Tester: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Software Tester.",
+      "Buat contoh dokumen Software Tester menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Software Tester.",
+      "Studi kasus Software Tester: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi Bukti hasil: laporan insiden dan eskalasi Software Tester.",
+      "Evaluasi pekerjaan Software Tester dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Software Tester."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Software Tester?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Software Tester?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah melakukan inspeksi berbasis kriteria, mencatat temuan dan memverifikasi tindakan koreksi dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Software Tester?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Software Tester"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Software Tester?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Software Tester",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_data_analyst_basic",
+    "title": "Data Analyst • Basic",
+    "lessons": [
+      "Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Data Analyst.",
+      "Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Data Analyst.",
+      "Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Data Analyst.",
+      "Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Data Analyst.",
+      "Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Data Analyst."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Data Analyst?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Data Analyst?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Data Analyst?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Data Analyst"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Data Analyst?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Data Analyst",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_data_analyst_intermediate",
+    "title": "Data Analyst • Intermediate",
+    "lessons": [
+      "Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Data Analyst.",
+      "Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Data Analyst.",
+      "Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Data Analyst.",
+      "Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Data Analyst.",
+      "Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Data Analyst."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Data Analyst?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Data Analyst?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Data Analyst?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Data Analyst"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Data Analyst?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Data Analyst",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_data_analyst_advanced",
+    "title": "Data Analyst • Advanced",
+    "lessons": [
+      "Sebagai Data Analyst di bidang IT & Digital, pelajari alat dan istilah: ticketing IT, repositori kode, log sistem. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem Bukti hasil: checklist risiko dan kewenangan Data Analyst.",
+      "Simulasikan alur kerja Data Analyst: triase masalah, reproduksi, perbaikan, pengujian, rilis. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis Bukti hasil: bagan alur kerja Data Analyst.",
+      "Buat contoh dokumen Data Analyst menggunakan: tiket insiden, changelog, hasil pengujian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku pada tiket insiden, changelog, hasil pengujian Bukti hasil: contoh dokumen dan bukti kerja Data Analyst.",
+      "Studi kasus Data Analyst: akses tidak sah atau layanan tidak tersedia. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau layanan tidak tersedia saat menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Data Analyst.",
+      "Evaluasi pekerjaan Data Analyst dengan indikator uptime, lead time perbaikan, jumlah insiden. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku dengan ukuran uptime, lead time perbaikan, jumlah insiden Bukti hasil: rencana pengukuran dan perbaikan Data Analyst."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Data Analyst?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "ticketing IT, repositori kode, log sistem — Identifikasi risiko saat menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku menggunakan ticketing IT, repositori kode, log sistem",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Data Analyst?",
+        "options": [
+          "triase masalah, reproduksi, perbaikan, pengujian, rilis — Urutkan langkah menjalankan tanggung jawab jabatan Data Analyst berdasarkan SOP yang berlaku dalam proses triase masalah, reproduksi, perbaikan, pengujian, rilis",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Data Analyst?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "tiket insiden, changelog, hasil pengujian — contoh dokumen dan bukti kerja Data Analyst"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau layanan tidak tersedia, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Data Analyst?",
+        "options": [
+          "Rumor tanpa data",
+          "uptime, lead time perbaikan, jumlah insiden — rencana pengukuran dan perbaikan Data Analyst",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
