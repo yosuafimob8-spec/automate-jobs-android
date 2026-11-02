@@ -1,0 +1,872 @@
+[
+  {
+    "courseId": "role_housekeeping_basic",
+    "title": "Housekeeping • Basic",
+    "lessons": [
+      "Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Housekeeping.",
+      "Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Housekeeping.",
+      "Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Housekeeping.",
+      "Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Housekeeping.",
+      "Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Housekeeping."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Housekeeping?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Housekeeping?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Housekeeping?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Housekeeping"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Housekeeping?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Housekeeping",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_housekeeping_intermediate",
+    "title": "Housekeeping • Intermediate",
+    "lessons": [
+      "Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Housekeeping.",
+      "Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Housekeeping.",
+      "Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Housekeeping.",
+      "Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Housekeeping.",
+      "Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Housekeeping."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Housekeeping?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Housekeeping?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Housekeeping?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Housekeeping"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Housekeeping?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Housekeeping",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_housekeeping_advanced",
+    "title": "Housekeeping • Advanced",
+    "lessons": [
+      "Sebagai Housekeeping di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Housekeeping.",
+      "Simulasikan alur kerja Housekeeping: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Housekeeping.",
+      "Buat contoh dokumen Housekeeping menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Housekeeping.",
+      "Studi kasus Housekeeping: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Housekeeping.",
+      "Evaluasi pekerjaan Housekeeping dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Housekeeping."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Housekeeping?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Housekeeping?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Housekeeping berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Housekeeping?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Housekeeping"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Housekeeping?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Housekeeping",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_receptionist_basic",
+    "title": "Receptionist • Basic",
+    "lessons": [
+      "Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Receptionist.",
+      "Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Receptionist.",
+      "Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Receptionist.",
+      "Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Receptionist.",
+      "Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Receptionist."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Receptionist?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Receptionist?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Receptionist?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Receptionist"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Receptionist?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Receptionist",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_receptionist_intermediate",
+    "title": "Receptionist • Intermediate",
+    "lessons": [
+      "Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Receptionist.",
+      "Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Receptionist.",
+      "Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Receptionist.",
+      "Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Receptionist.",
+      "Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Receptionist."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Receptionist?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Receptionist?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Receptionist?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Receptionist"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Receptionist?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Receptionist",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_receptionist_advanced",
+    "title": "Receptionist • Advanced",
+    "lessons": [
+      "Sebagai Receptionist di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Receptionist.",
+      "Simulasikan alur kerja Receptionist: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Receptionist.",
+      "Buat contoh dokumen Receptionist menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Receptionist.",
+      "Studi kasus Receptionist: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Receptionist.",
+      "Evaluasi pekerjaan Receptionist dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Receptionist."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Receptionist?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Receptionist?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Receptionist berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Receptionist?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Receptionist"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Receptionist?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Receptionist",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_front_desk_agent_basic",
+    "title": "Front Desk Agent • Basic",
+    "lessons": [
+      "Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Front Desk Agent.",
+      "Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Front Desk Agent.",
+      "Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Front Desk Agent.",
+      "Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Front Desk Agent.",
+      "Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Front Desk Agent."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Front Desk Agent?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Front Desk Agent?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Front Desk Agent?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Front Desk Agent"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Front Desk Agent?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Front Desk Agent",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_front_desk_agent_intermediate",
+    "title": "Front Desk Agent • Intermediate",
+    "lessons": [
+      "Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Front Desk Agent.",
+      "Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Front Desk Agent.",
+      "Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Front Desk Agent.",
+      "Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Front Desk Agent.",
+      "Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Front Desk Agent."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Front Desk Agent?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Front Desk Agent?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Front Desk Agent?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Front Desk Agent"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Front Desk Agent?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Front Desk Agent",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_front_desk_agent_advanced",
+    "title": "Front Desk Agent • Advanced",
+    "lessons": [
+      "Sebagai Front Desk Agent di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Front Desk Agent.",
+      "Simulasikan alur kerja Front Desk Agent: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Front Desk Agent.",
+      "Buat contoh dokumen Front Desk Agent menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Front Desk Agent.",
+      "Studi kasus Front Desk Agent: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Front Desk Agent.",
+      "Evaluasi pekerjaan Front Desk Agent dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Front Desk Agent."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Front Desk Agent?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Front Desk Agent?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Front Desk Agent berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Front Desk Agent?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Front Desk Agent"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Front Desk Agent?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Front Desk Agent",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_room_attendant_basic",
+    "title": "Room Attendant • Basic",
+    "lessons": [
+      "Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Room Attendant.",
+      "Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Room Attendant.",
+      "Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Room Attendant.",
+      "Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Room Attendant.",
+      "Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Room Attendant."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Room Attendant?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Room Attendant?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Room Attendant?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Room Attendant"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Room Attendant?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Room Attendant",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_room_attendant_intermediate",
+    "title": "Room Attendant • Intermediate",
+    "lessons": [
+      "Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Room Attendant.",
+      "Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Room Attendant.",
+      "Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Room Attendant.",
+      "Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Room Attendant.",
+      "Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Room Attendant."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Room Attendant?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Room Attendant?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Room Attendant?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Room Attendant"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Room Attendant?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Room Attendant",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_room_attendant_advanced",
+    "title": "Room Attendant • Advanced",
+    "lessons": [
+      "Sebagai Room Attendant di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Room Attendant.",
+      "Simulasikan alur kerja Room Attendant: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Room Attendant.",
+      "Buat contoh dokumen Room Attendant menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Room Attendant.",
+      "Studi kasus Room Attendant: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Room Attendant.",
+      "Evaluasi pekerjaan Room Attendant dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Room Attendant."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Room Attendant?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Room Attendant?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah menjalankan tanggung jawab jabatan Room Attendant berdasarkan SOP yang berlaku dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Room Attendant?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Room Attendant"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Room Attendant?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Room Attendant",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_hotel_supervisor_basic",
+    "title": "Hotel Supervisor • Basic",
+    "lessons": [
+      "Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Hotel Supervisor.",
+      "Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Hotel Supervisor.",
+      "Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Hotel Supervisor.",
+      "Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Hotel Supervisor.",
+      "Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Hotel Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Hotel Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Hotel Supervisor?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Hotel Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Hotel Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Hotel Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Hotel Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_hotel_supervisor_intermediate",
+    "title": "Hotel Supervisor • Intermediate",
+    "lessons": [
+      "Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Hotel Supervisor.",
+      "Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Hotel Supervisor.",
+      "Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Hotel Supervisor.",
+      "Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Hotel Supervisor.",
+      "Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Hotel Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Hotel Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Hotel Supervisor?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Hotel Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Hotel Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Hotel Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Hotel Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_hotel_supervisor_advanced",
+    "title": "Hotel Supervisor • Advanced",
+    "lessons": [
+      "Sebagai Hotel Supervisor di bidang Hospitality & Perhotelan, pelajari alat dan istilah: PMS, daftar reservasi, checklist kamar. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan PMS, daftar reservasi, checklist kamar Bukti hasil: checklist risiko dan kewenangan Hotel Supervisor.",
+      "Simulasikan alur kerja Hotel Supervisor: reservasi, check-in, layanan tamu, check-out. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses reservasi, check-in, layanan tamu, check-out Bukti hasil: bagan alur kerja Hotel Supervisor.",
+      "Buat contoh dokumen Hotel Supervisor menggunakan: guest folio, room status, laporan housekeeping. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada guest folio, room status, laporan housekeeping Bukti hasil: contoh dokumen dan bukti kerja Hotel Supervisor.",
+      "Studi kasus Hotel Supervisor: komplain kebersihan atau double booking. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus komplain kebersihan atau double booking saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Hotel Supervisor.",
+      "Evaluasi pekerjaan Hotel Supervisor dengan indikator occupancy, waktu kesiapan kamar, guest satisfaction. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran occupancy, waktu kesiapan kamar, guest satisfaction Bukti hasil: rencana pengukuran dan perbaikan Hotel Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Hotel Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "PMS, daftar reservasi, checklist kamar — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan PMS, daftar reservasi, checklist kamar",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Hotel Supervisor?",
+        "options": [
+          "reservasi, check-in, layanan tamu, check-out — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses reservasi, check-in, layanan tamu, check-out",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Hotel Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "guest folio, room status, laporan housekeeping — contoh dokumen dan bukti kerja Hotel Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi komplain kebersihan atau double booking, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Hotel Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "occupancy, waktu kesiapan kamar, guest satisfaction — rencana pengukuran dan perbaikan Hotel Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
