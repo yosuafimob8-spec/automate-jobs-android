@@ -178,6 +178,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 val total = correct + wrong + blank
                 val accuracy = if (total > 0) correct * 100 / total else 0
                 var analysisTab by rememberSaveable { mutableStateOf(0) }
+                var showReview by rememberSaveable { mutableStateOf(false) }
                 val rating = when {
                     actualScore == null -> "Asesmen Kepribadian"
                     actualScore >= 80 -> "Baik Sekali"
@@ -207,24 +208,47 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     }
                     if (!resultAnalysisPage) {
                         item {
-                            Text("Hasil Psikotes", color = Color.Black, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
-                            Row(verticalAlignment = Alignment.CenterVertically) {
-                                Text("Berikut hasil psikotes kamu beserta ringkasannya.", color = Color(0xFF333333), modifier = Modifier.weight(1f))
-                                Text("📋✏️", style = MaterialTheme.typography.displayLarge)
+                            Text("Hasil Psikotes", color = ink, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+                            Text("Ringkasan performa dan langkah latihan berikutnya.", color = Color(0xFF59667A))
+                        }
+                        item {
+                            Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFFE7F8F4))) {
+                                Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                        Column(Modifier.weight(1f)) {
+                                            Text("Nilai Akhir", color = ink, fontWeight = FontWeight.Medium)
+                                            Text("${actualScore?.toString() ?: "—"} / 100", color = ink, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
+                                        }
+                                        Surface(color = teal, shape = RoundedCornerShape(50)) {
+                                            Text(rating, color = Color.White, modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
+                                        }
+                                    }
+                                    LinearProgressIndicator(progress = { (actualScore ?: 0).coerceIn(0, 100) / 100f }, modifier = Modifier.fillMaxWidth().height(10.dp), color = teal, trackColor = Color.White, strokeCap = StrokeCap.Round)
+                                    Text(encouragement, color = ink, style = MaterialTheme.typography.bodyMedium)
+                                }
                             }
                         }
                         item {
-                            MockupCard(borderColor = Color(0xFFFFC68A)) {
-                                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
-                                    MedalIllustration(Modifier.size(120.dp))
-                                    Column {
-                                        Text("Nilai Akhir", color = Color.Black, fontWeight = FontWeight.SemiBold)
-                                        Row(verticalAlignment = Alignment.Bottom) { Text(actualScore?.toString() ?: "—", color = Color.Black, style = MaterialTheme.typography.displayLarge, fontWeight = FontWeight.Black); Text(" /100", color = Color.Black, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Black) }
-                                        Surface(color = Color(0xFF08BE72), shape = RoundedCornerShape(50)) { Text(rating, color = Color.White, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 14.dp, vertical = 5.dp)) }
-                                    }
+                            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                                Button(onClick = { showReview = !showReview }, modifier = Modifier.weight(1f), colors = ButtonDefaults.buttonColors(containerColor = teal)) {
+                                    Text(if (showReview) "Tutup Jawaban" else "Lihat Jawaban", maxLines = 1)
                                 }
-                                Spacer(Modifier.height(12.dp))
-                                Row(Modifier.fillMaxWidth().background(Color(0xFFFFEED4), RoundedCornerShape(14.dp)).padding(12.dp), verticalAlignment = Alignment.CenterVertically) { Text("❝", color = Color(0xFFFF9D2B), style = MaterialTheme.typography.headlineLarge); Text(encouragement, modifier = Modifier.weight(1f), color = Color(0xFF252525), fontWeight = FontWeight.Medium); Text("🚀", style = MaterialTheme.typography.displaySmall) }
+                                Button(onClick = { if (isPro) { resultAnalysisPage = true; analysisTab = 1 } else proNotice = true }, modifier = Modifier.weight(1f), colors = ButtonDefaults.buttonColors(containerColor = orange)) {
+                                    Text("Pembahasan PRO", maxLines = 1)
+                                }
+                            }
+                        }
+                        if (showReview) {
+                            val details = r.getAsJsonArray("questions")?.mapNotNull { if (it.isJsonObject) it.asJsonObject else null }.orEmpty()
+                            if (details.isEmpty()) item {
+                                MockupCard { Text("Rincian jawaban belum dikirim server untuk sesi ini.", color = ink) }
+                            }
+                            items(details) { q ->
+                                MockupCard {
+                                    Text(q.s("prompt", q.s("question", "Soal")), color = ink, fontWeight = FontWeight.Bold)
+                                    Text("Jawabanmu: " + q.s("selected_answer", q.s("user_answer", "Tidak tersedia")), color = ink)
+                                    Text("Jawaban benar: " + q.s("correct_answer", "Tidak tersedia"), color = teal)
+                                }
                             }
                         }
                         item {
@@ -266,17 +290,14 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                         categoryMap[label.lowercase()] = value.coerceIn(0, 100)
                                     }
                                 }
-                                listOf("🧠" to "Logika", "🔢" to "Numerik", "📖" to "Verbal", "👤" to "Kepribadian", "📋" to "SKD", "📚" to "SKB").forEach { (icon, label) ->
-                                    val score = categoryMap.entries.firstOrNull { (key, _) -> key.contains(label.lowercase()) }?.value
-                                    Row(Modifier.fillMaxWidth().padding(vertical = 5.dp), verticalAlignment = Alignment.CenterVertically) {
-                                        Text(icon, modifier = Modifier.width(34.dp))
-                                        Text(label, color = Color.Black, modifier = Modifier.width(100.dp), style = MaterialTheme.typography.bodyMedium)
-                                        if (score != null) {
-                                            LinearProgressIndicator(progress = { score / 100f }, modifier = Modifier.weight(1f).height(9.dp), color = Color(0xFF00A98D), trackColor = Color(0xFFE4ECF0), strokeCap = StrokeCap.Round)
-                                            Text("$score%", modifier = Modifier.width(52.dp), textAlign = TextAlign.End, color = Color.Black, fontWeight = FontWeight.Bold)
-                                        } else {
-                                            Text("Belum diuji", modifier = Modifier.weight(1f), color = Color.Gray, textAlign = TextAlign.End, style = MaterialTheme.typography.bodySmall)
-                                        }
+                                if (categoryMap.isEmpty()) {
+                                    Text("Data hasil kategori belum tersedia.", color = Color.Gray)
+                                }
+                                categoryMap.forEach { (label, score) ->
+                                    Row(Modifier.fillMaxWidth().padding(vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                                        Text(label.replaceFirstChar { it.uppercase() }, color = ink, modifier = Modifier.width(110.dp), style = MaterialTheme.typography.bodyMedium)
+                                        LinearProgressIndicator(progress = { score / 100f }, modifier = Modifier.weight(1f).height(9.dp), color = teal, trackColor = Color(0xFFE4ECF0), strokeCap = StrokeCap.Round)
+                                        Text("$score%", modifier = Modifier.width(54.dp), textAlign = TextAlign.End, color = ink, fontWeight = FontWeight.Bold)
                                     }
                                 }
                             }
