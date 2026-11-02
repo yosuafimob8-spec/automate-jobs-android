@@ -163,7 +163,7 @@ fun JobTrainingScreen() {
                         "invalid_or_incomplete_assessment" in detail -> "Server menolak format ujian. Pastikan 20 jawaban valid; bila tetap gagal, laporkan HTTP 400."
                         "authenticated_name_required" in detail -> "Nama akun login belum tersedia di server. Lengkapi profil akun terlebih dahulu."
                         "invalid_answers" in detail -> "Server menerima jawaban yang tidak valid. Mulai ulang evaluasi."
-                        else -> "Ujian gagal diproses. Periksa koneksi dan coba lagi."
+                        else -> "Gagal memproses ujian: ${detail.take(280).ifBlank { "Kesalahan tidak diketahui" }}. Jangan ulangi soal sebelum penyebabnya diperiksa."
                     }
                 }
                 finally { trainingBusy = false }
