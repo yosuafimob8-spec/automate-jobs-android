@@ -257,7 +257,22 @@ fun JobTrainingScreen() {
                             }
                         }
                     }
-                    TrainingAction("Evaluasi Akhir →", enabled = allDone) { stage = "exam"; questionIndex = 0 }
+                    TrainingAction("Evaluasi Akhir →", enabled = (if (trainingApi != null) serverAllDone else allDone) && !trainingBusy) {
+                        if (trainingApi == null) { stage = "exam"; questionIndex = 0 }
+                        else {
+                            trainingBusy = true
+                            trainingScope.launch {
+                                try {
+                                    val result = withContext(Dispatchers.IO) { trainingApi.questions(courseId) }
+                                    serverQuestions = result.getJSONArray("questions")
+                                    questionIndex = 0
+                                    stage = "exam"
+                                } catch (e: Exception) { message = "Gagal memuat soal server: ${e.message}" }
+                                finally { trainingBusy = false }
+                            }
+                        }
+                    }
+                    if (message.isNotBlank()) Text(message)
                 }
                 "lesson" -> {
                     Text("Modul ${module + 1}", color = orangeTraining, fontWeight = FontWeight.Bold)
