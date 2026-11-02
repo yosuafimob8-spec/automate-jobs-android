@@ -1,6 +1,9 @@
 name: Training Unit Tests Only
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feature/training-completion-no-apk-20261102
 jobs:
   unit-tests:
     runs-on: ubuntu-latest
