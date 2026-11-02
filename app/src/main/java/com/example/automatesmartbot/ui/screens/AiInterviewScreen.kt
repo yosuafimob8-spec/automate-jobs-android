@@ -1,5 +1,7 @@
 package com.example.automatesmartbot.ui.screens
 
+import com.example.automatesmartbot.BuildConfig
+import com.example.automatesmartbot.data.security.SessionManager
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -137,28 +139,42 @@ fun AiInterviewScreen() {
         val history = conversation.toList()
         val selectedCv = cvText
         val selectedRole = role
-        val selectedLanguage = if (english) "English" else "Indonesia"
+        val selectedLanguage = if (english) "en" else "id"
         scope.launch {
             val result = withContext(Dispatchers.IO) {
                 runCatching {
-                    val host = if (android.os.Build.FINGERPRINT.contains("generic")) "10.0.2.2" else "127.0.0.1"
-                    val connection = URL("http://$host:8790/interview/" + if (evaluate) "evaluate" else "next").openConnection() as HttpURLConnection
+                    val token = SessionManager(context.applicationContext).getValidToken()
+                        ?: error("Silakan login kembali.")
+                    val baseUrl = BuildConfig.INTERVIEW_BASE_URL.trimEnd('/')
+                    require(baseUrl.isNotBlank()) { "Backend AI Interview belum dikonfigurasi." }
+                    val connection = URL("$baseUrl/interview/turn").openConnection() as HttpURLConnection
                     try {
                         connection.requestMethod = "POST"
                         connection.connectTimeout = 5000
-                        connection.readTimeout = 50000
+                        connection.readTimeout = 130000
                         connection.doOutput = true
                         connection.setRequestProperty("Content-Type", "application/json")
+                        connection.setRequestProperty("Authorization", "Bearer $token")
                         val messages = JSONArray()
                         history.forEach { (speaker, message) ->
-                            messages.put(JSONObject().put("role", speaker).put("content", message))
+                            if (speaker == "assistant") messages.put(JSONObject().put("question", message).put("answer", ""))
+                            else if (messages.length() > 0) messages.getJSONObject(messages.length() - 1).put("answer", message)
                         }
-                        val body = JSONObject().put("role", selectedRole).put("language", selectedLanguage).put("history", messages).put("cv_text", selectedCv)
+                        val action = if (evaluate) "finish" else if (history.isEmpty()) "start" else "reply"
+                        val body = JSONObject().put("role", selectedRole).put("language", selectedLanguage).put("action", action).put("history", messages).put("cv_text", selectedCv)
                         connection.outputStream.use { it.write(body.toString().toByteArray(Charsets.UTF_8)) }
                         val stream = if (connection.responseCode in 200..299) connection.inputStream else connection.errorStream
                         val json = JSONObject(stream.bufferedReader().use { it.readText() })
-                        if (connection.responseCode !in 200..299) throw IllegalStateException(json.optString("error", "Layanan AI tidak tersedia"))
-                        json.getString(if (evaluate) "evaluation" else "question").also { require(it.isNotBlank()) }
+                        if (connection.responseCode !in 200..299) throw IllegalStateException(json.optString("detail").ifBlank { json.optString("error", "Layanan AI tidak tersedia") })
+                        (if (evaluate) buildString {
+                            append("Nilai: ${json.optInt("overall_score", 0)}/100\\n")
+                            for (key in listOf("strengths", "improvements")) {
+                                append(if (key == "strengths") "Kelebihan:\\n" else "Perbaikan:\\n")
+                                val list = json.optJSONArray(key) ?: JSONArray()
+                                for (i in 0 until list.length()) append("• ${list.optString(i)}\\n")
+                            }
+                            append(json.optString("encouragement"))
+                        } else json.optString("question")).also { require(it.isNotBlank()) }
                     } finally { connection.disconnect() }
                 }
             }
