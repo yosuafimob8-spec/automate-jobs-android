@@ -113,6 +113,11 @@ fun JobTrainingScreen() {
             } catch (e: Exception) { message = "Progres server tidak tersedia: ${e.message}" }
         }
     }
+    fun resetExamAnswers() {
+        prefs.edit().remove("answers_$courseId").apply()
+        version++
+        message = ""
+    }
     fun saveAnswer(index: Int, choice: Int) {
         answers.put(index, choice)
         prefs.edit().putString("answers_$courseId", answers.toString()).apply()
@@ -128,7 +133,10 @@ fun JobTrainingScreen() {
             val questions = serverQuestions
             if (questions == null) { message = "Soal server belum dimuat."; return }
             val values = (0 until questions.length()).map { answers.optInt(it, -1) }
-            if (values.any { it < 0 }) { message = "Jawab semua pertanyaan."; return }
+            if (questions.length() != 20 || values.any { it !in 0..2 }) {
+                message = "Jawaban belum lengkap atau pilihan tidak valid. Pastikan semua 20 soal terjawab."
+                return
+            }
             trainingBusy = true
             trainingScope.launch {
                 try {
@@ -152,7 +160,9 @@ fun JobTrainingScreen() {
                     message = when {
                         "exam_not_passed" in detail -> "Nilai belum mencapai 80/100. Silakan ulangi ujian."
                         "modules_incomplete" in detail -> "Progres modul belum lengkap di server. Kembali ke daftar modul dan selesaikan modul yang belum tersimpan."
-                        "invalid_or_incomplete_assessment" in detail -> "Data ujian belum lengkap atau tidak sesuai. Periksa jawaban lalu ulangi ujian."
+                        "invalid_or_incomplete_assessment" in detail -> "Server menolak format ujian. Pastikan 20 jawaban valid; bila tetap gagal, laporkan HTTP 400."
+                        "authenticated_name_required" in detail -> "Nama akun login belum tersedia di server. Lengkapi profil akun terlebih dahulu."
+                        "invalid_answers" in detail -> "Server menerima jawaban yang tidak valid. Mulai ulang evaluasi."
                         else -> "Ujian gagal diproses. Periksa koneksi dan coba lagi."
                     }
                 }
@@ -307,13 +317,16 @@ fun JobTrainingScreen() {
                         }
                     }
                     TrainingAction("Evaluasi Akhir →", enabled = (if (trainingApi != null) serverAllDone else allDone) && !trainingBusy) {
-                        if (trainingApi == null) { stage = "exam"; questionIndex = 0 }
+                        if (trainingApi == null) { resetExamAnswers(); stage = "exam"; questionIndex = 0 }
                         else {
                             trainingBusy = true
                             trainingScope.launch {
                                 try {
                                     val result = withContext(Dispatchers.IO) { trainingApi.questions(courseId) }
-                                    serverQuestions = result.getJSONArray("questions")
+                                    val loaded = result.getJSONArray("questions")
+                                    if (loaded.length() != 20) error("Bank soal server bukan 20 pertanyaan")
+                                    resetExamAnswers()
+                                    serverQuestions = loaded
                                     questionIndex = 0
                                     stage = "exam"
                                 } catch (e: Exception) { message = "Gagal memuat soal server: ${e.message}" }
@@ -447,9 +460,9 @@ fun JobTrainingScreen() {
                         prefs.edit().putString("name", it).apply()
                     }, label = { Text("Nama lengkap peserta") }, modifier = Modifier.fillMaxWidth())
                     Text("Nilai minimal kelulusan: 80/100")
-                    TrainingAction("Lihat Hasil") { evaluate() }
+                    TrainingAction("Lihat Hasil", enabled = !trainingBusy) { evaluate() }
                     if (message.isNotBlank()) Text(message, color = orangeTraining)
-                    OutlinedButton(colors = trainingButtonColors, onClick = { stage = "exam"; questionIndex = 0 }) { Text("Ulangi Soal") }
+                    OutlinedButton(colors = trainingButtonColors, onClick = { resetExamAnswers(); stage = "exam"; questionIndex = 0 }) { Text("Ulangi Soal") }
                 }
                 "certificate" -> {
                     Text("Sertifikat Penyelesaian", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
