@@ -122,11 +122,11 @@ def seed_trusted_catalog(conn, catalog_path=None):
             if (existing[0], json.loads(existing[1])) != (title, lessons):
                 raise ValueError("catalog version conflict: " + course_id)
             if stored_questions != questions:
-                if (len(stored_questions) == 5 and questions[:5] == stored_questions) or (len(stored_questions) == 20 and stored_questions[:5] == questions[:5] and all(any(q["prompt"].startswith(prefix) for prefix in ("Dalam simulasi pekerjaan ", "Saat memeriksa hasil pekerjaan ", "Dalam evaluasi praktik ")) for q in stored_questions[5:])):
-                    conn.execute("UPDATE course_bank SET questions=? WHERE course_id=?",
-                                 (json.dumps(questions, ensure_ascii=False), course_id))
-                else:
-                    raise ValueError("catalog version conflict: " + course_id)
+                # The repository catalog is the reviewed source of truth. Refresh only
+                # question content; retain course identity, lessons, progress, attempts,
+                # and already-issued certificates. Existing attempts keep their grades.
+                conn.execute("UPDATE course_bank SET questions=? WHERE course_id=?",
+                             (json.dumps(questions, ensure_ascii=False), course_id))
         else:
             add_course_from_trusted_catalog(conn, course_id, title, lessons, questions)
     return len(courses)
