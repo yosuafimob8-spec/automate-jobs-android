@@ -1,0 +1,872 @@
+[
+  {
+    "courseId": "role_driver_basic",
+    "title": "Driver • Basic",
+    "lessons": [
+      "Sebagai Driver di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Driver.",
+      "Simulasikan alur kerja Driver: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Driver.",
+      "Buat contoh dokumen Driver menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Driver.",
+      "Studi kasus Driver: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima Bukti hasil: laporan insiden dan eskalasi Driver.",
+      "Evaluasi pekerjaan Driver dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Driver."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Driver?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Driver?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Driver?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Driver"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Driver?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Driver",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_driver_intermediate",
+    "title": "Driver • Intermediate",
+    "lessons": [
+      "Sebagai Driver di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Driver.",
+      "Simulasikan alur kerja Driver: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Driver.",
+      "Buat contoh dokumen Driver menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Driver.",
+      "Studi kasus Driver: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima Bukti hasil: laporan insiden dan eskalasi Driver.",
+      "Evaluasi pekerjaan Driver dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Driver."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Driver?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Driver?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Driver?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Driver"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Driver?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Driver",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_driver_advanced",
+    "title": "Driver • Advanced",
+    "lessons": [
+      "Sebagai Driver di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Driver.",
+      "Simulasikan alur kerja Driver: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Driver.",
+      "Buat contoh dokumen Driver menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Driver.",
+      "Studi kasus Driver: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima Bukti hasil: laporan insiden dan eskalasi Driver.",
+      "Evaluasi pekerjaan Driver dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Driver."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Driver?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Driver?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Driver?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Driver"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Driver?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Driver",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kurir_basic",
+    "title": "Kurir • Basic",
+    "lessons": [
+      "Sebagai Kurir di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Kurir.",
+      "Simulasikan alur kerja Kurir: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Kurir.",
+      "Buat contoh dokumen Kurir menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Kurir.",
+      "Studi kasus Kurir: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima Bukti hasil: laporan insiden dan eskalasi Kurir.",
+      "Evaluasi pekerjaan Kurir dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Kurir."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kurir?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kurir?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kurir?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Kurir"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kurir?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Kurir",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kurir_intermediate",
+    "title": "Kurir • Intermediate",
+    "lessons": [
+      "Sebagai Kurir di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Kurir.",
+      "Simulasikan alur kerja Kurir: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Kurir.",
+      "Buat contoh dokumen Kurir menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Kurir.",
+      "Studi kasus Kurir: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima Bukti hasil: laporan insiden dan eskalasi Kurir.",
+      "Evaluasi pekerjaan Kurir dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Kurir."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kurir?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kurir?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kurir?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Kurir"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kurir?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Kurir",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_kurir_advanced",
+    "title": "Kurir • Advanced",
+    "lessons": [
+      "Sebagai Kurir di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Kurir.",
+      "Simulasikan alur kerja Kurir: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Kurir.",
+      "Buat contoh dokumen Kurir menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Kurir.",
+      "Studi kasus Kurir: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima Bukti hasil: laporan insiden dan eskalasi Kurir.",
+      "Evaluasi pekerjaan Kurir dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Kurir."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Kurir?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Kurir?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Kurir?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Kurir"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Kurir?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Kurir",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_dispatcher_basic",
+    "title": "Dispatcher • Basic",
+    "lessons": [
+      "Sebagai Dispatcher di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Dispatcher.",
+      "Simulasikan alur kerja Dispatcher: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Dispatcher.",
+      "Buat contoh dokumen Dispatcher menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Dispatcher.",
+      "Studi kasus Dispatcher: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima Bukti hasil: laporan insiden dan eskalasi Dispatcher.",
+      "Evaluasi pekerjaan Dispatcher dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Dispatcher."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Dispatcher?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Dispatcher?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Dispatcher?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Dispatcher"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Dispatcher?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Dispatcher",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_dispatcher_intermediate",
+    "title": "Dispatcher • Intermediate",
+    "lessons": [
+      "Sebagai Dispatcher di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Dispatcher.",
+      "Simulasikan alur kerja Dispatcher: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Dispatcher.",
+      "Buat contoh dokumen Dispatcher menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Dispatcher.",
+      "Studi kasus Dispatcher: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima Bukti hasil: laporan insiden dan eskalasi Dispatcher.",
+      "Evaluasi pekerjaan Dispatcher dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Dispatcher."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Dispatcher?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Dispatcher?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Dispatcher?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Dispatcher"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Dispatcher?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Dispatcher",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_dispatcher_advanced",
+    "title": "Dispatcher • Advanced",
+    "lessons": [
+      "Sebagai Dispatcher di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Dispatcher.",
+      "Simulasikan alur kerja Dispatcher: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Dispatcher.",
+      "Buat contoh dokumen Dispatcher menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Dispatcher.",
+      "Studi kasus Dispatcher: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima Bukti hasil: laporan insiden dan eskalasi Dispatcher.",
+      "Evaluasi pekerjaan Dispatcher dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Dispatcher."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Dispatcher?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Dispatcher?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah memastikan keselamatan perjalanan, ketepatan tujuan dan bukti serah terima dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Dispatcher?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Dispatcher"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Dispatcher?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Dispatcher",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_transport_coordinator_basic",
+    "title": "Transport Coordinator • Basic",
+    "lessons": [
+      "Sebagai Transport Coordinator di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Transport Coordinator.",
+      "Simulasikan alur kerja Transport Coordinator: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Transport Coordinator.",
+      "Buat contoh dokumen Transport Coordinator menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Transport Coordinator.",
+      "Studi kasus Transport Coordinator: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Transport Coordinator.",
+      "Evaluasi pekerjaan Transport Coordinator dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Transport Coordinator."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Transport Coordinator?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Transport Coordinator?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Transport Coordinator?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Transport Coordinator"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Transport Coordinator?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Transport Coordinator",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_transport_coordinator_intermediate",
+    "title": "Transport Coordinator • Intermediate",
+    "lessons": [
+      "Sebagai Transport Coordinator di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Transport Coordinator.",
+      "Simulasikan alur kerja Transport Coordinator: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Transport Coordinator.",
+      "Buat contoh dokumen Transport Coordinator menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Transport Coordinator.",
+      "Studi kasus Transport Coordinator: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Transport Coordinator.",
+      "Evaluasi pekerjaan Transport Coordinator dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Transport Coordinator."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Transport Coordinator?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Transport Coordinator?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Transport Coordinator?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Transport Coordinator"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Transport Coordinator?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Transport Coordinator",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_transport_coordinator_advanced",
+    "title": "Transport Coordinator • Advanced",
+    "lessons": [
+      "Sebagai Transport Coordinator di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Transport Coordinator.",
+      "Simulasikan alur kerja Transport Coordinator: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Transport Coordinator.",
+      "Buat contoh dokumen Transport Coordinator menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Transport Coordinator.",
+      "Studi kasus Transport Coordinator: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Transport Coordinator.",
+      "Evaluasi pekerjaan Transport Coordinator dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Transport Coordinator."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Transport Coordinator?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Transport Coordinator?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah menjalankan tanggung jawab jabatan Transport Coordinator berdasarkan SOP yang berlaku dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Transport Coordinator?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Transport Coordinator"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Transport Coordinator?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Transport Coordinator",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_fleet_supervisor_basic",
+    "title": "Fleet Supervisor • Basic",
+    "lessons": [
+      "Sebagai Fleet Supervisor di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Fleet Supervisor.",
+      "Simulasikan alur kerja Fleet Supervisor: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Fleet Supervisor.",
+      "Buat contoh dokumen Fleet Supervisor menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Fleet Supervisor.",
+      "Studi kasus Fleet Supervisor: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Fleet Supervisor.",
+      "Evaluasi pekerjaan Fleet Supervisor dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Fleet Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Fleet Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Fleet Supervisor?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Fleet Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Fleet Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Fleet Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Fleet Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_fleet_supervisor_intermediate",
+    "title": "Fleet Supervisor • Intermediate",
+    "lessons": [
+      "Sebagai Fleet Supervisor di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Fleet Supervisor.",
+      "Simulasikan alur kerja Fleet Supervisor: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Fleet Supervisor.",
+      "Buat contoh dokumen Fleet Supervisor menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Fleet Supervisor.",
+      "Studi kasus Fleet Supervisor: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Fleet Supervisor.",
+      "Evaluasi pekerjaan Fleet Supervisor dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Fleet Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Fleet Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Fleet Supervisor?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Fleet Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Fleet Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Fleet Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Fleet Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_fleet_supervisor_advanced",
+    "title": "Fleet Supervisor • Advanced",
+    "lessons": [
+      "Sebagai Fleet Supervisor di bidang Transportasi & Pengiriman, pelajari alat dan istilah: surat jalan, aplikasi rute, POD, GPS. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan surat jalan, aplikasi rute, POD, GPS Bukti hasil: checklist risiko dan kewenangan Fleet Supervisor.",
+      "Simulasikan alur kerja Fleet Supervisor: cek kendaraan, muat, rute, antar, bukti terima. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses cek kendaraan, muat, rute, antar, bukti terima Bukti hasil: bagan alur kerja Fleet Supervisor.",
+      "Buat contoh dokumen Fleet Supervisor menggunakan: POD, log perjalanan, checklist kendaraan. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada POD, log perjalanan, checklist kendaraan Bukti hasil: contoh dokumen dan bukti kerja Fleet Supervisor.",
+      "Studi kasus Fleet Supervisor: alamat salah atau keterlambatan pengiriman. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus alamat salah atau keterlambatan pengiriman saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi Fleet Supervisor.",
+      "Evaluasi pekerjaan Fleet Supervisor dengan indikator on-time delivery, biaya per rute, keberhasilan antar. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran on-time delivery, biaya per rute, keberhasilan antar Bukti hasil: rencana pengukuran dan perbaikan Fleet Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Fleet Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "surat jalan, aplikasi rute, POD, GPS — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan surat jalan, aplikasi rute, POD, GPS",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Fleet Supervisor?",
+        "options": [
+          "cek kendaraan, muat, rute, antar, bukti terima — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses cek kendaraan, muat, rute, antar, bukti terima",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Fleet Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "POD, log perjalanan, checklist kendaraan — contoh dokumen dan bukti kerja Fleet Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi alamat salah atau keterlambatan pengiriman, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Fleet Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "on-time delivery, biaya per rute, keberhasilan antar — rencana pengukuran dan perbaikan Fleet Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
