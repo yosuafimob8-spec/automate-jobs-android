@@ -20,6 +20,7 @@ import com.example.automatesmartbot.data.career.TrainingCourses
 import com.example.automatesmartbot.data.career.TrainingPositions
 import com.example.automatesmartbot.data.career.TrainingPathways
 import com.example.automatesmartbot.data.career.TrainingLevel
+import com.example.automatesmartbot.data.career.TrainingPractice
 import com.example.automatesmartbot.data.cv.CvRenderer
 import com.example.automatesmartbot.ui.components.PdfExportButton
 import org.json.JSONArray
@@ -274,7 +275,9 @@ fun JobTrainingScreen() {
                             unfocusedContainerColor = Color.White
                         )
                     )
-                    TrainingAction("Kumpulkan Jawaban", enabled = practice.trim().length >= 20) { completeModule() }
+                    val practiceResult = TrainingPractice.assess(practice)
+                    Text(practiceResult.feedback, color = if (practiceResult.accepted) tealTraining else orangeTraining)
+                    TrainingAction("Kumpulkan Jawaban", enabled = practiceResult.accepted) { completeModule() }
                 }
                 "exam" -> {
                     Text("Evaluasi Akhir", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
