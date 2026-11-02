@@ -1,6 +1,9 @@
 package com.example.automatesmartbot.ui.screens
 
 import android.graphics.Paint
+import android.graphics.Color
+import com.google.zxing.BarcodeFormat
+import com.google.zxing.qrcode.QRCodeWriter
 import android.graphics.Typeface
 import android.graphics.pdf.PdfDocument
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -61,12 +64,32 @@ fun TrainingCertificateExport(item: JSONObject) {
                         text("Telah menyelesaikan pelatihan", 313f, 16f)
                         text(item.optString("course").take(55), 344f, 23f, dark, true)
                         text("Dengan hasil akhir ${item.optInt("score")}/100", 373f, 17f)
-                        text("Training Manager", 433f, 14f, dark, true)
-                        text("Tanti kurnia", 457f, 16f, dark, true)
-                        text("Program Director", 493f, 14f, dark, true)
-                        text("Ilham Ramdhan", 516f, 16f, dark, true)
+                        paint.color = gold
+                        paint.strokeWidth = 1.2f
+                        canvas.drawLine(110f, 467f, 305f, 467f, paint)
+                        canvas.drawLine(535f, 467f, 730f, 467f, paint)
+                        fun signature(value: String, role: String, x: Float) {
+                            paint.color = dark
+                            paint.typeface = Typeface.create(Typeface.DEFAULT, Typeface.BOLD)
+                            paint.textAlign = Paint.Align.CENTER
+                            paint.textSize = 16f
+                            canvas.drawText(value, x, 489f, paint)
+                            paint.textSize = 12f
+                            canvas.drawText(role, x, 508f, paint)
+                        }
+                        signature("Tanti kurnia", "Training Manager", 207f)
+                        signature("Ilham Ramdhan", "Program Director", 633f)
+                        val qrPayload = "KarirMate|INTERNAL|${item.optString("id")}|${item.optString("courseId")}|${item.optString("date")}|${item.optInt("score")}"
+                        val qr = QRCodeWriter().encode(qrPayload, BarcodeFormat.QR_CODE, 70, 70)
+                        val cell = 0.85f
+                        paint.style = Paint.Style.FILL
+                        for (y in 0 until qr.height) for (x in 0 until qr.width) {
+                            paint.color = if (qr[x, y]) Color.BLACK else Color.WHITE
+                            canvas.drawRect(383f + x * cell, 410f + y * cell, 383f + (x + 1) * cell, 410f + (y + 1) * cell, paint)
+                        }
                         text("Tanggal: ${item.optString("date")}  •  ID: ${item.optString("id").take(16)}", 538f, 10f)
-                        text("Sertifikat pelatihan internal KarirMate, bukan sertifikasi kompetensi resmi BNSP.", 554f, 9f)
+                        text("QR berisi data identitas sertifikat; belum ada verifikasi daring.", 550f, 9f)
+                        text("Sertifikat pelatihan internal KarirMate, bukan sertifikasi kompetensi resmi BNSP.", 563f, 9f)
                         document.finishPage(page)
                         context.contentResolver.openOutputStream(uri, "wt")?.use { document.writeTo(it) }
                             ?: error("Gagal membuka lokasi penyimpanan")
