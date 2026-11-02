@@ -170,7 +170,7 @@ fun JobTrainingScreen() {
             message += ". Belum lulus; selesaikan modul dan ulangi evaluasi."
         }
     }
-    CompositionLocalProvider(LocalContentColor provides darkTraining) {
+    CompositionLocalProvider(LocalContentColor provides darkTraining, LocalTextStyle provides LocalTextStyle.current.copy(color = darkTraining)) {
     Column(Modifier.fillMaxSize().background(paleTraining)) {
         Row(
             Modifier.fillMaxWidth().background(Color.White).padding(16.dp),
@@ -331,11 +331,11 @@ fun JobTrainingScreen() {
                     TrainingAction("Lanjut ke Latihan →") { stage = "practice" }
                 }
                 "practice" -> {
-                    Text("Latihan Praktik", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
-                    Text("Modul ${module + 1} – ${course.lessons[module].first}")
+                    Text("Latihan Praktik", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
+                    Text("Modul ${module + 1} – ${course.lessons[module].first}", color = darkTraining)
                     TrainingCard {
-                        Text("🏠  Studi Kasus", fontSize = 19.sp, fontWeight = FontWeight.Bold)
-                        Text("Berikan contoh nyata bagaimana materi ini diterapkan dalam pekerjaan atau saat melamar kerja.")
+                        Text("🏠  Studi Kasus", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = darkTraining)
+                        Text("Berikan contoh nyata bagaimana materi ini diterapkan dalam pekerjaan atau saat melamar kerja.", color = darkTraining)
                     }
                     var practice by rememberSaveable(courseId, module) {
                         mutableStateOf(prefs.getString("practice_${courseId}_$module", "").orEmpty())
@@ -346,12 +346,21 @@ fun JobTrainingScreen() {
                             practice = it
                             prefs.edit().putString("practice_${courseId}_$module", it).apply()
                         },
-                        label = { Text("Jawaban latihan praktik") },
+                        label = { Text("Jawaban latihan praktik", color = darkTraining) },
+                        textStyle = LocalTextStyle.current.copy(color = darkTraining),
                         minLines = 5,
                         modifier = Modifier.fillMaxWidth(),
                         colors = OutlinedTextFieldDefaults.colors(
                             focusedContainerColor = Color.White,
-                            unfocusedContainerColor = Color.White
+                            unfocusedContainerColor = Color.White,
+                            focusedTextColor = darkTraining,
+                            unfocusedTextColor = darkTraining,
+                            disabledTextColor = darkTraining,
+                            focusedLabelColor = darkTraining,
+                            unfocusedLabelColor = darkTraining,
+                            focusedBorderColor = Color(0xFF2563EB),
+                            unfocusedBorderColor = trainingDisabledText,
+                            cursorColor = darkTraining
                         )
                     )
                     val practiceResult = TrainingPractice.assess(practice)
