@@ -129,6 +129,7 @@ dependencies {
     implementation(libs.loggingInterceptor)
     implementation(libs.androidx.security.crypto)
     implementation("com.tom-roush:pdfbox-android:2.0.27.0")
+    implementation("com.google.zxing:core:3.5.3")
     implementation("androidx.exifinterface:exifinterface:1.3.7")
     testImplementation(platform(libs.androidx.compose.bom))
     testImplementation(libs.androidx.ui.test.junit4)
