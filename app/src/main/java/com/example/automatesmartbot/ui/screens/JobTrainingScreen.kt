@@ -88,6 +88,29 @@ fun JobTrainingScreen() {
             .flatMap { position -> TrainingLevel.entries.asSequence().map { TrainingPathways.courseFor(position, it) } }
             .firstOrNull { it.id == courseId } ?: TrainingCourses.all.first()
     }
+    // Local, reviewed question bank is bundled for Android Studio/offline testing.
+    // Online grading still uses the authenticated server's questions and answers.
+    val offlineQuestions = remember(courseId) {
+        if (!courseId.startsWith("role_")) course.questions else {
+            (1..15).asSequence().mapNotNull { category ->
+                runCatching {
+                    val file = "training_questions/category_${category.toString().padStart(2, '0')}.json"
+                    val bank = JSONObject(context.assets.open(file).bufferedReader().use { it.readText() })
+                    bank.optJSONArray(courseId)?.let { array ->
+                        (0 until array.length()).map { index ->
+                            val q = array.getJSONObject(index)
+                            val choices = q.getJSONArray("options")
+                            com.example.automatesmartbot.data.career.TrainingQuestion(
+                                q.getString("prompt"),
+                                (0 until choices.length()).map { choices.getString(it) },
+                                q.getInt("correct")
+                            )
+                        }
+                    }
+                }.getOrNull()
+            }.firstOrNull() ?: emptyList()
+        }
+    }
     var stage by rememberSaveable { mutableStateOf("catalog") }
     var selectedCategory by rememberSaveable { mutableStateOf(0) }
     var selectedPosition by rememberSaveable { mutableStateOf("") }
@@ -171,10 +194,11 @@ fun JobTrainingScreen() {
             }
             return
         }
-        val values = course.questions.indices.map { answers.optInt(it, -1) }
+        val values = offlineQuestions.indices.map { answers.optInt(it, -1) }
+        if (offlineQuestions.size != 20) { message = "Bank soal 20 pertanyaan belum tersedia. Periksa aset pelatihan."; return }
         if (values.any { it < 0 }) { message = "Jawab semua pertanyaan."; return }
         if (name.isBlank()) { message = "Isi nama peserta untuk sertifikat."; return }
-        val score = TrainingCourses.score(values, course.questions)
+        val score = TrainingCourses.score(values, offlineQuestions)
         message = "Nilai akhir: $score/100"
         if (score >= 80 && allDone) {
             val item = JSONObject().put("id", UUID.randomUUID().toString())
@@ -318,7 +342,10 @@ fun JobTrainingScreen() {
                         }
                     }
                     TrainingAction("Evaluasi Akhir →", enabled = (if (trainingApi != null) serverAllDone else allDone) && !trainingBusy) {
-                        if (trainingApi == null) { resetExamAnswers(); stage = "exam"; questionIndex = 0 }
+                        if (trainingApi == null) {
+                            if (offlineQuestions.size != 20) message = "Bank soal 20 pertanyaan belum tersedia untuk kursus ini."
+                            else { resetExamAnswers(); stage = "exam"; questionIndex = 0 }
+                        }
                         else {
                             trainingBusy = true
                             trainingScope.launch {
@@ -406,14 +433,14 @@ fun JobTrainingScreen() {
                 "exam" -> {
                     Text("Evaluasi Akhir", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
                     Text(course.title)
-                    Text("Soal ${questionIndex + 1} dari ${serverQuestions?.length() ?: course.questions.size}", fontWeight = FontWeight.Bold)
+                    Text("Soal ${questionIndex + 1} dari ${serverQuestions?.length() ?: offlineQuestions.size}", fontWeight = FontWeight.Bold)
                     LinearProgressIndicator(
-                        progress = { (questionIndex + 1f) / (serverQuestions?.length() ?: course.questions.size).coerceAtLeast(1) },
+                        progress = { (questionIndex + 1f) / (serverQuestions?.length() ?: offlineQuestions.size).coerceAtLeast(1) },
                         modifier = Modifier.fillMaxWidth(),
                         color = orangeTraining
                     )
                     val remoteQuestion = serverQuestions?.optJSONObject(questionIndex)
-                    val q = course.questions.getOrNull(questionIndex)
+                    val q = offlineQuestions.getOrNull(questionIndex)
                     val questionPrompt = remoteQuestion?.optString("prompt") ?: q?.prompt.orEmpty()
                     val questionOptions = remoteQuestion?.optJSONArray("options")?.let { array -> (0 until array.length()).map { array.getString(it) } } ?: q?.options.orEmpty()
                     TrainingCard {
@@ -441,7 +468,7 @@ fun JobTrainingScreen() {
                         ) { Text("‹ Sebelumnya") }
                         Button(
                             onClick = {
-                                if (questionIndex < (serverQuestions?.length() ?: course.questions.size) - 1) questionIndex++
+                                if (questionIndex < (serverQuestions?.length() ?: offlineQuestions.size) - 1) questionIndex++
                                 else stage = "submit"
                             },
                             modifier = Modifier.weight(1f),
@@ -451,7 +478,7 @@ fun JobTrainingScreen() {
             disabledContainerColor = Color(0xFFE2E8F0),
             disabledContentColor = darkTraining
         )
-                        ) { Text(if (questionIndex == (serverQuestions?.length() ?: course.questions.size) - 1) "Selesai" else "Berikutnya ›") }
+                        ) { Text(if (questionIndex == (serverQuestions?.length() ?: offlineQuestions.size) - 1) "Selesai" else "Berikutnya ›") }
                     }
                 }
                 "submit" -> {
