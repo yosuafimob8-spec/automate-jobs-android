@@ -219,6 +219,31 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             }
                         }
                         item {
+                            var showReview by remember { mutableStateOf(false) }
+                            Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                                OutlinedButton(onClick = { showReview = !showReview }, modifier = Modifier.fillMaxWidth()) {
+                                    Text(if (showReview) "Tutup Jawaban" else "Lihat Jawaban")
+                                }
+                                if (showReview) {
+                                    val details = r.getAsJsonArray("questions")
+                                    if (details == null || details.size() == 0) {
+                                        Text("Rincian jawaban belum tersedia dari server.", color = Color.DarkGray)
+                                    } else {
+                                        details.forEach { entry ->
+                                            if (entry.isJsonObject) {
+                                                val q = entry.asJsonObject
+                                                MockupCard {
+                                                    Text(q.s("prompt", q.s("question", "Soal")), color = Color.Black, fontWeight = FontWeight.Bold)
+                                                    Text("Jawabanmu: " + q.s("selected_answer", q.s("user_answer", "Tidak tersedia")), color = Color.Black)
+                                                    Text("Jawaban benar: " + q.s("correct_answer", "Tidak tersedia"), color = Color(0xFF007F78))
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        item {
                             MockupCard {
                                 Text("🟠 Ringkasan Jawaban", fontWeight = FontWeight.ExtraBold, color = Color.Black, style = MaterialTheme.typography.titleMedium)
                                 Spacer(Modifier.height(12.dp))
