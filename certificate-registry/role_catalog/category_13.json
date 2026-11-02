@@ -1,0 +1,872 @@
+[
+  {
+    "courseId": "role_security_basic",
+    "title": "Security • Basic",
+    "lessons": [
+      "Sebagai Security di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan Security.",
+      "Simulasikan alur kerja Security: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja Security.",
+      "Buat contoh dokumen Security menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja Security.",
+      "Studi kasus Security: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Security.",
+      "Evaluasi pekerjaan Security dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan Security."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Security?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Security?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Security?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja Security"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Security?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan Security",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_security_intermediate",
+    "title": "Security • Intermediate",
+    "lessons": [
+      "Sebagai Security di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan Security.",
+      "Simulasikan alur kerja Security: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja Security.",
+      "Buat contoh dokumen Security menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja Security.",
+      "Studi kasus Security: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Security.",
+      "Evaluasi pekerjaan Security dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan Security."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Security?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Security?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Security?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja Security"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Security?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan Security",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_security_advanced",
+    "title": "Security • Advanced",
+    "lessons": [
+      "Sebagai Security di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan Security.",
+      "Simulasikan alur kerja Security: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja Security.",
+      "Buat contoh dokumen Security menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja Security.",
+      "Studi kasus Security: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Security.",
+      "Evaluasi pekerjaan Security dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan Security."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Security?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Security?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah menjalankan tanggung jawab jabatan Security berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Security?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja Security"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Security?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan Security",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_office_boy_basic",
+    "title": "Office Boy • Basic",
+    "lessons": [
+      "Sebagai Office Boy di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan Office Boy.",
+      "Simulasikan alur kerja Office Boy: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja Office Boy.",
+      "Buat contoh dokumen Office Boy menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja Office Boy.",
+      "Studi kasus Office Boy: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Office Boy.",
+      "Evaluasi pekerjaan Office Boy dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan Office Boy."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Office Boy?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Office Boy?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Office Boy?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja Office Boy"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Office Boy?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan Office Boy",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_office_boy_intermediate",
+    "title": "Office Boy • Intermediate",
+    "lessons": [
+      "Sebagai Office Boy di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan Office Boy.",
+      "Simulasikan alur kerja Office Boy: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja Office Boy.",
+      "Buat contoh dokumen Office Boy menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja Office Boy.",
+      "Studi kasus Office Boy: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Office Boy.",
+      "Evaluasi pekerjaan Office Boy dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan Office Boy."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Office Boy?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Office Boy?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Office Boy?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja Office Boy"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Office Boy?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan Office Boy",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_office_boy_advanced",
+    "title": "Office Boy • Advanced",
+    "lessons": [
+      "Sebagai Office Boy di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan Office Boy.",
+      "Simulasikan alur kerja Office Boy: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja Office Boy.",
+      "Buat contoh dokumen Office Boy menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja Office Boy.",
+      "Studi kasus Office Boy: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi Office Boy.",
+      "Evaluasi pekerjaan Office Boy dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan Office Boy."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Office Boy?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Office Boy?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah menjalankan tanggung jawab jabatan Office Boy berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Office Boy?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja Office Boy"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Office Boy?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan Office Boy",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_general_affairs_staff_basic",
+    "title": "General Affairs Staff • Basic",
+    "lessons": [
+      "Sebagai General Affairs Staff di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan General Affairs Staff.",
+      "Simulasikan alur kerja General Affairs Staff: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja General Affairs Staff.",
+      "Buat contoh dokumen General Affairs Staff menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja General Affairs Staff.",
+      "Studi kasus General Affairs Staff: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi General Affairs Staff.",
+      "Evaluasi pekerjaan General Affairs Staff dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan General Affairs Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi General Affairs Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk General Affairs Staff?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk General Affairs Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja General Affairs Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk General Affairs Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan General Affairs Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_general_affairs_staff_intermediate",
+    "title": "General Affairs Staff • Intermediate",
+    "lessons": [
+      "Sebagai General Affairs Staff di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan General Affairs Staff.",
+      "Simulasikan alur kerja General Affairs Staff: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja General Affairs Staff.",
+      "Buat contoh dokumen General Affairs Staff menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja General Affairs Staff.",
+      "Studi kasus General Affairs Staff: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi General Affairs Staff.",
+      "Evaluasi pekerjaan General Affairs Staff dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan General Affairs Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi General Affairs Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk General Affairs Staff?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk General Affairs Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja General Affairs Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk General Affairs Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan General Affairs Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_general_affairs_staff_advanced",
+    "title": "General Affairs Staff • Advanced",
+    "lessons": [
+      "Sebagai General Affairs Staff di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan General Affairs Staff.",
+      "Simulasikan alur kerja General Affairs Staff: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja General Affairs Staff.",
+      "Buat contoh dokumen General Affairs Staff menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja General Affairs Staff.",
+      "Studi kasus General Affairs Staff: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku Bukti hasil: laporan insiden dan eskalasi General Affairs Staff.",
+      "Evaluasi pekerjaan General Affairs Staff dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan General Affairs Staff."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi General Affairs Staff?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk General Affairs Staff?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah menjalankan tanggung jawab jabatan General Affairs Staff berdasarkan SOP yang berlaku dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk General Affairs Staff?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja General Affairs Staff"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk General Affairs Staff?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan General Affairs Staff",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_building_maintenance_basic",
+    "title": "Building Maintenance • Basic",
+    "lessons": [
+      "Sebagai Building Maintenance di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan Building Maintenance.",
+      "Simulasikan alur kerja Building Maintenance: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja Building Maintenance.",
+      "Buat contoh dokumen Building Maintenance menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja Building Maintenance.",
+      "Studi kasus Building Maintenance: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Building Maintenance.",
+      "Evaluasi pekerjaan Building Maintenance dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan Building Maintenance."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Building Maintenance?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Building Maintenance?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Building Maintenance?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja Building Maintenance"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Building Maintenance?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan Building Maintenance",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_building_maintenance_intermediate",
+    "title": "Building Maintenance • Intermediate",
+    "lessons": [
+      "Sebagai Building Maintenance di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan Building Maintenance.",
+      "Simulasikan alur kerja Building Maintenance: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja Building Maintenance.",
+      "Buat contoh dokumen Building Maintenance menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja Building Maintenance.",
+      "Studi kasus Building Maintenance: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Building Maintenance.",
+      "Evaluasi pekerjaan Building Maintenance dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan Building Maintenance."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Building Maintenance?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Building Maintenance?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Building Maintenance?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja Building Maintenance"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Building Maintenance?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan Building Maintenance",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_building_maintenance_advanced",
+    "title": "Building Maintenance • Advanced",
+    "lessons": [
+      "Sebagai Building Maintenance di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan Building Maintenance.",
+      "Simulasikan alur kerja Building Maintenance: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja Building Maintenance.",
+      "Buat contoh dokumen Building Maintenance menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja Building Maintenance.",
+      "Studi kasus Building Maintenance: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima Bukti hasil: laporan insiden dan eskalasi Building Maintenance.",
+      "Evaluasi pekerjaan Building Maintenance dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan Building Maintenance."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi Building Maintenance?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk Building Maintenance?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah melakukan pemeriksaan keselamatan, diagnosis dan uji fungsi sebelum serah terima dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk Building Maintenance?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja Building Maintenance"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk Building Maintenance?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan Building Maintenance",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_ga_supervisor_basic",
+    "title": "GA Supervisor • Basic",
+    "lessons": [
+      "Sebagai GA Supervisor di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan GA Supervisor.",
+      "Simulasikan alur kerja GA Supervisor: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja GA Supervisor.",
+      "Buat contoh dokumen GA Supervisor menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja GA Supervisor.",
+      "Studi kasus GA Supervisor: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Basic, kenali konsep, alat, dan prosedur dasar. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi GA Supervisor.",
+      "Evaluasi pekerjaan GA Supervisor dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan GA Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi GA Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk GA Supervisor?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk GA Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja GA Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk GA Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan GA Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_ga_supervisor_intermediate",
+    "title": "GA Supervisor • Intermediate",
+    "lessons": [
+      "Sebagai GA Supervisor di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan GA Supervisor.",
+      "Simulasikan alur kerja GA Supervisor: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja GA Supervisor.",
+      "Buat contoh dokumen GA Supervisor menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja GA Supervisor.",
+      "Studi kasus GA Supervisor: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi penyimpangan. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi GA Supervisor.",
+      "Evaluasi pekerjaan GA Supervisor dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan GA Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi GA Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk GA Supervisor?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk GA Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja GA Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk GA Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan GA Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  },
+  {
+    "courseId": "role_ga_supervisor_advanced",
+    "title": "GA Supervisor • Advanced",
+    "lessons": [
+      "Sebagai GA Supervisor di bidang Security & General Affairs, pelajari alat dan istilah: buku tamu, CCTV sesuai izin, checklist fasilitas. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan SOP keselamatan yang berlaku sebelum bekerja. Praktik khusus jabatan: Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas Bukti hasil: checklist risiko dan kewenangan GA Supervisor.",
+      "Simulasikan alur kerja GA Supervisor: patroli, pemeriksaan, pencatatan, eskalasi. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses patroli, pemeriksaan, pencatatan, eskalasi Bukti hasil: bagan alur kerja GA Supervisor.",
+      "Buat contoh dokumen GA Supervisor menggunakan: log kejadian, jadwal fasilitas, daftar inventaris. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan verifikasi dan pencatatan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching pada log kejadian, jadwal fasilitas, daftar inventaris Bukti hasil: contoh dokumen dan bukti kerja GA Supervisor.",
+      "Studi kasus GA Supervisor: akses tidak sah atau fasilitas rusak. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Praktik khusus jabatan: Selesaikan studi kasus akses tidak sah atau fasilitas rusak saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching Bukti hasil: laporan insiden dan eskalasi GA Supervisor.",
+      "Evaluasi pekerjaan GA Supervisor dengan indikator waktu respons, penyelesaian tiket fasilitas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dengan ukuran waktu respons, penyelesaian tiket fasilitas Bukti hasil: rencana pengukuran dan perbaikan GA Supervisor."
+    ],
+    "questions": [
+      {
+        "prompt": "Perangkat atau istilah yang relevan bagi GA Supervisor?",
+        "options": [
+          "Tidak perlu memahami alat",
+          "buku tamu, CCTV sesuai izin, checklist fasilitas — Identifikasi risiko saat membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching menggunakan buku tamu, CCTV sesuai izin, checklist fasilitas",
+          "Gunakan data tanpa izin"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Alur kerja yang sesuai untuk GA Supervisor?",
+        "options": [
+          "patroli, pemeriksaan, pencatatan, eskalasi — Urutkan langkah membagi tugas tim, memeriksa hasil, mengendalikan risiko dan melakukan coaching dalam proses patroli, pemeriksaan, pencatatan, eskalasi",
+          "Abaikan verifikasi",
+          "Langsung tutup pekerjaan tanpa bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Dokumen kerja yang relevan untuk GA Supervisor?",
+        "options": [
+          "Catatan palsu",
+          "Data tanpa izin",
+          "log kejadian, jadwal fasilitas, daftar inventaris — contoh dokumen dan bukti kerja GA Supervisor"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika terjadi akses tidak sah atau fasilitas rusak, apa yang tepat?",
+        "options": [
+          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
+          "Sembunyikan kejadian",
+          "Ubah data diam-diam"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Indikator kinerja yang relevan untuk GA Supervisor?",
+        "options": [
+          "Rumor tanpa data",
+          "waktu respons, penyelesaian tiket fasilitas — rencana pengukuran dan perbaikan GA Supervisor",
+          "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      }
+    ]
+  }
+]
