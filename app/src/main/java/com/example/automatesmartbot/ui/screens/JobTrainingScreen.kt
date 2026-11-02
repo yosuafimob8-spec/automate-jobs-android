@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.platform.LocalContext
 import com.example.automatesmartbot.data.career.TrainingCourses
+import com.example.automatesmartbot.data.career.TrainingPositions
 import com.example.automatesmartbot.data.cv.CvRenderer
 import com.example.automatesmartbot.ui.components.PdfExportButton
 import org.json.JSONArray
@@ -57,6 +58,8 @@ fun JobTrainingScreen() {
     var courseId by rememberSaveable { mutableStateOf(TrainingCourses.all.first().id) }
     val course = TrainingCourses.all.first { it.id == courseId }
     var stage by rememberSaveable { mutableStateOf("catalog") }
+    var selectedCategory by rememberSaveable { mutableStateOf(0) }
+    var selectedPosition by rememberSaveable { mutableStateOf("") }
     var module by rememberSaveable { mutableIntStateOf(0) }
     var questionIndex by rememberSaveable { mutableIntStateOf(0) }
     var version by remember { mutableIntStateOf(0) }
@@ -103,7 +106,8 @@ fun JobTrainingScreen() {
         ) {
             if (stage != "catalog") TextButton(onClick = {
                 stage = when (stage) {
-                    "modules" -> "catalog"
+                    "modules" -> "positions"
+                    "positions" -> "catalog"
                     "lesson", "practice", "exam" -> "modules"
                     else -> "catalog"
                 }
@@ -131,6 +135,13 @@ fun JobTrainingScreen() {
                         }
                     }
                     TrainingHeroIllustration(Modifier.fillMaxWidth())
+                    Text("Jelajahi Posisi Pekerjaan", fontSize = 19.sp, fontWeight = FontWeight.Bold)
+                    Text("${TrainingPositions.groups.size} bidang • ${TrainingPositions.count} posisi tersedia")
+                    TrainingPositions.groups.forEachIndexed { index, group ->
+                        OutlinedButton(onClick = { selectedCategory = index; stage = "positions" }, modifier = Modifier.fillMaxWidth()) {
+                            Text("${group.category}  (${group.positions.size} posisi)")
+                        }
+                    }
                     Text("Pilih Kategori Pelatihan", fontSize = 19.sp, fontWeight = FontWeight.Bold)
                     TrainingCourses.all.chunked(2).forEach { row ->
                         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -152,8 +163,28 @@ fun JobTrainingScreen() {
                     Text("Sertifikat penyelesaian adalah bukti latihan internal, bukan sertifikasi kompetensi resmi BNSP.", fontSize = 12.sp)
                     OutlinedButton(onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth()) { Text("Lihat Riwayat Sertifikat") }
                 }
+                "positions" -> {
+                    val group = TrainingPositions.groups[selectedCategory]
+                    Text(group.category, fontSize = 25.sp, fontWeight = FontWeight.Bold, color = darkTraining)
+                    Text("Pilih posisi yang ingin dipelajari")
+                    group.positions.forEach { position ->
+                        TrainingCard {
+                            Text(position, fontWeight = FontWeight.Bold)
+                            if (group.linkedCourseId != null) {
+                                Text("Materi dasar bidang ini tersedia.")
+                                TrainingAction("Mulai Pelatihan") {
+                                    selectedPosition = position
+                                    choose(group.linkedCourseId)
+                                }
+                            } else {
+                                Text("Materi khusus posisi ini sedang disiapkan.", color = darkTraining)
+                            }
+                        }
+                    }
+                }
                 "modules" -> {
                     Text(course.title, fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
+                    if (selectedPosition.isNotBlank()) Text("Posisi pilihan: $selectedPosition")
                     TrainingCard {
                         Text("Pelajari materi dan selesaikan seluruh modul", fontWeight = FontWeight.Bold)
                         Text("${course.lessons.size} Modul  •  Evaluasi Akhir  •  Sertifikat")
