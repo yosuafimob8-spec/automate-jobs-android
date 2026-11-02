@@ -26,6 +26,52 @@ object TrainingCourses {
             TrainingQuestion("Sebelum wawancara?", listOf("Mempelajari perusahaan dan posisi", "Mengabaikan deskripsi kerja", "Menyebarkan data rahasia"), 0),
             TrainingQuestion("Saat belum menguasai suatu alat?", listOf("Mengaku ahli", "Jelaskan tingkat penguasaan dan rencana belajar", "Menghindari pertanyaan"), 1)
         ))
+        ,TrainingCourse("warehouse", "Logistik & Warehouse", listOf(
+            "Keselamatan gudang" to "Gunakan APD sesuai risiko, pahami jalur evakuasi, dan pisahkan area pejalan kaki dari alat angkut.",
+            "Penerimaan barang" to "Cocokkan surat jalan dengan pesanan, periksa jumlah dan kondisi, lalu catat selisih sebelum barang disimpan.",
+            "Penyimpanan dan FIFO" to "Atur lokasi rak, beri label SKU, gunakan FIFO atau FEFO sesuai karakter barang, dan catat perpindahan stok.",
+            "Picking dan packing" to "Ambil barang berdasarkan picking list, periksa SKU dan jumlah, kemas sesuai risiko kerusakan, lalu beri label.",
+            "Stock opname" to "Hitung fisik, bandingkan dengan sistem, investigasi selisih, dan lakukan penyesuaian hanya dengan persetujuan."
+        ), listOf(
+            TrainingQuestion("Saat barang diterima, langkah pertama?", listOf("Langsung simpan", "Cocokkan dokumen dan kondisi", "Buang surat jalan"), 1),
+            TrainingQuestion("FIFO berarti?", listOf("Barang masuk lebih dulu keluar lebih dulu", "Barang terbaru selalu keluar dulu", "Stok tanpa label"), 0),
+            TrainingQuestion("Jika stok fisik berbeda dengan sistem?", listOf("Ubah diam-diam", "Abaikan", "Investigasi dan laporkan"), 2),
+            TrainingQuestion("Picking list digunakan untuk?", listOf("Menentukan barang yang diambil", "Menghapus stok", "Mengatur gaji"), 0),
+            TrainingQuestion("APD digunakan berdasarkan?", listOf("Warna seragam", "Risiko pekerjaan", "Selera pribadi"), 1)
+        )),
+        TrainingCourse("administration", "Administrasi Perkantoran", listOf(
+            "Dokumen kerja" to "Kelola surat, formulir, dan arsip dengan penamaan konsisten dan hak akses yang tepat.",
+            "Spreadsheet dasar" to "Gunakan tabel, filter, validasi data, dan rumus sederhana untuk rekap operasional.",
+            "Komunikasi profesional" to "Tuliskan tujuan pesan dengan jelas, gunakan subjek yang tepat, dan pastikan lampiran benar."
+        ), listOf(
+            TrainingQuestion("Dokumen rahasia sebaiknya?", listOf("Dibagikan bebas", "Diberi akses sesuai kebutuhan", "Diupload ke publik"), 1),
+            TrainingQuestion("Filter spreadsheet berguna untuk?", listOf("Menyaring data", "Menghapus semua data", "Mengganti kata sandi"), 0),
+            TrainingQuestion("Email profesional perlu?", listOf("Subjek jelas", "Tanpa penerima", "Lampiran salah"), 0),
+            TrainingQuestion("Sebelum kirim laporan?", listOf("Cek data", "Asal kirim", "Hilangkan tanggal"), 0),
+            TrainingQuestion("Arsip sebaiknya?", listOf("Tidak diberi nama", "Disimpan acak", "Diberi nama konsisten"), 2)
+        )),
+        TrainingCourse("sales", "Sales & Marketing", listOf(
+            "Memahami pelanggan" to "Kenali kebutuhan pelanggan dan cocokkan manfaat produk dengan masalah yang ingin diselesaikan.",
+            "Komunikasi penjualan" to "Ajukan pertanyaan terbuka, jelaskan manfaat tanpa klaim berlebihan, dan dengarkan keberatan.",
+            "Tindak lanjut" to "Catat hasil percakapan, tindak lanjuti sesuai izin pelanggan, dan perbarui status peluang."
+        ), listOf(
+            TrainingQuestion("Langkah awal penjualan?", listOf("Pahami kebutuhan", "Paksa membeli", "Abaikan pelanggan"), 0),
+            TrainingQuestion("Klaim produk harus?", listOf("Dilebihkan", "Akurat dan bisa dibuktikan", "Dikarang"), 1),
+            TrainingQuestion("Keberatan pelanggan sebaiknya?", listOf("Didengarkan", "Diabaikan", "Dibalas marah"), 0),
+            TrainingQuestion("Follow-up harus?", listOf("Spam tiap jam", "Tanpa catatan", "Relevan dan menghormati izin"), 2),
+            TrainingQuestion("Catatan peluang digunakan untuk?", listOf("Melacak tindak lanjut", "Membocorkan data", "Menghapus riwayat"), 0)
+        )),
+        TrainingCourse("customer_service", "Pelayanan Pelanggan", listOf(
+            "Mendengarkan aktif" to "Dengarkan keluhan sampai selesai, rangkum masalah, dan konfirmasi kebutuhan pelanggan.",
+            "Penanganan keluhan" to "Tetap sopan, kumpulkan fakta, jelaskan solusi realistis dan waktu tindak lanjut.",
+            "Eskalasi" to "Alihkan masalah ke pihak berwenang jika di luar kewenangan, sambil mencatat kronologi."
+        ), listOf(
+            TrainingQuestion("Saat pelanggan mengeluh?", listOf("Potong pembicaraan", "Dengarkan dan konfirmasi", "Abaikan"), 1),
+            TrainingQuestion("Janji solusi sebaiknya?", listOf("Realistis", "Tidak mungkin", "Tanpa batas waktu"), 0),
+            TrainingQuestion("Masalah di luar kewenangan?", listOf("Sembunyikan", "Eskalasi sesuai prosedur", "Hapus bukti"), 1),
+            TrainingQuestion("Catatan keluhan berisi?", listOf("Fakta dan kronologi", "Rumor", "Data palsu"), 0),
+            TrainingQuestion("Komunikasi pelanggan harus?", listOf("Kasar", "Menyalahkan", "Sopan dan jelas"), 2)
+        ))
     )
     fun score(answers: List<Int?>, questions: List<TrainingQuestion>): Int {
         require(questions.isNotEmpty() && answers.size == questions.size)
