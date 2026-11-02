@@ -36,7 +36,7 @@ def authenticated_identity(authorization, *, opener=urllib.request.urlopen):
     name = data.get("name")
     if name is None and isinstance(data.get("user"), dict):
         name = data["user"].get("name")
-    return str(user_id), (name if isinstance(name, str) and name.strip() else "Peserta KarirMate")
+    return str(user_id), (name.strip() if isinstance(name, str) and name.strip() else "")
 
 class TrainingApiMixin:
     def handle_training(self):
