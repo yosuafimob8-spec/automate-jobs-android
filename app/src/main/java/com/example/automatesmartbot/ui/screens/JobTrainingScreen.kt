@@ -89,7 +89,19 @@ fun JobTrainingScreen() {
     val completed = remember(courseId, version) { prefs.getStringSet("done_$courseId", emptySet()).orEmpty().toSet() }
     val answers = remember(courseId, version) { JSONArray(prefs.getString("answers_$courseId", "[]")) }
     val allDone = course.lessons.indices.all { it.toString() in completed }
-    fun choose(id: String) { courseId = id; module = 0; stage = "modules"; message = ""; certificate = null }
+    val serverAllDone = course.lessons.indices.all { it in serverModules }
+    fun choose(id: String) {
+        courseId = id; module = 0; stage = "modules"; message = ""; certificate = null
+        serverQuestions = null
+        serverModules = emptySet()
+        if (trainingApi != null) trainingScope.launch {
+            try {
+                val result = withContext(Dispatchers.IO) { trainingApi.progress(id) }
+                val list = result.getJSONArray("completedModules")
+                serverModules = (0 until list.length()).map { list.getInt(it) }.toSet()
+            } catch (e: Exception) { message = "Progres server tidak tersedia: ${e.message}" }
+        }
+    }
     fun saveAnswer(index: Int, choice: Int) {
         answers.put(index, choice)
         prefs.edit().putString("answers_$courseId", answers.toString()).apply()
