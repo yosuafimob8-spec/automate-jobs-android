@@ -437,7 +437,7 @@ fun JobTrainingScreen() {
             disabledContainerColor = Color(0xFFE2E8F0),
             disabledContentColor = darkTraining
         )
-                        ) { Text(if (questionIndex == course.questions.lastIndex) "Selesai" else "Berikutnya ›") }
+                        ) { Text(if (questionIndex == (serverQuestions?.length() ?: course.questions.size) - 1) "Selesai" else "Berikutnya ›") }
                     }
                 }
                 "submit" -> {
