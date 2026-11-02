@@ -8,13 +8,15 @@ from urllib.request import Request, urlopen
 from urllib.error import HTTPError
 from unittest.mock import patch
 import server
+from trusted_training import initialize
 
 class RegistryTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.old = server.DB
         server.DB = os.path.join(self.tmp.name, "test.sqlite3")
-        server.connect().close()
+        with server.connect() as conn:
+            initialize(conn)
         self.record = {
             "id": "123e4567-e89b-12d3-a456-426614174000",
             "name": "Peserta Contoh",
