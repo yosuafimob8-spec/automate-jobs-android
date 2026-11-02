@@ -54,6 +54,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak ak"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenal",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak ak",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenal"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat ",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, hak ak",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, kenal",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat ",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Basic, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik",
+          "Ubah berkas HR Admin • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -110,6 +245,141 @@
           "Rumor tanpa data",
           "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Admin",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi pen"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi pen",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat ",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikasi pen",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Intermediate",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat ",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Intermediate, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik",
+          "Ubah berkas HR Admin • Intermediate tanpa catatan persetujuan"
         ],
         "correct": 1
       }
@@ -170,6 +440,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, an",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang t",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, an"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat ",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Admin di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang t",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Admin: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, an",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Admin menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Admin: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat ",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Admin • Advanced, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Admin dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik",
+          "Ubah berkas HR Admin • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -226,6 +631,141 @@
           "Rumor tanpa data",
           "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan Recruitment Staff",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Bas",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risik",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Bas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risik",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Bas",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Basic, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti",
+          "Ubah berkas Recruitment Staff • Basic tanpa catatan persetujuan"
         ],
         "correct": 1
       }
@@ -286,6 +826,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identif"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Int",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identif",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Int"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identif",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Int",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Intermediate, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti",
+          "Ubah berkas Recruitment Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -342,6 +1017,141 @@
           "Rumor tanpa data",
           "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan Recruitment Staff",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Adv",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaik",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Adv"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Recruitment Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaik",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Recruitment Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Adv",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Recruitment Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Recruitment Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Recruitment Staff • Advanced, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Recruitment Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti",
+          "Ubah berkas Recruitment Staff • Advanced tanpa catatan persetujuan"
         ],
         "correct": 1
       }
@@ -402,6 +1212,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, h"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, ",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, h",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, h",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, ",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Basic, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Ubah berkas HR Generalist • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -458,6 +1403,141 @@
           "Rumor tanpa data",
           "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Generalist",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikas",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikas",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Intermediate, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Ubah berkas HR Generalist • Intermediate tanpa catatan persetujuan"
         ],
         "correct": 1
       }
@@ -518,6 +1598,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Generalist di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Generalist: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Generalist menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Generalist: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Generalist • Advanced, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Generalist dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Ubah berkas HR Generalist • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -574,6 +1789,141 @@
           "Rumor tanpa data",
           "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan Payroll Staff",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, h"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, ",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, h",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, h",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, ",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Basic, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Ubah berkas Payroll Staff • Basic tanpa catatan persetujuan"
         ],
         "correct": 1
       }
@@ -634,6 +1984,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikas",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikas",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Intermediate, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Ubah berkas Payroll Staff • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -690,6 +2175,141 @@
           "Rumor tanpa data",
           "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan Payroll Staff",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai Payroll Staff di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja Payroll Staff: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen Payroll Staff menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus Payroll Staff: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan Payroll Staff • Advanced, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan Payroll Staff dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Ubah berkas Payroll Staff • Advanced tanpa catatan persetujuan"
         ],
         "correct": 1
       }
@@ -750,6 +2370,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, h"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, ",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, h",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. Identifikasi risiko, h",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Basic, ",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Basic, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Ubah berkas HR Supervisor • Basic tanpa catatan persetujuan"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -808,6 +2563,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikas",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Intermediate, terapkan prosedur pada kasus operasional dan identifikas",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Interme",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Intermediate, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Ubah berkas HR Supervisor • Intermediate tanpa catatan persetujuan"
+        ],
+        "correct": 1
       }
     ]
   },
@@ -864,6 +2754,141 @@
           "Rumor tanpa data",
           "time to hire, ketepatan payroll, retensi — rencana pengukuran dan perbaikan HR Supervisor",
           "Tidak perlu mengukur hasil"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 1?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana memantau indikator layanan dalam situasi 1?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 2?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana memantau indikator layanan dalam situasi 2?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana menjaga kerahasiaan data dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Sebagai HR Supervisor di bidang Human Resources, pelajari alat dan istilah: ATS, HRIS, formulir karyawan. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan y",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana mengikuti prosedur SDM dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Simulasikan alur kerja HR Supervisor: permintaan tenaga kerja, seleksi, administrasi, onboarding. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advance",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana memastikan kelengkapan berkas dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Buat contoh dokumen HR Supervisor menggunakan: data kandidat, kontrak, absensi, berkas personalia. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data a"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana menangani ketidaksesuaian administrasi dalam situasi 3?",
+        "options": [
+          "Ikuti pemeriksaan dan bukti sesuai materi: Studi kasus HR Supervisor: data kandidat bocor atau dokumen belum lengkap. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tin",
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada pekerjaan HR Supervisor • Advanced, bagaimana memantau indikator layanan dalam situasi 3?",
+        "options": [
+          "Sebarkan data personal tanpa memeriksa kewenangan",
+          "Ikuti pemeriksaan dan bukti sesuai materi: Evaluasi pekerjaan HR Supervisor dengan indikator time to hire, ketepatan payroll, retensi. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Pr",
+          "Ubah berkas HR Supervisor • Advanced tanpa catatan persetujuan"
         ],
         "correct": 1
       }
