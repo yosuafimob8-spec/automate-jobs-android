@@ -159,26 +159,159 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 TextButton(onClick = { vm.loadCatalog(); page = "catalog" }) { Text("Pilih Tes Lagi") }
             }
             "result" -> result?.let { r ->
-                val actualScore = PsychotestPolicy.normalizedScore(r.get("score")?.takeUnless { it.isJsonNull }?.asDouble, r.get("max_score")?.takeUnless { it.isJsonNull }?.asDouble)
-                LazyColumn(Modifier.fillMaxSize().padding(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-                    item { Text("Tes Selesai", color = ink, style = MaterialTheme.typography.headlineMedium) }
+                val actualScore = PsychotestPolicy.normalizedScore(
+                    r.get("score")?.takeUnless { it.isJsonNull }?.asDouble,
+                    r.get("max_score")?.takeUnless { it.isJsonNull }?.asDouble
+                )
+                val correct = r.n("correct_count")
+                val wrong = r.n("wrong_count")
+                val blank = r.n("blank_count")
+                val total = correct + wrong + blank
+                val accuracy = if (total > 0) correct * 100 / total else 0
+                var analysisPage by rememberSaveable { mutableStateOf(false) }
+                var analysisTab by rememberSaveable { mutableStateOf(0) }
+                val rating = when {
+                    actualScore == null -> "Asesmen Kepribadian"
+                    actualScore >= 80 -> "Baik Sekali"
+                    actualScore >= 60 -> "Baik"
+                    actualScore >= 40 -> "Terus Berkembang"
+                    else -> "Tahap Pengembangan"
+                }
+                val encouragement = when {
+                    actualScore == null -> "Kenali potensi dan pola kerjamu melalui hasil latihan ini."
+                    actualScore >= 80 -> "Kerja bagus! Pertahankan konsistensi dan terus tingkatkan kemampuanmu!"
+                    actualScore >= 60 -> "Hasil yang baik! Terus asah kemampuan dan tingkatkan ketelitianmu."
+                    else -> "Tetap semangat! Mulai dari dasar dan tingkatkan kemampuanmu sedikit demi sedikit."
+                }
+                LazyColumn(
+                    Modifier.fillMaxSize().background(Color.White).padding(horizontal = 16.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp),
+                    contentPadding = PaddingValues(top = 16.dp, bottom = 28.dp)
+                ) {
                     item {
-                        Info("Nilai latihan", actualScore?.let { "$it / 100" } ?: "Tes kepribadian tidak memiliki nilai benar/salah.")
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            TextButton(onClick = { if (analysisPage) analysisPage = false else { page = "home"; vm.loadExtras(isPro) } }) {
+                                Text("←", color = Color.Black, style = MaterialTheme.typography.titleLarge)
+                            }
+                            Text("🟠 KarirMate", color = Color(0xFF007F78), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                        }
                     }
-                    item {
-                        Info("Evaluasi", when {
-                            actualScore == null -> "Hasil menggambarkan kecenderungan, bukan diagnosis psikologis."
-                            actualScore < 40 -> "Pelajari konsep dasar dan pembahasan. Tetap semangat; kemajuan dimulai dari latihan rutin."
-                            actualScore < 60 -> "Pemahaman mulai berkembang. Ulangi kategori yang sulit dan periksa ketelitian."
-                            actualScore < 80 -> "Hasil baik. Tingkatkan konsistensi dan pengelolaan waktu."
-                            else -> "Penguasaan sangat baik. Pertahankan latihan dan coba variasi soal."
-                        })
+                    if (!analysisPage) {
+                        item {
+                            Text("Hasil Psikotes", color = Color.Black, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
+                            Text("Berikut hasil psikotes kamu beserta ringkasannya.", color = Color(0xFF333333))
+                        }
+                        item {
+                            MockupCard(tint = Color(0xFFFFF7EB), borderColor = Color(0xFFFFC68A)) {
+                                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                                    Text("🏅", style = MaterialTheme.typography.displayLarge)
+                                    Column {
+                                        Text("Nilai Akhir", color = Color.Black, fontWeight = FontWeight.SemiBold)
+                                        Text(actualScore?.let { "$it /100" } ?: "—", color = Color.Black, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.Black)
+                                        Text(rating, color = Color(0xFF009F74), fontWeight = FontWeight.Bold)
+                                    }
+                                }
+                                Spacer(Modifier.height(12.dp))
+                                Text("💬  $encouragement", color = Color(0xFF252525), modifier = Modifier.fillMaxWidth().background(Color(0xFFFFEED4), RoundedCornerShape(14.dp)).padding(12.dp))
+                            }
+                        }
+                        item {
+                            MockupCard {
+                                Text("🟠 Ringkasan Jawaban", fontWeight = FontWeight.ExtraBold, color = Color.Black, style = MaterialTheme.typography.titleMedium)
+                                Spacer(Modifier.height(12.dp))
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(9.dp)) {
+                                        ScoreRow("✅ Jawaban Benar", "$correct")
+                                        ScoreRow("❌ Jawaban Salah", "$wrong")
+                                        ScoreRow("📝 Kosong", "$blank")
+                                        ScoreRow("📋 Total Soal", "$total")
+                                    }
+                                    Spacer(Modifier.width(12.dp))
+                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                        Box(Modifier.size(88.dp).border(9.dp, Color(0xFF00A98D), RoundedCornerShape(50)), contentAlignment = Alignment.Center) {
+                                            Text("$accuracy%", color = Color.Black, fontWeight = FontWeight.Black, style = MaterialTheme.typography.titleLarge)
+                                        }
+                                        Text("Ketepatan", color = Color.Black, style = MaterialTheme.typography.labelSmall)
+                                    }
+                                }
+                            }
+                        }
+                        item {
+                            MockupCard {
+                                Text("📊 Hasil per Kategori", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium)
+                                Spacer(Modifier.height(8.dp))
+                                val categories = r.getAsJsonArray("categories") ?: r.getAsJsonArray("category_scores")
+                                if (categories == null || categories.size() == 0) {
+                                    Text("Rincian kategori belum tersedia dari server.", color = Color.DarkGray)
+                                } else {
+                                    categories.forEach { element ->
+                                        if (element.isJsonObject) {
+                                            val cat = element.asJsonObject
+                                            val label = cat.s("name", cat.s("category", "Kategori"))
+                                            val value = cat.n("percent").takeIf { it > 0 } ?: cat.n("score")
+                                            Text("$label  •  $value", color = Color.Black)
+                                            LinearProgressIndicator(progress = { (value / 100f).coerceIn(0f, 1f) }, modifier = Modifier.fillMaxWidth().height(7.dp), color = Color(0xFF00A98D), trackColor = Color(0xFFE8EEF1))
+                                            Spacer(Modifier.height(8.dp))
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        item {
+                            MockupCard(tint = Color(0xFFFFF4E4), borderColor = Color(0xFFFFB966), onClick = { if (isPro) analysisPage = true else proNotice = true }) {
+                                Row(verticalAlignment = Alignment.CenterVertically) {
+                                    Text("💡", style = MaterialTheme.typography.headlineMedium)
+                                    Spacer(Modifier.width(10.dp))
+                                    Column(Modifier.weight(1f)) {
+                                        Text("Analisis & Pengembangan  👑 PRO", color = Color.Black, fontWeight = FontWeight.ExtraBold)
+                                        Text("Lihat analisis jawaban, evaluasi kemampuan, dan saran pengembangan.", color = Color.Black, style = MaterialTheme.typography.bodySmall)
+                                    }
+                                    Text("›", color = orange, style = MaterialTheme.typography.headlineMedium)
+                                }
+                            }
+                        }
+                        item {
+                            Button(onClick = { page = "home"; vm.loadExtras(isPro) }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = orange)) {
+                                Text("Coba Tes Lainnya", color = Color.White)
+                            }
+                        }
+                    } else {
+                        item {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text("Analisis Lengkap", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.headlineMedium, modifier = Modifier.weight(1f))
+                                Text("👑 PRO", color = orange, fontWeight = FontWeight.Bold)
+                            }
+                            Text("Evaluasi detail hasil psikotes, analisis jawaban, dan saran pengembangan khusus untukmu.", color = Color.Black)
+                        }
+                        item {
+                            Row(horizontalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.fillMaxWidth()) {
+                                listOf("Analisis", "Pembahasan", "Pengembangan").forEachIndexed { index, label ->
+                                    Button(
+                                        onClick = { analysisTab = index },
+                                        modifier = Modifier.weight(1f),
+                                        contentPadding = PaddingValues(horizontal = 2.dp, vertical = 10.dp),
+                                        colors = ButtonDefaults.buttonColors(containerColor = if (analysisTab == index) orange else Color(0xFFF1F4F6), contentColor = if (analysisTab == index) Color.White else Color.Black)
+                                    ) { Text(label, style = MaterialTheme.typography.labelSmall, maxLines = 1) }
+                                }
+                            }
+                        }
+                        when (analysisTab) {
+                            0 -> {
+                                item { MockupCard { Text("📊 Profil Kemampuan", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium); Text("Ketepatan $accuracy% dari $total soal. $correct jawaban benar dan $wrong salah. Hasil ini merupakan latihan, bukan penilaian rekrutmen resmi.", color = Color.DarkGray) } }
+                                item { MockupCard(tint = Color(0xFFEAFBF3)) { Text("👍 Kekuatan Utama", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text(if (correct > 0) "Kamu berhasil menjawab $correct soal dengan tepat. Pelajari kembali pola jawaban yang sudah dikuasai." else "Terus bangun pemahaman konsep melalui latihan bertahap.", color = Color.DarkGray) } }
+                                item { MockupCard(tint = Color(0xFFFFEEF0)) { Text("🎯 Area Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text("Tinjau $wrong jawaban salah, pahami alasannya, dan latih manajemen waktu.", color = Color.DarkGray) } }
+                            }
+                            1 -> {
+                                val details = r.getAsJsonArray("questions")?.mapNotNull { if (it.isJsonObject) it.asJsonObject else null }.orEmpty()
+                                if (details.isEmpty()) item { MockupCard { Text("Pembahasan belum tersedia dari server.", color = Color.DarkGray) } }
+                                items(details) { q -> MockupCard { Text(q.s("prompt", "Soal"), color = Color.Black, fontWeight = FontWeight.Bold); Spacer(Modifier.height(6.dp)); Text(q.s("explanation", "Pembahasan tidak tersedia dari server."), color = Color.DarkGray) } }
+                            }
+                            else -> {
+                                item { MockupCard(tint = Color(0xFFFFF7DC)) { Text("💡 Saran Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text("✓ Rutin latihan soal sesuai kategori yang sulit.\n✓ Gunakan simulasi dengan timer.\n✓ Pelajari pembahasan setiap jawaban.\n✓ Jaga fokus dan kondisi fisik sebelum tes.", color = Color.Black) } }
+                                item { Button(onClick = { page = "home"; vm.loadExtras(isPro) }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Mulai Latihan Baru") } }
+                            }
+                        }
                     }
-                    item { Info("Penilaian server", "Benar: ${r.s("correct_count", "—")} • Salah: ${r.s("wrong_count", "—")} • Kosong: ${r.s("blank_count", "—")}. Nilai latihan dinormalisasi 1–100; bobot resmi tes tetap mengikuti server.") }
-                    if (isPro) {
-                        items(r.getAsJsonArray("questions")?.map { it.asJsonObject }.orEmpty()) { q -> Info(q.s("prompt"), q.s("explanation", "Pembahasan tidak tersedia dari server.")) }
-                    }
-                    item { Button(onClick = { page = "home"; vm.loadExtras(isPro) }, colors = ButtonDefaults.buttonColors(containerColor = orange, contentColor = Color.White)) { Text("Selesai") } }
                 }
             }
             "history" -> LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -208,6 +341,34 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
     }
     }
 
+
+@Composable
+private fun MockupCard(
+    tint: Color = Color.White,
+    borderColor: Color = Color(0xFFE2E8EF),
+    onClick: (() -> Unit)? = null,
+    content: @Composable ColumnScope.() -> Unit
+) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        onClick = onClick ?: {},
+        enabled = onClick != null,
+        shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.cardColors(containerColor = tint),
+        border = androidx.compose.foundation.BorderStroke(1.dp, borderColor),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+    ) {
+        Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp), content = content)
+    }
+}
+
+@Composable
+private fun ScoreRow(label: String, value: String) {
+    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+        Text(label, color = Color.Black, style = MaterialTheme.typography.bodySmall)
+        Text(value, color = Color.Black, fontWeight = FontWeight.Bold)
+    }
+}
 
 private fun testIcon(title: String): Pair<String, Color> {
     val t = title.lowercase()
