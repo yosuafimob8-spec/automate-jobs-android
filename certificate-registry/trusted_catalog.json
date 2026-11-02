@@ -818,6 +818,141 @@
           "Menghapus riwayat"
         ],
         "correct": 0
+      },
+      {
+        "prompt": "Mengapa pelanggan perlu dikelompokkan menurut kebutuhan?",
+        "options": [
+          "Agar penawaran lebih relevan",
+          "Agar semua menerima pesan sama",
+          "Agar kebutuhan diabaikan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika prospek belum siap membeli?",
+        "options": [
+          "Paksa mengambil keputusan",
+          "Catat kebutuhan dan tindak lanjut yang disepakati",
+          "Hapus semua catatan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Apa arti conversion rate?",
+        "options": [
+          "Jumlah brosur dicetak",
+          "Jumlah stok produk",
+          "Persentase prospek yang menjadi pembeli"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Jika pelanggan membandingkan harga pesaing?",
+        "options": [
+          "Jelaskan nilai produk dengan bukti",
+          "Buat klaim palsu tentang pesaing",
+          "Mengarang potongan harga"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Ketika produk tidak sesuai kebutuhan calon pembeli?",
+        "options": [
+          "Janji semua kebutuhan terpenuhi",
+          "Jelaskan keterbatasan dengan jujur",
+          "Sembunyikan spesifikasi"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Catatan CRM yang bermanfaat berisi?",
+        "options": [
+          "Rumor pribadi",
+          "Kata sandi pembeli",
+          "Tahap peluang dan langkah tindak lanjut"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Mengapa sales menggunakan pertanyaan terbuka?",
+        "options": [
+          "Menggali masalah dan kebutuhan pelanggan",
+          "Memaksa jawaban ya atau tidak",
+          "Menghindari mendengarkan"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika produk kosong saat dipesan?",
+        "options": [
+          "Janji kirim tanpa kepastian",
+          "Sampaikan kondisi dan alternatif tersedia",
+          "Menagih tanpa informasi"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Apa metrik penting kampanye pemasaran?",
+        "options": [
+          "Warna poster",
+          "Jumlah rapat",
+          "Jangkauan, respons dan konversi"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Sebelum mengirim promosi berkala?",
+        "options": [
+          "Pastikan persetujuan komunikasi",
+          "Masukkan semua kontak tanpa izin",
+          "Kirim pesan terus menerus"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika pelanggan menolak tawaran?",
+        "options": [
+          "Perdebatkan penolakannya",
+          "Hormati keputusan dan catat alasan jika diberikan",
+          "Ancaman kehilangan kesempatan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Proposal penjualan yang baik memuat?",
+        "options": [
+          "Janji yang tidak bisa dipenuhi",
+          "Data rahasia pesaing",
+          "Ruang lingkup, harga dan syarat jelas"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Mengapa margin penjualan dihitung?",
+        "options": [
+          "Mempertimbangkan biaya dan laba",
+          "Agar transaksi selalu rugi",
+          "Agar biaya tidak tercatat"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika fitur produk belum tersedia?",
+        "options": [
+          "Klaim fitur sudah ada",
+          "Jelaskan kondisi dan alternatif yang nyata",
+          "Sembunyikan risiko"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Mengapa evaluasi pascapenjualan diperlukan?",
+        "options": [
+          "Untuk menghentikan semua komunikasi",
+          "Untuk menghapus keluhan",
+          "Untuk mengukur kepuasan dan perbaikan"
+        ],
+        "correct": 2
       }
     ]
   },
