@@ -5,6 +5,8 @@ import androidx.activity.compose.BackHandler
 import com.example.automatesmartbot.BuildConfig
 import com.example.automatesmartbot.data.security.SessionManager
 import android.content.Intent
+import android.media.MediaPlayer
+import java.io.File
 import android.net.Uri
 import android.util.Xml
 import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
@@ -47,6 +49,26 @@ import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
 
+
+private suspend fun fetchVoxSpeech(context: android.content.Context, text: String, language: String): File = withContext(Dispatchers.IO) {
+    val conn = (URL("http://127.0.0.1:8791/tts").openConnection() as HttpURLConnection).apply {
+        requestMethod = "POST"
+        connectTimeout = 1200
+        readTimeout = 25000
+        doOutput = true
+        setRequestProperty("Content-Type", "application/json; charset=utf-8")
+    }
+    try {
+        val payload = JSONObject().put("text", text.take(500)).put("language", language).toString()
+        conn.outputStream.use { it.write(payload.toByteArray(Charsets.UTF_8)) }
+        if (conn.responseCode != 200) throw IllegalStateException("VoxCPM2 unavailable")
+        val output = File.createTempFile("karirmate_voice_", ".wav", context.cacheDir)
+        try {
+            conn.inputStream.use { input -> output.outputStream().use { input.copyTo(it) } }
+            output
+        } catch (ex: Exception) { output.delete(); throw ex }
+    } finally { conn.disconnect() }
+}
 
 private fun extractCv(context: android.content.Context, uri: Uri): String {
     val mime = context.contentResolver.getType(uri).orEmpty()
@@ -225,7 +247,34 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     }
     var pendingSpeech by remember { mutableStateOf<String?>(null) }
     val tts = remember { TextToSpeech(context) { status -> ttsReady = status == TextToSpeech.SUCCESS } }
-    DisposableEffect(tts) { onDispose { tts.stop(); tts.shutdown() } }
+    var audioPlayer by remember { mutableStateOf<MediaPlayer?>(null) }
+    val voiceScope = rememberCoroutineScope()
+    fun speakQuestion(spokenText: String) {
+        if (!voiceMode || spokenText.isBlank()) return
+        audioPlayer?.release()
+        audioPlayer = null
+        tts.stop()
+        voiceScope.launch {
+            val audio = runCatching { fetchVoxSpeech(context, spokenText, language) }.getOrNull()
+            if (audio != null) {
+                runCatching {
+                    val player = MediaPlayer()
+                    player.setDataSource(audio.absolutePath)
+                    player.setOnCompletionListener { it.release(); audio.delete(); if (audioPlayer === it) audioPlayer = null }
+                    player.prepare()
+                    audioPlayer = player
+                    player.start()
+                }.onFailure {
+                    audio.delete()
+                    if (ttsReady) tts.speak(spokenText, TextToSpeech.QUEUE_FLUSH, null, "interview-fallback")
+                }
+            } else if (ttsReady) {
+                tts.language = selectedLocale
+                tts.speak(spokenText, TextToSpeech.QUEUE_FLUSH, null, "interview-fallback")
+            }
+        }
+    }
+    DisposableEffect(tts) { onDispose { audioPlayer?.release(); tts.stop(); tts.shutdown() } }
     LaunchedEffect(ttsReady, language) {
         if (ttsReady) {
             tts.language = selectedLocale
@@ -302,11 +351,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 } else {
                     question = response.question
                     pendingQuestion = if (response.awaitingAnswer) response.question else ""
-                    if (voiceMode && ttsReady) {
-                        tts.language = selectedLocale
-                        val speechStatus = tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-question")
-                        if (speechStatus == TextToSpeech.ERROR) error = "Pembaca suara gagal. Pertanyaan tetap tersedia sebagai teks."
-                    }
+                    if (voiceMode) speakQuestion(question)
                     started = true
                     answer = ""
                 }
@@ -521,10 +566,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     try { voiceLauncher.launch(intent) } catch (_: Exception) { error = "Pengenalan suara tidak tersedia." }
                 }) { Text("🎙", color = ink) }
                 if (voiceMode) TextButton(enabled = !loading, onClick = {
-                    if (ttsReady && question.isNotBlank()) {
-                        tts.language = selectedLocale
-                        tts.speak(question, TextToSpeech.QUEUE_FLUSH, null, "interview-repeat")
-                    } else error = "Mesin pembaca suara belum siap di perangkat."
+                    if (question.isNotBlank()) speakQuestion(question)
                 }) { Text("🔊", color = ink) }
                 if (!voiceMode) Button(enabled = !loading && answer.isNotBlank(), onClick = {
                     send("reply", history + InterviewTurn(question, answer.trim()))
