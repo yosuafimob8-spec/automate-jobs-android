@@ -475,7 +475,7 @@
           "Gunakan hanya catatan gudang asal tanpa bukti penerimaan",
           "Samakan tanggal dengan menghapus semua transaksi"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "prompt": "Satu operator memiliki tingkat salah scan tertinggi pada shift malam. Pendekatan perbaikan yang adil?",
@@ -484,7 +484,7 @@
           "Bandingkan volume kerja, perangkat, SOP, dan pola kesalahan sebelum coaching",
           "Hapus target akurasi untuk seluruh shift"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "prompt": "Dashboard menunjukkan inventory accuracy 98%, tetapi 30 SKU kritis sering kosong. Analisis apa yang diperlukan?",
@@ -493,7 +493,7 @@
           "Hitung ulang hanya SKU dengan nilai paling kecil",
           "Pisahkan akurasi berdasarkan SKU kritis dan telusuri stok tersedia versus stok teralokasi"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "prompt": "Proses putaway sering tertunda karena lokasi penuh. Keputusan berbasis data yang tepat?",
@@ -502,7 +502,7 @@
           "Tumpuk barang di jalur evakuasi agar cepat selesai",
           "Ubah kapasitas sistem tanpa memeriksa kapasitas fisik"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "prompt": "Pemasok menolak klaim kekurangan 18 unit setelah POD ditandatangani penuh. Perbaikan kontrol apa yang paling efektif?",
@@ -511,7 +511,7 @@
           "Wajibkan pencatatan pengecualian dan foto bukti sebelum POD final",
           "Terima kekurangan sebagai penjualan"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "prompt": "Dalam audit ditemukan SKU duplikat dengan deskripsi berbeda. Tindakan master-data yang tepat?",
@@ -520,7 +520,7 @@
           "Buat SKU baru untuk setiap karton",
           "Karantina perubahan master, validasi identitas produk, dan minta persetujuan pemilik data"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "prompt": "KPI picking meningkat, tetapi komplain salah barang juga naik. Bagaimana mengevaluasi kinerja?",
@@ -529,7 +529,7 @@
           "Nilai hanya jumlah order per jam",
           "Hentikan pencatatan komplain pelanggan"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "prompt": "Stok negatif muncul pada SKU tertentu setelah integrasi marketplace. Akar masalah apa yang perlu diuji?",
@@ -538,7 +538,7 @@
           "Urutan sinkronisasi order, reservasi stok, dan waktu posting transaksi",
           "Jadwal istirahat tim packing saja"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "prompt": "Perusahaan ingin mengurangi selisih stok tanpa menghentikan operasional. Strategi cycle count yang tepat?",
@@ -547,7 +547,7 @@
           "Hilangkan hitung fisik karena ada WMS",
           "Prioritaskan SKU berisiko tinggi berdasarkan nilai, pergerakan, dan riwayat selisih"
         ],
-        "correct": 1
+        "correct": 2
       },
       {
         "prompt": "Audit menemukan pembatalan transaksi penerimaan setelah barang sudah dipakai picking. Apa tindakan korektif?",
@@ -556,7 +556,7 @@
           "Buat penerimaan palsu untuk menutup selisih",
           "Hapus bukti picking terkait"
         ],
-        "correct": 2
+        "correct": 0
       },
       {
         "prompt": "Saat sistem WMS mati selama dua jam, bagaimana menjaga integritas data saat pemulihan?",
@@ -565,7 +565,7 @@
           "Gunakan log manual bernomor unik lalu rekonsiliasi sebelum posting ulang",
           "Abaikan transaksi yang terjadi selama gangguan"
         ],
-        "correct": 0
+        "correct": 1
       },
       {
         "prompt": "Manajemen meminta bukti bahwa perbaikan inbound efektif setelah 30 hari. Data pembanding yang layak?",
@@ -574,7 +574,7 @@
           "Pendapat satu operator tanpa data",
           "Baseline dan hasil sesudah perbaikan untuk akurasi penerimaan, selisih, dan waktu proses"
         ],
-        "correct": 1
+        "correct": 2
       }
     ]
   },
