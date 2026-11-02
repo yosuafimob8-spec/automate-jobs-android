@@ -1555,184 +1555,184 @@
     ],
     "questions": [
       {
-        "prompt": "Perangkat atau istilah yang relevan bagi Picker?",
+        "prompt": "WMS menugaskan picking 36 unit SKU P, tetapi rak hanya berisi 31 unit. Apa tindakan sebelum menyelesaikan tugas?",
         "options": [
-          "Tidak perlu memahami alat",
-          "WMS, barcode scanner, SKU, rak lokasi — Identifikasi risiko saat menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku menggunakan WMS, barcode scanner, SKU, rak lokasi",
-          "Gunakan data tanpa izin"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Alur kerja yang sesuai untuk Picker?",
-        "options": [
-          "receiving, putaway, picking, packing, dispatch — Urutkan langkah menjalankan tanggung jawab jabatan Picker berdasarkan SOP yang berlaku dalam proses receiving, putaway, picking, packing, dispatch",
-          "Abaikan verifikasi",
-          "Langsung tutup pekerjaan tanpa bukti"
+          "Catat shortage 5 unit dan eskalasi sesuai SOP",
+          "Tandai 36 unit sudah diambil",
+          "Ganti SKU tanpa persetujuan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dokumen kerja yang relevan untuk Picker?",
+        "prompt": "Dua pesanan memiliki SKU sama tetapi batch berbeda. Bagaimana memastikan batch tepat?",
         "options": [
-          "Catatan palsu",
-          "Data tanpa izin",
-          "surat jalan, kartu stok, berita acara selisih — contoh dokumen dan bukti kerja Picker"
+          "Ambil batch yang paling dekat",
+          "Verifikasi batch pada picking list dan barcode fisik",
+          "Gabungkan batch tanpa catatan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Scanner menunjukkan lokasi C-07, tetapi label rak bertuliskan C-70. Apa tindakan aman?",
+        "options": [
+          "Ambil barang dari rak mana pun",
+          "Ubah label tanpa izin",
+          "Hentikan picking dan verifikasi identitas lokasi dengan pengawas"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi barang rusak atau stok fisik berbeda dengan WMS, apa yang tepat?",
+        "prompt": "Picking order 12 unit dari karton berisi 8 unit. Berapa karton penuh dan unit lepas yang diperlukan?",
         "options": [
-          "Verifikasi, dokumentasikan, dan eskalasi sesuai SOP",
-          "Sembunyikan kejadian",
-          "Ubah data diam-diam"
+          "Satu karton penuh dan empat unit lepas",
+          "Dua karton penuh",
+          "Satu karton penuh saja"
         ],
         "correct": 0
       },
       {
-        "prompt": "Indikator kinerja yang relevan untuk Picker?",
+        "prompt": "Produk memiliki dua tanggal kedaluwarsa. Bagaimana menerapkan FEFO saat picking?",
         "options": [
-          "Rumor tanpa data",
-          "akurasi stok, ketepatan picking, lead time — rencana pengukuran dan perbaikan Picker",
-          "Tidak perlu mengukur hasil"
+          "Pilih batch dengan tanggal paling lama",
+          "Pilih batch kedaluwarsa paling dekat yang masih layak dan diizinkan",
+          "Pilih batch terbaru untuk semua order"
         ],
         "correct": 1
       },
       {
-        "prompt": "Dalam pemeriksaan awal, informasi apa yang wajib diverifikasi dari materi berikut? (Picker • Advanced; tahap 1)",
+        "prompt": "Di lokasi picking ditemukan kemasan bocor. Apa keputusan yang benar?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Sebagai Picker di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 0
-      },
-      {
-        "prompt": "Saat menyusun urutan kerja, tindakan apa yang tepat menurut prosedur berikut? (Picker • Advanced; tahap 2)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Picker • Advanced: Simulasikan alur kerja Picker: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi"
-        ],
-        "correct": 1
-      },
-      {
-        "prompt": "Pada pengisian dokumen, bukti apa yang harus disiapkan sesuai materi berikut? (Picker • Advanced; tahap 3)",
-        "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Buat contoh dokumen Picker menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan veri"
+          "Masukkan ke order agar target tercapai",
+          "Tutup kebocoran dengan selotip",
+          "Pisahkan stok rusak dan laporkan sebelum mengambil pengganti"
         ],
         "correct": 2
       },
       {
-        "prompt": "Ketika terjadi penyimpangan, tindakan apa yang paling sesuai dengan studi kasus berikut? (Picker • Advanced; tahap 4)",
+        "prompt": "Picking list meminta 6 unit tetapi scanner mencatat 8 unit. Bagaimana mengatasi selisih?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Studi kasus Picker: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan ranca",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi"
+          "Hitung ulang dan koreksi transaksi sesuai hasil fisik",
+          "Biarkan scanner mencatat 8 unit",
+          "Kirim ke packing tanpa pemeriksaan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Saat menilai hasil pekerjaan, indikator apa yang harus dicatat dari materi berikut? (Picker • Advanced; tahap 5)",
+        "prompt": "Saat mengambil barang di rak tinggi, tangga inspeksi tidak tersedia. Apa tindakan tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Picker • Advanced: Evaluasi pekerjaan Picker dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi"
+          "Naik ke rak menggunakan karton",
+          "Gunakan alat akses yang disetujui atau minta bantuan",
+          "Lompat untuk mengambil produk"
         ],
         "correct": 1
       },
       {
-        "prompt": "Jika petugas baru menjalankan tahap ini, bagaimana memastikan langkahnya benar? (Picker • Advanced; tahap 1)",
+        "prompt": "Satu SKU memiliki barcode produk dan barcode kemasan induk. Bagaimana mencegah salah satuan?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Sebagai Picker di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan"
+          "Pilih barcode yang paling cepat terbaca",
+          "Abaikan satuan di order",
+          "Pastikan unit of measure pada WMS cocok dengan unit yang dipindai"
         ],
         "correct": 2
       },
       {
-        "prompt": "Saat serah terima pekerjaan ini, apa yang harus dapat ditelusuri? (Picker • Advanced; tahap 2)",
+        "prompt": "Order mendesak meminta 15 unit, tetapi 4 unit sudah direservasi order lain. Apa yang harus diperiksa?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Simulasikan alur kerja Picker: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi"
+          "Stok tersedia yang belum teralokasi dan aturan prioritas order",
+          "Jumlah seluruh stok tanpa melihat reservasi",
+          "Nama petugas shift sebelumnya"
         ],
         "correct": 0
       },
       {
-        "prompt": "Jika ada data tidak cocok pada proses ini, tindakan apa yang paling tepat? (Picker • Advanced; tahap 3)",
+        "prompt": "Tiga picker bekerja di lorong sempit yang sama sehingga sering bertabrakan. Perbaikan yang tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Picker • Advanced: Buat contoh dokumen Picker menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan veri",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi"
+          "Tingkatkan kecepatan semua picker",
+          "Atur pembagian zona dan urutan tugas untuk mengurangi konflik jalur",
+          "Hapus penanda jalur"
         ],
         "correct": 1
       },
       {
-        "prompt": "Sebelum menyetujui hasil pada proses ini, apa yang perlu dipastikan? (Picker • Advanced; tahap 4)",
+        "prompt": "Barang serial-numbered diminta untuk pesanan pelanggan. Bukti apa yang wajib dicatat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Studi kasus Picker: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan ranca"
+          "Warna kardus",
+          "Nama rak saja",
+          "Nomor seri unit yang benar-benar diambil dan nomor order"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika terjadi keterlambatan pada tahap ini, bagaimana melaporkannya? (Picker • Advanced; tahap 5)",
+        "prompt": "Picker menemukan dua barang mirip dengan kode SKU berbeda. Pemeriksaan akhir apa yang paling andal?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Evaluasi pekerjaan Picker dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi"
+          "Scan barcode SKU pada barang dan cocokkan dengan instruksi picking",
+          "Bandingkan warna kemasan saja",
+          "Tanyakan perkiraan kepada rekan"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam audit internal atas proses ini, catatan apa yang paling relevan? (Picker • Advanced; tahap 1)",
+        "prompt": "Satu order memerlukan 18 unit; sudah diambil 7 dari bin A dan 6 dari bin B. Berapa sisa unit?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Picker • Advanced: Sebagai Picker di bidang Logistik & Warehouse, pelajari alat dan istilah: WMS, barcode scanner, SKU, rak lokasi. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur. Identifikasi risiko, hak akses, dan",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi"
+          "4 unit",
+          "5 unit",
+          "6 unit"
         ],
         "correct": 1
       },
       {
-        "prompt": "Ketika sistem atau alat terkait tidak tersedia, apa langkah aman? (Picker • Advanced; tahap 2)",
+        "prompt": "Batch yang diminta sistem tidak ditemukan tetapi batch lain tersedia. Apa tindakan yang tepat?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Simulasikan alur kerja Picker: receiving, putaway, picking, packing, dispatch. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan rancang perbaikan yang terukur"
+          "Ambil batch lain diam-diam",
+          "Tutup order sebagai selesai",
+          "Laporkan ketidaksesuaian dan tunggu instruksi penggantian batch"
         ],
         "correct": 2
       },
       {
-        "prompt": "Jika rekan kerja meminta melewati pemeriksaan ini, apa respons yang tepat? (Picker • Advanced; tahap 3)",
+        "prompt": "Pallet yang akan dipicking menutupi akses pintu darurat. Apa prioritas?",
         "options": [
-          "Gunakan SOP dan bukti kerja yang relevan: Buat contoh dokumen Picker menggunakan: surat jalan, kartu stok, berita acara selisih. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan data akurat serta aksesnya terbatas. Praktik khusus jabatan: Lakukan veri",
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi"
+          "Pulihkan akses evakuasi sebelum melanjutkan pekerjaan",
+          "Lanjutkan selama order mendesak",
+          "Pindahkan tanda pintu darurat"
         ],
         "correct": 0
       },
       {
-        "prompt": "Dalam simulasi kesalahan pada tahap ini, bagaimana mencegah pengulangan? (Picker • Advanced; tahap 4)",
+        "prompt": "Order sudah dipicking tetapi label tote hilang sebelum serah terima. Apa yang harus dilakukan?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Verifikasi langkah dan hasil berdasarkan materi Picker • Advanced: Studi kasus Picker: barang rusak atau stok fisik berbeda dengan WMS. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada tingkat Advanced, analisis risiko, tentukan prioritas, dan ranca",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi"
+          "Tebak nomor order dari isi tote",
+          "Tahan serah terima dan cocokkan isi dengan order sebelum membuat label ulang",
+          "Kirim tote tanpa identitas"
         ],
         "correct": 1
       },
       {
-        "prompt": "Setelah pekerjaan ini selesai, apa dasar evaluasi yang dapat dipertanggungjawabkan? (Picker • Advanced; tahap 5)",
+        "prompt": "WMS offline ketika 5 tugas picking sedang berlangsung. Bagaimana menjaga ketertelusuran?",
         "options": [
-          "Lewati pemeriksaan dan langsung tandai selesai tanpa bukti untuk Picker • Advanced",
-          "Ubah hasil atau dokumen Picker • Advanced agar tampak sesuai tanpa verifikasi",
-          "Catat hasil pemeriksaan dan tindak lanjut sesuai materi: Evaluasi pekerjaan Picker dengan indikator akurasi stok, ketepatan picking, lead time. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berdasarkan bukti. Praktik khusus jabatan: Usulkan perbaikan menjalankan tanggung"
+          "Selesaikan semua tanpa catatan",
+          "Gunakan satu nomor transaksi untuk semua tugas",
+          "Catat SKU, jumlah, lokasi, dan order pada formulir terkendali lalu rekonsiliasi"
         ],
         "correct": 2
+      },
+      {
+        "prompt": "KPI picker menunjukkan kecepatan tinggi namun tingkat salah SKU meningkat. Apa perbaikan yang tepat?",
+        "options": [
+          "Evaluasi akurasi scan dan kualitas picking bersama produktivitas",
+          "Hapus metrik kesalahan",
+          "Naikkan target tanpa mengubah kontrol"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Pada akhir shift ada tote belum diserahkan ke packing dan status WMS masih picking. Apa langkah penutupan?",
+        "options": [
+          "Tandai shipped agar tidak tertinggal",
+          "Verifikasi fisik tote, status order, dan lakukan serah terima tercatat",
+          "Hapus tugas yang belum selesai"
+        ],
+        "correct": 1
       }
     ]
   },
