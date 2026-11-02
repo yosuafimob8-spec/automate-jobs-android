@@ -82,14 +82,19 @@ def prompt(req: Request) -> list[dict]:
 
 def parse_json(text: str) -> dict:
     try:
-        return json.loads(text)
+        data = json.loads(text)
+        if isinstance(data, dict):
+            return data
     except json.JSONDecodeError:
-        match = re.search(r"\\{[\\s\\S]*\\}", text)
-        if match:
-            try:
-                return json.loads(match.group())
-            except json.JSONDecodeError:
-                pass
+        pass
+    start, end = text.find("{"), text.rfind("}")
+    if start >= 0 and end > start:
+        try:
+            data = json.loads(text[start:end + 1])
+            if isinstance(data, dict):
+                return data
+        except json.JSONDecodeError:
+            pass
     raise HTTPException(502, "Model AI tidak mengembalikan JSON yang valid")
 
 
