@@ -52,6 +52,141 @@
           "Bagikan OTP"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagian CV yang paling membantu perekrut menghubungi kandidat?",
+        "options": [
+          "Nomor telepon dan email yang aktif",
+          "Nomor rekening bank",
+          "Kata sandi akun"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Jika pengalaman kerja belum ada, bagian apa yang relevan dicantumkan?",
+        "options": [
+          "Prestasi fiktif",
+          "Proyek sekolah atau magang yang nyata",
+          "Pengalaman milik teman"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Apa yang sebaiknya dilakukan saat syarat lowongan tidak sesuai kemampuan?",
+        "options": [
+          "Memalsukan sertifikat",
+          "Mengabaikan semua syarat",
+          "Menilai kesesuaian dan melamar secara jujur"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Cara menyesuaikan CV dengan posisi yang dilamar?",
+        "options": [
+          "Menonjolkan pengalaman dan keterampilan yang relevan",
+          "Mengganti nama perusahaan sebelumnya",
+          "Menghapus semua tanggal"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Format nama berkas CV yang memudahkan identifikasi?",
+        "options": [
+          "final_baru_banget.pdf",
+          "CV_Nama_Posisi.pdf",
+          "dokumen1.pdf"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Apa yang perlu dicek sebelum membuka tautan lamaran?",
+        "options": [
+          "Jumlah emoji",
+          "Warna logo",
+          "Domain dan sumber resmi perusahaan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Ketika lowongan meminta OTP akun pribadi, tindakan tepat?",
+        "options": [
+          "Menolak memberikan OTP",
+          "Mengirim OTP agar diprioritaskan",
+          "Mengunggah OTP ke media sosial"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Isi badan email lamaran yang profesional?",
+        "options": [
+          "Hanya lampiran tanpa teks",
+          "Perkenalan singkat, posisi, dan dokumen terlampir",
+          "Cerita panjang yang tidak relevan"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Jika email lamaran salah alamat, apa tindakan terbaik?",
+        "options": [
+          "Membiarkannya tanpa evaluasi",
+          "Mengirim berkali-kali ke semua kontak",
+          "Memeriksa alamat resmi dan mengirim ke tujuan yang benar"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Apa tujuan ringkasan profil di bagian atas CV?",
+        "options": [
+          "Menjelaskan kompetensi yang relevan secara singkat",
+          "Mengulang seluruh riwayat hidup",
+          "Memasukkan informasi rahasia"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana mencantumkan kemampuan perangkat lunak pada CV?",
+        "options": [
+          "Menulis semua aplikasi meskipun belum pernah digunakan",
+          "Menyebut aplikasi dan tingkat penguasaan yang sebenarnya",
+          "Mengklaim sertifikasi yang tidak dimiliki"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Ketika ada jeda pekerjaan, bagaimana menjelaskannya?",
+        "options": [
+          "Mengarang pekerjaan baru",
+          "Mengubah tanggal secara acak",
+          "Menjelaskan secara ringkas dan jujur bila ditanya"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Apa yang harus dilakukan jika menemukan dua lowongan identik dengan kontak berbeda?",
+        "options": [
+          "Memverifikasi ke kanal resmi perusahaan",
+          "Mengirim dokumen pribadi ke keduanya tanpa cek",
+          "Membayar agar diproses lebih cepat"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Mengapa perlu mencatat tanggal dan posisi lamaran yang dikirim?",
+        "options": [
+          "Untuk mengirim ulang setiap jam",
+          "Agar dapat memantau tindak lanjut dan menghindari duplikasi",
+          "Untuk menyebarkan kontak perekrut"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Jika lampiran CV melebihi batas ukuran portal, solusi yang tepat?",
+        "options": [
+          "Menghapus isi penting tanpa memeriksa",
+          "Mengganti ekstensi file sembarangan",
+          "Mengompres PDF sambil menjaga keterbacaan"
+        ],
+        "correct": 2
       }
     ]
   },
