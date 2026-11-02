@@ -41,7 +41,6 @@ def record_server_grade(conn, *, attempt_id, user_id, course_id, questions, answ
 
 def issue_from_attempt(conn, *, attempt_id, name, course_title, completion_date):
     """Atomic issue from a recorded server-graded attempt, not a client claim."""
-    setup(conn)
     row = conn.execute("SELECT user_id,course_id,score,completed_modules,required_modules,certificate_id FROM training_attempts WHERE attempt_id=?", (attempt_id,)).fetchone()
     if row is None or row[2] < 80 or row[3] != row[4]:
         raise ValueError("no eligible server-graded attempt")
