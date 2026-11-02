@@ -131,13 +131,28 @@ def expand_exam_questions(questions, course_title, lessons=None):
         if index >= len(lessons):
             return course_title
         return lessons[index].split(".")[0].strip()[:150]
+    def lesson_detail(index):
+        if index >= len(lessons):
+            return course_title
+        lesson = lessons[index]
+        if index == 0 and "alat dan istilah: " in lesson:
+            return lesson.split("alat dan istilah: ", 1)[1].split(". Untuk", 1)[0]
+        if index == 1 and ": " in lesson:
+            return lesson.split(": ", 1)[1].split(". Tuliskan", 1)[0]
+        if index == 2 and "menggunakan: " in lesson:
+            return lesson.split("menggunakan: ", 1)[1].split(". Cantumkan", 1)[0]
+        if index == 3 and ": " in lesson:
+            return lesson.split(": ", 1)[1].split(". Jelaskan", 1)[0]
+        if index == 4 and "indikator " in lesson:
+            return lesson.split("indikator ", 1)[1].split(". Tentukan", 1)[0]
+        return lesson_topic(index)
     result = list(questions)
     for index, (prompt, correct, wrong_a, wrong_b) in enumerate(scenarios):
         options = [correct, wrong_a, wrong_b]
         shift = index % 3
         options = options[shift:] + options[:shift]
         result.append({
-            "prompt": prompt.format(role=course_title) + " Konteks materi: " + lesson_topic(index % max(1, len(lessons))),
+            "prompt": prompt.format(role=course_title) + " Kasus: " + lesson_detail(index % max(1, len(lessons))),
             "options": options,
             "correct": (3 - shift) % 3,
         })
