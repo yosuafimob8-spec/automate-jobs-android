@@ -76,6 +76,9 @@ class RegistryTests(unittest.TestCase):
             self.assertEqual(status, 200)
             self.assertTrue(result["valid"])
             self.assertEqual(result["certificate"]["name"], self.record["name"])
+            with urlopen(base + "/certificate?id=" + self.record["id"], timeout=3) as page:
+                self.assertEqual(page.status, 200)
+                self.assertIn(b"KarirMate", page.read())
             with server.connect() as conn:
                 conn.execute("UPDATE certificates SET revoked=1 WHERE id=?", (self.record["id"],))
             self.assertFalse(request("/verify?id=" + self.record["id"])[1]["valid"])
