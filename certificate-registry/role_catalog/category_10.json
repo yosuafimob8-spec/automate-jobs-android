@@ -54,6 +54,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Crew • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. ",
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Crew • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Crew • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Crew • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Crew • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Crew • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Crew • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Crew • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Crew • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Crew • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Crew • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Crew • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba",
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Crew • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Crew • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Crew • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Melewati pemeriksaan Store Crew • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -112,6 +247,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Crew • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus opera",
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Crew • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Crew • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Crew • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Crew • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Crew • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus opera"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Crew • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Crew • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Crew • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Crew • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Crew • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus opera",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Crew • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In",
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Crew • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Crew • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Crew • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Melewati pemeriksaan Store Crew • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -170,6 +440,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Crew • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, d",
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Crew • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Crew • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Crew • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Crew • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Crew • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Crew • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Crew • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Crew • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Crew • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Crew • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Crew di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, d",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Crew • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Crew: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad",
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Crew • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Crew menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Crew • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Crew: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Crew • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Crew dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Melewati pemeriksaan Store Crew • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -228,6 +633,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Pramuniaga • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. ",
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Pramuniaga • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Pramuniaga • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Pramuniaga • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Pramuniaga • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Pramuniaga • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Pramuniaga • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Pramuniaga • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Pramuniaga • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Pramuniaga • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Pramuniaga • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar. ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Pramuniaga • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ba",
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Pramuniaga • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Pramuniaga • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Pramuniaga • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Melewati pemeriksaan Pramuniaga • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -286,6 +826,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Pramuniaga • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus opera",
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Pramuniaga • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Pramuniaga • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Pramuniaga • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Pramuniaga • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Pramuniaga • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus opera"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Pramuniaga • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Pramuniaga • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Pramuniaga • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Pramuniaga • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Pramuniaga • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus opera",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Pramuniaga • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat In",
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Pramuniaga • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Pramuniaga • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Pramuniaga • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Melewati pemeriksaan Pramuniaga • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -344,6 +1019,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Pramuniaga • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, d",
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Pramuniaga • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Pramuniaga • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Pramuniaga • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Pramuniaga • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Pramuniaga • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Pramuniaga • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Pramuniaga • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat",
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Pramuniaga • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Pramuniaga • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Pramuniaga • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Pramuniaga di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, d",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Pramuniaga • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Pramuniaga: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat Ad",
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Pramuniaga • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Pramuniaga menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan dat"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Pramuniaga • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Pramuniaga: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ti",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Pramuniaga • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Pramuniaga dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berda",
+          "Melewati pemeriksaan Pramuniaga • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -402,6 +1212,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kasir Retail • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar",
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kasir Retail • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kasir Retail • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kasir Retail • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ",
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kasir Retail • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kasir Retail • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kasir Retail • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kasir Retail • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kasir Retail • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kasir Retail • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kasir Retail • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kasir Retail • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kasir Retail • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kasir Retail • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kasir Retail • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Melewati pemeriksaan Kasir Retail • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -460,6 +1405,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kasir Retail • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus ope",
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kasir Retail • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kasir Retail • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kasir Retail • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ",
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kasir Retail • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kasir Retail • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus ope"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kasir Retail • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kasir Retail • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kasir Retail • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kasir Retail • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kasir Retail • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus ope",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kasir Retail • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kasir Retail • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kasir Retail • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kasir Retail • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Melewati pemeriksaan Kasir Retail • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -518,6 +1598,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kasir Retail • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas,",
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kasir Retail • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kasir Retail • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kasir Retail • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ",
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kasir Retail • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kasir Retail • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas,"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kasir Retail • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kasir Retail • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d",
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kasir Retail • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kasir Retail • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kasir Retail • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kasir Retail di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas,",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kasir Retail • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kasir Retail: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat ",
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kasir Retail • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kasir Retail menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kasir Retail • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kasir Retail: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kasir Retail • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kasir Retail dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan ber",
+          "Melewati pemeriksaan Kasir Retail • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -576,6 +1791,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Supervisor • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur d",
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Supervisor • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Supervisor • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Supervisor • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. P",
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Supervisor • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Supervisor • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur d"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Supervisor • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Supervisor • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Supervisor • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Supervisor • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Supervisor • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur d",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Supervisor • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Supervisor • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Supervisor • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. P",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Supervisor • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Melewati pemeriksaan Store Supervisor • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -634,6 +1984,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Supervisor • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus",
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Supervisor • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Supervisor • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Supervisor • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. P",
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Supervisor • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Supervisor • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Supervisor • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Supervisor • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Supervisor • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Supervisor • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Supervisor • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Supervisor • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Supervisor • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Supervisor • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. P",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Supervisor • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Melewati pemeriksaan Store Supervisor • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -692,6 +2177,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Supervisor • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan priori",
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Supervisor • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Supervisor • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Supervisor • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. P",
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Supervisor • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Supervisor • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan priori"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Supervisor • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Supervisor • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik",
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Supervisor • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. P"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Supervisor • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Store Supervisor • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Store Supervisor di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan priori",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Store Supervisor • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Store Supervisor: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada ting",
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Store Supervisor • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Store Supervisor menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastik"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Store Supervisor • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Store Supervisor: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. P",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Store Supervisor • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Store Supervisor dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan",
+          "Melewati pemeriksaan Store Supervisor • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -750,6 +2370,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kepala Toko • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar.",
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kepala Toko • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat B"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kepala Toko • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kepala Toko • Basic untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada t",
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kepala Toko • Basic untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kepala Toko • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar."
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kepala Toko • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat B",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kepala Toko • Basic untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kepala Toko • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kepala Toko • Basic untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kepala Toko • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Basic, kenali konsep, alat, dan prosedur dasar.",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kepala Toko • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat B",
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kepala Toko • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kepala Toko • Basic untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada t",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kepala Toko • Basic untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Melewati pemeriksaan Kepala Toko • Basic agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -808,6 +2563,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kepala Toko • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus oper",
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kepala Toko • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat I"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kepala Toko • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kepala Toko • Intermediate untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada t",
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kepala Toko • Intermediate untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kepala Toko • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus oper"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kepala Toko • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat I",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kepala Toko • Intermediate untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kepala Toko • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kepala Toko • Intermediate untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kepala Toko • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Intermediate, terapkan prosedur pada kasus oper",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kepala Toko • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat I",
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kepala Toko • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kepala Toko • Intermediate untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada t",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kepala Toko • Intermediate untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Melewati pemeriksaan Kepala Toko • Intermediate agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   },
@@ -866,6 +2756,141 @@
           "Tidak perlu mengukur hasil"
         ],
         "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kepala Toko • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, ",
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kepala Toko • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat A"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kepala Toko • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kepala Toko • Advanced untuk skenario 1?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada t",
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kepala Toko • Advanced untuk skenario 1?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kepala Toko • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, "
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kepala Toko • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat A",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kepala Toko • Advanced untuk skenario 2?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da",
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kepala Toko • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada t"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kepala Toko • Advanced untuk skenario 2?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana persiapan kerja pada Kepala Toko • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Sebagai Kepala Toko di bidang Retail & Store Operations, pelajari alat dan istilah: POS, barcode, stok toko. Untuk tingkat Advanced, analisis risiko, tentukan prioritas, ",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pelaksanaan proses pada Kepala Toko • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Simulasikan alur kerja Kepala Toko: buka toko, display, transaksi, stok, tutup kas. Tuliskan urutan tindakan, titik pemeriksaan, dan pihak yang menyetujui. Pada tingkat A",
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
+      },
+      {
+        "prompt": "Bagaimana pencatatan hasil pada Kepala Toko • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Buat contoh dokumen Kepala Toko menggunakan: laporan penjualan, retur, kas harian. Cantumkan tanggal, nomor referensi, hasil verifikasi, dan penanggung jawab. Pastikan da"
+        ],
+        "correct": 2
+      },
+      {
+        "prompt": "Bagaimana penanganan masalah pada Kepala Toko • Advanced untuk skenario 3?",
+        "options": [
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Studi kasus Kepala Toko: selisih kas atau barang hilang. Jelaskan cara mengidentifikasi fakta, mengamankan proses, mendokumentasikan bukti, dan melakukan eskalasi. Pada t",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 1
+      },
+      {
+        "prompt": "Bagaimana pengukuran kinerja pada Kepala Toko • Advanced untuk skenario 3?",
+        "options": [
+          "Lakukan pemeriksaan dan dokumentasi sesuai materi: Evaluasi pekerjaan Kepala Toko dengan indikator sales per shift, shrinkage, akurasi kas. Tentukan baseline, target realistis, cara pengukuran, dan tindakan perbaikan berd",
+          "Melewati pemeriksaan Kepala Toko • Advanced agar cepat selesai",
+          "Mencatat hasil tanpa verifikasi atau bukti"
+        ],
+        "correct": 0
       }
     ]
   }
