@@ -113,6 +113,34 @@ fun JobTrainingScreen() {
         stage = "modules"
     }
     fun evaluate() {
+        if (trainingApi != null) {
+            val questions = serverQuestions
+            if (questions == null) { message = "Soal server belum dimuat."; return }
+            val values = (0 until questions.length()).map { answers.optInt(it, -1) }
+            if (values.any { it < 0 }) { message = "Jawab semua pertanyaan."; return }
+            trainingBusy = true
+            trainingScope.launch {
+                try {
+                    val result = withContext(Dispatchers.IO) { trainingApi.submitExam(courseId, values) }
+                    val cid = result.getString("certificateId")
+                    val verification = withContext(Dispatchers.IO) { trainingApi.certificateStatus(cid) }
+                    if (!verification.optBoolean("valid")) error("Sertifikat belum terverifikasi server")
+                    val record = verification.getJSONObject("certificate")
+                    val item = JSONObject().put("id", cid).put("name", record.getString("name"))
+                        .put("course", record.getString("course")).put("courseId", courseId)
+                        .put("date", record.getString("date")).put("score", record.getInt("score"))
+                        .put("serverRegistered", true)
+                    val history = JSONArray(prefs.getString("certificates", "[]"))
+                    history.put(item)
+                    prefs.edit().putString("certificates", history.toString()).apply()
+                    certificate = item
+                    stage = "certificate"
+                    message = "Sertifikat terverifikasi server."
+                } catch (e: Exception) { message = "Ujian server gagal: ${e.message}" }
+                finally { trainingBusy = false }
+            }
+            return
+        }
         val values = course.questions.indices.map { answers.optInt(it, -1) }
         if (values.any { it < 0 }) { message = "Jawab semua pertanyaan."; return }
         if (name.isBlank()) { message = "Isi nama peserta untuk sertifikat."; return }
