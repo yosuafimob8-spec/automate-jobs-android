@@ -1,5 +1,8 @@
 package com.example.automatesmartbot.ui.screens
 
+import android.content.Context
+import android.graphics.BitmapFactory
+import android.graphics.RectF
 import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
@@ -19,7 +22,7 @@ internal object TrainingCertificateArtwork {
     private val orange = Color.rgb(255, 105, 13)
     private val gold = Color.rgb(207, 151, 37)
     private val cream = Color.rgb(255, 253, 247)
-    fun draw(canvas: Canvas, item: JSONObject) {
+    fun draw(canvas: Canvas, item: JSONObject, context: Context) {
         val p = Paint(Paint.ANTI_ALIAS_FLAG)
         fun box(color: Int, l: Float, t: Float, r: Float, b: Float) {
             p.color = color; p.style = Paint.Style.FILL
@@ -69,7 +72,22 @@ internal object TrainingCertificateArtwork {
         label("pada program pelatihan kerja digital:", 421f, 330f, 14f)
         label(item.optString("course"), 421f, 363f, 26f, navy, true)
         label("Nilai akhir: ${item.optInt("score")}/100    |    Status: LULUS", 421f, 390f, 16f, navy, true)
-        // Names indicate the designated roles; no simulated handwritten signatures.
+        // Signature images are provided by the named signatories.
+        fun signature(asset: String, left: Float, top: Float, right: Float, bottom: Float) {
+            runCatching {
+                context.assets.open("certificate_signatures/$asset.png").use { stream ->
+                    val bitmap = BitmapFactory.decodeStream(stream) ?: return@use
+                    val inkPaint = Paint(Paint.ANTI_ALIAS_FLAG or Paint.FILTER_BITMAP_FLAG)
+                    val scale = minOf((right - left) / bitmap.width, (bottom - top) / bitmap.height)
+                    val w = bitmap.width * scale
+                    val h = bitmap.height * scale
+                    canvas.drawBitmap(bitmap, null, RectF((left + right - w) / 2f, (top + bottom - h) / 2f, (left + right + w) / 2f, (top + bottom + h) / 2f), inkPaint)
+                    bitmap.recycle()
+                }
+            }
+        }
+        signature("tanti_kurnia", 100f, 402f, 291f, 463f)
+        signature("ilham_ramdhani", 550f, 400f, 742f, 463f)
         line(97f, 469f, 295f, 469f, orange, 1.5f)
         line(547f, 469f, 745f, 469f, orange, 1.5f)
         label("Tanti Kurnia", 196f, 489f, 16f, navy, true)
