@@ -38,6 +38,13 @@ fun SalaryCalculatorScreen() {
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         KarirMateSectionHero("Kalkulator Gaji", "Simulasikan gaji, lembur, BPJS, pajak, dan THR.")
         Text("Kalkulator Gaji & Hak Kerja", style = MaterialTheme.typography.titleLarge)
+        Card(colors = CardDefaults.cardColors(containerColor = androidx.compose.ui.graphics.Color(0xFFFFF2E8))) {
+            Column(Modifier.fillMaxWidth().padding(14.dp)) {
+                Text("Simulasi Cepat", style = MaterialTheme.typography.titleMedium)
+                Text("Coba angka contoh, lalu sesuaikan dengan slip gajimu.")
+                OutlinedButton(onClick = { gross = "5000000"; base = "5000000"; hours = "2"; health = "5000000"; jht = "5000000"; pension = "5000000"; months = "12"; result = null }) { Text("Isi Contoh Rp5 Juta") }
+            }
+        }
         Text("Estimasi PPh 21 tahunan dengan lapisan tarif UU HPP; angka per bulan adalah rata-rata tahunan, bukan potongan TER pada slip gaji. Periksa rekonsiliasi aktual dengan pemberi kerja.")
         AppInput("Penghasilan bruto pajak per bulan (Rp)", gross, { gross = it; result = null })
         AppInput("Upah dasar lembur / THR (Rp)", base, { base = it; result = null })
@@ -84,7 +91,13 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
         KarirMateSectionHero("Surat Lamaran", "Susun surat lamaran dan dokumen pengunduran diri.")
         Text("Surat Lamaran & Resign", style = MaterialTheme.typography.titleLarge)
-        Button(onClick = onApplicationLetter, Modifier.fillMaxWidth()) { Text("Buat Surat Lamaran dari CV") }
+        Card(colors = CardDefaults.cardColors(containerColor = androidx.compose.ui.graphics.Color(0xFFFFF2E8))) {
+            Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text("Surat Lamaran dari CV", style = MaterialTheme.typography.titleMedium)
+                Text("Gunakan data CV tersimpan untuk menyusun surat lamaran.")
+                Button(onClick = onApplicationLetter, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = androidx.compose.ui.graphics.Color(0xFFFF762C))) { Text("Buat Surat Lamaran →") }
+            }
+        }
         HorizontalDivider()
         Text("Surat Pengunduran Diri", style = MaterialTheme.typography.titleMedium)
         AppInput("Nama lengkap",name,{name=it})
