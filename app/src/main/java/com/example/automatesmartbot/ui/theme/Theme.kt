@@ -23,18 +23,18 @@ val KarirMateDarkColors = darkColorScheme(
 )
 
 val KarirMateLightColors = lightColorScheme(
-    primary = KarirOrange,
+    primary = Color(0xFFA8430F),
     onPrimary = TextWhite,
     primaryContainer = Color(0xFFFFF2E5),
     onPrimaryContainer = KarirTextDark,
-    secondary = KarirOrangeDeep,
+    secondary = ActionOrange,
     onSecondary = Color.White,
     background = Color(0xFFFFFBF7),
     onBackground = KarirTextDark,
     surface = LightSurface,
     onSurface = KarirTextDark,
     surfaceVariant = Color(0xFFFFF2E5),
-    onSurfaceVariant = KarirTextMuted
+    onSurfaceVariant = Color(0xFF526277)
 )
 
 @Composable
