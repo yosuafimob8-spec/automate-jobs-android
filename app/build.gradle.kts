@@ -48,8 +48,20 @@ val prepareBrandAssets by tasks.registering(Copy::class) {
 android {
     namespace = "com.example.automatesmartbot"
     compileSdk = 35
+    ndkVersion = "27.2.12479018"
+
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+            version = "3.22.1"
+        }
+    }
+
 
     defaultConfig {
+        ndk {
+            abiFilters.add("arm64-v8a")
+        }
         applicationId = "com.example.automatesmartbot"
         minSdk = 26
         targetSdk = 35

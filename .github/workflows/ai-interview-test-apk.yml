@@ -12,6 +12,11 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+      - name: Install Android NDK and CMake
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "ndk;27.2.12479018" "cmake;3.22.1"
+
       - name: Run unit tests and build installable debug APK
         run: |
           chmod +x gradlew
