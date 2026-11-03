@@ -47,7 +47,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
     Column(Modifier.fillMaxSize().background(Color.White).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
             Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                Text("KARIRMATE • PUSAT PENGETAHUAN", color = Color(0xFFFF762C), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
+                Text("KARIRMATE • PUSAT PENGETAHUAN", color = Color(0xFFC54814), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
                 Text("WorkPedia", color = navy, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
                 Text("Pahami istilah dunia kerja, hak karyawan, dan regulasi.", color = Color(0xFF525B66))
                 Text("${entries.size} istilah  •  ${favorites.size} favorit", color = Color(0xFF00A99D), style = MaterialTheme.typography.labelMedium)
@@ -74,7 +74,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                     Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         Text("Tidak ada istilah yang cocok", fontWeight = FontWeight.Bold, color = navy)
                         Text("Ubah kata kunci atau kategori untuk melihat hasil lainnya.", color = navy)
-                        TextButton(onClick = { query = ""; category = "Semua"; onlyFavorites = false }) { Text("Atur Ulang Pencarian", color = Color(0xFFFF762C)) }
+                        TextButton(onClick = { query = ""; category = "Semua"; onlyFavorites = false }) { Text("Atur Ulang Pencarian", color = Color(0xFFC54814)) }
                     }
                 }
             }
@@ -88,7 +88,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                                     val id = term.optString("id")
                                     favorites = if (id in favorites) favorites - id else favorites + id
                                     prefs.edit().putStringSet("ids", favorites).apply()
-                                }) { Text(if (term.optString("id") in favorites) "★" else "☆", color = Color(0xFFFF762C)) }
+                                }) { Text(if (term.optString("id") in favorites) "★" else "☆", color = Color(0xFFC54814)) }
                             }
                             Text(term.optString("fullName"), color = navy, style = MaterialTheme.typography.bodyMedium)
                             Text(term.optString("category"), color = teal, style = MaterialTheme.typography.labelMedium)
@@ -121,7 +121,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                     Button(onClick = {
                         favorites = if (id in favorites) favorites - id else favorites + id
                         prefs.edit().putStringSet("ids", favorites).apply()
-                    }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(14.dp), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF762C))) {
+                    }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(14.dp), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFC54814))) {
                         Text(if (id in favorites) "★ Hapus dari Favorit" else "☆ Simpan ke Favorit")
                     }
                 }
