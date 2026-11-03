@@ -57,7 +57,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
             Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text("Perpustakaan PDF • ${items.size} dokumen", style = MaterialTheme.typography.titleMedium)
                 Text("${selected.size} dokumen dipilih")
-                Button(onClick = { importer.launch(arrayOf("application/pdf")) }, enabled = !busy, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = androidx.compose.ui.graphics.Color(0xFFFF762C))) { Text("+ Tambahkan PDF") }
+                Button(onClick = { importer.launch(arrayOf("application/pdf")) }, enabled = !busy, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = androidx.compose.ui.graphics.Color(0xFFC54814))) { Text("+ Tambahkan PDF") }
                 if (selected.isNotEmpty()) TextButton(onClick = { selected = arrayListOf() }) { Text("Batalkan Semua Pilihan") }
             }
         }
