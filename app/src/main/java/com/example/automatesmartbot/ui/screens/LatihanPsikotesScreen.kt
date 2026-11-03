@@ -226,27 +226,27 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             }
                         }
                         item {
-                            Card(shape = RoundedCornerShape(26.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF))) {
-                                Column(Modifier.fillMaxWidth().padding(22.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                            Card(shape = RoundedCornerShape(26.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF102C38)), elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)) {
+                                Column(Modifier.fillMaxWidth().background(Brush.linearGradient(listOf(Color(0xFF102C38), Color(0xFF155F63)))).padding(22.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
                                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(18.dp)) {
                                         Box(Modifier.size(116.dp), contentAlignment = Alignment.Center) {
                                             Canvas(Modifier.fillMaxSize()) {
-                                                drawArc(Color(0xFFE3EBEB), 0f, 360f, false, style = Stroke(13.dp.toPx(), cap = StrokeCap.Round))
-                                                drawArc(Color(0xFF00B39F), -90f, 360f * animatedScore / 100f, false, style = Stroke(13.dp.toPx(), cap = StrokeCap.Round))
+                                                drawArc(Color.White.copy(alpha = 0.18f), 0f, 360f, false, style = Stroke(13.dp.toPx(), cap = StrokeCap.Round))
+                                                drawArc(Color(0xFFFFB55C), -90f, 360f * animatedScore / 100f, false, style = Stroke(13.dp.toPx(), cap = StrokeCap.Round))
                                             }
                                             Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                                Text(if (actualScore == null) "—" else "$animatedScore", color = ink, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
-                                                Text("/ 100", color = ink, style = MaterialTheme.typography.labelMedium)
+                                                Text(if (actualScore == null) "—" else "$animatedScore", color = Color.White, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
+                                                Text("/ 100", color = Color(0xFFB9F2E9), style = MaterialTheme.typography.labelMedium)
                                             }
                                         }
                                         Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                                            Text("NILAI AKHIR", color = ink, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
-                                            Text(rating, color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                                            Text("$correct dari $total soal benar", color = ink, style = MaterialTheme.typography.bodySmall)
+                                            Text("NILAI AKHIR", color = Color(0xFFB9F2E9), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
+                                            Text(rating, color = Color.White, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                                            Text("$correct dari $total soal benar", color = Color(0xFFE4F5F2), style = MaterialTheme.typography.bodySmall)
                                         }
                                     }
-                                    HorizontalDivider(color = Color(0xFFE3EBEB))
-                                    Text(encouragement, color = ink, style = MaterialTheme.typography.bodyMedium)
+                                    HorizontalDivider(color = Color.White.copy(alpha = 0.2f))
+                                    Text("✦  $encouragement", color = Color.White, style = MaterialTheme.typography.bodyMedium)
                                 }
                             }
                         }
@@ -274,7 +274,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         }
                         item {
                             Text("Jelajahi hasilmu", color = ink, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
-                            Text("Buka jawaban untuk mengevaluasi setiap soal.", color = Color(0xFF59667A), style = MaterialTheme.typography.bodySmall)
+                            Text("Buka jawaban dan ketuk kategori untuk rekomendasi latihan.", color = Color(0xFF59667A), style = MaterialTheme.typography.bodySmall)
                         }
                         item {
                             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
