@@ -168,24 +168,24 @@ fun DashboardScreen(
     LazyColumn(
         modifier = Modifier.fillMaxSize().background(Color(0xFFF7F8FA)),
         contentPadding = PaddingValues(bottom = 24.dp),
-        verticalArrangement = Arrangement.spacedBy(15.dp)
+        verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         item {
             Column(
                 Modifier.fillMaxWidth().background(
                     Brush.linearGradient(listOf(Color(0xFF171717), dark, Color(0xFF444444)))
-                ).padding(horizontal = 20.dp, vertical = 20.dp),
+                ).padding(horizontal = 20.dp, vertical = 13.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text("KarirMate", color = Color.White, fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, modifier = Modifier.weight(1f))
+                    Text("KarirMate", color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold, modifier = Modifier.weight(1f))
                     Surface(shape = RoundedCornerShape(40.dp), color = Color(0xFFFF6B00)) {
                         Text(if (status?.isPro == true) "✦ PRO" else "FREE", color = Color.White, modifier = Modifier.padding(horizontal = 13.dp, vertical = 7.dp), fontWeight = FontWeight.Bold, fontSize = 12.sp)
                     }
                     Spacer(Modifier.width(10.dp))
                     Icon(Icons.Default.Person, "Profil", tint = Color.White, modifier = Modifier.size(28.dp).clickable { onNavigate(Screen.Profil.route) })
                 }
-                Text("Halo, " + (status?.displayName?.takeIf { it.isNotBlank() } ?: "Pengguna"), color = Color.White, fontSize = 19.sp, fontWeight = FontWeight.Bold)
+                Text("Halo, " + (status?.displayName?.takeIf { it.isNotBlank() } ?: "Pengguna"), color = Color.White, fontSize = 17.sp, fontWeight = FontWeight.Bold)
                 Text(if (status?.isOnline == true) "● Online  •  Siapkan karier impianmu" else "○ Offline  •  Siapkan karier impianmu", color = Color(0xFFE0E0E0), fontSize = 12.sp)
                 OutlinedTextField(
                     value = search, onValueChange = { search = it },
@@ -199,20 +199,20 @@ fun DashboardScreen(
         item {
             Card(
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-                shape = RoundedCornerShape(20.dp),
+                shape = RoundedCornerShape(16.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 elevation = CardDefaults.cardElevation(defaultElevation = 7.dp),
                 border = BorderStroke(1.dp, Color(0xFFE8E8E8))
             ) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Column(Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(Icons.Default.Work, null, tint = brand)
                         Spacer(Modifier.width(8.dp))
                         Text("Statistik Ketenagakerjaan Indonesia", fontWeight = FontWeight.Bold, color = dark, fontSize = 14.sp)
                     }
                     Text("Sumber: Badan Pusat Statistik (BPS)", color = teal, fontSize = 11.sp)
-                    Text("Data BPS belum tersambung. Angka resmi akan muncul setelah sumber data terverifikasi.", fontSize = 12.sp, color = Color(0xFF666666))
-                    listOf("Pengangguran", "Kemiskinan", "Angkatan kerja", "Penduduk bekerja", "Rata-rata upah").chunked(2).forEach { row ->
+                    Text("Angka resmi belum tersedia • Tidak menampilkan data perkiraan", fontSize = 10.sp, color = Color(0xFF666666))
+                    listOf("Pengangguran", "Kemiskinan", "Angkatan kerja", "Penduduk bekerja", "Rata-rata upah").chunked(3).forEach { row ->
                         Row(horizontalArrangement = Arrangement.spacedBy(9.dp)) {
                             row.forEachIndexed { index, label ->
                                 Surface(
@@ -220,14 +220,14 @@ fun DashboardScreen(
                                     shape = RoundedCornerShape(13.dp),
                                     color = if (index == 0) Color(0xFFFFF2E8) else Color(0xFFE5F5F1)
                                 ) {
-                                    Column(Modifier.padding(11.dp)) {
-                                        Text(label, fontSize = 11.sp, color = dark)
-                                        Spacer(Modifier.height(4.dp))
-                                        Text("Menunggu data resmi", fontSize = 10.sp, color = Color(0xFF666666), fontWeight = FontWeight.Medium)
+                                    Column(Modifier.padding(7.dp)) {
+                                        Text(label, fontSize = 10.sp, color = dark)
+                                        Spacer(Modifier.height(2.dp))
+                                        Text("Belum tersedia", fontSize = 9.sp, color = Color(0xFF666666), fontWeight = FontWeight.Medium)
                                     }
                                 }
                             }
-                            if (row.size == 1) Spacer(Modifier.weight(1f))
+                            repeat(3 - row.size) { Spacer(Modifier.weight(1f)) }
                         }
                     }
                 }
@@ -294,7 +294,7 @@ fun DashboardScreen(
                             }
                         }
                     }
-                    Text("0/4 terverifikasi • Menunggu validasi server", color = Color(0xFFFFC18F), fontSize = 12.sp)
+                    Text("Status persyaratan belum dapat diverifikasi server", color = Color(0xFFFFC18F), fontSize = 12.sp)
                     Button(
                         onClick = {},
                         enabled = false,
