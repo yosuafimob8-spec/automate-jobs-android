@@ -460,15 +460,9 @@ fun AiInterviewScreen(isPro: Boolean = false) {
         interviewJob = scope.launch {
             try {
                 val modelFile = offlineModelFile(context)
-                val response = if (modelFile != null) {
-                    OfflineInterviewEngine.ask(modelFile, role, language, cv, action, turns, interviewer)
-                } else {
-                    val accessToken = session.getValidToken()
-                        ?: throw IllegalStateException("Silakan login kembali.")
-                    val serviceUrl = endpoint
-                        ?: throw IllegalStateException("Belum ada model GGUF offline atau layanan HTTP.")
-                    requestInterview(serviceUrl, accessToken, role, language, cv, action, turns, interviewer)
-                }
+                val localModel = modelFile
+                    ?: throw IllegalStateException("Model AI offline belum dipasang. Ketuk Impor Model AI Offline (.gguf) terlebih dahulu.")
+                val response = OfflineInterviewEngine.ask(localModel, role, language, cv, action, turns, interviewer)
                 if (requestSession != sessionId) return@launch
                 history = turns
                 if (action == "start") {
@@ -508,8 +502,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             } catch (ex: Exception) {
                 if (requestSession != sessionId) return@launch
                 error = when (ex) {
-                    is java.net.ConnectException -> "Server AI Interview tidak aktif. Jalankan layanan pada port 8790 di Termux."
-                    is java.net.SocketTimeoutException -> "Server AI Interview tidak merespons. Periksa layanan dan koneksi model AI."
+                    is java.net.ConnectException -> "Koneksi tidak tersedia."
+                    is java.net.SocketTimeoutException -> "Proses AI melewati batas waktu."
                     else -> ex.message ?: "Gagal menghubungi AI Interview."
                 }
             } finally {
@@ -670,7 +664,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             }
             if (modelStatus.isNotBlank()) Text(modelStatus, color = ink)
 
-            Button(enabled = !loading && !cvReading && !importingModel && (endpoint != null || modelReady), modifier = Modifier.fillMaxWidth().height(56.dp),
+            Button(enabled = !loading && !cvReading && !importingModel && modelReady, modifier = Modifier.fillMaxWidth().height(56.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = orange), shape = RoundedCornerShape(16.dp),
                 onClick = {
                     history = emptyList()
@@ -680,7 +674,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     feedback = ""
                     send("start", emptyList())
                 }) { Text(if (voiceMode) "Mulai Interview Suara  ➜" else "Mulai Interview Teks  ➜", color = Color.White, fontWeight = FontWeight.Bold) }
-            if (endpoint == null && offlineModelFile(context) == null) Text("Model GGUF offline belum dipasang dan server belum tersedia.", color = MaterialTheme.colorScheme.error)
+            if (!modelReady) Text("Impor model GGUF untuk menjalankan interview tanpa internet atau server Termux.", color = MaterialTheme.colorScheme.error)
             if (error.isNotBlank()) Text(error, color = MaterialTheme.colorScheme.error)
         }
     } else if (report.isNotBlank()) {
