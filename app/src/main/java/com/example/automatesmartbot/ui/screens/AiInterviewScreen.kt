@@ -1,5 +1,7 @@
 package com.example.automatesmartbot.ui.screens
 
+import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.border
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
