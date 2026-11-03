@@ -1,5 +1,8 @@
 package com.example.automatesmartbot.ui.screens.auth
 
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -13,6 +16,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.automatesmartbot.ui.theme.KarirOrange
+import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
+import com.example.automatesmartbot.ui.theme.KarirPageGradient
+import com.example.automatesmartbot.ui.theme.KarirTextDark
+import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -22,34 +30,50 @@ fun ForgotPasswordScreen(
     var email by remember { mutableStateOf("") }
     var infoMessage by remember { mutableStateOf<String?>(null) }
 
+    val textFieldColors = OutlinedTextFieldDefaults.colors(
+        focusedBorderColor = KarirOrange,
+        unfocusedBorderColor = Color(0xFFFFDEC9),
+        focusedLabelColor = KarirOrange,
+        unfocusedLabelColor = KarirTextMuted,
+        cursorColor = KarirOrange,
+        focusedContainerColor = Color.White,
+        unfocusedContainerColor = Color.White,
+        focusedTextColor = KarirTextDark,
+        unfocusedTextColor = KarirTextDark
+    )
+
     Scaffold(
         topBar = {
             TopAppBar(
+                modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC)),
                 navigationIcon = {
                     IconButton(onClick = onNavigateLogin) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Kembali",
-                            tint = Color.White
+                            tint = KarirTextDark
                         )
                     }
                 },
-                title = { Text("Reset Password", color = Color.White, fontWeight = FontWeight.Bold) },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFF1B263B))
+                title = { Text("Reset Password", color = KarirTextDark, fontWeight = FontWeight.Bold, fontSize = 18.sp) },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFFFFDF9))
             )
         },
-        containerColor = Color(0xFF0D1B2A)
+        containerColor = Color(0xFFFFFBF7)
     ) { innerPadding ->
         Box(
             modifier = Modifier
                 .fillMaxSize()
+                .background(KarirPageGradient)
                 .padding(innerPadding)
                 .padding(24.dp),
             contentAlignment = Alignment.Center
         ) {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
-                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                shape = RoundedCornerShape(20.dp),
+                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
@@ -58,33 +82,28 @@ fun ForgotPasswordScreen(
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     Text(
-                        text = "Reset Password",
+                        text = "Reset Password Akun",
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = Color.White
+                        color = KarirTextDark
                     )
 
                     Text(
-                        text = "Masukkan email akun Anda untuk pemulihan password.",
-                        fontSize = 13.sp,
-                        color = Color(0xFF94A3B8),
+                        text = "Masukkan alamat email terdaftar Anda untuk menerima tautan pemulihan kata sandi.",
+                        fontSize = 12.5.sp,
+                        color = KarirTextMuted,
+                        textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
 
                     OutlinedTextField(
                         value = email,
                         onValueChange = { email = it },
-                        label = { Text("Email") },
-                        leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = Color(0xFF60A5FA)) },
+                        label = { Text("Email Terdaftar") },
+                        leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = KarirOrange) },
                         shape = RoundedCornerShape(12.dp),
-                        colors = OutlinedTextFieldDefaults.colors(
-                            focusedBorderColor = Color(0xFF3B82F6),
-                            unfocusedBorderColor = Color(0xFF334155),
-                            focusedContainerColor = Color(0xFF0D1B2A),
-                            unfocusedContainerColor = Color(0xFF0D1B2A),
-                            focusedTextColor = Color.White,
-                            unfocusedTextColor = Color.White
-                        ),
+                        colors = textFieldColors,
+                        singleLine = true,
                         modifier = Modifier.fillMaxWidth()
                     )
 
@@ -92,23 +111,36 @@ fun ForgotPasswordScreen(
 
                     Button(
                         onClick = {
-                            infoMessage = "Belum tersedia"
+                            infoMessage = "Fitur reset password melalui email sedang disiapkan di server."
                         },
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3B82F6)),
+                        colors = ButtonDefaults.buttonColors(containerColor = KarirOrange),
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(50.dp)
                     ) {
-                        Text("Kirim Instruksi Reset", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                        Text("Kirim Tautan Reset", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                     }
 
                     infoMessage?.let { msg ->
-                        Text(text = msg, fontSize = 14.sp, fontWeight = FontWeight.Bold, color = Color(0xFFF59E0B))
+                        Surface(
+                            shape = RoundedCornerShape(8.dp),
+                            color = Color(0xFFFFF3E0),
+                            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                            modifier = Modifier.fillMaxWidth()
+                        ) {
+                            Text(
+                                text = msg,
+                                fontSize = 12.sp,
+                                color = Color(0xFF9A3412),
+                                fontWeight = FontWeight.Medium,
+                                modifier = Modifier.padding(10.dp)
+                            )
+                        }
                     }
 
                     TextButton(onClick = onNavigateLogin) {
-                        Text("Kembali ke Masuk", fontSize = 13.sp, color = Color(0xFF60A5FA))
+                        Text("Kembali ke Halaman Masuk", color = KarirOrangeDeep, fontWeight = FontWeight.Bold)
                     }
                 }
             }

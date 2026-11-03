@@ -1,6 +1,8 @@
 package com.example.automatesmartbot.ui.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -49,6 +51,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.automatesmartbot.ui.components.CvSection
+import com.example.automatesmartbot.ui.theme.KarirOrange
+import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
+import com.example.automatesmartbot.ui.theme.KarirPageGradient
+import com.example.automatesmartbot.ui.theme.KarirTextDark
+import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import com.example.automatesmartbot.ui.viewmodel.ProfileSetupViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -87,34 +94,40 @@ fun OnboardingProfileScreen(
     val scrollState = rememberScrollState()
 
     val textFieldColors = OutlinedTextFieldDefaults.colors(
-        focusedBorderColor = Color(0xFF3B82F6),
-        unfocusedBorderColor = Color(0xFF334155),
-        focusedContainerColor = Color(0xFF0D1B2A),
-        unfocusedContainerColor = Color(0xFF0D1B2A),
-        focusedTextColor = Color.White,
-        unfocusedTextColor = Color.White
+        focusedBorderColor = KarirOrange,
+        unfocusedBorderColor = Color(0xFFFFDEC9),
+        focusedLabelColor = KarirOrange,
+        unfocusedLabelColor = KarirTextMuted,
+        focusedContainerColor = Color.White,
+        unfocusedContainerColor = Color.White,
+        focusedTextColor = KarirTextDark,
+        unfocusedTextColor = KarirTextDark,
+        cursorColor = KarirOrange
     )
 
     Scaffold(
         topBar = {
             TopAppBar(
+                modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC)),
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Kembali",
-                            tint = Color.White
+                            tint = KarirTextDark
                         )
                     }
                 },
-                title = { Text("Setup / Edit Profil", color = Color.White, fontWeight = FontWeight.Bold) },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFF1B263B))
+                title = { Text("Setup / Edit Profil", color = KarirTextDark, fontWeight = FontWeight.Bold, fontSize = 18.sp) },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFFFFDF9))
             )
         },
         bottomBar = {
             Surface(
-                color = Color(0xFF1B263B),
-                modifier = Modifier.fillMaxWidth()
+                color = Color.White,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .border(width = 0.75.dp, color = Color(0xFFF1E5DC))
             ) {
                 Column(
                     modifier = Modifier
@@ -136,7 +149,7 @@ fun OnboardingProfileScreen(
                             )
                         },
                         enabled = isOnline && !isLoading,
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3B82F6)),
+                        colors = ButtonDefaults.buttonColors(containerColor = KarirOrange),
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier
                             .fillMaxWidth()
@@ -145,42 +158,45 @@ fun OnboardingProfileScreen(
                         if (isLoading) {
                             CircularProgressIndicator(color = Color.White, modifier = Modifier.size(24.dp))
                         } else {
-                            Text("Simpan", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                            Text("Simpan Profil", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                         }
                     }
                     if (!isOnline) {
                         Text(
                             text = "Anda sedang offline. Sambungkan internet untuk menyimpan profil.",
-                            fontSize = 11.sp,
-                            color = Color(0xFFFBBF24)
+                            fontSize = 11.5.sp,
+                            color = Color(0xFFD97706)
                         )
                     }
                 }
             }
         },
-        containerColor = Color(0xFF0D1B2A)
+        containerColor = Color(0xFFFFFBF7)
     ) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
+                .background(KarirPageGradient)
                 .padding(innerPadding)
                 .verticalScroll(scrollState)
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
-                shape = RoundedCornerShape(12.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                shape = RoundedCornerShape(16.dp),
+                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
-                    modifier = Modifier.padding(16.dp),
+                    modifier = Modifier.padding(18.dp),
                     verticalArrangement = Arrangement.spacedBy(14.dp)
                 ) {
                     Text(
                         text = "Field Bertanda (*) Wajib Diisi",
-                        fontSize = 11.sp,
-                        color = Color(0xFFEF4444),
+                        fontSize = 11.5.sp,
+                        color = KarirOrangeDeep,
                         fontWeight = FontWeight.Bold
                     )
 
@@ -188,8 +204,8 @@ fun OnboardingProfileScreen(
                         value = fullName,
                         onValueChange = { fullName = it },
                         label = { Text("Nama Lengkap *") },
-                        leadingIcon = { Icon(Icons.Default.Person, contentDescription = null, tint = Color(0xFF60A5FA)) },
-                        shape = RoundedCornerShape(10.dp),
+                        leadingIcon = { Icon(Icons.Default.Person, contentDescription = null, tint = KarirOrange) },
+                        shape = RoundedCornerShape(12.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -198,8 +214,8 @@ fun OnboardingProfileScreen(
                         value = whatsapp,
                         onValueChange = { whatsapp = it },
                         label = { Text("Nomor WhatsApp *") },
-                        leadingIcon = { Icon(Icons.Default.Phone, contentDescription = null, tint = Color(0xFF60A5FA)) },
-                        shape = RoundedCornerShape(10.dp),
+                        leadingIcon = { Icon(Icons.Default.Phone, contentDescription = null, tint = KarirOrange) },
+                        shape = RoundedCornerShape(12.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -208,8 +224,8 @@ fun OnboardingProfileScreen(
                         value = domicile,
                         onValueChange = { domicile = it },
                         label = { Text("Lokasi / Domisili *") },
-                        leadingIcon = { Icon(Icons.Default.LocationOn, contentDescription = null, tint = Color(0xFF60A5FA)) },
-                        shape = RoundedCornerShape(10.dp),
+                        leadingIcon = { Icon(Icons.Default.LocationOn, contentDescription = null, tint = KarirOrange) },
+                        shape = RoundedCornerShape(12.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -217,9 +233,9 @@ fun OnboardingProfileScreen(
                     OutlinedTextField(
                         value = education,
                         onValueChange = { education = it },
-                        label = { Text("Pendidikan Terakhir * (e.g. S1, D3)") },
-                        leadingIcon = { Icon(Icons.Default.School, contentDescription = null, tint = Color(0xFF60A5FA)) },
-                        shape = RoundedCornerShape(10.dp),
+                        label = { Text("Pendidikan Terakhir * (contoh: SMA, D3, S1)") },
+                        leadingIcon = { Icon(Icons.Default.School, contentDescription = null, tint = KarirOrange) },
+                        shape = RoundedCornerShape(12.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -228,8 +244,8 @@ fun OnboardingProfileScreen(
                         value = desiredPositions,
                         onValueChange = { desiredPositions = it },
                         label = { Text("Posisi Pekerjaan Diminati (Pisah koma)") },
-                        leadingIcon = { Icon(Icons.Default.Work, contentDescription = null, tint = Color(0xFF60A5FA)) },
-                        shape = RoundedCornerShape(10.dp),
+                        leadingIcon = { Icon(Icons.Default.Work, contentDescription = null, tint = KarirOrange) },
+                        shape = RoundedCornerShape(12.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -238,8 +254,8 @@ fun OnboardingProfileScreen(
                         value = preferredLocations,
                         onValueChange = { preferredLocations = it },
                         label = { Text("Lokasi Penempatan Kerja (Pisah koma)") },
-                        leadingIcon = { Icon(Icons.Default.LocationOn, contentDescription = null, tint = Color(0xFF60A5FA)) },
-                        shape = RoundedCornerShape(10.dp),
+                        leadingIcon = { Icon(Icons.Default.LocationOn, contentDescription = null, tint = KarirOrange) },
+                        shape = RoundedCornerShape(12.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -248,8 +264,8 @@ fun OnboardingProfileScreen(
                         value = applicationEmail,
                         onValueChange = { applicationEmail = it },
                         label = { Text("Email Pengirim Lamaran *") },
-                        leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = Color(0xFF60A5FA)) },
-                        shape = RoundedCornerShape(10.dp),
+                        leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = KarirOrange) },
+                        shape = RoundedCornerShape(12.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -259,21 +275,37 @@ fun OnboardingProfileScreen(
             CvSection()
 
             errorMessage?.let { err ->
-                Text(
-                    text = err,
-                    fontSize = 13.sp,
-                    color = Color(0xFFEF4444),
-                    fontWeight = FontWeight.Bold
-                )
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = Color(0xFFFEE2E2),
+                    border = BorderStroke(1.dp, Color(0xFFFECACA)),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(
+                        text = err,
+                        fontSize = 12.5.sp,
+                        color = Color(0xFFDC2626),
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.padding(10.dp)
+                    )
+                }
             }
 
             successMessage?.let { msg ->
-                Text(
-                    text = msg,
-                    fontSize = 13.sp,
-                    color = Color(0xFF34D399),
-                    fontWeight = FontWeight.Bold
-                )
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = Color(0xFFDCFCE7),
+                    border = BorderStroke(1.dp, Color(0xFFBBF7D0)),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(
+                        text = msg,
+                        fontSize = 12.5.sp,
+                        color = Color(0xFF16A34A),
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier.padding(10.dp)
+                    )
+                }
             }
 
             Spacer(modifier = Modifier.height(20.dp))

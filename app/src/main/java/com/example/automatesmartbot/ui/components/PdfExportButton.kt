@@ -38,11 +38,16 @@ fun PdfExportButton(pages: List<CvPage>, filename: String, label: String = "Eksp
             finally { busy = false; File(path).delete(); snapshot = null }
         }
     }
-    Button(enabled = !busy && pages.isNotEmpty(), onClick = {
-        try {
-            val file = File.createTempFile("career-pdf-", ".json", context.cacheDir)
-            file.writeText(Gson().toJson(pages)); snapshot = file.path; picker.launch(filename)
-        } catch (e: Exception) { message = "PDF belum dapat disiapkan: ${e.message}" }
-    }) { Text(if (busy) "Menyimpan..." else label) }
+    Button(
+        enabled = !busy && pages.isNotEmpty(),
+        shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp),
+        colors = ButtonDefaults.buttonColors(containerColor = com.example.automatesmartbot.ui.theme.KarirOrange),
+        onClick = {
+            try {
+                val file = File.createTempFile("career-pdf-", ".json", context.cacheDir)
+                file.writeText(Gson().toJson(pages)); snapshot = file.path; picker.launch(filename)
+            } catch (e: Exception) { message = "PDF belum dapat disiapkan: ${e.message}" }
+        }
+    ) { Text(if (busy) "Menyimpan..." else label, fontWeight = androidx.compose.ui.text.font.FontWeight.Bold) }
     if (message.isNotBlank()) Text(message, color = MaterialTheme.colorScheme.onSurfaceVariant)
 }

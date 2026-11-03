@@ -353,7 +353,7 @@ private fun MainDashboardContent(
                 )
             }
             composable(Screen.Login.route) {
-                FixedCanvasTheme(dark = true) {
+                FixedCanvasTheme(dark = false) {
                     LoginScreen(
                         onNavigateRegister = {
                             navController.navigate(Screen.Register.route) {
@@ -380,7 +380,7 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.Register.route) {
-                FixedCanvasTheme(dark = true) {
+                FixedCanvasTheme(dark = false) {
                     RegisterScreen(
                         onNavigateLogin = navigateToLogin,
                         onRegisterSuccess = {
@@ -391,7 +391,7 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.ForgotPassword.route) {
-                FixedCanvasTheme(dark = true) {
+                FixedCanvasTheme(dark = false) {
                     ForgotPasswordScreen(
                         onNavigateLogin = navigateToLogin
                     )
@@ -399,7 +399,7 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.OnboardingProfile.route) {
-                FixedCanvasTheme(dark = true) {
+                FixedCanvasTheme(dark = false) {
                     OnboardingProfileScreen(
                         isOnline = isOnline,
                         onBack = navigateUpOrDashboard,

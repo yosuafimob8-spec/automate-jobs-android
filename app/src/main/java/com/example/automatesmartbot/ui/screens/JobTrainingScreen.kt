@@ -35,24 +35,25 @@ import org.json.JSONObject
 import java.time.LocalDate
 import java.util.UUID
 
-private val orangeTraining = Color(0xFFFF690D)
-private val darkTraining = Color(0xFF152D43)
-private val tealTraining = Color(0xFF009F89)
-private val paleTraining = Color(0xFFF6F9FC)
-private val trainingDisabledText = Color(0xFF475569)
+private val orangeTraining = Color(0xFFFF6B00)
+private val darkTraining = Color(0xFF0F172A)
+private val tealTraining = Color(0xFF16A34A)
+private val paleTraining = Color(0xFFFFFBF7)
+private val trainingDisabledText = Color(0xFF64748B)
 private val trainingButtonColors @Composable get() = ButtonDefaults.outlinedButtonColors(
     containerColor = Color.White,
     contentColor = darkTraining,
-    disabledContentColor = Color(0xFF475569),
-    disabledContainerColor = Color(0xFFF1F5F9)
+    disabledContentColor = Color(0xFF94A3B8),
+    disabledContainerColor = Color(0xFFF8FAFC)
 )
 
 @Composable
 private fun TrainingCard(content: @Composable ColumnScope.() -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(20.dp),
+        shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining),
+        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
         elevation = CardDefaults.cardElevation(2.dp)
     ) { Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp), content = content) }
 }
@@ -215,9 +216,10 @@ fun JobTrainingScreen() {
         }
     }
     CompositionLocalProvider(LocalContentColor provides darkTraining, LocalTextStyle provides LocalTextStyle.current.copy(color = darkTraining)) {
-    Column(Modifier.fillMaxSize().background(paleTraining)) {
+    Box(Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient)) {
+    Column(Modifier.fillMaxSize()) {
         Row(
-            Modifier.fillMaxWidth().background(Color.White).padding(16.dp),
+            Modifier.fillMaxWidth().background(Color(0xFFFFFDF9)).border(BorderStroke(0.75.dp, Color(0xFFF1E5DC))).padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             if (stage != "catalog") TextButton(onClick = {
@@ -230,8 +232,18 @@ fun JobTrainingScreen() {
             }) { Text("‹", color = darkTraining, fontSize = 28.sp) }
             Text("▣ KarirMate", color = orangeTraining, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
             Spacer(Modifier.weight(1f))
-            Surface(color = orangeTraining, shape = RoundedCornerShape(50.dp)) {
-                Text("♛ PRO", Modifier.padding(horizontal = 13.dp, vertical = 6.dp), color = Color.White, fontWeight = FontWeight.Bold)
+            Surface(
+                color = Color(0xFFFFF0E5),
+                shape = RoundedCornerShape(10.dp),
+                border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+            ) {
+                Text(
+                    "♛ PRO",
+                    Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                    color = orangeTraining,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 11.5.sp
+                )
             }
         }
         Column(
@@ -242,7 +254,12 @@ fun JobTrainingScreen() {
                 "catalog" -> {
                     Text("Pelatihan Kerja", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
                     Text("Tingkatkan skill, kuasai kompetensi, dan dapatkan sertifikat penyelesaian.", color = darkTraining)
-                    Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFEEDB), contentColor = darkTraining), shape = RoundedCornerShape(20.dp)) {
+                    Card(
+                        colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining),
+                        shape = RoundedCornerShape(16.dp),
+                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        elevation = CardDefaults.cardElevation(2.dp)
+                    ) {
                         Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             Text("Siapkan Karier Impianmu Lewat Pelatihan Terarah", fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
                             listOf("✓ Materi praktis", "✓ Latihan & evaluasi", "✓ Sertifikat penyelesaian KarirMate").forEach {
@@ -254,7 +271,13 @@ fun JobTrainingScreen() {
                     Text("Jelajahi Posisi Pekerjaan", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = darkTraining)
                     Text("${TrainingPositions.groups.size} bidang • ${TrainingPositions.count} posisi tersedia", color = darkTraining)
                     TrainingPositions.groups.forEachIndexed { index, group ->
-                        OutlinedButton(colors = trainingButtonColors, onClick = { selectedCategory = index; stage = "positions" }, modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)) {
+                        OutlinedButton(
+                            colors = trainingButtonColors,
+                            shape = RoundedCornerShape(12.dp),
+                            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                            onClick = { selectedCategory = index; stage = "positions" },
+                            modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)
+                        ) {
                             Text("${group.category}  (${group.positions.size} posisi)", color = darkTraining, fontWeight = FontWeight.SemiBold)
                         }
                     }
@@ -265,7 +288,9 @@ fun JobTrainingScreen() {
                                 Card(
                                     modifier = Modifier.weight(1f).height(120.dp).clickable { choose(item.id) },
                                     shape = RoundedCornerShape(16.dp),
-                                    colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining)
+                                    colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining),
+                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                    elevation = CardDefaults.cardElevation(2.dp)
                                 ) {
                                     Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
                                         Text("▣", color = orangeTraining, fontSize = 28.sp)
@@ -277,7 +302,13 @@ fun JobTrainingScreen() {
                         }
                     }
                     Text("Sertifikat penyelesaian adalah bukti latihan internal, bukan sertifikasi kompetensi resmi BNSP.", fontSize = 12.sp, color = darkTraining)
-                    OutlinedButton(colors = trainingButtonColors, onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)) { Text("Lihat Riwayat Sertifikat") }
+                    OutlinedButton(
+                        colors = trainingButtonColors,
+                        shape = RoundedCornerShape(12.dp),
+                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        onClick = { stage = "history" },
+                        modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)
+                    ) { Text("Lihat Riwayat Sertifikat", fontWeight = FontWeight.SemiBold) }
                 }
                 "positions" -> {
                     val group = TrainingPositions.groups[selectedCategory]
@@ -332,7 +363,9 @@ fun JobTrainingScreen() {
                             enabled = unlocked,
                             modifier = Modifier.fillMaxWidth(),
                             colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining, disabledContainerColor = Color(0xFFF1F5F9), disabledContentColor = trainingDisabledText),
-                            shape = RoundedCornerShape(14.dp)
+                            shape = RoundedCornerShape(14.dp),
+                            border = BorderStroke(1.dp, if (done) Color(0xFFBBF7D0) else Color(0xFFFFDEC9)),
+                            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                         ) {
                             Row(Modifier.padding(15.dp), verticalAlignment = Alignment.CenterVertically) {
                                 Text(if (done) "✓" else if (unlocked) "▶" else "🔒", color = if (done) tealTraining else orangeTraining)
@@ -408,9 +441,9 @@ fun JobTrainingScreen() {
                             disabledTextColor = darkTraining,
                             focusedLabelColor = darkTraining,
                             unfocusedLabelColor = darkTraining,
-                            focusedBorderColor = Color(0xFF2563EB),
-                            unfocusedBorderColor = trainingDisabledText,
-                            cursorColor = darkTraining
+                            focusedBorderColor = orangeTraining,
+                            unfocusedBorderColor = Color(0xFFFFDEC9),
+                            cursorColor = orangeTraining
                         )
                     )
                     val practiceResult = TrainingPractice.assess(practice)
@@ -452,7 +485,7 @@ fun JobTrainingScreen() {
                                 onClick = { saveAnswer(questionIndex, index) },
                                 modifier = Modifier.fillMaxWidth(),
                                 colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFEAD7) else Color.White, contentColor = darkTraining),
-                                border = BorderStroke(1.dp, if (selected) orangeTraining else Color(0xFFE1E5EA))
+                                border = BorderStroke(1.dp, if (selected) orangeTraining else Color(0xFFFFDEC9))
                             ) {
                                 Row(Modifier.padding(10.dp), verticalAlignment = Alignment.CenterVertically) {
                                     RadioButton(selected, onClick = { saveAnswer(questionIndex, index) })
@@ -546,10 +579,16 @@ fun JobTrainingScreen() {
                             TextButton(onClick = { certificate = item; stage = "certificate" }) { Text("Buka Sertifikat") }
                         }
                     }
-                    OutlinedButton(colors = trainingButtonColors, onClick = { stage = "catalog" }) { Text("Kembali ke Katalog") }
+                    OutlinedButton(
+                        colors = trainingButtonColors,
+                        shape = RoundedCornerShape(12.dp),
+                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        onClick = { stage = "catalog" }
+                    ) { Text("Kembali ke Katalog", fontWeight = FontWeight.SemiBold) }
                 }
             }
         }
+    }
     }
     }
 }

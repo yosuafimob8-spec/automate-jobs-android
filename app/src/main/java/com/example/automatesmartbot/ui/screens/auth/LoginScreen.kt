@@ -1,5 +1,6 @@
 package com.example.automatesmartbot.ui.screens.auth
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -19,6 +20,12 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.automatesmartbot.ui.components.BrandLogo
+import com.example.automatesmartbot.ui.theme.KarirOrange
+import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
+import com.example.automatesmartbot.ui.theme.KarirPageGradient
+import com.example.automatesmartbot.ui.theme.KarirTextDark
+import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import com.example.automatesmartbot.ui.viewmodel.AuthViewModel
 
 @Composable
@@ -36,34 +43,53 @@ fun LoginScreen(
     val errorMessage by viewModel.errorMessage.collectAsState()
     val successMessage by viewModel.successMessage.collectAsState()
 
+    val textFieldColors = OutlinedTextFieldDefaults.colors(
+        focusedBorderColor = KarirOrange,
+        unfocusedBorderColor = Color(0xFFFFDEC9),
+        focusedLabelColor = KarirOrange,
+        unfocusedLabelColor = KarirTextMuted,
+        cursorColor = KarirOrange,
+        focusedContainerColor = Color.White,
+        unfocusedContainerColor = Color.White,
+        focusedTextColor = KarirTextDark,
+        unfocusedTextColor = KarirTextDark
+    )
+
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF0D1B2A))
+            .background(KarirPageGradient)
             .padding(24.dp),
         contentAlignment = Alignment.Center
     ) {
         Card(
-            colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
-            shape = RoundedCornerShape(16.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            shape = RoundedCornerShape(20.dp),
+            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+            elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
             Column(
-                modifier = Modifier.padding(24.dp),
+                modifier = Modifier.padding(26.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                Text(
-                    text = "Masuk KarirMate",
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 22.sp,
-                    color = Color.White
+                BrandLogo(
+                    modifier = Modifier.size(48.dp)
                 )
 
                 Text(
-                    text = "Masukkan email dan password akun terverifikasi Anda.",
-                    fontSize = 13.sp,
-                    color = Color(0xFF94A3B8),
+                    text = "Masuk ke KarirMate",
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 22.sp,
+                    color = KarirTextDark
+                )
+
+                Text(
+                    text = "Gunakan email dan password terdaftar untuk mengakses layanan pencarian kerja terpercaya.",
+                    fontSize = 12.5.sp,
+                    color = KarirTextMuted,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
 
@@ -71,16 +97,10 @@ fun LoginScreen(
                     value = email,
                     onValueChange = { email = it },
                     label = { Text("Email") },
-                    leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = Color(0xFF60A5FA)) },
+                    leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = KarirOrange) },
                     shape = RoundedCornerShape(12.dp),
-                    colors = OutlinedTextFieldDefaults.colors(
-                        focusedBorderColor = Color(0xFF3B82F6),
-                        unfocusedBorderColor = Color(0xFF334155),
-                        focusedContainerColor = Color(0xFF0D1B2A),
-                        unfocusedContainerColor = Color(0xFF0D1B2A),
-                        focusedTextColor = Color.White,
-                        unfocusedTextColor = Color.White
-                    ),
+                    colors = textFieldColors,
+                    singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
 
@@ -88,26 +108,20 @@ fun LoginScreen(
                     value = password,
                     onValueChange = { password = it },
                     label = { Text("Password") },
-                    leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null, tint = Color(0xFF60A5FA)) },
+                    leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null, tint = KarirOrange) },
                     trailingIcon = {
                         IconButton(onClick = { passwordVisible = !passwordVisible }) {
                             Icon(
                                 imageVector = if (passwordVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
                                 contentDescription = null,
-                                tint = Color(0xFF94A3B8)
+                                tint = KarirTextMuted
                             )
                         }
                     },
                     visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
                     shape = RoundedCornerShape(12.dp),
-                    colors = OutlinedTextFieldDefaults.colors(
-                        focusedBorderColor = Color(0xFF3B82F6),
-                        unfocusedBorderColor = Color(0xFF334155),
-                        focusedContainerColor = Color(0xFF0D1B2A),
-                        unfocusedContainerColor = Color(0xFF0D1B2A),
-                        focusedTextColor = Color.White,
-                        unfocusedTextColor = Color.White
-                    ),
+                    colors = textFieldColors,
+                    singleLine = true,
                     modifier = Modifier.fillMaxWidth()
                 )
 
@@ -116,7 +130,7 @@ fun LoginScreen(
                     horizontalArrangement = Arrangement.End
                 ) {
                     TextButton(onClick = onNavigateForgot) {
-                        Text("Lupa Password?", fontSize = 13.sp, color = Color(0xFF60A5FA))
+                        Text("Lupa Password?", fontSize = 12.5.sp, color = KarirOrangeDeep, fontWeight = FontWeight.SemiBold)
                     }
                 }
 
@@ -124,25 +138,51 @@ fun LoginScreen(
                     onClick = {
                         viewModel.login(email, password, onLoginSuccess)
                     },
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3B82F6)),
+                    colors = ButtonDefaults.buttonColors(containerColor = KarirOrange),
                     shape = RoundedCornerShape(12.dp),
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(50.dp)
                 ) {
                     if (isLoading) {
-                        CircularProgressIndicator(color = Color.White, modifier = Modifier.size(24.dp))
+                        CircularProgressIndicator(color = Color.White, modifier = Modifier.size(22.dp))
                     } else {
                         Text("Masuk", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                     }
                 }
 
                 errorMessage?.let { err ->
-                    Text(text = err, fontSize = 12.sp, color = Color(0xFFEF4444))
+                    Surface(
+                        shape = RoundedCornerShape(8.dp),
+                        color = Color(0xFFFEE2E2),
+                        border = BorderStroke(1.dp, Color(0xFFFECACA)),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(
+                            text = err,
+                            fontSize = 12.sp,
+                            color = Color(0xFFDC2626),
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(10.dp)
+                        )
+                    }
                 }
 
                 successMessage?.let { msg ->
-                    Text(text = msg, fontSize = 12.sp, color = Color(0xFF34D399))
+                    Surface(
+                        shape = RoundedCornerShape(8.dp),
+                        color = Color(0xFFDCFCE7),
+                        border = BorderStroke(1.dp, Color(0xFFBBF7D0)),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text(
+                            text = msg,
+                            fontSize = 12.sp,
+                            color = Color(0xFF16A34A),
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(10.dp)
+                        )
+                    }
                 }
 
                 Row(
@@ -150,9 +190,9 @@ fun LoginScreen(
                     horizontalArrangement = Arrangement.Center,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text("Belum punya akun?", fontSize = 13.sp, color = Color(0xFF94A3B8))
+                    Text("Belum punya akun?", fontSize = 13.sp, color = KarirTextMuted)
                     TextButton(onClick = onNavigateRegister) {
-                        Text("Daftar", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = Color(0xFF3B82F6))
+                        Text("Daftar Sekarang", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = KarirOrangeDeep)
                     }
                 }
             }

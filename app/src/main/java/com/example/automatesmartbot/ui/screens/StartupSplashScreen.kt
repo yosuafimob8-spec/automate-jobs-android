@@ -1,16 +1,20 @@
 package com.example.automatesmartbot.ui.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.SmartToy
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -20,53 +24,67 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.automatesmartbot.ui.theme.DarkBackground
-import com.example.automatesmartbot.ui.theme.LightBlueAccent
-import com.example.automatesmartbot.ui.theme.TextGray
-import com.example.automatesmartbot.ui.theme.TextWhite
+import com.example.automatesmartbot.ui.components.BrandLogo
+import com.example.automatesmartbot.ui.theme.KarirOrange
+import com.example.automatesmartbot.ui.theme.KarirPageGradient
+import com.example.automatesmartbot.ui.theme.KarirTextDark
+import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 @Composable
 fun StartupSplashScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(DarkBackground),
+            .background(KarirPageGradient),
         contentAlignment = Alignment.Center
     ) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+        Card(
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            shape = RoundedCornerShape(24.dp),
+            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+            elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+            modifier = Modifier.padding(32.dp)
         ) {
-            Surface(
-                color = Color(0xFF1B263B),
-                shape = CircleShape,
-                modifier = Modifier.size(88.dp)
+            Column(
+                modifier = Modifier.padding(horizontal = 36.dp, vertical = 32.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(14.dp)
             ) {
-                Box(contentAlignment = Alignment.Center) {
-                    Icon(
-                        imageVector = Icons.Default.SmartToy,
-                        contentDescription = null,
-                        tint = LightBlueAccent,
-                        modifier = Modifier.size(44.dp)
-                    )
+                Surface(
+                    color = Color(0xFFFFF2E5),
+                    shape = CircleShape,
+                    border = BorderStroke(1.5.dp, Color(0xFFFFDEC9)),
+                    modifier = Modifier.size(80.dp)
+                ) {
+                    Box(
+                        contentAlignment = Alignment.Center,
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        BrandLogo(modifier = Modifier.size(52.dp))
+                    }
                 }
+
+                Text(
+                    text = "KarirMate",
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 24.sp,
+                    color = KarirTextDark
+                )
+
+                Text(
+                    text = "Menyiapkan akun Anda...",
+                    fontSize = 13.sp,
+                    color = KarirTextMuted
+                )
+
+                Spacer(modifier = Modifier.height(4.dp))
+
+                CircularProgressIndicator(
+                    color = KarirOrange,
+                    strokeWidth = 2.5.dp,
+                    modifier = Modifier.size(24.dp)
+                )
             }
-            Text(
-                text = "AutoMateSmartBot",
-                fontWeight = FontWeight.Bold,
-                fontSize = 22.sp,
-                color = TextWhite
-            )
-            Text(
-                text = "Menyiapkan akun Anda",
-                fontSize = 12.sp,
-                color = TextGray
-            )
-            CircularProgressIndicator(
-                color = LightBlueAccent,
-                strokeWidth = 2.dp,
-                modifier = Modifier.size(24.dp)
-            )
         }
     }
 }

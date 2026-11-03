@@ -10,9 +10,6 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.horizontalScroll
-import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.foundation.layout.Box
@@ -69,6 +66,11 @@ import com.example.automatesmartbot.data.model.UserMeResponse
 import com.example.automatesmartbot.data.repository.AuthRepository
 import com.example.automatesmartbot.data.repository.ProfileSetupRepository
 import com.example.automatesmartbot.ui.components.CvSection
+import com.example.automatesmartbot.ui.theme.KarirOrange
+import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
+import com.example.automatesmartbot.ui.theme.KarirPageGradient
+import com.example.automatesmartbot.ui.theme.KarirTextDark
+import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import com.example.automatesmartbot.ui.theme.ThemeMode
 import com.example.automatesmartbot.ui.theme.ThemePreference
 import kotlinx.coroutines.launch
@@ -126,15 +128,17 @@ fun ProfilScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF7F8FA))
+            .background(KarirPageGradient)
     ) {
         if (isLoading && profile == null && errorMessage == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator(color = Color(0xFF00796F))
+                CircularProgressIndicator(color = KarirOrange)
             }
         } else if (errorMessage != null && profile == null) {
             Column(
-                modifier = Modifier.fillMaxSize(),
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(24.dp),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -152,18 +156,19 @@ fun ProfilScreen(
                         "Sesi Anda tetap tersimpan. Sambungkan internet lalu coba lagi."
                     },
                     fontSize = 13.sp,
-                    color = Color(0xFF555555),
+                    color = KarirTextMuted,
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Button(
                     onClick = { fetchProfileData() },
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00A99D))
+                    colors = ButtonDefaults.buttonColors(containerColor = KarirOrange),
+                    shape = RoundedCornerShape(12.dp)
                 ) {
-                    Text("Coba Lagi")
+                    Text("Coba Lagi", fontWeight = FontWeight.Bold)
                 }
                 TextButton(onClick = onNavigateLogin) {
-                    Text("Masuk / Login", color = Color(0xFFFF6B00))
+                    Text("Masuk / Login", color = KarirOrangeDeep, fontWeight = FontWeight.SemiBold)
                 }
             }
         } else {
@@ -174,27 +179,81 @@ fun ProfilScreen(
                     .padding(bottom = 24.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                Column(
-                    Modifier.fillMaxWidth().background(
-                        Brush.horizontalGradient(listOf(Color(0xFFF35B12), Color(0xFFFFA037))),
-                        RoundedCornerShape(bottomStart = 28.dp, bottomEnd = 28.dp)
-                    ).padding(horizontal = 22.dp, vertical = 28.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                // Header Banner
+                Card(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 8.dp),
+                    shape = RoundedCornerShape(16.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                 ) {
-                    Text("KarirMate  •  PROFIL", color = Color.White.copy(alpha = 0.9f), fontWeight = FontWeight.Bold, fontSize = 13.sp)
-                    Text("Profil Saya", fontWeight = FontWeight.ExtraBold, fontSize = 29.sp, color = Color.White)
-                    Text("Kelola data diri dan kebutuhan kariermu", color = Color.White, fontSize = 14.sp)
+                    Column(
+                        modifier = Modifier.padding(18.dp),
+                        verticalArrangement = Arrangement.spacedBy(6.dp)
+                    ) {
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalArrangement = Arrangement.SpaceBetween,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Text(
+                                "KARIRMATE • PROFIL",
+                                color = KarirOrange,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 11.5.sp
+                            )
+                            Surface(
+                                shape = RoundedCornerShape(10.dp),
+                                color = Color(0xFFFFF3E0),
+                                border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                            ) {
+                                Text(
+                                    "DATA UTAMA",
+                                    Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
+                                    color = Color(0xFFE65100),
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 10.5.sp
+                                )
+                            }
+                        }
+                        Text(
+                            "Profil Saya",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 22.sp,
+                            color = KarirTextDark
+                        )
+                        Text(
+                            "Kelola data diri, kontak, preferensi, dan kelengkapan CV Anda.",
+                            color = KarirTextMuted,
+                            fontSize = 12.5.sp
+                        )
+                    }
                 }
+
                 Box(Modifier.padding(horizontal = 16.dp)) {
-                    ProfileIdentityCard(profile = profile, account = account, errorMessage = errorMessage, photoUri = photoUri, onPickPhoto = { photoPicker.launch(arrayOf("image/*")) }, onNavigateEditProfile = onNavigateEditProfile, onLogout = { authRepository.logout(); onNavigateLogin() })
+                    ProfileIdentityCard(
+                        profile = profile,
+                        account = account,
+                        errorMessage = errorMessage,
+                        photoUri = photoUri,
+                        onPickPhoto = { photoPicker.launch(arrayOf("image/*")) },
+                        onNavigateEditProfile = onNavigateEditProfile,
+                        onLogout = { authRepository.logout(); onNavigateLogin() }
+                    )
                 }
 
-                Box(Modifier.padding(horizontal = 16.dp)) { CvSection() }
+                Box(Modifier.padding(horizontal = 16.dp)) {
+                    CvSection()
+                }
 
-                Box(Modifier.padding(horizontal = 16.dp)) { AppearanceCard(
-                    selectedMode = themePreference.mode,
-                    onModeSelected = themePreference::selectMode
-                ) }
+                Box(Modifier.padding(horizontal = 16.dp)) {
+                    AppearanceCard(
+                        selectedMode = themePreference.mode,
+                        onModeSelected = themePreference::selectMode
+                    )
+                }
             }
         }
     }
@@ -203,28 +262,33 @@ fun ProfilScreen(
 @Composable
 private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) -> Unit) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = Color(0xFF202020)),
-        shape = RoundedCornerShape(18.dp),
-        border = BorderStroke(1.dp, Color(0xFFE9E9E9)),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        shape = RoundedCornerShape(16.dp),
+        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(
-            modifier = Modifier.padding(16.dp),
+            modifier = Modifier.padding(18.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            Text("Tampilan", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface, fontSize = 16.sp)
-            Text("Pilih mode warna Karir Mate.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
+            Text("Tema Tampilan", fontWeight = FontWeight.Bold, color = KarirTextDark, fontSize = 16.sp)
+            Text("Pilih mode tampilan Karir Mate yang nyaman bagi Anda.", color = KarirTextMuted, fontSize = 12.sp)
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 ThemeMode.entries.forEach { mode ->
+                    val selected = selectedMode == mode
                     androidx.compose.material3.FilterChip(
                         modifier = Modifier.weight(1f),
-                        selected = selectedMode == mode,
+                        selected = selected,
                         onClick = { onModeSelected(mode) },
-                        label = { Text(mode.label, maxLines = 1, fontSize = 11.sp) },
+                        label = { Text(mode.label, maxLines = 1, fontSize = 11.5.sp, fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal) },
                         colors = androidx.compose.material3.FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = Color(0xFF00A99D),
-                            selectedLabelColor = Color.White
-                        )
+                            selectedContainerColor = Color(0xFFFFF3E0),
+                            selectedLabelColor = Color(0xFFE65100),
+                            containerColor = Color.White,
+                            labelColor = KarirTextDark
+                        ),
+                        border = BorderStroke(1.dp, if (selected) KarirOrange else Color(0xFFFFDEC9))
                     )
                 }
             }
@@ -246,24 +310,23 @@ fun ProfileDetailRow(
         Row(
             modifier = Modifier.weight(1f),
             verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
+            horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            Icon(icon, contentDescription = null, tint = Color(0xFFC54814), modifier = Modifier.size(16.dp))
-            Text(text = label, fontSize = 13.sp, color = Color(0xFF555555))
+            Icon(icon, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(16.dp))
+            Text(text = label, fontSize = 13.sp, color = KarirTextMuted)
         }
         Text(
             text = value,
             modifier = Modifier.weight(1f),
             fontSize = 13.sp,
             fontWeight = FontWeight.SemiBold,
-            color = Color(0xFF17212B),
+            color = KarirTextDark,
             textAlign = TextAlign.End,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
         )
     }
 }
-
 
 @Composable
 private fun ProfileIdentityCard(
@@ -280,169 +343,277 @@ private fun ProfileIdentityCard(
     val completeCount = profileFields.count { !it.isNullOrBlank() } + listOf(profile?.desiredPositions, profile?.preferredLocations).count { !it.isNullOrEmpty() }
     val completion = completeCount / 7f
     val avatar = remember(photoUri) { runCatching { photoUri?.let { context.contentResolver.openInputStream(Uri.parse(it))?.use(BitmapFactory::decodeStream)?.asImageBitmap() } }.getOrNull() }
-                Card(
-                    colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = Color(0xFF202020)),
-                    shape = RoundedCornerShape(24.dp),
-                    border = BorderStroke(1.dp, Color(0xFFE9E9E9)),
-                    modifier = Modifier.fillMaxWidth()
+
+    Card(
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        shape = RoundedCornerShape(16.dp),
+        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(
+            modifier = Modifier.padding(18.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(14.dp)
+        ) {
+            Row(
+                Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(14.dp)
+            ) {
+                Surface(
+                    color = Color(0xFFFFF3E0),
+                    border = BorderStroke(1.5.dp, Color(0xFFFFDEC9)),
+                    shape = RoundedCornerShape(50),
+                    modifier = Modifier.size(80.dp)
                 ) {
-                    Column(
-                        modifier = Modifier.padding(20.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.spacedBy(12.dp)
-                    ) {
-                        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-                            Surface(color = Color(0xFFFFF3E8), shape = RoundedCornerShape(50), modifier = Modifier.size(82.dp)) {
-                                Box(contentAlignment = Alignment.Center) {
-                                    if (avatar != null) Image(bitmap = avatar, contentDescription = "Foto profil", modifier = Modifier.fillMaxSize(), contentScale = androidx.compose.ui.layout.ContentScale.Crop)
-                                    else Icon(Icons.Default.Person, contentDescription = "Foto profil belum tersedia", tint = Color(0xFFC54814), modifier = Modifier.size(44.dp))
-                                }
-                            }
-                            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(5.dp)) {
-                                Text(profile?.fullName?.takeIf { it.isNotBlank() } ?: "Nama belum diisi", fontWeight = FontWeight.ExtraBold, fontSize = 18.sp, color = Color(0xFF17212B))
-                                Surface(color = Color(0xFFFFF0CC), shape = RoundedCornerShape(12.dp)) {
-                                    Text("Pencari Kerja", color = Color(0xFF784A08), fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp))
-                                }
-                            }
-                            Icon(Icons.Default.Edit, contentDescription = "Edit profil", tint = Color(0xFFFF6B00), modifier = Modifier.size(22.dp).clickable(onClick = onNavigateEditProfile))
-                        }
-
-                        TextButton(onClick = onPickPhoto) { Text("📷  ${if (photoUri == null) "Tambah Foto" else "Ganti Foto"}", color = Color(0xFFFF6B00)) }
-                        Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFBF6)), shape = RoundedCornerShape(16.dp), border = BorderStroke(1.dp, Color(0xFFFFE6CE))) {
-                            Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                                    Text("Kelengkapan Profil", color = Color(0xFF14212C), fontWeight = FontWeight.Bold)
-                                    Text("${(completion * 100).toInt()}%", color = Color(0xFF0A9E45), fontWeight = FontWeight.Bold)
-                                }
-                                LinearProgressIndicator(progress = { completion }, modifier = Modifier.fillMaxWidth().height(8.dp), color = Color(0xFFFF6B00), trackColor = Color(0xFFFFE3CC))
-                                Text(if (completeCount == 7) "✓ Profil kamu sudah lengkap!" else "Lengkapi ${7 - completeCount} bagian profil untuk memaksimalkan lamaranmu.", color = Color(0xFF167B3D), fontSize = 12.sp)
-                            }
-                        }
-
-                        Surface(
-                            color = if (profile?.completed == true) Color(0xFFDCFCE7) else Color(0xFFFEE2E2),
-                            shape = RoundedCornerShape(8.dp)
-                        ) {
-                            Text(
-                                text = if (profile?.completed == true) "PROFIL LENGKAP" else "PROFIL BELUM LENGKAP",
-                                color = if (profile?.completed == true) Color(0xFF166534) else Color(0xFF991B1B),
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 11.sp,
-                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
+                    Box(contentAlignment = Alignment.Center) {
+                        if (avatar != null) {
+                            Image(
+                                bitmap = avatar,
+                                contentDescription = "Foto profil",
+                                modifier = Modifier.fillMaxSize(),
+                                contentScale = androidx.compose.ui.layout.ContentScale.Crop
                             )
-                        }
-
-                        Surface(
-                            color = when (account?.isEmailVerified) {
-                                true -> Color(0xFFDCFCE7)
-                                false -> Color(0xFFFEE2E2)
-                                null -> Color(0xFFE2E8F0)
-                            },
-                            shape = RoundedCornerShape(8.dp)
-                        ) {
-                            Text(
-                                text = when (account?.isEmailVerified) {
-                                    true -> "EMAIL TERVERIFIKASI"
-                                    false -> "EMAIL BELUM TERVERIFIKASI"
-                                    null -> "STATUS EMAIL TIDAK DIKETAHUI"
-                                },
-                                color = Color(0xFF17212B),
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 11.sp,
-                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
-                            )
-                        }
-
-                        Spacer(modifier = Modifier.height(4.dp))
-                        HorizontalDivider(color = Color(0xFFE8EDF1))
-                        Text("INFORMASI PRIBADI", color = Color(0xFF00796F), fontWeight = FontWeight.Bold, fontSize = 12.sp, modifier = Modifier.fillMaxWidth())
-
-                        ProfileDetailRow(icon = Icons.Default.Email, label = "Email", value = account?.email ?: "-")
-                        ProfileDetailRow(icon = Icons.Default.Phone, label = "No. HP", value = profile?.whatsapp ?: "-")
-                        ProfileDetailRow(icon = Icons.Default.LocationOn, label = "Domisili", value = profile?.domicile ?: "-")
-                        ProfileDetailRow(icon = Icons.Default.School, label = "Pendidikan", value = profile?.education ?: "-")
-                        HorizontalDivider(color = Color(0xFFE8EDF1))
-                        Text("PREFERENSI KARIER", color = Color(0xFF00796F), fontWeight = FontWeight.Bold, fontSize = 12.sp, modifier = Modifier.fillMaxWidth().padding(top = 8.dp))
-                        ProfileDetailRow(
-                            icon = Icons.Default.Work,
-                            label = "Posisi Diminati",
-                            value = profile?.desiredPositions?.joinToString(", ") ?: "-"
-                        )
-                        ProfileDetailRow(
-                            icon = Icons.Default.LocationOn,
-                            label = "Lokasi Kerja",
-                            value = profile?.preferredLocations?.joinToString(", ") ?: "-"
-                        )
-                        ProfileDetailRow(
-                            icon = Icons.Default.Email,
-                            label = "Email Lamaran",
-                            value = profile?.applicationEmail ?: "-"
-                        )
-
-                        Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFF9FBFD)), shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, Color(0xFFE8EDF1)), modifier = Modifier.fillMaxWidth()) {
-                            Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                                Text("▥  Ringkasan Karier", fontWeight = FontWeight.ExtraBold, fontSize = 16.sp, color = Color(0xFF17212B))
-                                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                    CareerSummaryTile("CV", "Buka CV", Color(0xFFEAF2FF), Modifier.weight(1f))
-                                    CareerSummaryTile("Lamaran", "Riwayat", Color(0xFFF4E9FF), Modifier.weight(1f))
-                                    CareerSummaryTile("Dokumen", "Kelola", Color(0xFFE8FAEF), Modifier.weight(1f))
-                                }
-                                Text("Ringkasan fitur. Jumlah dokumen dan lamaran belum tersedia dari API profil.", fontSize = 11.sp, color = Color(0xFF667583))
-                            }
-                        }
-
-                        Spacer(modifier = Modifier.height(8.dp))
-
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            Button(
-                                onClick = onNavigateEditProfile,
-                                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF6B00)),
-                                shape = RoundedCornerShape(12.dp),
-                                modifier = Modifier.weight(1f)
-                            ) {
-                                Icon(Icons.Default.Edit, contentDescription = null, modifier = Modifier.size(16.dp))
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text("Edit Profil", fontSize = 13.sp, fontWeight = FontWeight.Bold)
-                            }
-
-                            OutlinedButton(
-                                onClick = onLogout,
-                                colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFFB91C1C)),
-                                shape = RoundedCornerShape(12.dp),
-                                modifier = Modifier.weight(1f)
-                            ) {
-                                Icon(
-                                    imageVector = Icons.AutoMirrored.Filled.ExitToApp,
-                                    contentDescription = null,
-                                    modifier = Modifier.size(16.dp)
-                                )
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text("Keluar", fontSize = 13.sp)
-                            }
-                        }
-
-                        errorMessage?.let { error ->
-                            Text(
-                                text = error,
-                                fontSize = 12.sp,
-                                color = MaterialTheme.colorScheme.error,
-                                textAlign = TextAlign.Center
+                        } else {
+                            Icon(
+                                Icons.Default.Person,
+                                contentDescription = "Foto profil belum tersedia",
+                                tint = KarirOrange,
+                                modifier = Modifier.size(42.dp)
                             )
                         }
                     }
                 }
+                Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text(
+                        profile?.fullName?.takeIf { it.isNotBlank() } ?: "Nama belum diisi",
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 18.sp,
+                        color = KarirTextDark
+                    )
+                    Surface(
+                        color = Color(0xFFFFF3E0),
+                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        shape = RoundedCornerShape(10.dp)
+                    ) {
+                        Text(
+                            "Pencari Kerja",
+                            color = Color(0xFFE65100),
+                            fontSize = 11.sp,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
+                        )
+                    }
+                }
+                IconButton(onClick = onNavigateEditProfile) {
+                    Icon(
+                        Icons.Default.Edit,
+                        contentDescription = "Edit profil",
+                        tint = KarirOrange,
+                        modifier = Modifier.size(22.dp)
+                    )
+                }
+            }
+
+            TextButton(onClick = onPickPhoto) {
+                Text(
+                    "📷  ${if (photoUri == null) "Tambah Foto Profil" else "Ganti Foto Profil"}",
+                    color = KarirOrangeDeep,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 12.5.sp
+                )
+            }
+
+            Card(
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFBF7)),
+                shape = RoundedCornerShape(14.dp),
+                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                        Text("Kelengkapan Profil", color = KarirTextDark, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                        Text("${(completion * 100).toInt()}%", color = Color(0xFF16A34A), fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                    }
+                    LinearProgressIndicator(
+                        progress = { completion },
+                        modifier = Modifier.fillMaxWidth().height(8.dp),
+                        color = KarirOrange,
+                        trackColor = Color(0xFFFFE4D1)
+                    )
+                    Text(
+                        if (completeCount == 7) "✓ Profil Anda sudah lengkap dan optimal!"
+                        else "Lengkapi ${7 - completeCount} bagian profil untuk memaksimalkan peluang kerja.",
+                        color = if (completeCount == 7) Color(0xFF16A34A) else KarirTextMuted,
+                        fontSize = 11.5.sp
+                    )
+                }
+            }
+
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Surface(
+                    color = if (profile?.completed == true) Color(0xFFDCFCE7) else Color(0xFFFEF3C7),
+                    shape = RoundedCornerShape(8.dp),
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text(
+                        text = if (profile?.completed == true) "PROFIL LENGKAP" else "PROFIL BELUM LENGKAP",
+                        color = if (profile?.completed == true) Color(0xFF166534) else Color(0xFF92400E),
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 10.5.sp,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 6.dp)
+                    )
+                }
+
+                Surface(
+                    color = when (account?.isEmailVerified) {
+                        true -> Color(0xFFDCFCE7)
+                        false -> Color(0xFFFEF3C7)
+                        null -> Color(0xFFF1F5F9)
+                    },
+                    shape = RoundedCornerShape(8.dp),
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Text(
+                        text = when (account?.isEmailVerified) {
+                            true -> "EMAIL TERVERIFIKASI"
+                            false -> "EMAIL BELUM VERIFIKASI"
+                            null -> "EMAIL TIDAK DIKETAHUI"
+                        },
+                        color = when (account?.isEmailVerified) {
+                            true -> Color(0xFF166534)
+                            false -> Color(0xFF92400E)
+                            null -> KarirTextMuted
+                        },
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 10.5.sp,
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 6.dp)
+                    )
+                }
+            }
+
+            HorizontalDivider(color = Color(0xFFF1E5DC))
+
+            Text(
+                "INFORMASI PRIBADI",
+                color = KarirOrangeDeep,
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp,
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            ProfileDetailRow(icon = Icons.Default.Email, label = "Email", value = account?.email ?: "-")
+            ProfileDetailRow(icon = Icons.Default.Phone, label = "No. HP / WhatsApp", value = profile?.whatsapp ?: "-")
+            ProfileDetailRow(icon = Icons.Default.LocationOn, label = "Domisili", value = profile?.domicile ?: "-")
+            ProfileDetailRow(icon = Icons.Default.School, label = "Pendidikan", value = profile?.education ?: "-")
+
+            HorizontalDivider(color = Color(0xFFF1E5DC))
+
+            Text(
+                "PREFERENSI KARIER",
+                color = KarirOrangeDeep,
+                fontWeight = FontWeight.Bold,
+                fontSize = 12.sp,
+                modifier = Modifier.fillMaxWidth()
+            )
+
+            ProfileDetailRow(
+                icon = Icons.Default.Work,
+                label = "Posisi Diminati",
+                value = profile?.desiredPositions?.joinToString(", ") ?: "-"
+            )
+            ProfileDetailRow(
+                icon = Icons.Default.LocationOn,
+                label = "Lokasi Kerja",
+                value = profile?.preferredLocations?.joinToString(", ") ?: "-"
+            )
+            ProfileDetailRow(
+                icon = Icons.Default.Email,
+                label = "Email Lamaran",
+                value = profile?.applicationEmail ?: "-"
+            )
+
+            Card(
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFBF7)),
+                shape = RoundedCornerShape(14.dp),
+                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Text("Ringkasan Karier", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = KarirTextDark)
+                    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        CareerSummaryTile("CV", "Buka CV", Color(0xFFFFF3E0), Modifier.weight(1f))
+                        CareerSummaryTile("Lamaran", "Riwayat", Color(0xFFFFF3E0), Modifier.weight(1f))
+                        CareerSummaryTile("Dokumen", "Kelola", Color(0xFFFFF3E0), Modifier.weight(1f))
+                    }
+                    Text("Ringkasan integrasi fitur resmi KarirMate.", fontSize = 11.sp, color = KarirTextMuted)
+                }
+            }
+
+            Spacer(modifier = Modifier.height(6.dp))
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
+            ) {
+                Button(
+                    onClick = onNavigateEditProfile,
+                    colors = ButtonDefaults.buttonColors(containerColor = KarirOrange),
+                    shape = RoundedCornerShape(12.dp),
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Icon(Icons.Default.Edit, contentDescription = null, modifier = Modifier.size(16.dp))
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text("Edit Profil", fontSize = 13.sp, fontWeight = FontWeight.Bold)
+                }
+
+                OutlinedButton(
+                    onClick = onLogout,
+                    colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFFDC2626)),
+                    border = BorderStroke(1.dp, Color(0xFFFECACA)),
+                    shape = RoundedCornerShape(12.dp),
+                    modifier = Modifier.weight(1f)
+                ) {
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ExitToApp,
+                        contentDescription = null,
+                        modifier = Modifier.size(16.dp)
+                    )
+                    Spacer(modifier = Modifier.width(6.dp))
+                    Text("Keluar", fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+                }
+            }
+
+            errorMessage?.let { error ->
+                Text(
+                    text = error,
+                    fontSize = 12.sp,
+                    color = MaterialTheme.colorScheme.error,
+                    textAlign = TextAlign.Center
+                )
+            }
+        }
+    }
 }
 
 @Composable
 private fun CareerSummaryTile(title: String, caption: String, color: Color, modifier: Modifier = Modifier) {
-    Surface(modifier = modifier, color = color, shape = RoundedCornerShape(12.dp)) {
-        Column(Modifier.padding(vertical = 14.dp, horizontal = 5.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-            Text("—", fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, color = Color(0xFF17212B))
-            Text(title, fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFF17212B))
-            Text(caption, fontSize = 10.sp, color = Color(0xFF667583))
+    Surface(
+        modifier = modifier,
+        color = color,
+        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        shape = RoundedCornerShape(12.dp)
+    ) {
+        Column(
+            Modifier.padding(vertical = 12.dp, horizontal = 4.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text("—", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = KarirOrange)
+            Text(title, fontSize = 11.5.sp, fontWeight = FontWeight.Bold, color = KarirTextDark)
+            Text(caption, fontSize = 10.sp, color = KarirTextMuted)
         }
     }
 }

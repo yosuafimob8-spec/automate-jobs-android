@@ -1,5 +1,6 @@
-﻿package com.example.automatesmartbot.ui.screens
+package com.example.automatesmartbot.ui.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -17,6 +18,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.automatesmartbot.ui.theme.KarirOrange
+import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
+import com.example.automatesmartbot.ui.theme.KarirPageGradient
+import com.example.automatesmartbot.ui.theme.KarirTextDark
+import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 data class QponItem(
     val code: String,
@@ -40,7 +46,7 @@ fun PromoScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF5FAFF))
+            .background(KarirPageGradient)
             .padding(16.dp)
     ) {
         Column(
@@ -49,72 +55,83 @@ fun PromoScreen(
         ) {
             // Header Promo Qpon.id
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
-                shape = RoundedCornerShape(20.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                shape = RoundedCornerShape(16.dp),
+                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
-                    modifier = Modifier.padding(20.dp),
+                    modifier = Modifier.padding(18.dp),
                     verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        Icon(Icons.Default.LocalOffer, contentDescription = null, tint = Color(0xFFEC4899))
+                        Surface(
+                            color = Color(0xFFFFF0E5),
+                            shape = RoundedCornerShape(8.dp),
+                            modifier = Modifier.size(36.dp)
+                        ) {
+                            Box(contentAlignment = Alignment.Center) {
+                                Icon(Icons.Default.LocalOffer, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(20.dp))
+                            }
+                        }
                         Text(
-                            text = "ðŸŽ Promo Eksklusif Qpon.id",
+                            text = "Promo Eksklusif Qpon.id",
                             fontWeight = FontWeight.Bold,
-                            fontSize = 18.sp,
-                            color = Color(0xFF17324D)
+                            fontSize = 17.sp,
+                            color = KarirTextDark
                         )
                     }
                     Text(
-                        text = "Gunakan kode kupon resmi Qpon.id di bawah ini untuk mendapatkan potongan harga berlangganan AutoMateSmartBot PRO.",
+                        text = "Gunakan kode kupon resmi Qpon.id di bawah ini untuk mendapatkan potongan harga berlangganan KarirMate PRO.",
                         fontSize = 13.sp,
-                        color = Color(0xFF64748B)
+                        color = KarirTextMuted,
+                        lineHeight = 18.sp
                     )
                 }
             }
 
             // Membership Status Card
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
-                shape = RoundedCornerShape(20.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                shape = RoundedCornerShape(16.dp),
+                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Column(
-                    modifier = Modifier.padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Column {
-                            Text(text = "Status Anda Saat Ini", fontSize = 13.sp, color = Color(0xFF64748B))
-                            Spacer(modifier = Modifier.height(2.dp))
-                            Text(
-                                text = if (isPro) "PRO MEMBER â­" else "FREE MEMBER",
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 18.sp,
-                                color = if (isPro) Color(0xFFF59E0B) else Color(0xFF38BDF8)
-                            )
-                        }
+                    Column {
+                        Text(text = "Status Anda Saat Ini", fontSize = 12.sp, color = KarirTextMuted)
+                        Spacer(modifier = Modifier.height(2.dp))
+                        Text(
+                            text = if (isPro) "PRO MEMBER ⭐" else "FREE MEMBER",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 17.sp,
+                            color = if (isPro) KarirOrange else KarirTextDark
+                        )
+                    }
 
-                        Surface(
-                            color = if (isPro) Color(0xFF065F46) else Color(0xFF22304A),
-                            shape = RoundedCornerShape(8.dp)
-                        ) {
-                            Text(
-                                text = if (isPro) "Status Aktif" else "Belum Upgrade",
-                                color = if (isPro) Color(0xFF34D399) else Color(0xFF64748B),
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 12.sp,
-                                modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
-                            )
-                        }
+                    Surface(
+                        color = if (isPro) Color(0xFFE8F5E9) else Color(0xFFFFF0E5),
+                        border = BorderStroke(1.dp, if (isPro) Color(0xFFA5D6A7) else Color(0xFFFFDEC9)),
+                        shape = RoundedCornerShape(8.dp)
+                    ) {
+                        Text(
+                            text = if (isPro) "Status Aktif" else "Belum Upgrade",
+                            color = if (isPro) Color(0xFF2E7D32) else Color(0xFFE65100),
+                            fontWeight = FontWeight.Bold,
+                            fontSize = 12.sp,
+                            modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
+                        )
                     }
                 }
             }
@@ -122,8 +139,8 @@ fun PromoScreen(
             Text(
                 text = "Daftar Kupon Qpon.id Tersedia",
                 fontWeight = FontWeight.Bold,
-                fontSize = 16.sp,
-                color = Color(0xFF17324D)
+                fontSize = 15.sp,
+                color = KarirTextDark
             )
 
             // Qpon List
@@ -133,15 +150,17 @@ fun PromoScreen(
             ) {
                 items(qponList) { qpon ->
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
-                        shape = RoundedCornerShape(18.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        shape = RoundedCornerShape(16.dp),
+                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(16.dp),
-                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                            verticalArrangement = Arrangement.spacedBy(10.dp)
                         ) {
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
@@ -149,24 +168,26 @@ fun PromoScreen(
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Surface(
-                                    color = Color(0xFF22304A),
+                                    color = Color(0xFFFFF2E5),
+                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
                                     shape = RoundedCornerShape(6.dp)
                                 ) {
                                     Text(
                                         text = qpon.code,
-                                        color = Color(0xFF1678C8),
+                                        color = KarirOrangeDeep,
                                         fontWeight = FontWeight.Bold,
-                                        fontSize = 14.sp,
+                                        fontSize = 13.sp,
                                         modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
                                     )
                                 }
                                 Surface(
-                                    color = Color(0xFF065F46),
+                                    color = Color(0xFFE8F5E9),
+                                    border = BorderStroke(1.dp, Color(0xFFA5D6A7)),
                                     shape = RoundedCornerShape(6.dp)
                                 ) {
                                     Text(
                                         text = qpon.discount,
-                                        color = Color(0xFF34D399),
+                                        color = Color(0xFF2E7D32),
                                         fontWeight = FontWeight.Bold,
                                         fontSize = 12.sp,
                                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
@@ -174,21 +195,45 @@ fun PromoScreen(
                                 }
                             }
 
-                            Text(text = qpon.description, fontSize = 13.sp, color = Color(0xFF17324D))
+                            Text(
+                                text = qpon.description,
+                                fontSize = 13.sp,
+                                color = KarirTextDark,
+                                lineHeight = 18.sp
+                            )
+
+                            HorizontalDivider(color = Color(0xFFF1E5DC), thickness = 0.75.dp)
 
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Text(text = "Berlaku hingga: ${qpon.validUntil}", fontSize = 11.sp, color = Color(0xFF64748B))
+                                Text(
+                                    text = "Berlaku hingga: ${qpon.validUntil}",
+                                    fontSize = 11.5.sp,
+                                    color = KarirTextMuted
+                                )
 
-                                TextButton(onClick = {
-                                    snackbarMessage = "Kode kupon '${qpon.code}' berhasil disalin!"
-                                }) {
-                                    Icon(Icons.Default.ContentCopy, contentDescription = null, modifier = Modifier.size(14.dp), tint = Color(0xFF1678C8))
+                                TextButton(
+                                    onClick = {
+                                        snackbarMessage = "Kode kupon '${qpon.code}' berhasil disalin!"
+                                    },
+                                    contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp)
+                                ) {
+                                    Icon(
+                                        Icons.Default.ContentCopy,
+                                        contentDescription = null,
+                                        modifier = Modifier.size(14.dp),
+                                        tint = KarirOrange
+                                    )
                                     Spacer(modifier = Modifier.width(4.dp))
-                                    Text("Salin Kupon", fontSize = 12.sp, color = Color(0xFF1678C8))
+                                    Text(
+                                        "Salin Kupon",
+                                        fontSize = 12.sp,
+                                        fontWeight = FontWeight.SemiBold,
+                                        color = KarirOrange
+                                    )
                                 }
                             }
                         }
@@ -204,15 +249,14 @@ fun PromoScreen(
                     .padding(16.dp),
                 action = {
                     TextButton(onClick = { snackbarMessage = null }) {
-                        Text("OK", color = Color(0xFF1678C8))
+                        Text("OK", color = KarirOrange, fontWeight = FontWeight.Bold)
                     }
                 },
-                containerColor = Color(0xFF22304A),
-                contentColor = Color(0xFF17324D)
+                containerColor = KarirTextDark,
+                contentColor = Color.White
             ) {
                 Text(msg)
             }
         }
     }
 }
-

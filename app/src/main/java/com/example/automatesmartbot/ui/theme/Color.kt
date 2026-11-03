@@ -1,5 +1,6 @@
 package com.example.automatesmartbot.ui.theme
 
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 
 val Navy = Color(0xFF252525)
@@ -33,3 +34,13 @@ val KarirBgCreamBottom = Color(0xFFFFF5EA)
 val KarirCardBorderWarm = Color(0xFFF3EAE2)
 val KarirNavTextUnselected = Color(0xFF334155)
 val KarirNavIconUnselected = Color(0xFF475569)
+
+val KarirPageGradient = Brush.verticalGradient(
+    0.00f to Color(0xFFFFF2E5),
+    0.12f to Color(0xFFFFF7F0),
+    0.30f to Color(0xFFFFFBF7),
+    0.65f to Color(0xFFFAF6F0),
+    0.85f to Color(0xFFFFF7F0),
+    1.00f to Color(0xFFFFF3E6)
+)
+

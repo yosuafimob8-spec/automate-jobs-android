@@ -1,11 +1,17 @@
 package com.example.automatesmartbot.ui.components
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.automatesmartbot.ui.theme.KarirOrange
+import com.example.automatesmartbot.ui.theme.KarirTextDark
+import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 /** A label belongs to its field; all foreground colors follow the enclosing theme. */
 @Composable
@@ -18,17 +24,29 @@ fun AppInput(
     error: String? = null
 ) {
     Column(modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-        Text(label, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Medium)
+        Text(
+            text = label,
+            color = KarirTextDark,
+            fontWeight = FontWeight.Medium,
+            fontSize = 13.sp
+        )
         OutlinedTextField(
-            value = value, onValueChange = onValueChange,
-            modifier = Modifier.fillMaxWidth(), minLines = minLines,
+            value = value,
+            onValueChange = onValueChange,
+            modifier = Modifier.fillMaxWidth(),
+            minLines = minLines,
+            shape = RoundedCornerShape(12.dp),
             isError = error != null,
             colors = OutlinedTextFieldDefaults.colors(
-                focusedTextColor = MaterialTheme.colorScheme.onSurface,
-                unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
-                focusedContainerColor = MaterialTheme.colorScheme.surface,
-                unfocusedContainerColor = MaterialTheme.colorScheme.surface,
-                errorTextColor = MaterialTheme.colorScheme.onSurface
+                focusedTextColor = KarirTextDark,
+                unfocusedTextColor = KarirTextDark,
+                focusedContainerColor = Color.White,
+                unfocusedContainerColor = Color.White,
+                focusedBorderColor = KarirOrange,
+                unfocusedBorderColor = Color(0xFFFFDEC9),
+                cursorColor = KarirOrange,
+                errorTextColor = MaterialTheme.colorScheme.error,
+                errorBorderColor = MaterialTheme.colorScheme.error
             ),
             supportingText = error?.let { { Text(it, color = MaterialTheme.colorScheme.error) } }
         )

@@ -1,19 +1,22 @@
 package com.example.automatesmartbot.ui.screens
 
-import com.example.automatesmartbot.BuildConfig
-import android.graphics.Paint
-import android.graphics.Color
-import com.example.automatesmartbot.data.career.TrainingCertificateIdentity
-import com.google.zxing.BarcodeFormat
-import com.google.zxing.qrcode.QRCodeWriter
-import android.graphics.Typeface
 import android.graphics.pdf.PdfDocument
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.example.automatesmartbot.ui.theme.KarirOrange
+import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -46,8 +49,19 @@ fun TrainingCertificateExport(item: JSONObject) {
             } catch (e: Exception) { status = "Gagal menyimpan sertifikat: ${e.message}" }
         }
     }
-    Button(onClick = { launcher.launch("KarirMate-Sertifikat-Pelatihan.pdf") }) {
-        Text("⬇ Unduh Sertifikat (PDF)")
+    Button(
+        onClick = { launcher.launch("KarirMate-Sertifikat-Pelatihan.pdf") },
+        colors = ButtonDefaults.buttonColors(containerColor = KarirOrange, contentColor = Color.White),
+        shape = RoundedCornerShape(12.dp)
+    ) {
+        Text("⬇ Unduh Sertifikat (PDF)", fontWeight = FontWeight.SemiBold)
     }
-    if (status.isNotBlank()) Text(status)
+    if (status.isNotBlank()) {
+        Text(
+            text = status,
+            fontSize = 12.sp,
+            color = KarirTextMuted,
+            modifier = Modifier.padding(top = 4.dp)
+        )
+    }
 }

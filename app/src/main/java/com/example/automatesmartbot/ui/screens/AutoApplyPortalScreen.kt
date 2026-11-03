@@ -1,5 +1,6 @@
 package com.example.automatesmartbot.ui.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -15,6 +16,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.automatesmartbot.ui.theme.KarirOrange
+import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
+import com.example.automatesmartbot.ui.theme.KarirPageGradient
+import com.example.automatesmartbot.ui.theme.KarirTextDark
+import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 @Composable
 fun AutoApplyPortalScreen(isPro: Boolean) {
@@ -27,7 +33,7 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF5FAFF))
+            .background(KarirPageGradient)
             .padding(16.dp)
     ) {
         Column(
@@ -35,72 +41,78 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
-                shape = RoundedCornerShape(18.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                shape = RoundedCornerShape(16.dp),
+                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Column(modifier = Modifier.padding(16.dp)) {
+                Column(modifier = Modifier.padding(18.dp)) {
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        Icon(Icons.Default.BusinessCenter, contentDescription = null, tint = Color(0xFF10B981))
+                        Icon(Icons.Default.BusinessCenter, contentDescription = null, tint = KarirOrange)
                         Text(
                             text = "Auto Apply Portal Multi-Platform",
                             fontWeight = FontWeight.Bold,
-                            fontSize = 18.sp,
-                            color = Color(0xFF17324D)
+                            fontSize = 17.sp,
+                            color = KarirTextDark
                         )
                     }
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
-                        text = "Otomatisasi lamaran kerja langsung terhubung ke profil Kalibrr, Indeed, dan Glints.",
-                        fontSize = 13.sp,
-                        color = Color(0xFF64748B)
+                        text = "Otomatisasi pengiriman lamaran kerja langsung terhubung ke profil Kalibrr, Indeed, dan Glints Anda.",
+                        fontSize = 12.5.sp,
+                        color = KarirTextMuted
                     )
                 }
             }
 
             // Portal Selector Chips
-            Text(text = "Pilih Platform Portal:", fontSize = 14.sp, fontWeight = FontWeight.Bold, color = Color(0xFF1678C8))
+            Text(text = "Pilih Platform Portal:", fontSize = 13.5.sp, fontWeight = FontWeight.Bold, color = KarirTextDark)
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 portals.forEach { portal ->
+                    val isSelected = selectedPortal == portal
                     FilterChip(
-                        selected = selectedPortal == portal,
+                        selected = isSelected,
                         onClick = { selectedPortal = portal },
-                        label = { Text(portal, fontSize = 13.sp) },
+                        label = { Text(portal, fontSize = 12.5.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal) },
                         colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = Color(0xFF10B981),
-                            selectedLabelColor = Color(0xFF17324D),
-                            containerColor = Color(0xFFFFFFFF),
-                            labelColor = Color(0xFF64748B)
-                        )
+                            selectedContainerColor = Color(0xFFFFF3E0),
+                            selectedLabelColor = Color(0xFFE65100),
+                            containerColor = Color.White,
+                            labelColor = KarirTextDark
+                        ),
+                        border = BorderStroke(1.dp, if (isSelected) KarirOrange else Color(0xFFFFDEC9))
                     )
                 }
             }
 
             // Portal Info Card
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
-                shape = RoundedCornerShape(18.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                shape = RoundedCornerShape(16.dp),
+                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
-                    modifier = Modifier.padding(16.dp),
+                    modifier = Modifier.padding(18.dp),
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    Text(text = "Status Koneksi: $selectedPortal", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(0xFF17324D))
+                    Text(text = "Status Koneksi: $selectedPortal", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = KarirTextDark)
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                        Icon(Icons.Default.CheckCircle, contentDescription = null, tint = Color(0xFF34D399), modifier = Modifier.size(16.dp))
-                        Text(text = "Akun terhubung • Sesi Aktif", fontSize = 13.sp, color = Color(0xFF34D399))
+                        Icon(Icons.Default.CheckCircle, contentDescription = null, tint = Color(0xFF16A34A), modifier = Modifier.size(16.dp))
+                        Text(text = "Akun terhubung • Sesi Aktif", fontSize = 12.5.sp, fontWeight = FontWeight.SemiBold, color = Color(0xFF16A34A))
                     }
                     Text(
-                        text = "Target Posisi: Android Engineer / Kotlin Developer\nResume: CV_Andri_2025.pdf",
+                        text = "Target Posisi: Berdasarkan preferensi profil aktif\nResume: CV terdaftar di backend",
                         fontSize = 12.sp,
-                        color = Color(0xFF64748B)
+                        color = KarirTextMuted
                     )
                 }
             }
@@ -109,15 +121,15 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
                 onClick = {
                     isRunning = !isRunning
                     logText = if (isRunning) {
-                        "Bot Auto Apply aktif di $selectedPortal. Mengirim lamaran..."
+                        "Bot Auto Apply aktif di $selectedPortal. Memproses lamaran..."
                     } else {
                         "Bot dihentikan."
                     }
                 },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (isRunning) Color(0xFFEF4444) else Color(0xFF10B981)
+                    containerColor = if (isRunning) Color(0xFFDC2626) else KarirOrange
                 ),
-                shape = RoundedCornerShape(18.dp),
+                shape = RoundedCornerShape(12.dp),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp)
@@ -127,19 +139,21 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
                 Text(
                     text = if (isRunning) "Hentikan Bot $selectedPortal" else "Mulai Auto Apply di $selectedPortal",
                     fontWeight = FontWeight.Bold,
-                    fontSize = 15.sp
+                    fontSize = 14.5.sp
                 )
             }
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
-                shape = RoundedCornerShape(18.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                shape = RoundedCornerShape(16.dp),
+                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
-                    Text(text = "Log Eksekusi:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color(0xFF10B981))
+                    Text(text = "Log Eksekusi:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = KarirOrangeDeep)
                     Spacer(modifier = Modifier.height(4.dp))
-                    Text(text = logText, fontSize = 13.sp, color = Color(0xFF17324D))
+                    Text(text = logText, fontSize = 12.5.sp, color = KarirTextDark)
                 }
             }
         }

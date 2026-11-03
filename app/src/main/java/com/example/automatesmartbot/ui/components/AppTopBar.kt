@@ -1,6 +1,7 @@
 package com.example.automatesmartbot.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -16,7 +17,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.automatesmartbot.ui.theme.Navy
+import com.example.automatesmartbot.ui.theme.KarirOrange
+import com.example.automatesmartbot.ui.theme.KarirTextDark
+import com.example.automatesmartbot.ui.theme.KarirNavIconUnselected
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -27,13 +30,14 @@ fun AppTopBar(
     onBack: (() -> Unit)? = null
 ) {
     TopAppBar(
+        modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC)),
         navigationIcon = {
             if (onBack != null) {
                 IconButton(onClick = onBack) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Kembali",
-                        tint = Color.White
+                        tint = KarirTextDark
                     )
                 }
             }
@@ -52,7 +56,7 @@ fun AppTopBar(
                     text = title,
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp,
-                    color = Color.White
+                    color = KarirTextDark
                 )
             }
         },
@@ -61,7 +65,7 @@ fun AppTopBar(
             Box(
                 modifier = Modifier
                     .clip(RoundedCornerShape(16.dp))
-                    .background(if (isPro) Color(0xFFFF6B00) else Color(0xFF00796F))
+                    .background(if (isPro) KarirOrange else Color(0xFFFFF0E5))
                     .padding(horizontal = 10.dp, vertical = 5.dp),
                 contentAlignment = Alignment.Center
             ) {
@@ -85,7 +89,7 @@ fun AppTopBar(
                     } else {
                         Text(
                             text = "FREE",
-                            color = Color.White,
+                            color = Color(0xFFE65100),
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp
                         )
@@ -100,13 +104,13 @@ fun AppTopBar(
                 Icon(
                     imageVector = Icons.Default.Person,
                     contentDescription = "Profil",
-                    tint = Color(0xFF94A3B8)
+                    tint = KarirNavIconUnselected
                 )
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = Navy,
-            titleContentColor = Color.White
+            containerColor = Color(0xFFFFFDF9),
+            titleContentColor = KarirTextDark
         )
     )
 }

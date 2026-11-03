@@ -41,17 +41,17 @@ import com.example.automatesmartbot.ui.viewmodel.PsychotestViewModel
 import com.google.gson.JsonObject
 import kotlinx.coroutines.delay
 
-private val orange = com.example.automatesmartbot.ui.theme.ActionOrange
-private val teal = Color(0xFF11B9BE)
-private val blue = Color(0xFF219CEC)
-private val ink = Color(0xFF172744)
+private val orange = com.example.automatesmartbot.ui.theme.KarirOrange
+private val teal = Color(0xFF16A34A)
+private val blue = Color(0xFFEA580C)
+private val ink = Color(0xFF0F172A)
 private fun JsonObject.s(k: String, fallback: String = "") = get(k)?.takeUnless { it.isJsonNull }?.asString ?: fallback
 private fun JsonObject.n(k: String) = runCatching { get(k)?.asInt ?: 0 }.getOrDefault(0)
 
 @Composable
 fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
     MaterialTheme(colorScheme = com.example.automatesmartbot.ui.theme.KarirMateLightColors) {
-    Surface(color = Color(0xFFF5F9FC), contentColor = ink) {
+    Surface(color = Color.Transparent, contentColor = ink) {
     val vm: PsychotestViewModel = viewModel()
     val modes by vm.catalog.collectAsState()
     val questions by vm.questions.collectAsState()
@@ -104,14 +104,14 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
         title = { Text("Latihan FREE") },
         text = { Text("Paket FREE hanya mencakup kategori dasar dengan 10–20 soal per sesi. Paket ini belum tersedia di server; silakan pilih kategori lain.") },
         confirmButton = { TextButton(onClick = { freeNotice = false }) { Text("Mengerti") } })
-    Column(Modifier.fillMaxSize().background(Color(0xFFF5F9FC))) {
+    Column(Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient)) {
         // The parent dashboard already draws the app toolbar; do not duplicate it.
-        if (loading) LinearProgressIndicator(Modifier.fillMaxWidth(), color = teal)
+        if (loading) LinearProgressIndicator(Modifier.fillMaxWidth(), color = orange)
         error?.let { Text(it, Modifier.padding(12.dp), color = MaterialTheme.colorScheme.error) }
         when (page) {
             "home" -> LazyColumn(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 item {
-                    Card(shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFFE4F8F7))) {
+                    Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = Color.White), border = BorderStroke(1.dp, Color(0xFFFFDEC9))) {
                         Row(Modifier.fillMaxWidth().height(122.dp).padding(14.dp), verticalAlignment = Alignment.CenterVertically) {
                             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                                 Text("🧠 Psikotes", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
@@ -130,8 +130,8 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         Shortcut("🏆 Peringkat 👑", Modifier.weight(1f)) { if (isPro) { vm.loadExtras(isPro); page = "leaderboard" } else proNotice = true }
                     }
                 }
-                item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("Latihan Gratis", color = ink, fontWeight = FontWeight.Bold); Text("Semua kategori dasar • 10–20 soal per sesi • Riwayat latihan", color = ink, style = MaterialTheme.typography.bodySmall) } } }
-                item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("👑 Fitur PRO", color = ink, fontWeight = FontWeight.Bold); Text("Simulasi lengkap, statistik dan peringkat untuk langganan aktif", color = ink, style = MaterialTheme.typography.bodySmall) } } }
+                item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp), border = BorderStroke(1.dp, Color(0xFFFFDEC9)), elevation = CardDefaults.cardElevation(2.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("Latihan Gratis", color = ink, fontWeight = FontWeight.Bold); Text("Semua kategori dasar • 10–20 soal per sesi • Riwayat latihan", color = ink, style = MaterialTheme.typography.bodySmall) } } }
+                item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp), border = BorderStroke(1.dp, Color(0xFFFFDEC9)), elevation = CardDefaults.cardElevation(2.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("👑 Fitur PRO", color = ink, fontWeight = FontWeight.Bold); Text("Simulasi lengkap, statistik dan peringkat untuk langganan aktif", color = ink, style = MaterialTheme.typography.bodySmall) } } }
             }
             "catalog" -> Column(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp)) {
                 TextButton(onClick = { back() }, contentPadding = PaddingValues(0.dp)) { Text("← Kembali ke Psikotes", color = teal) }
@@ -156,7 +156,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             if (isPro || freeEligible(mode)) { val requestedCount = if (isPro && !freeEligible(mode)) mode.n("question_count").coerceIn(10, 110) else (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20); vm.start(mode.s("test_id"), requestedCount); page = "exam" }
                             else if (basicMode(mode)) freeNotice = true
                             else proNotice = true
-                        }, enabled = !loading, modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp)) {
+                        }, enabled = !loading, modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, Color(0xFFFFDEC9)), elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
                             Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
                                 Box(Modifier.background(icon.second.copy(alpha = 0.13f), RoundedCornerShape(12.dp)).size(42.dp), contentAlignment = Alignment.Center) {
                                     Text(icon.first, style = MaterialTheme.typography.titleLarge)
@@ -206,7 +206,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     else -> "Tetap semangat! Mulai dari dasar dan tingkatkan kemampuanmu sedikit demi sedikit."
                 }
                 LazyColumn(
-                    Modifier.fillMaxSize().background(Color.White).padding(horizontal = 16.dp),
+                    Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient).padding(horizontal = 16.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
                     contentPadding = PaddingValues(top = 16.dp, bottom = 28.dp)
                 ) {
@@ -479,7 +479,7 @@ private fun MedalIllustration(modifier: Modifier = Modifier) {
 @Composable
 private fun MockupCard(
     tint: Color = Color.White,
-    borderColor: Color = Color(0xFFE2E8EF),
+    borderColor: Color = Color(0xFFFFDEC9),
     onClick: (() -> Unit)? = null,
     content: @Composable ColumnScope.() -> Unit
 ) {
@@ -551,13 +551,26 @@ private fun Banner(title: String, subtitle: String, colors: List<Color>, dark: B
 }
 @Composable
 private fun Shortcut(label: String, modifier: Modifier, onClick: () -> Unit) {
-    Card(onClick = onClick, modifier = modifier.height(78.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+    Card(
+        onClick = onClick,
+        modifier = modifier.height(78.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        shape = RoundedCornerShape(14.dp),
+        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+    ) {
         Box(Modifier.fillMaxSize().padding(6.dp), contentAlignment = Alignment.Center) { Text(label, color = ink, style = MaterialTheme.typography.labelMedium, textAlign = TextAlign.Center) }
     }
 }
 @Composable
 private fun Info(title: String, subtitle: String) {
-    Card(colors = CardDefaults.cardColors(containerColor = Color.White), modifier = Modifier.fillMaxWidth()) {
+    Card(
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        shape = RoundedCornerShape(16.dp),
+        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
         Column(Modifier.padding(16.dp)) {
             Text(title, color = ink, fontWeight = FontWeight.Bold)
             Text(subtitle, color = Color.Gray)
@@ -590,7 +603,12 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
         dismissButton = { TextButton(onClick = { confirm = false }) { Text("Periksa Lagi", color = ink) } }
     )
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Card(shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+        Card(
+            shape = RoundedCornerShape(18.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        ) {
             Row(Modifier.fillMaxWidth().padding(18.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
                 Column { Text("⏱  SISA WAKTU", color = Color(0xFF58657A), style = MaterialTheme.typography.labelMedium); Text("%02d:%02d".format(remaining / 60, remaining % 60), color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
                 Column(horizontalAlignment = Alignment.End) { Text("TERJAWAB", color = Color(0xFF58657A), style = MaterialTheme.typography.labelMedium); Text("$answered/${questions.size}", color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
@@ -599,12 +617,18 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
         Text("📝 Soal ${index + 1} dari ${questions.size}", fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
         LinearProgressIndicator(progress = { if (questions.isEmpty()) 0f else answered.toFloat() / questions.size }, modifier = Modifier.fillMaxWidth().height(7.dp), color = orange, trackColor = Color(0xFFE3EBF1))
         questions.getOrNull(index)?.let { q ->
-            Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(20.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+            ) {
                 Column(Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text(q.s("prompt", q.s("question", "Soal tidak tersedia")), fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
                     (q.getAsJsonArray("options")?.map { it.asJsonObject } ?: emptyList()).forEach { option ->
                         val selected = q.s("selected_option_id") == option.s("id")
-                        Card(onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFE8DC) else Color(0xFFF7FAFD)), border = androidx.compose.foundation.BorderStroke(if (selected) 2.dp else 1.dp, if (selected) orange else Color(0xFFD9E3ED))) {
+                        Card(onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFE8DC) else Color.White), border = androidx.compose.foundation.BorderStroke(if (selected) 2.dp else 1.dp, if (selected) orange else Color(0xFFFFDEC9))) {
                             Row(Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 7.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                                 RadioButton(selected = selected, onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.size(36.dp), colors = RadioButtonDefaults.colors(selectedColor = orange))
                                 Text(option.s("text"), color = ink, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
@@ -629,8 +653,13 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
 
 @Composable
 private fun HistoryScoreCard(title: String, score: Int?) {
-    Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(20.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White)) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+    ) {
         Row(Modifier.padding(18.dp), verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(14.dp)) {
             Box(Modifier.size(62.dp).background(Color(0xFFFFF0E3), RoundedCornerShape(16.dp)),
