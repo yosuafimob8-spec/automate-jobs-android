@@ -28,13 +28,13 @@ val KarirMateLightColors = lightColorScheme(
     primaryContainer = LightSurfaceVariant,
     onPrimaryContainer = Navy,
     secondary = Cyan,
-    onSecondary = Navy,
+    onSecondary = Color.White,
     background = LightBackground,
     onBackground = Navy,
     surface = LightSurface,
     onSurface = Navy,
     surfaceVariant = LightSurfaceVariant,
-    onSurfaceVariant = Color(0xFF47627E)
+    onSurfaceVariant = Color(0xFF555555)
 )
 
 @Composable
