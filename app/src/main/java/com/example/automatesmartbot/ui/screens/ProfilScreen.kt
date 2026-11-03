@@ -1,5 +1,12 @@
 package com.example.automatesmartbot.ui.screens
 
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.asImageBitmap
+import android.graphics.BitmapFactory
+import android.net.Uri
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -76,6 +83,16 @@ fun ProfilScreen(
     profileRepository: ProfileSetupRepository = remember { ProfileSetupRepository() }
 ) {
     val coroutineScope = rememberCoroutineScope()
+    val context = LocalContext.current
+    val photoPrefs = remember(context) { context.getSharedPreferences("karirmate_profile_photo", android.content.Context.MODE_PRIVATE) }
+    var photoUri by remember { mutableStateOf(photoPrefs.getString("uri", null)) }
+    val photoPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri != null) {
+            runCatching { context.contentResolver.takePersistableUriPermission(uri, android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION) }
+            photoPrefs.edit().putString("uri", uri.toString()).apply()
+            photoUri = uri.toString()
+        }
+    }
     var profile by remember { mutableStateOf<ProfileResponse?>(null) }
     var account by remember { mutableStateOf<UserMeResponse?>(null) }
     var isLoading by remember { mutableStateOf(true) }
@@ -169,7 +186,7 @@ fun ProfilScreen(
                     Text("Kelola data diri dan kebutuhan kariermu", color = Color.White, fontSize = 14.sp)
                 }
                 Box(Modifier.padding(horizontal = 16.dp)) {
-                    ProfileIdentityCard(profile = profile, account = account, errorMessage = errorMessage, onNavigateEditProfile = onNavigateEditProfile, onLogout = { authRepository.logout(); onNavigateLogin() })
+                    ProfileIdentityCard(profile = profile, account = account, errorMessage = errorMessage, photoUri = photoUri, onPickPhoto = { photoPicker.launch(arrayOf("image/*")) }, onNavigateEditProfile = onNavigateEditProfile, onLogout = { authRepository.logout(); onNavigateLogin() })
                 }
 
                 Box(Modifier.padding(horizontal = 16.dp)) { CvSection() }
@@ -253,9 +270,16 @@ private fun ProfileIdentityCard(
     profile: ProfileResponse?,
     account: UserMeResponse?,
     errorMessage: String?,
+    photoUri: String?,
+    onPickPhoto: () -> Unit,
     onNavigateEditProfile: () -> Unit,
     onLogout: () -> Unit
 ) {
+    val context = LocalContext.current
+    val profileFields = listOf(profile?.fullName, profile?.whatsapp, profile?.domicile, profile?.education, profile?.applicationEmail)
+    val completeCount = profileFields.count { !it.isNullOrBlank() } + listOf(profile?.desiredPositions, profile?.preferredLocations).count { !it.isNullOrEmpty() }
+    val completion = completeCount / 7f
+    val avatar = remember(photoUri) { runCatching { photoUri?.let { context.contentResolver.openInputStream(Uri.parse(it))?.use(BitmapFactory::decodeStream)?.asImageBitmap() } }.getOrNull() }
                 Card(
                     colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = Color(0xFF202020)),
                     shape = RoundedCornerShape(24.dp),
@@ -270,7 +294,8 @@ private fun ProfileIdentityCard(
                         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
                             Surface(color = Color(0xFFFFF3E8), shape = RoundedCornerShape(50), modifier = Modifier.size(82.dp)) {
                                 Box(contentAlignment = Alignment.Center) {
-                                    Icon(Icons.Default.Person, contentDescription = "Foto profil belum tersedia", tint = Color(0xFFC54814), modifier = Modifier.size(44.dp))
+                                    if (avatar != null) Image(bitmap = avatar, contentDescription = "Foto profil", modifier = Modifier.fillMaxSize(), contentScale = androidx.compose.ui.layout.ContentScale.Crop)
+                                    else Icon(Icons.Default.Person, contentDescription = "Foto profil belum tersedia", tint = Color(0xFFC54814), modifier = Modifier.size(44.dp))
                                 }
                             }
                             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(5.dp)) {
@@ -282,14 +307,15 @@ private fun ProfileIdentityCard(
                             Icon(Icons.Default.Edit, contentDescription = "Edit profil", tint = Color(0xFFFF6B00), modifier = Modifier.size(22.dp).clickable(onClick = onNavigateEditProfile))
                         }
 
+                        TextButton(onClick = onPickPhoto) { Text("📷  ${if (photoUri == null) "Tambah Foto" else "Ganti Foto"}", color = Color(0xFFFF6B00)) }
                         Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFBF6)), shape = RoundedCornerShape(16.dp), border = BorderStroke(1.dp, Color(0xFFFFE6CE))) {
                             Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                                     Text("Kelengkapan Profil", color = Color(0xFF14212C), fontWeight = FontWeight.Bold)
-                                    Text(if (profile?.completed == true) "Lengkap" else "Belum lengkap", color = Color(0xFF0A9E45), fontWeight = FontWeight.Bold)
+                                    Text("${(completion * 100).toInt()}%", color = Color(0xFF0A9E45), fontWeight = FontWeight.Bold)
                                 }
-                                LinearProgressIndicator(progress = { if (profile?.completed == true) 1f else 0f }, modifier = Modifier.fillMaxWidth().height(8.dp), color = Color(0xFFFF6B00), trackColor = Color(0xFFFFE3CC))
-                                Text(if (profile?.completed == true) "✓ Profil kamu sudah lengkap!" else "Lengkapi data untuk memaksimalkan lamaranmu.", color = Color(0xFF167B3D), fontSize = 12.sp)
+                                LinearProgressIndicator(progress = { completion }, modifier = Modifier.fillMaxWidth().height(8.dp), color = Color(0xFFFF6B00), trackColor = Color(0xFFFFE3CC))
+                                Text(if (completeCount == 7) "✓ Profil kamu sudah lengkap!" else "Lengkapi ${7 - completeCount} bagian profil untuk memaksimalkan lamaranmu.", color = Color(0xFF167B3D), fontSize = 12.sp)
                             }
                         }
 
