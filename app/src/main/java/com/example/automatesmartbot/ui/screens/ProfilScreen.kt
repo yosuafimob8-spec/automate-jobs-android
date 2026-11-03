@@ -153,6 +153,91 @@ fun ProfilScreen(
             ) {
                 Text("Profil Saya", fontWeight = FontWeight.ExtraBold, fontSize = 26.sp, color = Color(0xFF202020))
                 Text("Kelola identitas dan informasi karier.", color = Color(0xFF555555), fontSize = 14.sp)
+                ProfileIdentityCard(profile = profile, account = account, errorMessage = errorMessage, onNavigateEditProfile = onNavigateEditProfile, onLogout = { authRepository.logout(); onNavigateLogin() })
+
+                CvSection()
+
+                AppearanceCard(
+                    selectedMode = themePreference.mode,
+                    onModeSelected = themePreference::selectMode
+                )
+            }
+        }
+    }
+}
+
+@Composable
+private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) -> Unit) {
+    Card(
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        shape = RoundedCornerShape(22.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            Text("Tampilan", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface, fontSize = 16.sp)
+            Text("Pilih mode warna Karir Mate.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                ThemeMode.entries.forEach { mode ->
+                    androidx.compose.material3.FilterChip(
+                        modifier = Modifier.weight(1f),
+                        selected = selectedMode == mode,
+                        onClick = { onModeSelected(mode) },
+                        label = { Text(mode.label, maxLines = 1, fontSize = 11.sp) },
+                        colors = androidx.compose.material3.FilterChipDefaults.filterChipColors(
+                            selectedContainerColor = Color(0xFF00A99D),
+                            selectedLabelColor = Color.White
+                        )
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun ProfileDetailRow(
+    icon: androidx.compose.ui.graphics.vector.ImageVector,
+    label: String,
+    value: String
+) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Row(
+            modifier = Modifier.weight(1f),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            Icon(icon, contentDescription = null, tint = Color(0xFFC54814), modifier = Modifier.size(16.dp))
+            Text(text = label, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
+        Text(
+            text = value,
+            modifier = Modifier.weight(1f),
+            fontSize = 13.sp,
+            fontWeight = FontWeight.SemiBold,
+            color = MaterialTheme.colorScheme.onSurface,
+            textAlign = TextAlign.End,
+            maxLines = 2,
+            overflow = TextOverflow.Ellipsis
+        )
+    }
+}
+
+
+@Composable
+private fun ProfileIdentityCard(
+    profile: ProfileResponse?,
+    account: UserMeResponse?,
+    errorMessage: String?,
+    onNavigateEditProfile: () -> Unit,
+    onLogout: () -> Unit
+) {
                 Card(
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     shape = RoundedCornerShape(22.dp),
@@ -261,10 +346,7 @@ fun ProfilScreen(
                             }
 
                             OutlinedButton(
-                                onClick = {
-                                    authRepository.logout()
-                                    onNavigateLogin()
-                                },
+                                onClick = onLogout,
                                 colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFFB91C1C)),
                                 shape = RoundedCornerShape(8.dp),
                                 modifier = Modifier.weight(1f)
@@ -289,82 +371,9 @@ fun ProfilScreen(
                         }
                     }
                 }
-
-                CvSection()
-
-                AppearanceCard(
-                    selectedMode = themePreference.mode,
-                    onModeSelected = themePreference::selectMode
-                )
-            }
-        }
-    }
 }
 
-@Composable
-private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) -> Unit) {
-    Card(
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        shape = RoundedCornerShape(22.dp),
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Column(
-            modifier = Modifier.padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            Text("Tampilan", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface, fontSize = 16.sp)
-            Text("Pilih mode warna Karir Mate.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
-            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                ThemeMode.entries.forEach { mode ->
-                    androidx.compose.material3.FilterChip(
-                        modifier = Modifier.weight(1f),
-                        selected = selectedMode == mode,
-                        onClick = { onModeSelected(mode) },
-                        label = { Text(mode.label, maxLines = 1, fontSize = 11.sp) },
-                        colors = androidx.compose.material3.FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = Color(0xFF00A99D),
-                            selectedLabelColor = Color.White
-                        )
-                    )
-                }
-            }
-        }
-    }
-}
-
-@Composable
-fun ProfileDetailRow(
-    icon: androidx.compose.ui.graphics.vector.ImageVector,
-    label: String,
-    value: String
-) {
-    Row(
-        modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Row(
-            modifier = Modifier.weight(1f),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
-        ) {
-            Icon(icon, contentDescription = null, tint = Color(0xFFC54814), modifier = Modifier.size(16.dp))
-            Text(text = label, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
-        }
-        Text(
-            text = value,
-            modifier = Modifier.weight(1f),
-            fontSize = 13.sp,
-            fontWeight = FontWeight.SemiBold,
-            color = MaterialTheme.colorScheme.onSurface,
-            textAlign = TextAlign.End,
-            maxLines = 2,
-            overflow = TextOverflow.Ellipsis
-        )
-    }
-}
-
-@Preview(name = "Profil KarirMate • Terang", showBackground = true, widthDp = 393, heightDp = 850)
+@Preview(name = "Profil • Komponen asli", showBackground = true, widthDp = 393, heightDp = 800)
 @Composable
 private fun ProfilScreenDesignPreview() {
     com.example.automatesmartbot.ui.theme.FixedCanvasTheme(dark = false) {
@@ -373,42 +382,8 @@ private fun ProfilScreenDesignPreview() {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Text("Profil Saya", fontWeight = FontWeight.ExtraBold, fontSize = 26.sp, color = Color(0xFF202020))
-            Text("Kelola identitas dan informasi karier.", fontSize = 14.sp, color = Color(0xFF555555))
-            Card(
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(22.dp),
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
-            ) {
-                Column(
-                    modifier = Modifier.padding(20.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
-                    Surface(color = Color(0xFFFFF3E8), shape = RoundedCornerShape(50), modifier = Modifier.size(72.dp)) {
-                        Box(contentAlignment = Alignment.Center) {
-                            Icon(Icons.Default.Person, contentDescription = null, tint = Color(0xFFFF6B00), modifier = Modifier.size(36.dp))
-                        }
-                    }
-                    Text("Nama Pengguna", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = Color(0xFF202020))
-                    Surface(color = Color(0xFFDCFCE7), shape = RoundedCornerShape(8.dp)) {
-                        Text("PROFIL LENGKAP", modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp), color = Color(0xFF166534), fontSize = 11.sp, fontWeight = FontWeight.Bold)
-                    }
-                    Text("INFORMASI PRIBADI", modifier = Modifier.fillMaxWidth(), color = Color(0xFF00796F), fontSize = 12.sp, fontWeight = FontWeight.Bold)
-                    ProfileDetailRow(Icons.Default.Email, "Email Akun", "pengguna@example.com")
-                    ProfileDetailRow(Icons.Default.Phone, "WhatsApp", "08xxxxxxxxxx")
-                    ProfileDetailRow(Icons.Default.LocationOn, "Domisili", "Tangerang")
-                    ProfileDetailRow(Icons.Default.School, "Pendidikan", "SMK")
-                    Text("PREFERENSI KARIER", modifier = Modifier.fillMaxWidth().padding(top = 8.dp), color = Color(0xFF00796F), fontSize = 12.sp, fontWeight = FontWeight.Bold)
-                    ProfileDetailRow(Icons.Default.Work, "Posisi Diminati", "Staff Logistik")
-                    ProfileDetailRow(Icons.Default.LocationOn, "Lokasi Kerja", "Tangerang, Bogor")
-                    Button(onClick = {}, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00796F))) {
-                        Icon(Icons.Default.Edit, contentDescription = null)
-                        Spacer(Modifier.width(8.dp))
-                        Text("Edit Profil")
-                    }
-                }
-            }
+            Text("Kelola identitas dan informasi karier.", color = Color(0xFF555555), fontSize = 14.sp)
+            ProfileIdentityCard(profile = null, account = null, errorMessage = null, onNavigateEditProfile = {}, onLogout = {})
         }
     }
 }
