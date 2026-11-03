@@ -34,7 +34,7 @@ fun RiwayatScreen() {
             ) {
                 Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Icon(Icons.Default.History, contentDescription = null, tint = Color(0xFFFF762C))
+                        Icon(Icons.Default.History, contentDescription = null, tint = Color(0xFFC54814))
                         Text(text = "Riwayat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(0xFF242424))
                     }
                     Text(
