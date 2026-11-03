@@ -2,6 +2,9 @@ package com.example.automatesmartbot.ui.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -104,8 +107,7 @@ fun ProfilScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(MaterialTheme.colorScheme.background)
-            .padding(16.dp)
+            .background(Color(0xFFF7F8FA))
     ) {
         if (isLoading && profile == null && errorMessage == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -149,19 +151,31 @@ fun ProfilScreen(
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .verticalScroll(scrollState),
+                    .verticalScroll(scrollState)
+                    .padding(bottom = 24.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                Text("Profil Saya", fontWeight = FontWeight.ExtraBold, fontSize = 26.sp, color = Color(0xFF202020))
-                Text("Kelola identitas dan informasi karier.", color = Color(0xFF555555), fontSize = 14.sp)
-                ProfileIdentityCard(profile = profile, account = account, errorMessage = errorMessage, onNavigateEditProfile = onNavigateEditProfile, onLogout = { authRepository.logout(); onNavigateLogin() })
+                Column(
+                    Modifier.fillMaxWidth().background(
+                        Brush.horizontalGradient(listOf(Color(0xFFF35B12), Color(0xFFFFA037))),
+                        RoundedCornerShape(bottomStart = 28.dp, bottomEnd = 28.dp)
+                    ).padding(horizontal = 22.dp, vertical = 28.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Text("KarirMate  •  PROFIL", color = Color.White.copy(alpha = 0.9f), fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                    Text("Profil Saya", fontWeight = FontWeight.ExtraBold, fontSize = 29.sp, color = Color.White)
+                    Text("Kelola data diri dan kebutuhan kariermu", color = Color.White, fontSize = 14.sp)
+                }
+                Box(Modifier.padding(horizontal = 16.dp)) {
+                    ProfileIdentityCard(profile = profile, account = account, errorMessage = errorMessage, onNavigateEditProfile = onNavigateEditProfile, onLogout = { authRepository.logout(); onNavigateLogin() })
+                }
 
-                CvSection()
+                Box(Modifier.padding(horizontal = 16.dp)) { CvSection() }
 
-                AppearanceCard(
+                Box(Modifier.padding(horizontal = 16.dp)) { AppearanceCard(
                     selectedMode = themePreference.mode,
                     onModeSelected = themePreference::selectMode
-                )
+                ) }
             }
         }
     }
@@ -241,8 +255,8 @@ private fun ProfileIdentityCard(
     onLogout: () -> Unit
 ) {
                 Card(
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                    shape = RoundedCornerShape(18.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = Color(0xFF202020)),
+                    shape = RoundedCornerShape(24.dp),
                     border = BorderStroke(1.dp, Color(0xFFE9E9E9)),
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -270,7 +284,7 @@ private fun ProfileIdentityCard(
                             text = profile?.fullName?.takeIf { it.isNotBlank() } ?: "Nama belum diisi",
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
-                            color = MaterialTheme.colorScheme.onSurface
+                            color = Color(0xFF17212B)
                         )
 
                         Surface(
@@ -339,7 +353,7 @@ private fun ProfileIdentityCard(
                         ) {
                             Button(
                                 onClick = onNavigateEditProfile,
-                                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00A99D)),
+                                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF6B00)),
                                 shape = RoundedCornerShape(12.dp),
                                 modifier = Modifier.weight(1f)
                             ) {
