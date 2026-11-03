@@ -53,7 +53,14 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
         KarirMateSectionHero("Dokumen Karier", "Kelola dan ekspor dokumen PDF secara aman.")
         Text("Dokumen Karier",style=MaterialTheme.typography.titleLarge)
         Text("Kelola PDF secara lokal: gabung, ambil/susun halaman, putar, simpan, dan bagikan. File sumber tidak dihapus. PDF terenkripsi perlu dibuka terlebih dahulu dengan pemiliknya.")
-        Button(onClick={importer.launch(arrayOf("application/pdf"))},enabled=!busy){Text("Tambahkan PDF")}
+        Card(colors = CardDefaults.cardColors(containerColor = androidx.compose.ui.graphics.Color(0xFFFFF2E8))) {
+            Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                Text("Perpustakaan PDF • ${items.size} dokumen", style = MaterialTheme.typography.titleMedium)
+                Text("${selected.size} dokumen dipilih")
+                Button(onClick = { importer.launch(arrayOf("application/pdf")) }, enabled = !busy, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = androidx.compose.ui.graphics.Color(0xFFFF762C))) { Text("+ Tambahkan PDF") }
+                if (selected.isNotEmpty()) TextButton(onClick = { selected = arrayListOf() }) { Text("Batalkan Semua Pilihan") }
+            }
+        }
         TextButton(onClick=onLegacyDocuments){Text("Surat Izin & Dokumen Kerja")}
         if(busy)LinearProgressIndicator(Modifier.fillMaxWidth())
         if(message.isNotBlank())Text(message)
