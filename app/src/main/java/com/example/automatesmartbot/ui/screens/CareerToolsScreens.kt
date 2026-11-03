@@ -329,7 +329,7 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
                         shape = RoundedCornerShape(12.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
                     ) {
-                        Text("Buat Draf Surat Resign", fontWeight = FontWeight.Bold)
+                        Text("Buat Draf Resign", fontWeight = FontWeight.Bold)
                     }
 
                     if (error.isNotBlank()) {
@@ -346,7 +346,7 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
                                 colors = ButtonDefaults.outlinedButtonColors(contentColor = KarirOrange),
                                 modifier = Modifier.weight(1f)
                             ) {
-                                Text(if (preview) "Tutup Preview" else "Lihat Preview A4", fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                                Text(if (preview) "Tutup Preview" else "Preview A4", fontWeight = FontWeight.Bold, fontSize = 12.sp)
                             }
                         }
                         val pages = remember(content) { CvRenderer.letterPages(content) }
