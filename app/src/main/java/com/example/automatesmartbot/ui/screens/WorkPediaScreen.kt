@@ -42,15 +42,15 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                     .any { entry.optString(it).contains(query, ignoreCase = true) })
         }
     }
-    val navy = Color(0xFF102D49)
-    val teal = Color(0xFF008F86)
+    val navy = Color(0xFF242424)
+    val teal = Color(0xFF00A99D)
     Column(Modifier.fillMaxSize().background(Color(0xFFF5F8FC)).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = navy)) {
+        Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
             Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                Text("KARIRMATE • PUSAT PENGETAHUAN", color = Color(0xFF65E6D6), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
-                Text("WorkPedia", color = Color.White, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
-                Text("Pahami istilah dunia kerja, hak karyawan, dan regulasi.", color = Color(0xFFD9E6EE))
-                Text("${entries.size} istilah  •  ${favorites.size} favorit", color = Color(0xFF65E6D6), style = MaterialTheme.typography.labelMedium)
+                Text("KARIRMATE • PUSAT PENGETAHUAN", color = Color(0xFFFF762C), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
+                Text("WorkPedia", color = navy, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
+                Text("Pahami istilah dunia kerja, hak karyawan, dan regulasi.", color = Color(0xFF525B66))
+                Text("${entries.size} istilah  •  ${favorites.size} favorit", color = Color(0xFF00A99D), style = MaterialTheme.typography.labelMedium)
             }
         }
         if (entries.isEmpty()) {
