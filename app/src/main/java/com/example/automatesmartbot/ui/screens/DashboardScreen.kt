@@ -146,6 +146,7 @@ fun DashboardScreen(
     val status by viewModel.status.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
 
+    var dashboardSearch by remember { mutableStateOf("") }
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -183,13 +184,14 @@ fun DashboardScreen(
                         }
                     )
                 }
+                item { OutlinedTextField(value = dashboardSearch, onValueChange = { dashboardSearch = it }, label = { Text("Cari fitur KarirMate") }, singleLine = true, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp)) }
                 item { AccountStats(status = status) }
                 item { SectionHeader(title = "Cari Kerja & Persiapan", itemCount = jobFeatures.size) }
-                item { FeatureGrid(features = jobFeatures, onNavigate = onNavigate) }
+                item { FeatureGrid(features = jobFeatures.filter { it.title.contains(dashboardSearch, ignoreCase = true) || it.subtitle.contains(dashboardSearch, ignoreCase = true) }, onNavigate = onNavigate) }
                 item { SectionHeader(title = "Simulasi Wawancara", itemCount = interviewFeatures.size) }
-                item { FeatureGrid(features = interviewFeatures, onNavigate = onNavigate) }
+                item { FeatureGrid(features = interviewFeatures.filter { it.title.contains(dashboardSearch, ignoreCase = true) || it.subtitle.contains(dashboardSearch, ignoreCase = true) }, onNavigate = onNavigate) }
                 item { SectionHeader(title = "Otomasi & Dokumen", itemCount = automationFeatures.size) }
-                item { FeatureGrid(features = automationFeatures, onNavigate = onNavigate) }
+                item { FeatureGrid(features = automationFeatures.filter { it.title.contains(dashboardSearch, ignoreCase = true) || it.subtitle.contains(dashboardSearch, ignoreCase = true) }, onNavigate = onNavigate) }
                 item { SectionHeader(title = "Aktivitas Terakhir") }
                 item { ActivityUnavailableCard(onOpenHistory = { onNavigate(Screen.Riwayat.route) }) }
             }
