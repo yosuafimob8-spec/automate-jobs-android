@@ -107,7 +107,7 @@ fun ProfilScreen(
     ) {
         if (isLoading && profile == null && errorMessage == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator(color = Color(0xFF00A99D))
+                CircularProgressIndicator(color = Color(0xFF00796F))
             }
         } else if (errorMessage != null && profile == null) {
             Column(
@@ -140,7 +140,7 @@ fun ProfilScreen(
                     Text("Coba Lagi")
                 }
                 TextButton(onClick = onNavigateLogin) {
-                    Text("Masuk / Login", color = Color(0xFFC54814))
+                    Text("Masuk / Login", color = Color(0xFFFF6B00))
                 }
             }
         } else {
@@ -150,7 +150,8 @@ fun ProfilScreen(
                     .verticalScroll(scrollState),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                KarirMateSectionHero("Profil Karier", "Kelola identitas dan pengalaman kerja secara aman.")
+                Text("Profil Saya", fontWeight = FontWeight.ExtraBold, fontSize = 26.sp, color = Color(0xFF202020))
+                Text("Kelola identitas dan informasi karier.", color = Color(0xFF555555), fontSize = 14.sp)
                 Card(
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     shape = RoundedCornerShape(22.dp),
@@ -189,7 +190,7 @@ fun ProfilScreen(
                         ) {
                             Text(
                                 text = if (profile?.completed == true) "PROFIL LENGKAP" else "PROFIL BELUM LENGKAP",
-                                color = Color(0xFF166534),
+                                color = if (profile?.completed == true) Color(0xFF166534) else Color(0xFF991B1B),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.sp,
                                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
@@ -218,11 +219,13 @@ fun ProfilScreen(
                         }
 
                         Spacer(modifier = Modifier.height(4.dp))
+                        Text("INFORMASI PRIBADI", color = Color(0xFF00796F), fontWeight = FontWeight.Bold, fontSize = 12.sp, modifier = Modifier.fillMaxWidth())
 
                         ProfileDetailRow(icon = Icons.Default.Email, label = "Email Akun", value = account?.email ?: "-")
                         ProfileDetailRow(icon = Icons.Default.Phone, label = "WhatsApp", value = profile?.whatsapp ?: "-")
                         ProfileDetailRow(icon = Icons.Default.LocationOn, label = "Domisili", value = profile?.domicile ?: "-")
                         ProfileDetailRow(icon = Icons.Default.School, label = "Pendidikan", value = profile?.education ?: "-")
+                        Text("PREFERENSI KARIER", color = Color(0xFF00796F), fontWeight = FontWeight.Bold, fontSize = 12.sp, modifier = Modifier.fillMaxWidth().padding(top = 8.dp))
                         ProfileDetailRow(
                             icon = Icons.Default.Work,
                             label = "Posisi Diminati",
@@ -248,7 +251,7 @@ fun ProfilScreen(
                             Button(
                                 onClick = onNavigateEditProfile,
                                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00A99D)),
-                                shape = RoundedCornerShape(8.dp),
+                                shape = RoundedCornerShape(12.dp),
                                 modifier = Modifier.weight(1f)
                             ) {
                                 Icon(Icons.Default.Edit, contentDescription = null, modifier = Modifier.size(16.dp))
@@ -310,9 +313,10 @@ private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) 
         ) {
             Text("Tampilan", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface, fontSize = 16.sp)
             Text("Pilih mode warna Karir Mate.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 ThemeMode.entries.forEach { mode ->
                     androidx.compose.material3.FilterChip(
+                        modifier = Modifier.weight(1f),
                         selected = selectedMode == mode,
                         onClick = { onModeSelected(mode) },
                         label = { Text(mode.label, maxLines = 1, fontSize = 11.sp) },
