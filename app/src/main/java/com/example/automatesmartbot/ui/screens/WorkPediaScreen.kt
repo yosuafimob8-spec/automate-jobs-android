@@ -44,7 +44,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
     }
     val navy = Color(0xFF242424)
     val teal = Color(0xFF00A99D)
-    Column(Modifier.fillMaxSize().background(Color(0xFFF5F8FC)).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+    Column(Modifier.fillMaxSize().background(Color.White).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
             Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text("KARIRMATE • PUSAT PENGETAHUAN", color = Color(0xFFFF762C), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
@@ -69,13 +69,26 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                 }
             }
             Text("${visible.size} istilah ditemukan", color = navy, style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold)
+            if (visible.isEmpty()) {
+                Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF2E8)), shape = RoundedCornerShape(16.dp)) {
+                    Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Text("Tidak ada istilah yang cocok", fontWeight = FontWeight.Bold, color = navy)
+                        Text("Ubah kata kunci atau kategori untuk melihat hasil lainnya.", color = navy)
+                        TextButton(onClick = { query = ""; category = "Semua"; onlyFavorites = false }) { Text("Atur Ulang Pencarian", color = Color(0xFFFF762C)) }
+                    }
+                }
+            }
             LazyColumn(verticalArrangement = Arrangement.spacedBy(10.dp), contentPadding = PaddingValues(bottom = 24.dp)) {
                 items(visible, key = { it.optString("id") }) { term ->
                     Card(onClick = { selected = term.optString("id") }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(18.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
                             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                                 Text(term.optString("name"), color = navy, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge, modifier = Modifier.weight(1f))
-                                Text(if (term.optString("id") in favorites) "★" else "→", color = teal)
+                                TextButton(onClick = {
+                                    val id = term.optString("id")
+                                    favorites = if (id in favorites) favorites - id else favorites + id
+                                    prefs.edit().putStringSet("ids", favorites).apply()
+                                }) { Text(if (term.optString("id") in favorites) "★" else "☆", color = Color(0xFFFF762C)) }
                             }
                             Text(term.optString("fullName"), color = navy, style = MaterialTheme.typography.bodyMedium)
                             Text(term.optString("category"), color = teal, style = MaterialTheme.typography.labelMedium)
@@ -108,7 +121,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                     Button(onClick = {
                         favorites = if (id in favorites) favorites - id else favorites + id
                         prefs.edit().putStringSet("ids", favorites).apply()
-                    }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(14.dp), colors = ButtonDefaults.buttonColors(containerColor = teal)) {
+                    }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(14.dp), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFFFF762C))) {
                         Text(if (id in favorites) "★ Hapus dari Favorit" else "☆ Simpan ke Favorit")
                     }
                 }
