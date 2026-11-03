@@ -574,8 +574,8 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
     if (confirm) AlertDialog(
         containerColor = Color.White, titleContentColor = ink, textContentColor = ink,
         onDismissRequest = { confirm = false },
-        title = { Text("Selesaikan tes?") },
-        text = { Text("Semua $answered soal sudah dijawab. Kirim untuk melihat nilai?") },
+        title = { Text("Selesaikan tes?", color = ink) },
+        text = { Text("Semua $answered soal sudah dijawab. Kirim untuk melihat nilai?", color = ink) },
         confirmButton = { TextButton(onClick = { confirm = false; if (!submitting) onSubmit() }) { Text("Selesaikan", color = orange, fontWeight = FontWeight.Bold) } },
         dismissButton = { TextButton(onClick = { confirm = false }) { Text("Periksa Lagi", color = ink) } }
     )
