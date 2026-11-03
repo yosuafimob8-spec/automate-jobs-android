@@ -36,6 +36,7 @@ fun SalaryCalculatorScreen() {
     var error by remember { mutableStateOf("") }
     val rupiah = remember { NumberFormat.getCurrencyInstance(Locale("id", "ID")) }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        KarirMateSectionHero("Kalkulator Gaji", "Simulasikan gaji, lembur, BPJS, pajak, dan THR.")
         Text("Kalkulator Gaji & Hak Kerja", style = MaterialTheme.typography.titleLarge)
         Text("Estimasi PPh 21 tahunan dengan lapisan tarif UU HPP; angka per bulan adalah rata-rata tahunan, bukan potongan TER pada slip gaji. Periksa rekonsiliasi aktual dengan pemberi kerja.")
         AppInput("Penghasilan bruto pajak per bulan (Rp)", gross, { gross = it; result = null })
@@ -81,6 +82,7 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
     var error by remember { mutableStateOf("") }
     LaunchedEffect(name,company,position,content) { prefs.edit().putString("name",name).putString("company",company).putString("position",position).putString("content",content).apply() }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+        KarirMateSectionHero("Surat Lamaran", "Susun surat lamaran dan dokumen pengunduran diri.")
         Text("Surat Lamaran & Resign", style = MaterialTheme.typography.titleLarge)
         Button(onClick = onApplicationLetter, Modifier.fillMaxWidth()) { Text("Buat Surat Lamaran dari CV") }
         HorizontalDivider()
