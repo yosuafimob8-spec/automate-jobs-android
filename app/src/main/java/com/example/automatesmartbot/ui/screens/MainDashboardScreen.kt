@@ -223,14 +223,21 @@ private fun MainDashboardContent(
         bottomBar = {
             if (showBottomBar) {
                 NavigationBar(
-                    containerColor = androidx.compose.material3.MaterialTheme.colorScheme.surface,
-                    contentColor = androidx.compose.material3.MaterialTheme.colorScheme.onSurface
+                    containerColor = Color.White,
+                    tonalElevation = 6.dp
                 ) {
                     bottomNavItems.forEach { screen ->
                         val selected = currentRoute == screen.route
                         NavigationBarItem(
                             icon = { Icon(screen.icon, contentDescription = screen.title) },
-                            label = { Text(screen.title, fontSize = 11.sp, maxLines = 1) },
+                            label = {
+                                Text(
+                                    screen.title,
+                                    fontSize = 11.sp,
+                                    maxLines = 1,
+                                    fontWeight = if (selected) androidx.compose.ui.text.font.FontWeight.Bold else androidx.compose.ui.text.font.FontWeight.Medium
+                                )
+                            },
                             selected = selected,
                             onClick = {
                                 if (screen.route == Screen.Dashboard.route) {
@@ -244,11 +251,11 @@ private fun MainDashboardContent(
                                 }
                             },
                             colors = NavigationBarItemDefaults.colors(
-                                selectedIconColor = androidx.compose.material3.MaterialTheme.colorScheme.primary,
-                                selectedTextColor = androidx.compose.material3.MaterialTheme.colorScheme.primary,
-                                unselectedIconColor = androidx.compose.material3.MaterialTheme.colorScheme.onSurfaceVariant,
-                                unselectedTextColor = androidx.compose.material3.MaterialTheme.colorScheme.onSurfaceVariant,
-                                indicatorColor = androidx.compose.material3.MaterialTheme.colorScheme.primaryContainer
+                                selectedIconColor = Color.White,
+                                selectedTextColor = Color(0xFFFF6B00),
+                                unselectedIconColor = Color(0xFF64748B),
+                                unselectedTextColor = Color(0xFF64748B),
+                                indicatorColor = Color(0xFFFF6B00)
                             )
                         )
                     }
