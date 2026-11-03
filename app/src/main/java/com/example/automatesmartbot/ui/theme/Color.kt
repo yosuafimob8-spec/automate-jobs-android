@@ -3,8 +3,8 @@ package com.example.automatesmartbot.ui.theme
 import androidx.compose.ui.graphics.Color
 
 val Navy = Color(0xFF252525)
-val RoyalBlue = Color(0xFFFF762C)
-val Cyan = Color(0xFF00A99D)
+val RoyalBlue = Color(0xFFC54814)
+val Cyan = Color(0xFF00796F)
 val DarkBackground = Color(0xFF171717)
 val DarkSurface = Color(0xFF262626)
 val DarkSurfaceVariant = Color(0xFF353535)
@@ -20,4 +20,4 @@ val ProGold = Color(0xFFF59E0B)
 val FreeCyan = Color(0xFF00A99D)
 val CardBorder = Color(0xFFE8E8E8)
 
-val ActionOrange = Color(0xFFFF762C)
+val ActionOrange = Color(0xFFC54814)
