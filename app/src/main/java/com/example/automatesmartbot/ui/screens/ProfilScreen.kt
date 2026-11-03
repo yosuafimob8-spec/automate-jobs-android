@@ -6,6 +6,9 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.weight
+import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -287,6 +290,23 @@ private fun ProfileIdentityCard(
                             color = Color(0xFF17212B)
                         )
 
+                        Text("PENCARI KERJA", color = Color(0xFF677481), fontWeight = FontWeight.Medium, fontSize = 12.sp)
+                        OutlinedButton(onClick = onNavigateEditProfile, shape = RoundedCornerShape(14.dp), border = BorderStroke(1.dp, Color(0xFFFF6B00))) {
+                            Icon(Icons.Default.Edit, contentDescription = null, tint = Color(0xFFFF6B00), modifier = Modifier.size(16.dp))
+                            Spacer(Modifier.width(8.dp))
+                            Text("Edit Profil", color = Color(0xFFFF6B00), fontWeight = FontWeight.Bold)
+                        }
+                        Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFBF6)), shape = RoundedCornerShape(16.dp), border = BorderStroke(1.dp, Color(0xFFFFE6CE))) {
+                            Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+                                    Text("Kelengkapan Profil", color = Color(0xFF14212C), fontWeight = FontWeight.Bold)
+                                    Text(if (profile?.completed == true) "Lengkap" else "Belum lengkap", color = Color(0xFF0A9E45), fontWeight = FontWeight.Bold)
+                                }
+                                LinearProgressIndicator(progress = { if (profile?.completed == true) 1f else 0f }, modifier = Modifier.fillMaxWidth().height(8.dp), color = Color(0xFFFF6B00), trackColor = Color(0xFFFFE3CC))
+                                Text(if (profile?.completed == true) "✓ Profil kamu sudah lengkap!" else "Lengkapi data untuk memaksimalkan lamaranmu.", color = Color(0xFF167B3D), fontSize = 12.sp)
+                            }
+                        }
+
                         Surface(
                             color = if (profile?.completed == true) Color(0xFFDCFCE7) else Color(0xFFFEE2E2),
                             shape = RoundedCornerShape(8.dp)
@@ -325,8 +345,8 @@ private fun ProfileIdentityCard(
                         HorizontalDivider(color = Color(0xFFE8EDF1))
                         Text("INFORMASI PRIBADI", color = Color(0xFF00796F), fontWeight = FontWeight.Bold, fontSize = 12.sp, modifier = Modifier.fillMaxWidth())
 
-                        ProfileDetailRow(icon = Icons.Default.Email, label = "Email Akun", value = account?.email ?: "-")
-                        ProfileDetailRow(icon = Icons.Default.Phone, label = "WhatsApp", value = profile?.whatsapp ?: "-")
+                        ProfileDetailRow(icon = Icons.Default.Email, label = "Email", value = account?.email ?: "-")
+                        ProfileDetailRow(icon = Icons.Default.Phone, label = "No. HP", value = profile?.whatsapp ?: "-")
                         ProfileDetailRow(icon = Icons.Default.LocationOn, label = "Domisili", value = profile?.domicile ?: "-")
                         ProfileDetailRow(icon = Icons.Default.School, label = "Pendidikan", value = profile?.education ?: "-")
                         HorizontalDivider(color = Color(0xFFE8EDF1))
