@@ -26,6 +26,17 @@ import org.robolectric.annotation.GraphicsMode
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class FeatureUiTest {
     @get:Rule val compose = createAndroidComposeRule<ComponentActivity>()
+    @Test fun sectionHeroExpandsAndCollapses() {
+        compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { KarirMateSectionHero("WorkPedia", "Istilah kerja") } }
+        compose.onNodeWithText("Info ↓").performClick()
+        compose.onNodeWithText("Gunakan menu di halaman ini", substring = true).assertExists()
+        compose.onNodeWithText("Tutup ↑").performClick()
+        compose.onNodeWithText("Gunakan menu di halaman ini", substring = true).assertDoesNotExist()
+    }
+    @Test fun documentLibraryShowsTruthfulEmptyState() {
+        compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { RiwayatScreen() } }
+        compose.onNodeWithText("Belum ada riwayat lamaran").assertExists()
+    }
     @Test fun cvHeaderAndAndroidBackKeepFormDataAndPopOneStep() {
         val vm = CvBuilderViewModel(compose.activity.application, SavedStateHandle())
         vm.newDocument(); vm.navigate("CV Saya")
