@@ -91,7 +91,8 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
         if (exportBusy) LinearProgressIndicator(Modifier.fillMaxWidth())
         when (page) {
             "CV Builder" -> {
-                Text("Buat, kelola, dan analisis CV", style = MaterialTheme.typography.titleLarge)
+                Text("CV Saya • ${state.drafts.size} dokumen", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                Text("Buat CV baru, jelajahi template, atau periksa kualitas CV.", color = MaterialTheme.colorScheme.onSurfaceVariant)
                 Button(onClick = { viewModel.newDocument(); if (viewModel.state.value.activeId != null) nav("CV Saya") }, Modifier.fillMaxWidth()) { Text("Buat CV Baru") }
                 OutlinedButton(onClick = { nav("Template") }, Modifier.fillMaxWidth()) { Text("Katalog Template") }
                 OutlinedButton(onClick = { nav("CV Analyst") }, Modifier.fillMaxWidth()) { Text("CV Analyst") }
