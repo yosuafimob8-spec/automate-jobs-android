@@ -2,6 +2,7 @@ package com.example.automatesmartbot.ui.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.ui.graphics.Brush
@@ -266,34 +267,21 @@ private fun ProfileIdentityCard(
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
-                        Surface(
-                            color = Color(0xFFFFF3E8),
-                            shape = RoundedCornerShape(50),
-                            modifier = Modifier.size(72.dp)
-                        ) {
-                            Box(contentAlignment = Alignment.Center) {
-                                Icon(
-                                    imageVector = Icons.Default.Person,
-                                    contentDescription = null,
-                                    tint = Color(0xFFC54814),
-                                    modifier = Modifier.size(36.dp)
-                                )
+                        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                            Surface(color = Color(0xFFFFF3E8), shape = RoundedCornerShape(50), modifier = Modifier.size(82.dp)) {
+                                Box(contentAlignment = Alignment.Center) {
+                                    Icon(Icons.Default.Person, contentDescription = "Foto profil belum tersedia", tint = Color(0xFFC54814), modifier = Modifier.size(44.dp))
+                                }
                             }
+                            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(5.dp)) {
+                                Text(profile?.fullName?.takeIf { it.isNotBlank() } ?: "Nama belum diisi", fontWeight = FontWeight.ExtraBold, fontSize = 18.sp, color = Color(0xFF17212B))
+                                Surface(color = Color(0xFFFFF0CC), shape = RoundedCornerShape(12.dp)) {
+                                    Text("Pencari Kerja", color = Color(0xFF784A08), fontSize = 11.sp, fontWeight = FontWeight.Bold, modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp))
+                                }
+                            }
+                            Icon(Icons.Default.Edit, contentDescription = "Edit profil", tint = Color(0xFFFF6B00), modifier = Modifier.size(22.dp).clickable(onClick = onNavigateEditProfile))
                         }
 
-                        Text(
-                            text = profile?.fullName?.takeIf { it.isNotBlank() } ?: "Nama belum diisi",
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 20.sp,
-                            color = Color(0xFF17212B)
-                        )
-
-                        Text("PENCARI KERJA", color = Color(0xFF677481), fontWeight = FontWeight.Medium, fontSize = 12.sp)
-                        OutlinedButton(onClick = onNavigateEditProfile, shape = RoundedCornerShape(14.dp), border = BorderStroke(1.dp, Color(0xFFFF6B00))) {
-                            Icon(Icons.Default.Edit, contentDescription = null, tint = Color(0xFFFF6B00), modifier = Modifier.size(16.dp))
-                            Spacer(Modifier.width(8.dp))
-                            Text("Edit Profil", color = Color(0xFFFF6B00), fontWeight = FontWeight.Bold)
-                        }
                         Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFBF6)), shape = RoundedCornerShape(16.dp), border = BorderStroke(1.dp, Color(0xFFFFE6CE))) {
                             Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
@@ -365,6 +353,18 @@ private fun ProfileIdentityCard(
                             value = profile?.applicationEmail ?: "-"
                         )
 
+                        Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFF9FBFD)), shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, Color(0xFFE8EDF1)), modifier = Modifier.fillMaxWidth()) {
+                            Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                                Text("▥  Ringkasan Karier", fontWeight = FontWeight.ExtraBold, fontSize = 16.sp, color = Color(0xFF17212B))
+                                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                    CareerSummaryTile("CV", "Buka CV", Color(0xFFEAF2FF), Modifier.weight(1f))
+                                    CareerSummaryTile("Lamaran", "Riwayat", Color(0xFFF4E9FF), Modifier.weight(1f))
+                                    CareerSummaryTile("Dokumen", "Kelola", Color(0xFFE8FAEF), Modifier.weight(1f))
+                                }
+                                Text("Ringkasan fitur. Jumlah dokumen dan lamaran belum tersedia dari API profil.", fontSize = 11.sp, color = Color(0xFF667583))
+                            }
+                        }
+
                         Spacer(modifier = Modifier.height(8.dp))
 
                         Row(
@@ -408,4 +408,15 @@ private fun ProfileIdentityCard(
                         }
                     }
                 }
+}
+
+@Composable
+private fun CareerSummaryTile(title: String, caption: String, color: Color, modifier: Modifier = Modifier) {
+    Surface(modifier = modifier, color = color, shape = RoundedCornerShape(12.dp)) {
+        Column(Modifier.padding(vertical = 14.dp, horizontal = 5.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+            Text("—", fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, color = Color(0xFF17212B))
+            Text(title, fontSize = 11.sp, fontWeight = FontWeight.Bold, color = Color(0xFF17212B))
+            Text(caption, fontSize = 10.sp, color = Color(0xFF667583))
+        }
+    }
 }
