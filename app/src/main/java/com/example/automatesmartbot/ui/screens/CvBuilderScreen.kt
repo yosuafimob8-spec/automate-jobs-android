@@ -629,7 +629,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                 shape = RoundedCornerShape(12.dp),
                                 colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
                             ) {
-                                Text("Buat Surat Lamaran dari CV", fontWeight = FontWeight.Bold)
+                                Text("Buat Surat Lamaran", fontWeight = FontWeight.Bold)
                             }
 
                             HorizontalDivider(color = Color(0xFFF1E5DC))
@@ -757,7 +757,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                 shape = RoundedCornerShape(12.dp),
                                 colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
                             ) {
-                                Text("Preview & Ekspor Surat", fontWeight = FontWeight.Bold)
+                                Text("Preview Surat", fontWeight = FontWeight.Bold)
                             }
                         }
                     }
