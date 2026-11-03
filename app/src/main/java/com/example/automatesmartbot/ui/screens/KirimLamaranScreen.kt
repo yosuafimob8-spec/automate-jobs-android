@@ -1,6 +1,10 @@
 package com.example.automatesmartbot.ui.screens
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.background
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.lifecycle.Lifecycle
@@ -101,13 +105,22 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         onDispose { owner.lifecycle.removeObserver(observer) }
     }
     LaunchedEffect(isPro) { load() }
-    LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+    LazyColumn(Modifier.fillMaxSize().background(Color(0xFFF5F8FC)), contentPadding = PaddingValues(16.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
         item {
-            Text("Kirim Lamaran Otomatis", style = MaterialTheme.typography.headlineSmall)
-            Text("Lowongan aktif yang sesuai CV dan lokasi didahulukan. Lamaran spontan harus menggunakan kontak perusahaan yang tersedia; tidak dianggap lowongan terverifikasi.")
+            Card(shape = RoundedCornerShape(24.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF102D49))) {
+                Column(Modifier.fillMaxWidth().padding(22.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Text("KARIRMATE  •  PRO", color = Color(0xFF64E4D5), fontWeight = FontWeight.Bold)
+                    Text("Kirim Lamaran Otomatis", color = Color.White, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
+                    Text("Kelola CV, persetujuan, kandidat, dan riwayat pengiriman dari satu halaman.", color = Color(0xFFD7E7F0))
+                    Text("Maksimal 5 email per hari • Tanpa duplikasi", color = Color(0xFF64E4D5), style = MaterialTheme.typography.labelMedium)
+                }
+            }
         }
         item {
-            if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
+            Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
+                Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Text("Status & Kesiapan", color = Color(0xFF102D49), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                if (busy) LinearProgressIndicator(Modifier.fillMaxWidth())
             if (message.isNotBlank()) Text(message, color = MaterialTheme.colorScheme.onSurface)
             TextButton(onClick = { scope.launch { load() } }, enabled = !busy && isOnline) { Text("Muat Ulang Status") }
             Text(if (!statusLoaded) "Status belum tersedia" else "Gmail: ${if (gmailConnected) "Terhubung" else "Belum terhubung"} • Izin Auto Apply: ${if (enabled) "Aktif" else "Jeda"}")
@@ -128,11 +141,13 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                 catch (e: Exception) { message = e.message ?: "OAuth gagal dimulai." }
                 finally { busy = false }
             } }, enabled = isOnline && !busy) { Text("Hubungkan Gmail") }
+                }
+            }
         }
         item {
-            Card {
+            Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = Color.White)) {
                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("Persetujuan Auto Apply", style = MaterialTheme.typography.titleMedium)
+                    Text("Izin & Kontrol Auto Apply", color = Color(0xFF102D49), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
                     Text("Saya mengizinkan penggunaan CV dan profil untuk mengirim lamaran melalui Gmail, dengan batas yang diminta maksimal 5 email per hari. Persetujuan berlaku sampai Auto Apply dijeda. Pengiriman yang hasilnya belum pasti harus diperiksa sebelum dicoba ulang.")
                     if (!consentSaved) Row {
                         Checkbox(agreed, { agreed = it })
@@ -171,7 +186,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             }
         }
         item {
-            Text("Kandidat dari server", style = MaterialTheme.typography.titleMedium)
+            Text("Kandidat Lamaran", color = Color(0xFF102D49), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
             if (candidates.isEmpty()) Text("Belum ada kandidat yang tersedia.")
             candidates.forEach { c ->
                 Text("${c.optString("company")} • ${c.optString("position")}\n${c.optString("email")}")
@@ -179,7 +194,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             }
         }
         item {
-            Text("Riwayat dari server", style = MaterialTheme.typography.titleMedium)
+            Text("Riwayat Pengiriman", color = Color(0xFF102D49), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
             if (deliveries.isEmpty()) Text("Belum ada riwayat yang tersedia dari server.")
             deliveries.forEach { d ->
                 val gmailId = d.optString("gmail_message_id").takeIf(AutoApplyConfirmation::hasReference) ?: d.optString("gmail_id")
