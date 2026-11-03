@@ -1,5 +1,7 @@
 package com.example.automatesmartbot.ui.screens
 
+import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.border
 import androidx.activity.compose.BackHandler
 
 import com.example.automatesmartbot.BuildConfig
