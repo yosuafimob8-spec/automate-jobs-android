@@ -195,7 +195,7 @@ private fun MainDashboardContent(
     val bottomNavRoutes = bottomNavItems.map { it.route }
     val appShellRoutes = appShellItems.map { it.route }
     val showBottomBar = currentRoute in appShellRoutes
-    val showTopBar = currentRoute in appShellRoutes
+    val showTopBar = currentRoute in appShellRoutes && currentRoute != Screen.Dashboard.route
     val showBack = currentRoute in appShellRoutes && currentRoute != Screen.Dashboard.route
     val cvBack: () -> Unit = { if (!cvViewModel.goBack()) navigateUpOrDashboard() }
     val onBack: (() -> Unit)? = if (!showBack) null else if (currentRoute == Screen.CvBuilder.route) cvBack else navigateUpOrDashboard
