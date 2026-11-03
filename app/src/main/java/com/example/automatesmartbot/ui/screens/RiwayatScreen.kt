@@ -19,13 +19,14 @@ fun RiwayatScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF5FAFF))
+            .background(Color(0xFFFFFFFF))
             .padding(16.dp)
     ) {
         Column(
             modifier = Modifier.fillMaxSize(),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
+            KarirMateSectionHero("Riwayat Lamaran", "Pantau pengiriman yang benar-benar tercatat, tanpa status palsu.")
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
                 shape = RoundedCornerShape(18.dp),
@@ -33,8 +34,8 @@ fun RiwayatScreen() {
             ) {
                 Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Icon(Icons.Default.History, contentDescription = null, tint = Color(0xFF1678C8))
-                        Text(text = "Riwayat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(0xFF17324D))
+                        Icon(Icons.Default.History, contentDescription = null, tint = Color(0xFFFF762C))
+                        Text(text = "Riwayat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(0xFF242424))
                     }
                     Text(
                         text = "Pantau status lamaran yang Anda kirim.",
