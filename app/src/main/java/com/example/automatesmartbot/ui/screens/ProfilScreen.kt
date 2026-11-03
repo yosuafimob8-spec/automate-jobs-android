@@ -107,7 +107,7 @@ fun ProfilScreen(
     ) {
         if (isLoading && profile == null && errorMessage == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator(color = Color(0xFF1599C3))
+                CircularProgressIndicator(color = Color(0xFF00A99D))
             }
         } else if (errorMessage != null && profile == null) {
             Column(
@@ -135,12 +135,12 @@ fun ProfilScreen(
                 Spacer(modifier = Modifier.height(16.dp))
                 Button(
                     onClick = { fetchProfileData() },
-                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1599C3))
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00A99D))
                 ) {
                     Text("Coba Lagi")
                 }
                 TextButton(onClick = onNavigateLogin) {
-                    Text("Masuk / Login", color = Color(0xFF168CB8))
+                    Text("Masuk / Login", color = Color(0xFFFF762C))
                 }
             }
         } else {
@@ -161,7 +161,7 @@ fun ProfilScreen(
                         verticalArrangement = Arrangement.spacedBy(12.dp)
                     ) {
                         Surface(
-                            color = Color(0xFFE5F3FF),
+                            color = Color(0xFFFFF3E8),
                             shape = RoundedCornerShape(50),
                             modifier = Modifier.size(72.dp)
                         ) {
@@ -169,7 +169,7 @@ fun ProfilScreen(
                                 Icon(
                                     imageVector = Icons.Default.Person,
                                     contentDescription = null,
-                                    tint = Color(0xFF168CB8),
+                                    tint = Color(0xFFFF762C),
                                     modifier = Modifier.size(36.dp)
                                 )
                             }
@@ -246,7 +246,7 @@ fun ProfilScreen(
                         ) {
                             Button(
                                 onClick = onNavigateEditProfile,
-                                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF1599C3)),
+                                colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00A99D)),
                                 shape = RoundedCornerShape(8.dp),
                                 modifier = Modifier.weight(1f)
                             ) {
@@ -316,7 +316,7 @@ private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) 
                         onClick = { onModeSelected(mode) },
                         label = { Text(mode.label, maxLines = 1, fontSize = 11.sp) },
                         colors = androidx.compose.material3.FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = Color(0xFF1599C3),
+                            selectedContainerColor = Color(0xFF00A99D),
                             selectedLabelColor = Color.White
                         )
                     )
@@ -342,7 +342,7 @@ fun ProfileDetailRow(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            Icon(icon, contentDescription = null, tint = Color(0xFF168CB8), modifier = Modifier.size(16.dp))
+            Icon(icon, contentDescription = null, tint = Color(0xFFFF762C), modifier = Modifier.size(16.dp))
             Text(text = label, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
         Text(
