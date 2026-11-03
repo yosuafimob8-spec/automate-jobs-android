@@ -33,6 +33,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.style.TextAlign
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.automatesmartbot.ui.viewmodel.PsychotestViewModel
@@ -266,8 +267,8 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                 }
                                 Card(modifier = Modifier.weight(1f), colors = CardDefaults.cardColors(containerColor = Color(0xFFF0F2F8)), shape = RoundedCornerShape(18.dp)) {
                                     Column(Modifier.padding(14.dp)) {
-                                        Text("◎ AKURASI", color = Color(0xFF42577A), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
-                                        Text("$accuracy%", color = ink, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
+                                        Text("◎ AKURASI", color = Color(0xFF42577A), style = MaterialTheme.typography.labelSmall, fontWeight = FontWeight.Bold)
+                                        Text("$accuracy%", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.ExtraBold)
                                     }
                                 }
                             }
@@ -321,9 +322,9 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                     val expanded = selectedCategory == label
                                     Column(Modifier.fillMaxWidth().clickable { selectedCategory = if (expanded) "" else label }.padding(vertical = 8.dp)) {
                                     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                                        Text(label.replaceFirstChar { it.uppercase() }, color = ink, modifier = Modifier.width(110.dp), style = MaterialTheme.typography.bodyMedium)
-                                        LinearProgressIndicator(progress = { score / 100f }, modifier = Modifier.weight(1f).height(9.dp), color = teal, trackColor = Color(0xFFE4ECF0), strokeCap = StrokeCap.Round)
-                                        Text("$score%  ${if (expanded) "⌃" else "⌄"}", modifier = Modifier.width(70.dp), textAlign = TextAlign.End, color = ink, fontWeight = FontWeight.Bold)
+                                        Text(label.replaceFirstChar { it.uppercase() }, color = ink, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
+                                        LinearProgressIndicator(progress = { score / 100f }, modifier = Modifier.weight(1f).height(9.dp), color = Color(0xFF16B85B), trackColor = Color(0xFFD8F3E2), strokeCap = StrokeCap.Round)
+                                        Text("$score%  ${if (expanded) "⌃" else "⌄"}", modifier = Modifier.width(68.dp), textAlign = TextAlign.End, color = ink, fontWeight = FontWeight.Bold)
                                     }
                                     AnimatedVisibility(visible = expanded) {
                                         Text(if (score >= 80) "Kekuatanmu di kategori ini sudah sangat baik. Pertahankan latihan rutin." else if (score >= 60) "Kemampuan cukup baik. Latih kembali soal yang masih keliru." else "Prioritaskan latihan kategori ini, mulai dari soal dasar lalu tingkatkan kesulitan.", color = ink, style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 8.dp, bottom = 4.dp))
