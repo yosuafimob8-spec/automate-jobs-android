@@ -86,6 +86,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
         dismissButton = { TextButton(onClick = { deleteId = null }) { Text("Batal") } }
     )
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).imePadding().padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        KarirMateSectionHero("CV Builder", "Buat CV profesional, pilih template, dan analisis hasilnya.")
         state.message?.let { Text(it, color = MaterialTheme.colorScheme.onSurfaceVariant) }
         if (exportBusy) LinearProgressIndicator(Modifier.fillMaxWidth())
         when (page) {
