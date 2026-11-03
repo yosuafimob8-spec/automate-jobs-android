@@ -148,7 +148,7 @@ option(LLAMA_LLGUIDANCE "llama-common: include LLGuidance library for structured
 
 
 # Required for relocatable CMake package
-include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/build-info.cmake)
+# include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/build-info.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/common.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/win-app.cmake)
 
