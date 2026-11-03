@@ -50,6 +50,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
         }
     }
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp),verticalArrangement=Arrangement.spacedBy(10.dp)){
+        KarirMateSectionHero("Dokumen Karier", "Kelola dan ekspor dokumen PDF secara aman.")
         Text("Dokumen Karier",style=MaterialTheme.typography.titleLarge)
         Text("Kelola PDF secara lokal: gabung, ambil/susun halaman, putar, simpan, dan bagikan. File sumber tidak dihapus. PDF terenkripsi perlu dibuka terlebih dahulu dengan pemiliknya.")
         Button(onClick={importer.launch(arrayOf("application/pdf"))},enabled=!busy){Text("Tambahkan PDF")}
