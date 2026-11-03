@@ -228,25 +228,25 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         item {
                             Card(shape = RoundedCornerShape(26.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF102C38)), elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)) {
                                 Column(Modifier.fillMaxWidth().background(Brush.linearGradient(listOf(Color(0xFF102C38), Color(0xFF155F63)))).padding(22.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(18.dp)) {
-                                        Box(Modifier.size(116.dp), contentAlignment = Alignment.Center) {
-                                            Canvas(Modifier.fillMaxSize()) {
-                                                drawArc(Color.White.copy(alpha = 0.18f), 0f, 360f, false, style = Stroke(13.dp.toPx(), cap = StrokeCap.Round))
-                                                drawArc(Color(0xFFFFB55C), -90f, 360f * animatedScore / 100f, false, style = Stroke(13.dp.toPx(), cap = StrokeCap.Round))
-                                            }
-                                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                                Text(if (actualScore == null) "—" else "$animatedScore", color = Color.White, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
-                                                Text("/ 100", color = Color(0xFFB9F2E9), style = MaterialTheme.typography.labelMedium)
-                                            }
-                                        }
-                                        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                                            Text("NILAI AKHIR", color = Color(0xFFB9F2E9), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
-                                            Text(rating, color = Color.White, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
-                                            Text("$correct dari $total soal benar", color = Color(0xFFE4F5F2), style = MaterialTheme.typography.bodySmall)
-                                        }
-                                    }
-                                    HorizontalDivider(color = Color.White.copy(alpha = 0.2f))
-                                    Text("✦  $encouragement", color = Color.White, style = MaterialTheme.typography.bodyMedium)
+                                    Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(14.dp), modifier = Modifier.fillMaxWidth()) {
+                                         Text("HASIL LATIHAN • SKOR AKHIR", color = Color(0xFFB9F2E9), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
+                                         Box(Modifier.size(194.dp), contentAlignment = Alignment.Center) {
+                                             Canvas(Modifier.fillMaxSize()) {
+                                                 drawArc(Color.White.copy(alpha = 0.18f), 0f, 360f, false, style = Stroke(17.dp.toPx(), cap = StrokeCap.Round))
+                                                 drawArc(Color(0xFFFFC45D), -90f, 360f * animatedScore / 100f, false, style = Stroke(17.dp.toPx(), cap = StrokeCap.Round))
+                                             }
+                                             Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                                 Text(if (actualScore == null) "—" else "$animatedScore", color = Color.White, fontSize = 58.sp, fontWeight = FontWeight.ExtraBold)
+                                                 Text("/ 100", color = Color(0xFFB9F2E9), style = MaterialTheme.typography.titleMedium)
+                                             }
+                                         }
+                                         Surface(color = Color(0xFFFFC45D), shape = RoundedCornerShape(12.dp)) {
+                                             Text(rating, color = Color(0xFF102C38), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium, modifier = Modifier.padding(horizontal = 24.dp, vertical = 10.dp))
+                                         }
+                                         Text("$correct dari $total soal benar", color = Color(0xFFE4F5F2))
+                                     }
+                                     HorizontalDivider(color = Color.White.copy(alpha = 0.2f))
+                                    Text("✦  $encouragement", color = Color.White, style = MaterialTheme.typography.bodyMedium, textAlign = TextAlign.Center, modifier = Modifier.fillMaxWidth())
                                 }
                             }
                         }
@@ -254,19 +254,19 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                                 Card(modifier = Modifier.weight(1f), colors = CardDefaults.cardColors(containerColor = Color(0xFFE6F8F2)), shape = RoundedCornerShape(18.dp)) {
                                     Column(Modifier.padding(14.dp)) {
-                                        Text("BENAR", color = Color(0xFF136A52), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
+                                        Text("✓ BENAR", color = Color(0xFF136A52), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
                                         Text("$correct", color = ink, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
                                     }
                                 }
                                 Card(modifier = Modifier.weight(1f), colors = CardDefaults.cardColors(containerColor = Color(0xFFFFEEE8)), shape = RoundedCornerShape(18.dp)) {
                                     Column(Modifier.padding(14.dp)) {
-                                        Text("SALAH", color = Color(0xFFB14C2A), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
+                                        Text("✕ SALAH", color = Color(0xFFB14C2A), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
                                         Text("$wrong", color = ink, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
                                     }
                                 }
                                 Card(modifier = Modifier.weight(1f), colors = CardDefaults.cardColors(containerColor = Color(0xFFF0F2F8)), shape = RoundedCornerShape(18.dp)) {
                                     Column(Modifier.padding(14.dp)) {
-                                        Text("AKURASI", color = Color(0xFF42577A), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
+                                        Text("◎ AKURASI", color = Color(0xFF42577A), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
                                         Text("$accuracy%", color = ink, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
                                     }
                                 }
@@ -301,7 +301,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         }
                         item {
                             MockupCard {
-                                Text("Kemampuan per Kategori", color = ink, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                Text("📊 Analisis Kemampuan", color = ink, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
                                 Text("Ketuk kategori untuk melihat rekomendasi latihan.", color = Color(0xFF59667A), style = MaterialTheme.typography.bodySmall)
                                 Spacer(Modifier.height(8.dp))
                                 val categories = r.getAsJsonArray("categories") ?: r.getAsJsonArray("category_scores")
