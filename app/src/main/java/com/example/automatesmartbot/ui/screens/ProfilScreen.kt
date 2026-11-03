@@ -35,6 +35,7 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -360,5 +361,54 @@ fun ProfileDetailRow(
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
         )
+    }
+}
+
+@Preview(name = "Profil KarirMate • Terang", showBackground = true, widthDp = 393, heightDp = 850)
+@Composable
+private fun ProfilScreenDesignPreview() {
+    com.example.automatesmartbot.ui.theme.FixedCanvasTheme(dark = false) {
+        Column(
+            modifier = Modifier.fillMaxSize().background(Color.White).verticalScroll(rememberScrollState()).padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp)
+        ) {
+            Text("Profil Saya", fontWeight = FontWeight.ExtraBold, fontSize = 26.sp, color = Color(0xFF202020))
+            Text("Kelola identitas dan informasi karier.", fontSize = 14.sp, color = Color(0xFF555555))
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(22.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
+            ) {
+                Column(
+                    modifier = Modifier.padding(20.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    Surface(color = Color(0xFFFFF3E8), shape = RoundedCornerShape(50), modifier = Modifier.size(72.dp)) {
+                        Box(contentAlignment = Alignment.Center) {
+                            Icon(Icons.Default.Person, contentDescription = null, tint = Color(0xFFFF6B00), modifier = Modifier.size(36.dp))
+                        }
+                    }
+                    Text("Nama Pengguna", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = Color(0xFF202020))
+                    Surface(color = Color(0xFFDCFCE7), shape = RoundedCornerShape(8.dp)) {
+                        Text("PROFIL LENGKAP", modifier = Modifier.padding(horizontal = 10.dp, vertical = 5.dp), color = Color(0xFF166534), fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                    }
+                    Text("INFORMASI PRIBADI", modifier = Modifier.fillMaxWidth(), color = Color(0xFF00796F), fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                    ProfileDetailRow(Icons.Default.Email, "Email Akun", "pengguna@example.com")
+                    ProfileDetailRow(Icons.Default.Phone, "WhatsApp", "08xxxxxxxxxx")
+                    ProfileDetailRow(Icons.Default.LocationOn, "Domisili", "Tangerang")
+                    ProfileDetailRow(Icons.Default.School, "Pendidikan", "SMK")
+                    Text("PREFERENSI KARIER", modifier = Modifier.fillMaxWidth().padding(top = 8.dp), color = Color(0xFF00796F), fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                    ProfileDetailRow(Icons.Default.Work, "Posisi Diminati", "Staff Logistik")
+                    ProfileDetailRow(Icons.Default.LocationOn, "Lokasi Kerja", "Tangerang, Bogor")
+                    Button(onClick = {}, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF00796F))) {
+                        Icon(Icons.Default.Edit, contentDescription = null)
+                        Spacer(Modifier.width(8.dp))
+                        Text("Edit Profil")
+                    }
+                }
+            }
+        }
     }
 }
