@@ -1,5 +1,6 @@
 package com.example.automatesmartbot.ui.screens
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -130,7 +131,7 @@ fun ProfilScreen(
                         "Sesi Anda tetap tersimpan. Sambungkan internet lalu coba lagi."
                     },
                     fontSize = 13.sp,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    color = Color(0xFF555555),
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(16.dp))
@@ -169,8 +170,9 @@ fun ProfilScreen(
 @Composable
 private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) -> Unit) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-        shape = RoundedCornerShape(22.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = Color(0xFF202020)),
+        shape = RoundedCornerShape(18.dp),
+        border = BorderStroke(1.dp, Color(0xFFE9E9E9)),
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(
@@ -214,7 +216,7 @@ fun ProfileDetailRow(
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
             Icon(icon, contentDescription = null, tint = Color(0xFFC54814), modifier = Modifier.size(16.dp))
-            Text(text = label, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Text(text = label, fontSize = 13.sp, color = Color(0xFF555555))
         }
         Text(
             text = value,
@@ -240,7 +242,8 @@ private fun ProfileIdentityCard(
 ) {
                 Card(
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
-                    shape = RoundedCornerShape(22.dp),
+                    shape = RoundedCornerShape(18.dp),
+                    border = BorderStroke(1.dp, Color(0xFFE9E9E9)),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Column(
@@ -264,7 +267,7 @@ private fun ProfileIdentityCard(
                         }
 
                         Text(
-                            text = profile?.fullName ?: "Pengguna",
+                            text = profile?.fullName?.takeIf { it.isNotBlank() } ?: "Nama belum diisi",
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
                             color = MaterialTheme.colorScheme.onSurface
@@ -342,7 +345,7 @@ private fun ProfileIdentityCard(
                             ) {
                                 Icon(Icons.Default.Edit, contentDescription = null, modifier = Modifier.size(16.dp))
                                 Spacer(modifier = Modifier.width(4.dp))
-                                Text("Edit Profil", fontSize = 13.sp)
+                                Text("Edit Profil", fontSize = 13.sp, fontWeight = FontWeight.Bold)
                             }
 
                             OutlinedButton(
