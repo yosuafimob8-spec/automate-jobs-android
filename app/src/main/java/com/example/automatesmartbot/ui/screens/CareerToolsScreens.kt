@@ -102,7 +102,7 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
             Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text("Surat Lamaran dari CV", style = MaterialTheme.typography.titleMedium)
                 Text("Gunakan data CV tersimpan untuk menyusun surat lamaran.")
-                Button(onClick = onApplicationLetter, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = androidx.compose.ui.graphics.Color(0xFFFF762C))) { Text("Buat Surat Lamaran →") }
+                Button(onClick = onApplicationLetter, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = androidx.compose.ui.graphics.Color(0xFFC54814))) { Text("Buat Surat Lamaran →") }
             }
         }
         HorizontalDivider()
