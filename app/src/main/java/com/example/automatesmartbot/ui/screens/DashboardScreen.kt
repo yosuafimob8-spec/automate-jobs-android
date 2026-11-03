@@ -161,6 +161,7 @@ fun DashboardScreen(
                 contentPadding = PaddingValues(16.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
+                item { KarirMateSectionHero("Beranda KarirMate", "Pusat aktivitas, pelatihan, dan layanan karier.") }
                 item {
                     Text(
                         text = "Karir Mate",
