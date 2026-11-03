@@ -4,6 +4,7 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -68,7 +69,7 @@ private data class StatItem(
 private val jobFeatures = listOf(
     DashboardFeature(
         title = "Pelatihan Kerja",
-        subtitle = "Belajar mandiri & sertifikat latihan",
+        subtitle = "Belajar mandiri",
         icon = Icons.Default.Work,
         accent = PrimaryBlue,
         route = Screen.JobTraining.route
@@ -98,7 +99,7 @@ private val jobFeatures = listOf(
         statusLabel = null
     ),
     DashboardFeature(
-        title = "WorkPedia",
+        title = "Workpedia",
         subtitle = "Istilah dan hak pekerja",
         icon = Icons.Default.Description,
         accent = Color(0xFF06B6D4),
@@ -118,7 +119,7 @@ private val interviewFeatures = listOf(
 
 private val automationFeatures = listOf(
     DashboardFeature(
-        title = "Kalkulator Gaji",
+        title = "Kalkulator Gaji & Lembur",
         subtitle = "Lembur, BPJS, PPh 21 & THR",
         icon = Icons.Default.History,
         accent = Color(0xFF6366F1),
@@ -154,7 +155,7 @@ fun DashboardScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFFFFFFF))
+            .background(Color(0xFFF8F8F8))
     ) {
         if (isLoading && status == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -166,7 +167,7 @@ fun DashboardScreen(
                 contentPadding = PaddingValues(16.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
-                item { KarirMateSectionHero("Beranda KarirMate", "Pusat aktivitas, pelatihan, dan layanan karier.") }
+                item { KarirMateSectionHero("KarirMate", "Siapkan karier impianmu hari ini") }
                 item {
                     WelcomeCard(
                         status = status,
@@ -175,7 +176,7 @@ fun DashboardScreen(
                         }
                     )
                 }
-                item { OutlinedTextField(value = dashboardSearch, onValueChange = { dashboardSearch = it }, label = { Text("Cari fitur KarirMate") }, singleLine = true, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp)) }
+                item { OutlinedTextField(value = dashboardSearch, onValueChange = { dashboardSearch = it }, label = { Text("Cari lowongan, perusahaan, atau posisi...") }, singleLine = true, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp)) }
                 if (dashboardSearch.isNotBlank()) {
                     item {
                         val count = (jobFeatures + interviewFeatures + automationFeatures).count {
