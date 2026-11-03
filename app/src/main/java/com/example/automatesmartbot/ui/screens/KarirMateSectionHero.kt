@@ -26,7 +26,7 @@ internal fun KarirMateSectionHero(title: String, description: String) {
     ) {
         Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text("KARIRMATE", color = Color(0xFFC54814), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.labelLarge)
+                Text("KARIRMATE", color = Color(0xFFFF6B00), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.labelLarge)
                 Surface(shape = RoundedCornerShape(12.dp), color = Color(0xFFFFF2E8), border = BorderStroke(1.dp, Color(0xFFFFDDC5))) {
                     Text("PUSAT KARIER", Modifier.padding(horizontal = 10.dp, vertical = 5.dp), color = Color(0xFF994010), style = MaterialTheme.typography.labelSmall)
                 }

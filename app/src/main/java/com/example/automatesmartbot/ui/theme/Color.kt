@@ -16,7 +16,7 @@ val PrimaryBlueVariant = Color(0xFF9E3912)
 val LightBlueAccent = Cyan
 val TextWhite = Color(0xFFF8FAFC)
 val TextGray = Color(0xFF94A3B8)
-val ProGold = Color(0xFFF59E0B)
+val ProGold = Color(0xFFFF6B00)
 val FreeCyan = Color(0xFF00A99D)
 val CardBorder = Color(0xFFE8E8E8)
 

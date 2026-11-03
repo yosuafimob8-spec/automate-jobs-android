@@ -61,7 +61,7 @@ fun AppTopBar(
             Box(
                 modifier = Modifier
                     .clip(RoundedCornerShape(16.dp))
-                    .background(if (isPro) Color(0xFFF59E0B) else Color(0xFF0EA5E9))
+                    .background(if (isPro) Color(0xFFFF6B00) else Color(0xFF00796F))
                     .padding(horizontal = 10.dp, vertical = 5.dp),
                 contentAlignment = Alignment.Center
             ) {
@@ -73,12 +73,12 @@ fun AppTopBar(
                         Icon(
                             imageVector = Icons.Default.WorkspacePremium,
                             contentDescription = "PRO",
-                            tint = Color.Black,
+                            tint = Color.White,
                             modifier = Modifier.size(14.dp)
                         )
                         Text(
                             text = "PRO",
-                            color = Color.Black,
+                            color = Color.White,
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp
                         )

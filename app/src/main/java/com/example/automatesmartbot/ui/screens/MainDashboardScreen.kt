@@ -204,6 +204,7 @@ private fun MainDashboardContent(
         navigateUpOrDashboard()
     }
 
+    FixedCanvasTheme(dark = false) {
     Scaffold(
         topBar = {
             if (showTopBar) {
@@ -229,7 +230,7 @@ private fun MainDashboardContent(
                         val selected = currentRoute == screen.route
                         NavigationBarItem(
                             icon = { Icon(screen.icon, contentDescription = screen.title) },
-                            label = { Text(screen.title, fontSize = 10.sp) },
+                            label = { Text(screen.title, fontSize = 11.sp, maxLines = 1) },
                             selected = selected,
                             onClick = {
                                 if (screen.route == Screen.Dashboard.route) {
@@ -402,5 +403,6 @@ private fun MainDashboardContent(
                 }
             }
         }
+    }
     }
 }
