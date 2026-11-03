@@ -15,6 +15,7 @@ class ThemeContrastTest {
             assertTrue(ratio(colors.onSurface, colors.surface) >= 4.5f)
             assertTrue(ratio(colors.onSurfaceVariant, colors.surfaceVariant) >= 4.5f)
             assertTrue(ratio(colors.onPrimary, colors.primary) >= 4.5f)
+            assertTrue(ratio(colors.onPrimaryContainer, colors.primaryContainer) >= 4.5f)
         }
         assertTrue(ratio(Color.White, ActionOrange) >= 4.5f)
         assertTrue(ratio(KarirMateLightColors.onSecondary, KarirMateLightColors.secondary) >= 4.5f)
