@@ -34,6 +34,7 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Surface
@@ -237,7 +238,7 @@ fun ProfileDetailRow(
             modifier = Modifier.weight(1f),
             fontSize = 13.sp,
             fontWeight = FontWeight.SemiBold,
-            color = MaterialTheme.colorScheme.onSurface,
+            color = Color(0xFF17212B),
             textAlign = TextAlign.End,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
@@ -314,7 +315,7 @@ private fun ProfileIdentityCard(
                                     false -> "EMAIL BELUM TERVERIFIKASI"
                                     null -> "STATUS EMAIL TIDAK DIKETAHUI"
                                 },
-                                color = MaterialTheme.colorScheme.onSurface,
+                                color = Color(0xFF17212B),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.sp,
                                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
@@ -322,12 +323,14 @@ private fun ProfileIdentityCard(
                         }
 
                         Spacer(modifier = Modifier.height(4.dp))
+                        HorizontalDivider(color = Color(0xFFE8EDF1))
                         Text("INFORMASI PRIBADI", color = Color(0xFF00796F), fontWeight = FontWeight.Bold, fontSize = 12.sp, modifier = Modifier.fillMaxWidth())
 
                         ProfileDetailRow(icon = Icons.Default.Email, label = "Email Akun", value = account?.email ?: "-")
                         ProfileDetailRow(icon = Icons.Default.Phone, label = "WhatsApp", value = profile?.whatsapp ?: "-")
                         ProfileDetailRow(icon = Icons.Default.LocationOn, label = "Domisili", value = profile?.domicile ?: "-")
                         ProfileDetailRow(icon = Icons.Default.School, label = "Pendidikan", value = profile?.education ?: "-")
+                        HorizontalDivider(color = Color(0xFFE8EDF1))
                         Text("PREFERENSI KARIER", color = Color(0xFF00796F), fontWeight = FontWeight.Bold, fontSize = 12.sp, modifier = Modifier.fillMaxWidth().padding(top = 8.dp))
                         ProfileDetailRow(
                             icon = Icons.Default.Work,
@@ -365,7 +368,7 @@ private fun ProfileIdentityCard(
                             OutlinedButton(
                                 onClick = onLogout,
                                 colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFFB91C1C)),
-                                shape = RoundedCornerShape(8.dp),
+                                shape = RoundedCornerShape(12.dp),
                                 modifier = Modifier.weight(1f)
                             ) {
                                 Icon(
