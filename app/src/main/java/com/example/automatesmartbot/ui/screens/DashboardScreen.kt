@@ -168,19 +168,6 @@ fun DashboardScreen(
             ) {
                 item { KarirMateSectionHero("Beranda KarirMate", "Pusat aktivitas, pelatihan, dan layanan karier.") }
                 item {
-                    Text(
-                        text = "Karir Mate",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 24.sp,
-                        color = Color(0xFF222222)
-                    )
-                    Text(
-                        text = "Temukan peluang dan siapkan langkah karier Anda.",
-                        fontSize = 13.sp,
-                        color = Color(0xFF64748B)
-                    )
-                }
-                item {
                     WelcomeCard(
                         status = status,
                         onCompleteProfile = {
@@ -189,12 +176,30 @@ fun DashboardScreen(
                     )
                 }
                 item { OutlinedTextField(value = dashboardSearch, onValueChange = { dashboardSearch = it }, label = { Text("Cari fitur KarirMate") }, singleLine = true, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp)) }
+                if (dashboardSearch.isNotBlank()) {
+                    item {
+                        val count = (jobFeatures + interviewFeatures + automationFeatures).count {
+                            it.title.contains(dashboardSearch, ignoreCase = true) || it.subtitle.contains(dashboardSearch, ignoreCase = true)
+                        }
+                        if (count == 0) {
+                            Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF2E8)), shape = RoundedCornerShape(18.dp)) {
+                                Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                                    Text("Fitur tidak ditemukan", fontWeight = FontWeight.Bold, color = Color(0xFF202020))
+                                    Text("Coba kata kunci lain atau kosongkan pencarian.", color = Color(0xFF555555))
+                                    TextButton(onClick = { dashboardSearch = "" }) { Text("Hapus Pencarian") }
+                                }
+                            }
+                        } else {
+                            Text("$count fitur cocok", color = Color(0xFF00796F), fontWeight = FontWeight.Bold)
+                        }
+                    }
+                }
                 item { AccountStats(status = status) }
-                item { SectionHeader(title = "Cari Kerja & Persiapan", itemCount = jobFeatures.size) }
+                item { SectionHeader(title = "Cari Kerja & Persiapan", itemCount = jobFeatures.count { it.title.contains(dashboardSearch, ignoreCase = true) || it.subtitle.contains(dashboardSearch, ignoreCase = true) }) }
                 item { FeatureGrid(features = jobFeatures.filter { it.title.contains(dashboardSearch, ignoreCase = true) || it.subtitle.contains(dashboardSearch, ignoreCase = true) }, onNavigate = onNavigate) }
-                item { SectionHeader(title = "Simulasi Wawancara", itemCount = interviewFeatures.size) }
+                item { SectionHeader(title = "Simulasi Wawancara", itemCount = interviewFeatures.count { it.title.contains(dashboardSearch, ignoreCase = true) || it.subtitle.contains(dashboardSearch, ignoreCase = true) }) }
                 item { FeatureGrid(features = interviewFeatures.filter { it.title.contains(dashboardSearch, ignoreCase = true) || it.subtitle.contains(dashboardSearch, ignoreCase = true) }, onNavigate = onNavigate) }
-                item { SectionHeader(title = "Otomasi & Dokumen", itemCount = automationFeatures.size) }
+                item { SectionHeader(title = "Otomasi & Dokumen", itemCount = automationFeatures.count { it.title.contains(dashboardSearch, ignoreCase = true) || it.subtitle.contains(dashboardSearch, ignoreCase = true) }) }
                 item { FeatureGrid(features = automationFeatures.filter { it.title.contains(dashboardSearch, ignoreCase = true) || it.subtitle.contains(dashboardSearch, ignoreCase = true) }, onNavigate = onNavigate) }
                 item { SectionHeader(title = "Aktivitas Terakhir") }
                 item { ActivityUnavailableCard(onOpenHistory = { onNavigate(Screen.Riwayat.route) }) }
