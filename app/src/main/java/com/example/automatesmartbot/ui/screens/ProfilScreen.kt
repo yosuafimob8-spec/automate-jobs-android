@@ -6,9 +6,7 @@ import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.weight
 import androidx.compose.material3.LinearProgressIndicator
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
