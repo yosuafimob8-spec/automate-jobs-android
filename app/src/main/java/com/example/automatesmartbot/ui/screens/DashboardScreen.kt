@@ -149,7 +149,7 @@ fun DashboardScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF6FAFF))
+            .background(Color(0xFFFFFFFF))
     ) {
         if (isLoading && status == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -166,7 +166,7 @@ fun DashboardScreen(
                         text = "Karir Mate",
                         fontWeight = FontWeight.Bold,
                         fontSize = 24.sp,
-                        color = Color(0xFF17324D)
+                        color = Color(0xFF222222)
                     )
                     Text(
                         text = "Temukan peluang dan siapkan langkah karier Anda.",
@@ -219,7 +219,7 @@ private fun ConnectionPill(isOnline: Boolean) {
                 text = if (isOnline) "Online" else "Offline",
                 fontWeight = FontWeight.Bold,
                 fontSize = 10.sp,
-                color = Color(0xFF17324D)
+                color = Color(0xFF222222)
             )
         }
     }
@@ -274,7 +274,7 @@ private fun WelcomeCard(
                         text = "AutoMate Dashboard",
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = Color(0xFF17324D)
+                        color = Color(0xFF222222)
                     )
                 }
                 Spacer(modifier = Modifier.width(12.dp))
@@ -338,7 +338,7 @@ private fun MembershipBadge(isPro: Boolean) {
             }
             Text(
                 text = if (isPro) "PRO" else "FREE",
-                color = Color(0xFF102B49),
+                color = Color(0xFF222222),
                 fontWeight = FontWeight.Bold,
                 fontSize = 11.sp
             )
@@ -355,7 +355,7 @@ private fun StatusPill(
 ) {
     Surface(
         modifier = modifier,
-        color = Color(0xFFF5F9FF),
+        color = Color(0xFFFFFFFF),
         shape = RoundedCornerShape(10.dp)
     ) {
         Row(
@@ -372,7 +372,7 @@ private fun StatusPill(
             Text(
                 text = text,
                 fontSize = 10.sp,
-                color = Color(0xFF17324D),
+                color = Color(0xFF222222),
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
@@ -488,7 +488,7 @@ private fun SectionHeader(title: String, itemCount: Int? = null) {
             text = title,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
-            color = Color(0xFF17324D)
+            color = Color(0xFF222222)
         )
         if (itemCount != null) {
             Text(
@@ -592,7 +592,7 @@ private fun FeatureCard(
                     text = feature.title,
                     fontWeight = FontWeight.Bold,
                     fontSize = 13.sp,
-                    color = Color(0xFF17324D),
+                    color = Color(0xFF222222),
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -648,7 +648,7 @@ private fun ActivityUnavailableCard(onOpenHistory: () -> Unit) {
                     text = "Belum ada riwayat lamaran",
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp,
-                    color = Color(0xFF17324D)
+                    color = Color(0xFF222222)
                 )
             }
             Text(
