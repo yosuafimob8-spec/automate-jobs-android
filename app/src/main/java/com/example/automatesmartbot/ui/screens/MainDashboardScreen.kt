@@ -2,6 +2,7 @@ package com.example.automatesmartbot.ui.screens
 
 import androidx.compose.ui.unit.dp
 import androidx.activity.compose.BackHandler
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
@@ -224,8 +225,9 @@ private fun MainDashboardContent(
         bottomBar = {
             if (showBottomBar) {
                 NavigationBar(
-                    containerColor = Color.White,
-                    tonalElevation = 6.dp
+                    containerColor = Color(0xFFFFFDF9),
+                    tonalElevation = 8.dp,
+                    modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC))
                 ) {
                     bottomNavItems.forEach { screen ->
                         val selected = currentRoute == screen.route
@@ -234,9 +236,9 @@ private fun MainDashboardContent(
                             label = {
                                 Text(
                                     screen.title,
-                                    fontSize = 11.sp,
+                                    fontSize = 11.5.sp,
                                     maxLines = 1,
-                                    fontWeight = if (selected) androidx.compose.ui.text.font.FontWeight.Bold else androidx.compose.ui.text.font.FontWeight.Medium
+                                    fontWeight = if (selected) androidx.compose.ui.text.font.FontWeight.Bold else androidx.compose.ui.text.font.FontWeight.SemiBold
                                 )
                             },
                             selected = selected,
@@ -253,9 +255,9 @@ private fun MainDashboardContent(
                             },
                             colors = NavigationBarItemDefaults.colors(
                                 selectedIconColor = Color.White,
-                                selectedTextColor = Color(0xFFFF6B00),
-                                unselectedIconColor = Color(0xFF64748B),
-                                unselectedTextColor = Color(0xFF64748B),
+                                selectedTextColor = Color(0xFFE65100),
+                                unselectedIconColor = Color(0xFF475569),
+                                unselectedTextColor = Color(0xFF334155),
                                 indicatorColor = Color(0xFFFF6B00)
                             )
                         )

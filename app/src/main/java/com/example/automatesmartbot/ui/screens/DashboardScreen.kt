@@ -196,11 +196,100 @@ fun DashboardScreen(
     val isOnline = status?.isOnline != false
     val displayName = status?.displayName?.takeIf { it.isNotBlank() } ?: "Ilham Ramdhani S"
 
+    // Multi-stop warm cream-orange gradient across entire dashboard
+    val dashboardGradient = Brush.verticalGradient(
+        0.00f to Color(0xFFFFF2E5), // Soft peach-cream at top
+        0.12f to Color(0xFFFFF7F0), // Gentle warm transition
+        0.30f to Color(0xFFFFFBF7), // Luminous cream
+        0.65f to Color(0xFFFAF6F0), // Subtle warm cream
+        0.85f to Color(0xFFFFF7F0), // Soft transition
+        1.00f to Color(0xFFFFF3E6)  // Subtle warm glow near bottom
+    )
+
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFFAFAFA))
+            .background(dashboardGradient)
     ) {
+        // Decorative ambient transparent waves across the full dashboard background
+        Canvas(modifier = Modifier.fillMaxSize()) {
+            val w = size.width
+            val h = size.height
+
+            // Top soft ambient wave
+            val topWave = Path().apply {
+                moveTo(w * 0.40f, 0f)
+                cubicTo(
+                    w * 0.70f, h * 0.03f,
+                    w * 0.50f, h * 0.15f,
+                    w, h * 0.14f
+                )
+                lineTo(w, 0f)
+                close()
+            }
+            drawPath(
+                path = topWave,
+                brush = Brush.linearGradient(
+                    colors = listOf(Color(0xFFFF9E42).copy(alpha = 0.20f), Color(0xFFFF7A00).copy(alpha = 0.06f)),
+                    start = Offset(w * 0.5f, 0f),
+                    end = Offset(w, h * 0.14f)
+                )
+            )
+
+            // Middle gentle flowing wave behind menu area
+            val midWave = Path().apply {
+                moveTo(0f, h * 0.36f)
+                cubicTo(
+                    w * 0.35f, h * 0.32f,
+                    w * 0.65f, h * 0.42f,
+                    w, h * 0.38f
+                )
+                lineTo(w, h * 0.48f)
+                cubicTo(
+                    w * 0.65f, h * 0.52f,
+                    w * 0.35f, h * 0.44f,
+                    0f, h * 0.46f
+                )
+                close()
+            }
+            drawPath(
+                path = midWave,
+                brush = Brush.horizontalGradient(
+                    colors = listOf(
+                        Color(0xFFFF8533).copy(alpha = 0.030f),
+                        Color(0xFFFFB280).copy(alpha = 0.050f),
+                        Color(0xFFFF8533).copy(alpha = 0.020f)
+                    )
+                )
+            )
+
+            // Lower gentle ambient wave near certificate
+            val lowerWave = Path().apply {
+                moveTo(0f, h * 0.70f)
+                cubicTo(
+                    w * 0.40f, h * 0.75f,
+                    w * 0.70f, h * 0.66f,
+                    w, h * 0.72f
+                )
+                lineTo(w, h * 0.82f)
+                cubicTo(
+                    w * 0.65f, h * 0.86f,
+                    w * 0.30f, h * 0.78f,
+                    0f, h * 0.81f
+                )
+                close()
+            }
+            drawPath(
+                path = lowerWave,
+                brush = Brush.horizontalGradient(
+                    colors = listOf(
+                        Color(0xFFFF9E42).copy(alpha = 0.025f),
+                        Color(0xFFFF7A00).copy(alpha = 0.045f)
+                    )
+                )
+            )
+        }
+
         if (isLoading && status == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                 CircularProgressIndicator(color = KarirOrange)
@@ -253,12 +342,14 @@ fun DashboardScreen(
                             )
                             if (filtered.isEmpty()) {
                                 Card(
-                                    colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF2E8)),
-                                    shape = RoundedCornerShape(16.dp),
+                                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                                    shape = RoundedCornerShape(18.dp),
+                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                    elevation = CardDefaults.cardElevation(defaultElevation = 2.5.dp),
                                     modifier = Modifier.fillMaxWidth()
                                 ) {
                                     Column(
-                                        modifier = Modifier.padding(16.dp),
+                                        modifier = Modifier.padding(18.dp),
                                         verticalArrangement = Arrangement.spacedBy(6.dp)
                                     ) {
                                         Text("Fitur tidak ditemukan", fontWeight = FontWeight.Bold, color = Color(0xFF0F172A))
@@ -274,9 +365,10 @@ fun DashboardScreen(
                                         modifier = Modifier
                                             .fillMaxWidth()
                                             .clickable { onNavigate(item.route) },
-                                        shape = RoundedCornerShape(14.dp),
+                                        shape = RoundedCornerShape(16.dp),
                                         colors = CardDefaults.cardColors(containerColor = Color.White),
-                                        border = BorderStroke(1.dp, Color(0xFFF1F5F9))
+                                        border = BorderStroke(1.dp, Color(0xFFF3EAE2)),
+                                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                                     ) {
                                         Row(
                                             modifier = Modifier.padding(14.dp),
@@ -285,11 +377,11 @@ fun DashboardScreen(
                                         ) {
                                             Box(
                                                 modifier = Modifier
-                                                    .size(40.dp)
-                                                    .background(item.bgTint, RoundedCornerShape(10.dp)),
+                                                    .size(42.dp)
+                                                    .background(item.bgTint, RoundedCornerShape(12.dp)),
                                                 contentAlignment = Alignment.Center
                                             ) {
-                                                Icon(item.icon, contentDescription = null, tint = item.iconTint, modifier = Modifier.size(22.dp))
+                                                Icon(item.icon, contentDescription = null, tint = item.iconTint, modifier = Modifier.size(23.dp))
                                             }
                                             Column(modifier = Modifier.weight(1f)) {
                                                 Text(item.title.replace("\n", " "), fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color(0xFF0F172A))
@@ -355,7 +447,7 @@ private fun DashboardTopHeaderSection(
             // Warm gradient background on top right
             drawRect(
                 brush = Brush.verticalGradient(
-                    colors = listOf(Color(0xFFFFF3EB), Color(0xFFFFF8F3), Color(0xFFFAFAFA)),
+                    colors = listOf(Color(0xFFFFF2E5), Color(0xFFFFF7F0), Color.Transparent),
                     startY = 0f,
                     endY = height
                 ),
@@ -426,7 +518,7 @@ private fun DashboardTopHeaderSection(
                     Box(
                         modifier = Modifier
                             .size(38.dp)
-                            .shadow(2.dp, RoundedCornerShape(10.dp))
+                            .shadow(3.dp, RoundedCornerShape(10.dp))
                             .background(KarirOrange, RoundedCornerShape(10.dp)),
                         contentAlignment = Alignment.Center
                     ) {
@@ -471,6 +563,7 @@ private fun DashboardTopHeaderSection(
                     Surface(
                         shape = RoundedCornerShape(50),
                         color = KarirOrange,
+                        shadowElevation = 2.dp,
                         modifier = Modifier.clickable { onNavigate(Screen.Profil.route) }
                     ) {
                         Row(
@@ -523,6 +616,7 @@ private fun DashboardTopHeaderSection(
                             .clip(CircleShape)
                             .background(Color(0xFFFFF2E8), CircleShape)
                             .border(1.5.dp, KarirOrange, CircleShape)
+                            .shadow(1.dp, CircleShape)
                             .clickable { onNavigate(Screen.Profil.route) },
                         contentAlignment = Alignment.Center
                     ) {
@@ -630,10 +724,10 @@ private fun DashboardSearchBar(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
-        shape = RoundedCornerShape(16.dp),
+        shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        border = BorderStroke(1.dp, Color(0xFFFFE6D5)),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.5.dp)
     ) {
         Row(
             modifier = Modifier
@@ -690,7 +784,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(20.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        border = BorderStroke(1.dp, Color(0xFFF1F5F9)),
+        border = BorderStroke(1.dp, Color(0xFFF3ECE4)),
         elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
     ) {
         Column(
@@ -751,6 +845,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                     shape = RoundedCornerShape(50),
                     border = BorderStroke(1.dp, KarirOrange),
                     color = Color.White,
+                    shadowElevation = 1.dp,
                     modifier = Modifier.clickable(onClick = onDetailClick)
                 ) {
                     Text(
@@ -771,9 +866,10 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                 // Sub-Card 1: Pengangguran
                 Card(
                     modifier = Modifier.weight(1f),
-                    shape = RoundedCornerShape(14.dp),
+                    shape = RoundedCornerShape(15.dp),
                     colors = CardDefaults.cardColors(containerColor = Color(0xFFEFF6FF)),
-                    border = BorderStroke(1.dp, Color(0xFFDBEAFE))
+                    border = BorderStroke(1.dp, Color(0xFFDBEAFE)),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                 ) {
                     Column(
                         modifier = Modifier
@@ -858,9 +954,10 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                 // Sub-Card 2: Kemiskinan
                 Card(
                     modifier = Modifier.weight(1f),
-                    shape = RoundedCornerShape(14.dp),
+                    shape = RoundedCornerShape(15.dp),
                     colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF1F2)),
-                    border = BorderStroke(1.dp, Color(0xFFFFE4E6))
+                    border = BorderStroke(1.dp, Color(0xFFFFE4E6)),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                 ) {
                     Column(
                         modifier = Modifier
@@ -1115,12 +1212,12 @@ private fun MenuGridCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .height(116.dp)
+            .height(118.dp)
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        border = BorderStroke(1.dp, Color(0xFFF1F5F9)),
-        elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+        border = BorderStroke(1.dp, Color(0xFFF3EAE2)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp, pressedElevation = 4.dp)
     ) {
         Column(
             modifier = Modifier
@@ -1131,8 +1228,8 @@ private fun MenuGridCard(
         ) {
             Box(
                 modifier = Modifier
-                    .size(44.dp)
-                    .background(item.bgTint, RoundedCornerShape(12.dp)),
+                    .size(46.dp)
+                    .background(item.bgTint, RoundedCornerShape(13.dp)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
@@ -1151,7 +1248,7 @@ private fun MenuGridCard(
                 fontWeight = FontWeight.Bold,
                 color = Color(0xFF0F172A),
                 textAlign = TextAlign.Center,
-                lineHeight = 13.sp,
+                lineHeight = 13.5.sp,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
@@ -1188,8 +1285,8 @@ private fun CertificateRequirementsCard(
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(20.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        border = BorderStroke(1.dp, Color(0xFFFFE4D1)),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
     ) {
         Box(
             modifier = Modifier
@@ -1506,14 +1603,15 @@ private fun ProfileIncompleteBanner(onCompleteProfile: () -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
-        shape = RoundedCornerShape(14.dp),
-        colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF7ED)),
-        border = BorderStroke(1.dp, Color(0xFFFFD8B2))
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        border = BorderStroke(1.dp, Color(0xFFFFD8B2)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(12.dp),
+                .padding(14.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
