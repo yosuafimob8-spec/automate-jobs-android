@@ -219,33 +219,70 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     }
                     if (!resultAnalysisPage) {
                         item {
-                            Text("Hasil Psikotes", color = ink, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-                            Text("Ringkasan performa dan langkah latihan berikutnya.", color = Color(0xFF59667A))
+                            Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                                Text("LAPORAN LATIHAN", color = teal, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelLarge)
+                                Text("Hasil Psikotes", color = ink, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
+                                Text("Kenali pencapaianmu, tinjau jawaban, lalu pilih langkah berikutnya.", color = Color(0xFF59667A))
+                            }
                         }
                         item {
-                            Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFFE7F8F4))) {
-                                Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                                    Row(verticalAlignment = Alignment.CenterVertically) {
-                                        Column(Modifier.weight(1f)) {
-                                            Text("Nilai Akhir", color = ink, fontWeight = FontWeight.Medium)
-                                            Text("${if (actualScore == null) "—" else animatedScore.toString()} / 100", color = ink, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
+                            Card(shape = RoundedCornerShape(26.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF10334B))) {
+                                Column(Modifier.fillMaxWidth().padding(22.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+                                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(18.dp)) {
+                                        Box(Modifier.size(116.dp), contentAlignment = Alignment.Center) {
+                                            Canvas(Modifier.fillMaxSize()) {
+                                                drawArc(Color(0xFF36566A), 0f, 360f, false, style = Stroke(13.dp.toPx(), cap = StrokeCap.Round))
+                                                drawArc(Color(0xFF2AD9C4), -90f, 360f * animatedScore / 100f, false, style = Stroke(13.dp.toPx(), cap = StrokeCap.Round))
+                                            }
+                                            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                                Text(if (actualScore == null) "—" else "$animatedScore", color = Color.White, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
+                                                Text("/ 100", color = Color(0xFFB4D8E0), style = MaterialTheme.typography.labelMedium)
+                                            }
                                         }
-                                        Surface(color = teal, shape = RoundedCornerShape(50)) {
-                                            Text(rating, color = Color.White, modifier = Modifier.padding(horizontal = 12.dp, vertical = 7.dp), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
+                                        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                                            Text("NILAI AKHIR", color = Color(0xFFB4D8E0), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
+                                            Text(rating, color = Color.White, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                                            Text("$correct dari $total soal benar", color = Color(0xFFB4D8E0), style = MaterialTheme.typography.bodySmall)
                                         }
                                     }
-                                    LinearProgressIndicator(progress = { animatedScore / 100f }, modifier = Modifier.fillMaxWidth().height(10.dp), color = teal, trackColor = Color.White, strokeCap = StrokeCap.Round)
-                                    Text(encouragement, color = ink, style = MaterialTheme.typography.bodyMedium)
+                                    HorizontalDivider(color = Color(0xFF36566A))
+                                    Text(encouragement, color = Color.White, style = MaterialTheme.typography.bodyMedium)
                                 }
                             }
                         }
                         item {
                             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                                Button(onClick = { showReview = !showReview }, modifier = Modifier.weight(1f), colors = ButtonDefaults.buttonColors(containerColor = teal)) {
-                                    Text(if (showReview) "Tutup Jawaban" else "Lihat Jawaban", maxLines = 1)
+                                Card(modifier = Modifier.weight(1f), colors = CardDefaults.cardColors(containerColor = Color(0xFFE6F8F2)), shape = RoundedCornerShape(18.dp)) {
+                                    Column(Modifier.padding(14.dp)) {
+                                        Text("BENAR", color = Color(0xFF136A52), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
+                                        Text("$correct", color = ink, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
+                                    }
                                 }
-                                Button(onClick = { if (isPro) { resultAnalysisPage = true; analysisTab = 1 } else proNotice = true }, modifier = Modifier.weight(1f), colors = ButtonDefaults.buttonColors(containerColor = orange)) {
-                                    Text("Pembahasan PRO", maxLines = 1)
+                                Card(modifier = Modifier.weight(1f), colors = CardDefaults.cardColors(containerColor = Color(0xFFFFEEE8)), shape = RoundedCornerShape(18.dp)) {
+                                    Column(Modifier.padding(14.dp)) {
+                                        Text("SALAH", color = Color(0xFFB14C2A), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
+                                        Text("$wrong", color = ink, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
+                                    }
+                                }
+                                Card(modifier = Modifier.weight(1f), colors = CardDefaults.cardColors(containerColor = Color(0xFFF0F2F8)), shape = RoundedCornerShape(18.dp)) {
+                                    Column(Modifier.padding(14.dp)) {
+                                        Text("AKURASI", color = Color(0xFF42577A), style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold)
+                                        Text("$accuracy%", color = ink, style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.ExtraBold)
+                                    }
+                                }
+                            }
+                        }
+                        item {
+                            Text("Jelajahi hasilmu", color = ink, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                            Text("Buka jawaban untuk mengevaluasi setiap soal.", color = Color(0xFF59667A), style = MaterialTheme.typography.bodySmall)
+                        }
+                        item {
+                            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                                Button(onClick = { showReview = !showReview }, modifier = Modifier.weight(1f).heightIn(min = 52.dp), shape = RoundedCornerShape(16.dp), colors = ButtonDefaults.buttonColors(containerColor = teal)) {
+                                    Text(if (showReview) "Tutup Jawaban ↑" else "Lihat Jawaban ↓", maxLines = 1)
+                                }
+                                Button(onClick = { if (isPro) { resultAnalysisPage = true; analysisTab = 1 } else proNotice = true }, modifier = Modifier.weight(1f).heightIn(min = 52.dp), shape = RoundedCornerShape(16.dp), colors = ButtonDefaults.buttonColors(containerColor = orange)) {
+                                    Text("Analisis PRO →", maxLines = 1)
                                 }
                             }
                         }
@@ -264,32 +301,8 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         }
                         item {
                             MockupCard {
-                                Text("🟠 Ringkasan Jawaban", fontWeight = FontWeight.ExtraBold, color = Color.Black, style = MaterialTheme.typography.titleMedium)
-                                Spacer(Modifier.height(12.dp))
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(9.dp)) {
-                                        ScoreRow("✅ Jawaban Benar", "$correct")
-                                        ScoreRow("❌ Jawaban Salah", "$wrong")
-                                        
-                                        ScoreRow("📋 Total Soal", "$total")
-                                    }
-                                    Spacer(Modifier.width(12.dp))
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Box(Modifier.size(96.dp), contentAlignment = Alignment.Center) {
-                                            Canvas(Modifier.fillMaxSize()) {
-                                                drawArc(Color(0xFFDCE8EA), 0f, 360f, false, style = Stroke(11.dp.toPx(), cap = StrokeCap.Round))
-                                                drawArc(Color(0xFF00AA89), -90f, 360f * animatedAccuracy, false, style = Stroke(11.dp.toPx(), cap = StrokeCap.Round))
-                                            }
-                                            Text("${(animatedAccuracy * 100).toInt()}%", color = Color.Black, fontWeight = FontWeight.Black, style = MaterialTheme.typography.titleLarge)
-                                        }
-                                        Text("Tingkat\nKetepatan", color = Color.Black, textAlign = TextAlign.Center, style = MaterialTheme.typography.labelSmall)
-                                    }
-                                }
-                            }
-                        }
-                        item {
-                            MockupCard {
-                                Text("🟠 Hasil per Kategori", color = Color.Black, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleMedium)
+                                Text("Kemampuan per Kategori", color = ink, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                Text("Ketuk kategori untuk melihat rekomendasi latihan.", color = Color(0xFF59667A), style = MaterialTheme.typography.bodySmall)
                                 Spacer(Modifier.height(8.dp))
                                 val categories = r.getAsJsonArray("categories") ?: r.getAsJsonArray("category_scores")
                                 val categoryMap = mutableMapOf<String, Int>()
