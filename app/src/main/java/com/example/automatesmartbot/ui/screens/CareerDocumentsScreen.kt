@@ -64,7 +64,15 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
         TextButton(onClick=onLegacyDocuments){Text("Surat Izin & Dokumen Kerja")}
         if(busy)LinearProgressIndicator(Modifier.fillMaxWidth())
         if(message.isNotBlank())Text(message)
-        items.forEach{item->Card(Modifier.fillMaxWidth()){
+        if (items.isEmpty()) {
+            Card(colors = CardDefaults.cardColors(containerColor = androidx.compose.ui.graphics.Color(0xFFE5F6F2)), shape = androidx.compose.foundation.shape.RoundedCornerShape(18.dp)) {
+                Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text("Belum ada dokumen PDF", style = MaterialTheme.typography.titleMedium)
+                    Text("Tambahkan PDF dari HP untuk mulai mengelola dokumen karier.")
+                }
+            }
+        }
+        items.forEach{item->Card(Modifier.fillMaxWidth(), shape = androidx.compose.foundation.shape.RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = androidx.compose.ui.graphics.Color.White)){
             Column(Modifier.padding(12.dp)){
                 Row{Checkbox(item.id in selected,{checked->selected=ArrayList(if(checked)selected+item.id else selected.filter{it!=item.id})});Text("${item.name} • ${item.pages} halaman",Modifier.padding(top=12.dp))}
                 Row{
@@ -77,8 +85,11 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
             }
         }}
         val chosen=items.filter{it.id in selected}
+        HorizontalDivider()
+        Text("Alat Pengolahan PDF", style = MaterialTheme.typography.titleLarge)
+        Text("Pilih dua dokumen untuk menggabungkan, atau satu dokumen untuk menyusun dan memutar halaman.")
         Text("Urutan gabungan mengikuti urutan dokumen pada daftar.")
-        Button(onClick={operation{store.merge(chosen)}},enabled=!busy && chosen.size>=2){Text("Gabungkan PDF Terpilih")}
+        Button(onClick={operation{store.merge(chosen)}},enabled=!busy && chosen.size>=2,modifier=Modifier.fillMaxWidth(),colors=ButtonDefaults.buttonColors(containerColor=androidx.compose.ui.graphics.Color(0xFFC54814))){Text("Gabungkan PDF Terpilih")}
         AppInput("Halaman untuk diambil / disusun (contoh 3,1,2)",order,{order=it})
         Button(onClick={operation{val source=chosen.single();val pages=order.split(',').map{it.trim().toIntOrNull() ?: error("Gunakan nomor halaman dipisahkan koma.")};store.transform(source,pages,0)}},enabled=!busy && chosen.size==1 && order.isNotBlank()){Text("Buat PDF dari Urutan Halaman")}
         Button(onClick={operation{val source=chosen.single();store.transform(source,(1..source.pages).toList(),90)}},enabled=!busy && chosen.size==1){Text("Putar 90° ke Dokumen Baru")}
