@@ -193,14 +193,14 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 val animatedAccuracy by animateFloatAsState(targetValue = if (animateResults) accuracy.coerceIn(0, 100) / 100f else 0f, animationSpec = tween(1100), label = "accuracy")
                 val rating = when {
                     actualScore == null -> "Asesmen Kepribadian"
-                    actualScore >= 80 -> "Baik Sekali"
+                    actualScore >= 80 -> "Sangat Baik"
                     actualScore >= 60 -> "Baik"
                     actualScore >= 40 -> "Terus Berkembang"
                     else -> "Tahap Pengembangan"
                 }
                 val encouragement = when {
                     actualScore == null -> "Kenali potensi dan pola kerjamu melalui hasil latihan ini."
-                    actualScore >= 80 -> "Kerja bagus! Pertahankan konsistensi dan terus tingkatkan kemampuanmu!"
+                    actualScore >= 80 -> "Kemampuan kognitifmu berada di atas rata-rata. Pertahankan dan terus tingkatkan performamu! 🚀"
                     actualScore >= 60 -> "Hasil yang baik! Terus asah kemampuan dan tingkatkan ketelitianmu."
                     else -> "Tetap semangat! Mulai dari dasar dan tingkatkan kemampuanmu sedikit demi sedikit."
                 }
@@ -230,13 +230,14 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             Card(shape = RoundedCornerShape(26.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF102C38)), elevation = CardDefaults.cardElevation(defaultElevation = 6.dp)) {
                                 Column(Modifier.fillMaxWidth().background(Brush.linearGradient(listOf(Color(0xFF102C38), Color(0xFF155F63)))).padding(22.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
                                     Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(14.dp), modifier = Modifier.fillMaxWidth()) {
-                                         Text("HASIL LATIHAN • SKOR AKHIR", color = Color(0xFFB9F2E9), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelMedium)
+                                         Text("♛  HASIL PSIKOTES  ♛", color = Color(0xFFFFD978), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleMedium)
                                          Box(Modifier.size(194.dp), contentAlignment = Alignment.Center) {
                                              Canvas(Modifier.fillMaxSize()) {
                                                  drawArc(Color.White.copy(alpha = 0.18f), 0f, 360f, false, style = Stroke(17.dp.toPx(), cap = StrokeCap.Round))
                                                  drawArc(Color(0xFFFFC45D), -90f, 360f * animatedScore / 100f, false, style = Stroke(17.dp.toPx(), cap = StrokeCap.Round))
                                              }
                                              Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                                 Text("Skor Akhir", color = Color.White, style = MaterialTheme.typography.labelMedium)
                                                  Text(if (actualScore == null) "—" else "$animatedScore", color = Color.White, fontSize = 58.sp, fontWeight = FontWeight.ExtraBold)
                                                  Text("/ 100", color = Color(0xFFB9F2E9), style = MaterialTheme.typography.titleMedium)
                                              }
@@ -274,7 +275,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             }
                         }
                         item {
-                            Text("Jelajahi hasilmu", color = ink, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                            Text("Analisis Hasil Latihan", color = ink, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
                             Text("Buka jawaban dan ketuk kategori untuk rekomendasi latihan.", color = Color(0xFF59667A), style = MaterialTheme.typography.bodySmall)
                         }
                         item {
@@ -302,7 +303,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         }
                         item {
                             MockupCard {
-                                Text("📊 Analisis Kemampuan", color = ink, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                Text("▥  Analisis Kemampuan", color = ink, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
                                 Text("Ketuk kategori untuk melihat rekomendasi latihan.", color = Color(0xFF59667A), style = MaterialTheme.typography.bodySmall)
                                 Spacer(Modifier.height(8.dp))
                                 val categories = r.getAsJsonArray("categories") ?: r.getAsJsonArray("category_scores")
@@ -348,7 +349,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         }
                         item {
                             Button(onClick = { page = "catalog"; vm.loadExtras(isPro) }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = orange)) {
-                                Text("Coba Tes Lainnya", color = Color.White)
+                                Text("Latihan Lagi ↻", color = Color.White)
                             }
                         }
                     } else {
