@@ -22,7 +22,7 @@ internal fun KarirMateSectionHero(title: String, description: String) {
             Text(title, color = Color(0xFF202020), fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.headlineMedium)
             Text(description, color = Color(0xFF515A63), style = MaterialTheme.typography.bodyMedium)
             HorizontalDivider(color = Color(0xFFE9ECEF))
-            Text("●  Siap digunakan", color = Color(0xFF00A99D), style = MaterialTheme.typography.labelMedium)
+            Text("Kembangkan kariermu selangkah demi selangkah", color = Color(0xFF00A99D), style = MaterialTheme.typography.labelMedium)
         }
     }
 }
