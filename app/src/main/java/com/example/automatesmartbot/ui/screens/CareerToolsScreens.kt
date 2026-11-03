@@ -65,9 +65,16 @@ fun SalaryCalculatorScreen() {
                 result = PayrollCalculator.calculate(PayrollCalculator.Input(number(gross),number(base),hours.toIntOrNull() ?: kotlin.error("Jam tidak valid."),PayrollCalculator.OvertimeDay.valueOf(day),number(health),number(jht),number(pension),number(ptkp),months.toIntOrNull() ?: kotlin.error("Masa kerja tidak valid."),number(base)))
                 error = ""
             } catch (e: Exception) { error = e.message ?: "Input tidak valid."; result = null }
-        }) { Text("Hitung") }
+        }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = androidx.compose.ui.graphics.Color(0xFFC54814))) { Text("Hitung Estimasi Gaji →") }
         if (error.isNotBlank()) Text(error, color = MaterialTheme.colorScheme.error)
         result?.let { r ->
+            Card(colors = CardDefaults.cardColors(containerColor = androidx.compose.ui.graphics.Color(0xFFE5F6F2)), shape = androidx.compose.foundation.shape.RoundedCornerShape(20.dp)) {
+                Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text("ESTIMASI GAJI DITERIMA", color = androidx.compose.ui.graphics.Color(0xFF00796F), style = MaterialTheme.typography.labelLarge)
+                    Text(rupiah.format(r.monthlyTakeHomeEstimate), style = MaterialTheme.typography.headlineMedium, color = androidx.compose.ui.graphics.Color(0xFF202020))
+                    Text("Per bulan, tidak termasuk THR", color = androidx.compose.ui.graphics.Color(0xFF505050))
+                }
+            }
             listOf("Upah lembur" to r.overtime,"BPJS Kesehatan pekerja" to r.health,"JHT pekerja" to r.jht,"JP pekerja" to r.pension,"THR bruto" to r.thr,"Estimasi PPh 21 setahun (termasuk THR)" to r.annualTax,"Rata-rata PPh 21 per bulan" to r.monthlyTaxEstimate,"Estimasi diterima bulan ini (tanpa THR)" to r.monthlyTakeHomeEstimate).forEach { (label,value) -> Text("$label: ${rupiah.format(value)}") }
             Text("THR: masa kerja ≥12 bulan satu bulan upah; 1–<12 bulan proporsional. Estimasi ini memakai pendapatan bulanan tetap, lembur input satu kali, dan THR satu kali; pendapatan lain perlu dimasukkan dalam perhitungan pajak aktual.")
         }
