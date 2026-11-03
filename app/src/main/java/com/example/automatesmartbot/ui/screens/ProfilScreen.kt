@@ -373,17 +373,50 @@ private fun ProfileIdentityCard(
                 }
 }
 
-@Preview(name = "Profil • Komponen asli", showBackground = true, widthDp = 393, heightDp = 800)
+@Preview(name = "Profil • Halaman lengkap", showBackground = true, widthDp = 393, heightDp = 850)
 @Composable
 private fun ProfilScreenDesignPreview() {
     com.example.automatesmartbot.ui.theme.FixedCanvasTheme(dark = false) {
-        Column(
-            modifier = Modifier.fillMaxSize().background(Color.White).verticalScroll(rememberScrollState()).padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            Text("Profil Saya", fontWeight = FontWeight.ExtraBold, fontSize = 26.sp, color = Color(0xFF202020))
-            Text("Kelola identitas dan informasi karier.", color = Color(0xFF555555), fontSize = 14.sp)
-            ProfileIdentityCard(profile = null, account = null, errorMessage = null, onNavigateEditProfile = {}, onLogout = {})
+        androidx.compose.material3.Scaffold(
+            topBar = {
+                com.example.automatesmartbot.ui.components.AppTopBar(
+                    title = "Profil & Pengaturan",
+                    isPro = true,
+                    onNavigateProfil = {},
+                    onBack = {}
+                )
+            },
+            bottomBar = {
+                androidx.compose.material3.NavigationBar(containerColor = Color.White) {
+                    com.example.automatesmartbot.ui.navigation.bottomNavItems.forEach { item ->
+                        androidx.compose.material3.NavigationBarItem(
+                            selected = item.route == com.example.automatesmartbot.ui.navigation.Screen.Profil.route,
+                            onClick = {},
+                            icon = { Icon(item.icon, contentDescription = item.title) },
+                            label = { Text(item.title, fontSize = 10.sp) },
+                            colors = androidx.compose.material3.NavigationBarItemDefaults.colors(
+                                selectedIconColor = Color(0xFFFF6B00),
+                                selectedTextColor = Color(0xFF202020),
+                                unselectedIconColor = Color(0xFF555555),
+                                unselectedTextColor = Color(0xFF555555),
+                                indicatorColor = Color(0xFFFFF3E8)
+                            )
+                        )
+                    }
+                }
+            }
+        ) { padding ->
+            Column(
+                modifier = Modifier.fillMaxSize().background(Color.White)
+                    .padding(padding).verticalScroll(rememberScrollState()).padding(16.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp)
+            ) {
+                Text("Profil Saya", fontWeight = FontWeight.ExtraBold, fontSize = 26.sp, color = Color(0xFF202020))
+                Text("Kelola identitas dan informasi karier.", color = Color(0xFF555555), fontSize = 14.sp)
+                ProfileIdentityCard(profile = null, account = null, errorMessage = null, onNavigateEditProfile = {}, onLogout = {})
+                CvSection()
+                AppearanceCard(selectedMode = ThemeMode.LIGHT, onModeSelected = {})
+            }
         }
     }
 }
