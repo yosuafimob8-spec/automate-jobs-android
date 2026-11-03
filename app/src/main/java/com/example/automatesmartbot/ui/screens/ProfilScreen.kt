@@ -140,7 +140,7 @@ fun ProfilScreen(
                     Text("Coba Lagi")
                 }
                 TextButton(onClick = onNavigateLogin) {
-                    Text("Masuk / Login", color = Color(0xFFFF762C))
+                    Text("Masuk / Login", color = Color(0xFFC54814))
                 }
             }
         } else {
@@ -170,7 +170,7 @@ fun ProfilScreen(
                                 Icon(
                                     imageVector = Icons.Default.Person,
                                     contentDescription = null,
-                                    tint = Color(0xFFFF762C),
+                                    tint = Color(0xFFC54814),
                                     modifier = Modifier.size(36.dp)
                                 )
                             }
@@ -343,7 +343,7 @@ fun ProfileDetailRow(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(6.dp)
         ) {
-            Icon(icon, contentDescription = null, tint = Color(0xFFFF762C), modifier = Modifier.size(16.dp))
+            Icon(icon, contentDescription = null, tint = Color(0xFFC54814), modifier = Modifier.size(16.dp))
             Text(text = label, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
         Text(
