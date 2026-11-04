@@ -45,8 +45,10 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
     fun resetNavigation() { savedState["cv_history"] = listOf(CvNavigation.HOME) }
     private var verifiedProAccess: Boolean = false
     fun setMembershipAccess(verified: Boolean) {
+        if (verifiedProAccess == verified) return
         verifiedProAccess = verified
-        if (!CvTemplates.canUse(_state.value.templateId, verified)) loadDrafts()
+        // Re-evaluate saved drafts on both upgrade and expiry; never keep a locked PRO draft active.
+        loadDrafts()
     }
     fun loadDrafts() {
         val drafts = store.listDraftIds().mapNotNull(store::load).sortedByDescending { it.updatedAt }
