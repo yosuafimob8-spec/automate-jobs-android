@@ -137,6 +137,14 @@ private val primaryMenuItems = listOf(
         iconTint = Color(0xFF16A34A),
         bgTint = Color(0xFFDCFCE7),
         route = Screen.CvBuilder.route
+    ),
+MainMenuItem(
+        title = "Latihan\\nPsikotes",
+        subtitle = null,
+        icon = Icons.Default.Psychology,
+        iconTint = Color(0xFFE11D48),
+        bgTint = Color(0xFFFFF1F2),
+        route = Screen.LatihanPsikotes.route
     )
 )
 
@@ -1188,8 +1196,8 @@ private fun MenuUtamaSection(onNavigate: (String) -> Unit) {
             )
         }
 
-        // 8 Cards in 4x2 Grid
-        primaryMenuItems.chunked(4).forEach { rowItems ->
+        // 9 Cards in a balanced 3x3 Grid
+        primaryMenuItems.chunked(3).forEach { rowItems ->
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
