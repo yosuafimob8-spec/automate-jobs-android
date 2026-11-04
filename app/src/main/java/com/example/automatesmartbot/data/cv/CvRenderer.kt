@@ -58,6 +58,8 @@ object CvRenderer {
         val left = (when (l) { CvLayout.SIDEBAR_LEFT -> 205f; CvLayout.TIMELINE -> 100f; CvLayout.EDITORIAL -> 78f; else -> 42f }) + inset
         val right = (if (l == CvLayout.SIDEBAR_RIGHT) 390f else 553f) - inset
         val bodySize = (if (l == CvLayout.COMPACT) 10f else 11f) * lineScale
+        // Rotate section hierarchy across the catalog without changing saved user content.
+        val sectionVariant = variant % 4
         val output = mutableListOf<CvPage>()
         var text = mutableListOf<CvDrawText>()
         var first = true
@@ -99,7 +101,21 @@ object CvRenderer {
             contacts.forEach { line(it, 10f, x = left, width = right - left - if (photo) 86f else 0f, centered = l == CvLayout.CENTERED) }
             y = maxOf(y + 18f, if (photo) 150f else 0f)
         }
-        blocks(c, template).forEach { block ->
+        val contentBlocks = blocks(c, template)
+        val arrangedBlocks = if (sectionVariant == 0) contentBlocks else {
+            val sections = mutableListOf<MutableList<CvTextBlock>>()
+            contentBlocks.forEach { block ->
+                if (block.heading || sections.isEmpty()) sections.add(mutableListOf())
+                sections.last().add(block)
+            }
+            val reordered = when (sectionVariant) {
+                1 -> sections.take(1) + sections.drop(1).reversed()
+                2 -> sections.sortedBy { it.firstOrNull()?.text?.length ?: 0 }
+                else -> sections.take(1) + sections.drop(1).sortedByDescending { it.size }
+            }
+            reordered.flatten()
+        }
+        arrangedBlocks.forEach { block ->
             if (block.heading) {
                 // A heading and at least two following lines must fit on the same page.
                 if (y + 66f > HEIGHT - 48) finish()
