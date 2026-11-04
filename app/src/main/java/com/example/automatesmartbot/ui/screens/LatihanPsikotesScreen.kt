@@ -258,9 +258,9 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), elevation = CardDefaults.cardElevation(defaultElevation = 5.dp), modifier = Modifier.fillMaxWidth()) {
                                 Row(Modifier.fillMaxWidth().padding(vertical = 16.dp), horizontalArrangement = Arrangement.SpaceEvenly) {
                                     ScoreStat("✓", "$correct", "Benar", Color(0xFF0EAE4D), Modifier.weight(1f))
-                                    Box(Modifier.width(1.dp).height(65.dp).background(Color(0xFFE2E6E9)))
+                                    Box(Modifier.width(1.dp).height(65.dp).background(MaterialTheme.colorScheme.outlineVariant))
                                     ScoreStat("✕", "$wrong", "Salah", Color(0xFFE52935), Modifier.weight(1f))
-                                    Box(Modifier.width(1.dp).height(65.dp).background(Color(0xFFE2E6E9)))
+                                    Box(Modifier.width(1.dp).height(65.dp).background(MaterialTheme.colorScheme.outlineVariant))
                                     ScoreStat("◎", "$accuracy%", "Akurasi", Color(0xFFB319C7), Modifier.weight(1f))
                                 }
                             }
@@ -640,7 +640,7 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
             }
         }
         Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            Button(onClick = { index = PsychotestPolicy.previous(index) }, enabled = index > 0, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange, disabledContainerColor = Color(0xFFE5E7EB), disabledContentColor = Color(0xFF475569))) { Text("Sebelumnya") }
+            Button(onClick = { index = PsychotestPolicy.previous(index) }, enabled = index > 0, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange, disabledContainerColor = MaterialTheme.colorScheme.surfaceVariant, disabledContentColor = MaterialTheme.colorScheme.onSurfaceVariant)) { Text("Sebelumnya") }
             if (index < questions.lastIndex) {
                 Button(onClick = { index = PsychotestPolicy.next(index, questions.size) }, modifier = Modifier.weight(1f).heightIn(min = 50.dp), colors = ButtonDefaults.buttonColors(containerColor = orange, contentColor = Color.White)) { Text("Selanjutnya", color = Color.White) }
             } else {
@@ -663,7 +663,7 @@ private fun HistoryScoreCard(title: String, score: Int?) {
     ) {
         Row(Modifier.padding(18.dp), verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-            Box(Modifier.size(62.dp).background(Color(0xFFFFF0E3), RoundedCornerShape(16.dp)),
+            Box(Modifier.size(62.dp).background(MaterialTheme.colorScheme.surfaceVariant, RoundedCornerShape(16.dp)),
                 contentAlignment = Alignment.Center) {
                 Text(score?.toString() ?: "🧠", color = orange, fontWeight = FontWeight.ExtraBold,
                     style = MaterialTheme.typography.headlineSmall)
@@ -672,7 +672,7 @@ private fun HistoryScoreCard(title: String, score: Int?) {
                 Text(title, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
                 Text(if (score == null) "Asesmen kepribadian" else "Skor: $score / 100", color = teal)
                 if (score != null) LinearProgressIndicator(progress = { score.coerceIn(0, 100) / 100f },
-                    color = teal, trackColor = Color(0xFFE8F0F3), modifier = Modifier.fillMaxWidth())
+                    color = teal, trackColor = MaterialTheme.colorScheme.surfaceVariant, modifier = Modifier.fillMaxWidth())
             }
         }
     }
@@ -682,7 +682,7 @@ private fun HistoryScoreCard(title: String, score: Int?) {
 private fun ScoreStat(icon: String, value: String, label: String, color: Color, modifier: Modifier = Modifier) {
     Column(modifier, horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(3.dp)) {
         Text(icon, color = color, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.ExtraBold)
-        Text(value, color = Color(0xFF14212C), style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.ExtraBold)
-        Text(label, color = Color(0xFF14212C), style = MaterialTheme.typography.bodySmall)
+        Text(value, color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.ExtraBold)
+        Text(label, color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodySmall)
     }
 }
