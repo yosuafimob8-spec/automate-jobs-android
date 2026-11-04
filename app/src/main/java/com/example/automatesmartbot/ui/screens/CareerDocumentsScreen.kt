@@ -19,7 +19,7 @@ import kotlinx.coroutines.*
 import java.io.File
 
 @Composable
-fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
+fun CareerDocumentsScreen() {
     val context=LocalContext.current
     val store=remember{CareerPdfStore(context)}
     val scope=rememberCoroutineScope()
@@ -53,7 +53,6 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
         Text("Dokumen Karier",style=MaterialTheme.typography.titleLarge)
         Text("Kelola PDF secara lokal: gabung, ambil/susun halaman, putar, simpan, dan bagikan. File sumber tidak dihapus. PDF terenkripsi perlu dibuka terlebih dahulu dengan pemiliknya.")
         Button(onClick={importer.launch(arrayOf("application/pdf"))},enabled=!busy){Text("Tambahkan PDF")}
-        TextButton(onClick=onLegacyDocuments){Text("Surat Izin & Dokumen Kerja")}
         if(busy)LinearProgressIndicator(Modifier.fillMaxWidth())
         if(message.isNotBlank())Text(message)
         items.forEach{item->Card(Modifier.fillMaxWidth()){
