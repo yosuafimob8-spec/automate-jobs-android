@@ -24,35 +24,35 @@ object CvTemplates {
     private val generatedCatalog: List<CvTemplate> = buildList {
         for (number in 1..15) {
             val id = "ats_" + number.toString().padStart(2, '0')
-            if (all.none { it.id == id }) add(CvTemplate(id, "ATS " + number.toString().padStart(2, '0'), "ATS", CvLayout.CLASSIC, 0xFFFF6B2B.toInt(), false))
+            if (all.none { it.id == id }) add(CvTemplate(id, "ATS " + number.toString().padStart(2, '0'), "ATS", listOf(CvLayout.CLASSIC, CvLayout.CENTERED, CvLayout.COMPACT, CvLayout.RULED)[(number - 1) % 4], 0xFFFF6B2B.toInt(), false))
         }
         for (number in 1..15) {
             val id = "professional_" + number.toString().padStart(2, '0')
-            if (all.none { it.id == id }) add(CvTemplate(id, "Profesional " + number.toString().padStart(2, '0'), "Profesional", CvLayout.SIDEBAR_LEFT, 0xFFFF6B2B.toInt(), true))
+            if (all.none { it.id == id }) add(CvTemplate(id, "Profesional " + number.toString().padStart(2, '0'), "Profesional", listOf(CvLayout.SIDEBAR_LEFT, CvLayout.TIMELINE, CvLayout.EDITORIAL, CvLayout.RULED)[(number - 1) % 4], 0xFFFF6B2B.toInt(), true))
         }
         for (number in 1..12) {
             val id = "modern_" + number.toString().padStart(2, '0')
-            if (all.none { it.id == id }) add(CvTemplate(id, "Modern " + number.toString().padStart(2, '0'), "Modern", CvLayout.SIDEBAR_RIGHT, 0xFFFF6B2B.toInt(), true))
+            if (all.none { it.id == id }) add(CvTemplate(id, "Modern " + number.toString().padStart(2, '0'), "Modern", listOf(CvLayout.SIDEBAR_RIGHT, CvLayout.BANNER, CvLayout.MONOGRAM, CvLayout.EDITORIAL)[(number - 1) % 4], 0xFFFF6B2B.toInt(), true))
         }
         for (number in 1..10) {
             val id = "minimal_" + number.toString().padStart(2, '0')
-            if (all.none { it.id == id }) add(CvTemplate(id, "Minimalis " + number.toString().padStart(2, '0'), "Minimalis", CvLayout.COMPACT, 0xFFFF6B2B.toInt(), false))
+            if (all.none { it.id == id }) add(CvTemplate(id, "Minimalis " + number.toString().padStart(2, '0'), "Minimalis", listOf(CvLayout.COMPACT, CvLayout.EDITORIAL, CvLayout.CENTERED)[(number - 1) % 3], 0xFFFF6B2B.toInt(), false))
         }
         for (number in 1..8) {
             val id = "graduate_" + number.toString().padStart(2, '0')
-            if (all.none { it.id == id }) add(CvTemplate(id, "Fresh Graduate " + number.toString().padStart(2, '0'), "Fresh Graduate", CvLayout.ACADEMIC, 0xFFFF6B2B.toInt(), true))
+            if (all.none { it.id == id }) add(CvTemplate(id, "Fresh Graduate " + number.toString().padStart(2, '0'), "Fresh Graduate", listOf(CvLayout.ACADEMIC, CvLayout.SKILLS_FIRST, CvLayout.CLASSIC)[(number - 1) % 3], 0xFFFF6B2B.toInt(), true))
         }
         for (number in 1..7) {
             val id = "executive_" + number.toString().padStart(2, '0')
-            if (all.none { it.id == id }) add(CvTemplate(id, "Eksekutif " + number.toString().padStart(2, '0'), "Eksekutif", CvLayout.EXECUTIVE, 0xFFFF6B2B.toInt(), true))
+            if (all.none { it.id == id }) add(CvTemplate(id, "Eksekutif " + number.toString().padStart(2, '0'), "Eksekutif", listOf(CvLayout.EXECUTIVE, CvLayout.RULED, CvLayout.TIMELINE)[(number - 1) % 3], 0xFFFF6B2B.toInt(), true))
         }
         for (number in 1..8) {
             val id = "creative_" + number.toString().padStart(2, '0')
-            if (all.none { it.id == id }) add(CvTemplate(id, "Kreatif " + number.toString().padStart(2, '0'), "Kreatif", CvLayout.MONOGRAM, 0xFFFF6B2B.toInt(), true))
+            if (all.none { it.id == id }) add(CvTemplate(id, "Kreatif " + number.toString().padStart(2, '0'), "Kreatif", listOf(CvLayout.MONOGRAM, CvLayout.PORTFOLIO, CvLayout.BANNER)[(number - 1) % 3], 0xFFFF6B2B.toInt(), true))
         }
     }
     val catalog: List<CvTemplate> = all + generatedCatalog
-    val freeIds: Set<String> = catalog.take(27).map { it.id }.toSet()
+    val freeIds: Set<String> = catalog.filterIndexed { index, _ -> index < 27 }.map { it.id }.toSet()
     fun isProTemplate(id: String): Boolean = catalog.any { it.id == id } && id !in freeIds
     fun canUse(id: String, verifiedPro: Boolean): Boolean = catalog.any { it.id == id } && (!isProTemplate(id) || verifiedPro)
     /** Old IDs remain readable without deleting or migrating saved CVs. */
