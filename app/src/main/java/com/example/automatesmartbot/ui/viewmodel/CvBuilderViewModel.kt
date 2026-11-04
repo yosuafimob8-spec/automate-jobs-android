@@ -43,9 +43,15 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
         return true
     }
     fun resetNavigation() { savedState["cv_history"] = listOf(CvNavigation.HOME) }
+    private var verifiedProAccess: Boolean = false
+    fun setMembershipAccess(verified: Boolean) {
+        verifiedProAccess = verified
+        if (!CvTemplates.canUse(_state.value.templateId, verified)) loadDrafts()
+    }
     fun loadDrafts() {
         val drafts = store.listDraftIds().mapNotNull(store::load).sortedByDescending { it.updatedAt }
-        val active = drafts.firstOrNull { it.id == prefs.getString("active", null) } ?: drafts.firstOrNull()
+        val accessible = drafts.filter { CvTemplates.canUse(it.templateId, verifiedProAccess) }
+        val active = accessible.firstOrNull { it.id == prefs.getString("active", null) } ?: accessible.firstOrNull()
         val analyses = analysisDir.listFiles()?.filter { it.extension == "json" }?.mapNotNull {
             runCatching { Gson().fromJson(it.readText(), PdfCvAnalysis::class.java) }.getOrNull()
         }?.sortedByDescending { it.analyzedAt }.orEmpty()
@@ -66,7 +72,7 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
     }
     fun selectDocument(id: String, verifiedPro: Boolean = false): Boolean {
         val document = store.load(id) ?: run { message("Draf tidak dapat dibaca."); return false }
-        if (!CvTemplates.canUse(document.templateId, verifiedPro)) {
+        if (!CvTemplates.canUse(document.templateId, verifiedPro && verifiedProAccess)) {
             message("Draf menggunakan template PRO. Perpanjang langganan untuk membukanya.")
             return false
         }
@@ -77,11 +83,14 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
     fun updateContent(transform: (CvContent) -> CvContent) {
         if (_state.value.activeId == null) newDocument()
         val current = _state.value
+        if (!CvTemplates.canUse(current.templateId, verifiedProAccess)) {
+            message("Akses template PRO tidak aktif."); return
+        }
         _state.value = current.copy(draft = transform(current.draft), ats = null)
         persist()
     }
     fun setTemplate(id: String, verifiedPro: Boolean = false) {
-        if (!CvTemplates.canUse(id, verifiedPro)) {
+        if (!CvTemplates.canUse(id, verifiedPro && verifiedProAccess)) {
             message("Template PRO memerlukan akun PRO terverifikasi.")
             return
         }
@@ -91,6 +100,9 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
     }
     private fun persist(): Boolean {
         val current = _state.value
+        if (!CvTemplates.canUse(current.templateId, verifiedProAccess)) {
+            message("Akses template PRO tidak aktif."); return false
+        }
         val old = current.drafts.firstOrNull { it.id == current.activeId } ?: return false
         val document = old.copy(name = current.draft.contact.fullName.ifBlank { "CV Saya" }, content = current.draft,
             templateId = current.templateId, updatedAt = System.currentTimeMillis())
