@@ -883,7 +883,7 @@ private fun IndonesianLaborConditionCard() {
                             modifier = Modifier
                                 .weight(1f)
                                 .fillMaxWidth()
-                                .background(Color.White)
+                                .background(MaterialTheme.colorScheme.surface)
                         )
                     }
                 }
@@ -1320,7 +1320,7 @@ private fun CertificateRequirementsCard(
                             .width(108.dp)
                             .height(154.dp)
                             .clip(RoundedCornerShape(8.dp))
-                            .background(Color.White)
+                            .background(MaterialTheme.colorScheme.surface)
                             .border(1.5.dp, Color(0xFFFFB74D), RoundedCornerShape(8.dp))
                             .padding(6.dp),
                         contentAlignment = Alignment.TopCenter
