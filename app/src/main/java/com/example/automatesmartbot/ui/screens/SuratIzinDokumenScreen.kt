@@ -26,7 +26,6 @@ import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
 import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -164,7 +163,7 @@ fun SuratIzinDokumenScreen() {
 
             when (page) {
                 0 -> {
-                    Text("Buat draf surat izin resmi dan kelola dokumen kerja dengan mudah.", color = KarirTextMuted, fontSize = 13.sp)
+                    Text("Buat draf surat izin resmi dan kelola dokumen kerja dengan mudah.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 13.sp)
                     listOf("Surat Izin Sakit", "Surat Izin Cuti", "Surat Izin Keperluan Keluarga").forEach { title ->
                         SuratCard {
                             Text(title, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
@@ -179,7 +178,7 @@ fun SuratIzinDokumenScreen() {
                     }
                     SuratCard {
                         Text("Dokumen Klinik Resmi", fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
-                        Text("Simpan dan arsipkan surat keterangan dokter resmi yang diterbitkan klinik.", color = KarirTextMuted, fontSize = 12.sp)
+                        Text("Simpan dan arsipkan surat keterangan dokter resmi yang diterbitkan klinik.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
                         OutlinedButton(
                             onClick = { officialPicker.launch(arrayOf("application/pdf", "image/*")) },
                             shape = RoundedCornerShape(12.dp),
@@ -191,10 +190,10 @@ fun SuratIzinDokumenScreen() {
                     }
                     SuratCard {
                         Text("Riwayat Dokumen", fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
-                        Text(prefs.getString("last", "Belum ada dokumen tersimpan") ?: "", color = KarirTextMuted, fontSize = 12.sp)
+                        Text(prefs.getString("last", "Belum ada dokumen tersimpan") ?: "", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
                         val records = remember(historyVersion) { JSONArray(prefs.getString("history", "[]")) }
                         if (records.length() == 0) {
-                            Text("Belum ada dokumen yang dibuat.", color = KarirTextMuted, fontSize = 12.sp)
+                            Text("Belum ada dokumen yang dibuat.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
                         }
                         for (i in records.length() - 1 downTo 0) {
                             val record = records.optJSONObject(i) ?: continue
@@ -221,11 +220,11 @@ fun SuratIzinDokumenScreen() {
                                 }
                             }
                         }
-                        Text("Riwayat tersimpan di perangkat lokal Anda.", color = KarirTextMuted, fontSize = 11.sp)
+                        Text("Riwayat tersimpan di perangkat lokal Anda.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 11.sp)
                     }
                 }
                 1 -> {
-                    Text("Cari klinik melalui peta, lalu lengkapi informasi tempat berobat bila ada.", color = KarirTextMuted, fontSize = 12.5.sp)
+                    Text("Cari klinik melalui peta, lalu lengkapi informasi tempat berobat bila ada.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.5.sp)
                     Button(
                         onClick = {
                             val intent = Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=klinik+terdekat"))
@@ -240,10 +239,10 @@ fun SuratIzinDokumenScreen() {
                     SuratField("Nama Klinik (opsional)", clinic) { clinic = it }
                     SuratField("Alamat Klinik", address) { address = it }
                     SuratField("Nama Dokter (jika diketahui)", doctor) { doctor = it }
-                    Text("Nama klinik dan dokter hanya sebagai informasi tempat berobat pribadi.", color = KarirTextMuted, fontSize = 11.sp)
+                    Text("Nama klinik dan dokter hanya sebagai informasi tempat berobat pribadi.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 11.sp)
                     SuratCard {
                         Text("Aset Resmi Klinik", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
-                        Text("Unggah cap dan tanda tangan yang diberikan langsung oleh klinik untuk arsip penerbit.", color = KarirTextMuted, fontSize = 12.sp)
+                        Text("Unggah cap dan tanda tangan yang diberikan langsung oleh klinik untuk arsip penerbit.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
                         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             OutlinedButton(
                                 onClick = { stampPicker.launch(arrayOf("image/*")) },
