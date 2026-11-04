@@ -25,6 +25,7 @@ import java.util.Locale
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -406,7 +407,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     fun InfoCard(title: String, body: String, accent: Color = Color.White) {
         Card(modifier = Modifier.fillMaxWidth(), shape = shape,
             colors = CardDefaults.cardColors(containerColor = accent),
-            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
             Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text(title, fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
@@ -421,14 +422,14 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 Surface(
                     shape = RoundedCornerShape(10.dp),
                     color = Color(0xFFFFF3E0),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                 ) {
                     Text("AI INTERVIEW", color = Color(0xFFE65100), fontWeight = FontWeight.Bold, fontSize = 11.sp, modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp))
                 }
             }
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
                 shape = RoundedCornerShape(16.dp)
@@ -441,7 +442,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
                 Card(Modifier.fillMaxWidth().clickable { interviewMode = "text"; showPreparation = true },
                     shape = shape, border = BorderStroke(1.5.dp, orange),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
                     Row(Modifier.padding(18.dp), verticalAlignment = Alignment.CenterVertically) {
                         Text("💬", style = MaterialTheme.typography.headlineMedium)
@@ -454,8 +455,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     }
                 }
                 Card(Modifier.fillMaxWidth().clickable { interviewMode = "voice"; showPreparation = true },
-                    shape = shape, border = BorderStroke(1.5.dp, Color(0xFFFFDEC9)),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    shape = shape, border = BorderStroke(1.5.dp, MaterialTheme.colorScheme.outlineVariant),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
                     Row(Modifier.padding(18.dp), verticalAlignment = Alignment.CenterVertically) {
                         Text("🎙️", style = MaterialTheme.typography.headlineMedium)
@@ -479,7 +480,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             listOf(Triple("male", "👨🏻‍💼 Mr. ILHAM", "AI HR laki-laki • Profesional, ramah, dan komunikatif."),
                 Triple("female", "👩🏻‍💼 Ms. Tanti", "AI HR perempuan • Hangat, suportif, dan detail.")).forEach { (id, name, description) ->
                 Card(Modifier.fillMaxWidth().clickable { interviewer = id }, shape = shape,
-                    border = BorderStroke(if (interviewer == id) 2.dp else 1.dp, if (interviewer == id) orange else Color(0xFFFFDEC9)),
+                    border = BorderStroke(if (interviewer == id) 2.dp else 1.dp, if (interviewer == id) orange else MaterialTheme.colorScheme.outlineVariant),
                     colors = CardDefaults.cardColors(containerColor = if (interviewer == id) Color(0xFFFFF4E9) else Color.White)) {
                     Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
                         Column(Modifier.weight(1f)) {
@@ -503,8 +504,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             }
             Text("Bahasa Interview", color = ink, fontWeight = FontWeight.Bold)
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                FilterChip(selected = language == "id", onClick = { language = "id" }, label = { Text("Indonesia") }, colors = FilterChipDefaults.filterChipColors(containerColor = Color.White, labelColor = ink, selectedContainerColor = Color(0xFFFFEAD7), selectedLabelColor = ink))
-                FilterChip(selected = language == "en", onClick = { language = "en" }, label = { Text("English") }, colors = FilterChipDefaults.filterChipColors(containerColor = Color.White, labelColor = ink, selectedContainerColor = Color(0xFFFFEAD7), selectedLabelColor = ink))
+                FilterChip(selected = language == "id", onClick = { language = "id" }, label = { Text("Indonesia") }, colors = FilterChipDefaults.filterChipColors(containerColor = MaterialTheme.colorScheme.surface, labelColor = ink, selectedContainerColor = Color(0xFFFFEAD7), selectedLabelColor = ink))
+                FilterChip(selected = language == "en", onClick = { language = "en" }, label = { Text("English") }, colors = FilterChipDefaults.filterChipColors(containerColor = MaterialTheme.colorScheme.surface, labelColor = ink, selectedContainerColor = Color(0xFFFFEAD7), selectedLabelColor = ink))
             }
             OutlinedButton(enabled = !cvReading && !loading, onClick = {
                 cvPicker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
@@ -513,10 +514,10 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 Card(
                     modifier = Modifier.fillMaxWidth(),
                     colors = CardDefaults.cardColors(
-                        containerColor = Color.White,
+                        containerColor = MaterialTheme.colorScheme.surface,
                         contentColor = ink
                     ),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     shape = RoundedCornerShape(12.dp)
                 ) {
                     Column(
@@ -573,8 +574,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 fontWeight = FontWeight.Bold, fontSize = 18.sp)
             Card(
                 shape = shape,
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(Modifier.fillMaxWidth().padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
@@ -593,7 +594,7 @@ Text(if (resultScore == -1) "Evaluasi kualitatif" else "$resultScore / 100", col
                     onClick = { resetSession(); showPreparation = true },
                     modifier = Modifier.weight(1f),
                     shape = RoundedCornerShape(12.dp),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     colors = ButtonDefaults.outlinedButtonColors(contentColor = ink)
                 ) { Text("↻ Ulangi") }
                 Button(onClick = { showResultDetails = !showResultDetails }, modifier = Modifier.weight(1f),
@@ -621,7 +622,7 @@ Text(if (resultScore == -1) "Evaluasi kualitatif" else "$resultScore / 100", col
                             shape = RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp,
                                 bottomStart = if (fromCandidate) 16.dp else 4.dp,
                                 bottomEnd = if (fromCandidate) 4.dp else 16.dp),
-                            border = if (!fromCandidate) BorderStroke(1.dp, Color(0xFFFFDEC9)) else null,
+                            border = if (!fromCandidate) BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant) else null,
                             colors = CardDefaults.cardColors(containerColor = if (fromCandidate) orange else Color.White)) {
                             Text(message.replace("\\n", "\n"), modifier = Modifier.padding(14.dp),
                                 color = if (fromCandidate) Color.White else ink)
@@ -636,7 +637,7 @@ Text(if (resultScore == -1) "Evaluasi kualitatif" else "$resultScore / 100", col
                 if (!voiceMode) OutlinedTextField(answer, { answer = it }, modifier = Modifier.weight(1f),
                     placeholder = { Text("Ketik jawaban Anda...", color = muted) }, maxLines = 4,
                     textStyle = androidx.compose.ui.text.TextStyle(color = ink),
-                    colors = OutlinedTextFieldDefaults.colors(focusedTextColor = ink, unfocusedTextColor = ink, cursorColor = orange, focusedContainerColor = Color.White, unfocusedContainerColor = Color.White),
+                    colors = OutlinedTextFieldDefaults.colors(focusedTextColor = ink, unfocusedTextColor = ink, cursorColor = orange, focusedContainerColor = MaterialTheme.colorScheme.surface, unfocusedContainerColor = MaterialTheme.colorScheme.surface),
                     shape = RoundedCornerShape(24.dp))
                 if (voiceMode) IconButton(enabled = !loading, onClick = {
                     val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
