@@ -112,6 +112,11 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                     colors = OutlinedTextFieldDefaults.colors(
                         focusedTextColor = KarirTextDark,
                         unfocusedTextColor = KarirTextDark,
+                        disabledTextColor = KarirTextDark,
+                        focusedLabelColor = Color(0xFF9A3412),
+                        unfocusedLabelColor = KarirTextMuted,
+                        focusedPlaceholderColor = KarirTextMuted,
+                        unfocusedPlaceholderColor = KarirTextMuted,
                         focusedBorderColor = KarirOrange,
                         unfocusedBorderColor = Color(0xFFFFDEC9),
                         cursorColor = KarirOrange,
