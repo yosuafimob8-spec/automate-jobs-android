@@ -26,7 +26,7 @@ fun AppInput(
     Column(modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(4.dp)) {
         Text(
             text = label,
-            color = KarirTextDark,
+            color = MaterialTheme.colorScheme.onSurface,
             fontWeight = FontWeight.Medium,
             fontSize = 13.sp
         )
@@ -38,13 +38,17 @@ fun AppInput(
             shape = RoundedCornerShape(12.dp),
             isError = error != null,
             colors = OutlinedTextFieldDefaults.colors(
-                focusedTextColor = KarirTextDark,
-                unfocusedTextColor = KarirTextDark,
-                focusedContainerColor = Color.White,
-                unfocusedContainerColor = Color.White,
+                focusedTextColor = MaterialTheme.colorScheme.onSurface,
+                unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
+                focusedContainerColor = MaterialTheme.colorScheme.surface,
+                unfocusedContainerColor = MaterialTheme.colorScheme.surface,
                 focusedBorderColor = KarirOrange,
-                unfocusedBorderColor = Color(0xFFFFDEC9),
+                unfocusedBorderColor = MaterialTheme.colorScheme.outline,
                 cursorColor = KarirOrange,
+                focusedLabelColor = MaterialTheme.colorScheme.onSurface,
+                unfocusedLabelColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                focusedPlaceholderColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                unfocusedPlaceholderColor = MaterialTheme.colorScheme.onSurfaceVariant,
                 errorTextColor = MaterialTheme.colorScheme.error,
                 errorBorderColor = MaterialTheme.colorScheme.error
             ),
