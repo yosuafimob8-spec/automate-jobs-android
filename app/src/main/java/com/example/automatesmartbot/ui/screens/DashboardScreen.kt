@@ -360,8 +360,8 @@ fun DashboardScreen(
                                         modifier = Modifier.padding(18.dp),
                                         verticalArrangement = Arrangement.spacedBy(6.dp)
                                     ) {
-                                        Text("Fitur tidak ditemukan", fontWeight = FontWeight.Bold, color = Color(0xFF0F172A))
-                                        Text("Coba kata kunci lain atau bersihkan pencarian.", color = Color(0xFF64748B), fontSize = 12.sp)
+                                        Text("Fitur tidak ditemukan", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
+                                        Text("Coba kata kunci lain atau bersihkan pencarian.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
                                         TextButton(onClick = { dashboardSearch = "" }, contentPadding = PaddingValues(0.dp)) {
                                             Text("Hapus Pencarian", color = KarirOrange, fontWeight = FontWeight.Bold)
                                         }
@@ -392,9 +392,9 @@ fun DashboardScreen(
                                                 Icon(item.icon, contentDescription = null, tint = item.iconTint, modifier = Modifier.size(23.dp))
                                             }
                                             Column(modifier = Modifier.weight(1f)) {
-                                                Text(item.title.replace("\n", " "), fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color(0xFF0F172A))
+                                                Text(item.title.replace("\n", " "), fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurface)
                                                 item.subtitle?.let {
-                                                    Text(it, fontSize = 11.sp, color = Color(0xFF64748B))
+                                                    Text(it, fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                                 }
                                             }
                                             Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(16.dp))
@@ -548,14 +548,14 @@ private fun DashboardTopHeaderSection(
                             )
                             Text(
                                 text = "Mate",
-                                color = Color(0xFF0F172A),
+                                color = MaterialTheme.colorScheme.onSurface,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 20.sp
                             )
                         }
                         Text(
                             text = "AI Career Assistant",
-                            color = Color(0xFF64748B),
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Medium
                         )
@@ -678,14 +678,14 @@ private fun DashboardTopHeaderSection(
                         text = "Halo, $displayName 👋",
                         fontWeight = FontWeight.Bold,
                         fontSize = 17.5.sp,
-                        color = Color(0xFF0F172A),
+                        color = MaterialTheme.colorScheme.onSurface,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
                     Text(
                         text = "Siapkan karier impianmu hari ini",
                         fontSize = 12.sp,
-                        color = Color(0xFF475569)
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     // Online Pill
@@ -765,7 +765,7 @@ private fun DashboardSearchBar(
                     singleLine = true,
                     textStyle = TextStyle(
                         fontSize = 13.sp,
-                        color = Color(0xFF0F172A),
+                        color = MaterialTheme.colorScheme.onSurface,
                         fontWeight = FontWeight.Medium
                     ),
                     modifier = Modifier.fillMaxWidth()
@@ -806,7 +806,7 @@ private fun readLaborSnapshot(body: String): LaborSnapshot {
 @Composable
 private fun RealLaborSparkline(series: LaborSeries?, color: Color) {
     if (series == null) {
-        Text("Grafik belum tersedia", color = Color(0xFF64748B), fontSize = 9.sp)
+        Text("Grafik belum tersedia", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 9.sp)
         return
     }
     Canvas(Modifier.fillMaxWidth().height(28.dp)) {
@@ -898,12 +898,12 @@ private fun IndonesianLaborConditionCard() {
                         text = "Kondisi Ketenagakerjaan Indonesia",
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.5.sp,
-                        color = Color(0xFF0F172A)
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = "Sumber: BPS • ${snapshot?.period ?: "Menunggu sinkronisasi"}",
                         fontSize = 10.5.sp,
-                        color = Color(0xFF64748B)
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
 
@@ -949,12 +949,12 @@ private fun IndonesianLaborConditionCard() {
                                     text = "Pengangguran",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 12.sp,
-                                    color = Color(0xFF0F172A)
+                                    color = MaterialTheme.colorScheme.onSurface
                                 )
                                 Text(
                                     text = "Tingkat Pengangguran Terbuka (TPT)",
                                     fontSize = 8.sp,
-                                    color = Color(0xFF64748B),
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     maxLines = 1,
                                     overflow = TextOverflow.Ellipsis
                                 )
@@ -966,7 +966,7 @@ private fun IndonesianLaborConditionCard() {
                             text = snapshot?.unemployment ?: "—",
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.5.sp,
-                            color = Color(0xFF0F172A)
+                            color = MaterialTheme.colorScheme.onSurface
                         )
 
                         Row(
@@ -996,7 +996,7 @@ private fun IndonesianLaborConditionCard() {
                         Text(
                             text = "(seri resmi)",
                             fontSize = 8.sp,
-                            color = Color(0xFF64748B)
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
 
                         RealLaborSparkline(snapshot?.unemploymentSeries, Color(0xFF3B82F6))
@@ -1036,12 +1036,12 @@ private fun IndonesianLaborConditionCard() {
                                     text = "Kemiskinan",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 12.sp,
-                                    color = Color(0xFF0F172A)
+                                    color = MaterialTheme.colorScheme.onSurface
                                 )
                                 Text(
                                     text = "Penduduk Miskin",
                                     fontSize = 8.sp,
-                                    color = Color(0xFF64748B),
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     maxLines = 1,
                                     overflow = TextOverflow.Ellipsis
                                 )
@@ -1053,7 +1053,7 @@ private fun IndonesianLaborConditionCard() {
                             text = snapshot?.poverty ?: "—",
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.5.sp,
-                            color = Color(0xFF0F172A)
+                            color = MaterialTheme.colorScheme.onSurface
                         )
 
                         Row(
@@ -1083,7 +1083,7 @@ private fun IndonesianLaborConditionCard() {
                         Text(
                             text = "(seri resmi)",
                             fontSize = 8.sp,
-                            color = Color(0xFF64748B)
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
 
                         RealLaborSparkline(snapshot?.povertySeries, Color(0xFFEC4899))
@@ -1105,8 +1105,8 @@ private fun IndonesianLaborConditionCard() {
                 ) {
                     Icon(Icons.Default.People, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
                     Column {
-                        Text("Angkatan Kerja", fontSize = 8.5.sp, color = Color(0xFF64748B))
-                        Text("155,41 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = Color(0xFF0F172A))
+                        Text("Angkatan Kerja", fontSize = 8.5.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text("155,41 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = MaterialTheme.colorScheme.onSurface)
                     }
                 }
 
@@ -1120,8 +1120,8 @@ private fun IndonesianLaborConditionCard() {
                 ) {
                     Icon(Icons.Default.Work, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
                     Column {
-                        Text("Penduduk Bekerja", fontSize = 8.5.sp, color = Color(0xFF64748B))
-                        Text("148,19 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = Color(0xFF0F172A))
+                        Text("Penduduk Bekerja", fontSize = 8.5.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text("148,19 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = MaterialTheme.colorScheme.onSurface)
                     }
                 }
 
@@ -1135,8 +1135,8 @@ private fun IndonesianLaborConditionCard() {
                 ) {
                     Icon(Icons.Default.Payments, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
                     Column {
-                        Text("Rata-rata Upah", fontSize = 8.5.sp, color = Color(0xFF64748B))
-                        Text("Rp3,39 jt/bln", fontWeight = FontWeight.Bold, fontSize = 11.sp, color = Color(0xFF0F172A))
+                        Text("Rata-rata Upah", fontSize = 8.5.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text("Rp3,39 jt/bln", fontWeight = FontWeight.Bold, fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurface)
                     }
                 }
             }
@@ -1195,7 +1195,7 @@ private fun MenuUtamaSection(onNavigate: (String) -> Unit) {
                 text = "Menu Utama",
                 fontWeight = FontWeight.Bold,
                 fontSize = 17.5.sp,
-                color = Color(0xFF0F172A)
+                color = MaterialTheme.colorScheme.onSurface
             )
         }
 
@@ -1257,7 +1257,7 @@ private fun MenuGridCard(
                 text = item.title,
                 fontSize = 11.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF0F172A),
+                color = MaterialTheme.colorScheme.onSurface,
                 textAlign = TextAlign.Center,
                 lineHeight = 13.5.sp,
                 maxLines = 2,
@@ -1268,7 +1268,7 @@ private fun MenuGridCard(
                 Text(
                     text = item.subtitle,
                     fontSize = 8.5.sp,
-                    color = Color(0xFF64748B),
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center,
                     lineHeight = 10.5.sp,
                     maxLines = 1,
@@ -1343,7 +1343,7 @@ private fun CertificateRequirementsCard(
                                 ) {
                                     Text("K", color = Color.White, fontSize = 9.sp, fontWeight = FontWeight.Bold)
                                 }
-                                Text("KarirMate", fontSize = 8.sp, fontWeight = FontWeight.Bold, color = Color(0xFF0F172A))
+                                Text("KarirMate", fontSize = 8.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
                             }
 
                             // Certificate Title
@@ -1352,13 +1352,13 @@ private fun CertificateRequirementsCard(
                                     text = "SERTIFIKAT",
                                     fontSize = 9.5.sp,
                                     fontWeight = FontWeight.Black,
-                                    color = Color(0xFF0F172A),
+                                    color = MaterialTheme.colorScheme.onSurface,
                                     letterSpacing = 0.5.sp
                                 )
                                 Text(
                                     text = "Penyelesaian Program",
                                     fontSize = 6.5.sp,
-                                    color = Color(0xFF64748B)
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             }
 
@@ -1425,14 +1425,14 @@ private fun CertificateRequirementsCard(
                                 text = "Syarat Sertifikat KarirMate",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 13.5.sp,
-                                color = Color(0xFF0F172A)
+                                color = MaterialTheme.colorScheme.onSurface
                             )
                         }
 
                         Text(
                             text = "Selesaikan persyaratan berikut untuk mendapatkan sertifikat.",
                             fontSize = 9.5.sp,
-                            color = Color(0xFF64748B),
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             lineHeight = 12.sp
                         )
 
@@ -1479,13 +1479,13 @@ private fun CertificateRequirementsCard(
                                 text = "Progress: $completedCount/4",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.5.sp,
-                                color = Color(0xFF0F172A)
+                                color = MaterialTheme.colorScheme.onSurface
                             )
                             if (completedCount < 4) {
                                 Text(
                                     text = "Menunggu verifikasi server",
                                     fontSize = 9.sp,
-                                    color = Color(0xFF64748B)
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             }
                         }
@@ -1638,8 +1638,8 @@ private fun ProfileIncompleteBanner(onCompleteProfile: () -> Unit) {
                     modifier = Modifier.size(18.dp)
                 )
                 Column {
-                    Text("Profil belum lengkap", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = Color(0xFF0F172A))
-                    Text("Lengkapi data diri untuk optimasi rekomendasi karier.", fontSize = 10.sp, color = Color(0xFF64748B))
+                    Text("Profil belum lengkap", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurface)
+                    Text("Lengkapi data diri untuk optimasi rekomendasi karier.", fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
             TextButton(
