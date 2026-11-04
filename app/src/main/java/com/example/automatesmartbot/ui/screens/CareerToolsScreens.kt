@@ -26,7 +26,6 @@ import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
 import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import org.json.JSONArray
 import org.json.JSONObject
 import java.time.LocalDate
@@ -72,7 +71,7 @@ fun SalaryCalculatorScreen() {
             ) {
                 Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text("Simulasi Cepat", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
-                    Text("Coba angka simulasi standar, lalu sesuaikan dengan nominal slip gaji Anda.", fontSize = 12.sp, color = KarirTextMuted)
+                    Text("Coba angka simulasi standar, lalu sesuaikan dengan nominal slip gaji Anda.", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     OutlinedButton(
                         onClick = {
                             gross = "5000000"
@@ -113,7 +112,7 @@ fun SalaryCalculatorScreen() {
                     Text(
                         "Estimasi PPh 21 tahunan mengacu lapisan tarif UU HPP.",
                         fontSize = 11.5.sp,
-                        color = KarirTextMuted
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
 
                     AppInput("Penghasilan bruto pajak per bulan (Rp)", gross, { gross = it; result = null })
@@ -217,7 +216,7 @@ fun SalaryCalculatorScreen() {
                             fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onSurface
                         )
-                        Text("Estimasi per bulan, belum termasuk THR tahunan.", fontSize = 12.sp, color = KarirTextMuted)
+                        Text("Estimasi per bulan, belum termasuk THR tahunan.", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
 
                         HorizontalDivider(color = Color(0xFFF1E5DC))
 
@@ -235,7 +234,7 @@ fun SalaryCalculatorScreen() {
                                 modifier = Modifier.fillMaxWidth(),
                                 horizontalArrangement = Arrangement.SpaceBetween
                             ) {
-                                Text(label, fontSize = 12.sp, color = KarirTextMuted)
+                                Text(label, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                 Text(rupiah.format(value), fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = MaterialTheme.colorScheme.onSurface)
                             }
                         }
@@ -287,7 +286,7 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
             ) {
                 Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text("Surat Lamaran Otomatis", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
-                    Text("Gunakan profil dan CV tersimpan untuk menyusun surat lamaran otomatis.", fontSize = 12.sp, color = KarirTextMuted)
+                    Text("Gunakan profil dan CV tersimpan untuk menyusun surat lamaran otomatis.", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     Button(
                         onClick = onApplicationLetter,
                         modifier = Modifier.fillMaxWidth(),
@@ -394,7 +393,7 @@ fun LegacyJobTrainingScreen() {
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
             Text("Akademi KarirMate", fontWeight = FontWeight.Bold, fontSize = 22.sp, color = MaterialTheme.colorScheme.onSurface)
-            Text("Belajar bertahap • latihan praktik • evaluasi • sertifikat penyelesaian", color = KarirTextMuted, fontSize = 12.sp)
+            Text("Belajar bertahap • latihan praktik • evaluasi • sertifikat penyelesaian", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
 
             if (page == -1) {
                 Text("Katalog Pelatihan", fontWeight = FontWeight.Bold, fontSize = 17.sp, color = MaterialTheme.colorScheme.onSurface)
@@ -410,7 +409,7 @@ fun LegacyJobTrainingScreen() {
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                             Text(item.title, fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.onSurface)
-                            Text("$completed/${item.lessons.size} modul selesai", fontSize = 12.sp, color = KarirTextMuted)
+                            Text("$completed/${item.lessons.size} modul selesai", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                             LinearProgressIndicator(
                                 progress = { (completed.toFloat() / item.lessons.size.coerceAtLeast(1)).coerceIn(0f, 1f) },
                                 modifier = Modifier.fillMaxWidth().height(6.dp),
@@ -425,7 +424,7 @@ fun LegacyJobTrainingScreen() {
                     Text("← Kembali ke Katalog Pelatihan", color = KarirOrangeDeep, fontWeight = FontWeight.Bold)
                 }
                 Text(course.title, fontWeight = FontWeight.Bold, fontSize = 18.sp, color = MaterialTheme.colorScheme.onSurface)
-                Text("${done.size} dari ${course.lessons.size} modul diselesaikan", fontSize = 12.sp, color = KarirTextMuted)
+                Text("${done.size} dari ${course.lessons.size} modul diselesaikan", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 LinearProgressIndicator(
                     progress = { (done.size.toFloat() / course.lessons.size.coerceAtLeast(1)).coerceIn(0f, 1f) },
                     modifier = Modifier.fillMaxWidth().height(6.dp),
@@ -455,7 +454,7 @@ fun LegacyJobTrainingScreen() {
                     Text(lesson.first, fontWeight = FontWeight.Bold, fontSize = 17.sp, color = MaterialTheme.colorScheme.onSurface)
                     Text(lesson.second, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurface)
                     Text("Latihan praktik", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurface)
-                    Text("Tuliskan satu contoh penerapan materi ini dalam pekerjaan atau proses melamar kerja.", fontSize = 12.sp, color = KarirTextMuted)
+                    Text("Tuliskan satu contoh penerapan materi ini dalam pekerjaan atau proses melamar kerja.", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
 
                     var practice by rememberSaveable(courseId, page) {
                         mutableStateOf(prefs.getString("practice_${courseId}_$page", "").orEmpty())
@@ -495,7 +494,7 @@ fun LegacyJobTrainingScreen() {
                     HorizontalDivider(color = Color(0xFFF1E5DC))
                     Text("Evaluasi Akhir • Minimal 80/100", fontWeight = FontWeight.Bold, fontSize = 17.sp, color = MaterialTheme.colorScheme.onSurface)
                     if (!allDone) {
-                        Text("Selesaikan seluruh modul dan latihan praktik sebelum mengikuti evaluasi.", fontSize = 12.sp, color = KarirTextMuted)
+                        Text("Selesaikan seluruh modul dan latihan praktik sebelum mengikuti evaluasi.", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                     if (allDone) {
                         AppInput("Nama pada sertifikat", name, {
