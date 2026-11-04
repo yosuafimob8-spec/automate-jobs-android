@@ -65,6 +65,10 @@ object CvTemplates {
         require(freeIds.size == 27) { "CV FREE tier must contain 27 templates" }
         require(all.all { it.id in freeIds }) { "Legacy CV templates must remain FREE" }
     }
+    init {
+        require(catalog.size == 75 && catalog.map { it.id }.toSet().size == 75)
+        require(freeIds.size == 27 && catalog.count { it.id !in freeIds } == 48)
+    }
     fun isProTemplate(id: String): Boolean = catalog.any { it.id == id } && id !in freeIds
     fun canUse(id: String, verifiedPro: Boolean): Boolean = catalog.any { it.id == id } && (!isProTemplate(id) || verifiedPro)
     /** Old IDs remain readable without deleting or migrating saved CVs. */
