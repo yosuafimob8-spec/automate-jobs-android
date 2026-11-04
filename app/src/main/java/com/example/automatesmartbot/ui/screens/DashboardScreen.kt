@@ -138,8 +138,8 @@ private val primaryMenuItems = listOf(
         bgTint = Color(0xFFDCFCE7),
         route = Screen.CvBuilder.route
     ),
-MainMenuItem(
-        title = "Latihan\\nPsikotes",
+    MainMenuItem(
+        title = "Latihan\nPsikotes",
         subtitle = null,
         icon = Icons.Default.Psychology,
         iconTint = Color(0xFFE11D48),
