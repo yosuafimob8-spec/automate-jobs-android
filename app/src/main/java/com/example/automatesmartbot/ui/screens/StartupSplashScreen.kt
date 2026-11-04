@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -35,13 +36,13 @@ fun StartupSplashScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient),
+            .background(MaterialTheme.colorScheme.background),
         contentAlignment = Alignment.Center
     ) {
         Card(
-            colors = CardDefaults.cardColors(containerColor = Color.White),
+            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
             shape = RoundedCornerShape(24.dp),
-            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
             elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
             modifier = Modifier.padding(32.dp)
         ) {
@@ -53,7 +54,7 @@ fun StartupSplashScreen() {
                 Surface(
                     color = Color(0xFFFFF2E5),
                     shape = CircleShape,
-                    border = BorderStroke(1.5.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.5.dp, MaterialTheme.colorScheme.outlineVariant),
                     modifier = Modifier.size(80.dp)
                 ) {
                     Box(
@@ -68,7 +69,7 @@ fun StartupSplashScreen() {
                     text = "KarirMate",
                     fontWeight = FontWeight.ExtraBold,
                     fontSize = 24.sp,
-                    color = KarirTextDark
+                    color = MaterialTheme.colorScheme.onSurface
                 )
 
                 Text(
