@@ -22,7 +22,6 @@ import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
 import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import org.json.JSONArray
 
 @Composable
@@ -96,7 +95,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                         }
                     }
                     Text("WorkPedia", color = MaterialTheme.colorScheme.onSurface, fontSize = 22.sp, fontWeight = FontWeight.Bold)
-                    Text("Pahami istilah penting dunia kerja, hak normatif karyawan, dan aturan ketenagakerjaan.", color = KarirTextMuted, fontSize = 12.5.sp)
+                    Text("Pahami istilah penting dunia kerja, hak normatif karyawan, dan aturan ketenagakerjaan.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.5.sp)
                 }
             }
 
@@ -115,9 +114,9 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                         unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
                         disabledTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
                         focusedLabelColor = Color(0xFF9A3412),
-                        unfocusedLabelColor = KarirTextMuted,
-                        focusedPlaceholderColor = KarirTextMuted,
-                        unfocusedPlaceholderColor = KarirTextMuted,
+                        unfocusedLabelColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                        focusedPlaceholderColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                        unfocusedPlaceholderColor = MaterialTheme.colorScheme.onSurfaceVariant,
                         focusedBorderColor = KarirOrange,
                         unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
                         cursorColor = KarirOrange,
@@ -197,7 +196,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                     ) {
                         Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                             Text("Tidak ada istilah yang cocok", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
-                            Text("Ubah kata kunci atau kategori untuk melihat istilah lainnya.", color = KarirTextMuted, fontSize = 12.sp)
+                            Text("Ubah kata kunci atau kategori untuk melihat istilah lainnya.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
                             TextButton(onClick = { query = ""; category = "Semua"; onlyFavorites = false }) {
                                 Text("Atur Ulang Pencarian", color = KarirOrange, fontWeight = FontWeight.Bold)
                             }
@@ -290,7 +289,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                                     )
                                 }
                                 Text(term.optString("name"), color = MaterialTheme.colorScheme.onSurface, fontSize = 22.sp, fontWeight = FontWeight.Bold)
-                                Text(term.optString("fullName"), color = KarirTextMuted, fontSize = 14.sp)
+                                Text(term.optString("fullName"), color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 14.sp)
                             }
                         }
 
