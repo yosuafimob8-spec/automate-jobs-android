@@ -321,7 +321,7 @@ private fun MainDashboardContent(
                 CareerDocumentsScreen(onLegacyDocuments = { navController.navigate(Screen.SuratIzinDokumen.route) { launchSingleTop = true } })
             }
             composable(Screen.CvBuilder.route) {
-                CvBuilderScreen(viewModel = cvViewModel, onBack = cvBack)
+                CvBuilderScreen(viewModel = cvViewModel, onBack = cvBack, isPro = dashboardStatus?.membershipVerified == true && isPro)
             }
             composable(Screen.LatihanPsikotes.route) {
                 LatihanPsikotesScreen(isPro = isPro, onExit = navigateUpOrDashboard)
