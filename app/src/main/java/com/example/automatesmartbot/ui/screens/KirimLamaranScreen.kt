@@ -23,6 +23,7 @@ import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Schedule
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -154,7 +155,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
     LazyColumn(
         Modifier
             .fillMaxSize()
-            .background(KarirPageGradient),
+            .background(MaterialTheme.colorScheme.background),
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
@@ -162,8 +163,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         item {
             Card(
                 shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -175,7 +176,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         Surface(
                             shape = RoundedCornerShape(12.dp),
                             color = Color(0xFFFFF3E0),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                         ) {
                             Text(
                                 "KARIRMATE • PRO",
@@ -188,7 +189,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                     }
                     Text(
                         "Kirim Lamaran Otomatis",
-                        color = KarirTextDark,
+                        color = MaterialTheme.colorScheme.onSurface,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold
                     )
@@ -217,8 +218,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         item {
             Card(
                 shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -229,7 +230,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                     ) {
                         Text(
                             "Status & Kesiapan",
-                            color = KarirTextDark,
+                            color = MaterialTheme.colorScheme.onSurface,
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp
                         )
@@ -245,7 +246,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         LinearProgressIndicator(
                             Modifier.fillMaxWidth(),
                             color = KarirOrange,
-                            trackColor = Color(0xFFFFDEC9)
+                            trackColor = MaterialTheme.colorScheme.outlineVariant
                         )
                     }
 
@@ -268,7 +269,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                     Surface(
                         shape = RoundedCornerShape(12.dp),
                         color = Color(0xFFFFFBF7),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -284,7 +285,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                     else "Gmail: ${if (gmailConnected) "Terhubung" else "Belum terhubung"} • Status: ${if (enabled) "Aktif" else "Jeda"}",
                                     fontSize = 12.5.sp,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = KarirTextDark
+                                    color = MaterialTheme.colorScheme.onSurface
                                 )
                             }
                             Text(
@@ -310,7 +311,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                             shape = RoundedCornerShape(12.dp),
                             border = BorderStroke(1.dp, KarirOrange),
                             colors = ButtonDefaults.outlinedButtonColors(
-                                containerColor = Color.White,
+                                containerColor = MaterialTheme.colorScheme.surface,
                                 contentColor = KarirOrange
                             )
                         ) {
@@ -364,14 +365,14 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         item {
             Card(
                 shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                     Text(
                         "Izin & Kontrol Auto Apply",
-                        color = KarirTextDark,
+                        color = MaterialTheme.colorScheme.onSurface,
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp
                     )
@@ -394,7 +395,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(
                                 "Saya menyetujui pengiriman otomatis",
-                                color = KarirTextDark,
+                                color = MaterialTheme.colorScheme.onSurface,
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Medium
                             )
@@ -483,7 +484,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         shape = RoundedCornerShape(12.dp),
                         border = BorderStroke(1.dp, Color(0xFFE2E8F0)),
                         colors = ButtonDefaults.outlinedButtonColors(
-                            containerColor = Color.White,
+                            containerColor = MaterialTheme.colorScheme.surface,
                             contentColor = KarirTextDark
                         )
                     ) {
@@ -497,7 +498,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         item {
             Text(
                 "Kandidat Lamaran",
-                color = KarirTextDark,
+                color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.Bold,
                 fontSize = 16.sp
             )
@@ -507,8 +508,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             item {
                 Card(
                     shape = RoundedCornerShape(14.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
@@ -524,8 +525,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                 val c = candidates[index]
                 Card(
                     shape = RoundedCornerShape(14.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -534,7 +535,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                             "${c.optString("company")} • ${c.optString("position")}",
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp,
-                            color = KarirTextDark
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                         Text(
                             c.optString("email"),
@@ -556,7 +557,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         item {
             Text(
                 "Riwayat Pengiriman",
-                color = KarirTextDark,
+                color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.Bold,
                 fontSize = 16.sp
             )
@@ -566,8 +567,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             item {
                 Card(
                     shape = RoundedCornerShape(14.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
@@ -585,8 +586,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                 val confirmed = AutoApplyConfirmation.sent(d.optString("status"), gmailId)
                 Card(
                     shape = RoundedCornerShape(14.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -602,7 +603,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                 d.optString("company"),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 14.sp,
-                                color = KarirTextDark
+                                color = MaterialTheme.colorScheme.onSurface
                             )
                             Text(
                                 if (confirmed) "Terkirim via Gmail"
