@@ -25,8 +25,6 @@ import com.example.automatesmartbot.ui.components.BrandLogo
 import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import com.example.automatesmartbot.ui.viewmodel.AuthViewModel
 
 @Composable
@@ -48,12 +46,12 @@ fun LoginScreen(
         focusedBorderColor = KarirOrange,
         unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
         focusedLabelColor = KarirOrange,
-        unfocusedLabelColor = KarirTextMuted,
+        unfocusedLabelColor = MaterialTheme.colorScheme.onSurfaceVariant,
         cursorColor = KarirOrange,
         focusedContainerColor = MaterialTheme.colorScheme.surface,
         unfocusedContainerColor = MaterialTheme.colorScheme.surface,
-        focusedTextColor = KarirTextDark,
-        unfocusedTextColor = KarirTextDark
+        focusedTextColor = MaterialTheme.colorScheme.onSurface,
+        unfocusedTextColor = MaterialTheme.colorScheme.onSurface
     )
 
     Box(
@@ -89,7 +87,7 @@ fun LoginScreen(
                 Text(
                     text = "Gunakan email dan password terdaftar untuk mengakses layanan pencarian kerja terpercaya.",
                     fontSize = 12.5.sp,
-                    color = KarirTextMuted,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -115,7 +113,7 @@ fun LoginScreen(
                             Icon(
                                 imageVector = if (passwordVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
                                 contentDescription = null,
-                                tint = KarirTextMuted
+                                tint = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
                     },
@@ -191,7 +189,7 @@ fun LoginScreen(
                     horizontalArrangement = Arrangement.Center,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text("Belum punya akun?", fontSize = 13.sp, color = KarirTextMuted)
+                    Text("Belum punya akun?", fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     TextButton(onClick = onNavigateRegister) {
                         Text("Daftar Sekarang", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = KarirOrangeDeep)
                     }
