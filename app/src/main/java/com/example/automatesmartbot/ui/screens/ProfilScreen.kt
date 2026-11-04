@@ -71,7 +71,6 @@ import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
 import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import com.example.automatesmartbot.ui.theme.ThemeMode
 import com.example.automatesmartbot.ui.theme.ThemePreference
 import kotlinx.coroutines.launch
@@ -157,7 +156,7 @@ fun ProfilScreen(
                         "Sesi Anda tetap tersimpan. Sambungkan internet lalu coba lagi."
                     },
                     fontSize = 13.sp,
-                    color = KarirTextMuted,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center
                 )
                 Spacer(modifier = Modifier.height(16.dp))
@@ -227,7 +226,7 @@ fun ProfilScreen(
                         )
                         Text(
                             "Kelola data diri, kontak, preferensi, dan kelengkapan CV Anda.",
-                            color = KarirTextMuted,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             fontSize = 12.5.sp
                         )
                     }
@@ -274,7 +273,7 @@ private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) 
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
             Text("Tema Tampilan", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface, fontSize = 16.sp)
-            Text("Pilih mode tampilan Karir Mate yang nyaman bagi Anda.", color = KarirTextMuted, fontSize = 12.sp)
+            Text("Pilih mode tampilan Karir Mate yang nyaman bagi Anda.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 ThemeMode.entries.forEach { mode ->
                     val selected = selectedMode == mode
@@ -314,7 +313,7 @@ fun ProfileDetailRow(
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Icon(icon, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(16.dp))
-            Text(text = label, fontSize = 13.sp, color = KarirTextMuted)
+            Text(text = label, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
         Text(
             text = value,
@@ -446,7 +445,7 @@ private fun ProfileIdentityCard(
                     Text(
                         if (completeCount == 7) "✓ Profil Anda sudah lengkap dan optimal!"
                         else "Lengkapi ${7 - completeCount} bagian profil untuk memaksimalkan peluang kerja.",
-                        color = if (completeCount == 7) Color(0xFF16A34A) else KarirTextMuted,
+                        color = if (completeCount == 7) Color(0xFF16A34A) else MaterialTheme.colorScheme.onSurfaceVariant,
                         fontSize = 11.5.sp
                     )
                 }
@@ -486,7 +485,7 @@ private fun ProfileIdentityCard(
                         color = when (account?.isEmailVerified) {
                             true -> Color(0xFF166534)
                             false -> Color(0xFF92400E)
-                            null -> KarirTextMuted
+                            null -> MaterialTheme.colorScheme.onSurfaceVariant
                         },
                         fontWeight = FontWeight.Bold,
                         fontSize = 10.5.sp,
@@ -550,7 +549,7 @@ private fun ProfileIdentityCard(
                         CareerSummaryTile("Lamaran", "Riwayat", Color(0xFFFFF3E0), Modifier.weight(1f))
                         CareerSummaryTile("Dokumen", "Kelola", Color(0xFFFFF3E0), Modifier.weight(1f))
                     }
-                    Text("Ringkasan integrasi fitur resmi KarirMate.", fontSize = 11.sp, color = KarirTextMuted)
+                    Text("Ringkasan integrasi fitur resmi KarirMate.", fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
 
@@ -614,7 +613,7 @@ private fun CareerSummaryTile(title: String, caption: String, color: Color, modi
         ) {
             Text("—", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = KarirOrange)
             Text(title, fontSize = 11.5.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
-            Text(caption, fontSize = 10.sp, color = KarirTextMuted)
+            Text(caption, fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
         }
     }
 }
