@@ -22,6 +22,7 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Phone
 import androidx.compose.material.icons.filled.School
 import androidx.compose.material.icons.filled.Work
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -95,11 +96,11 @@ fun OnboardingProfileScreen(
 
     val textFieldColors = OutlinedTextFieldDefaults.colors(
         focusedBorderColor = KarirOrange,
-        unfocusedBorderColor = Color(0xFFFFDEC9),
+        unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
         focusedLabelColor = KarirOrange,
         unfocusedLabelColor = KarirTextMuted,
-        focusedContainerColor = Color.White,
-        unfocusedContainerColor = Color.White,
+        focusedContainerColor = MaterialTheme.colorScheme.surface,
+        unfocusedContainerColor = MaterialTheme.colorScheme.surface,
         focusedTextColor = KarirTextDark,
         unfocusedTextColor = KarirTextDark,
         cursorColor = KarirOrange
@@ -118,7 +119,7 @@ fun OnboardingProfileScreen(
                         )
                     }
                 },
-                title = { Text("Setup / Edit Profil", color = KarirTextDark, fontWeight = FontWeight.Bold, fontSize = 18.sp) },
+                title = { Text("Setup / Edit Profil", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold, fontSize = 18.sp) },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFFFFDF9))
             )
         },
@@ -176,16 +177,16 @@ fun OnboardingProfileScreen(
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(KarirPageGradient)
+                .background(MaterialTheme.colorScheme.background)
                 .padding(innerPadding)
                 .verticalScroll(scrollState)
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
