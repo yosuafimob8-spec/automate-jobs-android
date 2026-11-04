@@ -44,11 +44,10 @@ import java.util.UUID
 
 private val orangeTraining = Color(0xFFFF6B00)
 private val tealTraining = Color(0xFF16A34A)
-private val paleTraining = Color(0xFFFFFBF7)
 private val trainingButtonColors @Composable get() = ButtonDefaults.outlinedButtonColors(
     containerColor = MaterialTheme.colorScheme.surface,
     contentColor = MaterialTheme.colorScheme.onSurface,
-    disabledContentColor = Color(0xFF94A3B8),
+    disabledContentColor = MaterialTheme.colorScheme.onSurfaceVariant,
     disabledContainerColor = MaterialTheme.colorScheme.surfaceVariant
 )
 
