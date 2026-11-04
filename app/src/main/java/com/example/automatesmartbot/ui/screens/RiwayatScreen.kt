@@ -18,7 +18,6 @@ import androidx.compose.ui.unit.sp
 import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
 import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 @Composable
 fun RiwayatScreen() {
@@ -49,7 +48,7 @@ fun RiwayatScreen() {
                     Text(
                         text = "Pantau status lamaran kerja yang sudah Anda ajukan atau kirimkan.",
                         fontSize = 12.sp,
-                        color = KarirTextMuted
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
@@ -79,7 +78,7 @@ fun RiwayatScreen() {
                     Text(
                         text = "Riwayat resmi akan otomatis muncul setelah pengiriman email atau lamaran diproses.",
                         fontSize = 12.sp,
-                        color = KarirTextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                         modifier = Modifier.padding(horizontal = 24.dp)
                     )
