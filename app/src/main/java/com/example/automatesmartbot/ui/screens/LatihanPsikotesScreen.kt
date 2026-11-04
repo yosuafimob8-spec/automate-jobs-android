@@ -105,7 +105,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
         title = { Text("Latihan FREE") },
         text = { Text("Paket FREE hanya mencakup kategori dasar dengan 10–20 soal per sesi. Paket ini belum tersedia di server; silakan pilih kategori lain.") },
         confirmButton = { TextButton(onClick = { freeNotice = false }) { Text("Mengerti") } })
-    Column(Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient)) {
+    Column(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
         // The parent dashboard already draws the app toolbar; do not duplicate it.
         if (loading) LinearProgressIndicator(Modifier.fillMaxWidth(), color = orange)
         error?.let { Text(it, Modifier.padding(12.dp), color = MaterialTheme.colorScheme.error) }
@@ -207,7 +207,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     else -> "Tetap semangat! Mulai dari dasar dan tingkatkan kemampuanmu sedikit demi sedikit."
                 }
                 LazyColumn(
-                    Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient).padding(horizontal = 16.dp),
+                    Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).padding(horizontal = 16.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp),
                     contentPadding = PaddingValues(top = 16.dp, bottom = 28.dp)
                 ) {
@@ -629,7 +629,7 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
                     Text(q.s("prompt", q.s("question", "Soal tidak tersedia")), fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
                     (q.getAsJsonArray("options")?.map { it.asJsonObject } ?: emptyList()).forEach { option ->
                         val selected = q.s("selected_option_id") == option.s("id")
-                        Card(onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFE8DC) else Color.White), border = androidx.compose.foundation.BorderStroke(if (selected) 2.dp else 1.dp, if (selected) orange else MaterialTheme.colorScheme.outlineVariant)) {
+                        Card(onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFE8DC) else MaterialTheme.colorScheme.surface), border = androidx.compose.foundation.BorderStroke(if (selected) 2.dp else 1.dp, if (selected) orange else MaterialTheme.colorScheme.outlineVariant)) {
                             Row(Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 7.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                                 RadioButton(selected = selected, onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.size(36.dp), colors = RadioButtonDefaults.colors(selectedColor = orange))
                                 Text(option.s("text"), color = ink, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
