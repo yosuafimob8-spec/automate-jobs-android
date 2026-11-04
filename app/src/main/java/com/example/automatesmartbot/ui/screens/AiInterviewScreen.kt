@@ -388,8 +388,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     }
     val orange = com.example.automatesmartbot.ui.theme.KarirOrange
     val teal = Color(0xFF16A34A)
-    val ink = com.example.automatesmartbot.ui.theme.KarirTextDark
-    val muted = com.example.automatesmartbot.ui.theme.KarirTextMuted
+    val ink = MaterialTheme.colorScheme.onSurface
+    val muted = MaterialTheme.colorScheme.onSurfaceVariant
     val shape = RoundedCornerShape(16.dp)
     fun resetSession() {
         cancelInterview()
