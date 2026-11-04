@@ -153,6 +153,18 @@ object CvRenderer {
             CvLayout.SKILLS_FIRST -> canvas.drawRect(42f, 24f, 180f, 30f, p)
             else -> Unit
         }
+        if (page.first) {
+            // Distinct visual signature per catalog entry, visible in preview and PDF.
+            val variant = page.template.id.substringAfterLast('_').toIntOrNull() ?: 1
+            p.color = page.template.accent
+            when (variant % 5) {
+                0 -> { p.strokeWidth = 2f; canvas.drawLine(42f, 135f, 553f, 135f, p) }
+                1 -> canvas.drawRoundRect(42f, 24f, 150f + variant * 2f, 29f, 3f, 3f, p)
+                2 -> { p.style = Paint.Style.STROKE; p.strokeWidth = 2f; canvas.drawRoundRect(28f, 28f, 567f, 814f, 12f, 12f, p); p.style = Paint.Style.FILL }
+                3 -> canvas.drawRect(540f - variant * 2f, 28f, 553f, 100f, p)
+                else -> { p.strokeWidth = 3f; canvas.drawLine(42f, 34f, 42f, 120f + variant * 2f, p) }
+            }
+        }
         page.texts.forEach { t ->
             p.color = t.color; p.textSize = t.size; p.typeface = if (t.bold) boldFace else regular
             if (includeText) canvas.drawText(t.text, t.x, t.baseline, p)
