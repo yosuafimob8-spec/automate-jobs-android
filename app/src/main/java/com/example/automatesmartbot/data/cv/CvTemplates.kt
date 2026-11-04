@@ -21,8 +21,42 @@ object CvTemplates {
         CvTemplate("creative_01", "Kreatif Monogram", "Kreatif", CvLayout.MONOGRAM, 0xFF943D24.toInt(), true),
         CvTemplate("creative_02", "Kreatif Portofolio", "Kreatif", CvLayout.PORTFOLIO, 0xFF943D24.toInt(), true)
     )
+    private val generatedCatalog: List<CvTemplate> = buildList {
+        for (number in 1..15) {
+            val id = "ats_" + number.toString().padStart(2, '0')
+            if (all.none { it.id == id }) add(CvTemplate(id, "ATS " + number.toString().padStart(2, '0'), "ATS", CvLayout.CLASSIC, 0xFFFF6B2B.toInt(), false))
+        }
+        for (number in 1..15) {
+            val id = "professional_" + number.toString().padStart(2, '0')
+            if (all.none { it.id == id }) add(CvTemplate(id, "Profesional " + number.toString().padStart(2, '0'), "Profesional", CvLayout.SIDEBAR_LEFT, 0xFFFF6B2B.toInt(), true))
+        }
+        for (number in 1..12) {
+            val id = "modern_" + number.toString().padStart(2, '0')
+            if (all.none { it.id == id }) add(CvTemplate(id, "Modern " + number.toString().padStart(2, '0'), "Modern", CvLayout.SIDEBAR_RIGHT, 0xFFFF6B2B.toInt(), true))
+        }
+        for (number in 1..10) {
+            val id = "minimal_" + number.toString().padStart(2, '0')
+            if (all.none { it.id == id }) add(CvTemplate(id, "Minimalis " + number.toString().padStart(2, '0'), "Minimalis", CvLayout.COMPACT, 0xFFFF6B2B.toInt(), false))
+        }
+        for (number in 1..8) {
+            val id = "graduate_" + number.toString().padStart(2, '0')
+            if (all.none { it.id == id }) add(CvTemplate(id, "Fresh Graduate " + number.toString().padStart(2, '0'), "Fresh Graduate", CvLayout.ACADEMIC, 0xFFFF6B2B.toInt(), true))
+        }
+        for (number in 1..7) {
+            val id = "executive_" + number.toString().padStart(2, '0')
+            if (all.none { it.id == id }) add(CvTemplate(id, "Eksekutif " + number.toString().padStart(2, '0'), "Eksekutif", CvLayout.EXECUTIVE, 0xFFFF6B2B.toInt(), true))
+        }
+        for (number in 1..8) {
+            val id = "creative_" + number.toString().padStart(2, '0')
+            if (all.none { it.id == id }) add(CvTemplate(id, "Kreatif " + number.toString().padStart(2, '0'), "Kreatif", CvLayout.MONOGRAM, 0xFFFF6B2B.toInt(), true))
+        }
+    }
+    val catalog: List<CvTemplate> = all + generatedCatalog
+    val freeIds: Set<String> = catalog.take(27).map { it.id }.toSet()
+    fun isProTemplate(id: String): Boolean = catalog.any { it.id == id } && id !in freeIds
+    fun canUse(id: String, verifiedPro: Boolean): Boolean = catalog.any { it.id == id } && (!isProTemplate(id) || verifiedPro)
     /** Old IDs remain readable without deleting or migrating saved CVs. */
-    fun resolve(id: String): CvTemplate = all.firstOrNull { it.id == id } ?: when (id) {
+    fun resolve(id: String): CvTemplate = catalog.firstOrNull { it.id == id } ?: when (id) {
         "student" -> all.first { it.layout == CvLayout.ACADEMIC }
         "combination" -> all.first { it.layout == CvLayout.SKILLS_FIRST }
         "senior" -> all.first { it.layout == CvLayout.EXECUTIVE }
