@@ -140,7 +140,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 Text("Pilih latihan sesuai tujuanmu. Kerjakan soal, pantau progres, dan tingkatkan kemampuan.", style = MaterialTheme.typography.bodySmall, color = Color(0xFF59667A))
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.horizontalScroll(rememberScrollState())) {
                     listOf("Semua" to "all", "Swasta" to "private", "CPNS" to "cpns").forEach { (label, value) ->
-                        FilterChip(selected = family == value, onClick = { family = value }, label = { Text(label) }, colors = FilterChipDefaults.filterChipColors(selectedContainerColor = orange, selectedLabelColor = Color.White))
+                        FilterChip(selected = family == value, onClick = { family = value }, label = { Text(label) }, colors = FilterChipDefaults.filterChipColors(selectedContainerColor = orange, selectedLabelColor = Color.White, containerColor = MaterialTheme.colorScheme.surface, labelColor = MaterialTheme.colorScheme.onSurface))
                     }
                 }
                 val visible = modes.filter {
@@ -363,7 +363,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                         onClick = { analysisTab = index },
                                         modifier = Modifier.weight(1f),
                                         contentPadding = PaddingValues(horizontal = 2.dp, vertical = 10.dp),
-                                        colors = ButtonDefaults.buttonColors(containerColor = if (analysisTab == index) orange else Color(0xFFF1F4F6), contentColor = if (analysisTab == index) Color.White else Color.Black)
+                                        colors = ButtonDefaults.buttonColors(containerColor = if (analysisTab == index) orange else MaterialTheme.colorScheme.surfaceVariant, contentColor = if (analysisTab == index) Color.White else MaterialTheme.colorScheme.onSurface)
                                     ) { Text(label, style = MaterialTheme.typography.labelSmall, maxLines = 1) }
                                 }
                             }
