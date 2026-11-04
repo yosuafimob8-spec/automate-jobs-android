@@ -56,6 +56,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
     var company by rememberSaveable { mutableStateOf("") }
     var useAnalyzed by rememberSaveable { mutableStateOf(false) }
     var filter by rememberSaveable { mutableStateOf("Semua") }
+    var templatePage by rememberSaveable { mutableIntStateOf(0) }
     var deleteId by remember { mutableStateOf<String?>(null) }
 
     BackHandler(onBack = onBack)
@@ -497,7 +498,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                                 categoryList.forEach { categoryName ->
                                     Tab(
                                         selected = filter == categoryName,
-                                        onClick = { filter = categoryName },
+                                        onClick = { filter = categoryName; templatePage = 0 },
                                         text = {
                                             Text(
                                                 categoryName,
@@ -511,7 +512,11 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                         }
                     }
 
-                    CvTemplates.catalog.filter { filter == "Semua" || it.category == filter }.chunked(2).forEach { pair ->
+                    val filteredTemplates = CvTemplates.catalog.filter { filter == "Semua" || it.category == filter }
+                    val pageSize = 12
+                    val pageCount = (filteredTemplates.size + pageSize - 1) / pageSize
+                    val safePage = templatePage.coerceIn(0, (pageCount - 1).coerceAtLeast(0))
+                    filteredTemplates.drop(safePage * pageSize).take(pageSize).chunked(2).forEach { pair ->
                         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                             pair.forEach { template ->
                                 Card(
@@ -529,6 +534,13 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                                 }
                             }
                             if (pair.size == 1) Spacer(Modifier.weight(1f))
+                        }
+                    }
+                    if (pageCount > 1) {
+                        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                            OutlinedButton(onClick = { templatePage = (safePage - 1).coerceAtLeast(0) }, enabled = safePage > 0) { Text("Sebelumnya") }
+                            Text("${safePage + 1} / $pageCount", color = KarirTextMuted)
+                            OutlinedButton(onClick = { templatePage = (safePage + 1).coerceAtMost(pageCount - 1) }, enabled = safePage < pageCount - 1) { Text("Berikutnya") }
                         }
                     }
                 }
