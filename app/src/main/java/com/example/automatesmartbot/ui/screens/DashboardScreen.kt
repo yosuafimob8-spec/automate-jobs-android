@@ -39,6 +39,7 @@ import androidx.compose.material.icons.filled.Tune
 import androidx.compose.material.icons.filled.VerifiedUser
 import androidx.compose.material.icons.filled.Work
 import androidx.compose.material.icons.filled.WorkspacePremium
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
@@ -349,9 +350,9 @@ fun DashboardScreen(
                             )
                             if (filtered.isEmpty()) {
                                 Card(
-                                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                                     shape = RoundedCornerShape(18.dp),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                     elevation = CardDefaults.cardElevation(defaultElevation = 2.5.dp),
                                     modifier = Modifier.fillMaxWidth()
                                 ) {
@@ -373,7 +374,7 @@ fun DashboardScreen(
                                             .fillMaxWidth()
                                             .clickable { onNavigate(item.route) },
                                         shape = RoundedCornerShape(16.dp),
-                                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                                         border = BorderStroke(1.dp, Color(0xFFF3EAE2)),
                                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                                     ) {
@@ -732,8 +733,8 @@ private fun DashboardSearchBar(
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.5.dp)
     ) {
         Row(
@@ -849,7 +850,7 @@ private fun IndonesianLaborConditionCard() {
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(20.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         border = BorderStroke(1.dp, Color(0xFFF3ECE4)),
         elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
     ) {
@@ -1225,7 +1226,7 @@ private fun MenuGridCard(
             .height(118.dp)
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         border = BorderStroke(1.dp, Color(0xFFF3EAE2)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp, pressedElevation = 4.dp)
     ) {
@@ -1294,8 +1295,8 @@ private fun CertificateRequirementsCard(
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(20.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
     ) {
         Box(
@@ -1614,7 +1615,7 @@ private fun ProfileIncompleteBanner(onCompleteProfile: () -> Unit) {
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         border = BorderStroke(1.dp, Color(0xFFFFD8B2)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
