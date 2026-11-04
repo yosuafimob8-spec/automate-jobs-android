@@ -8,18 +8,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 val KarirMateDarkColors = darkColorScheme(
-    primary = PrimaryBlue,
-    onPrimary = TextWhite,
+    primary = KarirOrange,
+    
+    onPrimary = Color.Black,
     primaryContainer = PrimaryBlueVariant,
     onPrimaryContainer = TextWhite,
-    secondary = LightBlueAccent,
+    secondary = KarirOrangeDeep,
     onSecondary = Color.White,
     background = DarkBackground,
     onBackground = TextWhite,
     surface = DarkSurface,
     onSurface = TextWhite,
     surfaceVariant = DarkSurfaceVariant,
-    onSurfaceVariant = TextGray
+    onSurfaceVariant = Color(0xFFE2E8F0),
+    outline = Color(0xFF94A3B8),
+    outlineVariant = Color(0xFF475569)
 )
 
 val KarirMateLightColors = lightColorScheme(
@@ -34,7 +37,9 @@ val KarirMateLightColors = lightColorScheme(
     surface = LightSurface,
     onSurface = KarirTextDark,
     surfaceVariant = Color(0xFFFFF2E5),
-    onSurfaceVariant = Color(0xFF526277)
+    onSurfaceVariant = Color(0xFF334155),
+    outline = Color(0xFF64748B),
+    outlineVariant = Color(0xFFE8D6C9)
 )
 
 @Composable
@@ -43,7 +48,7 @@ fun KarirMateTheme(
     content: @Composable () -> Unit
 ) {
     val darkTheme = when (mode) {
-        ThemeMode.AUTO -> false // KarirMate screens use fixed light backgrounds; prevent unreadable inherited dark text
+        ThemeMode.AUTO -> isSystemInDarkTheme()
         ThemeMode.LIGHT -> false
         ThemeMode.DARK -> true
     }
