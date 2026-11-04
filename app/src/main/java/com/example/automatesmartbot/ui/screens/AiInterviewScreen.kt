@@ -519,7 +519,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             Text("CV maksimal 10 MB; PDF scan memerlukan OCR.", color = muted, style = MaterialTheme.typography.bodySmall)
             if (voiceMode) Text("Mode suara: AI membacakan pertanyaan. Jawab hanya melalui mikrofon.", color = ink)
             Text("AI Interview menggunakan Gemma online. Tidak perlu mengunduh model.", color = ink)
-            Button(enabled = !loading && !cvReading && endpoint != null), modifier = Modifier.fillMaxWidth().height(56.dp),
+            Button(enabled = !loading && !cvReading && endpoint != null, modifier = Modifier.fillMaxWidth().height(56.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = orange), shape = RoundedCornerShape(16.dp),
                 onClick = {
                     history = emptyList()
