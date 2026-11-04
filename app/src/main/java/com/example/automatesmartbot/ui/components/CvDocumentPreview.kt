@@ -23,8 +23,6 @@ import androidx.compose.ui.unit.sp
 import com.example.automatesmartbot.data.cv.*
 import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -48,20 +46,20 @@ fun CvDocumentPreview(pages: List<CvPage>, modifier: Modifier = Modifier) {
                     enabled = zoom > 1f,
                     modifier = Modifier.size(32.dp)
                 ) {
-                    Text("−", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = if (zoom > 1f) KarirOrangeDeep else KarirTextMuted)
+                    Text("−", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = if (zoom > 1f) KarirOrangeDeep else MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 Text(
                     "${(zoom * 100).toInt()}% • A4 • ${pages.size} hal",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.SemiBold,
-                    color = KarirTextDark
+                    color = MaterialTheme.colorScheme.onSurface
                 )
                 IconButton(
                     onClick = { zoom = (zoom + .25f).coerceAtMost(3f) },
                     enabled = zoom < 3f,
                     modifier = Modifier.size(32.dp)
                 ) {
-                    Text("+", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = if (zoom < 3f) KarirOrangeDeep else KarirTextMuted)
+                    Text("+", fontSize = 18.sp, fontWeight = FontWeight.Bold, color = if (zoom < 3f) KarirOrangeDeep else MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
         }
