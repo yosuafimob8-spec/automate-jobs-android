@@ -183,7 +183,6 @@ private fun MainDashboardContent(
         Screen.AiInterview.route -> "AI Interview"
         Screen.AiAgent.route -> "AI Agent"
         Screen.Riwayat.route -> "Riwayat Lamaran"
-        Screen.SuratIzinDokumen.route -> "Surat Izin & Dokumen Kerja"
         Screen.Profil.route -> "Profil & Pengaturan"
         Screen.Login.route -> "Masuk Akun"
         Screen.Register.route -> "Daftar Akun"
@@ -302,7 +301,7 @@ private fun MainDashboardContent(
                 })
             }
             composable(Screen.CareerDocuments.route) {
-                CareerDocumentsScreen(onLegacyDocuments = { navController.navigate(Screen.SuratIzinDokumen.route) { launchSingleTop = true } })
+                CareerDocumentsScreen()
             }
             composable(Screen.CvBuilder.route) {
                 CvBuilderScreen(viewModel = cvViewModel, onBack = cvBack)
@@ -319,12 +318,6 @@ private fun MainDashboardContent(
             composable(Screen.AiAgent.route) {
                 FixedCanvasTheme(dark = false) {
                     AiAgentScreen()
-
-                }
-            }
-            composable(Screen.SuratIzinDokumen.route) {
-                FixedCanvasTheme(dark = false) {
-                    SuratIzinDokumenScreen()
 
                 }
             }
