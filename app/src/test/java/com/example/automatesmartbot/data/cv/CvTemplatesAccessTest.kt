@@ -22,6 +22,13 @@ class CvTemplatesAccessTest {
         }
     }
 
+    @Test fun legacyDraftsRemainReadable() {
+        listOf("student", "combination", "senior").forEach {
+            assertTrue(CvTemplates.canUse(it, false))
+            assertNotNull(CvTemplates.resolve(it))
+        }
+    }
+
     @Test fun unknownTemplateCannotBeUsed() {
         assertFalse(CvTemplates.canUse("unknown_template", false))
         assertFalse(CvTemplates.canUse("unknown_template", true))
