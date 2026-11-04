@@ -22,8 +22,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 @Composable
 fun FeatureComingSoonScreen(
@@ -94,7 +92,7 @@ fun FeatureComingSoonScreen(
                     Text(
                         text = description,
                         fontSize = 13.sp,
-                        color = KarirTextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         lineHeight = 19.sp
                     )
                 }
@@ -176,7 +174,7 @@ fun FeatureComingSoonScreen(
                     Text(
                         text = "Fitur ini sedang dalam tahap pengembangan aktif untuk KarirMate. Seluruh fitur resmi mengutamakan keamanan dan transparansi.",
                         fontSize = 12.sp,
-                        color = KarirTextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         lineHeight = 18.sp
                     )
                     Button(
