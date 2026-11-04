@@ -45,6 +45,9 @@ import com.example.automatesmartbot.ui.viewmodel.CvBuilderViewModel
 import com.example.automatesmartbot.ui.viewmodel.DashboardViewModel
 import com.example.automatesmartbot.ui.theme.ThemePreference
 import com.example.automatesmartbot.ui.theme.FixedCanvasTheme
+import com.example.automatesmartbot.ui.theme.ThemeMode
+import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material3.MaterialTheme
 
 @Composable
 fun MainDashboardScreen(themePreference: ThemePreference) {
@@ -206,7 +209,12 @@ private fun MainDashboardContent(
         navigateUpOrDashboard()
     }
 
-    FixedCanvasTheme(dark = false) {
+    val isDarkMode = when (themePreference.mode) {
+        ThemeMode.DARK -> true
+        ThemeMode.LIGHT -> false
+        ThemeMode.AUTO -> isSystemInDarkTheme()
+    }
+    FixedCanvasTheme(dark = isDarkMode) {
     Scaffold(
         topBar = {
             if (showTopBar) {
@@ -225,9 +233,9 @@ private fun MainDashboardContent(
         bottomBar = {
             if (showBottomBar) {
                 NavigationBar(
-                    containerColor = Color(0xFFFFFDF9),
+                    containerColor = MaterialTheme.colorScheme.surface,
                     tonalElevation = 8.dp,
-                    modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC))
+                    modifier = Modifier.border(width = 0.75.dp, color = MaterialTheme.colorScheme.outlineVariant)
                 ) {
                     bottomNavItems.forEach { screen ->
                         val selected = currentRoute == screen.route
@@ -274,7 +282,7 @@ private fun MainDashboardContent(
                 .padding(innerPadding)
         ) {
             composable(Screen.Dashboard.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = isDarkMode) {
                     DashboardScreen(
                         onNavigate = { route ->
                             navController.navigate(route) {
@@ -287,7 +295,7 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.CariLowongan.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = isDarkMode) {
                     CariLowonganScreen(isPro = isPro)
 
                 }
@@ -322,20 +330,20 @@ private fun MainDashboardContent(
                 LatihanPsikotesScreen(isPro = isPro, onExit = navigateUpOrDashboard)
             }
             composable(Screen.AiInterview.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = isDarkMode) {
                     AiInterviewScreen(isPro = isPro)
 
                 }
             }
             composable(Screen.WorkPedia.route) { WorkPediaScreen(onExit = navigateUpOrDashboard) }
             composable(Screen.SuratIzinDokumen.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = isDarkMode) {
                     SuratIzinDokumenScreen()
 
                 }
             }
             composable(Screen.Riwayat.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = isDarkMode) {
                     RiwayatScreen()
 
                 }
@@ -353,7 +361,7 @@ private fun MainDashboardContent(
                 )
             }
             composable(Screen.Login.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = isDarkMode) {
                     LoginScreen(
                         onNavigateRegister = {
                             navController.navigate(Screen.Register.route) {
@@ -380,7 +388,7 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.Register.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = isDarkMode) {
                     RegisterScreen(
                         onNavigateLogin = navigateToLogin,
                         onRegisterSuccess = {
@@ -391,7 +399,7 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.ForgotPassword.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = isDarkMode) {
                     ForgotPasswordScreen(
                         onNavigateLogin = navigateToLogin
                     )
@@ -399,7 +407,7 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.OnboardingProfile.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = isDarkMode) {
                     OnboardingProfileScreen(
                         isOnline = isOnline,
                         onBack = navigateUpOrDashboard,
