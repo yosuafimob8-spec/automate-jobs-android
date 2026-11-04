@@ -111,9 +111,9 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                     singleLine = true,
                     shape = RoundedCornerShape(12.dp),
                     colors = OutlinedTextFieldDefaults.colors(
-                        focusedTextColor = KarirTextDark,
-                        unfocusedTextColor = KarirTextDark,
-                        disabledTextColor = KarirTextDark,
+                        focusedTextColor = MaterialTheme.colorScheme.onSurface,
+                        unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
+                        disabledTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
                         focusedLabelColor = Color(0xFF9A3412),
                         unfocusedLabelColor = KarirTextMuted,
                         focusedPlaceholderColor = KarirTextMuted,
