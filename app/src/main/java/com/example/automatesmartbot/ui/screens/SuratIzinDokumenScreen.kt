@@ -13,6 +13,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -122,7 +123,7 @@ fun SuratIzinDokumenScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
     ) {
         Column(
             Modifier
@@ -147,14 +148,14 @@ fun SuratIzinDokumenScreen() {
                 },
                 fontSize = 22.sp,
                 fontWeight = FontWeight.Bold,
-                color = KarirTextDark
+                color = MaterialTheme.colorScheme.onSurface
             )
 
             if (notice.isNotEmpty()) {
                 Surface(
                     shape = RoundedCornerShape(8.dp),
                     color = Color(0xFFFFF3E0),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(notice, color = Color(0xFF9A3412), fontSize = 12.sp, modifier = Modifier.padding(10.dp))
@@ -166,7 +167,7 @@ fun SuratIzinDokumenScreen() {
                     Text("Buat draf surat izin resmi dan kelola dokumen kerja dengan mudah.", color = KarirTextMuted, fontSize = 13.sp)
                     listOf("Surat Izin Sakit", "Surat Izin Cuti", "Surat Izin Keperluan Keluarga").forEach { title ->
                         SuratCard {
-                            Text(title, fontSize = 16.sp, color = KarirTextDark, fontWeight = FontWeight.Bold)
+                            Text(title, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
                             Button(
                                 onClick = { type = title; page = 1 },
                                 colors = ButtonDefaults.buttonColors(containerColor = KarirOrange),
@@ -177,7 +178,7 @@ fun SuratIzinDokumenScreen() {
                         }
                     }
                     SuratCard {
-                        Text("Dokumen Klinik Resmi", fontSize = 16.sp, color = KarirTextDark, fontWeight = FontWeight.Bold)
+                        Text("Dokumen Klinik Resmi", fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
                         Text("Simpan dan arsipkan surat keterangan dokter resmi yang diterbitkan klinik.", color = KarirTextMuted, fontSize = 12.sp)
                         OutlinedButton(
                             onClick = { officialPicker.launch(arrayOf("application/pdf", "image/*")) },
@@ -189,7 +190,7 @@ fun SuratIzinDokumenScreen() {
                         }
                     }
                     SuratCard {
-                        Text("Riwayat Dokumen", fontSize = 16.sp, color = KarirTextDark, fontWeight = FontWeight.Bold)
+                        Text("Riwayat Dokumen", fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
                         Text(prefs.getString("last", "Belum ada dokumen tersimpan") ?: "", color = KarirTextMuted, fontSize = 12.sp)
                         val records = remember(historyVersion) { JSONArray(prefs.getString("history", "[]")) }
                         if (records.length() == 0) {
@@ -203,7 +204,7 @@ fun SuratIzinDokumenScreen() {
                             ) {
                                 Text(
                                     "${record.optString("title")} • ${record.optString("date")}",
-                                    color = KarirTextDark,
+                                    color = MaterialTheme.colorScheme.onSurface,
                                     fontSize = 12.sp,
                                     modifier = Modifier.weight(1f)
                                 )
@@ -241,13 +242,13 @@ fun SuratIzinDokumenScreen() {
                     SuratField("Nama Dokter (jika diketahui)", doctor) { doctor = it }
                     Text("Nama klinik dan dokter hanya sebagai informasi tempat berobat pribadi.", color = KarirTextMuted, fontSize = 11.sp)
                     SuratCard {
-                        Text("Aset Resmi Klinik", color = KarirTextDark, fontWeight = FontWeight.Bold)
+                        Text("Aset Resmi Klinik", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
                         Text("Unggah cap dan tanda tangan yang diberikan langsung oleh klinik untuk arsip penerbit.", color = KarirTextMuted, fontSize = 12.sp)
                         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             OutlinedButton(
                                 onClick = { stampPicker.launch(arrayOf("image/*")) },
                                 shape = RoundedCornerShape(10.dp),
-                                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                 modifier = Modifier.weight(1f)
                             ) {
                                 Text(if (clinicStamp == null) "Unggah Cap" else "Cap Dipilih ✓", color = KarirOrangeDeep, fontSize = 11.5.sp)
@@ -255,7 +256,7 @@ fun SuratIzinDokumenScreen() {
                             OutlinedButton(
                                 onClick = { signaturePicker.launch(arrayOf("image/*")) },
                                 shape = RoundedCornerShape(10.dp),
-                                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                 modifier = Modifier.weight(1f)
                             ) {
                                 Text(if (doctorSignature == null) "Unggah TTD" else "TTD Dipilih ✓", color = KarirOrangeDeep, fontSize = 11.5.sp)
@@ -277,14 +278,14 @@ fun SuratIzinDokumenScreen() {
                 }
                 3 -> {
                     SuratCard {
-                        Text(type.uppercase(), fontSize = 17.sp, color = KarirTextDark, fontWeight = FontWeight.Bold)
+                        Text(type.uppercase(), fontSize = 17.sp, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
                         HorizontalDivider(color = Color(0xFFF1E5DC))
-                        Text("Tanggal: $date", color = KarirTextDark, fontSize = 12.5.sp)
-                        Text("Kepada Yth. ${destination.ifBlank { "HRD / Pimpinan" }}", color = KarirTextDark, fontSize = 12.5.sp)
-                        Text("Dengan hormat, saya $patient mengajukan izin selama $days hari karena $reason.", color = KarirTextDark, fontSize = 12.5.sp)
-                        if (clinic.isNotBlank()) Text("Tempat berobat: $clinic, $address", color = KarirTextDark, fontSize = 12.sp)
-                        if (doctor.isNotBlank()) Text("Dokter (informasi): $doctor", color = KarirTextDark, fontSize = 12.sp)
-                        Text("Hormat saya,\n$patient", color = KarirTextDark, fontSize = 12.5.sp)
+                        Text("Tanggal: $date", color = MaterialTheme.colorScheme.onSurface, fontSize = 12.5.sp)
+                        Text("Kepada Yth. ${destination.ifBlank { "HRD / Pimpinan" }}", color = MaterialTheme.colorScheme.onSurface, fontSize = 12.5.sp)
+                        Text("Dengan hormat, saya $patient mengajukan izin selama $days hari karena $reason.", color = MaterialTheme.colorScheme.onSurface, fontSize = 12.5.sp)
+                        if (clinic.isNotBlank()) Text("Tempat berobat: $clinic, $address", color = MaterialTheme.colorScheme.onSurface, fontSize = 12.sp)
+                        if (doctor.isNotBlank()) Text("Dokter (informasi): $doctor", color = MaterialTheme.colorScheme.onSurface, fontSize = 12.sp)
+                        Text("Hormat saya,\n$patient", color = MaterialTheme.colorScheme.onSurface, fontSize = 12.5.sp)
                         Text("DRAF - BUKAN SURAT KETERANGAN DOKTER", color = Color(0xFFDC2626), fontWeight = FontWeight.Bold, fontSize = 12.sp)
                     }
                     SuratNext("Simpan Sebagai PDF") { export.launch("Surat_Izin_${System.currentTimeMillis()}.pdf") }
@@ -292,13 +293,13 @@ fun SuratIzinDokumenScreen() {
                         onClick = { page = 2 },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                     ) {
-                        Text("Edit Data Surat", color = KarirTextDark)
+                        Text("Edit Data Surat", color = MaterialTheme.colorScheme.onSurface)
                     }
                 }
                 4 -> {
-                    Text("PDF telah berhasil disimpan. Anda dapat membagikannya langsung.", color = KarirTextDark, fontSize = 13.sp)
+                    Text("PDF telah berhasil disimpan. Anda dapat membagikannya langsung.", color = MaterialTheme.colorScheme.onSurface, fontSize = 13.sp)
                     Button(
                         onClick = {
                             fileUri?.let { uri ->
@@ -316,9 +317,9 @@ fun SuratIzinDokumenScreen() {
                         onClick = { page = 0 },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                     ) {
-                        Text("Kembali ke Menu Utama", color = KarirTextDark)
+                        Text("Kembali ke Menu Utama", color = MaterialTheme.colorScheme.onSurface)
                     }
                 }
             }
@@ -331,8 +332,8 @@ private fun SuratCard(content: @Composable ColumnScope.() -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp), content = content)
@@ -350,7 +351,7 @@ private fun SuratField(label: String, value: String, onChange: (String) -> Unit)
             focusedTextColor = KarirTextDark,
             unfocusedTextColor = KarirTextDark,
             focusedBorderColor = KarirOrange,
-            unfocusedBorderColor = Color(0xFFFFDEC9),
+            unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
             focusedLabelColor = KarirOrange,
             cursorColor = KarirOrange
         ),
