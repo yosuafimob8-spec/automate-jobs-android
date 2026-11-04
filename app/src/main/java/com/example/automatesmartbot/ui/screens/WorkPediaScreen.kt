@@ -10,6 +10,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -55,7 +56,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
     ) {
         Column(
             Modifier
@@ -65,8 +66,8 @@ fun WorkPediaScreen(onExit: () -> Unit) {
         ) {
             Card(
                 shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -83,7 +84,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                         Surface(
                             shape = RoundedCornerShape(10.dp),
                             color = Color(0xFFFFF3E0),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                         ) {
                             Text(
                                 "${entries.size} Istilah",
@@ -94,7 +95,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                             )
                         }
                     }
-                    Text("WorkPedia", color = KarirTextDark, fontSize = 22.sp, fontWeight = FontWeight.Bold)
+                    Text("WorkPedia", color = MaterialTheme.colorScheme.onSurface, fontSize = 22.sp, fontWeight = FontWeight.Bold)
                     Text("Pahami istilah penting dunia kerja, hak normatif karyawan, dan aturan ketenagakerjaan.", color = KarirTextMuted, fontSize = 12.5.sp)
                 }
             }
@@ -118,10 +119,10 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                         focusedPlaceholderColor = KarirTextMuted,
                         unfocusedPlaceholderColor = KarirTextMuted,
                         focusedBorderColor = KarirOrange,
-                        unfocusedBorderColor = Color(0xFFFFDEC9),
+                        unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
                         cursorColor = KarirOrange,
-                        focusedContainerColor = Color.White,
-                        unfocusedContainerColor = Color.White
+                        focusedContainerColor = MaterialTheme.colorScheme.surface,
+                        unfocusedContainerColor = MaterialTheme.colorScheme.surface
                     ),
                     trailingIcon = {
                         if (query.isNotBlank()) {
@@ -140,10 +141,10 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = Color(0xFFFFF3E0),
                             selectedLabelColor = Color(0xFF9A3412),
-                            labelColor = KarirTextDark,
-                            containerColor = Color.White
+                            labelColor = MaterialTheme.colorScheme.onSurface,
+                            containerColor = MaterialTheme.colorScheme.surface
                         ),
-                        border = BorderStroke(1.dp, if (!onlyFavorites) KarirOrange else Color(0xFFFFDEC9))
+                        border = BorderStroke(1.dp, if (!onlyFavorites) KarirOrange else MaterialTheme.colorScheme.outlineVariant)
                     )
                     FilterChip(
                         selected = onlyFavorites,
@@ -152,10 +153,10 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = Color(0xFFFFF3E0),
                             selectedLabelColor = Color(0xFF9A3412),
-                            labelColor = KarirTextDark,
-                            containerColor = Color.White
+                            labelColor = MaterialTheme.colorScheme.onSurface,
+                            containerColor = MaterialTheme.colorScheme.surface
                         ),
-                        border = BorderStroke(1.dp, if (onlyFavorites) KarirOrange else Color(0xFFFFDEC9))
+                        border = BorderStroke(1.dp, if (onlyFavorites) KarirOrange else MaterialTheme.colorScheme.outlineVariant)
                     )
                     Spacer(Modifier.weight(1f))
                     TextButton(onClick = onExit) {
@@ -173,29 +174,29 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                             colors = FilterChipDefaults.filterChipColors(
                                 selectedContainerColor = Color(0xFFFFF3E0),
                                 selectedLabelColor = Color(0xFF9A3412),
-                                labelColor = KarirTextDark,
-                                containerColor = Color.White
+                                labelColor = MaterialTheme.colorScheme.onSurface,
+                                containerColor = MaterialTheme.colorScheme.surface
                             ),
-                            border = BorderStroke(1.dp, if (isSelected) KarirOrange else Color(0xFFFFDEC9))
+                            border = BorderStroke(1.dp, if (isSelected) KarirOrange else MaterialTheme.colorScheme.outlineVariant)
                         )
                     }
                 }
 
                 Text(
                     "${visible.size} istilah ditemukan",
-                    color = KarirTextDark,
+                    color = MaterialTheme.colorScheme.onSurface,
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold
                 )
 
                 if (visible.isEmpty()) {
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                     ) {
                         Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                            Text("Tidak ada istilah yang cocok", fontWeight = FontWeight.Bold, color = KarirTextDark)
+                            Text("Tidak ada istilah yang cocok", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
                             Text("Ubah kata kunci atau kategori untuk melihat istilah lainnya.", color = KarirTextMuted, fontSize = 12.sp)
                             TextButton(onClick = { query = ""; category = "Semua"; onlyFavorites = false }) {
                                 Text("Atur Ulang Pencarian", color = KarirOrange, fontWeight = FontWeight.Bold)
@@ -213,15 +214,15 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                             onClick = { selected = term.optString("id") },
                             modifier = Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(14.dp),
-                            colors = CardDefaults.cardColors(containerColor = Color.White),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                             elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                         ) {
                             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
                                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                                     Text(
                                         term.optString("name"),
-                                        color = KarirTextDark,
+                                        color = MaterialTheme.colorScheme.onSurface,
                                         fontWeight = FontWeight.Bold,
                                         fontSize = 16.sp,
                                         modifier = Modifier.weight(1f)
@@ -238,11 +239,11 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                                         )
                                     }
                                 }
-                                Text(term.optString("fullName"), color = KarirTextDark, fontSize = 13.sp)
+                                Text(term.optString("fullName"), color = MaterialTheme.colorScheme.onSurface, fontSize = 13.sp)
                                 Surface(
                                     shape = RoundedCornerShape(6.dp),
                                     color = Color(0xFFFFF3E0),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                                 ) {
                                     Text(
                                         term.optString("category"),
@@ -270,15 +271,15 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                         }
                         Card(
                             shape = RoundedCornerShape(16.dp),
-                            colors = CardDefaults.cardColors(containerColor = Color.White),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                         ) {
                             Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                                 Surface(
                                     shape = RoundedCornerShape(6.dp),
                                     color = Color(0xFFFFF3E0),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                                 ) {
                                     Text(
                                         term.optString("category").uppercase(),
@@ -288,7 +289,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
                                     )
                                 }
-                                Text(term.optString("name"), color = KarirTextDark, fontSize = 22.sp, fontWeight = FontWeight.Bold)
+                                Text(term.optString("name"), color = MaterialTheme.colorScheme.onSurface, fontSize = 22.sp, fontWeight = FontWeight.Bold)
                                 Text(term.optString("fullName"), color = KarirTextMuted, fontSize = 14.sp)
                             }
                         }
@@ -305,13 +306,13 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                             if (value.isNotBlank()) {
                                 Card(
                                     shape = RoundedCornerShape(14.dp),
-                                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                     elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                                 ) {
                                     Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                                         Text(label, color = KarirOrangeDeep, fontWeight = FontWeight.Bold, fontSize = 13.sp)
-                                        Text(value, color = KarirTextDark, fontSize = 13.sp)
+                                        Text(value, color = MaterialTheme.colorScheme.onSurface, fontSize = 13.sp)
                                     }
                                 }
                             }
