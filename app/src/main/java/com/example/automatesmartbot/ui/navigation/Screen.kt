@@ -28,7 +28,6 @@ sealed class Screen(val route: String, val title: String, val icon: ImageVector)
     object AiInterview : Screen("ai_interview", "AI Interview", Icons.Default.Mic)
     object AiAgent : Screen("ai_agent", "AI Agent", Icons.Default.SmartToy)
     object Riwayat : Screen("riwayat", "Riwayat", Icons.Default.History)
-    object SuratIzinDokumen : Screen("surat_izin_dokumen", "Dokumen", Icons.Default.FolderShared)
     object Profil : Screen("profil", "Profil", Icons.Default.Person)
     object Login : Screen("login", "Masuk", Icons.Default.Lock)
     object Register : Screen("register", "Daftar", Icons.Default.Person)
@@ -50,7 +49,6 @@ val detailNavItems = listOf(
     Screen.LatihanPsikotes,
     Screen.AiInterview,
     Screen.AiAgent,
-    Screen.SuratIzinDokumen
 )
 
 val appShellItems = bottomNavItems + detailNavItems
