@@ -41,6 +41,13 @@ import androidx.compose.material.icons.filled.Work
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.platform.LocalContext
+import com.example.automatesmartbot.BuildConfig
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import org.json.JSONObject
+import java.net.HttpURLConnection
+import java.net.URL
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -776,8 +783,67 @@ private fun DashboardSearchBar(
     }
 }
 
+private data class LaborSeries(val label: String, val values: List<Float>)
+private data class LaborSnapshot(val period: String, val unemployment: String, val tpt: String, val poverty: String, val povertyRate: String, val workforce: String, val employed: String, val wages: String, val unemploymentSeries: LaborSeries?, val povertySeries: LaborSeries?)
+
+private fun JSONObject.series(key: String): LaborSeries? {
+    val data = optJSONArray(key) ?: return null
+    val points = (0 until data.length()).mapNotNull { data.optJSONObject(it)?.optDouble("value")?.takeIf { v -> v.isFinite() }?.toFloat() }
+    if (points.size < 2) return null
+    return LaborSeries(key, points)
+}
+
+private fun readLaborSnapshot(body: String): LaborSnapshot {
+    val json = JSONObject(body)
+    require(json.optString("source") == "BPS") { "Sumber bukan BPS" }
+    val period = json.getString("period")
+    require(period.isNotBlank())
+    fun metric(key: String): String = json.getJSONObject("metrics").getString(key)
+    return LaborSnapshot(period, metric("unemployment"), metric("tpt"), metric("poverty"), metric("povertyRate"), metric("workforce"), metric("employed"), metric("wages"), json.series("unemploymentSeries"), json.series("povertySeries"))
+}
+
+@Composable
+private fun RealLaborSparkline(series: LaborSeries?, color: Color) {
+    if (series == null) {
+        Text("Grafik belum tersedia", color = Color(0xFF64748B), fontSize = 9.sp)
+        return
+    }
+    Canvas(Modifier.fillMaxWidth().height(28.dp)) {
+        val values = series.values
+        val min = values.minOrNull() ?: return@Canvas
+        val max = values.maxOrNull() ?: return@Canvas
+        val range = (max - min).takeIf { it > 0f } ?: 1f
+        val path = Path()
+        values.forEachIndexed { i, value ->
+            val x = i.toFloat() / (values.size - 1) * size.width
+            val y = size.height * (0.9f - (value - min) / range * 0.8f)
+            if (i == 0) path.moveTo(x, y) else path.lineTo(x, y)
+        }
+        drawPath(path, color = color, style = Stroke(width = 2.dp.toPx(), cap = StrokeCap.Round))
+    }
+}
+
 @Composable
 private fun IndonesianLaborConditionCard() {
+    val context = LocalContext.current
+    var snapshot by remember { mutableStateOf<LaborSnapshot?>(null) }
+    var dataError by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) {
+        val base = BuildConfig.TRAINING_BASE_URL.trimEnd('/')
+        if (!base.startsWith("https://")) { dataError = true; return@LaunchedEffect }
+        val result = withContext(Dispatchers.IO) {
+            runCatching {
+                val conn = URL("$base/public/labor-stats").openConnection() as HttpURLConnection
+                conn.connectTimeout = 8000; conn.readTimeout = 8000
+                try {
+                    check(conn.responseCode == 200)
+                    readLaborSnapshot(conn.inputStream.bufferedReader().use { it.readText() })
+                } finally { conn.disconnect() }
+            }.getOrNull()
+        }
+        snapshot = result
+        dataError = result == null
+    }
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -834,7 +900,7 @@ private fun IndonesianLaborConditionCard() {
                         color = Color(0xFF0F172A)
                     )
                     Text(
-                        text = "Sumber: BPS • Periode data: Mei/Maret 2026",
+                        text = "Sumber: BPS • ${snapshot?.period ?: "Menunggu sinkronisasi"}",
                         fontSize = 10.5.sp,
                         color = Color(0xFF64748B)
                     )
@@ -843,6 +909,7 @@ private fun IndonesianLaborConditionCard() {
 
             }
 
+            if (dataError) Text("Data BPS belum tersambung. Periksa koneksi dan konfigurasi server.", color = Color(0xFFB45309), fontSize = 11.sp)
             // Two Metric Sub-Cards
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -895,7 +962,7 @@ private fun IndonesianLaborConditionCard() {
 
                         Spacer(modifier = Modifier.height(2.dp))
                         Text(
-                            text = "7,22 juta orang",
+                            text = snapshot?.unemployment ?: "—",
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.5.sp,
                             color = Color(0xFF0F172A)
@@ -910,7 +977,7 @@ private fun IndonesianLaborConditionCard() {
                                 shape = RoundedCornerShape(4.dp)
                             ) {
                                 Text(
-                                    text = "4,65%",
+                                    text = snapshot?.tpt ?: "—",
                                     color = Color(0xFF16A34A),
                                     fontSize = 10.sp,
                                     fontWeight = FontWeight.Bold,
@@ -918,7 +985,7 @@ private fun IndonesianLaborConditionCard() {
                                 )
                             }
                             Text(
-                                text = "▼ -0,03 p.p.",
+                                text = "BPS",
                                 color = Color(0xFF16A34A),
                                 fontSize = 9.sp,
                                 fontWeight = FontWeight.SemiBold
@@ -926,12 +993,12 @@ private fun IndonesianLaborConditionCard() {
                         }
 
                         Text(
-                            text = "(vs Feb 2026: 4,68%)",
+                            text = "(seri resmi)",
                             fontSize = 8.sp,
                             color = Color(0xFF64748B)
                         )
 
-                        Text("Periode: Mei 2026 • BPS", fontSize = 9.sp, color = Color(0xFF64748B))
+                        RealLaborSparkline(snapshot?.unemploymentSeries, Color(0xFF3B82F6))
                     }
                 }
 
@@ -982,7 +1049,7 @@ private fun IndonesianLaborConditionCard() {
 
                         Spacer(modifier = Modifier.height(2.dp))
                         Text(
-                            text = "22,93 juta orang",
+                            text = snapshot?.poverty ?: "—",
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.5.sp,
                             color = Color(0xFF0F172A)
@@ -997,7 +1064,7 @@ private fun IndonesianLaborConditionCard() {
                                 shape = RoundedCornerShape(4.dp)
                             ) {
                                 Text(
-                                    text = "8,07%",
+                                    text = snapshot?.povertyRate ?: "—",
                                     color = Color(0xFF16A34A),
                                     fontSize = 10.sp,
                                     fontWeight = FontWeight.Bold,
@@ -1005,7 +1072,7 @@ private fun IndonesianLaborConditionCard() {
                                 )
                             }
                             Text(
-                                text = "▼ -0,18 p.p.",
+                                text = "BPS",
                                 color = Color(0xFF16A34A),
                                 fontSize = 9.sp,
                                 fontWeight = FontWeight.SemiBold
@@ -1013,12 +1080,12 @@ private fun IndonesianLaborConditionCard() {
                         }
 
                         Text(
-                            text = "(vs Sep 2025: 8,25%)",
+                            text = "(seri resmi)",
                             fontSize = 8.sp,
                             color = Color(0xFF64748B)
                         )
 
-                        Text("Periode: Maret 2026 • BPS", fontSize = 9.sp, color = Color(0xFF64748B))
+                        RealLaborSparkline(snapshot?.povertySeries, Color(0xFFEC4899))
                     }
                 }
             }
