@@ -33,7 +33,8 @@ data class UserMeResponse(
     val email_verified: Any?,
     val telegram_user_id: String?,
     @SerializedName("is_pro") val isPro: Boolean? = null,
-    val membership: String? = null
+    val membership: String? = null,
+    @SerializedName("membership_expires_at") val membershipExpiresAt: String? = null
 ) {
     val isEmailVerified: Boolean
         get() = when (email_verified) {

@@ -60,4 +60,12 @@ class PsychotestServiceTests(unittest.TestCase):
     def test_existing_full_session_contract_remains_unchanged(self):
         self.assertEqual(8, self.service.start_session('logic', 'legacy')['session']['question_count'])
 
+    def test_session_data_cannot_be_read_by_another_account(self):
+        session = self.service.start_session('logic', 'owner-a', question_count=10)['session']
+        with self.assertRaises(self.module.PsychotestError):
+            self.service.questions(session['id'], 'owner-b')
+        with self.assertRaises(self.module.PsychotestError):
+            self.service.get_session(session['id'], 'owner-b')
+        self.assertEqual([], self.service.history('owner-b')['items'])
+
 if __name__ == '__main__': unittest.main()

@@ -41,10 +41,13 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 @Composable
-fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Boolean = false) {
+fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBack: () -> Unit) {
     val state by viewModel.state.collectAsState()
     val history by viewModel.history.collectAsState()
-    LaunchedEffect(isPro) { viewModel.setMembershipAccess(isPro) }
+    LaunchedEffect(viewModel) {
+        while (true) { viewModel.refreshMembership(); kotlinx.coroutines.delay(30_000L) }
+    }
+    val verifiedPro = state.verifiedPro
     val page = history.last()
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
@@ -64,63 +67,57 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
     val photoPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri -> uri?.let(viewModel::importPhoto) }
     val pdfInput = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri -> uri?.let(viewModel::analyzePdf) }
     val pdfOutput = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/pdf")) { uri ->
-        val snapshot = exportSnapshot
-        if (uri == null) {
-            snapshot?.let { java.io.File(it).delete() }
-            exportSnapshot = null
-        }
-        if (uri != null && snapshot != null && !CvTemplates.canUse(state.templateId, isPro)) {
-            java.io.File(snapshot).delete()
-            exportSnapshot = null
-            viewModel.message("Akses PRO tidak aktif. Ekspor CV dibatalkan.")
-        } else if (uri != null && snapshot != null) scope.launch {
+        val path = exportSnapshot
+        if (uri == null) { path?.let { java.io.File(it).delete() }; exportSnapshot = null }
+        else if (path != null) scope.launch {
             exportBusy = true
             try {
                 withContext(Dispatchers.IO) {
-                    val type = object : com.google.gson.reflect.TypeToken<List<CvPage>>() {}.type
-                    val pages: List<CvPage> = com.google.gson.Gson().fromJson(java.io.File(snapshot).readText(), type)
-                    context.contentResolver.openOutputStream(uri, "wt")?.use { CvRenderer.writePdf(context, pages, it) } ?: error("Lokasi tidak dapat ditulis.")
+                    val saved = com.google.gson.Gson().fromJson(java.io.File(path).readText(), CvExportSnapshot::class.java)
+                    require(saved.sessionKey == cvSessionKey()) { "Akun berubah. Ekspor dibatalkan." }
+                    if (saved.request != null) CvExportService().export(context, uri, saved.request, CvExportFormat.PDF)
+                    else {
+                        val bytes = java.io.ByteArrayOutputStream()
+                        CvRenderer.writePdf(context, saved.pages, bytes)
+                        require(saved.sessionKey == cvSessionKey()) { "Akun berubah. Ekspor dibatalkan." }
+                        context.contentResolver.openOutputStream(uri, "wt")?.use { bytes.writeTo(it) }
+                            ?: error("Lokasi tidak dapat ditulis.")
+                    }
                 }
                 viewModel.message("PDF berhasil disimpan. Buka melalui aplikasi File Android.")
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                viewModel.message("Ekspor PDF gagal: ${e.message}")
-            } finally {
-                exportBusy = false
-                java.io.File(snapshot).delete()
-                exportSnapshot = null
-            }
+            } catch (e: CancellationException) { throw e }
+            catch (e: Exception) { viewModel.message("Ekspor PDF gagal: ${e.message}") }
+            finally { exportBusy = false; java.io.File(path).delete(); exportSnapshot = null }
         }
     }
     val docxOutput = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/vnd.openxmlformats-officedocument.wordprocessingml.document")) { uri ->
-        if (uri != null && !CvTemplates.canUse(state.templateId, isPro)) {
-            viewModel.message("Akses PRO tidak aktif. Ekspor Word dibatalkan.")
-        } else if (uri != null) scope.launch {
+        val path = exportSnapshot
+        if (uri == null) { path?.let { java.io.File(it).delete() }; exportSnapshot = null }
+        else if (path != null) scope.launch {
             exportBusy = true
             try {
-                withContext(Dispatchers.IO) { CvExporter.exportDocx(context, uri, state.draft) }
+                withContext(Dispatchers.IO) {
+                    val request = com.google.gson.Gson().fromJson(java.io.File(path).readText(), CvExportRequest::class.java)
+                    CvExportService().export(context, uri, request, CvExportFormat.DOCX)
+                }
                 viewModel.message("DOCX berhasil disimpan.")
-            } catch (e: CancellationException) {
-                throw e
-            } catch (e: Exception) {
-                viewModel.message("Ekspor DOCX gagal: ${e.message}")
-            } finally {
-                exportBusy = false
-            }
+            } catch (e: CancellationException) { throw e }
+            catch (e: Exception) { viewModel.message("Ekspor DOCX gagal: ${e.message}") }
+            finally { exportBusy = false; java.io.File(path).delete(); exportSnapshot = null }
         }
     }
 
     fun nav(destination: String) = viewModel.navigate(destination)
 
     fun export(pages: List<CvPage>, filename: String) {
-        if (filename == "KarirMate-CV.pdf" && !CvTemplates.canUse(state.templateId, isPro)) {
+        if (filename == "KarirMate-CV.pdf" && !viewModel.canUseTemplate(state.templateId)) {
             viewModel.message("Template PRO memerlukan langganan aktif terverifikasi.")
             return
         }
         try {
             val file = java.io.File.createTempFile("cv-export-", ".json", context.cacheDir)
-            file.writeText(com.google.gson.Gson().toJson(pages))
+            file.writeText(com.google.gson.Gson().toJson(CvExportSnapshot(
+                if (filename == "KarirMate-CV.pdf") CvExportRequest(state.templateId, state.draft) else null, pages)))
             exportSnapshot = file.path
             pdfOutput.launch(filename)
         } catch (e: Exception) {
@@ -241,6 +238,13 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                         }
                     }
 
+                    if (!state.workspaceReady) {
+                        Text("Memverifikasi identitas akun untuk membuka draf dengan aman. Backend harus tersedia saat pertama kali menghubungkan akun.", color = KarirTextMuted)
+                    }
+                    if (state.unassignedLegacyDrafts) {
+                        Text("Draf lama perangkat tetap disimpan. Draf tersebut belum ditautkan ke akun ini; verifikasi pemilik diperlukan sebelum pemindahan.", color = KarirTextMuted)
+                    }
+
                     state.drafts.forEach { document ->
                         Card(
                             Modifier.fillMaxWidth(),
@@ -263,14 +267,14 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                                 )
                                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                                     Button(
-                                        onClick = { if (viewModel.selectDocument(document.id, isPro)) nav("CV Saya") },
+                                        onClick = { if (viewModel.selectDocument(document.id)) nav("CV Saya") },
                                         shape = RoundedCornerShape(10.dp),
                                         colors = karirButtonColors()
                                     ) {
                                         Text("Edit CV", fontWeight = FontWeight.Bold, fontSize = 12.sp)
                                     }
                                     OutlinedButton(
-                                        onClick = { if (viewModel.selectDocument(document.id, isPro)) nav("Preview CV") },
+                                        onClick = { if (viewModel.selectDocument(document.id)) nav("Preview CV") },
                                         shape = RoundedCornerShape(10.dp),
                                         border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
                                         colors = ButtonDefaults.outlinedButtonColors(contentColor = KarirTextDark)
@@ -324,7 +328,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                             Spacer(modifier = Modifier.height(4.dp))
 
                             Button(
-                                onClick = { if (!CvTemplates.canUse(state.templateId, isPro)) viewModel.message("Template PRO memerlukan langganan aktif terverifikasi.") else if (viewModel.saveDocument()) nav("Preview CV") },
+                                onClick = { if (!viewModel.canUseTemplate(state.templateId)) viewModel.message("Template PRO memerlukan langganan aktif terverifikasi.") else if (viewModel.saveDocument()) nav("Preview CV") },
                                 modifier = Modifier.fillMaxWidth(),
                                 shape = RoundedCornerShape(12.dp),
                                 colors = karirButtonColors()
@@ -527,7 +531,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                                     elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                                 ) {
                                     Column(Modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                                        CvPageImage(remember(template.id) { CvRenderer.layout(CvTemplates.sample, template.id).first() }, 1, Modifier.fillMaxWidth(), 360)
+                                        CvTemplateThumbnail(if (state.draft.hasUserText()) state.draft else CvTemplates.sample, template.id, Modifier.fillMaxWidth())
                                         Text(template.name, fontWeight = FontWeight.Bold, fontSize = 13.sp, color = KarirTextDark)
                                         Text(template.category + if (CvTemplates.isProTemplate(template.id)) " • PRO" else " • FREE", color = KarirTextMuted, fontSize = 11.sp)
                                     }
@@ -564,7 +568,10 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
 
                             if (page == "Preview Template") {
                                 Button(
-                                    onClick = { if (CvTemplates.canUse(id, isPro)) { if (viewModel.setTemplate(id, isPro)) nav("CV Saya") } else viewModel.message("Template ini khusus PRO. Upgrade untuk menggunakannya.") },
+                                    onClick = { scope.launch {
+                                        viewModel.refreshMembership()
+                                        if (viewModel.setTemplate(id)) nav("CV Saya")
+                                    } },
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
                                     colors = karirButtonColors()
@@ -574,7 +581,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                             } else {
                                 Button(
                                     onClick = { export(CvRenderer.layout(state.draft, id), "KarirMate-CV.pdf") },
-                                    enabled = !exportBusy && !empty && CvTemplates.canUse(id, isPro),
+                                    enabled = !exportBusy && !empty && viewModel.canUseTemplate(id),
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
                                     colors = karirButtonColors()
@@ -582,8 +589,15 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                                     Text("Ekspor PDF", fontWeight = FontWeight.Bold)
                                 }
                                 OutlinedButton(
-                                    onClick = { if (CvTemplates.canUse(state.templateId, isPro)) docxOutput.launch("KarirMate-CV.docx") else viewModel.message("Template PRO memerlukan langganan aktif terverifikasi.") },
-                                    enabled = !exportBusy && !empty,
+                                    onClick = {
+                                        try {
+                                            val file = java.io.File.createTempFile("cv-word-", ".json", context.cacheDir)
+                                            file.writeText(com.google.gson.Gson().toJson(CvExportRequest(state.templateId, state.draft)))
+                                            exportSnapshot = file.path
+                                            docxOutput.launch("KarirMate-CV.docx")
+                                        } catch (e: Exception) { viewModel.message("Ekspor belum dapat disiapkan: ${e.message}") }
+                                    },
+                                    enabled = !exportBusy && !empty && viewModel.canUseTemplate(id),
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
                                     border = BorderStroke(1.dp, KarirOrange),

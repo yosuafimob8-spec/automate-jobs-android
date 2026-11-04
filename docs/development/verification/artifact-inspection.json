@@ -1,0 +1,33 @@
+{
+  "artifact_id": 13294682664,
+  "run_id": 41770736672,
+  "source_sha": "1fe061c4f8693dee02131e8ed5d8eb743f903cf5",
+  "archive_sha256": "63ab7b98147eea63d660c574ce8efe1428d6a3e21de2ad957153a34560dfaa5d",
+  "apk_name": "app-termux.apk",
+  "apk_sha256": "7b9720d186a1d18ca88a1132874b2e9a92bd83b26ef26ebaadc37bd050b24d24",
+  "mp4_count": 20,
+  "sample_resource": "res/raw/training_administration_0.mp4",
+  "media_resources": [
+    "res/raw/training_administration_0.mp4",
+    "res/raw/training_administration_1.mp4",
+    "res/raw/training_administration_2.mp4",
+    "res/raw/training_customer_service_0.mp4",
+    "res/raw/training_customer_service_1.mp4",
+    "res/raw/training_customer_service_2.mp4",
+    "res/raw/training_interview_0.mp4",
+    "res/raw/training_interview_1.mp4",
+    "res/raw/training_interview_2.mp4",
+    "res/raw/training_job_readiness_0.mp4",
+    "res/raw/training_job_readiness_1.mp4",
+    "res/raw/training_job_readiness_2.mp4",
+    "res/raw/training_sales_0.mp4",
+    "res/raw/training_sales_1.mp4",
+    "res/raw/training_sales_2.mp4",
+    "res/raw/training_warehouse_0.mp4",
+    "res/raw/training_warehouse_1.mp4",
+    "res/raw/training_warehouse_2.mp4",
+    "res/raw/training_warehouse_3.mp4",
+    "res/raw/training_warehouse_4.mp4"
+  ],
+  "note": "Read an existing V78 artifact. No APK build or installation; APK archive inspected in memory."
+}

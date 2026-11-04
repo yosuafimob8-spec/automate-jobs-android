@@ -1,0 +1,30 @@
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+test_follow_up_receives_answer_history (test_interview_api.InterviewTests.test_follow_up_receives_answer_history) ... ok
+test_health (test_interview_api.InterviewTests.test_health) ... ok
+test_invalid_model_json (test_interview_api.InterviewTests.test_invalid_model_json) ... ok
+test_missing_token (test_interview_api.InterviewTests.test_missing_token) ... ok
+test_reply_without_history_rejected (test_interview_api.InterviewTests.test_reply_without_history_rejected) ... ok
+test_start_returns_question (test_interview_api.InterviewTests.test_start_returns_question) ... ok
+test_answer_revision_score_and_history_are_persisted (test_psychotest_service.PsychotestServiceTests.test_answer_revision_score_and_history_are_persisted) ... ok
+test_existing_full_session_contract_remains_unchanged (test_psychotest_service.PsychotestServiceTests.test_existing_full_session_contract_remains_unchanged) ... ok
+test_free_catalog_and_ten_question_session_use_real_unique_bank_rows (test_psychotest_service.PsychotestServiceTests.test_free_catalog_and_ten_question_session_use_real_unique_bank_rows) ... ok
+test_insufficient_bank_never_pads_fake_or_duplicate_questions (test_psychotest_service.PsychotestServiceTests.test_insufficient_bank_never_pads_fake_or_duplicate_questions) ... ok
+test_session_data_cannot_be_read_by_another_account (test_psychotest_service.PsychotestServiceTests.test_session_data_cannot_be_read_by_another_account) ... ok
+test_ambiguous_outcome_never_becomes_sent_or_retries (test_safety.AutoApplyTests.test_ambiguous_outcome_never_becomes_sent_or_retries) ... ok
+test_candidates_match_profile_location_and_prioritize_verified_active (test_safety.AutoApplyTests.test_candidates_match_profile_location_and_prioritize_verified_active) ... ok
+test_case_insensitive_persistent_duplicate_prevention (test_safety.AutoApplyTests.test_case_insensitive_persistent_duplicate_prevention) ... ok
+test_five_per_jakarta_calendar_day_with_next_day_reset (test_safety.AutoApplyTests.test_five_per_jakarta_calendar_day_with_next_day_reset) ... ok
+test_missing_gmail_id_is_not_delivery_confirmation (test_safety.AutoApplyTests.test_missing_gmail_id_is_not_delivery_confirmation) ... ok
+test_parallel_reservations_cannot_exceed_limit (test_safety.AutoApplyTests.test_parallel_reservations_cannot_exceed_limit) ... ok
+test_requires_explicit_consent (test_safety.AutoApplyTests.test_requires_explicit_consent) ... ok
+test_basic_modes_remain_free (test_safety.PsychotestTests.test_basic_modes_remain_free) ... ok
+test_training_has_ten_to_twenty_unique_sample_slots (test_safety.PsychotestTests.test_training_has_ten_to_twenty_unique_sample_slots) ... ok
+test_demo_and_client_pro_claims_cannot_authorize_paid_endpoint (test_subscription_authorization.SubscriptionAuthorizationTests.test_demo_and_client_pro_claims_cannot_authorize_paid_endpoint) ... ok
+test_missing_authentication_cannot_use_demo_claim (test_subscription_authorization.SubscriptionAuthorizationTests.test_missing_authentication_cannot_use_demo_claim) ... ok
+test_server_identity_grants_access_and_client_account_override_is_ignored (test_subscription_authorization.SubscriptionAuthorizationTests.test_server_identity_grants_access_and_client_account_override_is_ignored) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.088s
+
+OK

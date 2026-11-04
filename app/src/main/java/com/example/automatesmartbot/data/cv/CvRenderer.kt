@@ -5,7 +5,7 @@ import android.graphics.pdf.PdfDocument
 
 data class CvTextBlock(val text: String, val heading: Boolean = false, val title: Boolean = false)
 data class CvDrawText(val text: String, val x: Float, val baseline: Float, val size: Float, val bold: Boolean, val color: Int)
-data class CvPage(val texts: List<CvDrawText>, val template: CvTemplate, val first: Boolean, val photoPath: String = "")
+data class CvPage(val texts: List<CvDrawText>, val template: CvTemplate, val first: Boolean, val photoPath: String = "", val decorations: List<CvRectangle> = emptyList(), val photoBox: CvRectangle? = null)
 
 /** Layout once in A4 points; the exact same pages are painted into preview and PDF. */
 object CvRenderer {
@@ -15,6 +15,7 @@ object CvRenderer {
         regular = Typeface.createFromAsset(context.assets, "fonts/DejaVuSans.ttf")
         boldFace = Typeface.createFromAsset(context.assets, "fonts/DejaVuSans-Bold.ttf")
     }
+    internal fun typeface(bold: Boolean) = if (bold) boldFace else regular
     const val WIDTH = 595
     const val HEIGHT = 842
     private const val INK = 0xFF172744.toInt()
@@ -48,6 +49,7 @@ object CvRenderer {
 
     fun layout(c: CvContent, templateId: String): List<CvPage> {
         val template = CvTemplates.resolve(templateId)
+        if (template.design != null) return CvCatalogLayout.layout(c, template)
         val l = template.layout
         // Per-template geometry variation, shared by preview and exported PDF.
         val variant = template.id.substringAfterLast('_').toIntOrNull()?.minus(1) ?: 0
@@ -152,7 +154,7 @@ object CvRenderer {
         canvas.drawColor(Color.WHITE)
         val p = Paint(Paint.ANTI_ALIAS_FLAG)
         p.color = page.template.accent
-        when (page.template.layout) {
+        if (page.template.design == null) when (page.template.layout) {
             CvLayout.SIDEBAR_LEFT -> { p.color = 0xFFE9F0F4.toInt(); canvas.drawRect(24f, 24f, 184f, 812f, p) }
             CvLayout.SIDEBAR_RIGHT -> { p.color = 0xFFE9F0F4.toInt(); canvas.drawRect(410f, 24f, 571f, 812f, p) }
             CvLayout.BANNER -> canvas.drawRect(0f, 0f, WIDTH.toFloat(), 22f, p)
@@ -169,7 +171,11 @@ object CvRenderer {
             CvLayout.SKILLS_FIRST -> canvas.drawRect(42f, 24f, 180f, 30f, p)
             else -> Unit
         }
-        if (page.first) {
+        page.decorations.forEach { rect ->
+            p.color = rect.color
+            canvas.drawRect(rect.x, rect.y, rect.x + rect.width, rect.y + rect.height, p)
+        }
+        if (page.first && page.template.design == null) {
             // Distinct visual signature per catalog entry, visible in preview and PDF.
             val variant = page.template.id.substringAfterLast('_').toIntOrNull() ?: 1
             p.color = page.template.accent
@@ -192,7 +198,8 @@ object CvRenderer {
             val bitmap = BitmapFactory.decodeFile(page.photoPath)
             if (bitmap != null) {
                 val x = when (page.template.layout) { CvLayout.SIDEBAR_LEFT -> 80f; CvLayout.SIDEBAR_RIGHT -> 447f; else -> 474f }
-                val rect = RectF(x, 48f, x + 64f, 112f)
+                val box = page.photoBox
+                val rect = if (box != null) RectF(box.x, box.y, box.x + box.width, box.y + box.height) else RectF(x, 48f, x + 64f, 112f)
                 val side = minOf(bitmap.width, bitmap.height)
                 canvas.save(); canvas.clipPath(Path().apply { addOval(rect, Path.Direction.CW) })
                 canvas.drawBitmap(bitmap, Rect((bitmap.width - side) / 2, (bitmap.height - side) / 2, (bitmap.width + side) / 2, (bitmap.height + side) / 2), rect, p)

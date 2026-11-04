@@ -10,13 +10,12 @@ class CvDraftStore(context: Context) {
     private val directory = File(context.filesDir, "cv_drafts").apply { mkdirs() }
 
     fun listDraftIds(): List<String> = directory.listFiles()
-        ?.filter { it.isFile && it.extension == "json" }
-        ?.map { it.nameWithoutExtension }
+        ?.filter { it.isFile && (it.extension == "json" || it.name.endsWith(".json.bak")) }
+        ?.map { it.name.removeSuffix(".bak").removeSuffix(".json") }?.distinct()
         ?.sorted() ?: emptyList()
 
     fun save(document: CvDocument) {
         val destination = fileFor(document.id)
-        val temp = File(directory, "${document.id}.tmp")
         val data = JSONObject().apply {
             put("id", document.id)
             put("name", document.name)
@@ -25,17 +24,15 @@ class CvDraftStore(context: Context) {
             put("updatedAt", document.updatedAt)
             put("content", encodeContent(document.content))
         }
-        temp.writeText(data.toString(), Charsets.UTF_8)
-        if (!temp.renameTo(destination)) {
-            temp.copyTo(destination, overwrite = true)
-            temp.delete()
-        }
+        val atomic = android.util.AtomicFile(destination)
+        val stream = atomic.startWrite()
+        try { stream.write(data.toString().toByteArray(Charsets.UTF_8)); atomic.finishWrite(stream) }
+        catch (error: Exception) { atomic.failWrite(stream); throw error }
     }
 
     fun load(id: String): CvDocument? = runCatching {
         val file = fileFor(id)
-        if (!file.isFile) return null
-        val json = JSONObject(file.readText(Charsets.UTF_8))
+        val json = android.util.AtomicFile(file).openRead().use { JSONObject(it.readBytes().toString(Charsets.UTF_8)) }
         CvDocument(
             id = json.getString("id"),
             name = json.optString("name", "CV Baru"),

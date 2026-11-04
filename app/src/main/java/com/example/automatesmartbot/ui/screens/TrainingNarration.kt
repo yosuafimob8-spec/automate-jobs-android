@@ -11,10 +11,25 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.example.automatesmartbot.ui.theme.KarirOrange
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
+import com.example.automatesmartbot.ui.theme.ScreenAccent
+import com.example.automatesmartbot.ui.theme.ScreenMuted
+import com.example.automatesmartbot.ui.theme.ScreenSurface
+import com.example.automatesmartbot.ui.theme.ScreenText
+import com.example.automatesmartbot.ui.theme.karirButtonColors
+import com.example.automatesmartbot.ui.theme.screenCanvas
 import java.util.Locale
+
+@Composable
+internal fun narrationStopButtonColors() = ButtonDefaults.outlinedButtonColors(
+    containerColor = screenCanvas(Color(0xFFFFF7F2)),
+    contentColor = ScreenText,
+    disabledContainerColor = screenCanvas(Color(0xFFE2E8F0)),
+    disabledContentColor = ScreenMuted
+)
+
+@Composable
+internal fun narrationStopBorderColor(enabled: Boolean): Color =
+    if (enabled) ScreenAccent else ScreenMuted
 
 /** Offline narrated lesson; not presented as a recorded video. */
 @Composable
@@ -33,14 +48,14 @@ fun TrainingNarration(title: String, body: String) {
     }
     Card(
         modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = ScreenSurface, contentColor = ScreenText),
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            Text("🔊 Materi Audio Interaktif", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = KarirTextDark)
-            Text("Dengarkan narasi materi secara otomatis. Ini audio pembelajaran, bukan video.", color = KarirTextMuted)
+            Text("🔊 Materi Audio Interaktif", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = ScreenText)
+            Text("Dengarkan narasi materi secara otomatis. Ini audio pembelajaran, bukan video.", color = ScreenMuted)
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 Button(
                     enabled = ready,
@@ -48,12 +63,7 @@ fun TrainingNarration(title: String, body: String) {
                         tts.speak("$title. $body", TextToSpeech.QUEUE_FLUSH, null, "training-lesson")
                         speaking = true
                     },
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = KarirOrange,
-                        contentColor = Color.White,
-                        disabledContainerColor = Color(0xFFFFE5D0),
-                        disabledContentColor = KarirTextMuted
-                    ),
+                    colors = karirButtonColors(),
                     shape = RoundedCornerShape(10.dp)
                 ) {
                     Text(if (speaking) "Putar Ulang" else "Dengarkan", fontWeight = FontWeight.SemiBold)
@@ -64,12 +74,9 @@ fun TrainingNarration(title: String, body: String) {
                         tts.stop()
                         speaking = false
                     },
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, narrationStopBorderColor(ready && speaking)),
                     shape = RoundedCornerShape(10.dp),
-                    colors = ButtonDefaults.outlinedButtonColors(
-                        contentColor = KarirTextDark,
-                        disabledContentColor = KarirTextMuted
-                    )
+                    colors = narrationStopButtonColors()
                 ) {
                     Text("Berhenti")
                 }

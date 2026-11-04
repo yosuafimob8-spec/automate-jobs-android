@@ -1,7 +1,7 @@
 package com.example.automatesmartbot.data.cv
 
 enum class CvLayout { CLASSIC, CENTERED, SIDEBAR_LEFT, SIDEBAR_RIGHT, TIMELINE, ACADEMIC, BANNER, EDITORIAL, COMPACT, SKILLS_FIRST, EXECUTIVE, MONOGRAM, PORTFOLIO, RULED }
-data class CvTemplate(val id: String, val name: String, val category: String, val layout: CvLayout, val accent: Int, val supportsPhoto: Boolean = false)
+data class CvTemplate(val id: String, val name: String, val category: String, val layout: CvLayout, val accent: Int, val supportsPhoto: Boolean = false, val design: CvDesign? = null)
 
 object CvTemplates {
     // A curated catalog: each entry changes geometry or section placement, not just color.
@@ -51,7 +51,9 @@ object CvTemplates {
             if (all.none { it.id == id }) add(CvTemplate(id, "Kreatif " + number.toString().padStart(2, '0'), "Kreatif", listOf(CvLayout.MONOGRAM, CvLayout.PORTFOLIO, CvLayout.BANNER)[(number - 1) % 3], 0xFFFF6B2B.toInt(), true))
         }
     }
-    val catalog: List<CvTemplate> = all + generatedCatalog
+    val catalog: List<CvTemplate> = all + generatedCatalog.mapIndexed { index, template ->
+        template.copy(design = CvDesign(index % 5, (index / 5) % 4, (index / 20) % 4))
+    }
     // Keep all original templates FREE; distribute remaining FREE slots across categories.
     private val freeQuota = mapOf("ATS" to 5, "Profesional" to 5, "Modern" to 4, "Minimalis" to 4, "Fresh Graduate" to 3, "Eksekutif" to 3, "Kreatif" to 3)
     val freeIds: Set<String> = buildSet {
@@ -69,7 +71,7 @@ object CvTemplates {
         require(catalog.size == 75 && catalog.map { it.id }.toSet().size == 75)
         require(freeIds.size == 27 && catalog.count { it.id !in freeIds } == 48)
     }
-    private val legacyIds = setOf("student", "combination", "senior")
+    private val legacyIds = setOf("standard", "student", "combination", "senior")
     fun isProTemplate(id: String): Boolean = id in catalog.map { it.id } && id !in freeIds
     fun canUse(id: String, verifiedPro: Boolean): Boolean =
         id in legacyIds || (catalog.any { it.id == id } && (!isProTemplate(id) || verifiedPro))
@@ -88,6 +90,8 @@ object CvTemplates {
         summary = "Contoh CV untuk melihat desain. Berpengalaman dalam administrasi dan pengelolaan dokumen.",
         experience = listOf(CvExperience(title = "Staf Administrasi", company = "Perusahaan Contoh", start = "2023", end = "2025", bullets = listOf("Mengelola arsip dan menyusun laporan administrasi mingguan."))),
         education = listOf(CvEducation(school = "Universitas Contoh", degree = "S1", field = "Manajemen", start = "2019", end = "2023")),
-        skills = listOf(CvSkillGroup(category = "Administrasi", items = listOf("Pengelolaan dokumen", "Microsoft Excel", "Komunikasi")))
+        skills = listOf(CvSkillGroup(category = "Administrasi", items = listOf("Pengelolaan dokumen", "Microsoft Excel", "Komunikasi"))),
+        projects = listOf(CvProject(name = "Digitalisasi Arsip", tech = "Spreadsheet", bullets = listOf("Menyusun indeks pencarian dokumen tim."))),
+        certifications = listOf(CvCertification(name = "Pelatihan Administrasi", issuer = "Lembaga Contoh", date = "2025"))
     )
 }

@@ -5,72 +5,101 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import java.util.concurrent.TimeUnit
+import com.example.automatesmartbot.data.subscription.*
+import com.example.automatesmartbot.ui.theme.karirButtonColors
+import kotlinx.coroutines.delay
+import java.text.NumberFormat
+import java.text.SimpleDateFormat
+import java.util.*
 
-private val proOrange = Color(0xFFFF6B2B)
-private data class ProPlan(val name: String, val price: String, val days: Int)
-private val proPlans = listOf(ProPlan("Harian", "Rp5.000", 1), ProPlan("Mingguan", "Rp25.000", 7), ProPlan("Bulanan", "Rp79.000", 30), ProPlan("Tahunan", "Rp499.000", 365))
-
-/** Device-only testing. Never use this as authorization for server-side PRO features. */
-private class DemoProStore(context: android.content.Context) {
-    private val prefs = context.getSharedPreferences("karirmate_pro_demo", 0)
-    fun expiry(): Long = prefs.getLong("expires_at", 0L)
-    fun activate(days: Int) {
-        val start = maxOf(System.currentTimeMillis(), expiry())
-        prefs.edit().putLong("expires_at", start + TimeUnit.DAYS.toMillis(days.toLong())).apply()
-    }
-}
+private fun price(plan: DemoPlan) = NumberFormat.getIntegerInstance(Locale("id", "ID")).format(plan.rupiah).let { "Rp$it" }
+private fun date(time: Long) = SimpleDateFormat("dd MMM yyyy HH:mm", Locale("id", "ID")).format(Date(time))
 
 @Composable
 fun UpgradeProScreen(onCheckout: (Int) -> Unit) {
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
         Text("Upgrade KarirMate PRO", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-        Text("Semua paket membuka manfaat PRO yang sama. Hanya masa aktif yang berbeda.")
-        proPlans.forEachIndexed { index, plan ->
+        Text("Simulasi paket langganan. PRO DEMO terpisah dari hak PRO terverifikasi server.")
+        DemoPlans.all.forEachIndexed { index, plan ->
             Card(Modifier.fillMaxWidth()) {
                 Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Text("PRO ${plan.name}", fontWeight = FontWeight.Bold)
-                    Text("${plan.price} / ${if (plan.days == 1) "24 jam" else "${plan.days} hari"}")
-                    Button(onClick = { onCheckout(index) }, colors = ButtonDefaults.buttonColors(containerColor = proOrange)) { Text("Pilih paket") }
+                    Text("${price(plan)} / ${if (plan.days == 1) "24 jam" else "${plan.days} hari"}")
+                    Button(onClick = { onCheckout(index) }, colors = karirButtonColors()) { Text("Pilih paket ${plan.name}") }
                 }
             }
         }
-        Text("Mode pengujian. Belum ada transaksi uang sungguhan.")
+        Text("Tidak ada transaksi uang sungguhan atau pemotongan saldo.")
     }
 }
 
 @Composable
-fun ProCheckoutScreen(planIndex: Int, onComplete: () -> Unit) {
-    val context = androidx.compose.ui.platform.LocalContext.current
-    val plan = proPlans.getOrElse(planIndex) { proPlans.first() }
-    var activated by remember { mutableStateOf(false) }
-    Column(Modifier.fillMaxSize().padding(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        Text("Checkout PRO", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-        Text("Paket ${plan.name} — ${plan.price}")
-        Text("Masa aktif: ${if (plan.days == 1) "24 jam" else "${plan.days} hari"}")
-        Text("SIMULASI: tidak ada pembayaran sungguhan.")
-        Button(onClick = { DemoProStore(context).activate(plan.days); activated = true }, enabled = !activated, colors = ButtonDefaults.buttonColors(containerColor = proOrange)) { Text("Aktifkan PRO Demo") }
-        if (activated) {
-            Text("Aktivasi demo berhasil. Hak akses PRO server tidak berubah.")
-            Button(onClick = onComplete) { Text("Kelola Langganan") }
+fun ProCheckoutScreen(planIndex: Int, onComplete: () -> Unit, store: DemoSubscriptionStore? = null) {
+    val context = LocalContext.current
+    val subscription = remember(store) { store ?: DemoSubscriptionStore(context) }
+    var identityReady by remember(store) { mutableStateOf(store != null || com.example.automatesmartbot.data.cv.cvWorkspaceBound(context, com.example.automatesmartbot.data.network.ApiClient.getSessionManager()?.getValidToken())) }
+    LaunchedEffect(store) {
+        if (store == null) identityReady = runCatching { com.example.automatesmartbot.data.cv.ensureCvWorkspace(context) }.getOrDefault(false)
+    }
+    val plan = DemoPlans.all.getOrNull(planIndex)
+    var confirmed by rememberSaveable(planIndex) { mutableStateOf(false) }
+    val requestId = rememberSaveable(planIndex) { UUID.randomUUID().toString() }
+    var activated by rememberSaveable(planIndex) { mutableStateOf(false) }
+    var expiry by rememberSaveable(planIndex) { mutableLongStateOf(0) }
+    var error by remember { mutableStateOf<String?>(null) }
+    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+        Text("Pembelian Paket", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
+        if (plan == null) {
+            Text("Paket tidak valid. Kembali ke daftar paket.", color = MaterialTheme.colorScheme.error)
+        } else {
+            Text("Paket ${plan.name} — ${price(plan)}")
+            Text("Masa aktif: ${if (plan.days == 1) "24 jam" else "${plan.days} hari"}")
+            Text("SIMULASI: tidak ada pembayaran sungguhan. Aktivasi ini tidak membuka akses server atau template PRO terverifikasi.")
+            Row {
+                Checkbox(checked = confirmed, onCheckedChange = { confirmed = it }, enabled = !activated)
+                Text("Saya mengonfirmasi aktivasi simulasi paket ${plan.name}.", Modifier.weight(1f))
+            }
+            Button(onClick = {
+                try {
+                    val result = subscription.activate(plan.id, requestId)
+                    expiry = result.expiresAt; activated = true; error = null
+                } catch (e: Exception) { error = e.message ?: "Aktivasi belum tersimpan." }
+            }, enabled = identityReady && confirmed && !activated, colors = karirButtonColors()) { Text("Aktifkan PRO Demo") }
+            if (!identityReady) Text("Identitas akun belum terverifikasi. Backend diperlukan saat pertama kali menghubungkan akun.", color = MaterialTheme.colorScheme.error)
+            error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
+            if (activated) {
+                Text("Aktivasi demo tersimpan. Berakhir: ${date(expiry)}. Hak akses PRO server tidak berubah.")
+                Button(onClick = onComplete, colors = karirButtonColors()) { Text("Kelola Langganan") }
+            }
         }
     }
 }
 
 @Composable
-fun ManageProSubscriptionScreen(onUpgrade: () -> Unit) {
-    val context = androidx.compose.ui.platform.LocalContext.current
-    val expiry = remember { DemoProStore(context).expiry() }
-    val active = expiry > System.currentTimeMillis()
-    Column(Modifier.fillMaxSize().padding(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+fun ManageProSubscriptionScreen(onUpgrade: () -> Unit, store: DemoSubscriptionStore? = null) {
+    val context = LocalContext.current
+    val subscription = remember(store) { store ?: DemoSubscriptionStore(context) }
+    var identityReady by remember(store) { mutableStateOf(store != null || com.example.automatesmartbot.data.cv.cvWorkspaceBound(context, com.example.automatesmartbot.data.network.ApiClient.getSessionManager()?.getValidToken())) }
+    LaunchedEffect(store) {
+        if (store == null) identityReady = runCatching { com.example.automatesmartbot.data.cv.ensureCvWorkspace(context) }.getOrDefault(false)
+    }
+    var state by remember { mutableStateOf(subscription.current()) }
+    var time by remember { mutableLongStateOf(subscription.clock()) }
+    LaunchedEffect(subscription) {
+        while (true) { state = subscription.current(); time = subscription.clock(); delay(1000) }
+    }
+    val active = state.active(time)
+    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
         Text("Kelola Langganan", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-        Text(if (active) "PRO DEMO aktif" else "Tidak ada PRO DEMO aktif")
-        if (active) Text("Berakhir: " + java.text.SimpleDateFormat("dd MMM yyyy HH:mm", java.util.Locale("id", "ID")).format(java.util.Date(expiry)))
-        Text("Status ini hanya untuk uji antarmuka. Status PRO asli tetap berasal dari server.")
-        Button(onClick = onUpgrade, colors = ButtonDefaults.buttonColors(containerColor = proOrange)) { Text("Lihat paket / Perpanjang") }
+        Text(if (!identityReady) "Status demo menunggu verifikasi akun" else if (active) "PRO DEMO aktif" else "Tidak ada PRO DEMO aktif")
+        state.planId?.let { id -> DemoPlans.all.firstOrNull { it.id == id }?.let { Text("Paket ${it.name}") } }
+        if (state.expiresAt > 0) Text("${if (active) "Berakhir" else "Berakhir pada"}: ${date(state.expiresAt)}")
+        Text("Status ini hanya simulasi lokal. PRO terverifikasi dan hak akses server diperiksa melalui backend.")
+        Button(onClick = onUpgrade, colors = karirButtonColors()) { Text("Lihat paket / Perpanjang") }
     }
 }

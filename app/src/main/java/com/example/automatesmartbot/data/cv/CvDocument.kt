@@ -106,7 +106,7 @@ object CvBuilderConstants {
     const val TEMPLATE_COMBINATION = "combination"
     const val TEMPLATE_SENIOR = "senior"
 
-    val HTML_TEMPLATE_IDS: List<String> get() = CvTemplates.all.map { it.id }
+    val HTML_TEMPLATE_IDS: List<String> get() = CvTemplates.catalog.map { it.id }
 
     val SECTION_ORDER: List<String> = listOf(
         "summary",

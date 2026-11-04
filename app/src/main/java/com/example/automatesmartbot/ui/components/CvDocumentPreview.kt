@@ -103,3 +103,15 @@ fun CvPageImage(page: CvPage, number: Int, modifier: Modifier = Modifier, width:
         }
     }
 }
+
+/** Only the current 12-card catalog page is scheduled; layout/raster work stays off the UI thread. */
+@Composable
+fun CvTemplateThumbnail(content: CvContent, templateId: String, modifier: Modifier = Modifier) {
+    val page by produceState<CvPage?>(null, content, templateId) {
+        value = withContext(Dispatchers.Default) { CvRenderer.layout(content, templateId).first() }
+    }
+    page?.let { CvPageImage(it, 1, modifier, 360) } ?: Surface(
+        modifier.aspectRatio(CvRenderer.WIDTH.toFloat() / CvRenderer.HEIGHT),
+        color = Color.White
+    ) { Box(contentAlignment = Alignment.Center) { Text("Menyiapkan preview", color = KarirTextMuted) } }
+}

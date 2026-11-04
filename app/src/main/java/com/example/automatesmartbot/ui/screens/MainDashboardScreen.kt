@@ -88,7 +88,7 @@ private fun MainDashboardContent(
     var checkedToken by remember { mutableStateOf<String?>(null) }
     val dashboardViewModel: DashboardViewModel = viewModel()
     val dashboardStatus by dashboardViewModel.status.collectAsState()
-    val cvViewModel: CvBuilderViewModel = viewModel(key = "cv_builder_${sessionToken?.hashCode() ?: 0}")
+    val cvViewModel: CvBuilderViewModel = viewModel(key = "cv_builder_${com.example.automatesmartbot.data.cv.cvSessionKey() ?: "signed-out"}")
     val cvHistory by cvViewModel.history.collectAsState()
 
     val navigateToDashboard: () -> Unit = {
@@ -189,6 +189,9 @@ private fun MainDashboardContent(
         Screen.WorkPedia.route -> "WorkPedia"
         Screen.Riwayat.route -> "Riwayat Lamaran"
         Screen.SuratIzinDokumen.route -> "Surat Izin & Dokumen Kerja"
+        Screen.UpgradePro.route -> "Upgrade PRO"
+        Screen.ProCheckout.route -> "Pembelian Paket"
+        Screen.ManagePro.route -> "Kelola Langganan"
         Screen.Profil.route -> "Profil & Pengaturan"
         Screen.Login.route -> "Masuk Akun"
         Screen.Register.route -> "Daftar Akun"
