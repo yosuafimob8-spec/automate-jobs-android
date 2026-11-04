@@ -28,8 +28,6 @@ import androidx.compose.ui.unit.sp
 import com.example.automatesmartbot.ui.components.BrandLogo
 import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 @Composable
 fun StartupSplashScreen() {
@@ -75,7 +73,7 @@ fun StartupSplashScreen() {
                 Text(
                     text = "Menyiapkan akun Anda...",
                     fontSize = 13.sp,
-                    color = KarirTextMuted
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
 
                 Spacer(modifier = Modifier.height(4.dp))
