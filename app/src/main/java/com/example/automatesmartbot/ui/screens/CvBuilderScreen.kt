@@ -41,7 +41,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 @Composable
-fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
+fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Boolean = false) {
     val state by viewModel.state.collectAsState()
     val history by viewModel.history.collectAsState()
     val page = history.last()
@@ -474,9 +474,9 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                             Text("Katalog Template CV", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
-                            Text("14 pilihan tata letak profesional ramah ATS.", color = KarirTextMuted, fontSize = 12.sp)
+                            Text("75 pilihan template CV: 27 FREE dan 48 PRO.", color = KarirTextMuted, fontSize = 12.sp)
 
-                            val categoryList = listOf("Semua") + CvTemplates.all.map { it.category }.distinct()
+                            val categoryList = listOf("Semua") + CvTemplates.catalog.map { it.category }.distinct()
                             ScrollableTabRow(
                                 selectedTabIndex = categoryList.indexOf(filter).coerceAtLeast(0),
                                 containerColor = ScreenSurface,
@@ -500,7 +500,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                         }
                     }
 
-                    CvTemplates.all.filter { filter == "Semua" || it.category == filter }.chunked(2).forEach { pair ->
+                    CvTemplates.catalog.filter { filter == "Semua" || it.category == filter }.chunked(2).forEach { pair ->
                         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                             pair.forEach { template ->
                                 Card(
@@ -513,7 +513,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     Column(Modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                                         CvPageImage(remember(template.id) { CvRenderer.layout(CvTemplates.sample, template.id).first() }, 1, Modifier.fillMaxWidth(), 360)
                                         Text(template.name, fontWeight = FontWeight.Bold, fontSize = 13.sp, color = KarirTextDark)
-                                        Text(template.category, color = KarirTextMuted, fontSize = 11.sp)
+                                        Text(template.category + if (CvTemplates.isProTemplate(template.id)) " • PRO" else " • FREE", color = KarirTextMuted, fontSize = 11.sp)
                                     }
                                 }
                             }
@@ -541,7 +541,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
 
                             if (page == "Preview Template") {
                                 Button(
-                                    onClick = { viewModel.setTemplate(id); nav("CV Saya") },
+                                    onClick = { if (CvTemplates.canUse(id, isPro)) { viewModel.setTemplate(id); nav("CV Saya") } else viewModel.message("Template ini khusus PRO. Upgrade untuk menggunakannya.") },
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
                                     colors = karirButtonColors()
