@@ -11,6 +11,12 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.foundation.Canvas
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.animation.core.animateIntAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -534,12 +540,54 @@ fun JobTrainingScreen() {
                     OutlinedButton(colors = trainingButtonColors, onClick = { resetExamAnswers(); stage = "exam"; questionIndex = 0 }) { Text("Ulangi Soal") }
                 }
                 "result" -> {
-                    Text("Hasil Evaluasi Pelatihan", fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
-                    Text(if (finalScore >= 0) "$finalScore / 100" else "Nilai belum tersedia", fontSize = 34.sp, fontWeight = FontWeight.ExtraBold, color = if (finalPassed) tealTraining else orangeTraining)
-                    Text(if (finalPassed) "Selamat! Kamu lulus evaluasi pelatihan." else "Belum lulus. Nilai minimum 80/100 dan semua modul harus selesai.", color = darkTraining)
-                    if (finalPassed) Text("Sertifikat penyelesaian telah disimpan. Lihat melalui menu Sertifikat di dashboard.", color = tealTraining)
+                    var animateScore by remember { mutableStateOf(false) }
+                    LaunchedEffect(finalScore) { animateScore = true }
+                    val scoreValue by animateIntAsState(
+                        targetValue = if (animateScore) finalScore.coerceIn(0, 100) else 0,
+                        animationSpec = tween(1000), label = "trainingScore"
+                    )
+                    Text("LAPORAN LATIHAN", color = Color(0xFF008A81), fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    Text("Hasil Pelatihan Kerja", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
+                    Text("Lihat pencapaian evaluasi dan langkah berikutnya.", color = trainingDisabledText)
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(26.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color(0xFF003A2B)),
+                        elevation = CardDefaults.cardElevation(6.dp)
+                    ) {
+                        Column(
+                            Modifier.fillMaxWidth().background(Brush.verticalGradient(listOf(Color(0xFF003C2E), Color(0xFF00583A), Color(0xFF002F28)))).padding(22.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.spacedBy(16.dp)
+                        ) {
+                            Text("♛  HASIL PELATIHAN  ♛", color = Color(0xFFFFD978), fontWeight = FontWeight.Bold, fontSize = 17.sp)
+                            Box(Modifier.size(194.dp), contentAlignment = Alignment.Center) {
+                                Canvas(Modifier.fillMaxSize()) {
+                                    drawArc(Color.White.copy(alpha = 0.18f), 0f, 360f, false, style = Stroke(17.dp.toPx(), cap = StrokeCap.Round))
+                                    drawArc(Color(0xFFFFC45D), -90f, 360f * scoreValue / 100f, false, style = Stroke(17.dp.toPx(), cap = StrokeCap.Round))
+                                }
+                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                    Text("Skor Akhir", color = Color.White, fontSize = 13.sp)
+                                    Text(if (finalScore < 0) "—" else "$scoreValue", color = Color.White, fontSize = 58.sp, fontWeight = FontWeight.ExtraBold)
+                                    Text("/ 100", color = Color(0xFFB9F2E9), fontSize = 17.sp)
+                                }
+                            }
+                            Surface(color = Color(0xFFFFC45D), shape = RoundedCornerShape(4.dp)) {
+                                Text(if (finalPassed) "🏆  LULUS  🏆" else "PERLU LATIHAN LAGI", color = Color(0xFF102C38), fontWeight = FontWeight.ExtraBold, modifier = Modifier.padding(horizontal = 22.dp, vertical = 10.dp))
+                            }
+                            HorizontalDivider(color = Color.White.copy(alpha = 0.2f))
+                            Text(if (finalPassed) "✦ Selamat! Kamu berhasil menyelesaikan evaluasi pelatihan." else "✦ Tetap semangat! Selesaikan modul dan raih nilai minimal 80.", color = Color.White, textAlign = TextAlign.Center)
+                        }
+                    }
+                    TrainingCard {
+                        Text("Ringkasan Evaluasi", fontWeight = FontWeight.ExtraBold, fontSize = 18.sp, color = darkTraining)
+                        Text("Nilai akhir: ${finalScore.coerceAtLeast(0)}/100", color = darkTraining)
+                        Text("Batas kelulusan: 80/100", color = trainingDisabledText)
+                        Text(if (finalPassed) "Status: Lulus" else "Status: Belum lulus", color = if (finalPassed) tealTraining else orangeTraining, fontWeight = FontWeight.Bold)
+                        if (finalPassed) Text("Sertifikat tersimpan. Buka melalui menu Sertifikat di dashboard.", color = darkTraining)
+                    }
                     TrainingAction("Kembali ke Pelatihan") { stage = "catalog" }
-                    if (!finalPassed) OutlinedButton(colors = trainingButtonColors, onClick = { resetExamAnswers(); stage = "exam"; questionIndex = 0 }) { Text("Ulangi Evaluasi") }
+                    if (!finalPassed) OutlinedButton(colors = trainingButtonColors, onClick = { resetExamAnswers(); stage = "exam"; questionIndex = 0 }, modifier = Modifier.fillMaxWidth()) { Text("Ulangi Evaluasi") }
                 }
                 "certificate" -> {
                     Text("Sertifikat Penyelesaian", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
