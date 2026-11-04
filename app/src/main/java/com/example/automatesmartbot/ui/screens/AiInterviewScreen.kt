@@ -301,6 +301,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     var cvReading by remember { mutableStateOf(false) }
     // Service address is app-managed; never ask end users for provider credentials.
     val endpoint = BuildConfig.INTERVIEW_BASE_URL.takeIf { it.isNotBlank() }?.trimEnd('/')?.plus("/interview/turn")
+    var aiMode by rememberSaveable { mutableStateOf("auto") }
+    var activeEngine by remember { mutableStateOf("") }
     var started by rememberSaveable { mutableStateOf(false) }
     var question by rememberSaveable { mutableStateOf("") }
     var answer by rememberSaveable { mutableStateOf("") }
@@ -460,9 +462,26 @@ fun AiInterviewScreen(isPro: Boolean = false) {
         interviewJob = scope.launch {
             try {
                 val modelFile = offlineModelFile(context)
-                val localModel = modelFile
-                    ?: throw IllegalStateException("Model AI offline belum dipasang. Ketuk Impor Model AI Offline (.gguf) terlebih dahulu.")
-                val response = OfflineInterviewEngine.ask(localModel, role, language, cv, action, turns, interviewer)
+                val response = if (aiMode == "offline" || (aiMode == "auto" && endpoint == null)) {
+                    val local = modelFile ?: throw IllegalStateException("Model GGUF belum tersedia. Impor model untuk mode offline.")
+                    val result = OfflineInterviewEngine.ask(local, role, language, cv, action, turns, interviewer)
+                    activeEngine = "Offline"
+                    result
+                } else {
+                    val serviceUrl = endpoint ?: throw IllegalStateException("Server AI online belum dikonfigurasi. Pilih Offline dan impor model GGUF.")
+                    try {
+                        val token = session.getValidToken() ?: throw IllegalStateException("Silakan login kembali.")
+                        val result = requestInterview(serviceUrl, token, role, language, cv, action, turns, interviewer)
+                        activeEngine = "Online"
+                        result
+                    } catch (networkError: Exception) {
+                        if (networkError is kotlinx.coroutines.CancellationException) throw networkError
+                        if (aiMode != "auto" || modelFile == null) throw networkError
+                        val result = OfflineInterviewEngine.ask(modelFile, role, language, cv, action, turns, interviewer)
+                        activeEngine = "Offline (cadangan)"
+                        result
+                    }
+                }
                 if (requestSession != sessionId) return@launch
                 history = turns
                 if (action == "start") {
@@ -663,8 +682,14 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 Text(if (importingModel) "Mengimpor model..." else "📥 Impor Model AI Offline (.gguf)")
             }
             if (modelStatus.isNotBlank()) Text(modelStatus, color = ink)
+            Text("Mode AI", color = ink, fontWeight = FontWeight.Bold)
+            Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+                FilterChip(selected = aiMode == "auto", onClick = { aiMode = "auto" }, label = { Text("Otomatis") })
+                FilterChip(selected = aiMode == "online", onClick = { aiMode = "online" }, label = { Text("Online") })
+                FilterChip(selected = aiMode == "offline", onClick = { aiMode = "offline" }, label = { Text("Offline") })
+            }
 
-            Button(enabled = !loading && !cvReading && !importingModel && modelReady, modifier = Modifier.fillMaxWidth().height(56.dp),
+            Button(enabled = !loading && !cvReading && !importingModel && (if (aiMode == "offline") modelReady else if (aiMode == "online") endpoint != null else modelReady || endpoint != null), modifier = Modifier.fillMaxWidth().height(56.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = orange), shape = RoundedCornerShape(16.dp),
                 onClick = {
                     history = emptyList()
@@ -674,7 +699,10 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     feedback = ""
                     send("start", emptyList())
                 }) { Text(if (voiceMode) "Mulai Interview Suara  ➜" else "Mulai Interview Teks  ➜", color = Color.White, fontWeight = FontWeight.Bold) }
-            if (!modelReady) Text("Impor model GGUF untuk menjalankan interview tanpa internet atau server Termux.", color = MaterialTheme.colorScheme.error)
+            if (activeEngine.isNotBlank()) Text("Mesin AI: $activeEngine", color = muted)
+            if (aiMode == "online" && endpoint == null) Text("Mode online belum tersedia: backend HTTPS belum dikonfigurasi.", color = MaterialTheme.colorScheme.error)
+            if (aiMode == "auto" && endpoint == null) Text("Backend online belum tersedia; otomatis menggunakan model offline.", color = muted)
+            if (!modelReady) Text("Impor model GGUF untuk menggunakan AI tanpa internet.", color = MaterialTheme.colorScheme.error)
             if (error.isNotBlank()) Text(error, color = MaterialTheme.colorScheme.error)
         }
     } else if (report.isNotBlank()) {
