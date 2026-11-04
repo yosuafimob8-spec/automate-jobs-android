@@ -139,7 +139,9 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                         label = { Text("Semua", fontSize = 12.sp) },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = Color(0xFFFFF3E0),
-                            selectedLabelColor = Color(0xFFE65100)
+                            selectedLabelColor = Color(0xFF9A3412),
+                            labelColor = KarirTextDark,
+                            containerColor = Color.White
                         ),
                         border = BorderStroke(1.dp, if (!onlyFavorites) KarirOrange else Color(0xFFFFDEC9))
                     )
@@ -149,7 +151,9 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                         label = { Text("★ Favorit (${favorites.size})", fontSize = 12.sp) },
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = Color(0xFFFFF3E0),
-                            selectedLabelColor = Color(0xFFE65100)
+                            selectedLabelColor = Color(0xFF9A3412),
+                            labelColor = KarirTextDark,
+                            containerColor = Color.White
                         ),
                         border = BorderStroke(1.dp, if (onlyFavorites) KarirOrange else Color(0xFFFFDEC9))
                     )
@@ -168,7 +172,9 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                             label = { Text(categories[i], fontSize = 11.5.sp) },
                             colors = FilterChipDefaults.filterChipColors(
                                 selectedContainerColor = Color(0xFFFFF3E0),
-                                selectedLabelColor = Color(0xFFE65100)
+                                selectedLabelColor = Color(0xFF9A3412),
+                                labelColor = KarirTextDark,
+                                containerColor = Color.White
                             ),
                             border = BorderStroke(1.dp, if (isSelected) KarirOrange else Color(0xFFFFDEC9))
                         )
@@ -323,6 +329,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                         ) {
                             Text(
                                 if (id in favorites) "★ Hapus dari Favorit" else "☆ Simpan ke Favorit",
+                                color = Color.White,
                                 fontWeight = FontWeight.Bold
                             )
                         }
