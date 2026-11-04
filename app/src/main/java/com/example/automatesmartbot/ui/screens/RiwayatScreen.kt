@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.History
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,7 +25,7 @@ fun RiwayatScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
             .padding(16.dp)
     ) {
         Column(
@@ -34,16 +35,16 @@ fun RiwayatScreen() {
             KarirMateSectionHero("Riwayat Lamaran", "Pantau pengiriman yang benar-benar tercatat, tanpa status palsu.")
             
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         Icon(Icons.Default.History, contentDescription = null, tint = KarirOrange)
-                        Text(text = "Status Pengiriman", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                        Text(text = "Status Pengiriman", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                     }
                     Text(
                         text = "Pantau status lamaran kerja yang sudah Anda ajukan atau kirimkan.",
@@ -73,7 +74,7 @@ fun RiwayatScreen() {
                         text = "Belum ada riwayat lamaran",
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Bold,
-                        color = KarirTextDark
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = "Riwayat resmi akan otomatis muncul setelah pengiriman email atau lamaran diproses.",
