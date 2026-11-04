@@ -15,6 +15,7 @@ import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.Business
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Work
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -64,7 +65,7 @@ fun CariLowonganScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
             .padding(16.dp)
     ) {
         Column(
@@ -73,9 +74,9 @@ fun CariLowonganScreen(
         ) {
             // Header Info & Status
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -89,12 +90,12 @@ fun CariLowonganScreen(
                             text = "Cari Lowongan",
                             fontWeight = FontWeight.Bold,
                             fontSize = 17.sp,
-                            color = KarirTextDark
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                         Surface(
                             shape = RoundedCornerShape(12.dp),
                             color = Color(0xFFFFF3E0),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                         ) {
                             Text(
                                 text = "Total: ${if (errorMessage != null) "-" else totalJobs}",
@@ -124,11 +125,11 @@ fun CariLowonganScreen(
                 shape = RoundedCornerShape(12.dp),
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedBorderColor = KarirOrange,
-                    unfocusedBorderColor = Color(0xFFFFDEC9),
+                    unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
                     focusedLabelColor = KarirOrange,
                     cursorColor = KarirOrange,
-                    focusedContainerColor = Color.White,
-                    unfocusedContainerColor = Color.White
+                    focusedContainerColor = MaterialTheme.colorScheme.surface,
+                    unfocusedContainerColor = MaterialTheme.colorScheme.surface
                 ),
                 trailingIcon = {
                     Button(
@@ -224,7 +225,7 @@ fun CariLowonganScreen(
                                 text = "Tidak ada lowongan ditemukan",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 14.sp,
-                                color = KarirTextDark
+                                color = MaterialTheme.colorScheme.onSurface
                             )
                             Text(
                                 text = "Coba ubah kata kunci posisi atau filter lokasi Anda.",
@@ -279,7 +280,7 @@ fun CariLowonganScreen(
                                         shape = RoundedCornerShape(12.dp),
                                         border = BorderStroke(1.dp, KarirOrange),
                                         colors = ButtonDefaults.outlinedButtonColors(
-                                            containerColor = Color.White,
+                                            containerColor = MaterialTheme.colorScheme.surface,
                                             contentColor = KarirOrange
                                         )
                                     ) {
@@ -308,8 +309,8 @@ fun FilterDropdown(
     Box(modifier = modifier) {
         OutlinedCard(
             onClick = { expanded = true },
-            colors = CardDefaults.outlinedCardColors(containerColor = Color.White),
-            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+            colors = CardDefaults.outlinedCardColors(containerColor = MaterialTheme.colorScheme.surface),
+            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
             shape = RoundedCornerShape(12.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -327,7 +328,7 @@ fun FilterDropdown(
                         text = selectedOption,
                         fontSize = 12.sp,
                         fontWeight = FontWeight.Bold,
-                        color = KarirTextDark,
+                        color = MaterialTheme.colorScheme.onSurface,
                         maxLines = 1
                     )
                 }
@@ -337,14 +338,14 @@ fun FilterDropdown(
         DropdownMenu(
             expanded = expanded,
             onDismissRequest = { expanded = false },
-            modifier = Modifier.background(Color.White)
+            modifier = Modifier.background(MaterialTheme.colorScheme.surface)
         ) {
             options.forEach { option ->
                 DropdownMenuItem(
                     text = {
                         Text(
                             option,
-                            color = KarirTextDark,
+                            color = MaterialTheme.colorScheme.onSurface,
                             fontWeight = if (option == selectedOption) FontWeight.Bold else FontWeight.Normal
                         )
                     },
@@ -361,16 +362,16 @@ fun FilterDropdown(
 @Composable
 private fun JobCard(job: com.example.automatesmartbot.data.model.JobsV2Job, context: android.content.Context) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(
                 job.title ?: "Tanpa Judul",
-                color = KarirTextDark,
+                color = MaterialTheme.colorScheme.onSurface,
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp
             )
@@ -389,7 +390,7 @@ private fun JobCard(job: com.example.automatesmartbot.data.model.JobsV2Job, cont
                 Surface(
                     shape = RoundedCornerShape(8.dp),
                     color = Color(0xFFFFF3E0),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                 ) {
                     Text(
                         job.opportunityLabel ?: "Peluang Lamaran Spontan",
