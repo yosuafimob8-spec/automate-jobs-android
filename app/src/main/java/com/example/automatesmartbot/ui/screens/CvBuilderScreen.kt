@@ -30,8 +30,6 @@ import com.example.automatesmartbot.ui.components.*
 import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import com.example.automatesmartbot.ui.viewmodel.CvBuilderViewModel
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
@@ -193,7 +191,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                             }
                             Text(
                                 "Buat CV baru yang ramah ATS, jelajahi katalog template, atau gunakan CV Analyst.",
-                                color = KarirTextMuted,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 fontSize = 12.sp
                             )
                             Button(
@@ -245,7 +243,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                 Text(
                                     "Template: ${CvTemplates.resolve(document.templateId).name}",
                                     fontSize = 12.sp,
-                                    color = KarirTextMuted
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                                     Button(
@@ -282,7 +280,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             Text("Bagian-Bagian CV", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
-                            Text("Pilih bagian untuk mengisi data. Perubahan tersimpan otomatis di perangkat.", color = KarirTextMuted, fontSize = 12.sp)
+                            Text("Pilih bagian untuk mengisi data. Perubahan tersimpan otomatis di perangkat.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
 
                             listOf(
                                 "Informasi Pribadi", "Pendidikan", "Pengalaman", "Keterampilan",
@@ -351,7 +349,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     contentScale = androidx.compose.ui.layout.ContentScale.Crop
                                 )
                             }
-                            Text("Foto bersifat opsional (format ATS standar tidak memerlukan foto).", fontSize = 11.5.sp, color = KarirTextMuted)
+                            Text("Foto bersifat opsional (format ATS standar tidak memerlukan foto).", fontSize = 11.5.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                                 TextButton(
                                     onClick = { photoPicker.launch(arrayOf("image/*")) },
@@ -441,7 +439,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                             Text("Urutan Bagian CV", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
-                            Text("Atur urutan susunan bagian CV Anda.", color = KarirTextMuted, fontSize = 12.sp)
+                            Text("Atur urutan susunan bagian CV Anda.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
                             val order = (state.draft.sectionOrder + state.draft.extras.map { it.id }).distinct()
                             order.forEachIndexed { index, id ->
                                 Row(
@@ -472,7 +470,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                             Text("Katalog Template CV", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
-                            Text("14 pilihan tata letak profesional ramah ATS.", color = KarirTextMuted, fontSize = 12.sp)
+                            Text("14 pilihan tata letak profesional ramah ATS.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
 
                             val categoryList = listOf("Semua") + CvTemplates.all.map { it.category }.distinct()
                             ScrollableTabRow(
@@ -488,7 +486,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                         text = {
                                             Text(
                                                 categoryName,
-                                                color = if (filter == categoryName) KarirOrange else KarirTextMuted,
+                                                color = if (filter == categoryName) KarirOrange else MaterialTheme.colorScheme.onSurfaceVariant,
                                                 fontWeight = if (filter == categoryName) FontWeight.Bold else FontWeight.Normal
                                             )
                                         }
@@ -511,7 +509,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     Column(Modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                                         CvPageImage(remember(template.id) { CvRenderer.layout(CvTemplates.sample, template.id).first() }, 1, Modifier.fillMaxWidth(), 360)
                                         Text(template.name, fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurface)
-                                        Text(template.category, color = KarirTextMuted, fontSize = 11.sp)
+                                        Text(template.category, color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 11.sp)
                                     }
                                 }
                             }
@@ -586,7 +584,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             Text("CV Analyst", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = MaterialTheme.colorScheme.onSurface)
-                            Text("Periksa kelengkapan dan format ATS pada CV Anda.", color = KarirTextMuted, fontSize = 12.sp)
+                            Text("Periksa kelengkapan dan format ATS pada CV Anda.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
 
                             Button(
                                 onClick = { pdfInput.launch(arrayOf("application/pdf")) },
@@ -716,12 +714,12 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             Text(type.label, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                             if (type == LetterType.AI) {
-                                Text("Integrasi generator AI memerlukan konfigurasi backend aktif.", color = KarirTextMuted, fontSize = 12.sp)
+                                Text("Integrasi generator AI memerlukan konfigurasi backend aktif.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
                             } else {
                                 Text(
                                     if (useAnalyzed) "Sumber: Teks PDF yang telah dianalisis."
                                     else "Sumber: Data CV Saya yang aktif.",
-                                    color = KarirTextMuted,
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     fontSize = 12.sp
                                 )
                                 AppInput("Perusahaan tujuan", company, { company = it })
@@ -749,7 +747,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             Text("Editor Surat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
-                            Text("Surat disimpan otomatis. Anda dapat menyesuaikan isi surat sebelum ekspor.", color = KarirTextMuted, fontSize = 12.sp)
+                            Text("Surat disimpan otomatis. Anda dapat menyesuaikan isi surat sebelum ekspor.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
                             AppInput("Isi surat", letter.content, viewModel::updateLetter, minLines = 14)
                             Button(
                                 onClick = { nav("Preview Surat") },
