@@ -106,6 +106,10 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
     fun nav(destination: String) = viewModel.navigate(destination)
 
     fun export(pages: List<CvPage>, filename: String) {
+        if (filename == "KarirMate-CV.pdf" && !CvTemplates.canUse(state.templateId, isPro)) {
+            viewModel.message("Template PRO memerlukan langganan aktif terverifikasi.")
+            return
+        }
         try {
             val file = java.io.File.createTempFile("cv-export-", ".json", context.cacheDir)
             file.writeText(com.google.gson.Gson().toJson(pages))
@@ -312,7 +316,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                             Spacer(modifier = Modifier.height(4.dp))
 
                             Button(
-                                onClick = { if (viewModel.saveDocument()) nav("Preview CV") },
+                                onClick = { if (!CvTemplates.canUse(state.templateId, isPro)) viewModel.message("Template PRO memerlukan langganan aktif terverifikasi.") else if (viewModel.saveDocument()) nav("Preview CV") },
                                 modifier = Modifier.fillMaxWidth(),
                                 shape = RoundedCornerShape(12.dp),
                                 colors = karirButtonColors()
@@ -551,7 +555,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                             } else {
                                 Button(
                                     onClick = { export(CvRenderer.layout(state.draft, id), "KarirMate-CV.pdf") },
-                                    enabled = !exportBusy && !empty,
+                                    enabled = !exportBusy && !empty && CvTemplates.canUse(id, isPro),
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
                                     colors = karirButtonColors()
@@ -559,7 +563,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                                     Text("Ekspor PDF", fontWeight = FontWeight.Bold)
                                 }
                                 OutlinedButton(
-                                    onClick = { docxOutput.launch("KarirMate-CV.docx") },
+                                    onClick = { if (CvTemplates.canUse(state.templateId, isPro)) docxOutput.launch("KarirMate-CV.docx") else viewModel.message("Template PRO memerlukan langganan aktif terverifikasi.") },
                                     enabled = !exportBusy && !empty,
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
