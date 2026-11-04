@@ -377,21 +377,21 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                     }
                                 }
                                 item {
-                                    MockupCard(tint = Color(0xFFEAFBF3)) {
+                                    MockupCard(tint = MaterialTheme.colorScheme.surfaceVariant) {
                                         Text("👍  Kekuatan Utama", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
-                                        Text("🟢  $correct jawaban berhasil dikerjakan dengan tepat.\n🟢  Pertahankan konsep yang sudah kamu kuasai.\n🟢  Latih konsistensi dan ketelitian dalam menjawab.", color = Color(0xFF202020), style = MaterialTheme.typography.bodyMedium)
+                                        Text("🟢  $correct jawaban berhasil dikerjakan dengan tepat.\n🟢  Pertahankan konsep yang sudah kamu kuasai.\n🟢  Latih konsistensi dan ketelitian dalam menjawab.", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodyMedium)
                                     }
                                 }
                                 item {
-                                    MockupCard(tint = Color(0xFFFFEDF0)) {
+                                    MockupCard(tint = MaterialTheme.colorScheme.surfaceVariant) {
                                         Text("🎯  Area Pengembangan", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
-                                        Text("🔴  Tinjau kembali $wrong jawaban yang belum tepat.\n🔴  Tingkatkan kecepatan dan pemahaman konsep.\n🔴  Latih strategi manajemen waktu saat mengerjakan soal.", color = Color(0xFF202020), style = MaterialTheme.typography.bodyMedium)
+                                        Text("🔴  Tinjau kembali $wrong jawaban yang belum tepat.\n🔴  Tingkatkan kecepatan dan pemahaman konsep.\n🔴  Latih strategi manajemen waktu saat mengerjakan soal.", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodyMedium)
                                     }
                                 }
                                 item {
-                                    MockupCard(tint = Color(0xFFFFF5D5)) {
+                                    MockupCard(tint = MaterialTheme.colorScheme.surfaceVariant) {
                                         Text("💡  Saran Pengembangan", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
-                                        Text("🟡  Rutin latihan soal sesuai kategori yang perlu ditingkatkan.\n🟡  Gunakan simulasi psikotes dengan timer.\n🟡  Pelajari pola soal yang sering muncul pada seleksi kerja.\n🟡  Jaga fokus dan kondisi fisik sebelum tes.", color = Color(0xFF202020), style = MaterialTheme.typography.bodyMedium)
+                                        Text("🟡  Rutin latihan soal sesuai kategori yang perlu ditingkatkan.\n🟡  Gunakan simulasi psikotes dengan timer.\n🟡  Pelajari pola soal yang sering muncul pada seleksi kerja.\n🟡  Jaga fokus dan kondisi fisik sebelum tes.", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodyMedium)
                                     }
                                 }
                             }
