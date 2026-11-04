@@ -13,6 +13,7 @@ import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Visibility
 import androidx.compose.material.icons.filled.VisibilityOff
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -49,12 +50,12 @@ fun RegisterScreen(
 
     val textFieldColors = OutlinedTextFieldDefaults.colors(
         focusedBorderColor = KarirOrange,
-        unfocusedBorderColor = Color(0xFFFFDEC9),
+        unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
         focusedLabelColor = KarirOrange,
         unfocusedLabelColor = KarirTextMuted,
         cursorColor = KarirOrange,
-        focusedContainerColor = Color.White,
-        unfocusedContainerColor = Color.White,
+        focusedContainerColor = MaterialTheme.colorScheme.surface,
+        unfocusedContainerColor = MaterialTheme.colorScheme.surface,
         focusedTextColor = KarirTextDark,
         unfocusedTextColor = KarirTextDark
     )
@@ -72,7 +73,7 @@ fun RegisterScreen(
                         )
                     }
                 },
-                title = { Text("Daftar Akun", color = KarirTextDark, fontWeight = FontWeight.Bold, fontSize = 18.sp) },
+                title = { Text("Daftar Akun", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold, fontSize = 18.sp) },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFFFFDF9))
             )
         },
@@ -81,15 +82,15 @@ fun RegisterScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .background(KarirPageGradient)
+                .background(MaterialTheme.colorScheme.background)
                 .padding(innerPadding)
                 .padding(20.dp),
             contentAlignment = Alignment.Center
         ) {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(20.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -104,7 +105,7 @@ fun RegisterScreen(
                         text = "Daftar Akun Baru",
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = KarirTextDark
+                        color = MaterialTheme.colorScheme.onSurface
                     )
 
                     Text(
