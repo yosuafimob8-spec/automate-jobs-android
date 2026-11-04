@@ -552,7 +552,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
 
                             if (page == "Preview Template") {
                                 Button(
-                                    onClick = { if (CvTemplates.canUse(id, isPro)) { viewModel.setTemplate(id, isPro); nav("CV Saya") } else viewModel.message("Template ini khusus PRO. Upgrade untuk menggunakannya.") },
+                                    onClick = { if (CvTemplates.canUse(id, isPro)) { if (viewModel.setTemplate(id, isPro)) nav("CV Saya") } else viewModel.message("Template ini khusus PRO. Upgrade untuk menggunakannya.") },
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
                                     colors = karirButtonColors()
