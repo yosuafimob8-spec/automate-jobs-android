@@ -115,8 +115,8 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)) {
                         Row(Modifier.fillMaxWidth().height(122.dp).padding(14.dp), verticalAlignment = Alignment.CenterVertically) {
                             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                                Text("🧠 Psikotes", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
-                                Text("Latihan hari ini, siap menghadapi tes kerja besok!", color = ink, style = MaterialTheme.typography.bodySmall)
+                                Text("🧠 Psikotes", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
+                                Text("Latihan hari ini, siap menghadapi tes kerja besok!", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodySmall)
                             }
                             Text("🎯", style = MaterialTheme.typography.displayLarge)
                         }
@@ -131,12 +131,12 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         Shortcut("🏆 Peringkat 👑", Modifier.weight(1f)) { if (isPro) { vm.loadExtras(isPro); page = "leaderboard" } else proNotice = true }
                     }
                 }
-                item { Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), shape = RoundedCornerShape(14.dp), border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant), elevation = CardDefaults.cardElevation(2.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("Latihan Gratis", color = ink, fontWeight = FontWeight.Bold); Text("Semua kategori dasar • 10–20 soal per sesi • Riwayat latihan", color = ink, style = MaterialTheme.typography.bodySmall) } } }
-                item { Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), shape = RoundedCornerShape(14.dp), border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant), elevation = CardDefaults.cardElevation(2.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("👑 Fitur PRO", color = ink, fontWeight = FontWeight.Bold); Text("Simulasi lengkap, statistik dan peringkat untuk langganan aktif", color = ink, style = MaterialTheme.typography.bodySmall) } } }
+                item { Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), shape = RoundedCornerShape(14.dp), border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant), elevation = CardDefaults.cardElevation(2.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("Latihan Gratis", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold); Text("Semua kategori dasar • 10–20 soal per sesi • Riwayat latihan", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodySmall) } } }
+                item { Card(colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface), shape = RoundedCornerShape(14.dp), border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant), elevation = CardDefaults.cardElevation(2.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("👑 Fitur PRO", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold); Text("Simulasi lengkap, statistik dan peringkat untuk langganan aktif", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodySmall) } } }
             }
             "catalog" -> Column(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp)) {
                 TextButton(onClick = { back() }, contentPadding = PaddingValues(0.dp)) { Text("← Kembali ke Psikotes", color = teal) }
-                Text(if (family == "private") "💼 Tes Kerja Swasta" else if (family == "cpns") "🏛️ Persiapan CPNS" else "Pilih Jenis Tes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = ink)
+                Text(if (family == "private") "💼 Tes Kerja Swasta" else if (family == "cpns") "🏛️ Persiapan CPNS" else "Pilih Jenis Tes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
                 Text("Pilih latihan sesuai tujuanmu. Kerjakan soal, pantau progres, dan tingkatkan kemampuan.", style = MaterialTheme.typography.bodySmall, color = Color(0xFF59667A))
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.horizontalScroll(rememberScrollState())) {
                     listOf("Semua" to "all", "Swasta" to "private", "CPNS" to "cpns").forEach { (label, value) ->
@@ -147,8 +147,8 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                     val f = it.s("family").lowercase()
                     family == "all" || f == family || (family == "cpns" && f == "skb")
                 }
-                if (visible.isEmpty() && !loading) Text("Belum ada tes tersedia dari server.", color = ink)
-                Text("FREE: kategori dasar 10–20 soal. Kategori lain memerlukan PRO.", color = ink, style = MaterialTheme.typography.bodySmall)
+                if (visible.isEmpty() && !loading) Text("Belum ada tes tersedia dari server.", color = MaterialTheme.colorScheme.onSurface)
+                Text("FREE: kategori dasar 10–20 soal. Kategori lain memerlukan PRO.", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodySmall)
                 LazyVerticalGrid(columns = GridCells.Fixed(2), horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp), contentPadding = PaddingValues(bottom = 12.dp)) {
                     items(visible) { mode ->
                         val title = mode.s("title", "Tes")
@@ -162,8 +162,8 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                 Box(Modifier.background(icon.second.copy(alpha = 0.13f), RoundedCornerShape(12.dp)).size(42.dp), contentAlignment = Alignment.Center) {
                                     Text(icon.first, style = MaterialTheme.typography.titleLarge)
                                 }
-                                Text(title, fontWeight = FontWeight.Bold, color = ink, maxLines = 2, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
-                                Text("${(if (isPro && !freeEligible(mode)) mode.n("question_count").coerceIn(10, 110) else (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20))} soal  •  ${mode.n("duration_seconds") / 60} menit", color = Color(0xFF58657A), style = MaterialTheme.typography.labelSmall)
+                                Text(title, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface, maxLines = 2, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
+                                Text("${(if (isPro && !freeEligible(mode)) mode.n("question_count").coerceIn(10, 110) else (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20))} soal  •  ${mode.n("duration_seconds") / 60} menit", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.labelSmall)
                                 Text(if (freeEligible(mode)) "FREE • Mulai →" else if (basicMode(mode)) "FREE • 10–20 soal saja" else "👑 PRO", color = if (freeEligible(mode)) teal else orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodySmall)
                             }
                         }
@@ -173,7 +173,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
             "exam" -> if (session != null && questions.isNotEmpty() && questions.size <= 110) {
                 ExamPanel(session!!, questions, submitting, pendingCount, vm::answer, vm::submit, { vm.syncAnswers() })
             } else Column(Modifier.padding(16.dp)) {
-                Text(if (loading) "Memuat sesi dan soal..." else "Sesi belum dapat dibuka. Periksa koneksi atau konfigurasi bank soal.", color = ink)
+                Text(if (loading) "Memuat sesi dan soal..." else "Sesi belum dapat dibuka. Periksa koneksi atau konfigurasi bank soal.", color = MaterialTheme.colorScheme.onSurface)
                 TextButton(onClick = { vm.loadCatalog(); page = "catalog" }) { Text("Pilih Tes Lagi") }
             }
             "result" -> result?.let { r ->
@@ -224,7 +224,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         item {
                             Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                                 Text("LAPORAN LATIHAN", color = teal, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.labelLarge)
-                                Text("Hasil Psikotes", color = ink, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
+                                Text("Hasil Psikotes", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.headlineLarge, fontWeight = FontWeight.ExtraBold)
                                 Text("Kenali pencapaianmu, tinjau jawaban, lalu pilih langkah berikutnya.", color = Color(0xFF59667A))
                             }
                         }
@@ -266,7 +266,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             }
                         }
                         item {
-                            Text("Analisis Hasil Latihan", color = ink, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                            Text("Analisis Hasil Latihan", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
                             Text("Buka jawaban dan ketuk kategori untuk rekomendasi latihan.", color = Color(0xFF59667A), style = MaterialTheme.typography.bodySmall)
                         }
                         item {
@@ -282,19 +282,19 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                         if (showReview) {
                             val details = r.getAsJsonArray("questions")?.mapNotNull { if (it.isJsonObject) it.asJsonObject else null }.orEmpty()
                             if (details.isEmpty()) item {
-                                MockupCard { Text("Rincian jawaban belum dikirim server untuk sesi ini.", color = ink) }
+                                MockupCard { Text("Rincian jawaban belum dikirim server untuk sesi ini.", color = MaterialTheme.colorScheme.onSurface) }
                             }
                             items(details) { q ->
                                 MockupCard {
-                                    Text(q.s("prompt", q.s("question", "Soal")), color = ink, fontWeight = FontWeight.Bold)
-                                    Text("Jawabanmu: " + q.s("selected_answer", q.s("user_answer", "Tidak tersedia")), color = ink)
+                                    Text(q.s("prompt", q.s("question", "Soal")), color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
+                                    Text("Jawabanmu: " + q.s("selected_answer", q.s("user_answer", "Tidak tersedia")), color = MaterialTheme.colorScheme.onSurface)
                                     Text("Jawaban benar: " + q.s("correct_answer", "Tidak tersedia"), color = teal)
                                 }
                             }
                         }
                         item {
                             MockupCard(tint = Color(0xFFEAFBF0), borderColor = Color(0xFFC8F1D7)) {
-                                Text("▥  Analisis Kemampuan", color = ink, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
+                                Text("▥  Analisis Kemampuan", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
                                 Text("Ketuk kategori untuk melihat rekomendasi latihan.", color = Color(0xFF59667A), style = MaterialTheme.typography.bodySmall)
                                 Spacer(Modifier.height(8.dp))
                                 val categories = r.getAsJsonArray("categories") ?: r.getAsJsonArray("category_scores")
@@ -314,12 +314,12 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                     val expanded = selectedCategory == label
                                     Column(Modifier.fillMaxWidth().clickable { selectedCategory = if (expanded) "" else label }.padding(vertical = 8.dp)) {
                                     Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                                        Text(label.replaceFirstChar { it.uppercase() }, color = ink, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
+                                        Text(label.replaceFirstChar { it.uppercase() }, color = MaterialTheme.colorScheme.onSurface, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
                                         LinearProgressIndicator(progress = { score / 100f }, modifier = Modifier.weight(1f).height(9.dp), color = Color(0xFF16B85B), trackColor = Color(0xFFD8F3E2), strokeCap = StrokeCap.Round)
-                                        Text("$score%  ${if (expanded) "⌃" else "⌄"}", modifier = Modifier.width(68.dp), textAlign = TextAlign.End, color = ink, fontWeight = FontWeight.Bold)
+                                        Text("$score%  ${if (expanded) "⌃" else "⌄"}", modifier = Modifier.width(68.dp), textAlign = TextAlign.End, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
                                     }
                                     AnimatedVisibility(visible = expanded) {
-                                        Text(if (score >= 80) "Kekuatanmu di kategori ini sudah sangat baik. Pertahankan latihan rutin." else if (score >= 60) "Kemampuan cukup baik. Latih kembali soal yang masih keliru." else "Prioritaskan latihan kategori ini, mulai dari soal dasar lalu tingkatkan kesulitan.", color = ink, style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 8.dp, bottom = 4.dp))
+                                        Text(if (score >= 80) "Kekuatanmu di kategori ini sudah sangat baik. Pertahankan latihan rutin." else if (score >= 60) "Kemampuan cukup baik. Latih kembali soal yang masih keliru." else "Prioritaskan latihan kategori ini, mulai dari soal dasar lalu tingkatkan kesulitan.", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodySmall, modifier = Modifier.padding(top = 8.dp, bottom = 4.dp))
                                     }
                                     }
                                 }
@@ -419,7 +419,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
             "stats" -> if (isPro) Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                 TextButton(onClick = { page = "home" }) { Text("← Kembali", color = teal) }
                 stats?.let {
-                    Text("📊 Statistik Latihan", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
+                    Text("📊 Statistik Latihan", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
                     Info("📝 Total Tes", it.s("total_tests", "0"))
                     Info("📈 Rata-rata Nilai", it.s("average_percent", "-"))
                     Info("🚀 Peningkatan", it.s("improvement_percent", "-"))
@@ -427,7 +427,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
             }
             "leaderboard" -> if (isPro) LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 item { TextButton(onClick = { page = "home" }) { Text("← Kembali", color = teal) } }
-                item { Text("🏆 Peringkat Peserta", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold) }
+                item { Text("🏆 Peringkat Peserta", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold) }
                 if (leaderboard.isEmpty()) item { Text("Belum ada peringkat.") }
                 items(leaderboard) { Info("🏆 ${it.s("alias", "Peserta")}", "Skor: ${it.s("score", "-")}") }
             }
@@ -560,7 +560,7 @@ private fun Shortcut(label: String, modifier: Modifier, onClick: () -> Unit) {
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
-        Box(Modifier.fillMaxSize().padding(6.dp), contentAlignment = Alignment.Center) { Text(label, color = ink, style = MaterialTheme.typography.labelMedium, textAlign = TextAlign.Center) }
+        Box(Modifier.fillMaxSize().padding(6.dp), contentAlignment = Alignment.Center) { Text(label, color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.labelMedium, textAlign = TextAlign.Center) }
     }
 }
 @Composable
@@ -573,7 +573,7 @@ private fun Info(title: String, subtitle: String) {
         modifier = Modifier.fillMaxWidth()
     ) {
         Column(Modifier.padding(16.dp)) {
-            Text(title, color = ink, fontWeight = FontWeight.Bold)
+            Text(title, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
             Text(subtitle, color = Color.Gray)
         }
     }
