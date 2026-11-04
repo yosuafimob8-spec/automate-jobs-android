@@ -27,7 +27,6 @@ import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
 import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import kotlinx.coroutines.*
 import java.io.File
 
@@ -138,7 +137,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                     }
                     Text(
                         "${selected.size} dokumen dipilih untuk pemrosesan.",
-                        color = KarirTextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         fontSize = 12.sp
                     )
 
@@ -196,7 +195,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         Text("Belum ada dokumen PDF tersimpan", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.onSurface)
-                        Text("Tambahkan PDF dari perangkat Anda untuk mulai menyusun dokumen karier.", fontSize = 12.sp, color = KarirTextMuted)
+                        Text("Tambahkan PDF dari perangkat Anda untuk mulai menyusun dokumen karier.", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     }
                 }
             }
@@ -262,7 +261,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
             ) {
                 Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                     Text("Alat Pengolahan PDF", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
-                    Text("Pilih dua dokumen untuk menggabungkan, atau satu dokumen untuk menyusun dan memutar halaman.", color = KarirTextMuted, fontSize = 12.sp)
+                    Text("Pilih dua dokumen untuk menggabungkan, atau satu dokumen untuk menyusun dan memutar halaman.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 12.sp)
 
                     Button(
                         onClick = { operation { store.merge(chosen) } },
