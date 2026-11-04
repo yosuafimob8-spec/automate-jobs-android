@@ -43,7 +43,7 @@ fun KarirMateTheme(
     content: @Composable () -> Unit
 ) {
     val darkTheme = when (mode) {
-        ThemeMode.AUTO -> isSystemInDarkTheme()
+        ThemeMode.AUTO -> false // KarirMate screens use fixed light backgrounds; prevent unreadable inherited dark text
         ThemeMode.LIGHT -> false
         ThemeMode.DARK -> true
     }
