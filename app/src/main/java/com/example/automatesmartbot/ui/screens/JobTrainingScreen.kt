@@ -123,12 +123,14 @@ fun JobTrainingScreen() {
     var name by rememberSaveable { mutableStateOf(prefs.getString("name", "").orEmpty()) }
     var message by remember { mutableStateOf("") }
     var certificate by remember { mutableStateOf<JSONObject?>(null) }
+    var examScore by rememberSaveable { mutableStateOf<Int?>(null) }
+    var examCorrect by rememberSaveable { mutableStateOf<Int?>(null) }
     val completed = remember(courseId, version) { prefs.getStringSet("done_$courseId", emptySet()).orEmpty().toSet() }
     val answers = remember(courseId, version) { JSONArray(prefs.getString("answers_$courseId", "[]")) }
     val allDone = course.lessons.indices.all { it.toString() in completed }
     val serverAllDone = course.lessons.indices.all { it in serverModules }
     fun choose(id: String) {
-        courseId = id; module = 0; stage = "modules"; message = ""; certificate = null
+        courseId = id; module = 0; stage = "modules"; message = ""; certificate = null; examScore = null; examCorrect = null
         serverQuestions = null
         serverModules = emptySet()
         if (trainingApi != null) trainingScope.launch {
@@ -179,7 +181,9 @@ fun JobTrainingScreen() {
                     history.put(item)
                     prefs.edit().putString("certificates", history.toString()).apply()
                     certificate = item
-                    stage = "certificate"
+                    examScore = record.getInt("score").coerceIn(0, 100)
+                    examCorrect = null
+                    stage = "result"
                     message = "Sertifikat terverifikasi server."
                 } catch (e: Exception) {
                     val detail = e.message.orEmpty()
@@ -201,6 +205,9 @@ fun JobTrainingScreen() {
         if (values.any { it < 0 }) { message = "Jawab semua pertanyaan."; return }
         if (name.isBlank()) { message = "Isi nama peserta untuk sertifikat."; return }
         val score = TrainingCourses.score(values, offlineQuestions)
+        examScore = score
+        examCorrect = offlineQuestions.indices.count { values[it] == offlineQuestions[it].correct }
+        stage = "result"
         message = "Nilai akhir: $score/100"
         if (score >= 80 && allDone) {
             val item = JSONObject().put("id", UUID.randomUUID().toString())
@@ -210,7 +217,6 @@ fun JobTrainingScreen() {
             history.put(item)
             prefs.edit().putString("certificates", history.toString()).apply()
             certificate = item
-            stage = "certificate"
         } else {
             message += ". Belum lulus; selesaikan modul dan ulangi evaluasi."
         }
@@ -525,6 +531,25 @@ fun JobTrainingScreen() {
                     TrainingAction("Lihat Hasil", enabled = !trainingBusy) { evaluate() }
                     if (message.isNotBlank()) Text(message, color = orangeTraining)
                     OutlinedButton(colors = trainingButtonColors, onClick = { resetExamAnswers(); stage = "exam"; questionIndex = 0 }) { Text("Ulangi Soal") }
+                }
+                "result" -> {
+                    val score = examScore
+                    val passed = score != null && score >= 80 && certificate != null
+                    Text("Hasil Evaluasi Pelatihan", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
+                    Text(course.title, color = darkTraining)
+                    TrainingCard {
+                        Text("Skor Akhir", fontWeight = FontWeight.Bold, color = darkTraining)
+                        Text("${score ?: "—"} / 100", fontSize = 48.sp, fontWeight = FontWeight.ExtraBold, color = orangeTraining)
+                        LinearProgressIndicator(progress = { (score ?: 0).coerceIn(0, 100) / 100f }, modifier = Modifier.fillMaxWidth().height(10.dp), color = if (passed) tealTraining else orangeTraining)
+                        Text(if (passed) "LULUS" else "BELUM LULUS", fontWeight = FontWeight.ExtraBold, color = if (passed) tealTraining else orangeTraining)
+                        Text(if (passed) "Selamat! Pertahankan kemampuanmu." else "Pelajari kembali modul dan ulangi evaluasi.", color = darkTraining)
+                        examCorrect?.let { correct -> Text("Benar: $correct • Salah: ${offlineQuestions.size - correct}", color = darkTraining) }
+                        Text("Nilai minimal kelulusan: 80/100", color = trainingDisabledText)
+                    }
+                    if (message.isNotBlank()) Text(message, color = darkTraining)
+                    if (passed) TrainingAction("Selesai • Kembali ke Pelatihan") { stage = "modules" }
+                    else TrainingAction("Ulangi Evaluasi") { resetExamAnswers(); questionIndex = 0; stage = "exam" }
+                    OutlinedButton(colors = trainingButtonColors, onClick = { stage = "modules" }) { Text("Kembali ke Modul") }
                 }
                 "certificate" -> {
                     Text("Sertifikat Penyelesaian", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
