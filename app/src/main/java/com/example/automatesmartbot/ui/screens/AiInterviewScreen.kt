@@ -503,17 +503,50 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             }
             Text("Bahasa Interview", color = ink, fontWeight = FontWeight.Bold)
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                FilterChip(selected = language == "id", onClick = { language = "id" }, label = { Text("Indonesia", color = ink) })
-                FilterChip(selected = language == "en", onClick = { language = "en" }, label = { Text("English", color = ink) })
+                FilterChip(selected = language == "id", onClick = { language = "id" }, label = { Text("Indonesia") }, colors = FilterChipDefaults.filterChipColors(containerColor = Color.White, labelColor = ink, selectedContainerColor = Color(0xFFFFEAD7), selectedLabelColor = ink))
+                FilterChip(selected = language == "en", onClick = { language = "en" }, label = { Text("English") }, colors = FilterChipDefaults.filterChipColors(containerColor = Color.White, labelColor = ink, selectedContainerColor = Color(0xFFFFEAD7), selectedLabelColor = ink))
             }
             OutlinedButton(enabled = !cvReading && !loading, onClick = {
                 cvPicker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
             }, modifier = Modifier.fillMaxWidth()) { Text(if (cvReading) "Membaca CV..." else "📄 Unggah CV PDF / DOCX (opsional)", color = ink) }
             if (cvLoaded) {
-                Text("✓ CV: $cvFileName", color = ink, fontWeight = FontWeight.Bold)
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    OutlinedButton(onClick = { cvPicker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document")) }) { Text("Ganti CV", color = ink) }
-                    OutlinedButton(onClick = { cv = ""; cvLoaded = false; cvFileName = "" }) { Text("Hapus CV", color = ink) }
+                Card(
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = CardDefaults.cardColors(
+                        containerColor = Color.White,
+                        contentColor = ink
+                    ),
+                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    shape = RoundedCornerShape(12.dp)
+                ) {
+                    Column(
+                        Modifier.fillMaxWidth().padding(14.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        Text("✓ CV berhasil diunggah", color = ink, fontWeight = FontWeight.Bold)
+                        Text(
+                            cvFileName,
+                            color = ink,
+                            style = MaterialTheme.typography.bodyMedium,
+                            maxLines = 3,
+                            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                        )
+                        Text(
+                            "Isi CV telah dibaca dan akan digunakan sebagai konteks wawancara.",
+                            color = Color(0xFF475569),
+                            style = MaterialTheme.typography.bodySmall
+                        )
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            OutlinedButton(
+                                onClick = { cvPicker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document")) },
+                                colors = ButtonDefaults.outlinedButtonColors(contentColor = ink)
+                            ) { Text("Ganti CV", color = ink) }
+                            OutlinedButton(
+                                onClick = { cv = ""; cvLoaded = false; cvFileName = "" },
+                                colors = ButtonDefaults.outlinedButtonColors(contentColor = ink)
+                            ) { Text("Hapus CV", color = ink) }
+                        }
+                    }
                 }
             }
             Text("CV maksimal 10 MB; PDF scan memerlukan OCR.", color = muted, style = MaterialTheme.typography.bodySmall)
