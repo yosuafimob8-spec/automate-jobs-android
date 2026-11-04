@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -91,7 +92,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
     ) {
         Column(
             Modifier
@@ -103,9 +104,9 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
             KarirMateSectionHero("Dokumen Karier", "Kelola dan susun dokumen PDF secara aman di perangkat Anda.")
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -119,12 +120,12 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                             "Perpustakaan PDF",
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
-                            color = KarirTextDark
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                         Surface(
                             shape = RoundedCornerShape(10.dp),
                             color = Color(0xFFFFF3E0),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                         ) {
                             Text(
                                 "${items.size} Dokumen",
@@ -167,7 +168,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                 LinearProgressIndicator(
                     Modifier.fillMaxWidth(),
                     color = KarirOrange,
-                    trackColor = Color(0xFFFFDEC9)
+                    trackColor = MaterialTheme.colorScheme.outlineVariant
                 )
             }
 
@@ -175,7 +176,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                 Surface(
                     shape = RoundedCornerShape(8.dp),
                     color = Color(0xFFFFF3E0),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(message, color = Color(0xFF9A3412), fontSize = 12.sp, modifier = Modifier.padding(10.dp))
@@ -184,9 +185,9 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
 
             if (items.isEmpty()) {
                 Card(
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     shape = RoundedCornerShape(16.dp),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Column(
@@ -194,7 +195,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        Text("Belum ada dokumen PDF tersimpan", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = KarirTextDark)
+                        Text("Belum ada dokumen PDF tersimpan", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.onSurface)
                         Text("Tambahkan PDF dari perangkat Anda untuk mulai menyusun dokumen karier.", fontSize = 12.sp, color = KarirTextMuted)
                     }
                 }
@@ -204,8 +205,8 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                 Card(
                     Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(14.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                 ) {
                     Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -222,7 +223,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                                 "${item.name} • ${item.pages} halaman",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 13.5.sp,
-                                color = KarirTextDark
+                                color = MaterialTheme.colorScheme.onSurface
                             )
                         }
                         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -253,14 +254,14 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
             HorizontalDivider(color = Color(0xFFF1E5DC))
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    Text("Alat Pengolahan PDF", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                    Text("Alat Pengolahan PDF", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                     Text("Pilih dua dokumen untuk menggabungkan, atau satu dokumen untuk menyusun dan memutar halaman.", color = KarirTextMuted, fontSize = 12.sp)
 
                     Button(
