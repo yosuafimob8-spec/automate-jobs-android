@@ -398,10 +398,10 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                             1 -> {
                                 val details = r.getAsJsonArray("questions")?.mapNotNull { if (it.isJsonObject) it.asJsonObject else null }.orEmpty()
                                 if (details.isEmpty()) item { MockupCard { Text("Pembahasan belum tersedia dari server.", color = MaterialTheme.colorScheme.onSurfaceVariant) } }
-                                items(details) { q -> MockupCard { Text(q.s("prompt", "Soal"), color = Color.Black, fontWeight = FontWeight.Bold); Spacer(Modifier.height(6.dp)); Text(q.s("explanation", "Pembahasan tidak tersedia dari server."), color = MaterialTheme.colorScheme.onSurfaceVariant) } }
+                                items(details) { q -> MockupCard { Text(q.s("prompt", "Soal"), color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold); Spacer(Modifier.height(6.dp)); Text(q.s("explanation", "Pembahasan tidak tersedia dari server."), color = MaterialTheme.colorScheme.onSurfaceVariant) } }
                             }
                             else -> {
-                                item { MockupCard(tint = Color(0xFFFFF7DC)) { Text("💡 Saran Pengembangan", color = Color.Black, fontWeight = FontWeight.ExtraBold); Text("✓ Rutin latihan soal sesuai kategori yang sulit.\n✓ Gunakan simulasi dengan timer.\n✓ Pelajari pembahasan setiap jawaban.\n✓ Jaga fokus dan kondisi fisik sebelum tes.", color = Color.Black) } }
+                                item { MockupCard(tint = MaterialTheme.colorScheme.surfaceVariant) { Text("💡 Saran Pengembangan", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.ExtraBold); Text("✓ Rutin latihan soal sesuai kategori yang sulit.\n✓ Gunakan simulasi dengan timer.\n✓ Pelajari pembahasan setiap jawaban.\n✓ Jaga fokus dan kondisi fisik sebelum tes.", color = MaterialTheme.colorScheme.onSurface) } }
                                 item { Button(onClick = { page = "home"; vm.loadExtras(isPro) }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text("Mulai Latihan Baru") } }
                             }
                         }
