@@ -21,7 +21,6 @@ import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
 import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 @Composable
 fun AutoApplyPortalScreen(isPro: Boolean) {
@@ -65,7 +64,7 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
                     Text(
                         text = "Otomatisasi pengiriman lamaran kerja langsung terhubung ke profil Kalibrr, Indeed, dan Glints Anda.",
                         fontSize = 12.5.sp,
-                        color = KarirTextMuted
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
@@ -113,7 +112,7 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
                     Text(
                         text = "Target Posisi: Berdasarkan preferensi profil aktif\nResume: CV terdaftar di backend",
                         fontSize = 12.sp,
-                        color = KarirTextMuted
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
