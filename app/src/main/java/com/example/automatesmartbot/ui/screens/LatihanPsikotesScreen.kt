@@ -479,8 +479,8 @@ private fun MedalIllustration(modifier: Modifier = Modifier) {
 
 @Composable
 private fun MockupCard(
-    tint: Color = Color.White,
-    borderColor: Color = MaterialTheme.colorScheme.outlineVariant,
+    tint: Color = Color.Unspecified,
+    borderColor: Color = Color.Unspecified,
     onClick: (() -> Unit)? = null,
     content: @Composable ColumnScope.() -> Unit
 ) {
@@ -489,8 +489,8 @@ private fun MockupCard(
         onClick = onClick ?: {},
         enabled = onClick != null,
         shape = RoundedCornerShape(20.dp),
-        colors = CardDefaults.cardColors(containerColor = tint),
-        border = androidx.compose.foundation.BorderStroke(1.dp, borderColor),
+        colors = CardDefaults.cardColors(containerColor = if (tint == Color.Unspecified) MaterialTheme.colorScheme.surface else tint),
+        border = androidx.compose.foundation.BorderStroke(1.dp, if (borderColor == Color.Unspecified) MaterialTheme.colorScheme.outlineVariant else borderColor),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp), content = content)
@@ -500,8 +500,8 @@ private fun MockupCard(
 @Composable
 private fun ScoreRow(label: String, value: String) {
     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-        Text(label, color = Color.Black, style = MaterialTheme.typography.bodySmall)
-        Text(value, color = Color.Black, fontWeight = FontWeight.Bold)
+        Text(label, color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodySmall)
+        Text(value, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
     }
 }
 
