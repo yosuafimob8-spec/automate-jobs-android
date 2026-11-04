@@ -406,7 +406,7 @@ fun DashboardScreen(
 
                     // 4. "Kondisi Ketenagakerjaan Indonesia" Carousel Card
                     item {
-                        IndonesianLaborConditionCard(onDetailClick = { onNavigate(Screen.CariLowongan.route) })
+                        IndonesianLaborConditionCard()
                     }
 
                     // 5. "Menu Utama" Section
@@ -777,7 +777,7 @@ private fun DashboardSearchBar(
 }
 
 @Composable
-private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
+private fun IndonesianLaborConditionCard() {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -834,28 +834,13 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                         color = Color(0xFF0F172A)
                     )
                     Text(
-                        text = "Sumber: Badan Pusat Statistik (BPS) • Update: 3 Nov 2026",
+                        text = "Sumber: BPS • Periode data: Mei/Maret 2026",
                         fontSize = 10.5.sp,
                         color = Color(0xFF64748B)
                     )
                 }
 
-                // Detail Data Button
-                Surface(
-                    shape = RoundedCornerShape(50),
-                    border = BorderStroke(1.dp, KarirOrange),
-                    color = Color.White,
-                    shadowElevation = 1.dp,
-                    modifier = Modifier.clickable(onClick = onDetailClick)
-                ) {
-                    Text(
-                        text = "Detail Data >",
-                        color = KarirOrange,
-                        fontWeight = FontWeight.SemiBold,
-                        fontSize = 11.sp,
-                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
-                    )
-                }
+
             }
 
             // Two Metric Sub-Cards
@@ -910,7 +895,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
 
                         Spacer(modifier = Modifier.height(2.dp))
                         Text(
-                            text = "7,24 juta orang",
+                            text = "7,22 juta orang",
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.5.sp,
                             color = Color(0xFF0F172A)
@@ -925,7 +910,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                                 shape = RoundedCornerShape(4.dp)
                             ) {
                                 Text(
-                                    text = "4,68%",
+                                    text = "4,65%",
                                     color = Color(0xFF16A34A),
                                     fontSize = 10.sp,
                                     fontWeight = FontWeight.Bold,
@@ -933,7 +918,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                                 )
                             }
                             Text(
-                                text = "▼ -0,08 p.p.",
+                                text = "▼ -0,03 p.p.",
                                 color = Color(0xFF16A34A),
                                 fontSize = 9.sp,
                                 fontWeight = FontWeight.SemiBold
@@ -941,13 +926,12 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                         }
 
                         Text(
-                            text = "(vs Feb 2025: 4,76%)",
+                            text = "(vs Feb 2026: 4,68%)",
                             fontSize = 8.sp,
                             color = Color(0xFF64748B)
                         )
 
-                        // Sparkline Graph
-                        LaborSparkline(color = Color(0xFF3B82F6))
+                        Text("Periode: Mei 2026 • BPS", fontSize = 9.sp, color = Color(0xFF64748B))
                     }
                 }
 
@@ -1021,7 +1005,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                                 )
                             }
                             Text(
-                                text = "▼ -0,40 p.p.",
+                                text = "▼ -0,18 p.p.",
                                 color = Color(0xFF16A34A),
                                 fontSize = 9.sp,
                                 fontWeight = FontWeight.SemiBold
@@ -1029,13 +1013,12 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                         }
 
                         Text(
-                            text = "(vs Sep 2025: 8,47%)",
+                            text = "(vs Sep 2025: 8,25%)",
                             fontSize = 8.sp,
                             color = Color(0xFF64748B)
                         )
 
-                        // Sparkline Graph
-                        LaborSparkline(color = Color(0xFFEC4899))
+                        Text("Periode: Maret 2026 • BPS", fontSize = 9.sp, color = Color(0xFF64748B))
                     }
                 }
             }
@@ -1055,7 +1038,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                     Icon(Icons.Default.People, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
                     Column {
                         Text("Angkatan Kerja", fontSize = 8.5.sp, color = Color(0xFF64748B))
-                        Text("154,91 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = Color(0xFF0F172A))
+                        Text("155,41 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = Color(0xFF0F172A))
                     }
                 }
 
@@ -1070,7 +1053,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                     Icon(Icons.Default.Work, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
                     Column {
                         Text("Penduduk Bekerja", fontSize = 8.5.sp, color = Color(0xFF64748B))
-                        Text("147,67 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = Color(0xFF0F172A))
+                        Text("148,19 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = Color(0xFF0F172A))
                     }
                 }
 
@@ -1085,7 +1068,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                     Icon(Icons.Default.Payments, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
                     Column {
                         Text("Rata-rata Upah", fontSize = 8.5.sp, color = Color(0xFF64748B))
-                        Text("Rp3,29 jt/bln", fontWeight = FontWeight.Bold, fontSize = 11.sp, color = Color(0xFF0F172A))
+                        Text("Rp3,39 jt/bln", fontWeight = FontWeight.Bold, fontSize = 11.sp, color = Color(0xFF0F172A))
                     }
                 }
             }
@@ -1117,46 +1100,6 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
             modifier = Modifier
                 .size(5.dp)
                 .background(Color(0xFFCBD5E1), CircleShape)
-        )
-    }
-}
-
-@Composable
-private fun LaborSparkline(color: Color) {
-    Canvas(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(20.dp)
-    ) {
-        val w = size.width
-        val h = size.height
-
-        val path = Path().apply {
-            moveTo(0f, h * 0.7f)
-            cubicTo(w * 0.25f, h * 0.4f, w * 0.45f, h * 0.85f, w * 0.7f, h * 0.35f)
-            cubicTo(w * 0.85f, h * 0.15f, w * 0.95f, h * 0.45f, w, h * 0.4f)
-        }
-
-        val fillPath = Path().apply {
-            addPath(path)
-            lineTo(w, h)
-            lineTo(0f, h)
-            close()
-        }
-
-        drawPath(
-            path = fillPath,
-            brush = Brush.verticalGradient(
-                colors = listOf(color.copy(alpha = 0.25f), Color.Transparent),
-                startY = 0f,
-                endY = h
-            )
-        )
-
-        drawPath(
-            path = path,
-            color = color,
-            style = Stroke(width = 2.dp.toPx(), cap = StrokeCap.Round)
         )
     }
 }
