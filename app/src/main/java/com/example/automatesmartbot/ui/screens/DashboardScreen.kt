@@ -407,6 +407,18 @@ fun DashboardScreen(
                         IndonesianLaborConditionCard(onDetailClick = { onNavigate(Screen.CariLowongan.route) })
                     }
 
+                    item {
+                        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                            Button(
+                                onClick = { onNavigate(Screen.UpgradePro.route) },
+                                colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
+                            ) { Text(if (isPro) "Lihat Paket KarirMate PRO" else "Upgrade PRO • Mulai Rp5.000") }
+                            TextButton(onClick = { onNavigate(Screen.ManagePro.route) }) {
+                                Text("Kelola Langganan")
+                            }
+                        }
+                    }
+
                     // 5. "Menu Utama" Section
                     item {
                         MenuUtamaSection(onNavigate = onNavigate)
