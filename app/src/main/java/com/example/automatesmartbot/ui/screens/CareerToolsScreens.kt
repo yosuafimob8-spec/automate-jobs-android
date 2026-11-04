@@ -8,6 +8,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.semantics.Role
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -51,7 +52,7 @@ fun SalaryCalculatorScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
     ) {
         Column(
             Modifier
@@ -63,14 +64,14 @@ fun SalaryCalculatorScreen() {
             KarirMateSectionHero("Kalkulator Gaji", "Simulasikan gaji, lembur, BPJS, pajak, dan THR secara transparan.")
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("Simulasi Cepat", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                    Text("Simulasi Cepat", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                     Text("Coba angka simulasi standar, lalu sesuaikan dengan nominal slip gaji Anda.", fontSize = 12.sp, color = KarirTextMuted)
                     OutlinedButton(
                         onClick = {
@@ -96,9 +97,9 @@ fun SalaryCalculatorScreen() {
             }
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -107,7 +108,7 @@ fun SalaryCalculatorScreen() {
                         "Input Komponen Gaji",
                         fontWeight = FontWeight.Bold,
                         fontSize = 16.sp,
-                        color = KarirTextDark
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         "Estimasi PPh 21 tahunan mengacu lapisan tarif UU HPP.",
@@ -119,7 +120,7 @@ fun SalaryCalculatorScreen() {
                     AppInput("Upah dasar lembur / THR (Rp)", base, { base = it; result = null })
                     AppInput("Jam lembur dalam satu hari", hours, { hours = it; result = null })
 
-                    Text("Jenis Hari Lembur:", fontWeight = FontWeight.SemiBold, fontSize = 12.5.sp, color = KarirTextDark)
+                    Text("Jenis Hari Lembur:", fontWeight = FontWeight.SemiBold, fontSize = 12.5.sp, color = MaterialTheme.colorScheme.onSurface)
                     listOf(
                         PayrollCalculator.OvertimeDay.WORKDAY to "Hari kerja biasa",
                         PayrollCalculator.OvertimeDay.REST_FIVE_DAY_WEEK to "Hari istirahat (minggu 5 hari kerja)",
@@ -135,11 +136,11 @@ fun SalaryCalculatorScreen() {
                                 onClick = { day = value.name; result = null },
                                 colors = RadioButtonDefaults.colors(
                                     selectedColor = KarirOrange,
-                                    unselectedColor = Color(0xFFFFDEC9)
+                                    unselectedColor = MaterialTheme.colorScheme.outlineVariant
                                 )
                             )
                             Spacer(modifier = Modifier.width(6.dp))
-                            Text(label, fontSize = 12.5.sp, color = KarirTextDark)
+                            Text(label, fontSize = 12.5.sp, color = MaterialTheme.colorScheme.onSurface)
                         }
                     }
 
@@ -190,9 +191,9 @@ fun SalaryCalculatorScreen() {
 
             result?.let { r ->
                 Card(
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                     shape = RoundedCornerShape(16.dp),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -200,7 +201,7 @@ fun SalaryCalculatorScreen() {
                         Surface(
                             shape = RoundedCornerShape(10.dp),
                             color = Color(0xFFFFF3E0),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                         ) {
                             Text(
                                 "ESTIMASI GAJI DITERIMA (TAKE HOME PAY)",
@@ -214,7 +215,7 @@ fun SalaryCalculatorScreen() {
                             rupiah.format(r.monthlyTakeHomeEstimate),
                             fontSize = 26.sp,
                             fontWeight = FontWeight.Bold,
-                            color = KarirTextDark
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                         Text("Estimasi per bulan, belum termasuk THR tahunan.", fontSize = 12.sp, color = KarirTextMuted)
 
@@ -235,7 +236,7 @@ fun SalaryCalculatorScreen() {
                                 horizontalArrangement = Arrangement.SpaceBetween
                             ) {
                                 Text(label, fontSize = 12.sp, color = KarirTextMuted)
-                                Text(rupiah.format(value), fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = KarirTextDark)
+                                Text(rupiah.format(value), fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = MaterialTheme.colorScheme.onSurface)
                             }
                         }
                     }
@@ -266,7 +267,7 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
     ) {
         Column(
             Modifier
@@ -278,14 +279,14 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
             KarirMateSectionHero("Surat Karier", "Susun surat lamaran resmi dan dokumen pengunduran diri profesional.")
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("Surat Lamaran Otomatis", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                    Text("Surat Lamaran Otomatis", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                     Text("Gunakan profil dan CV tersimpan untuk menyusun surat lamaran otomatis.", fontSize = 12.sp, color = KarirTextMuted)
                     Button(
                         onClick = onApplicationLetter,
@@ -299,14 +300,14 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
             }
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Text("Surat Pengunduran Diri (Resign)", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                    Text("Surat Pengunduran Diri (Resign)", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
 
                     AppInput("Nama lengkap", name, { name = it })
                     AppInput("Perusahaan saat ini", company, { company = it })
@@ -383,7 +384,7 @@ fun LegacyJobTrainingScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
     ) {
         Column(
             Modifier
@@ -392,29 +393,29 @@ fun LegacyJobTrainingScreen() {
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-            Text("Akademi KarirMate", fontWeight = FontWeight.Bold, fontSize = 22.sp, color = KarirTextDark)
+            Text("Akademi KarirMate", fontWeight = FontWeight.Bold, fontSize = 22.sp, color = MaterialTheme.colorScheme.onSurface)
             Text("Belajar bertahap • latihan praktik • evaluasi • sertifikat penyelesaian", color = KarirTextMuted, fontSize = 12.sp)
 
             if (page == -1) {
-                Text("Katalog Pelatihan", fontWeight = FontWeight.Bold, fontSize = 17.sp, color = KarirTextDark)
+                Text("Katalog Pelatihan", fontWeight = FontWeight.Bold, fontSize = 17.sp, color = MaterialTheme.colorScheme.onSurface)
                 TrainingCourses.all.forEach { item ->
                     val completed = prefs.getStringSet("done_${item.id}", emptySet()).orEmpty().size
                     Card(
                         onClick = { courseId = item.id; page = 0; message = ""; certificate = null },
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                            Text(item.title, fontWeight = FontWeight.Bold, fontSize = 15.sp, color = KarirTextDark)
+                            Text(item.title, fontWeight = FontWeight.Bold, fontSize = 15.sp, color = MaterialTheme.colorScheme.onSurface)
                             Text("$completed/${item.lessons.size} modul selesai", fontSize = 12.sp, color = KarirTextMuted)
                             LinearProgressIndicator(
                                 progress = { (completed.toFloat() / item.lessons.size.coerceAtLeast(1)).coerceIn(0f, 1f) },
                                 modifier = Modifier.fillMaxWidth().height(6.dp),
                                 color = KarirOrange,
-                                trackColor = Color(0xFFFFDEC9)
+                                trackColor = MaterialTheme.colorScheme.outlineVariant
                             )
                         }
                     }
@@ -423,26 +424,26 @@ fun LegacyJobTrainingScreen() {
                 TextButton(onClick = { page = -1; certificate = null }) {
                     Text("← Kembali ke Katalog Pelatihan", color = KarirOrangeDeep, fontWeight = FontWeight.Bold)
                 }
-                Text(course.title, fontWeight = FontWeight.Bold, fontSize = 18.sp, color = KarirTextDark)
+                Text(course.title, fontWeight = FontWeight.Bold, fontSize = 18.sp, color = MaterialTheme.colorScheme.onSurface)
                 Text("${done.size} dari ${course.lessons.size} modul diselesaikan", fontSize = 12.sp, color = KarirTextMuted)
                 LinearProgressIndicator(
                     progress = { (done.size.toFloat() / course.lessons.size.coerceAtLeast(1)).coerceIn(0f, 1f) },
                     modifier = Modifier.fillMaxWidth().height(6.dp),
                     color = KarirOrange,
-                    trackColor = Color(0xFFFFDEC9)
+                    trackColor = MaterialTheme.colorScheme.outlineVariant
                 )
 
                 course.lessons.forEachIndexed { index, lesson ->
                     OutlinedButton(
                         onClick = { page = index; message = "" },
                         shape = RoundedCornerShape(10.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
-                        colors = ButtonDefaults.outlinedButtonColors(containerColor = Color.White),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
+                        colors = ButtonDefaults.outlinedButtonColors(containerColor = MaterialTheme.colorScheme.surface),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Text(
                             "${if (index.toString() in done) "✓" else "○"} Modul ${index + 1}: ${lesson.first}",
-                            color = KarirTextDark,
+                            color = MaterialTheme.colorScheme.onSurface,
                             fontSize = 12.5.sp
                         )
                     }
@@ -451,9 +452,9 @@ fun LegacyJobTrainingScreen() {
                 if (page in course.lessons.indices) {
                     val lesson = course.lessons[page]
                     HorizontalDivider(color = Color(0xFFF1E5DC))
-                    Text(lesson.first, fontWeight = FontWeight.Bold, fontSize = 17.sp, color = KarirTextDark)
-                    Text(lesson.second, fontSize = 13.sp, color = KarirTextDark)
-                    Text("Latihan praktik", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = KarirTextDark)
+                    Text(lesson.first, fontWeight = FontWeight.Bold, fontSize = 17.sp, color = MaterialTheme.colorScheme.onSurface)
+                    Text(lesson.second, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurface)
+                    Text("Latihan praktik", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurface)
                     Text("Tuliskan satu contoh penerapan materi ini dalam pekerjaan atau proses melamar kerja.", fontSize = 12.sp, color = KarirTextMuted)
 
                     var practice by rememberSaveable(courseId, page) {
@@ -470,7 +471,7 @@ fun LegacyJobTrainingScreen() {
                         label = { Text("Jawaban latihan praktik") },
                         colors = OutlinedTextFieldDefaults.colors(
                             focusedBorderColor = KarirOrange,
-                            unfocusedBorderColor = Color(0xFFFFDEC9),
+                            unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
                             cursorColor = KarirOrange
                         )
                     )
@@ -492,7 +493,7 @@ fun LegacyJobTrainingScreen() {
 
                 if (page == course.lessons.size) {
                     HorizontalDivider(color = Color(0xFFF1E5DC))
-                    Text("Evaluasi Akhir • Minimal 80/100", fontWeight = FontWeight.Bold, fontSize = 17.sp, color = KarirTextDark)
+                    Text("Evaluasi Akhir • Minimal 80/100", fontWeight = FontWeight.Bold, fontSize = 17.sp, color = MaterialTheme.colorScheme.onSurface)
                     if (!allDone) {
                         Text("Selesaikan seluruh modul dan latihan praktik sebelum mengikuti evaluasi.", fontSize = 12.sp, color = KarirTextMuted)
                     }
@@ -502,7 +503,7 @@ fun LegacyJobTrainingScreen() {
                             prefs.edit().putString("name", it).apply()
                         })
                         course.questions.forEachIndexed { index, question ->
-                            Text("${index + 1}. ${question.prompt}", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = KarirTextDark)
+                            Text("${index + 1}. ${question.prompt}", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurface)
                             question.options.forEachIndexed { optionIndex, option ->
                                 Row(
                                     Modifier.fillMaxWidth().selectable(
@@ -522,7 +523,7 @@ fun LegacyJobTrainingScreen() {
                                         colors = RadioButtonDefaults.colors(selectedColor = KarirOrange)
                                     )
                                     Spacer(modifier = Modifier.width(6.dp))
-                                    Text(option, fontSize = 12.sp, color = KarirTextDark)
+                                    Text(option, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurface)
                                 }
                             }
                         }
