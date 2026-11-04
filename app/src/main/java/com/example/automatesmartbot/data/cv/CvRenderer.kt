@@ -49,10 +49,15 @@ object CvRenderer {
     fun layout(c: CvContent, templateId: String): List<CvPage> {
         val template = CvTemplates.resolve(templateId)
         val l = template.layout
+        // Per-template geometry variation, shared by preview and exported PDF.
+        val variant = template.id.substringAfterLast('_').toIntOrNull()?.minus(1) ?: 0
+        val inset = (variant % 3) * 7f
+        val headerScale = 1f + (variant % 4) * 0.045f
+        val lineScale = 1f + (variant % 3) * 0.035f
         val sidebar = l == CvLayout.SIDEBAR_LEFT || l == CvLayout.SIDEBAR_RIGHT
-        val left = when (l) { CvLayout.SIDEBAR_LEFT -> 205f; CvLayout.TIMELINE -> 100f; CvLayout.EDITORIAL -> 78f; else -> 42f }
-        val right = if (l == CvLayout.SIDEBAR_RIGHT) 390f else 553f
-        val bodySize = if (l == CvLayout.COMPACT) 10f else 11f
+        val left = (when (l) { CvLayout.SIDEBAR_LEFT -> 205f; CvLayout.TIMELINE -> 100f; CvLayout.EDITORIAL -> 78f; else -> 42f }) + inset
+        val right = (if (l == CvLayout.SIDEBAR_RIGHT) 390f else 553f) - inset
+        val bodySize = (if (l == CvLayout.COMPACT) 10f else 11f) * lineScale
         val output = mutableListOf<CvPage>()
         var text = mutableListOf<CvDrawText>()
         var first = true
@@ -80,7 +85,7 @@ object CvRenderer {
         val headerX = if (l == CvLayout.MONOGRAM) 112f else left
         val headerWidth = right - headerX - if (photo && !sidebar) 86f else 0f
         if (l == CvLayout.BANNER || l == CvLayout.EXECUTIVE) y = 62f
-        line(c.contact.fullName.ifBlank { "Curriculum Vitae" }, if (l == CvLayout.EXECUTIVE) 28f else 23f, true, template.accent, headerX, headerWidth, l == CvLayout.CENTERED)
+        line(c.contact.fullName.ifBlank { "Curriculum Vitae" }, (if (l == CvLayout.EXECUTIVE) 28f else 23f) * headerScale, true, template.accent, headerX, headerWidth, l == CvLayout.CENTERED)
         if (c.contact.headline.isNotBlank()) line(c.contact.headline, 12f, true, x = headerX, width = headerWidth, centered = l == CvLayout.CENTERED)
         val contacts = listOf(c.contact.email, c.contact.phone, c.contact.location, c.contact.website, c.contact.linkedin, c.contact.github).filter { it.isNotBlank() }
         if (sidebar) {
@@ -98,7 +103,7 @@ object CvRenderer {
             if (block.heading) {
                 // A heading and at least two following lines must fit on the same page.
                 if (y + 66f > HEIGHT - 48) finish()
-                y += if (l == CvLayout.COMPACT) 9f else 17f
+                y += (if (l == CvLayout.COMPACT) 9f else 17f) + (variant % 3) * 3f
                 line(block.text, 12f, true, template.accent)
                 y += 4f
             } else line(block.text)
