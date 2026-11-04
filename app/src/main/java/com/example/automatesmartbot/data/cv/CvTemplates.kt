@@ -69,8 +69,10 @@ object CvTemplates {
         require(catalog.size == 75 && catalog.map { it.id }.toSet().size == 75)
         require(freeIds.size == 27 && catalog.count { it.id !in freeIds } == 48)
     }
-    fun isProTemplate(id: String): Boolean = catalog.any { it.id == id } && id !in freeIds
-    fun canUse(id: String, verifiedPro: Boolean): Boolean = catalog.any { it.id == id } && (!isProTemplate(id) || verifiedPro)
+    private val legacyIds = setOf("student", "combination", "senior")
+    fun isProTemplate(id: String): Boolean = id in catalog.map { it.id } && id !in freeIds
+    fun canUse(id: String, verifiedPro: Boolean): Boolean =
+        id in legacyIds || (catalog.any { it.id == id } && (!isProTemplate(id) || verifiedPro))
     /** Old IDs remain readable without deleting or migrating saved CVs. */
     fun resolve(id: String): CvTemplate = catalog.firstOrNull { it.id == id } ?: when (id) {
         "student" -> all.first { it.layout == CvLayout.ACADEMIC }
