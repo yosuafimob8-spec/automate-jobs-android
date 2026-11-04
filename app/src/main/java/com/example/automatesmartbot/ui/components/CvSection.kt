@@ -17,6 +17,7 @@ import androidx.compose.material.icons.filled.DeleteOutline
 import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.UploadFile
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -114,7 +115,7 @@ fun CvSection(modifier: Modifier = Modifier) {
                         text = "CV Saya",
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
-                        color = com.example.automatesmartbot.ui.theme.KarirTextDark
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                 }
                 Surface(
@@ -136,7 +137,7 @@ fun CvSection(modifier: Modifier = Modifier) {
                 Text(
                     text = "Belum ada CV. Pilih file PDF maksimal 2 MB.",
                     fontSize = 12.sp,
-                    color = com.example.automatesmartbot.ui.theme.KarirTextMuted
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Button(
                     onClick = { picker.launch(arrayOf("application/pdf")) },
@@ -167,14 +168,14 @@ fun CvSection(modifier: Modifier = Modifier) {
                             text = selection?.displayName.orEmpty(),
                             fontSize = 13.sp,
                             fontWeight = FontWeight.SemiBold,
-                            color = com.example.automatesmartbot.ui.theme.KarirTextDark,
+                            color = MaterialTheme.colorScheme.onSurface,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
                         Text(
                             text = "${CvValidator.formatSize(selection?.sizeBytes ?: 0L)} • tersimpan di perangkat",
                             fontSize = 11.sp,
-                            color = com.example.automatesmartbot.ui.theme.KarirTextMuted
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                 }
@@ -182,7 +183,7 @@ fun CvSection(modifier: Modifier = Modifier) {
                 Text(
                     text = "CV ini tidak dikirim otomatis. Anda tetap dapat mengganti atau menghapusnya kapan saja.",
                     fontSize = 11.sp,
-                    color = com.example.automatesmartbot.ui.theme.KarirTextMuted,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     lineHeight = 16.sp
                 )
 
