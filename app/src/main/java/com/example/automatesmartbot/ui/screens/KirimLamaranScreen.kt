@@ -38,7 +38,6 @@ import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
 import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 import org.json.JSONObject
@@ -195,7 +194,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                     )
                     Text(
                         "Kelola CV, persetujuan, kandidat perusahaan, dan riwayat pengiriman resmi dalam satu alur terpusat.",
-                        color = KarirTextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         fontSize = 13.sp
                     )
                     Surface(
@@ -292,7 +291,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                 if (operatorSendAllowed) "Izin operasional tersedia; jadwal pengiriman diverifikasi oleh sistem."
                                 else "Pengiriman produksi memerlukan izin operasional; Anda tetap dapat menyiapkan konfigurasi.",
                                 fontSize = 11.5.sp,
-                                color = KarirTextMuted
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                             Text(
                                 if (cvUploaded) "✓ CV backend: Tersimpan dan siap dikirim" else "⚠ CV backend: Belum diunggah",
@@ -378,7 +377,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                     )
                     Text(
                         "Saya mengizinkan penggunaan CV dan profil untuk mengirim lamaran melalui Gmail, dengan batas maksimal 5 email per hari. Persetujuan berlaku sampai Anda menjeda Auto Apply.",
-                        color = KarirTextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         fontSize = 12.sp
                     )
 
@@ -514,7 +513,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                 ) {
                     Text(
                         "Belum ada kandidat lowongan yang dijadwalkan.",
-                        color = KarirTextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         fontSize = 12.5.sp,
                         modifier = Modifier.padding(16.dp)
                     )
@@ -546,7 +545,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         Text(
                             if (isActive) "✓ Lowongan aktif terverifikasi" else "Kontak spontan terdata",
                             fontSize = 11.5.sp,
-                            color = if (isActive) Color(0xFF16A34A) else KarirTextMuted
+                            color = if (isActive) Color(0xFF16A34A) else MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
                 }
@@ -573,7 +572,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                 ) {
                     Text(
                         "Belum ada riwayat pengiriman dari server.",
-                        color = KarirTextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         fontSize = 12.5.sp,
                         modifier = Modifier.padding(16.dp)
                     )
@@ -610,7 +609,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                 else if (d.optString("status") == "sent") "Menunggu konfirmasi Gmail"
                                 else d.optString("status", "Dalam antrean"),
                                 fontSize = 12.sp,
-                                color = if (confirmed) Color(0xFF16A34A) else KarirTextMuted
+                                color = if (confirmed) Color(0xFF16A34A) else MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
                         Icon(
