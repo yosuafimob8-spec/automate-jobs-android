@@ -10,6 +10,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.LocalOffer
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -46,7 +47,7 @@ fun PromoScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
             .padding(16.dp)
     ) {
         Column(
@@ -55,9 +56,9 @@ fun PromoScreen(
         ) {
             // Header Promo Qpon.id
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -82,7 +83,7 @@ fun PromoScreen(
                             text = "Promo Eksklusif Qpon.id",
                             fontWeight = FontWeight.Bold,
                             fontSize = 17.sp,
-                            color = KarirTextDark
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                     }
                     Text(
@@ -96,9 +97,9 @@ fun PromoScreen(
 
             // Membership Status Card
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -122,7 +123,7 @@ fun PromoScreen(
 
                     Surface(
                         color = if (isPro) Color(0xFFE8F5E9) else Color(0xFFFFF0E5),
-                        border = BorderStroke(1.dp, if (isPro) Color(0xFFA5D6A7) else Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, if (isPro) Color(0xFFA5D6A7) else MaterialTheme.colorScheme.outlineVariant),
                         shape = RoundedCornerShape(8.dp)
                     ) {
                         Text(
@@ -140,7 +141,7 @@ fun PromoScreen(
                 text = "Daftar Kupon Qpon.id Tersedia",
                 fontWeight = FontWeight.Bold,
                 fontSize = 15.sp,
-                color = KarirTextDark
+                color = MaterialTheme.colorScheme.onSurface
             )
 
             // Qpon List
@@ -150,9 +151,9 @@ fun PromoScreen(
             ) {
                 items(qponList) { qpon ->
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -169,7 +170,7 @@ fun PromoScreen(
                             ) {
                                 Surface(
                                     color = Color(0xFFFFF2E5),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                     shape = RoundedCornerShape(6.dp)
                                 ) {
                                     Text(
@@ -198,7 +199,7 @@ fun PromoScreen(
                             Text(
                                 text = qpon.description,
                                 fontSize = 13.sp,
-                                color = KarirTextDark,
+                                color = MaterialTheme.colorScheme.onSurface,
                                 lineHeight = 18.sp
                             )
 
