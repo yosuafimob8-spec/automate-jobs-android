@@ -64,10 +64,15 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
                 drafts = listOf(document) + _state.value.drafts, message = null, ats = null)
         } catch (e: Exception) { message("Draf gagal dibuat: ${e.message}") }
     }
-    fun selectDocument(id: String) {
-        val document = store.load(id) ?: return message("Draf tidak dapat dibaca.")
+    fun selectDocument(id: String, verifiedPro: Boolean = false): Boolean {
+        val document = store.load(id) ?: run { message("Draf tidak dapat dibaca."); return false }
+        if (!CvTemplates.canUse(document.templateId, verifiedPro)) {
+            message("Draf menggunakan template PRO. Perpanjang langganan untuk membukanya.")
+            return false
+        }
         prefs.edit().putString("active", id).apply()
         _state.value = _state.value.copy(activeId = id, draft = document.content, templateId = document.templateId, ats = null)
+        return true
     }
     fun updateContent(transform: (CvContent) -> CvContent) {
         if (_state.value.activeId == null) newDocument()
