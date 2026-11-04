@@ -534,7 +534,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                         )
                         Text(
                             "Isi CV telah dibaca dan akan digunakan sebagai konteks wawancara.",
-                            color = Color(0xFF475569),
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
                             style = MaterialTheme.typography.bodySmall
                         )
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -568,7 +568,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             if (error.isNotBlank()) Text(error, color = MaterialTheme.colorScheme.error)
         }
     } else if (report.isNotBlank()) {
-        Column(Modifier.fillMaxSize().background(Color(0xFFFFFBF7)).verticalScroll(rememberScrollState()).padding(18.dp),
+        Column(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background).verticalScroll(rememberScrollState()).padding(18.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)) {
             Text("←  Hasil Interview", modifier = Modifier.clickable { report = ""; started = false; showPreparation = true }, color = orange,
                 fontWeight = FontWeight.Bold, fontSize = 18.sp)
@@ -603,8 +603,8 @@ Text(if (resultScore == -1) "Evaluasi kualitatif" else "$resultScore / 100", col
             }
         }
     } else {
-        Column(Modifier.fillMaxSize().background(Color(0xFFFFFBF7))) {
-            Row(Modifier.fillMaxWidth().background(Color.White).border(BorderStroke(0.75.dp, Color(0xFFF1E5DC))).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+        Column(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
+            Row(Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surface).border(BorderStroke(0.75.dp, MaterialTheme.colorScheme.outlineVariant)).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
                 Text("‹", modifier = Modifier.clickable { started = false; showPreparation = true; tts.stop() }, color = ink, style = MaterialTheme.typography.headlineMedium)
                 Spacer(Modifier.width(12.dp))
                 Text(if (interviewer == "male") "👨🏻‍💼" else "👩🏻‍💼", style = MaterialTheme.typography.headlineMedium)
@@ -632,7 +632,7 @@ Text(if (resultScore == -1) "Evaluasi kualitatif" else "$resultScore / 100", col
                 if (loading) item { Row(Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) { CircularProgressIndicator(Modifier.size(22.dp), color = orange, strokeWidth = 2.dp); Spacer(Modifier.width(10.dp)); Text("AI sedang menyiapkan pertanyaan...", color = ink) } }
             }
             if (error.isNotBlank()) Text(error, Modifier.padding(horizontal = 16.dp), color = MaterialTheme.colorScheme.error)
-            Row(Modifier.fillMaxWidth().background(Color.White).padding(10.dp),
+            Row(Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surface).padding(10.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
                 if (!voiceMode) OutlinedTextField(answer, { answer = it }, modifier = Modifier.weight(1f),
                     placeholder = { Text("Ketik jawaban Anda...", color = muted) }, maxLines = 4,
@@ -654,7 +654,7 @@ Text(if (resultScore == -1) "Evaluasi kualitatif" else "$resultScore / 100", col
                 }, colors = ButtonDefaults.buttonColors(containerColor = orange),
                     contentPadding = PaddingValues(12.dp)) { Text("➤", color = Color.White) }
             }
-            Row(Modifier.fillMaxWidth().background(Color.White).padding(horizontal = 12.dp, vertical = 4.dp),
+            Row(Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surface).padding(horizontal = 12.dp, vertical = 4.dp),
                 horizontalArrangement = Arrangement.SpaceBetween) {
                 TextButton(enabled = !loading, onClick = {
                     send("reply", history + InterviewTurn(question, "lewati"))
