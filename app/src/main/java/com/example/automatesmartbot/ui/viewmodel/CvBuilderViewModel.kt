@@ -89,14 +89,14 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
         _state.value = current.copy(draft = transform(current.draft), ats = null)
         persist()
     }
-    fun setTemplate(id: String, verifiedPro: Boolean = false) {
+    fun setTemplate(id: String, verifiedPro: Boolean = false): Boolean {
         if (!CvTemplates.canUse(id, verifiedPro && verifiedProAccess)) {
             message("Template PRO memerlukan akun PRO terverifikasi.")
-            return
+            return false
         }
         if (_state.value.activeId == null) newDocument()
         _state.value = _state.value.copy(templateId = id)
-        persist()
+        return persist()
     }
     private fun persist(): Boolean {
         val current = _state.value
