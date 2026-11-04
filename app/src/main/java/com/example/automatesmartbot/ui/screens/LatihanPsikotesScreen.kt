@@ -373,7 +373,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                                 item {
                                     MockupCard {
                                         Text("📊  Profil Kemampuan", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.ExtraBold, style = MaterialTheme.typography.titleLarge)
-                                        Text("Dari $total soal, kamu menjawab $correct soal dengan benar dan $wrong salah. Tingkat ketepatanmu $accuracy%. Evaluasi ini menunjukkan hasil latihan berdasarkan jawaban yang tersedia.", color = Color(0xFF222222), style = MaterialTheme.typography.bodyMedium)
+                                        Text("Dari $total soal, kamu menjawab $correct soal dengan benar dan $wrong salah. Tingkat ketepatanmu $accuracy%. Evaluasi ini menunjukkan hasil latihan berdasarkan jawaban yang tersedia.", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.bodyMedium)
                                     }
                                 }
                                 item {
@@ -596,12 +596,12 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
     val answered = questions.count { it.get("selected_option_id")?.takeUnless { v -> v.isJsonNull } != null }
     val allAnswered = questions.isNotEmpty() && answered == questions.size
     if (confirm) AlertDialog(
-        containerColor = MaterialTheme.colorScheme.surface, titleContentColor = ink, textContentColor = ink,
+        containerColor = MaterialTheme.colorScheme.surface, titleContentColor = MaterialTheme.colorScheme.onSurface, textContentColor = MaterialTheme.colorScheme.onSurface,
         onDismissRequest = { confirm = false },
-        title = { Text("Selesaikan tes?", color = ink) },
-        text = { Text("Semua $answered soal sudah dijawab. Kirim untuk melihat nilai?", color = ink) },
+        title = { Text("Selesaikan tes?", color = MaterialTheme.colorScheme.onSurface) },
+        text = { Text("Semua $answered soal sudah dijawab. Kirim untuk melihat nilai?", color = MaterialTheme.colorScheme.onSurface) },
         confirmButton = { TextButton(onClick = { confirm = false; if (!submitting) onSubmit() }) { Text("Selesaikan", color = orange, fontWeight = FontWeight.Bold) } },
-        dismissButton = { TextButton(onClick = { confirm = false }) { Text("Periksa Lagi", color = ink) } }
+        dismissButton = { TextButton(onClick = { confirm = false }) { Text("Periksa Lagi", color = MaterialTheme.colorScheme.onSurface) } }
     )
     Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Card(
@@ -611,11 +611,11 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
         ) {
             Row(Modifier.fillMaxWidth().padding(18.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                Column { Text("⏱  SISA WAKTU", color = Color(0xFF58657A), style = MaterialTheme.typography.labelMedium); Text("%02d:%02d".format(remaining / 60, remaining % 60), color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
-                Column(horizontalAlignment = Alignment.End) { Text("TERJAWAB", color = Color(0xFF58657A), style = MaterialTheme.typography.labelMedium); Text("$answered/${questions.size}", color = ink, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
+                Column { Text("⏱  SISA WAKTU", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.labelMedium); Text("%02d:%02d".format(remaining / 60, remaining % 60), color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
+                Column(horizontalAlignment = Alignment.End) { Text("TERJAWAB", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.labelMedium); Text("$answered/${questions.size}", color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold) }
             }
         }
-        Text("📝 Soal ${index + 1} dari ${questions.size}", fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
+        Text("📝 Soal ${index + 1} dari ${questions.size}", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.titleMedium)
         LinearProgressIndicator(progress = { if (questions.isEmpty()) 0f else answered.toFloat() / questions.size }, modifier = Modifier.fillMaxWidth().height(7.dp), color = orange, trackColor = Color(0xFFE3EBF1))
         questions.getOrNull(index)?.let { q ->
             Card(
@@ -626,13 +626,13 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(Modifier.fillMaxWidth().padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text(q.s("prompt", q.s("question", "Soal tidak tersedia")), fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
+                    Text(q.s("prompt", q.s("question", "Soal tidak tersedia")), fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.titleMedium)
                     (q.getAsJsonArray("options")?.map { it.asJsonObject } ?: emptyList()).forEach { option ->
                         val selected = q.s("selected_option_id") == option.s("id")
                         Card(onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFE8DC) else MaterialTheme.colorScheme.surface), border = androidx.compose.foundation.BorderStroke(if (selected) 2.dp else 1.dp, if (selected) orange else MaterialTheme.colorScheme.outlineVariant)) {
                             Row(Modifier.fillMaxWidth().padding(horizontal = 8.dp, vertical = 7.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                                 RadioButton(selected = selected, onClick = { if (!submitting && remaining > 0) onAnswer(q.s("question_id"), option.s("id")) }, modifier = Modifier.size(36.dp), colors = RadioButtonDefaults.colors(selectedColor = orange))
-                                Text(option.s("text"), color = ink, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
+                                Text(option.s("text"), color = MaterialTheme.colorScheme.onSurface, modifier = Modifier.weight(1f), style = MaterialTheme.typography.bodyMedium)
                             }
                         }
                     }
@@ -648,7 +648,7 @@ internal fun ExamPanel(session: JsonObject, questions: List<JsonObject>, submitt
             }
         }
         if (pendingCount > 0) TextButton(onClick = onSync, enabled = !submitting) { Text("Sinkronkan Jawaban ($pendingCount)") }
-        if (index == questions.lastIndex && !allAnswered) Text("Jawab semua soal untuk menyelesaikan tes. Gunakan Sebelumnya untuk memeriksa jawaban.", color = Color(0xFF58657A), style = MaterialTheme.typography.bodySmall)
+        if (index == questions.lastIndex && !allAnswered) Text("Jawab semua soal untuk menyelesaikan tes. Gunakan Sebelumnya untuk memeriksa jawaban.", color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.bodySmall)
     }
 }
 
@@ -669,7 +669,7 @@ private fun HistoryScoreCard(title: String, score: Int?) {
                     style = MaterialTheme.typography.headlineSmall)
             }
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text(title, color = ink, fontWeight = FontWeight.Bold)
+                Text(title, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold)
                 Text(if (score == null) "Asesmen kepribadian" else "Skor: $score / 100", color = teal)
                 if (score != null) LinearProgressIndicator(progress = { score.coerceIn(0, 100) / 100f },
                     color = teal, trackColor = Color(0xFFE8F0F3), modifier = Modifier.fillMaxWidth())
