@@ -55,8 +55,6 @@ import com.example.automatesmartbot.ui.components.CvSection
 import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import com.example.automatesmartbot.ui.viewmodel.ProfileSetupViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -98,11 +96,11 @@ fun OnboardingProfileScreen(
         focusedBorderColor = KarirOrange,
         unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
         focusedLabelColor = KarirOrange,
-        unfocusedLabelColor = KarirTextMuted,
+        unfocusedLabelColor = MaterialTheme.colorScheme.onSurfaceVariant,
         focusedContainerColor = MaterialTheme.colorScheme.surface,
         unfocusedContainerColor = MaterialTheme.colorScheme.surface,
-        focusedTextColor = KarirTextDark,
-        unfocusedTextColor = KarirTextDark,
+        focusedTextColor = MaterialTheme.colorScheme.onSurface,
+        unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
         cursorColor = KarirOrange
     )
 
@@ -115,7 +113,7 @@ fun OnboardingProfileScreen(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Kembali",
-                            tint = KarirTextDark
+                            tint = MaterialTheme.colorScheme.onSurface
                         )
                     }
                 },
