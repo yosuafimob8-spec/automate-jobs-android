@@ -129,7 +129,7 @@ fun ProfilScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
     ) {
         if (isLoading && profile == null && errorMessage == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -186,8 +186,8 @@ fun ProfilScreen(
                         .fillMaxWidth()
                         .padding(horizontal = 16.dp, vertical = 8.dp),
                     shape = RoundedCornerShape(16.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                 ) {
                     Column(
@@ -208,7 +208,7 @@ fun ProfilScreen(
                             Surface(
                                 shape = RoundedCornerShape(10.dp),
                                 color = Color(0xFFFFF3E0),
-                                border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                             ) {
                                 Text(
                                     "DATA UTAMA",
@@ -223,7 +223,7 @@ fun ProfilScreen(
                             "Profil Saya",
                             fontWeight = FontWeight.Bold,
                             fontSize = 22.sp,
-                            color = KarirTextDark
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                         Text(
                             "Kelola data diri, kontak, preferensi, dan kelengkapan CV Anda.",
@@ -263,9 +263,9 @@ fun ProfilScreen(
 @Composable
 private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) -> Unit) {
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -273,7 +273,7 @@ private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) 
             modifier = Modifier.padding(18.dp),
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            Text("Tema Tampilan", fontWeight = FontWeight.Bold, color = KarirTextDark, fontSize = 16.sp)
+            Text("Tema Tampilan", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface, fontSize = 16.sp)
             Text("Pilih mode tampilan Karir Mate yang nyaman bagi Anda.", color = KarirTextMuted, fontSize = 12.sp)
             Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 ThemeMode.entries.forEach { mode ->
@@ -286,10 +286,10 @@ private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) 
                         colors = androidx.compose.material3.FilterChipDefaults.filterChipColors(
                             selectedContainerColor = Color(0xFFFFF3E0),
                             selectedLabelColor = Color(0xFFE65100),
-                            containerColor = Color.White,
-                            labelColor = KarirTextDark
+                            containerColor = MaterialTheme.colorScheme.surface,
+                            labelColor = MaterialTheme.colorScheme.onSurface
                         ),
-                        border = BorderStroke(1.dp, if (selected) KarirOrange else Color(0xFFFFDEC9))
+                        border = BorderStroke(1.dp, if (selected) KarirOrange else MaterialTheme.colorScheme.outlineVariant)
                     )
                 }
             }
@@ -321,7 +321,7 @@ fun ProfileDetailRow(
             modifier = Modifier.weight(1f),
             fontSize = 13.sp,
             fontWeight = FontWeight.SemiBold,
-            color = KarirTextDark,
+            color = MaterialTheme.colorScheme.onSurface,
             textAlign = TextAlign.End,
             maxLines = 2,
             overflow = TextOverflow.Ellipsis
@@ -346,9 +346,9 @@ private fun ProfileIdentityCard(
     val avatar = remember(photoUri) { runCatching { photoUri?.let { context.contentResolver.openInputStream(Uri.parse(it))?.use(BitmapFactory::decodeStream)?.asImageBitmap() } }.getOrNull() }
 
     Card(
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -364,7 +364,7 @@ private fun ProfileIdentityCard(
             ) {
                 Surface(
                     color = Color(0xFFFFF3E0),
-                    border = BorderStroke(1.5.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.5.dp, MaterialTheme.colorScheme.outlineVariant),
                     shape = RoundedCornerShape(50),
                     modifier = Modifier.size(80.dp)
                 ) {
@@ -391,11 +391,11 @@ private fun ProfileIdentityCard(
                         profile?.fullName?.takeIf { it.isNotBlank() } ?: "Nama belum diisi",
                         fontWeight = FontWeight.Bold,
                         fontSize = 18.sp,
-                        color = KarirTextDark
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                     Surface(
                         color = Color(0xFFFFF3E0),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         shape = RoundedCornerShape(10.dp)
                     ) {
                         Text(
@@ -429,12 +429,12 @@ private fun ProfileIdentityCard(
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFBF7)),
                 shape = RoundedCornerShape(14.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                        Text("Kelengkapan Profil", color = KarirTextDark, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                        Text("Kelengkapan Profil", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold, fontSize = 13.sp)
                         Text("${(completion * 100).toInt()}%", color = Color(0xFF16A34A), fontWeight = FontWeight.Bold, fontSize = 13.sp)
                     }
                     LinearProgressIndicator(
@@ -540,11 +540,11 @@ private fun ProfileIdentityCard(
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFBF7)),
                 shape = RoundedCornerShape(14.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    Text("Ringkasan Karier", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = KarirTextDark)
+                    Text("Ringkasan Karier", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurface)
                     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         CareerSummaryTile("CV", "Buka CV", Color(0xFFFFF3E0), Modifier.weight(1f))
                         CareerSummaryTile("Lamaran", "Riwayat", Color(0xFFFFF3E0), Modifier.weight(1f))
@@ -605,7 +605,7 @@ private fun CareerSummaryTile(title: String, caption: String, color: Color, modi
     Surface(
         modifier = modifier,
         color = color,
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         shape = RoundedCornerShape(12.dp)
     ) {
         Column(
@@ -613,7 +613,7 @@ private fun CareerSummaryTile(title: String, caption: String, color: Color, modi
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text("—", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = KarirOrange)
-            Text(title, fontSize = 11.5.sp, fontWeight = FontWeight.Bold, color = KarirTextDark)
+            Text(title, fontSize = 11.5.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
             Text(caption, fontSize = 10.sp, color = KarirTextMuted)
         }
     }
