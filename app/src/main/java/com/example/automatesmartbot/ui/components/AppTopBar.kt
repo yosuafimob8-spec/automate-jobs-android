@@ -30,14 +30,14 @@ fun AppTopBar(
     onBack: (() -> Unit)? = null
 ) {
     TopAppBar(
-        modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC)),
+        modifier = Modifier.border(width = 0.75.dp, color = MaterialTheme.colorScheme.outlineVariant),
         navigationIcon = {
             if (onBack != null) {
                 IconButton(onClick = onBack) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Kembali",
-                        tint = KarirTextDark
+                        tint = MaterialTheme.colorScheme.onSurface
                     )
                 }
             }
@@ -56,7 +56,7 @@ fun AppTopBar(
                     text = title,
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp,
-                    color = KarirTextDark
+                    color = MaterialTheme.colorScheme.onSurface
                 )
             }
         },
@@ -65,7 +65,7 @@ fun AppTopBar(
             Box(
                 modifier = Modifier
                     .clip(RoundedCornerShape(16.dp))
-                    .background(if (isPro) KarirOrange else Color(0xFFFFF0E5))
+                    .background(if (isPro) KarirOrange else MaterialTheme.colorScheme.surfaceVariant)
                     .padding(horizontal = 10.dp, vertical = 5.dp),
                 contentAlignment = Alignment.Center
             ) {
@@ -89,7 +89,7 @@ fun AppTopBar(
                     } else {
                         Text(
                             text = "FREE",
-                            color = Color(0xFFE65100),
+                            color = MaterialTheme.colorScheme.onSurface,
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp
                         )
@@ -104,13 +104,13 @@ fun AppTopBar(
                 Icon(
                     imageVector = Icons.Default.Person,
                     contentDescription = "Profil",
-                    tint = KarirNavIconUnselected
+                    tint = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = Color(0xFFFFFDF9),
-            titleContentColor = KarirTextDark
+            containerColor = MaterialTheme.colorScheme.surface,
+            titleContentColor = MaterialTheme.colorScheme.onSurface
         )
     )
 }
