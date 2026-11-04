@@ -10,6 +10,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -35,15 +36,15 @@ fun FeatureComingSoonScreen(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient),
+            .background(MaterialTheme.colorScheme.background),
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         item {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -71,7 +72,7 @@ fun FeatureComingSoonScreen(
                         }
                         Surface(
                             color = Color(0xFFFFF3E0),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                             shape = RoundedCornerShape(8.dp)
                         ) {
                             Text(
@@ -88,7 +89,7 @@ fun FeatureComingSoonScreen(
                         text = title,
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = KarirTextDark
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         text = description,
@@ -102,9 +103,9 @@ fun FeatureComingSoonScreen(
 
         item {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -116,7 +117,7 @@ fun FeatureComingSoonScreen(
                         text = "Rencana Fitur",
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
-                        color = KarirTextDark
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                     bullets.forEach { bullet ->
                         Row(
@@ -134,7 +135,7 @@ fun FeatureComingSoonScreen(
                             Text(
                                 text = bullet,
                                 fontSize = 12.5.sp,
-                                color = KarirTextDark,
+                                color = MaterialTheme.colorScheme.onSurface,
                                 lineHeight = 18.sp
                             )
                         }
@@ -145,9 +146,9 @@ fun FeatureComingSoonScreen(
 
         item {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -169,7 +170,7 @@ fun FeatureComingSoonScreen(
                             text = "Status Pengembangan",
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp,
-                            color = KarirTextDark
+                            color = MaterialTheme.colorScheme.onSurface
                         )
                     }
                     Text(
