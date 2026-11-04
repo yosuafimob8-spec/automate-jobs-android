@@ -52,7 +52,14 @@ object CvTemplates {
         }
     }
     val catalog: List<CvTemplate> = all + generatedCatalog
-    val freeIds: Set<String> = catalog.filterIndexed { index, _ -> index < 27 }.map { it.id }.toSet()
+    // Keep all original templates FREE; distribute remaining FREE slots across categories.
+    private val freeQuota = mapOf("ATS" to 5, "Profesional" to 5, "Modern" to 4, "Minimalis" to 4, "Fresh Graduate" to 3, "Eksekutif" to 3, "Kreatif" to 3)
+    val freeIds: Set<String> = buildSet {
+        addAll(all.map { it.id })
+        freeQuota.forEach { (category, count) ->
+            addAll(catalog.filter { it.category == category }.take(count).map { it.id })
+        }
+    }
     fun isProTemplate(id: String): Boolean = catalog.any { it.id == id } && id !in freeIds
     fun canUse(id: String, verifiedPro: Boolean): Boolean = catalog.any { it.id == id } && (!isProTemplate(id) || verifiedPro)
     /** Old IDs remain readable without deleting or migrating saved CVs. */
