@@ -27,6 +27,8 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavType
+import androidx.navigation.navArgument
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -284,6 +286,11 @@ private fun MainDashboardContent(
                     )
 
             }
+            composable(Screen.UpgradePro.route) { UpgradeProScreen(onCheckout = { navController.navigate("pro_checkout/$it") }) }
+            composable(Screen.ProCheckout.route, arguments = listOf(navArgument("plan") { type = NavType.IntType })) { entry ->
+                ProCheckoutScreen(entry.arguments?.getInt("plan") ?: 0, onComplete = { navController.navigate(Screen.ManagePro.route) })
+            }
+            composable(Screen.ManagePro.route) { ManageProSubscriptionScreen(onUpgrade = { navController.navigate(Screen.UpgradePro.route) }) }
             composable(Screen.CariLowongan.route) {
                 FixedCanvasTheme(dark = false) {
                     CariLowonganScreen(isPro = isPro)
