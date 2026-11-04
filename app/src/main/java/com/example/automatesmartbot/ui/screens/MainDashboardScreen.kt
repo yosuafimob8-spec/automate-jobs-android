@@ -169,7 +169,7 @@ private fun MainDashboardContent(
         }
     }
 
-    val isPro = dashboardStatus?.isPro == true
+    val isPro = dashboardStatus?.isPro == true && dashboardStatus?.membershipVerified == true
     val isOnline = dashboardStatus?.isOnline == true
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -321,7 +321,7 @@ private fun MainDashboardContent(
                 CareerDocumentsScreen(onLegacyDocuments = { navController.navigate(Screen.SuratIzinDokumen.route) { launchSingleTop = true } })
             }
             composable(Screen.CvBuilder.route) {
-                CvBuilderScreen(viewModel = cvViewModel, onBack = cvBack, isPro = dashboardStatus?.membershipVerified == true && isPro)
+                CvBuilderScreen(viewModel = cvViewModel, onBack = cvBack, isPro = isPro)
             }
             composable(Screen.LatihanPsikotes.route) {
                 LatihanPsikotesScreen(isPro = isPro, onExit = navigateUpOrDashboard)
