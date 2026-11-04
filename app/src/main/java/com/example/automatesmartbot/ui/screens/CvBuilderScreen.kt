@@ -261,14 +261,14 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
                                 )
                                 Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                                     Button(
-                                        onClick = { viewModel.selectDocument(document.id); nav("CV Saya") },
+                                        onClick = { if (viewModel.selectDocument(document.id, isPro)) nav("CV Saya") },
                                         shape = RoundedCornerShape(10.dp),
                                         colors = karirButtonColors()
                                     ) {
                                         Text("Edit CV", fontWeight = FontWeight.Bold, fontSize = 12.sp)
                                     }
                                     OutlinedButton(
-                                        onClick = { viewModel.selectDocument(document.id); nav("Preview CV") },
+                                        onClick = { if (viewModel.selectDocument(document.id, isPro)) nav("Preview CV") },
                                         shape = RoundedCornerShape(10.dp),
                                         border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
                                         colors = ButtonDefaults.outlinedButtonColors(contentColor = KarirTextDark)
