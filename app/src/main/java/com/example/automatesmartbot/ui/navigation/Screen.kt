@@ -29,6 +29,9 @@ sealed class Screen(val route: String, val title: String, val icon: ImageVector)
     object WorkPedia : Screen("workpedia", "WorkPedia", Icons.Default.Description)
     object Riwayat : Screen("riwayat", "Riwayat", Icons.Default.History)
     object SuratIzinDokumen : Screen("surat_izin_dokumen", "Dokumen", Icons.Default.FolderShared)
+    object UpgradePro : Screen("upgrade_pro", "Upgrade PRO", Icons.Default.Work)
+    object ProCheckout : Screen("pro_checkout/{plan}", "Checkout PRO", Icons.Default.Work)
+    object ManagePro : Screen("manage_pro", "Kelola Langganan", Icons.Default.Work)
     object Profil : Screen("profil", "Profil", Icons.Default.Person)
     object Login : Screen("login", "Masuk", Icons.Default.Lock)
     object Register : Screen("register", "Daftar", Icons.Default.Person)
@@ -50,7 +53,8 @@ val detailNavItems = listOf(
     Screen.LatihanPsikotes,
     Screen.AiInterview,
     Screen.WorkPedia,
-    Screen.SuratIzinDokumen
+    Screen.SuratIzinDokumen,
+    Screen.UpgradePro, Screen.ProCheckout, Screen.ManagePro
 )
 
 val appShellItems = bottomNavItems + detailNavItems
