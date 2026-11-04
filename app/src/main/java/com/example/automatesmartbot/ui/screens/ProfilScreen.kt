@@ -284,8 +284,8 @@ private fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode) 
                         onClick = { onModeSelected(mode) },
                         label = { Text(mode.label, maxLines = 1, fontSize = 11.5.sp, fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal) },
                         colors = androidx.compose.material3.FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = Color(0xFFFFF3E0),
-                            selectedLabelColor = Color(0xFFE65100),
+                            selectedContainerColor = MaterialTheme.colorScheme.primaryContainer,
+                            selectedLabelColor = MaterialTheme.colorScheme.onPrimaryContainer,
                             containerColor = MaterialTheme.colorScheme.surface,
                             labelColor = MaterialTheme.colorScheme.onSurface
                         ),
