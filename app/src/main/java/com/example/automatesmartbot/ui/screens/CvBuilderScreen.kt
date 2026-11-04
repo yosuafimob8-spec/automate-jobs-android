@@ -259,7 +259,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                         onClick = { viewModel.selectDocument(document.id); nav("Preview CV") },
                                         shape = RoundedCornerShape(10.dp),
                                         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
-                                        colors = ButtonDefaults.outlinedButtonColors(contentColor = KarirTextDark)
+                                        colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.onSurface)
                                     ) {
                                         Text("Preview", fontSize = 12.sp)
                                     }
@@ -294,7 +294,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
                                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
-                                    colors = ButtonDefaults.outlinedButtonColors(containerColor = Color(0xFFFFFBF7), contentColor = KarirTextDark)
+                                    colors = ButtonDefaults.outlinedButtonColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = MaterialTheme.colorScheme.onSurface)
                                 ) {
                                     Row(
                                         modifier = Modifier.fillMaxWidth(),
@@ -696,7 +696,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
                                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
-                                    colors = ButtonDefaults.outlinedButtonColors(containerColor = Color(0xFFFFFBF7))
+                                    colors = ButtonDefaults.outlinedButtonColors(containerColor = MaterialTheme.colorScheme.surface)
                                 ) {
                                     Text(type.label, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Medium)
                                 }
