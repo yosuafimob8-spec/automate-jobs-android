@@ -1,5 +1,11 @@
 package com.example.automatesmartbot.ui.screens
 
+import androidx.compose.animation.core.animateIntAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.Canvas
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -533,19 +539,48 @@ fun JobTrainingScreen() {
                     OutlinedButton(colors = trainingButtonColors, onClick = { resetExamAnswers(); stage = "exam"; questionIndex = 0 }) { Text("Ulangi Soal") }
                 }
                 "result" -> {
-                    val score = examScore
-                    val passed = score != null && score >= 80 && certificate != null
-                    Text("Hasil Evaluasi Pelatihan", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
-                    Text(course.title, color = darkTraining)
-                    TrainingCard {
-                        Text("Skor Akhir", fontWeight = FontWeight.Bold, color = darkTraining)
-                        Text("${score ?: "—"} / 100", fontSize = 48.sp, fontWeight = FontWeight.ExtraBold, color = orangeTraining)
-                        LinearProgressIndicator(progress = { (score ?: 0).coerceIn(0, 100) / 100f }, modifier = Modifier.fillMaxWidth().height(10.dp), color = if (passed) tealTraining else orangeTraining)
-                        Text(if (passed) "LULUS" else "BELUM LULUS", fontWeight = FontWeight.ExtraBold, color = if (passed) tealTraining else orangeTraining)
-                        Text(if (passed) "Selamat! Pertahankan kemampuanmu." else "Pelajari kembali modul dan ulangi evaluasi.", color = darkTraining)
-                        examCorrect?.let { correct -> Text("Benar: $correct • Salah: ${offlineQuestions.size - correct}", color = darkTraining) }
-                        Text("Nilai minimal kelulusan: 80/100", color = trainingDisabledText)
+                    val score = examScore ?: 0
+                    var animateScore by remember { mutableStateOf(false) }
+                    LaunchedEffect(score) { animateScore = true }
+                    val animatedScore by animateIntAsState(if (animateScore) score else 0, animationSpec = tween(1000), label = "trainingScore")
+                    val passed = score >= 80 && certificate != null
+                    val rating = when { score >= 80 -> "Sangat Baik"; score >= 60 -> "Baik"; score >= 40 -> "Terus Berkembang"; else -> "Tahap Pengembangan" }
+                    Text("LAPORAN LATIHAN", color = Color(0xFF008A81), fontWeight = FontWeight.Bold)
+                    Text("Hasil Pelatihan Kerja", color = darkTraining, fontSize = 28.sp, fontWeight = FontWeight.ExtraBold)
+                    Text(course.title, color = Color(0xFF59667A))
+                    Card(shape = RoundedCornerShape(26.dp), colors = CardDefaults.cardColors(containerColor = Color(0xFF003A2B)), elevation = CardDefaults.cardElevation(6.dp)) {
+                        Column(Modifier.fillMaxWidth().background(Brush.verticalGradient(listOf(Color(0xFF003C2E), Color(0xFF00583A), Color(0xFF002F28)))).padding(22.dp), verticalArrangement = Arrangement.spacedBy(16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                            Text("♛  HASIL PELATIHAN  ♛", color = Color(0xFFFFD978), fontWeight = FontWeight.Bold)
+                            Box(Modifier.size(194.dp), contentAlignment = Alignment.Center) {
+                                Canvas(Modifier.fillMaxSize()) {
+                                    drawArc(Color.White.copy(alpha = 0.18f), 0f, 360f, false, style = Stroke(17.dp.toPx(), cap = StrokeCap.Round))
+                                    drawArc(Color(0xFFFFC45D), -90f, 360f * animatedScore / 100f, false, style = Stroke(17.dp.toPx(), cap = StrokeCap.Round))
+                                }
+                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                    Text("Skor Akhir", color = Color.White, fontSize = 13.sp)
+                                    Text("$animatedScore", color = Color.White, fontSize = 58.sp, fontWeight = FontWeight.ExtraBold)
+                                    Text("/ 100", color = Color(0xFFB9F2E9), fontSize = 18.sp)
+                                }
+                            }
+                            Surface(color = Color(0xFFFFC45D), shape = RoundedCornerShape(3.dp)) {
+                                Text("🏆  $rating  🏆", color = Color(0xFF102C38), fontWeight = FontWeight.ExtraBold, modifier = Modifier.padding(horizontal = 24.dp, vertical = 10.dp))
+                            }
+                            examCorrect?.let { Text("$it dari ${offlineQuestions.size} soal benar", color = Color(0xFFE4F5F2)) }
+                            HorizontalDivider(color = Color.White.copy(alpha = 0.2f))
+                            Text(if (passed) "✦  Selamat! Pertahankan hasil baikmu dan terus tingkatkan keterampilan." else "✦  Tetap semangat! Pelajari materi kembali dan tingkatkan hasil latihanmu.", color = Color.White, textAlign = TextAlign.Center)
+                        }
                     }
+                    examCorrect?.let { correct ->
+                        val total = offlineQuestions.size.coerceAtLeast(1)
+                        Card(shape = RoundedCornerShape(22.dp), colors = CardDefaults.cardColors(containerColor = Color.White), elevation = CardDefaults.cardElevation(5.dp)) {
+                            Row(Modifier.fillMaxWidth().padding(vertical = 16.dp), horizontalArrangement = Arrangement.SpaceEvenly) {
+                                TrainingResultStat("✓", "$correct", "Benar", Color(0xFF0EAE4D), Modifier.weight(1f))
+                                TrainingResultStat("✕", "${total - correct}", "Salah", Color(0xFFE52935), Modifier.weight(1f))
+                                TrainingResultStat("◎", "${correct * 100 / total}%", "Akurasi", Color(0xFFB319C7), Modifier.weight(1f))
+                            }
+                        }
+                    }
+                    Text(if (passed) "LULUS • Nilai minimal 80/100" else "BELUM LULUS • Nilai minimal 80/100", color = if (passed) tealTraining else orangeTraining, fontWeight = FontWeight.Bold)
                     if (message.isNotBlank()) Text(message, color = darkTraining)
                     if (passed) TrainingAction("Selesai • Kembali ke Pelatihan") { stage = "modules" }
                     else TrainingAction("Ulangi Evaluasi") { resetExamAnswers(); questionIndex = 0; stage = "exam" }
@@ -615,5 +650,14 @@ fun JobTrainingScreen() {
         }
     }
     }
+    }
+}
+
+@Composable
+private fun TrainingResultStat(symbol: String, value: String, label: String, tint: Color, modifier: Modifier = Modifier) {
+    Column(modifier, horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Text(symbol, color = tint, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+        Text(value, color = tint, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
+        Text(label, color = Color(0xFF64748B), fontSize = 12.sp)
     }
 }
