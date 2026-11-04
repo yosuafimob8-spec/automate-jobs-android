@@ -30,7 +30,6 @@ import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
 import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import com.example.automatesmartbot.ui.viewmodel.JobViewModel
 import com.example.automatesmartbot.util.UrlSafety
 
@@ -109,7 +108,7 @@ fun CariLowonganScreen(
                     Text(
                         text = "Temukan peluang kerja terverifikasi sesuai posisi dan lokasi pilihan Anda.",
                         fontSize = 12.sp,
-                        color = KarirTextMuted
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
@@ -199,7 +198,7 @@ fun CariLowonganScreen(
                             Text(
                                 text = errorMessage ?: "Terjadi kesalahan",
                                 fontSize = 12.sp,
-                                color = KarirTextMuted
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                             Button(
                                 onClick = { triggerSearch() },
@@ -230,7 +229,7 @@ fun CariLowonganScreen(
                             Text(
                                 text = "Coba ubah kata kunci posisi atau filter lokasi Anda.",
                                 fontSize = 12.sp,
-                                color = KarirTextMuted
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }
                     }
@@ -267,7 +266,7 @@ fun CariLowonganScreen(
                                 item {
                                     Text(
                                         "Belum ada lowongan aktif yang sesuai",
-                                        color = KarirTextMuted,
+                                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                                         fontSize = 12.sp
                                     )
                                 }
@@ -322,7 +321,7 @@ fun FilterDropdown(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Column(modifier = Modifier.weight(1f)) {
-                    Text(text = label, fontSize = 10.sp, color = KarirTextMuted)
+                    Text(text = label, fontSize = 10.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
                         text = selectedOption,
@@ -379,10 +378,10 @@ private fun JobCard(job: com.example.automatesmartbot.data.model.JobsV2Job, cont
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(6.dp)
             ) {
-                Icon(Icons.Default.Business, contentDescription = null, tint = KarirTextMuted, modifier = Modifier.size(14.dp))
+                Icon(Icons.Default.Business, contentDescription = null, tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.size(14.dp))
                 Text(
                     "${job.company ?: "Perusahaan"} • ${job.location ?: "Lokasi tidak diketahui"}",
-                    color = KarirTextMuted,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     fontSize = 12.sp
                 )
             }
@@ -416,7 +415,7 @@ private fun JobCard(job: com.example.automatesmartbot.data.model.JobsV2Job, cont
                     Text(action.label ?: "Lihat Sumber Resmi", fontSize = 12.sp, fontWeight = FontWeight.Bold)
                 }
             } else {
-                Text("Tidak ada tindakan lamaran terverifikasi.", color = KarirTextMuted, fontSize = 11.sp)
+                Text("Tidak ada tindakan lamaran terverifikasi.", color = MaterialTheme.colorScheme.onSurfaceVariant, fontSize = 11.sp)
             }
         }
     }
