@@ -131,6 +131,14 @@ private val primaryMenuItems = listOf(
         route = Screen.AiInterview.route
     ),
     MainMenuItem(
+        title = "Latihan Psikotes",
+        subtitle = "Tes numerik, logika & spasial",
+        icon = Icons.Default.Psychology,
+        iconTint = Color(0xFFE11D48),
+        bgTint = Color(0xFFFFF1F2),
+        route = Screen.LatihanPsikotes.route
+    ),
+    MainMenuItem(
         title = "CV Analyze",
         subtitle = "Cek & Tingkatkan CV",
         icon = Icons.Default.TrendingUp,
@@ -156,14 +164,6 @@ private val extraSearchableFeatures = listOf(
         iconTint = Color(0xFF16A34A),
         bgTint = Color(0xFFDCFCE7),
         route = Screen.KirimLamaran.route
-    ),
-    MainMenuItem(
-        title = "Latihan Psikotes",
-        subtitle = "Tes numerik, logika & spasial",
-        icon = Icons.Default.Psychology,
-        iconTint = Color(0xFFE11D48),
-        bgTint = Color(0xFFFFF1F2),
-        route = Screen.LatihanPsikotes.route
     ),
     MainMenuItem(
         title = "Dokumen Karier",
