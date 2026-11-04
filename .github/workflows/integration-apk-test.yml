@@ -1,8 +1,6 @@
 name: KarirMate Integration APK Test
 on:
-  push:
-    branches:
-      - integration/latest-base-all-fixes-20261102
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
