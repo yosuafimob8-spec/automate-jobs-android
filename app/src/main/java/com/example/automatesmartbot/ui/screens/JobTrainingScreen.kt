@@ -123,12 +123,14 @@ fun JobTrainingScreen() {
     var name by rememberSaveable { mutableStateOf(prefs.getString("name", "").orEmpty()) }
     var message by remember { mutableStateOf("") }
     var certificate by remember { mutableStateOf<JSONObject?>(null) }
+    var finalScore by rememberSaveable { mutableIntStateOf(-1) }
+    var finalPassed by rememberSaveable { mutableStateOf(false) }
     val completed = remember(courseId, version) { prefs.getStringSet("done_$courseId", emptySet()).orEmpty().toSet() }
     val answers = remember(courseId, version) { JSONArray(prefs.getString("answers_$courseId", "[]")) }
     val allDone = course.lessons.indices.all { it.toString() in completed }
     val serverAllDone = course.lessons.indices.all { it in serverModules }
     fun choose(id: String) {
-        courseId = id; module = 0; stage = "modules"; message = ""; certificate = null
+        courseId = id; module = 0; stage = "modules"; message = ""; certificate = null; finalScore = -1; finalPassed = false
         serverQuestions = null
         serverModules = emptySet()
         if (trainingApi != null) trainingScope.launch {
@@ -179,8 +181,10 @@ fun JobTrainingScreen() {
                     history.put(item)
                     prefs.edit().putString("certificates", history.toString()).apply()
                     certificate = item
-                    stage = "certificate"
-                    message = "Sertifikat terverifikasi server."
+                    finalScore = record.getInt("score")
+                    finalPassed = true
+                    stage = "result"
+                    message = "Pelatihan lulus. Sertifikat tersimpan di riwayat."
                 } catch (e: Exception) {
                     val detail = e.message.orEmpty()
                     message = when {
@@ -201,6 +205,8 @@ fun JobTrainingScreen() {
         if (values.any { it < 0 }) { message = "Jawab semua pertanyaan."; return }
         if (name.isBlank()) { message = "Isi nama peserta untuk sertifikat."; return }
         val score = TrainingCourses.score(values, offlineQuestions)
+        finalScore = score
+        finalPassed = score >= 80 && allDone
         message = "Nilai akhir: $score/100"
         if (score >= 80 && allDone) {
             val item = JSONObject().put("id", UUID.randomUUID().toString())
@@ -210,8 +216,9 @@ fun JobTrainingScreen() {
             history.put(item)
             prefs.edit().putString("certificates", history.toString()).apply()
             certificate = item
-            stage = "certificate"
+            stage = "result"
         } else {
+            stage = "result"
             message += ". Belum lulus; selesaikan modul dan ulangi evaluasi."
         }
     }
@@ -525,6 +532,14 @@ fun JobTrainingScreen() {
                     TrainingAction("Lihat Hasil", enabled = !trainingBusy) { evaluate() }
                     if (message.isNotBlank()) Text(message, color = orangeTraining)
                     OutlinedButton(colors = trainingButtonColors, onClick = { resetExamAnswers(); stage = "exam"; questionIndex = 0 }) { Text("Ulangi Soal") }
+                }
+                "result" -> {
+                    Text("Hasil Evaluasi Pelatihan", fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
+                    Text(if (finalScore >= 0) "$finalScore / 100" else "Nilai belum tersedia", fontSize = 34.sp, fontWeight = FontWeight.ExtraBold, color = if (finalPassed) tealTraining else orangeTraining)
+                    Text(if (finalPassed) "Selamat! Kamu lulus evaluasi pelatihan." else "Belum lulus. Nilai minimum 80/100 dan semua modul harus selesai.", color = darkTraining)
+                    if (finalPassed) Text("Sertifikat penyelesaian telah disimpan. Lihat melalui menu Sertifikat di dashboard.", color = tealTraining)
+                    TrainingAction("Kembali ke Pelatihan") { stage = "catalog" }
+                    if (!finalPassed) OutlinedButton(colors = trainingButtonColors, onClick = { resetExamAnswers(); stage = "exam"; questionIndex = 0 }) { Text("Ulangi Evaluasi") }
                 }
                 "certificate" -> {
                     Text("Sertifikat Penyelesaian", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
