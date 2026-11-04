@@ -20,8 +20,6 @@ import androidx.compose.ui.unit.sp
 import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -35,12 +33,12 @@ fun ForgotPasswordScreen(
         focusedBorderColor = KarirOrange,
         unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
         focusedLabelColor = KarirOrange,
-        unfocusedLabelColor = KarirTextMuted,
+        unfocusedLabelColor = MaterialTheme.colorScheme.onSurfaceVariant,
         cursorColor = KarirOrange,
         focusedContainerColor = MaterialTheme.colorScheme.surface,
         unfocusedContainerColor = MaterialTheme.colorScheme.surface,
-        focusedTextColor = KarirTextDark,
-        unfocusedTextColor = KarirTextDark
+        focusedTextColor = MaterialTheme.colorScheme.onSurface,
+        unfocusedTextColor = MaterialTheme.colorScheme.onSurface
     )
 
     Scaffold(
@@ -52,7 +50,7 @@ fun ForgotPasswordScreen(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Kembali",
-                            tint = KarirTextDark
+                            tint = MaterialTheme.colorScheme.onSurface
                         )
                     }
                 },
@@ -92,7 +90,7 @@ fun ForgotPasswordScreen(
                     Text(
                         text = "Masukkan alamat email terdaftar Anda untuk menerima tautan pemulihan kata sandi.",
                         fontSize = 12.5.sp,
-                        color = KarirTextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
