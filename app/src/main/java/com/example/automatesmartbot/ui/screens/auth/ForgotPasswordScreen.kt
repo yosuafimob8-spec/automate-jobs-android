@@ -8,6 +8,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Email
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -32,12 +33,12 @@ fun ForgotPasswordScreen(
 
     val textFieldColors = OutlinedTextFieldDefaults.colors(
         focusedBorderColor = KarirOrange,
-        unfocusedBorderColor = Color(0xFFFFDEC9),
+        unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
         focusedLabelColor = KarirOrange,
         unfocusedLabelColor = KarirTextMuted,
         cursorColor = KarirOrange,
-        focusedContainerColor = Color.White,
-        unfocusedContainerColor = Color.White,
+        focusedContainerColor = MaterialTheme.colorScheme.surface,
+        unfocusedContainerColor = MaterialTheme.colorScheme.surface,
         focusedTextColor = KarirTextDark,
         unfocusedTextColor = KarirTextDark
     )
@@ -55,7 +56,7 @@ fun ForgotPasswordScreen(
                         )
                     }
                 },
-                title = { Text("Reset Password", color = KarirTextDark, fontWeight = FontWeight.Bold, fontSize = 18.sp) },
+                title = { Text("Reset Password", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Bold, fontSize = 18.sp) },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFFFFDF9))
             )
         },
@@ -64,15 +65,15 @@ fun ForgotPasswordScreen(
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .background(KarirPageGradient)
+                .background(MaterialTheme.colorScheme.background)
                 .padding(innerPadding)
                 .padding(24.dp),
             contentAlignment = Alignment.Center
         ) {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(20.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -85,7 +86,7 @@ fun ForgotPasswordScreen(
                         text = "Reset Password Akun",
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = KarirTextDark
+                        color = MaterialTheme.colorScheme.onSurface
                     )
 
                     Text(
@@ -126,7 +127,7 @@ fun ForgotPasswordScreen(
                         Surface(
                             shape = RoundedCornerShape(8.dp),
                             color = Color(0xFFFFF3E0),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                             modifier = Modifier.fillMaxWidth()
                         ) {
                             Text(
