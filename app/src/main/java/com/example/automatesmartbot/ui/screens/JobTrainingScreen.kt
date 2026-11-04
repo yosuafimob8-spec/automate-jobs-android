@@ -230,7 +230,7 @@ fun JobTrainingScreen() {
         }
     }
     CompositionLocalProvider(LocalContentColor provides darkTraining, LocalTextStyle provides LocalTextStyle.current.copy(color = darkTraining)) {
-    Box(Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient)) {
+    Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
     Column(Modifier.fillMaxSize()) {
         Row(
             Modifier.fillMaxWidth().background(Color(0xFFFFFDF9)).border(BorderStroke(0.75.dp, Color(0xFFF1E5DC))).padding(16.dp),
@@ -498,7 +498,7 @@ fun JobTrainingScreen() {
                             Card(
                                 onClick = { saveAnswer(questionIndex, index) },
                                 modifier = Modifier.fillMaxWidth(),
-                                colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFEAD7) else Color.White, contentColor = darkTraining),
+                                colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFEAD7) else MaterialTheme.colorScheme.surface, contentColor = MaterialTheme.colorScheme.onSurface),
                                 border = BorderStroke(1.dp, if (selected) orangeTraining else MaterialTheme.colorScheme.outlineVariant)
                             ) {
                                 Row(Modifier.padding(10.dp), verticalAlignment = Alignment.CenterVertically) {
