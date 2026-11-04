@@ -95,8 +95,12 @@ class CvBuilderViewModel(application: Application, private val savedState: Saved
             return false
         }
         if (_state.value.activeId == null) newDocument()
+        if (_state.value.activeId == null) return false
+        val previous = _state.value.templateId
         _state.value = _state.value.copy(templateId = id)
-        return persist()
+        if (persist()) return true
+        _state.value = _state.value.copy(templateId = previous)
+        return false
     }
     private fun persist(): Boolean {
         val current = _state.value
