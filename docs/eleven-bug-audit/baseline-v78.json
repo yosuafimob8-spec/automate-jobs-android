@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-11-04",
+  "method": "Read-only GitHub Actions history; no workflow started",
+  "run": {
+    "id": 41770736672,
+    "name": "Build Karir Mate APK - Canonical (Manual Only)",
+    "run_number": 78,
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "1fe061c4f8693dee02131e8ed5d8eb743f903cf5",
+    "head_branch": "integration/latest-base-all-fixes-20261102",
+    "html_url": "https://github.com/ilhamramdhani763-stack/automate-jobs-android/actions/runs/41770736672",
+    "created_at": "2026-11-04T04:02:22Z"
+  },
+  "artifact": {
+    "id": 13294682664,
+    "name": "Karir-Mate-debug-APK",
+    "size_in_bytes": 28855689,
+    "digest": "sha256:63ab7b98147eea63d660c574ce8efe1428d6a3e21de2ad957153a34560dfaa5d",
+    "downloaded": false
+  },
+  "worktree_head": "ac89fc12248f325dc9caa9cc2c2c6276b1fb9f1e",
+  "visual_reference": {
+    "commit": "b72a32d",
+    "path": "app/src/main/java/com/example/automatesmartbot/ui/screens/TrainingVideo.kt",
+    "fallback_background": "#152D43",
+    "limitation": "This verifies historical source navy, not a previous light screenshot or physical-device rendering."
+  }
+}

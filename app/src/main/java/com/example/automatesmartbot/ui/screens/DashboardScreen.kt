@@ -48,6 +48,7 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
@@ -59,6 +60,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.automatesmartbot.ui.theme.ScreenText
+import com.example.automatesmartbot.ui.theme.ScreenMuted
+import com.example.automatesmartbot.ui.theme.ScreenSurface
+import com.example.automatesmartbot.ui.theme.ScreenPageGradient
+import com.example.automatesmartbot.ui.theme.screenCanvas
 import com.example.automatesmartbot.data.model.DashboardStatusResponse
 import com.example.automatesmartbot.ui.navigation.Screen
 import com.example.automatesmartbot.ui.theme.KarirOrange
@@ -131,14 +137,6 @@ private val primaryMenuItems = listOf(
         route = Screen.AiInterview.route
     ),
     MainMenuItem(
-        title = "CV Analyze",
-        subtitle = "Cek & Tingkatkan CV",
-        icon = Icons.Default.TrendingUp,
-        iconTint = Color(0xFF16A34A),
-        bgTint = Color(0xFFDCFCE7),
-        route = Screen.CvBuilder.route
-    ),
-    MainMenuItem(
         title = "Latihan\nPsikotes",
         subtitle = null,
         icon = Icons.Default.Psychology,
@@ -204,15 +202,7 @@ fun DashboardScreen(
     val isOnline = status?.isOnline != false
     val displayName = status?.displayName?.takeIf { it.isNotBlank() } ?: "Ilham Ramdhani S"
 
-    // Multi-stop warm cream-orange gradient across entire dashboard
-    val dashboardGradient = Brush.verticalGradient(
-        0.00f to Color(0xFFFFF2E5), // Soft peach-cream at top
-        0.12f to Color(0xFFFFF7F0), // Gentle warm transition
-        0.30f to Color(0xFFFFFBF7), // Luminous cream
-        0.65f to Color(0xFFFAF6F0), // Subtle warm cream
-        0.85f to Color(0xFFFFF7F0), // Soft transition
-        1.00f to Color(0xFFFFF3E6)  // Subtle warm glow near bottom
-    )
+    val dashboardGradient = ScreenPageGradient
 
     Box(
         modifier = Modifier
@@ -345,12 +335,12 @@ fun DashboardScreen(
                             Text(
                                 text = "${filtered.size} fitur ditemukan",
                                 fontWeight = FontWeight.Bold,
-                                color = KarirOrange,
+                                color = MaterialTheme.colorScheme.primary,
                                 fontSize = 14.sp
                             )
                             if (filtered.isEmpty()) {
                                 Card(
-                                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                                    colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                                     shape = RoundedCornerShape(18.dp),
                                     border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
                                     elevation = CardDefaults.cardElevation(defaultElevation = 2.5.dp),
@@ -360,10 +350,10 @@ fun DashboardScreen(
                                         modifier = Modifier.padding(18.dp),
                                         verticalArrangement = Arrangement.spacedBy(6.dp)
                                     ) {
-                                        Text("Fitur tidak ditemukan", fontWeight = FontWeight.Bold, color = Color(0xFF0F172A))
-                                        Text("Coba kata kunci lain atau bersihkan pencarian.", color = Color(0xFF64748B), fontSize = 12.sp)
+                                        Text("Fitur tidak ditemukan", fontWeight = FontWeight.Bold, color = ScreenText)
+                                        Text("Coba kata kunci lain atau bersihkan pencarian.", color = ScreenMuted, fontSize = 12.sp)
                                         TextButton(onClick = { dashboardSearch = "" }, contentPadding = PaddingValues(0.dp)) {
-                                            Text("Hapus Pencarian", color = KarirOrange, fontWeight = FontWeight.Bold)
+                                            Text("Hapus Pencarian", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold)
                                         }
                                     }
                                 }
@@ -374,7 +364,7 @@ fun DashboardScreen(
                                             .fillMaxWidth()
                                             .clickable { onNavigate(item.route) },
                                         shape = RoundedCornerShape(16.dp),
-                                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                                        colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                                         border = BorderStroke(1.dp, Color(0xFFF3EAE2)),
                                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                                     ) {
@@ -392,9 +382,9 @@ fun DashboardScreen(
                                                 Icon(item.icon, contentDescription = null, tint = item.iconTint, modifier = Modifier.size(23.dp))
                                             }
                                             Column(modifier = Modifier.weight(1f)) {
-                                                Text(item.title.replace("\n", " "), fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color(0xFF0F172A))
+                                                Text(item.title.replace("\n", " "), fontWeight = FontWeight.Bold, fontSize = 13.sp, color = ScreenText)
                                                 item.subtitle?.let {
-                                                    Text(it, fontSize = 11.sp, color = Color(0xFF64748B))
+                                                    Text(it, fontSize = 11.sp, color = ScreenMuted)
                                                 }
                                             }
                                             Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(16.dp))
@@ -447,6 +437,8 @@ private fun DashboardTopHeaderSection(
             .fillMaxWidth()
             .height(180.dp)
     ) {
+        val headerTop = screenCanvas(Color(0xFFFFF2E5))
+        val headerMiddle = screenCanvas(Color(0xFFFFF7F0))
         // Decorative warm background with swooping orange curve and city skyline
         Canvas(modifier = Modifier.fillMaxSize()) {
             val width = size.width
@@ -455,7 +447,7 @@ private fun DashboardTopHeaderSection(
             // Warm gradient background on top right
             drawRect(
                 brush = Brush.verticalGradient(
-                    colors = listOf(Color(0xFFFFF2E5), Color(0xFFFFF7F0), Color.Transparent),
+                    colors = listOf(headerTop, headerMiddle, Color.Transparent),
                     startY = 0f,
                     endY = height
                 ),
@@ -542,20 +534,20 @@ private fun DashboardTopHeaderSection(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Text(
                                 text = "Karir",
-                                color = KarirOrange,
+                                color = MaterialTheme.colorScheme.primary,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 20.sp
                             )
                             Text(
                                 text = "Mate",
-                                color = Color(0xFF0F172A),
+                                color = ScreenText,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 20.sp
                             )
                         }
                         Text(
                             text = "AI Career Assistant",
-                            color = Color(0xFF64748B),
+                            color = ScreenMuted,
                             fontSize = 11.sp,
                             fontWeight = FontWeight.Medium
                         )
@@ -582,12 +574,12 @@ private fun DashboardTopHeaderSection(
                             Icon(
                                 imageVector = Icons.Default.WorkspacePremium,
                                 contentDescription = "PRO",
-                                tint = Color.White,
+                                tint = com.example.automatesmartbot.ui.theme.OnKarirOrange,
                                 modifier = Modifier.size(14.dp)
                             )
                             Text(
                                 text = "PRO",
-                                color = Color.White,
+                                color = com.example.automatesmartbot.ui.theme.OnKarirOrange,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 12.sp
                             )
@@ -605,7 +597,7 @@ private fun DashboardTopHeaderSection(
                         Icon(
                             imageVector = Icons.Default.Notifications,
                             contentDescription = "Notifikasi",
-                            tint = Color(0xFF1E293B),
+                            tint = ScreenText,
                             modifier = Modifier.size(24.dp)
                         )
                         Box(
@@ -678,20 +670,20 @@ private fun DashboardTopHeaderSection(
                         text = "Halo, $displayName 👋",
                         fontWeight = FontWeight.Bold,
                         fontSize = 17.5.sp,
-                        color = Color(0xFF0F172A),
+                        color = ScreenText,
                         maxLines = 1,
                         overflow = TextOverflow.Ellipsis
                     )
                     Text(
                         text = "Siapkan karier impianmu hari ini",
                         fontSize = 12.sp,
-                        color = Color(0xFF475569)
+                        color = ScreenMuted
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     // Online Pill
                     Surface(
                         shape = RoundedCornerShape(50),
-                        color = Color.White,
+                        color = ScreenSurface,
                         border = BorderStroke(1.dp, Color(0xFFE2E8F0)),
                         shadowElevation = 1.dp
                     ) {
@@ -712,7 +704,7 @@ private fun DashboardTopHeaderSection(
                                 text = if (isOnline) "Online" else "Offline",
                                 fontSize = 10.5.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = if (isOnline) Color(0xFF16A34A) else Color(0xFFDC2626)
+                                color = if (isOnline) screenCanvas(Color(0xFF166534), Color(0xFF86EFAC)) else MaterialTheme.colorScheme.error
                             )
                         }
                     }
@@ -733,7 +725,7 @@ private fun DashboardSearchBar(
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = ScreenSurface),
         border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.5.dp)
     ) {
@@ -756,16 +748,17 @@ private fun DashboardSearchBar(
                     Text(
                         text = "Cari lowongan, perusahaan, atau posisi...",
                         fontSize = 13.sp,
-                        color = Color(0xFF94A3B8)
+                        color = ScreenMuted
                     )
                 }
                 BasicTextField(
                     value = query,
                     onValueChange = onQueryChange,
                     singleLine = true,
+                    cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
                     textStyle = TextStyle(
                         fontSize = 13.sp,
-                        color = Color(0xFF0F172A),
+                        color = ScreenText,
                         fontWeight = FontWeight.Medium
                     ),
                     modifier = Modifier.fillMaxWidth()
@@ -791,7 +784,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(20.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = ScreenSurface),
         border = BorderStroke(1.dp, Color(0xFFF3ECE4)),
         elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
     ) {
@@ -824,7 +817,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                             modifier = Modifier
                                 .weight(1f)
                                 .fillMaxWidth()
-                                .background(Color.White)
+                                .background(ScreenSurface)
                         )
                     }
                 }
@@ -839,12 +832,12 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                         text = "Kondisi Ketenagakerjaan Indonesia",
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.5.sp,
-                        color = Color(0xFF0F172A)
+                        color = ScreenText
                     )
                     Text(
                         text = "Sumber: Badan Pusat Statistik (BPS) • Update: 3 Nov 2026",
                         fontSize = 10.5.sp,
-                        color = Color(0xFF64748B)
+                        color = ScreenMuted
                     )
                 }
 
@@ -852,13 +845,13 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                 Surface(
                     shape = RoundedCornerShape(50),
                     border = BorderStroke(1.dp, KarirOrange),
-                    color = Color.White,
+                    color = ScreenSurface,
                     shadowElevation = 1.dp,
                     modifier = Modifier.clickable(onClick = onDetailClick)
                 ) {
                     Text(
                         text = "Detail Data >",
-                        color = KarirOrange,
+                        color = MaterialTheme.colorScheme.primary,
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 11.sp,
                         modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
@@ -875,7 +868,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                 Card(
                     modifier = Modifier.weight(1f),
                     shape = RoundedCornerShape(15.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFFEFF6FF)),
+                    colors = CardDefaults.cardColors(containerColor = screenCanvas(Color(0xFFEFF6FF))),
                     border = BorderStroke(1.dp, Color(0xFFDBEAFE)),
                     elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                 ) {
@@ -904,12 +897,12 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                                     text = "Pengangguran",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 12.sp,
-                                    color = Color(0xFF0F172A)
+                                    color = ScreenText
                                 )
                                 Text(
                                     text = "Tingkat Pengangguran Terbuka (TPT)",
                                     fontSize = 8.sp,
-                                    color = Color(0xFF64748B),
+                                    color = ScreenMuted,
                                     maxLines = 1,
                                     overflow = TextOverflow.Ellipsis
                                 )
@@ -921,7 +914,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                             text = "7,24 juta orang",
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.5.sp,
-                            color = Color(0xFF0F172A)
+                            color = ScreenText
                         )
 
                         Row(
@@ -929,12 +922,12 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                             horizontalArrangement = Arrangement.spacedBy(4.dp)
                         ) {
                             Surface(
-                                color = Color(0xFFDCFCE7),
+                                color = screenCanvas(Color(0xFFDCFCE7), Color(0xFF173C2B)),
                                 shape = RoundedCornerShape(4.dp)
                             ) {
                                 Text(
                                     text = "4,68%",
-                                    color = Color(0xFF16A34A),
+                                    color = screenCanvas(Color(0xFF166534), Color(0xFF86EFAC)),
                                     fontSize = 10.sp,
                                     fontWeight = FontWeight.Bold,
                                     modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
@@ -942,7 +935,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                             }
                             Text(
                                 text = "▼ -0,08 p.p.",
-                                color = Color(0xFF16A34A),
+                                color = screenCanvas(Color(0xFF166534), Color(0xFF86EFAC)),
                                 fontSize = 9.sp,
                                 fontWeight = FontWeight.SemiBold
                             )
@@ -951,7 +944,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                         Text(
                             text = "(vs Feb 2025: 4,76%)",
                             fontSize = 8.sp,
-                            color = Color(0xFF64748B)
+                            color = ScreenMuted
                         )
 
                         // Sparkline Graph
@@ -963,7 +956,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                 Card(
                     modifier = Modifier.weight(1f),
                     shape = RoundedCornerShape(15.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF1F2)),
+                    colors = CardDefaults.cardColors(containerColor = screenCanvas(Color(0xFFFFF1F2))),
                     border = BorderStroke(1.dp, Color(0xFFFFE4E6)),
                     elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                 ) {
@@ -992,12 +985,12 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                                     text = "Kemiskinan",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 12.sp,
-                                    color = Color(0xFF0F172A)
+                                    color = ScreenText
                                 )
                                 Text(
                                     text = "Penduduk Miskin",
                                     fontSize = 8.sp,
-                                    color = Color(0xFF64748B),
+                                    color = ScreenMuted,
                                     maxLines = 1,
                                     overflow = TextOverflow.Ellipsis
                                 )
@@ -1009,7 +1002,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                             text = "22,93 juta orang",
                             fontWeight = FontWeight.Bold,
                             fontSize = 15.5.sp,
-                            color = Color(0xFF0F172A)
+                            color = ScreenText
                         )
 
                         Row(
@@ -1017,12 +1010,12 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                             horizontalArrangement = Arrangement.spacedBy(4.dp)
                         ) {
                             Surface(
-                                color = Color(0xFFDCFCE7),
+                                color = screenCanvas(Color(0xFFDCFCE7), Color(0xFF173C2B)),
                                 shape = RoundedCornerShape(4.dp)
                             ) {
                                 Text(
                                     text = "8,07%",
-                                    color = Color(0xFF16A34A),
+                                    color = screenCanvas(Color(0xFF166534), Color(0xFF86EFAC)),
                                     fontSize = 10.sp,
                                     fontWeight = FontWeight.Bold,
                                     modifier = Modifier.padding(horizontal = 4.dp, vertical = 2.dp)
@@ -1030,7 +1023,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                             }
                             Text(
                                 text = "▼ -0,40 p.p.",
-                                color = Color(0xFF16A34A),
+                                color = screenCanvas(Color(0xFF166534), Color(0xFF86EFAC)),
                                 fontSize = 9.sp,
                                 fontWeight = FontWeight.SemiBold
                             )
@@ -1039,7 +1032,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                         Text(
                             text = "(vs Sep 2025: 8,47%)",
                             fontSize = 8.sp,
-                            color = Color(0xFF64748B)
+                            color = ScreenMuted
                         )
 
                         // Sparkline Graph
@@ -1062,8 +1055,8 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                 ) {
                     Icon(Icons.Default.People, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
                     Column {
-                        Text("Angkatan Kerja", fontSize = 8.5.sp, color = Color(0xFF64748B))
-                        Text("154,91 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = Color(0xFF0F172A))
+                        Text("Angkatan Kerja", fontSize = 8.5.sp, color = ScreenMuted)
+                        Text("154,91 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = ScreenText)
                     }
                 }
 
@@ -1077,8 +1070,8 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                 ) {
                     Icon(Icons.Default.Work, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
                     Column {
-                        Text("Penduduk Bekerja", fontSize = 8.5.sp, color = Color(0xFF64748B))
-                        Text("147,67 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = Color(0xFF0F172A))
+                        Text("Penduduk Bekerja", fontSize = 8.5.sp, color = ScreenMuted)
+                        Text("147,67 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = ScreenText)
                     }
                 }
 
@@ -1092,8 +1085,8 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                 ) {
                     Icon(Icons.Default.Payments, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
                     Column {
-                        Text("Rata-rata Upah", fontSize = 8.5.sp, color = Color(0xFF64748B))
-                        Text("Rp3,29 jt/bln", fontWeight = FontWeight.Bold, fontSize = 11.sp, color = Color(0xFF0F172A))
+                        Text("Rata-rata Upah", fontSize = 8.5.sp, color = ScreenMuted)
+                        Text("Rp3,29 jt/bln", fontWeight = FontWeight.Bold, fontSize = 11.sp, color = ScreenText)
                     }
                 }
             }
@@ -1192,7 +1185,7 @@ private fun MenuUtamaSection(onNavigate: (String) -> Unit) {
                 text = "Menu Utama",
                 fontWeight = FontWeight.Bold,
                 fontSize = 17.5.sp,
-                color = Color(0xFF0F172A)
+                color = ScreenText
             )
         }
 
@@ -1223,7 +1216,7 @@ private fun MenuGridCard(
             .height(118.dp)
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = ScreenSurface),
         border = BorderStroke(1.dp, Color(0xFFF3EAE2)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp, pressedElevation = 4.dp)
     ) {
@@ -1254,7 +1247,7 @@ private fun MenuGridCard(
                 text = item.title,
                 fontSize = 11.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF0F172A),
+                color = ScreenText,
                 textAlign = TextAlign.Center,
                 lineHeight = 13.5.sp,
                 maxLines = 2,
@@ -1265,7 +1258,7 @@ private fun MenuGridCard(
                 Text(
                     text = item.subtitle,
                     fontSize = 8.5.sp,
-                    color = Color(0xFF64748B),
+                    color = ScreenMuted,
                     textAlign = TextAlign.Center,
                     lineHeight = 10.5.sp,
                     maxLines = 1,
@@ -1292,7 +1285,7 @@ private fun CertificateRequirementsCard(
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(20.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = ScreenSurface),
         border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
         elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
     ) {
@@ -1301,7 +1294,7 @@ private fun CertificateRequirementsCard(
                 .fillMaxWidth()
                 .background(
                     brush = Brush.horizontalGradient(
-                        colors = listOf(Color(0xFFFFF7ED), Color(0xFFFFFFFF))
+                        colors = listOf(screenCanvas(Color(0xFFFFF7ED)), ScreenSurface)
                     )
                 )
                 .padding(16.dp)
@@ -1317,7 +1310,7 @@ private fun CertificateRequirementsCard(
                             .width(108.dp)
                             .height(154.dp)
                             .clip(RoundedCornerShape(8.dp))
-                            .background(Color.White)
+                            .background(ScreenSurface)
                             .border(1.5.dp, Color(0xFFFFB74D), RoundedCornerShape(8.dp))
                             .padding(6.dp),
                         contentAlignment = Alignment.TopCenter
@@ -1340,7 +1333,7 @@ private fun CertificateRequirementsCard(
                                 ) {
                                     Text("K", color = Color.White, fontSize = 9.sp, fontWeight = FontWeight.Bold)
                                 }
-                                Text("KarirMate", fontSize = 8.sp, fontWeight = FontWeight.Bold, color = Color(0xFF0F172A))
+                                Text("KarirMate", fontSize = 8.sp, fontWeight = FontWeight.Bold, color = ScreenText)
                             }
 
                             // Certificate Title
@@ -1349,13 +1342,13 @@ private fun CertificateRequirementsCard(
                                     text = "SERTIFIKAT",
                                     fontSize = 9.5.sp,
                                     fontWeight = FontWeight.Black,
-                                    color = Color(0xFF0F172A),
+                                    color = ScreenText,
                                     letterSpacing = 0.5.sp
                                 )
                                 Text(
                                     text = "Penyelesaian Program",
                                     fontSize = 6.5.sp,
-                                    color = Color(0xFF64748B)
+                                    color = ScreenMuted
                                 )
                             }
 
@@ -1422,14 +1415,14 @@ private fun CertificateRequirementsCard(
                                 text = "Syarat Sertifikat KarirMate",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 13.5.sp,
-                                color = Color(0xFF0F172A)
+                                color = ScreenText
                             )
                         }
 
                         Text(
                             text = "Selesaikan persyaratan berikut untuk mendapatkan sertifikat.",
                             fontSize = 9.5.sp,
-                            color = Color(0xFF64748B),
+                            color = ScreenMuted,
                             lineHeight = 12.sp
                         )
 
@@ -1476,13 +1469,13 @@ private fun CertificateRequirementsCard(
                                 text = "Progress: $completedCount/4",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.5.sp,
-                                color = Color(0xFF0F172A)
+                                color = ScreenText
                             )
                             if (completedCount < 4) {
                                 Text(
                                     text = "Menunggu verifikasi server",
                                     fontSize = 9.sp,
-                                    color = Color(0xFF64748B)
+                                    color = ScreenMuted
                                 )
                             }
                         }
@@ -1525,7 +1518,8 @@ private fun CertificateRequirementsCard(
                         .height(44.dp),
                     shape = RoundedCornerShape(24.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = if (completedCount >= 4) KarirOrange else Color(0xFF94A3B8)
+                        containerColor = if (completedCount >= 4) KarirOrange else Color(0xFF94A3B8),
+                        contentColor = com.example.automatesmartbot.ui.theme.OnKarirOrange
                     )
                 ) {
                     Row(
@@ -1535,14 +1529,14 @@ private fun CertificateRequirementsCard(
                         Icon(
                             imageVector = if (completedCount >= 4) Icons.Default.WorkspacePremium else Icons.Default.Lock,
                             contentDescription = null,
-                            tint = Color.White,
+                            tint = com.example.automatesmartbot.ui.theme.OnKarirOrange,
                             modifier = Modifier.size(16.dp)
                         )
                         Text(
                             text = "Buat Sertifikat",
                             fontWeight = FontWeight.Bold,
                             fontSize = 13.sp,
-                            color = Color.White
+                            color = com.example.automatesmartbot.ui.theme.OnKarirOrange
                         )
                     }
                 }
@@ -1576,7 +1570,7 @@ private fun RequirementRowItem(
             text = label,
             fontSize = 10.sp,
             fontWeight = FontWeight.Medium,
-            color = Color(0xFF1E293B),
+            color = ScreenText,
             modifier = Modifier.weight(1f),
             maxLines = 1,
             overflow = TextOverflow.Ellipsis
@@ -1612,7 +1606,7 @@ private fun ProfileIncompleteBanner(onCompleteProfile: () -> Unit) {
             .fillMaxWidth()
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = ScreenSurface),
         border = BorderStroke(1.dp, Color(0xFFFFD8B2)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
@@ -1635,15 +1629,15 @@ private fun ProfileIncompleteBanner(onCompleteProfile: () -> Unit) {
                     modifier = Modifier.size(18.dp)
                 )
                 Column {
-                    Text("Profil belum lengkap", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = Color(0xFF0F172A))
-                    Text("Lengkapi data diri untuk optimasi rekomendasi karier.", fontSize = 10.sp, color = Color(0xFF64748B))
+                    Text("Profil belum lengkap", fontWeight = FontWeight.Bold, fontSize = 12.sp, color = ScreenText)
+                    Text("Lengkapi data diri untuk optimasi rekomendasi karier.", fontSize = 10.sp, color = ScreenMuted)
                 }
             }
             TextButton(
                 onClick = onCompleteProfile,
                 contentPadding = PaddingValues(horizontal = 8.dp, vertical = 2.dp)
             ) {
-                Text("Lengkapi", color = KarirOrange, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                Text("Lengkapi", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold, fontSize = 12.sp)
             }
         }
     }

@@ -1,0 +1,594 @@
+{
+  "head": "ac89fc12248f325dc9caa9cc2c2c6276b1fb9f1e",
+  "active_call_sites": 62,
+  "shared_input_implementations": 1,
+  "inactive_legacy_call_sites": 2,
+  "note": "Counts are source call sites, not simultaneously rendered fields. CV list editors render a field per user entry. Profiles contain no TextField; edits route to existing fixed-canvas onboarding outside this repair scope. LegacyJobTrainingScreen is not routed. Direct training fields and dashboard BasicTextField were inspected separately.",
+  "inputs": [
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 150,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Penghasilan bruto pajak per bulan (Rp)\", gross, { gross = it; result = null })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 151,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Upah dasar lembur / THR (Rp)\", base, { base = it; result = null })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 152,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Jam lembur dalam satu hari\", hours, { hours = it; result = null })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 184,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Dasar iuran BPJS Kesehatan (0 jika tidak ikut)\", health, { health = it; result = null })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 185,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Dasar iuran JHT (0 jika tidak ikut)\", jht, { jht = it; result = null })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 186,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Dasar iuran JP setelah plafon (0 jika tidak ikut)\", pension, { pension = it; result = null })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 187,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"PTKP tahunan sesuai status pajak (Rp)\", ptkp, { ptkp = it; result = null })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 188,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Masa kerja untuk THR (bulan penuh)\", months, { months = it; result = null })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 325,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Nama lengkap\", name, { name = it })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 326,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Perusahaan saat ini\", company, { company = it })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 327,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Jabatan saat ini\", position, { position = it })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 328,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Tanggal surat (YYYY-MM-DD)\", date, { date = it })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 329,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Usulan hari kerja terakhir (YYYY-MM-DD)\", lastDay, { lastDay = it })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 330,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Alasan (opsional)\", reason, { reason = it })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 354,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Isi surat (tersimpan otomatis)\", content, { content = it; preview = false }, minLines = 10)"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 476,
+      "component": "OutlinedTextField",
+      "active": false,
+      "shared_implementation": false,
+      "appearance": "Inactive legacy default field; not routed",
+      "declaration": "OutlinedTextField("
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+      "line": 514,
+      "component": "AppInput",
+      "active": false,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Nama pada sertifikat\", name, {"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 373,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Nama lengkap\", contact.fullName, { update(contact.copy(fullName = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 374,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Posisi / profesi\", contact.headline, { update(contact.copy(headline = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 375,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Email\", contact.email, { update(contact.copy(email = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 376,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Nomor telepon\", contact.phone, { update(contact.copy(phone = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 377,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Domisili\", contact.location, { update(contact.copy(location = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 378,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Website / Portofolio\", contact.website, { update(contact.copy(website = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 379,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"LinkedIn\", contact.linkedin, { update(contact.copy(linkedin = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 380,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"GitHub\", contact.github, { update(contact.copy(github = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 394,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Tulis ringkasan singkat tentang keahlian dan pengalaman Anda\", state.draft.summary, { value -> viewModel.updateContent { it.copy(summary = value) } }, minLines = 6)"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 413,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Judul bagian\", item.title, { value -> viewModel.updateContent { c -> c.copy(extras = c.extras.map { if (it.id == item.id) it.copy(title = value) else it }) } })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 414,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Isi bagian\", item.text, { value -> viewModel.updateContent { c -> c.copy(extras = c.extras.map { if (it.id == item.id) it.copy(text = value) else it }) } }, minLines = 4)"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 729,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Perusahaan tujuan\", company, { company = it })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 730,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Posisi tujuan\", jobTitle, { jobTitle = it })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+      "line": 755,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Isi surat\", letter.content, viewModel::updateLetter, minLines = 14)"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 29,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Jabatan\", e.title, { change(e.copy(title = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 30,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Perusahaan\", e.company, { change(e.copy(company = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 31,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Lokasi\", e.location, { change(e.copy(location = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 32,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Mulai (YYYY-MM)\", e.start, { change(e.copy(start = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 34,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "if (!e.current) AppInput(\"Selesai (YYYY-MM)\", e.end, { change(e.copy(end = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 35,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Tanggung jawab dan pencapaian (satu per baris)\", e.bullets.joinToString(\"\\n\"), { change(e.copy(bullets = it.lines())) }, minLines = 4)"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 45,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Sekolah / Universitas\", e.school, { change(e.copy(school = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 46,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Jenjang pendidikan\", e.degree, { change(e.copy(degree = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 47,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Jurusan\", e.field, { change(e.copy(field = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 48,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Lokasi\", e.location, { change(e.copy(location = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 49,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Mulai\", e.start, { change(e.copy(start = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 50,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Selesai\", e.end, { change(e.copy(end = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 51,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"IPK (opsional)\", e.gpa, { change(e.copy(gpa = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 52,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Keterangan (satu per baris)\", e.details.joinToString(\"\\n\"), { change(e.copy(details = it.lines())) }, minLines = 3)"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 62,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Kategori keterampilan\", e.category, { change(e.copy(category = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 63,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Keterampilan (satu per baris)\", e.items.joinToString(\"\\n\"), { change(e.copy(items = it.lines())) }, minLines = 3)"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 73,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Nama proyek\", e.name, { change(e.copy(name = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 74,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Teknologi / keterampilan\", e.tech, { change(e.copy(tech = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 75,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Tautan\", e.link, { change(e.copy(link = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 76,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Mulai\", e.start, { change(e.copy(start = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 77,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Selesai\", e.end, { change(e.copy(end = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 78,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Deskripsi (satu per baris)\", e.bullets.joinToString(\"\\n\"), { change(e.copy(bullets = it.lines())) }, minLines = 4)"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 88,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Nama sertifikasi\", e.name, { change(e.copy(name = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 89,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Penerbit\", e.issuer, { change(e.copy(issuer = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 90,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Tanggal\", e.date, { change(e.copy(date = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+      "line": 91,
+      "component": "AppInput",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors via AppInput",
+      "declaration": "AppInput(\"Tautan\", e.link, { change(e.copy(link = it)) })"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/WorkPediaScreen.kt",
+      "line": 108,
+      "component": "OutlinedTextField",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors",
+      "declaration": "OutlinedTextField("
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/auth/LoginScreen.kt",
+      "line": 89,
+      "component": "OutlinedTextField",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "textFieldColors = karirInputColors",
+      "declaration": "OutlinedTextField("
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/auth/LoginScreen.kt",
+      "line": 100,
+      "component": "OutlinedTextField",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "textFieldColors = karirInputColors",
+      "declaration": "OutlinedTextField("
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/JobTrainingScreen.kt",
+      "line": 446,
+      "component": "OutlinedTextField",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors",
+      "declaration": "OutlinedTextField("
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/JobTrainingScreen.kt",
+      "line": 529,
+      "component": "OutlinedTextField",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors",
+      "declaration": "OutlinedTextField(name, {"
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/JobTrainingScreen.kt",
+      "line": 610,
+      "component": "OutlinedTextField",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "karirInputColors",
+      "declaration": "OutlinedTextField("
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/screens/DashboardScreen.kt",
+      "line": 754,
+      "component": "BasicTextField",
+      "active": true,
+      "shared_implementation": false,
+      "appearance": "ScreenText / ScreenMuted / themed cursor on ScreenSurface",
+      "declaration": "BasicTextField("
+    },
+    {
+      "file": "app/src/main/java/com/example/automatesmartbot/ui/components/AppInput.kt",
+      "line": 30,
+      "component": "OutlinedTextField",
+      "active": true,
+      "shared_implementation": true,
+      "appearance": "karirInputColors",
+      "declaration": "OutlinedTextField("
+    }
+  ]
+}

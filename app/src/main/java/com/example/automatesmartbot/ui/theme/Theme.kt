@@ -8,8 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 val KarirMateDarkColors = darkColorScheme(
-    primary = PrimaryBlue,
-    onPrimary = TextWhite,
+    primary = KarirOrange,
+    onPrimary = OnKarirOrange,
     primaryContainer = PrimaryBlueVariant,
     onPrimaryContainer = TextWhite,
     secondary = LightBlueAccent,

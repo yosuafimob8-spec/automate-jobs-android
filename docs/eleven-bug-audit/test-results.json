@@ -1,0 +1,330 @@
+{
+  "task": ":app:testDebugUnitTest",
+  "test_environment": "JVM + Robolectric SDK 35; not a physical device or emulator",
+  "totals": {
+    "tests": 111,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "suites": [
+    {
+      "name": "com.example.automatesmartbot.ExampleUnitTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "addition_isCorrect"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.autoapply.AutoApplyConfirmationTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "statusAloneIsNotGmailConfirmation",
+        "jsonNullNeverSkipsExplicitConsent",
+        "revokedServerConsentOverridesLocalCacheAndOldTimestamp"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.career.CareerPdfStoreTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "certificatesAndResignationActuallyExportAsSelectablePdf",
+        "extractReorderAndRotationProduceValidIndependentFiles",
+        "invalidPdfDoesNotCreateFalseSavedEntry",
+        "repeatedImportsPreserveIndexAndSourceDocuments"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.career.PayrollAndLettersTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "payrollThrAndWorkerContributionsAreCalculated",
+        "trainingScoreRequiresAnswersAndUsesActualKeys",
+        "overtimeUses173AndDaySpecificMultipliers",
+        "annualTaxUsesHppBracketsAndTaxableThousandRounding",
+        "resignationIncludesUserFactsAndValidatesDates"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.career.TrainingCertificateIdentityTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "publicVerificationUrlRequiresHttps",
+        "impossibleScoreRejected",
+        "invalidCertificateIdRejected",
+        "localVerificationMatchesOnlyExistingRecord",
+        "validCertificateEncodesAllFields"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.career.TrainingCoursesTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "perfectScorePassesAndWrongAnswersFail",
+        "coursesHaveValidLessonsAndQuestions"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.career.TrainingPathwaysTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "unknownPositionRejected",
+        "allPositionsHaveThreeDistinctLevels",
+        "practiceRequiresSubstantiveResponse"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.cv.CvFlowTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "analyzerRejectsMissingTextAndAnalyzesExtractedPdfWithoutJobDescription",
+        "oldDraftsLoadWithoutPhotoOrExtraFields",
+        "actualPdfExportIsA4SelectableMultipageAndPreservesIndonesianText",
+        "longCvPaginatesWithoutClippingOrLosingLastExperienceAndProject",
+        "coverLetterTypesUseRealFactsAndPersistEdits",
+        "firstKeystrokeAndAllSectionsSurviveViewModelRecreation",
+        "invalidImageAndOversizedStreamsAreRejected",
+        "photoAppearsOnlyOnSupportedTemplates",
+        "headerAndSystemBackPopTheSameHistory",
+        "galleryPhotoIsCopiedPersistsAndCanBeRemoved",
+        "allTemplatesHaveDistinctLayoutsReadableA4ThumbnailsAndFullContent"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.model.JobFiltersTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "supportedFiltersNeverContainSemuaValues",
+        "supportedListsMatchConfirmedBackendValues",
+        "everySupportedCombinationIsValid",
+        "missingOrUnsupportedFiltersAreRejected"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.model.MembershipTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "authoritativeFalseDoesNotUnlockStaleProLabel"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.network.AutoApplyApiContractTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "consentAndDailyLimitReachExistingEnableEndpoint",
+        "oauthStartAndRawPdfUploadMatchBackendRoutes"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.psychotest.PsychotestPolicyTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "scoresUseWeightedMaximumAndRangeOneToHundred",
+        "questionNavigationStaysInBounds"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.repository.LoginFailureTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "refusedLocalBackendHasAccurateActionableMessage",
+        "timeoutDnsAndAuthenticationFailuresRemainDistinct",
+        "validResponseUsesRealLoginEndpointAndRequest",
+        "emptyOrMissingTokenCannotBecomeSuccessfulLogin",
+        "slowAndStoppedBackendFailWithoutBypassingAuthentication",
+        "rejectedLoginAndBackendFailureHaveDifferentMessages"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.repository.ProfileSavePolicyTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "serverSuccessIsConfirmed",
+        "falseResponseIsNotConfirmed",
+        "serverCompletedFlagIsConfirmed",
+        "missingResponseIsNotConfirmed"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.data.security.SessionPolicyTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "fallbackExpiryIsExactlyTwentyFourHours",
+        "futureSessionIsValid",
+        "expiredAndMissingSessionsAreNotValid",
+        "missingTokenAfterLogoutIsInvalid",
+        "parsesEpochSecondsAndMillis",
+        "rejectsMissingAndMalformedExpiry",
+        "parsesIsoExpiry"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.ui.navigation.NavigationPolicyTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "completedProfileLeavesOnboardingWithoutLooping",
+        "incompleteProfileGoesToOnboardingAfterLogin",
+        "missingOrExpiredSessionStartsAtLogin",
+        "offlineProfileCheckKeepsUserOnDashboard",
+        "validSessionStartsAtDashboardEvenWhenOffline",
+        "incompleteProfileRedirectsOnlyFromDashboard",
+        "completedProfileGoesToDashboardAndUnknownGoesToOnboardingAfterLogin"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.ui.screens.ElevenBugUiTest",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "trainingHistoryQrInputUsesThemeWithoutChangingOldCertificates",
+        "visualSlidesKeepVerifiedBackdropAndNextPreviousContentInBothThemes",
+        "cvAllEditableStagesKeepTypedContentAndThemeAcrossNavigation",
+        "everySalaryInputUsesReadableInkFocusedAndUnfocused",
+        "trainingPracticeInputKeepsTypedAnswerWhenThemeChanges",
+        "quickSimulationCardAndButtonRecalculateAfterEditsAndErrors",
+        "resignationInputsEditableDraftAndPreviewWorkInBothThemes",
+        "loginEmailPasswordMaskToggleAndValidationWorkInBothThemes",
+        "multilineAppInputRetainsInkFocusAndErrorState",
+        "workpediaSearchFiltersAcceptsClearAndKeepsReadableInk",
+        "applicationLetterEditorUsesTypedFactsAndRetainsPreviewExport",
+        "logoutRemainsClickableInBothThemesAndCallsOnlyLogoutCallback",
+        "dashboardHasOnlyOneCvEntranceAndRetainsRoute",
+        "cvHomeOffersCreateEditTemplateAndAnalyzerWithoutLosingFeature",
+        "actualThemePickerRecomposesAndPersistsAcrossRecreation"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.ui.screens.FeatureUiTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "sectionHeroExpandsAndCollapses",
+        "resignationEditorGeneratesEditableTextAndExportControl",
+        "legacyTrainingCourseDoesNotIssueCertificateWithoutTwentyQuestions",
+        "analystButtonOpensLetterTypeEditorAndPreview",
+        "newCareerRoutesKeepOriginalBottomNavigation",
+        "cvHeaderAndAndroidBackKeepFormDataAndPopOneStep",
+        "documentLibraryShowsTruthfulEmptyState",
+        "previousIsDisabledOnFirstQuestionAndChoiceSurvivesNextPrevious"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.ui.theme.InputAppearanceTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "automaticThemeUsesLightSystemAndInvalidSavedModeFallsBack",
+        "automaticThemeUsesDarkSystemConfiguration",
+        "fieldAllStatesLabelsPlaceholdersCursorAndButtonsHavePairedContrast",
+        "slideForegroundsAndOrangeButtonHaveReadableContrast"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.ui.theme.ThemeContrastTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "sharedTextAndOrangeButtonsHaveReadableContrast"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.ui.viewmodel.PsychotestViewModelTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "fastAnswerChangesAreRetainedAndRevisionRequestsAreSerialized",
+        "emptySessionFailsWithoutInventingAResult",
+        "offlineAnswerSurvivesRestorationAndCanBeRetried",
+        "failedSubmitIsRetryableAndFlushesAnswersBeforeScoring"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.util.CvValidatorTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "rejectsMissingSizeAndHeader",
+        "acceptsValidPdf",
+        "rejectsMissingName",
+        "rejectsFilesOverTwoMegabytes",
+        "rejectsNonPdfExtension",
+        "rejectsUnsupportedMimeType",
+        "acceptsGenericMimeWhenExtensionAndHeaderArePdf",
+        "formatsFileSizes",
+        "acceptsExactlyTwoMegabytes"
+      ]
+    },
+    {
+      "name": "com.example.automatesmartbot.util.UrlSafetyTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "rejectsBlankAndMalformedValues",
+        "rejectsUnsupportedSchemes",
+        "acceptsHttpAndHttpsUrls"
+      ]
+    }
+  ]
+}

@@ -16,8 +16,11 @@ import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.automatesmartbot.ui.theme.KarirOrange
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
+import com.example.automatesmartbot.ui.theme.OnKarirOrange
+import com.example.automatesmartbot.ui.theme.ScreenMuted as KarirTextMuted
+
+// Verified pre-redesign visual-slide backdrop (b72a32d), distinct from the V78 near-black.
+internal val TrainingSlideBackdrop = Color(0xFF152D43)
 
 @Composable
 fun TrainingVideo(courseId: String, lessonIndex: Int, title: String = "", script: String = "") {
@@ -29,7 +32,7 @@ fun TrainingVideo(courseId: String, lessonIndex: Int, title: String = "", script
         Card(
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(16.dp),
-            colors = CardDefaults.cardColors(containerColor = KarirTextDark),
+            colors = CardDefaults.cardColors(containerColor = TrainingSlideBackdrop),
             border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
         ) {
@@ -40,7 +43,7 @@ fun TrainingVideo(courseId: String, lessonIndex: Int, title: String = "", script
                 ) {
                     Text(
                         "MATERI VISUAL",
-                        color = Color(0xFFE65100),
+                        color = Color(0xFFA8430F),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
@@ -64,7 +67,7 @@ fun TrainingVideo(courseId: String, lessonIndex: Int, title: String = "", script
                         border = BorderStroke(1.dp, if (section > 0) Color(0xFFFFB787) else Color(0xFF475569)),
                         colors = ButtonDefaults.outlinedButtonColors(
                             contentColor = Color.White,
-                            disabledContentColor = Color(0xFF64748B)
+                            disabledContentColor = Color(0xFFCBD5E1)
                         ),
                         shape = RoundedCornerShape(8.dp)
                     ) {
@@ -75,9 +78,9 @@ fun TrainingVideo(courseId: String, lessonIndex: Int, title: String = "", script
                         onClick = { section++ },
                         colors = ButtonDefaults.buttonColors(
                             containerColor = KarirOrange,
-                            contentColor = Color.White,
-                            disabledContainerColor = Color(0xFF334155),
-                            disabledContentColor = Color(0xFF64748B)
+                            contentColor = OnKarirOrange,
+                            disabledContainerColor = TrainingSlideBackdrop,
+                            disabledContentColor = Color(0xFFCBD5E1)
                         ),
                         shape = RoundedCornerShape(8.dp)
                     ) {

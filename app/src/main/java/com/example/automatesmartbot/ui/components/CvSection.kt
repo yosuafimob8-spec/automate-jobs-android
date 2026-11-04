@@ -26,6 +26,9 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import com.example.automatesmartbot.ui.theme.ScreenSurface
+import com.example.automatesmartbot.ui.theme.screenCanvas
+import com.example.automatesmartbot.ui.theme.karirButtonColors
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -87,9 +90,9 @@ fun CvSection(modifier: Modifier = Modifier) {
 
     Card(
         modifier = modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = ScreenSurface),
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(
@@ -114,20 +117,20 @@ fun CvSection(modifier: Modifier = Modifier) {
                         text = "CV Saya",
                         fontWeight = FontWeight.Bold,
                         fontSize = 15.sp,
-                        color = com.example.automatesmartbot.ui.theme.KarirTextDark
+                        color = com.example.automatesmartbot.ui.theme.ScreenText
                     )
                 }
                 Surface(
-                    color = Color(0xFFFFF3E0),
+                    color = screenCanvas(Color(0xFFFFF3E0)),
                     shape = RoundedCornerShape(6.dp),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9)))
                 ) {
                     Text(
                         text = "PDF",
                         modifier = Modifier.padding(horizontal = 7.dp, vertical = 4.dp),
                         fontSize = 9.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFFE65100)
+                        color = androidx.compose.material3.MaterialTheme.colorScheme.primary
                     )
                 }
             }
@@ -136,11 +139,11 @@ fun CvSection(modifier: Modifier = Modifier) {
                 Text(
                     text = "Belum ada CV. Pilih file PDF maksimal 2 MB.",
                     fontSize = 12.sp,
-                    color = com.example.automatesmartbot.ui.theme.KarirTextMuted
+                    color = com.example.automatesmartbot.ui.theme.ScreenMuted
                 )
                 Button(
                     onClick = { picker.launch(arrayOf("application/pdf")) },
-                    colors = ButtonDefaults.buttonColors(containerColor = com.example.automatesmartbot.ui.theme.KarirOrange),
+                    colors = karirButtonColors(),
                     shape = RoundedCornerShape(12.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -154,9 +157,9 @@ fun CvSection(modifier: Modifier = Modifier) {
                 }
             } else {
                 Surface(
-                    color = Color(0xFFFFFBF7),
+                    color = screenCanvas(Color(0xFFFFFBF7)),
                     shape = RoundedCornerShape(10.dp),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Column(
@@ -167,14 +170,14 @@ fun CvSection(modifier: Modifier = Modifier) {
                             text = selection?.displayName.orEmpty(),
                             fontSize = 13.sp,
                             fontWeight = FontWeight.SemiBold,
-                            color = com.example.automatesmartbot.ui.theme.KarirTextDark,
+                            color = com.example.automatesmartbot.ui.theme.ScreenText,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
                         )
                         Text(
                             text = "${CvValidator.formatSize(selection?.sizeBytes ?: 0L)} • tersimpan di perangkat",
                             fontSize = 11.sp,
-                            color = com.example.automatesmartbot.ui.theme.KarirTextMuted
+                            color = com.example.automatesmartbot.ui.theme.ScreenMuted
                         )
                     }
                 }
@@ -182,7 +185,7 @@ fun CvSection(modifier: Modifier = Modifier) {
                 Text(
                     text = "CV ini tidak dikirim otomatis. Anda tetap dapat mengganti atau menghapusnya kapan saja.",
                     fontSize = 11.sp,
-                    color = com.example.automatesmartbot.ui.theme.KarirTextMuted,
+                    color = com.example.automatesmartbot.ui.theme.ScreenMuted,
                     lineHeight = 16.sp
                 )
 
@@ -195,8 +198,8 @@ fun CvSection(modifier: Modifier = Modifier) {
                         shape = RoundedCornerShape(10.dp),
                         border = BorderStroke(1.dp, com.example.automatesmartbot.ui.theme.KarirOrange),
                         colors = ButtonDefaults.outlinedButtonColors(
-                            containerColor = Color.White,
-                            contentColor = com.example.automatesmartbot.ui.theme.KarirOrange
+                            containerColor = ScreenSurface,
+                            contentColor = androidx.compose.material3.MaterialTheme.colorScheme.primary
                         ),
                         modifier = Modifier.weight(1f)
                     ) {

@@ -22,10 +22,13 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.automatesmartbot.ui.components.BrandLogo
 import com.example.automatesmartbot.ui.theme.KarirOrange
-import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
-import com.example.automatesmartbot.ui.theme.KarirPageGradient
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
+import com.example.automatesmartbot.ui.theme.ScreenSurface
+import com.example.automatesmartbot.ui.theme.screenCanvas
+import com.example.automatesmartbot.ui.theme.karirButtonColors
+import com.example.automatesmartbot.ui.theme.ScreenAccent as KarirOrangeDeep
+import com.example.automatesmartbot.ui.theme.ScreenPageGradient as KarirPageGradient
+import com.example.automatesmartbot.ui.theme.ScreenText as KarirTextDark
+import com.example.automatesmartbot.ui.theme.ScreenMuted as KarirTextMuted
 import com.example.automatesmartbot.ui.viewmodel.AuthViewModel
 
 @Composable
@@ -43,17 +46,7 @@ fun LoginScreen(
     val errorMessage by viewModel.errorMessage.collectAsState()
     val successMessage by viewModel.successMessage.collectAsState()
 
-    val textFieldColors = OutlinedTextFieldDefaults.colors(
-        focusedBorderColor = KarirOrange,
-        unfocusedBorderColor = Color(0xFFFFDEC9),
-        focusedLabelColor = KarirOrange,
-        unfocusedLabelColor = KarirTextMuted,
-        cursorColor = KarirOrange,
-        focusedContainerColor = Color.White,
-        unfocusedContainerColor = Color.White,
-        focusedTextColor = KarirTextDark,
-        unfocusedTextColor = KarirTextDark
-    )
+    val textFieldColors = com.example.automatesmartbot.ui.theme.karirInputColors()
 
     Box(
         modifier = Modifier
@@ -63,9 +56,9 @@ fun LoginScreen(
         contentAlignment = Alignment.Center
     ) {
         Card(
-            colors = CardDefaults.cardColors(containerColor = Color.White),
+            colors = CardDefaults.cardColors(containerColor = ScreenSurface),
             shape = RoundedCornerShape(20.dp),
-            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+            border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
             elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -97,7 +90,7 @@ fun LoginScreen(
                     value = email,
                     onValueChange = { email = it },
                     label = { Text("Email") },
-                    leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = KarirOrange) },
+                    leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
                     shape = RoundedCornerShape(12.dp),
                     colors = textFieldColors,
                     singleLine = true,
@@ -108,12 +101,12 @@ fun LoginScreen(
                     value = password,
                     onValueChange = { password = it },
                     label = { Text("Password") },
-                    leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null, tint = KarirOrange) },
+                    leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
                     trailingIcon = {
                         IconButton(onClick = { passwordVisible = !passwordVisible }) {
                             Icon(
                                 imageVector = if (passwordVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
-                                contentDescription = null,
+                                contentDescription = if (passwordVisible) "Sembunyikan sandi" else "Tampilkan sandi",
                                 tint = KarirTextMuted
                             )
                         }
@@ -138,14 +131,15 @@ fun LoginScreen(
                     onClick = {
                         viewModel.login(email, password, onLoginSuccess)
                     },
-                    colors = ButtonDefaults.buttonColors(containerColor = KarirOrange),
+                    enabled = !isLoading,
+                    colors = karirButtonColors(),
                     shape = RoundedCornerShape(12.dp),
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(50.dp)
                 ) {
                     if (isLoading) {
-                        CircularProgressIndicator(color = Color.White, modifier = Modifier.size(22.dp))
+                        CircularProgressIndicator(color = MaterialTheme.colorScheme.onSurface, modifier = Modifier.size(22.dp))
                     } else {
                         Text("Masuk", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                     }
@@ -154,14 +148,14 @@ fun LoginScreen(
                 errorMessage?.let { err ->
                     Surface(
                         shape = RoundedCornerShape(8.dp),
-                        color = Color(0xFFFEE2E2),
+                        color = MaterialTheme.colorScheme.errorContainer,
                         border = BorderStroke(1.dp, Color(0xFFFECACA)),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Text(
                             text = err,
                             fontSize = 12.sp,
-                            color = Color(0xFFDC2626),
+                            color = MaterialTheme.colorScheme.onErrorContainer,
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier.padding(10.dp)
                         )
@@ -171,14 +165,14 @@ fun LoginScreen(
                 successMessage?.let { msg ->
                     Surface(
                         shape = RoundedCornerShape(8.dp),
-                        color = Color(0xFFDCFCE7),
+                        color = screenCanvas(Color(0xFFDCFCE7), Color(0xFF173C2B)),
                         border = BorderStroke(1.dp, Color(0xFFBBF7D0)),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Text(
                             text = msg,
                             fontSize = 12.sp,
-                            color = Color(0xFF16A34A),
+                            color = screenCanvas(Color(0xFF166534), Color(0xFFA7F3D0)),
                             fontWeight = FontWeight.Bold,
                             modifier = Modifier.padding(10.dp)
                         )

@@ -6,6 +6,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
@@ -206,7 +207,6 @@ private fun MainDashboardContent(
         navigateUpOrDashboard()
     }
 
-    FixedCanvasTheme(dark = false) {
     Scaffold(
         topBar = {
             if (showTopBar) {
@@ -225,7 +225,7 @@ private fun MainDashboardContent(
         bottomBar = {
             if (showBottomBar) {
                 NavigationBar(
-                    containerColor = Color(0xFFFFFDF9),
+                    containerColor = com.example.automatesmartbot.ui.theme.screenCanvas(Color(0xFFFFFDF9), com.example.automatesmartbot.ui.theme.DarkSurface),
                     tonalElevation = 8.dp,
                     modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC))
                 ) {
@@ -254,10 +254,10 @@ private fun MainDashboardContent(
                                 }
                             },
                             colors = NavigationBarItemDefaults.colors(
-                                selectedIconColor = Color.White,
-                                selectedTextColor = Color(0xFFE65100),
-                                unselectedIconColor = Color(0xFF475569),
-                                unselectedTextColor = Color(0xFF334155),
+                                selectedIconColor = com.example.automatesmartbot.ui.theme.OnKarirOrange,
+                                selectedTextColor = MaterialTheme.colorScheme.primary,
+                                unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                                unselectedTextColor = MaterialTheme.colorScheme.onSurface,
                                 indicatorColor = Color(0xFFFF6B00)
                             )
                         )
@@ -274,7 +274,6 @@ private fun MainDashboardContent(
                 .padding(innerPadding)
         ) {
             composable(Screen.Dashboard.route) {
-                FixedCanvasTheme(dark = false) {
                     DashboardScreen(
                         onNavigate = { route ->
                             navController.navigate(route) {
@@ -284,7 +283,6 @@ private fun MainDashboardContent(
                         viewModel = dashboardViewModel
                     )
 
-                }
             }
             composable(Screen.CariLowongan.route) {
                 FixedCanvasTheme(dark = false) {
@@ -353,7 +351,6 @@ private fun MainDashboardContent(
                 )
             }
             composable(Screen.Login.route) {
-                FixedCanvasTheme(dark = false) {
                     LoginScreen(
                         onNavigateRegister = {
                             navController.navigate(Screen.Register.route) {
@@ -377,7 +374,6 @@ private fun MainDashboardContent(
                         }
                     )
 
-                }
             }
             composable(Screen.Register.route) {
                 FixedCanvasTheme(dark = false) {
@@ -413,6 +409,5 @@ private fun MainDashboardContent(
                 }
             }
         }
-    }
     }
 }

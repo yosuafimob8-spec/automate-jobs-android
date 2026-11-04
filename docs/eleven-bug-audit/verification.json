@@ -1,0 +1,47 @@
+{
+  "branch": "integration/latest-base-all-fixes-20261102",
+  "head": "ac89fc12248f325dc9caa9cc2c2c6276b1fb9f1e",
+  "diff_check_passed": true,
+  "generated_termux_base_url": "http://127.0.0.1:8787/",
+  "generated_base_url_verified": true,
+  "merged_termux_manifest": "app/build/intermediates/merged_manifest/termux/processTermuxMainManifest/AndroidManifest.xml",
+  "merged_internet_permission": true,
+  "merged_cleartext_traffic": "true",
+  "merged_network_security_config": "@xml/network_security_config",
+  "variant_network_security": "app/src/termux/res/xml/network_security_config.xml",
+  "variant_cleartext_allowed": "true",
+  "new_apk_or_aab_in_worktree": [],
+  "changed_tracked_files": [
+    "app/src/main/java/com/example/automatesmartbot/data/repository/AuthRepository.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/components/AppInput.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/components/AppTopBar.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/components/CvSection.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/components/PdfExportButton.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/screens/CvBuilderScreen.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/screens/CvEntriesEditor.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/screens/DashboardScreen.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/screens/JobTrainingScreen.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/screens/KarirMateSectionHero.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/screens/MainDashboardScreen.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/screens/ProfilScreen.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/screens/TrainingVideo.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/screens/WorkPediaScreen.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/screens/auth/LoginScreen.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/theme/Theme.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/theme/Type.kt"
+  ],
+  "new_source_and_test_files": [
+    "app/src/main/java/com/example/automatesmartbot/data/repository/LoginFailure.kt",
+    "app/src/main/java/com/example/automatesmartbot/ui/theme/ScreenAppearance.kt",
+    "app/src/test/java/com/example/automatesmartbot/data/repository/LoginFailureTest.kt",
+    "app/src/test/java/com/example/automatesmartbot/ui/screens/ElevenBugUiTest.kt",
+    "app/src/test/java/com/example/automatesmartbot/ui/theme/InputAppearanceTest.kt"
+  ],
+  "limitations": [
+    "No physical device or emulator validation.",
+    "Real Termux backend on the Android device was not available in this Cloud workspace.",
+    "Historical navy slide source is verified; no claim that a prior light screenshot or MP4 playback was verified.",
+    "Explicit fixed-canvas routes outside the 11 affected areas keep their baseline themes."
+  ]
+}

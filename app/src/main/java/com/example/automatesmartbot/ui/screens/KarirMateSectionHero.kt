@@ -6,6 +6,9 @@ import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.runtime.*
+import com.example.automatesmartbot.ui.theme.ScreenSurface
+import com.example.automatesmartbot.ui.theme.screenCanvas
+import com.example.automatesmartbot.ui.theme.karirButtonColors
 import androidx.compose.ui.draw.alpha
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
@@ -15,8 +18,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.automatesmartbot.ui.theme.KarirOrange
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
+import com.example.automatesmartbot.ui.theme.ScreenText as KarirTextDark
+import com.example.automatesmartbot.ui.theme.ScreenMuted as KarirTextMuted
 
 @Composable
 internal fun KarirMateSectionHero(title: String, description: String) {
@@ -25,22 +28,22 @@ internal fun KarirMateSectionHero(title: String, description: String) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        colors = CardDefaults.cardColors(containerColor = ScreenSurface),
+        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                Text("KARIRMATE", color = KarirOrange, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                Text("KARIRMATE", color = androidx.compose.material3.MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold, fontSize = 12.sp)
                 Surface(
                     shape = RoundedCornerShape(10.dp),
-                    color = Color(0xFFFFF3E0),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                    color = screenCanvas(Color(0xFFFFF3E0)),
+                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9)))
                 ) {
                     Text(
                         "PUSAT KARIER",
                         Modifier.padding(horizontal = 8.dp, vertical = 3.dp),
-                        color = Color(0xFFE65100),
+                        color = androidx.compose.material3.MaterialTheme.colorScheme.primary,
                         fontWeight = FontWeight.Bold,
                         fontSize = 10.5.sp
                     )
@@ -57,18 +60,18 @@ internal fun KarirMateSectionHero(title: String, description: String) {
                 color = KarirTextMuted,
                 fontSize = 12.5.sp
             )
-            HorizontalDivider(color = Color(0xFFF1E5DC))
+            HorizontalDivider(color = screenCanvas(Color(0xFFF1E5DC)))
             Row(Modifier.fillMaxWidth().clickable { detailsExpanded = !detailsExpanded }, horizontalArrangement = Arrangement.SpaceBetween) {
                 Text(
                     "Kembangkan kariermu selangkah demi selangkah",
                     modifier = Modifier.weight(1f).alpha(accentAlpha),
-                    color = Color(0xFFE65100),
+                    color = androidx.compose.material3.MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Medium,
                     fontSize = 11.5.sp
                 )
                 Text(
                     if (detailsExpanded) "Tutup ↑" else "Info ↓",
-                    color = KarirOrange,
+                    color = androidx.compose.material3.MaterialTheme.colorScheme.primary,
                     fontWeight = FontWeight.Bold,
                     fontSize = 11.5.sp
                 )

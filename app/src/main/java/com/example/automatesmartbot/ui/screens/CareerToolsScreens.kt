@@ -22,10 +22,13 @@ import com.example.automatesmartbot.data.career.*
 import com.example.automatesmartbot.data.cv.*
 import com.example.automatesmartbot.ui.components.*
 import com.example.automatesmartbot.ui.theme.KarirOrange
-import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
-import com.example.automatesmartbot.ui.theme.KarirPageGradient
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
+import com.example.automatesmartbot.ui.theme.ScreenSurface
+import com.example.automatesmartbot.ui.theme.screenCanvas
+import com.example.automatesmartbot.ui.theme.karirButtonColors
+import com.example.automatesmartbot.ui.theme.ScreenAccent as KarirOrangeDeep
+import com.example.automatesmartbot.ui.theme.ScreenPageGradient as KarirPageGradient
+import com.example.automatesmartbot.ui.theme.ScreenText as KarirTextDark
+import com.example.automatesmartbot.ui.theme.ScreenMuted as KarirTextMuted
 import org.json.JSONArray
 import org.json.JSONObject
 import java.time.LocalDate
@@ -48,6 +51,43 @@ fun SalaryCalculatorScreen() {
     var error by remember { mutableStateOf("") }
     val rupiah = remember { NumberFormat.getCurrencyInstance(Locale("id", "ID")) }
 
+    fun calculateEstimate() {
+        try {
+            fun number(s: String) = s.trim().toLongOrNull() ?: kotlin.error("Isi angka rupiah tanpa titik/koma.")
+            result = PayrollCalculator.calculate(
+                PayrollCalculator.Input(
+                    number(gross),
+                    number(base),
+                    hours.toIntOrNull() ?: kotlin.error("Jam tidak valid."),
+                    PayrollCalculator.OvertimeDay.valueOf(day),
+                    number(health),
+                    number(jht),
+                    number(pension),
+                    number(ptkp),
+                    months.toIntOrNull() ?: kotlin.error("Masa kerja tidak valid."),
+                    number(base)
+                )
+            )
+            error = ""
+        } catch (e: Exception) {
+            error = e.message ?: "Input tidak valid."
+            result = null
+        }
+    }
+
+    fun applyQuickSimulation() {
+        gross = "5000000"
+        base = "5000000"
+        hours = "2"
+        health = "5000000"
+        jht = "5000000"
+        pension = "5000000"
+        ptkp = "54000000"
+        months = "12"
+        day = PayrollCalculator.OvertimeDay.WORKDAY.name
+        calculateEstimate()
+    }
+
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -63,9 +103,10 @@ fun SalaryCalculatorScreen() {
             KarirMateSectionHero("Kalkulator Gaji", "Simulasikan gaji, lembur, BPJS, pajak, dan THR secara transparan.")
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                onClick = ::applyQuickSimulation,
+                colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -73,21 +114,12 @@ fun SalaryCalculatorScreen() {
                     Text("Simulasi Cepat", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
                     Text("Coba angka simulasi standar, lalu sesuaikan dengan nominal slip gaji Anda.", fontSize = 12.sp, color = KarirTextMuted)
                     OutlinedButton(
-                        onClick = {
-                            gross = "5000000"
-                            base = "5000000"
-                            hours = "2"
-                            health = "5000000"
-                            jht = "5000000"
-                            pension = "5000000"
-                            months = "12"
-                            result = null
-                        },
+                        onClick = ::applyQuickSimulation,
                         shape = RoundedCornerShape(10.dp),
                         border = BorderStroke(1.dp, KarirOrange),
                         colors = ButtonDefaults.outlinedButtonColors(
-                            containerColor = Color(0xFFFFF7F2),
-                            contentColor = KarirOrange
+                            containerColor = screenCanvas(Color(0xFFFFF7F2)),
+                            contentColor = MaterialTheme.colorScheme.primary
                         )
                     ) {
                         Text("Isi Contoh Rp5 Juta", fontWeight = FontWeight.Bold, fontSize = 12.5.sp)
@@ -96,9 +128,9 @@ fun SalaryCalculatorScreen() {
             }
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -128,14 +160,18 @@ fun SalaryCalculatorScreen() {
                     ).forEach { (value, label) ->
                         Row(
                             verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.padding(vertical = 2.dp)
+                            modifier = Modifier.fillMaxWidth().selectable(
+                                selected = day == value.name,
+                                onClick = { day = value.name; result = null },
+                                role = Role.RadioButton
+                            ).padding(vertical = 2.dp)
                         ) {
                             RadioButton(
                                 selected = day == value.name,
-                                onClick = { day = value.name; result = null },
+                                onClick = null,
                                 colors = RadioButtonDefaults.colors(
                                     selectedColor = KarirOrange,
-                                    unselectedColor = Color(0xFFFFDEC9)
+                                    unselectedColor = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             )
                             Spacer(modifier = Modifier.width(6.dp))
@@ -143,7 +179,7 @@ fun SalaryCalculatorScreen() {
                         }
                     }
 
-                    HorizontalDivider(color = Color(0xFFF1E5DC))
+                    HorizontalDivider(color = screenCanvas(Color(0xFFF1E5DC)))
 
                     AppInput("Dasar iuran BPJS Kesehatan (0 jika tidak ikut)", health, { health = it; result = null })
                     AppInput("Dasar iuran JHT (0 jika tidak ikut)", jht, { jht = it; result = null })
@@ -152,32 +188,10 @@ fun SalaryCalculatorScreen() {
                     AppInput("Masa kerja untuk THR (bulan penuh)", months, { months = it; result = null })
 
                     Button(
-                        onClick = {
-                            try {
-                                fun number(s: String) = s.trim().toLongOrNull() ?: kotlin.error("Isi angka rupiah tanpa titik/koma.")
-                                result = PayrollCalculator.calculate(
-                                    PayrollCalculator.Input(
-                                        number(gross),
-                                        number(base),
-                                        hours.toIntOrNull() ?: kotlin.error("Jam tidak valid."),
-                                        PayrollCalculator.OvertimeDay.valueOf(day),
-                                        number(health),
-                                        number(jht),
-                                        number(pension),
-                                        number(ptkp),
-                                        months.toIntOrNull() ?: kotlin.error("Masa kerja tidak valid."),
-                                        number(base)
-                                    )
-                                )
-                                error = ""
-                            } catch (e: Exception) {
-                                error = e.message ?: "Input tidak valid."
-                                result = null
-                            }
-                        },
+                        onClick = ::calculateEstimate,
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
+                        colors = karirButtonColors()
                     ) {
                         Text("Hitung Estimasi Gaji", fontWeight = FontWeight.Bold, fontSize = 14.sp)
                     }
@@ -190,21 +204,21 @@ fun SalaryCalculatorScreen() {
 
             result?.let { r ->
                 Card(
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                     shape = RoundedCornerShape(16.dp),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
                     elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                         Surface(
                             shape = RoundedCornerShape(10.dp),
-                            color = Color(0xFFFFF3E0),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                            color = screenCanvas(Color(0xFFFFF3E0)),
+                            border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9)))
                         ) {
                             Text(
                                 "ESTIMASI GAJI DITERIMA (TAKE HOME PAY)",
-                                color = Color(0xFFE65100),
+                                color = MaterialTheme.colorScheme.primary,
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.sp,
                                 modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
@@ -218,7 +232,7 @@ fun SalaryCalculatorScreen() {
                         )
                         Text("Estimasi per bulan, belum termasuk THR tahunan.", fontSize = 12.sp, color = KarirTextMuted)
 
-                        HorizontalDivider(color = Color(0xFFF1E5DC))
+                        HorizontalDivider(color = screenCanvas(Color(0xFFF1E5DC)))
 
                         listOf(
                             "Upah lembur hari ini" to r.overtime,
@@ -278,9 +292,9 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
             KarirMateSectionHero("Surat Karier", "Susun surat lamaran resmi dan dokumen pengunduran diri profesional.")
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -291,7 +305,7 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
                         onClick = onApplicationLetter,
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
+                        colors = karirButtonColors()
                     ) {
                         Text("Buat Surat Lamaran Sekarang", fontWeight = FontWeight.Bold, fontSize = 13.sp)
                     }
@@ -299,9 +313,9 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
             }
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -327,7 +341,7 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
                         },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
+                        colors = karirButtonColors()
                     ) {
                         Text("Buat Draf Resign", fontWeight = FontWeight.Bold)
                     }
@@ -343,7 +357,7 @@ fun CareerLettersScreen(onApplicationLetter: () -> Unit) {
                                 onClick = { preview = !preview },
                                 shape = RoundedCornerShape(10.dp),
                                 border = BorderStroke(1.dp, KarirOrange),
-                                colors = ButtonDefaults.outlinedButtonColors(contentColor = KarirOrange),
+                                colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.primary),
                                 modifier = Modifier.weight(1f)
                             ) {
                                 Text(if (preview) "Tutup Preview" else "Preview A4", fontWeight = FontWeight.Bold, fontSize = 12.sp)

@@ -10,6 +10,9 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import com.example.automatesmartbot.ui.theme.ScreenSurface
+import com.example.automatesmartbot.ui.theme.screenCanvas
+import com.example.automatesmartbot.ui.theme.karirButtonColors
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -18,8 +21,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.automatesmartbot.ui.theme.KarirOrange
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirNavIconUnselected
+import com.example.automatesmartbot.ui.theme.ScreenText as KarirTextDark
+import com.example.automatesmartbot.ui.theme.ScreenMuted as KarirNavIconUnselected
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -30,7 +33,7 @@ fun AppTopBar(
     onBack: (() -> Unit)? = null
 ) {
     TopAppBar(
-        modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC)),
+        modifier = Modifier.border(width = 0.75.dp, color = screenCanvas(Color(0xFFF1E5DC))),
         navigationIcon = {
             if (onBack != null) {
                 IconButton(onClick = onBack) {
@@ -65,7 +68,7 @@ fun AppTopBar(
             Box(
                 modifier = Modifier
                     .clip(RoundedCornerShape(16.dp))
-                    .background(if (isPro) KarirOrange else Color(0xFFFFF0E5))
+                    .background(if (isPro) KarirOrange else screenCanvas(Color(0xFFFFF0E5)))
                     .padding(horizontal = 10.dp, vertical = 5.dp),
                 contentAlignment = Alignment.Center
             ) {
@@ -77,19 +80,19 @@ fun AppTopBar(
                         Icon(
                             imageVector = Icons.Default.WorkspacePremium,
                             contentDescription = "PRO",
-                            tint = Color.White,
+                            tint = com.example.automatesmartbot.ui.theme.OnKarirOrange,
                             modifier = Modifier.size(14.dp)
                         )
                         Text(
                             text = "PRO",
-                            color = Color.White,
+                            color = com.example.automatesmartbot.ui.theme.OnKarirOrange,
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp
                         )
                     } else {
                         Text(
                             text = "FREE",
-                            color = Color(0xFFE65100),
+                            color = androidx.compose.material3.MaterialTheme.colorScheme.primary,
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp
                         )
@@ -109,7 +112,7 @@ fun AppTopBar(
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = Color(0xFFFFFDF9),
+            containerColor = screenCanvas(Color(0xFFFFFDF9)),
             titleContentColor = KarirTextDark
         )
     )

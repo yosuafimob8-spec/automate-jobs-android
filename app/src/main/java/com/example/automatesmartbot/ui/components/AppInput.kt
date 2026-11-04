@@ -34,17 +34,7 @@ fun AppInput(
             minLines = minLines,
             shape = RoundedCornerShape(12.dp),
             isError = error != null,
-            colors = OutlinedTextFieldDefaults.colors(
-                focusedTextColor = MaterialTheme.colorScheme.onSurface,
-                unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
-                focusedContainerColor = MaterialTheme.colorScheme.surface,
-                unfocusedContainerColor = MaterialTheme.colorScheme.surface,
-                focusedBorderColor = KarirOrange,
-                unfocusedBorderColor = MaterialTheme.colorScheme.outline,
-                cursorColor = KarirOrange,
-                errorTextColor = MaterialTheme.colorScheme.error,
-                errorBorderColor = MaterialTheme.colorScheme.error
-            ),
+            colors = com.example.automatesmartbot.ui.theme.karirInputColors(),
             supportingText = error?.let { { Text(it, color = MaterialTheme.colorScheme.error) } }
         )
     }

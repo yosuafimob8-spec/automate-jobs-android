@@ -5,6 +5,9 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import com.example.automatesmartbot.ui.theme.ScreenSurface
+import com.example.automatesmartbot.ui.theme.screenCanvas
+import com.example.automatesmartbot.ui.theme.karirButtonColors
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.platform.LocalContext
 import com.example.automatesmartbot.data.cv.CvPage
@@ -42,7 +45,7 @@ fun PdfExportButton(pages: List<CvPage>, filename: String, label: String = "Eksp
     Button(
         enabled = !busy && pages.isNotEmpty(),
         shape = androidx.compose.foundation.shape.RoundedCornerShape(12.dp),
-        colors = ButtonDefaults.buttonColors(containerColor = com.example.automatesmartbot.ui.theme.KarirOrange),
+        colors = karirButtonColors(),
         onClick = {
             try {
                 val file = File.createTempFile("career-pdf-", ".json", context.cacheDir)
