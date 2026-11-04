@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -47,7 +48,7 @@ private val tealTraining = Color(0xFF16A34A)
 private val paleTraining = Color(0xFFFFFBF7)
 private val trainingDisabledText = Color(0xFF64748B)
 private val trainingButtonColors @Composable get() = ButtonDefaults.outlinedButtonColors(
-    containerColor = Color.White,
+    containerColor = MaterialTheme.colorScheme.surface,
     contentColor = darkTraining,
     disabledContentColor = Color(0xFF94A3B8),
     disabledContainerColor = Color(0xFFF8FAFC)
@@ -58,8 +59,8 @@ private fun TrainingCard(content: @Composable ColumnScope.() -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = darkTraining),
+        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         elevation = CardDefaults.cardElevation(2.dp)
     ) { Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp), content = content) }
 }
@@ -248,7 +249,7 @@ fun JobTrainingScreen() {
             Surface(
                 color = Color(0xFFFFF0E5),
                 shape = RoundedCornerShape(10.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
             ) {
                 Text(
                     "♛ PRO",
@@ -268,9 +269,9 @@ fun JobTrainingScreen() {
                     Text("Pelatihan Kerja", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
                     Text("Tingkatkan skill, kuasai kompetensi, dan dapatkan sertifikat penyelesaian.", color = darkTraining)
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = darkTraining),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         elevation = CardDefaults.cardElevation(2.dp)
                     ) {
                         Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -287,7 +288,7 @@ fun JobTrainingScreen() {
                         OutlinedButton(
                             colors = trainingButtonColors,
                             shape = RoundedCornerShape(12.dp),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                             onClick = { selectedCategory = index; stage = "positions" },
                             modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)
                         ) {
@@ -301,8 +302,8 @@ fun JobTrainingScreen() {
                                 Card(
                                     modifier = Modifier.weight(1f).height(120.dp).clickable { choose(item.id) },
                                     shape = RoundedCornerShape(16.dp),
-                                    colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = darkTraining),
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                     elevation = CardDefaults.cardElevation(2.dp)
                                 ) {
                                     Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
@@ -318,7 +319,7 @@ fun JobTrainingScreen() {
                     OutlinedButton(
                         colors = trainingButtonColors,
                         shape = RoundedCornerShape(12.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         onClick = { stage = "history" },
                         modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)
                     ) { Text("Lihat Riwayat Sertifikat", fontWeight = FontWeight.SemiBold) }
@@ -375,9 +376,9 @@ fun JobTrainingScreen() {
                             onClick = { if (unlocked) { module = i; stage = "lesson" } },
                             enabled = unlocked,
                             modifier = Modifier.fillMaxWidth(),
-                            colors = CardDefaults.cardColors(containerColor = Color.White, contentColor = darkTraining, disabledContainerColor = Color(0xFFF1F5F9), disabledContentColor = trainingDisabledText),
+                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = darkTraining, disabledContainerColor = Color(0xFFF1F5F9), disabledContentColor = trainingDisabledText),
                             shape = RoundedCornerShape(14.dp),
-                            border = BorderStroke(1.dp, if (done) Color(0xFFBBF7D0) else Color(0xFFFFDEC9)),
+                            border = BorderStroke(1.dp, if (done) Color(0xFFBBF7D0) else MaterialTheme.colorScheme.outlineVariant),
                             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                         ) {
                             Row(Modifier.padding(15.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -447,15 +448,15 @@ fun JobTrainingScreen() {
                         minLines = 5,
                         modifier = Modifier.fillMaxWidth(),
                         colors = OutlinedTextFieldDefaults.colors(
-                            focusedContainerColor = Color.White,
-                            unfocusedContainerColor = Color.White,
+                            focusedContainerColor = MaterialTheme.colorScheme.surface,
+                            unfocusedContainerColor = MaterialTheme.colorScheme.surface,
                             focusedTextColor = darkTraining,
                             unfocusedTextColor = darkTraining,
                             disabledTextColor = darkTraining,
                             focusedLabelColor = darkTraining,
                             unfocusedLabelColor = darkTraining,
                             focusedBorderColor = orangeTraining,
-                            unfocusedBorderColor = Color(0xFFFFDEC9),
+                            unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
                             cursorColor = orangeTraining
                         )
                     )
@@ -498,7 +499,7 @@ fun JobTrainingScreen() {
                                 onClick = { saveAnswer(questionIndex, index) },
                                 modifier = Modifier.fillMaxWidth(),
                                 colors = CardDefaults.cardColors(containerColor = if (selected) Color(0xFFFFEAD7) else Color.White, contentColor = darkTraining),
-                                border = BorderStroke(1.dp, if (selected) orangeTraining else Color(0xFFFFDEC9))
+                                border = BorderStroke(1.dp, if (selected) orangeTraining else MaterialTheme.colorScheme.outlineVariant)
                             ) {
                                 Row(Modifier.padding(10.dp), verticalAlignment = Alignment.CenterVertically) {
                                     RadioButton(selected, onClick = { saveAnswer(questionIndex, index) })
@@ -645,7 +646,7 @@ fun JobTrainingScreen() {
                     OutlinedButton(
                         colors = trainingButtonColors,
                         shape = RoundedCornerShape(12.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         onClick = { stage = "catalog" }
                     ) { Text("Kembali ke Katalog", fontWeight = FontWeight.SemiBold) }
                 }
