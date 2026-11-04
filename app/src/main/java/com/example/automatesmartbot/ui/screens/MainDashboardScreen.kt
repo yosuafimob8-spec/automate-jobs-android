@@ -263,10 +263,10 @@ private fun MainDashboardContent(
                             },
                             colors = NavigationBarItemDefaults.colors(
                                 selectedIconColor = Color.White,
-                                selectedTextColor = Color(0xFFE65100),
-                                unselectedIconColor = Color(0xFF475569),
-                                unselectedTextColor = Color(0xFF334155),
-                                indicatorColor = Color(0xFFFF6B00)
+                                selectedTextColor = if (isDarkMode) Color(0xFFFFB07A) else Color(0xFF9A3412),
+                                unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                                unselectedTextColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                                indicatorColor = if (isDarkMode) Color(0xFF9A3412) else Color(0xFFFF6B00)
                             )
                         )
                     }
