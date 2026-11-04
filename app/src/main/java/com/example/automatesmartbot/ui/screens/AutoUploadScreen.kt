@@ -19,8 +19,6 @@ import androidx.compose.ui.unit.sp
 import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 @Composable
 fun AutoUploadScreen(isPro: Boolean) {
@@ -59,7 +57,7 @@ fun AutoUploadScreen(isPro: Boolean) {
                     Text(
                         text = "Upload dan jadwalkan video konten secara otomatis ke berbagai platform media sosial.",
                         fontSize = 12.5.sp,
-                        color = KarirTextMuted
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
@@ -127,8 +125,8 @@ fun AutoUploadScreen(isPro: Boolean) {
                     cursorColor = KarirOrange,
                     focusedContainerColor = MaterialTheme.colorScheme.surface,
                     unfocusedContainerColor = MaterialTheme.colorScheme.surface,
-                    focusedTextColor = KarirTextDark,
-                    unfocusedTextColor = KarirTextDark
+                    focusedTextColor = MaterialTheme.colorScheme.onSurface,
+                    unfocusedTextColor = MaterialTheme.colorScheme.onSurface
                 ),
                 modifier = Modifier.fillMaxWidth()
             )
