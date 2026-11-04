@@ -67,7 +67,11 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
             snapshot?.let { java.io.File(it).delete() }
             exportSnapshot = null
         }
-        if (uri != null && snapshot != null) scope.launch {
+        if (uri != null && snapshot != null && !CvTemplates.canUse(state.templateId, isPro)) {
+            java.io.File(snapshot).delete()
+            exportSnapshot = null
+            viewModel.message("Akses PRO tidak aktif. Ekspor CV dibatalkan.")
+        } else if (uri != null && snapshot != null) scope.launch {
             exportBusy = true
             try {
                 withContext(Dispatchers.IO) {
@@ -88,7 +92,9 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Bo
         }
     }
     val docxOutput = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/vnd.openxmlformats-officedocument.wordprocessingml.document")) { uri ->
-        if (uri != null) scope.launch {
+        if (uri != null && !CvTemplates.canUse(state.templateId, isPro)) {
+            viewModel.message("Akses PRO tidak aktif. Ekspor Word dibatalkan.")
+        } else if (uri != null) scope.launch {
             exportBusy = true
             try {
                 withContext(Dispatchers.IO) { CvExporter.exportDocx(context, uri, state.draft) }
