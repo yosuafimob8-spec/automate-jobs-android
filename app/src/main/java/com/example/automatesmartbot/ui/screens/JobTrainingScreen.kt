@@ -43,15 +43,14 @@ import java.time.LocalDate
 import java.util.UUID
 
 private val orangeTraining = Color(0xFFFF6B00)
-private val darkTraining = Color(0xFF0F172A)
 private val tealTraining = Color(0xFF16A34A)
 private val paleTraining = Color(0xFFFFFBF7)
 private val trainingDisabledText = Color(0xFF64748B)
 private val trainingButtonColors @Composable get() = ButtonDefaults.outlinedButtonColors(
     containerColor = MaterialTheme.colorScheme.surface,
-    contentColor = darkTraining,
+    contentColor = MaterialTheme.colorScheme.onSurface,
     disabledContentColor = Color(0xFF94A3B8),
-    disabledContainerColor = Color(0xFFF8FAFC)
+    disabledContainerColor = MaterialTheme.colorScheme.surfaceVariant
 )
 
 @Composable
@@ -59,7 +58,7 @@ private fun TrainingCard(content: @Composable ColumnScope.() -> Unit) {
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = darkTraining),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = MaterialTheme.colorScheme.onSurface),
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
         elevation = CardDefaults.cardElevation(2.dp)
     ) { Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp), content = content) }
@@ -75,10 +74,10 @@ private fun TrainingAction(label: String, enabled: Boolean = true, onClick: () -
         colors = ButtonDefaults.buttonColors(
             containerColor = orangeTraining,
             contentColor = Color.White,
-            disabledContainerColor = Color(0xFFE2E8F0),
-            disabledContentColor = darkTraining
+            disabledContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+            disabledContentColor = MaterialTheme.colorScheme.onSurface
         )
-    ) { Text(label, fontWeight = FontWeight.Bold, color = if (enabled) Color.White else darkTraining) }
+    ) { Text(label, fontWeight = FontWeight.Bold, color = if (enabled) Color.White else MaterialTheme.colorScheme.onSurface) }
 }
 
 @Composable
@@ -229,11 +228,11 @@ fun JobTrainingScreen() {
             message += ". Belum lulus; selesaikan modul dan ulangi evaluasi."
         }
     }
-    CompositionLocalProvider(LocalContentColor provides darkTraining, LocalTextStyle provides LocalTextStyle.current.copy(color = darkTraining)) {
+    CompositionLocalProvider(LocalContentColor provides MaterialTheme.colorScheme.onSurface, LocalTextStyle provides LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onSurface)) {
     Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
     Column(Modifier.fillMaxSize()) {
         Row(
-            Modifier.fillMaxWidth().background(Color(0xFFFFFDF9)).border(BorderStroke(0.75.dp, Color(0xFFF1E5DC))).padding(16.dp),
+            Modifier.fillMaxWidth().background(MaterialTheme.colorScheme.surface).border(BorderStroke(0.75.dp, MaterialTheme.colorScheme.outlineVariant)).padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
             if (stage != "catalog") TextButton(onClick = {
@@ -243,7 +242,7 @@ fun JobTrainingScreen() {
                     "lesson", "practice", "exam" -> "modules"
                     else -> "catalog"
                 }
-            }) { Text("‹", color = darkTraining, fontSize = 28.sp) }
+            }) { Text("‹", color = MaterialTheme.colorScheme.onSurface, fontSize = 28.sp) }
             Text("▣ KarirMate", color = orangeTraining, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
             Spacer(Modifier.weight(1f))
             Surface(
@@ -266,24 +265,24 @@ fun JobTrainingScreen() {
         ) {
             when (stage) {
                 "catalog" -> {
-                    Text("Pelatihan Kerja", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
-                    Text("Tingkatkan skill, kuasai kompetensi, dan dapatkan sertifikat penyelesaian.", color = darkTraining)
+                    Text("Pelatihan Kerja", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = MaterialTheme.colorScheme.onSurface)
+                    Text("Tingkatkan skill, kuasai kompetensi, dan dapatkan sertifikat penyelesaian.", color = MaterialTheme.colorScheme.onSurface)
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = darkTraining),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = MaterialTheme.colorScheme.onSurface),
                         shape = RoundedCornerShape(16.dp),
                         border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         elevation = CardDefaults.cardElevation(2.dp)
                     ) {
                         Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text("Siapkan Karier Impianmu Lewat Pelatihan Terarah", fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
+                            Text("Siapkan Karier Impianmu Lewat Pelatihan Terarah", fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, color = MaterialTheme.colorScheme.onSurface)
                             listOf("✓ Materi praktis", "✓ Latihan & evaluasi", "✓ Sertifikat penyelesaian KarirMate").forEach {
                                 Text(it, color = tealTraining, fontWeight = FontWeight.SemiBold)
                             }
                         }
                     }
                     TrainingHeroIllustration(Modifier.fillMaxWidth())
-                    Text("Jelajahi Posisi Pekerjaan", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = darkTraining)
-                    Text("${TrainingPositions.groups.size} bidang • ${TrainingPositions.count} posisi tersedia", color = darkTraining)
+                    Text("Jelajahi Posisi Pekerjaan", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
+                    Text("${TrainingPositions.groups.size} bidang • ${TrainingPositions.count} posisi tersedia", color = MaterialTheme.colorScheme.onSurface)
                     TrainingPositions.groups.forEachIndexed { index, group ->
                         OutlinedButton(
                             colors = trainingButtonColors,
@@ -292,30 +291,30 @@ fun JobTrainingScreen() {
                             onClick = { selectedCategory = index; stage = "positions" },
                             modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)
                         ) {
-                            Text("${group.category}  (${group.positions.size} posisi)", color = darkTraining, fontWeight = FontWeight.SemiBold)
+                            Text("${group.category}  (${group.positions.size} posisi)", color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.SemiBold)
                         }
                     }
-                    Text("Pilih Kategori Pelatihan", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = darkTraining)
+                    Text("Pilih Kategori Pelatihan", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
                     TrainingCourses.all.chunked(2).forEach { row ->
                         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                             row.forEach { item ->
                                 Card(
                                     modifier = Modifier.weight(1f).height(120.dp).clickable { choose(item.id) },
                                     shape = RoundedCornerShape(16.dp),
-                                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = darkTraining),
+                                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = MaterialTheme.colorScheme.onSurface),
                                     border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                     elevation = CardDefaults.cardElevation(2.dp)
                                 ) {
                                     Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
                                         Text("▣", color = orangeTraining, fontSize = 28.sp)
-                                        Text(item.title, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, fontSize = 13.sp, color = darkTraining)
+                                        Text(item.title, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurface)
                                     }
                                 }
                             }
                             if (row.size == 1) Spacer(Modifier.weight(1f))
                         }
                     }
-                    Text("Sertifikat penyelesaian adalah bukti latihan internal, bukan sertifikasi kompetensi resmi BNSP.", fontSize = 12.sp, color = darkTraining)
+                    Text("Sertifikat penyelesaian adalah bukti latihan internal, bukan sertifikasi kompetensi resmi BNSP.", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurface)
                     OutlinedButton(
                         colors = trainingButtonColors,
                         shape = RoundedCornerShape(12.dp),
@@ -326,11 +325,11 @@ fun JobTrainingScreen() {
                 }
                 "positions" -> {
                     val group = TrainingPositions.groups[selectedCategory]
-                    Text(group.category, fontSize = 25.sp, fontWeight = FontWeight.Bold, color = darkTraining)
-                    Text("Pilih posisi yang ingin dipelajari", color = darkTraining)
+                    Text(group.category, fontSize = 25.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
+                    Text("Pilih posisi yang ingin dipelajari", color = MaterialTheme.colorScheme.onSurface)
                     group.positions.forEach { position ->
                         TrainingCard {
-                            Text(position, fontWeight = FontWeight.Bold, color = darkTraining)
+                            Text(position, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
                             TrainingLevel.entries.forEach { level ->
                                 val training = TrainingPathways.courseFor(position, level)
                                 val previous = when (level) {
@@ -345,30 +344,30 @@ fun JobTrainingScreen() {
                                 OutlinedButton(
                                     enabled = unlocked,
                                     modifier = Modifier.fillMaxWidth(),
-                                    colors = ButtonDefaults.outlinedButtonColors(contentColor = darkTraining, disabledContentColor = trainingDisabledText, disabledContainerColor = Color(0xFFF1F5F9)),
+                                    colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.onSurface, disabledContentColor = trainingDisabledText, disabledContainerColor = MaterialTheme.colorScheme.surfaceVariant),
                                     onClick = {
                                         selectedPosition = position
                                         selectedLevel = level.name
                                         choose(training.id)
                                     }
-                                ) { Text(if (unlocked) "Mulai ${level.label}" else "🔒 ${level.label} — selesaikan tingkat sebelumnya", color = if (unlocked) darkTraining else trainingDisabledText) }
+                                ) { Text(if (unlocked) "Mulai ${level.label}" else "🔒 ${level.label} — selesaikan tingkat sebelumnya", color = if (unlocked) MaterialTheme.colorScheme.onSurface else trainingDisabledText) }
                             }
                         }
                     }
                 }
                 "modules" -> {
-                    Text(course.title, fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
-                    if (selectedPosition.isNotBlank()) Text("Posisi pilihan: $selectedPosition", color = darkTraining)
+                    Text(course.title, fontSize = 25.sp, fontWeight = FontWeight.ExtraBold, color = MaterialTheme.colorScheme.onSurface)
+                    if (selectedPosition.isNotBlank()) Text("Posisi pilihan: $selectedPosition", color = MaterialTheme.colorScheme.onSurface)
                     TrainingCard {
-                        Text("Pelajari materi dan selesaikan seluruh modul", fontWeight = FontWeight.Bold, color = darkTraining)
-                        Text("${course.lessons.size} Modul  •  Evaluasi Akhir  •  Sertifikat", color = darkTraining)
+                        Text("Pelajari materi dan selesaikan seluruh modul", fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
+                        Text("${course.lessons.size} Modul  •  Evaluasi Akhir  •  Sertifikat", color = MaterialTheme.colorScheme.onSurface)
                         LinearProgressIndicator(
                             progress = { completed.size.toFloat() / course.lessons.size.coerceAtLeast(1) },
                             modifier = Modifier.fillMaxWidth(),
                             color = orangeTraining
                         )
                     }
-                    Text("Daftar Modul", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = darkTraining)
+                    Text("Daftar Modul", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
                     course.lessons.forEachIndexed { i, lesson ->
                         val done = i.toString() in completed
                         val unlocked = i == 0 || (i - 1).toString() in completed
@@ -376,7 +375,7 @@ fun JobTrainingScreen() {
                             onClick = { if (unlocked) { module = i; stage = "lesson" } },
                             enabled = unlocked,
                             modifier = Modifier.fillMaxWidth(),
-                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = darkTraining, disabledContainerColor = Color(0xFFF1F5F9), disabledContentColor = trainingDisabledText),
+                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface, contentColor = MaterialTheme.colorScheme.onSurface, disabledContainerColor = MaterialTheme.colorScheme.surfaceVariant, disabledContentColor = trainingDisabledText),
                             shape = RoundedCornerShape(14.dp),
                             border = BorderStroke(1.dp, if (done) Color(0xFFBBF7D0) else MaterialTheme.colorScheme.outlineVariant),
                             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
@@ -384,8 +383,8 @@ fun JobTrainingScreen() {
                             Row(Modifier.padding(15.dp), verticalAlignment = Alignment.CenterVertically) {
                                 Text(if (done) "✓" else if (unlocked) "▶" else "🔒", color = if (done) tealTraining else orangeTraining)
                                 Spacer(Modifier.width(12.dp))
-                                Text(lesson.first, Modifier.weight(1f), fontWeight = FontWeight.SemiBold, color = if (unlocked) darkTraining else trainingDisabledText)
-                                Text(if (done) "Selesai" else if (unlocked) "Mulai" else "Terkunci", fontSize = 11.sp, color = if (unlocked) darkTraining else trainingDisabledText)
+                                Text(lesson.first, Modifier.weight(1f), fontWeight = FontWeight.SemiBold, color = if (unlocked) MaterialTheme.colorScheme.onSurface else trainingDisabledText)
+                                Text(if (done) "Selesai" else if (unlocked) "Mulai" else "Terkunci", fontSize = 11.sp, color = if (unlocked) MaterialTheme.colorScheme.onSurface else trainingDisabledText)
                             }
                         }
                     }
@@ -410,7 +409,7 @@ fun JobTrainingScreen() {
                             }
                         }
                     }
-                    if (message.isNotBlank()) Text(message, color = darkTraining)
+                    if (message.isNotBlank()) Text(message, color = MaterialTheme.colorScheme.onSurface)
                 }
                 "lesson" -> {
                     Text("Modul ${module + 1}", color = orangeTraining, fontWeight = FontWeight.Bold)
@@ -428,11 +427,11 @@ fun JobTrainingScreen() {
                     TrainingAction("Lanjut ke Latihan →") { stage = "practice" }
                 }
                 "practice" -> {
-                    Text("Latihan Praktik", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
-                    Text("Modul ${module + 1} – ${course.lessons[module].first}", color = darkTraining)
+                    Text("Latihan Praktik", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold, color = MaterialTheme.colorScheme.onSurface)
+                    Text("Modul ${module + 1} – ${course.lessons[module].first}", color = MaterialTheme.colorScheme.onSurface)
                     TrainingCard {
-                        Text("🏠  Studi Kasus", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = darkTraining)
-                        Text("Berikan contoh nyata bagaimana materi ini diterapkan dalam pekerjaan atau saat melamar kerja.", color = darkTraining)
+                        Text("🏠  Studi Kasus", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
+                        Text("Berikan contoh nyata bagaimana materi ini diterapkan dalam pekerjaan atau saat melamar kerja.", color = MaterialTheme.colorScheme.onSurface)
                     }
                     var practice by rememberSaveable(courseId, module) {
                         mutableStateOf(prefs.getString("practice_${courseId}_$module", "").orEmpty())
@@ -443,18 +442,18 @@ fun JobTrainingScreen() {
                             practice = it
                             prefs.edit().putString("practice_${courseId}_$module", it).apply()
                         },
-                        label = { Text("Jawaban latihan praktik", color = darkTraining) },
-                        textStyle = LocalTextStyle.current.copy(color = darkTraining),
+                        label = { Text("Jawaban latihan praktik", color = MaterialTheme.colorScheme.onSurface) },
+                        textStyle = LocalTextStyle.current.copy(color = MaterialTheme.colorScheme.onSurface),
                         minLines = 5,
                         modifier = Modifier.fillMaxWidth(),
                         colors = OutlinedTextFieldDefaults.colors(
                             focusedContainerColor = MaterialTheme.colorScheme.surface,
                             unfocusedContainerColor = MaterialTheme.colorScheme.surface,
-                            focusedTextColor = darkTraining,
-                            unfocusedTextColor = darkTraining,
-                            disabledTextColor = darkTraining,
-                            focusedLabelColor = darkTraining,
-                            unfocusedLabelColor = darkTraining,
+                            focusedTextColor = MaterialTheme.colorScheme.onSurface,
+                            unfocusedTextColor = MaterialTheme.colorScheme.onSurface,
+                            disabledTextColor = MaterialTheme.colorScheme.onSurface,
+                            focusedLabelColor = MaterialTheme.colorScheme.onSurface,
+                            unfocusedLabelColor = MaterialTheme.colorScheme.onSurface,
                             focusedBorderColor = orangeTraining,
                             unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
                             cursorColor = orangeTraining
@@ -523,8 +522,8 @@ fun JobTrainingScreen() {
                             colors = ButtonDefaults.buttonColors(
             containerColor = orangeTraining,
             contentColor = Color.White,
-            disabledContainerColor = Color(0xFFE2E8F0),
-            disabledContentColor = darkTraining
+            disabledContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+            disabledContentColor = MaterialTheme.colorScheme.onSurface
         )
                         ) { Text(if (questionIndex == (serverQuestions?.length() ?: offlineQuestions.size) - 1) "Selesai" else "Berikutnya ›") }
                     }
@@ -548,7 +547,7 @@ fun JobTrainingScreen() {
                         animationSpec = tween(1000), label = "trainingScore"
                     )
                     Text("LAPORAN LATIHAN", color = Color(0xFF008A81), fontWeight = FontWeight.Bold, fontSize = 12.sp)
-                    Text("Hasil Pelatihan Kerja", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
+                    Text("Hasil Pelatihan Kerja", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold, color = MaterialTheme.colorScheme.onSurface)
                     Text("Lihat pencapaian evaluasi dan langkah berikutnya.", color = trainingDisabledText)
                     Card(
                         modifier = Modifier.fillMaxWidth(),
@@ -581,11 +580,11 @@ fun JobTrainingScreen() {
                         }
                     }
                     TrainingCard {
-                        Text("Ringkasan Evaluasi", fontWeight = FontWeight.ExtraBold, fontSize = 18.sp, color = darkTraining)
-                        Text("Nilai akhir: ${finalScore.coerceAtLeast(0)}/100", color = darkTraining)
+                        Text("Ringkasan Evaluasi", fontWeight = FontWeight.ExtraBold, fontSize = 18.sp, color = MaterialTheme.colorScheme.onSurface)
+                        Text("Nilai akhir: ${finalScore.coerceAtLeast(0)}/100", color = MaterialTheme.colorScheme.onSurface)
                         Text("Batas kelulusan: 80/100", color = trainingDisabledText)
                         Text(if (finalPassed) "Status: Lulus" else "Status: Belum lulus", color = if (finalPassed) tealTraining else orangeTraining, fontWeight = FontWeight.Bold)
-                        if (finalPassed) Text("Sertifikat tersimpan. Buka melalui menu Sertifikat di dashboard.", color = darkTraining)
+                        if (finalPassed) Text("Sertifikat tersimpan. Buka melalui menu Sertifikat di dashboard.", color = MaterialTheme.colorScheme.onSurface)
                     }
                     TrainingAction("Kembali ke Pelatihan") { stage = "catalog" }
                     if (!finalPassed) OutlinedButton(colors = trainingButtonColors, onClick = { resetExamAnswers(); stage = "exam"; questionIndex = 0 }, modifier = Modifier.fillMaxWidth()) { Text("Ulangi Evaluasi") }
@@ -594,7 +593,7 @@ fun JobTrainingScreen() {
                     Text("Sertifikat Penyelesaian", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
                     Text("✓ Selamat! Kamu telah menyelesaikan pelatihan.", color = tealTraining, fontWeight = FontWeight.Bold)
                     certificate?.let { item ->
-                        Text("Pratinjau sertifikat • geser horizontal untuk melihat ukuran landscape", fontSize = 12.sp, color = darkTraining)
+                        Text("Pratinjau sertifikat • geser horizontal untuk melihat ukuran landscape", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurface)
                         Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState())) {
                             androidx.compose.foundation.Canvas(Modifier.width(620.dp).height(438.dp)) {
                                 val androidCanvas = drawContext.canvas.nativeCanvas
