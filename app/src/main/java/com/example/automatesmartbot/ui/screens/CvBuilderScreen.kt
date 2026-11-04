@@ -44,6 +44,7 @@ import kotlinx.coroutines.withContext
 fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit, isPro: Boolean = false) {
     val state by viewModel.state.collectAsState()
     val history by viewModel.history.collectAsState()
+    LaunchedEffect(isPro) { viewModel.setMembershipAccess(isPro) }
     val page = history.last()
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
