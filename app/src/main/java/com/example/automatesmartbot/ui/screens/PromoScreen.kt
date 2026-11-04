@@ -23,7 +23,6 @@ import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
 import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 
 data class QponItem(
     val code: String,
@@ -89,7 +88,7 @@ fun PromoScreen(
                     Text(
                         text = "Gunakan kode kupon resmi Qpon.id di bawah ini untuk mendapatkan potongan harga berlangganan KarirMate PRO.",
                         fontSize = 13.sp,
-                        color = KarirTextMuted,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
                         lineHeight = 18.sp
                     )
                 }
@@ -111,7 +110,7 @@ fun PromoScreen(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Column {
-                        Text(text = "Status Anda Saat Ini", fontSize = 12.sp, color = KarirTextMuted)
+                        Text(text = "Status Anda Saat Ini", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                         Spacer(modifier = Modifier.height(2.dp))
                         Text(
                             text = if (isPro) "PRO MEMBER ⭐" else "FREE MEMBER",
@@ -213,7 +212,7 @@ fun PromoScreen(
                                 Text(
                                     text = "Berlaku hingga: ${qpon.validUntil}",
                                     fontSize = 11.5.sp,
-                                    color = KarirTextMuted
+                                    color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
 
                                 TextButton(
