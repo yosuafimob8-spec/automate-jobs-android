@@ -7,6 +7,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.VideoLibrary
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -33,7 +34,7 @@ fun AutoUploadScreen(isPro: Boolean) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
             .padding(16.dp)
     ) {
         Column(
@@ -41,9 +42,9 @@ fun AutoUploadScreen(isPro: Boolean) {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -52,7 +53,7 @@ fun AutoUploadScreen(isPro: Boolean) {
                         text = "Auto Upload Video Bot",
                         fontWeight = FontWeight.Bold,
                         fontSize = 17.sp,
-                        color = KarirTextDark
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
@@ -64,7 +65,7 @@ fun AutoUploadScreen(isPro: Boolean) {
             }
 
             // Platform Selection
-            Text(text = "Pilih Platform Tujuan:", fontSize = 13.5.sp, fontWeight = FontWeight.Bold, color = KarirTextDark)
+            Text(text = "Pilih Platform Tujuan:", fontSize = 13.5.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface)
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.fillMaxWidth()
@@ -78,19 +79,19 @@ fun AutoUploadScreen(isPro: Boolean) {
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = Color(0xFFFFF3E0),
                             selectedLabelColor = Color(0xFFE65100),
-                            containerColor = Color.White,
-                            labelColor = KarirTextDark
+                            containerColor = MaterialTheme.colorScheme.surface,
+                            labelColor = MaterialTheme.colorScheme.onSurface
                         ),
-                        border = BorderStroke(1.dp, if (isSelected) KarirOrange else Color(0xFFFFDEC9))
+                        border = BorderStroke(1.dp, if (isSelected) KarirOrange else MaterialTheme.colorScheme.outlineVariant)
                     )
                 }
             }
 
             // Video File Info Card
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -106,7 +107,7 @@ fun AutoUploadScreen(isPro: Boolean) {
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
                         Icon(Icons.Default.VideoLibrary, contentDescription = null, tint = KarirOrange)
-                        Text(text = "video_materi_karier_v1.mp4 (45 MB)", fontSize = 12.5.sp, color = KarirTextDark, fontWeight = FontWeight.Medium)
+                        Text(text = "video_materi_karier_v1.mp4 (45 MB)", fontSize = 12.5.sp, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Medium)
                     }
                     TextButton(onClick = { }) {
                         Text("Ganti", color = KarirOrangeDeep, fontWeight = FontWeight.Bold)
@@ -122,10 +123,10 @@ fun AutoUploadScreen(isPro: Boolean) {
                 minLines = 3,
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedBorderColor = KarirOrange,
-                    unfocusedBorderColor = Color(0xFFFFDEC9),
+                    unfocusedBorderColor = MaterialTheme.colorScheme.outlineVariant,
                     cursorColor = KarirOrange,
-                    focusedContainerColor = Color.White,
-                    unfocusedContainerColor = Color.White,
+                    focusedContainerColor = MaterialTheme.colorScheme.surface,
+                    unfocusedContainerColor = MaterialTheme.colorScheme.surface,
                     focusedTextColor = KarirTextDark,
                     unfocusedTextColor = KarirTextDark
                 ),
@@ -159,16 +160,16 @@ fun AutoUploadScreen(isPro: Boolean) {
             }
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
+                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                 elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
                     Text(text = "Status Bot Upload:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = KarirOrangeDeep)
                     Spacer(modifier = Modifier.height(4.dp))
-                    Text(text = uploadStatus, fontSize = 12.5.sp, color = KarirTextDark)
+                    Text(text = uploadStatus, fontSize = 12.5.sp, color = MaterialTheme.colorScheme.onSurface)
                 }
             }
         }
