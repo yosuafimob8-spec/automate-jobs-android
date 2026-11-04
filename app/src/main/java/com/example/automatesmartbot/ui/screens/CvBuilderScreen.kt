@@ -211,7 +211,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     border = BorderStroke(1.dp, KarirOrange),
                                     colors = ButtonDefaults.outlinedButtonColors(contentColor = KarirOrange)
                                 ) {
-                                    Text("Template", fontWeight = FontWeight.Bold, fontSize = 12.5.sp)
+                                    Text("Template", color = KarirOrangeDeep, fontWeight = FontWeight.Bold, fontSize = 12.5.sp)
                                 }
                                 OutlinedButton(
                                     onClick = { nav("CV Analyst") },
@@ -220,7 +220,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     border = BorderStroke(1.dp, KarirOrange),
                                     colors = ButtonDefaults.outlinedButtonColors(contentColor = KarirOrange)
                                 ) {
-                                    Text("CV Analyst", fontWeight = FontWeight.Bold, fontSize = 12.5.sp)
+                                    Text("CV Analyst", color = KarirOrangeDeep, fontWeight = FontWeight.Bold, fontSize = 12.5.sp)
                                 }
                             }
                         }
