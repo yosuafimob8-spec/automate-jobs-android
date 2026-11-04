@@ -12,6 +12,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -124,7 +125,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient)
+            .background(MaterialTheme.colorScheme.background)
     ) {
         Column(
             Modifier
@@ -140,7 +141,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                 Surface(
                     shape = RoundedCornerShape(8.dp),
                     color = Color(0xFFFFF3E0),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(it, color = Color(0xFF9A3412), fontSize = 12.sp, modifier = Modifier.padding(10.dp))
@@ -151,16 +152,16 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                 LinearProgressIndicator(
                     Modifier.fillMaxWidth(),
                     color = KarirOrange,
-                    trackColor = Color(0xFFFFDEC9)
+                    trackColor = MaterialTheme.colorScheme.outlineVariant
                 )
             }
 
             when (page) {
                 "CV Builder" -> {
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -174,12 +175,12 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     "CV Saya",
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 17.sp,
-                                    color = KarirTextDark
+                                    color = MaterialTheme.colorScheme.onSurface
                                 )
                                 Surface(
                                     shape = RoundedCornerShape(10.dp),
                                     color = Color(0xFFFFF3E0),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                                 ) {
                                     Text(
                                         "${state.drafts.size} CV Tersimpan",
@@ -230,8 +231,8 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                         Card(
                             Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(16.dp),
-                            colors = CardDefaults.cardColors(containerColor = Color.White),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                         ) {
                             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -239,7 +240,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     document.content.contact.fullName.ifBlank { document.name },
                                     fontWeight = FontWeight.Bold,
                                     fontSize = 15.sp,
-                                    color = KarirTextDark
+                                    color = MaterialTheme.colorScheme.onSurface
                                 )
                                 Text(
                                     "Template: ${CvTemplates.resolve(document.templateId).name}",
@@ -257,7 +258,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     OutlinedButton(
                                         onClick = { viewModel.selectDocument(document.id); nav("Preview CV") },
                                         shape = RoundedCornerShape(10.dp),
-                                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                         colors = ButtonDefaults.outlinedButtonColors(contentColor = KarirTextDark)
                                     ) {
                                         Text("Preview", fontSize = 12.sp)
@@ -273,14 +274,14 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
 
                 "CV Saya" -> {
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text("Bagian-Bagian CV", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                            Text("Bagian-Bagian CV", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                             Text("Pilih bagian untuk mengisi data. Perubahan tersimpan otomatis di perangkat.", color = KarirTextMuted, fontSize = 12.sp)
 
                             listOf(
@@ -292,7 +293,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     onClick = { nav(title) },
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                     colors = ButtonDefaults.outlinedButtonColors(containerColor = Color(0xFFFFFBF7), contentColor = KarirTextDark)
                                 ) {
                                     Row(
@@ -333,14 +334,14 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                     }
 
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text("Informasi Kontak & Diri", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                            Text("Informasi Kontak & Diri", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
 
                             bitmap?.let {
                                 Image(
@@ -381,13 +382,13 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
 
                 "Objektif / Ringkasan" -> {
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text("Ringkasan Profil / Objektif", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                            Text("Ringkasan Profil / Objektif", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                             AppInput("Tulis ringkasan singkat tentang keahlian dan pengalaman Anda", state.draft.summary, { value -> viewModel.updateContent { it.copy(summary = value) } }, minLines = 6)
                         }
                     }
@@ -401,9 +402,9 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                     val entries = state.draft.extras.filter { if (page == "Referensi") it.id == "references" else it.id != "references" }
                     entries.forEach { item ->
                         Card(
-                            colors = CardDefaults.cardColors(containerColor = Color.White),
+                            colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                             shape = RoundedCornerShape(16.dp),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                            border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                             modifier = Modifier.fillMaxWidth()
                         ) {
                             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -433,13 +434,13 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
 
                 "Ubah Urutan / Edit Judul" -> {
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                            Text("Urutan Bagian CV", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                            Text("Urutan Bagian CV", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                             Text("Atur urutan susunan bagian CV Anda.", color = KarirTextMuted, fontSize = 12.sp)
                             val order = (state.draft.sectionOrder + state.draft.extras.map { it.id }).distinct()
                             order.forEachIndexed { index, id ->
@@ -447,7 +448,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                     Modifier.fillMaxWidth().padding(vertical = 4.dp),
                                     verticalAlignment = Alignment.CenterVertically
                                 ) {
-                                    Text(id, Modifier.weight(1f), fontWeight = FontWeight.Medium, color = KarirTextDark, fontSize = 13.5.sp)
+                                    Text(id, Modifier.weight(1f), fontWeight = FontWeight.Medium, color = MaterialTheme.colorScheme.onSurface, fontSize = 13.5.sp)
                                     TextButton(
                                         enabled = index > 0,
                                         onClick = { val next = order.toMutableList(); java.util.Collections.swap(next, index, index - 1); viewModel.updateContent { it.copy(sectionOrder = next) } }
@@ -464,19 +465,19 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
 
                 "Template" -> {
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                            Text("Katalog Template CV", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                            Text("Katalog Template CV", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                             Text("14 pilihan tata letak profesional ramah ATS.", color = KarirTextMuted, fontSize = 12.sp)
 
                             val categoryList = listOf("Semua") + CvTemplates.all.map { it.category }.distinct()
                             ScrollableTabRow(
                                 selectedTabIndex = categoryList.indexOf(filter).coerceAtLeast(0),
-                                containerColor = Color.White,
+                                containerColor = MaterialTheme.colorScheme.surface,
                                 contentColor = KarirOrange,
                                 edgePadding = 0.dp
                             ) {
@@ -502,14 +503,14 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                             pair.forEach { template ->
                                 Card(
                                     Modifier.weight(1f).clickable { templatePreview = template.id; nav("Preview Template") },
-                                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                                     shape = RoundedCornerShape(14.dp),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                     elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                                 ) {
                                     Column(Modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                                         CvPageImage(remember(template.id) { CvRenderer.layout(CvTemplates.sample, template.id).first() }, 1, Modifier.fillMaxWidth(), 360)
-                                        Text(template.name, fontWeight = FontWeight.Bold, fontSize = 13.sp, color = KarirTextDark)
+                                        Text(template.name, fontWeight = FontWeight.Bold, fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurface)
                                         Text(template.category, color = KarirTextMuted, fontSize = 11.sp)
                                     }
                                 }
@@ -525,14 +526,14 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                     val content = if (empty) CvTemplates.sample else state.draft
 
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                             if (empty) Text("Data contoh untuk preview. Lengkapi CV Anda sebelum ekspor.", color = Color(0xFFD97706), fontSize = 11.5.sp)
-                            Text(CvTemplates.resolve(id).name, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                            Text(CvTemplates.resolve(id).name, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                             val pages = remember(content, id) { CvRenderer.layout(content, id) }
                             CvDocumentPreview(pages, Modifier.fillMaxWidth().height(580.dp))
 
@@ -578,13 +579,13 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
 
                 "CV Analyst" -> {
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text("CV Analyst", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = KarirTextDark)
+                            Text("CV Analyst", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = MaterialTheme.colorScheme.onSurface)
                             Text("Periksa kelengkapan dan format ATS pada CV Anda.", color = KarirTextMuted, fontSize = 12.sp)
 
                             Button(
@@ -604,21 +605,21 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                                 onClick = viewModel::runDraftCheck,
                                 modifier = Modifier.fillMaxWidth(),
                                 shape = RoundedCornerShape(12.dp),
-                                border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
                             ) {
-                                Text("Periksa CV Saya yang Aktif", color = KarirTextDark)
+                                Text("Periksa CV Saya yang Aktif", color = MaterialTheme.colorScheme.onSurface)
                             }
 
                             state.ats?.let { report ->
                                 Surface(
                                     shape = RoundedCornerShape(12.dp),
                                     color = Color(0xFFFFF3E0),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                     modifier = Modifier.fillMaxWidth()
                                 ) {
                                     Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                                         Text("Skor Kelengkapan: ${report.score}/100", fontWeight = FontWeight.Bold, color = Color(0xFFE65100))
-                                        report.issues.forEach { Text("• ${it.title}: ${it.detail}", fontSize = 12.sp, color = KarirTextDark) }
+                                        report.issues.forEach { Text("• ${it.title}: ${it.detail}", fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurface) }
                                     }
                                 }
                             }
@@ -634,14 +635,14 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
 
                             HorizontalDivider(color = Color(0xFFF1E5DC))
 
-                            Text("Riwayat Analisis", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = KarirTextDark)
+                            Text("Riwayat Analisis", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurface)
                             state.analyses.forEach { a ->
                                 TextButton(onClick = { viewModel.selectAnalysis(a) }) {
                                     Text("${a.source} • ${a.score}/100", color = KarirOrangeDeep)
                                 }
                             }
 
-                            Text("Surat Tersimpan", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = KarirTextDark)
+                            Text("Surat Tersimpan", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = MaterialTheme.colorScheme.onSurface)
                             state.letters.forEach { letter ->
                                 TextButton(onClick = { viewModel.selectLetter(letter); jobTitle = letter.jobTitle; company = letter.company; nav("Editor Surat") }) {
                                     Text("${letter.jobTitle} — ${letter.company}", color = KarirOrangeDeep)
@@ -653,20 +654,20 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
 
                 "Hasil Analisis" -> state.analysis?.let { report ->
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text("Hasil Analisis CV", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = KarirTextDark)
+                            Text("Hasil Analisis CV", fontWeight = FontWeight.Bold, fontSize = 18.sp, color = MaterialTheme.colorScheme.onSurface)
                             Text("Skor kelengkapan: ${report.score}/100", fontWeight = FontWeight.Bold, fontSize = 22.sp, color = KarirOrange)
                             Text("Kelebihan", fontWeight = FontWeight.Bold, color = Color(0xFF16A34A))
-                            report.strengths.forEach { Text("• $it", fontSize = 12.5.sp, color = KarirTextDark) }
+                            report.strengths.forEach { Text("• $it", fontSize = 12.5.sp, color = MaterialTheme.colorScheme.onSurface) }
                             Text("Kekurangan", fontWeight = FontWeight.Bold, color = Color(0xFFDC2626))
-                            report.weaknesses.forEach { Text("• $it", fontSize = 12.5.sp, color = KarirTextDark) }
+                            report.weaknesses.forEach { Text("• $it", fontSize = 12.5.sp, color = MaterialTheme.colorScheme.onSurface) }
                             Text("Rekomendasi", fontWeight = FontWeight.Bold, color = Color(0xFFE65100))
-                            report.recommendations.forEach { Text("• $it", fontSize = 12.5.sp, color = KarirTextDark) }
+                            report.recommendations.forEach { Text("• $it", fontSize = 12.5.sp, color = MaterialTheme.colorScheme.onSurface) }
 
                             Button(
                                 onClick = { useAnalyzed = true; nav("Pilih Jenis Surat") },
@@ -682,22 +683,22 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
 
                 "Pilih Jenis Surat" -> {
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text("Pilih Jenis Surat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                            Text("Pilih Jenis Surat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                             LetterType.entries.forEach { type ->
                                 OutlinedButton(
                                     onClick = { letterType = type.name; nav("Tujuan Surat") },
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                    border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                                     colors = ButtonDefaults.outlinedButtonColors(containerColor = Color(0xFFFFFBF7))
                                 ) {
-                                    Text(type.label, color = KarirTextDark, fontWeight = FontWeight.Medium)
+                                    Text(type.label, color = MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.Medium)
                                 }
                             }
                         }
@@ -707,13 +708,13 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
                 "Tujuan Surat" -> {
                     val type = LetterType.valueOf(letterType)
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text(type.label, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                            Text(type.label, fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                             if (type == LetterType.AI) {
                                 Text("Integrasi generator AI memerlukan konfigurasi backend aktif.", color = KarirTextMuted, fontSize = 12.sp)
                             } else {
@@ -741,13 +742,13 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
 
                 "Editor Surat" -> state.coverLetter?.let { letter ->
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text("Editor Surat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                            Text("Editor Surat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                             Text("Surat disimpan otomatis. Anda dapat menyesuaikan isi surat sebelum ekspor.", color = KarirTextMuted, fontSize = 12.sp)
                             AppInput("Isi surat", letter.content, viewModel::updateLetter, minLines = 14)
                             Button(
@@ -765,13 +766,13 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, onBack: () -> Unit) {
 
                 "Preview Surat" -> state.coverLetter?.let { letter ->
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color.White),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text("Preview Surat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
+                            Text("Preview Surat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = MaterialTheme.colorScheme.onSurface)
                             val pages = remember(letter.content) { CvRenderer.letterPages(letter.content) }
                             CvDocumentPreview(pages, Modifier.fillMaxWidth().height(580.dp))
                             Button(
