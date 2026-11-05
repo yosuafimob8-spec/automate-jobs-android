@@ -43,7 +43,7 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -82,12 +82,12 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
                         onClick = { selectedPortal = portal },
                         label = { Text(portal, fontSize = 12.5.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal) },
                         colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = Color(0xFFFFF3E0),
+                            selectedContainerColor = Color(0xFFE8F5F7),
                             selectedLabelColor = Color(0xFFE65100),
                             containerColor = Color.White,
                             labelColor = KarirTextDark
                         ),
-                        border = BorderStroke(1.dp, if (isSelected) KarirOrange else Color(0xFFFFDEC9))
+                        border = BorderStroke(1.dp, if (isSelected) KarirOrange else Color(0xFFC6DFE8))
                     )
                 }
             }
@@ -96,7 +96,7 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -146,7 +146,7 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
