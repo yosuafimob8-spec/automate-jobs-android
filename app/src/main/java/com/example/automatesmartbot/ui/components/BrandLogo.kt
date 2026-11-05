@@ -6,7 +6,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -35,7 +36,7 @@ fun BrandLogo(modifier: Modifier = Modifier) {
         Image(
             painter = painterResource(R.drawable.karirmate_brand_mark),
             contentDescription = "Logo KarirMate",
-            modifier = Modifier.size(108.dp),
+            modifier = Modifier.fillMaxSize().padding(3.dp),
             contentScale = ContentScale.Fit
         )
     }
@@ -49,7 +50,7 @@ fun BrandWordmark(
     onDark: Boolean = false
 ) {
     Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(0.dp)) {
-        Text("Karir", color = if (onDark) Color.White else MaterialTheme.colorScheme.onSurface, fontWeight = FontWeight.ExtraBold, fontSize = fontSize)
+        Text("Karir", color = if (onDark) Color.White else Color(0xFF0B3556), fontWeight = FontWeight.ExtraBold, fontSize = fontSize)
         Text("Mate", color = Color(0xFF16A88C).let { if (onDark) Color(0xFF55E3BF) else it }, fontWeight = FontWeight.ExtraBold, fontSize = fontSize)
     }
 }
