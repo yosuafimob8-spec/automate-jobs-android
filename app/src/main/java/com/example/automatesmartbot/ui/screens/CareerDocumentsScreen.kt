@@ -31,7 +31,7 @@ import kotlinx.coroutines.*
 import java.io.File
 
 @Composable
-fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
+fun CareerDocumentsScreen() {
     val context = LocalContext.current
     val store = remember { CareerPdfStore(context) }
     val scope = rememberCoroutineScope()
@@ -128,7 +128,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                         ) {
                             Text(
                                 "${items.size} Dokumen",
-                                color = Color(0xFFE65100),
+                                color = Color(0xFF2563A6),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.5.sp,
                                 modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
@@ -159,10 +159,6 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                 }
             }
 
-            TextButton(onClick = onLegacyDocuments) {
-                Text("Buka Surat Izin & Dokumen Kerja →", color = KarirOrangeDeep, fontWeight = FontWeight.Bold)
-            }
-
             if (busy) {
                 LinearProgressIndicator(
                     Modifier.fillMaxWidth(),
@@ -178,7 +174,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                     border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                     modifier = Modifier.fillMaxWidth()
                 ) {
-                    Text(message, color = Color(0xFF9A3412), fontSize = 12.sp, modifier = Modifier.padding(10.dp))
+                    Text(message, color = Color(0xFF2563A6), fontSize = 12.sp, modifier = Modifier.padding(10.dp))
                 }
             }
 
