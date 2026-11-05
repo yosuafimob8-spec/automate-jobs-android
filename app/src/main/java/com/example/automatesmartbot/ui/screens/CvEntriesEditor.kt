@@ -103,7 +103,7 @@ private fun EntryCard(content: @Composable ColumnScope.() -> Unit) {
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp), content = content)
