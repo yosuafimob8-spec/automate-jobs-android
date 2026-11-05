@@ -89,7 +89,7 @@ private fun TrainingAction(label: String, enabled: Boolean = true, onClick: () -
 }
 
 @Composable
-fun JobTrainingScreen() {
+fun JobTrainingScreen(initialStage: String = "catalog") {
     val context = LocalContext.current
     val trainingScope = rememberCoroutineScope()
     val trainingApi = remember { BuildConfig.TRAINING_BASE_URL.takeIf { it.startsWith("https://") }?.let { TrainingServerGateway(it) } }
@@ -127,7 +127,7 @@ fun JobTrainingScreen() {
             }.firstOrNull() ?: emptyList()
         }
     }
-    var stage by rememberSaveable { mutableStateOf("catalog") }
+    var stage by rememberSaveable(initialStage) { mutableStateOf(initialStage) }
     var selectedCategory by rememberSaveable { mutableStateOf(0) }
     var selectedPosition by rememberSaveable { mutableStateOf("") }
     var selectedLevel by rememberSaveable { mutableStateOf(TrainingLevel.BASIC.name) }
