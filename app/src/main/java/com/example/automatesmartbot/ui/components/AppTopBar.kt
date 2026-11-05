@@ -1,7 +1,6 @@
 package com.example.automatesmartbot.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -10,9 +9,6 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import com.example.automatesmartbot.ui.theme.ScreenSurface
-import com.example.automatesmartbot.ui.theme.screenCanvas
-import com.example.automatesmartbot.ui.theme.karirButtonColors
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -20,9 +16,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.automatesmartbot.ui.theme.KarirOrange
-import com.example.automatesmartbot.ui.theme.ScreenText as KarirTextDark
-import com.example.automatesmartbot.ui.theme.ScreenMuted as KarirNavIconUnselected
+import com.example.automatesmartbot.ui.theme.OceanBlue
+import com.example.automatesmartbot.ui.theme.FreshMint
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -33,14 +28,13 @@ fun AppTopBar(
     onBack: (() -> Unit)? = null
 ) {
     TopAppBar(
-        modifier = Modifier.border(width = 0.75.dp, color = screenCanvas(Color(0xFFF1E5DC))),
         navigationIcon = {
             if (onBack != null) {
                 IconButton(onClick = onBack) {
                     Icon(
                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                         contentDescription = "Kembali",
-                        tint = KarirTextDark
+                        tint = Color.White
                     )
                 }
             }
@@ -59,7 +53,7 @@ fun AppTopBar(
                     text = title,
                     fontWeight = FontWeight.Bold,
                     fontSize = 18.sp,
-                    color = KarirTextDark
+                    color = Color.White
                 )
             }
         },
@@ -68,7 +62,7 @@ fun AppTopBar(
             Box(
                 modifier = Modifier
                     .clip(RoundedCornerShape(16.dp))
-                    .background(if (isPro) KarirOrange else screenCanvas(Color(0xFFFFF0E5)))
+                    .background(if (isPro) Color(0xFFF59E0B) else FreshMint)
                     .padding(horizontal = 10.dp, vertical = 5.dp),
                 contentAlignment = Alignment.Center
             ) {
@@ -80,19 +74,19 @@ fun AppTopBar(
                         Icon(
                             imageVector = Icons.Default.WorkspacePremium,
                             contentDescription = "PRO",
-                            tint = com.example.automatesmartbot.ui.theme.OnKarirOrange,
+                            tint = Color.Black,
                             modifier = Modifier.size(14.dp)
                         )
                         Text(
                             text = "PRO",
-                            color = com.example.automatesmartbot.ui.theme.OnKarirOrange,
+                            color = Color.Black,
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp
                         )
                     } else {
                         Text(
                             text = "FREE",
-                            color = androidx.compose.material3.MaterialTheme.colorScheme.primary,
+                            color = Color(0xFF243547),
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp
                         )
@@ -107,13 +101,13 @@ fun AppTopBar(
                 Icon(
                     imageVector = Icons.Default.Person,
                     contentDescription = "Profil",
-                    tint = KarirNavIconUnselected
+                    tint = Color.White
                 )
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = screenCanvas(Color(0xFFFFFDF9)),
-            titleContentColor = KarirTextDark
+            containerColor = OceanBlue,
+            titleContentColor = Color.White
         )
     )
 }
