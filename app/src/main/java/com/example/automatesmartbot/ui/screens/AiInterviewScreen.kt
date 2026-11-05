@@ -2,588 +2,334 @@ package com.example.automatesmartbot.ui.screens
 
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.border
-import androidx.activity.compose.BackHandler
-
-import com.example.automatesmartbot.BuildConfig
-import com.example.automatesmartbot.data.security.SessionManager
+import android.app.Activity
 import android.content.Intent
 import android.net.Uri
-import android.util.Xml
-import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
-import com.tom_roush.pdfbox.pdmodel.PDDocument
-import com.tom_roush.pdfbox.text.PDFTextStripper
-import java.io.ByteArrayOutputStream
-import java.util.zip.ZipInputStream
-import org.xmlpull.v1.XmlPullParser
+import android.provider.OpenableColumns
 import android.speech.RecognizerIntent
 import android.speech.tts.TextToSpeech
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.runtime.DisposableEffect
-import java.util.Locale
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.graphics.Color
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.ui.Alignment
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.clickable
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.dp
+import java.util.Locale
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import org.json.JSONArray
 import org.json.JSONObject
+import org.json.JSONArray
 import java.net.HttpURLConnection
 import java.net.URL
+import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
+import com.tom_roush.pdfbox.pdmodel.PDDocument
+import com.tom_roush.pdfbox.text.PDFTextStripper
 
+private val InterviewOrange = Color(0xFF55C6A9)
+private val InterviewNavy = Color(0xFF2563A6)
+private val InterviewPositions = listOf("Admin Warehouse", "Supervisor Logistik", "Staff Operasional", "Operator Produksi", "Sales", "Lainnya")
 
-private fun extractCv(context: android.content.Context, uri: Uri): String {
-    val mime = context.contentResolver.getType(uri).orEmpty()
-    val pdf = mime == "application/pdf"
-    val docx = mime == "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-    require(pdf || docx) { "Pilih PDF atau DOCX." }
-    val bytes = context.contentResolver.openInputStream(uri)?.use { input ->
-        val output = ByteArrayOutputStream()
-        val buffer = ByteArray(8192)
-        while (true) {
-            val read = input.read(buffer)
-            if (read < 0) break
-            output.write(buffer, 0, read)
-            require(output.size() <= 10 * 1024 * 1024) { "CV maksimal 10 MB." }
-        }
-        output.toByteArray()
-    } ?: error("CV tidak dapat dibuka.")
-    require(bytes.size <= 10 * 1024 * 1024) { "CV maksimal 10 MB." }
-    val text = if (pdf) {
-        PDFBoxResourceLoader.init(context.applicationContext)
-        PDDocument.load(bytes).use {
-            require(it.numberOfPages <= 40) { "CV maksimal 40 halaman." }
-            PDFTextStripper().getText(it)
-        }
-    } else {
-        val output = StringBuilder()
-        ZipInputStream(bytes.inputStream()).use { zip ->
-            var entry = zip.nextEntry
-            while (entry != null) {
-                if (entry.name == "word/document.xml") {
-                    val parser = Xml.newPullParser()
-                    parser.setInput(zip, "UTF-8")
-                    var event = parser.eventType
-                    while (event != XmlPullParser.END_DOCUMENT) {
-                        if (event == XmlPullParser.START_TAG && parser.name == "t") output.append(parser.nextText())
-                        else if (event == XmlPullParser.END_TAG && parser.name == "p") output.append(10.toChar())
-                        require(output.length <= 100000) { "Isi CV terlalu panjang." }
-                        event = parser.next()
-                    }
-                    break
+private fun makeInterviewQuestions(role: String, english: Boolean): List<String> =
+    if (english) listOf(
+        "Please introduce yourself and describe your relevant work experience.",
+        "Why are you interested in the $role position?",
+        "What skills make you suitable for the $role role?",
+        "Tell me about a workplace problem you solved.",
+        "How would you prioritize your work as $role?"
+    ) else listOf(
+        "Perkenalkan diri dan pengalaman kerja yang relevan.",
+        "Mengapa Anda tertarik melamar sebagai $role?",
+        "Keterampilan apa yang membuat Anda cocok sebagai $role?",
+        "Ceritakan masalah di tempat kerja yang berhasil Anda selesaikan.",
+        "Bagaimana Anda menentukan prioritas pekerjaan sebagai $role?"
+    )
+
+@Composable
+fun AiInterviewScreen() {
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+    var loading by remember { mutableStateOf(false) }
+    var aiQuestion by remember { mutableStateOf("") }
+    var cvText by remember { mutableStateOf("") }
+    var evaluation by remember { mutableStateOf("") }
+    val conversation = remember { mutableStateListOf<Pair<String,String>>() }
+    var page by remember { mutableStateOf("menu") }
+    var mode by remember { mutableStateOf("text") }
+    var position by remember { mutableStateOf(InterviewPositions.first()) }
+    var customPosition by remember { mutableStateOf("") }
+    var english by remember { mutableStateOf(false) }
+    var cvUri by remember { mutableStateOf<Uri?>(null) }
+    var cvName by remember { mutableStateOf<String?>(null) }
+    var answer by remember { mutableStateOf("") }
+    var questionIndex by remember { mutableIntStateOf(0) }
+    val responses = remember { mutableStateListOf<String>() }
+    var error by remember { mutableStateOf<String?>(null) }
+    var ttsReady by remember { mutableStateOf(false) }
+    var tts by remember { mutableStateOf<TextToSpeech?>(null) }
+    val role = if (position == "Lainnya") customPosition.trim() else position
+    val questions = remember(role, english) { makeInterviewQuestions(role.ifBlank { "posisi ini" }, english) }
+
+    val picker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri != null) {
+            val name = runCatching {
+                context.contentResolver.query(uri, arrayOf(OpenableColumns.DISPLAY_NAME), null, null, null)?.use { cursor ->
+                    if (cursor.moveToFirst()) cursor.getString(0) else null
                 }
-                zip.closeEntry()
-                entry = zip.nextEntry
+            }.getOrNull()
+            runCatching { context.contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION) }
+            cvUri = uri
+            cvName = name ?: uri.lastPathSegment ?: "CV.pdf"
+            cvText = ""
+            scope.launch {
+                val extracted = withContext(Dispatchers.IO) {
+                    runCatching {
+                        PDFBoxResourceLoader.init(context.applicationContext)
+                        context.contentResolver.openInputStream(uri)?.use { input ->
+                            PDDocument.load(input).use { document ->
+                                PDFTextStripper().getText(document).take(6000).trim()
+                            }
+                        }.orEmpty()
+                    }
+                }
+                extracted.onSuccess {
+                    cvText = it
+                    if (it.isBlank()) error = "PDF tidak memiliki teks yang dapat dibaca."
+                }.onFailure { error = "Gagal membaca CV: ${it.message}" }
             }
         }
-        output.toString()
     }
-    val result = text.trim()
-    require(result.length >= 30) { "Teks CV tidak terbaca. PDF hasil scan memerlukan OCR." }
-    return result.take(6000)
-}
-
-private data class InterviewTurn(val question: String, val answer: String)
-private data class InterviewReply(
-    val question: String = "",
-    val feedback: String = "",
-    val score: Int? = null,
-    val improvement: String = "",
-    val finalReport: String = "",
-    val overallScore: Int? = null,
-    val strengths: List<String> = emptyList(),
-    val improvements: List<String> = emptyList(),
-    val encouragement: String = "",
-    val awaitingAnswer: Boolean = false,
-    val conversationState: String = ""
-)
-
-private suspend fun requestInterview(
-    endpoint: String, accessToken: String, role: String, language: String, cv: String,
-    action: String, history: List<InterviewTurn>, interviewer: String
-): InterviewReply = withContext(Dispatchers.IO) {
-    require(endpoint.startsWith("https://") || endpoint.startsWith("http://10.0.2.2:") || endpoint.startsWith("http://127.0.0.1:")) {
-        "Gunakan endpoint HTTPS untuk layanan AI Interview."
-    }
-    val payload = JSONObject().apply {
-        put("role", role)
-        put("interviewer", interviewer)
-        put("language", language)
-        put("cv_text", cv.take(1300))
-        put("action", action)
-        put("history", JSONArray().apply {
-            history.forEach { turn ->
-                put(JSONObject().put("question", turn.question).put("answer", turn.answer))
-            }
-        })
-    }
-    val connection = (URL(endpoint).openConnection() as HttpURLConnection).apply {
-        requestMethod = "POST"
-        connectTimeout = 15000
-        readTimeout = 130000
-        doOutput = true
-        setRequestProperty("Content-Type", "application/json; charset=utf-8")
-        setRequestProperty("Authorization", "Bearer $accessToken")
-    }
-    try {
-        connection.outputStream.use { it.write(payload.toString().toByteArray(Charsets.UTF_8)) }
-        if (connection.responseCode !in 200..299) {
-            val status = connection.responseCode
-            val details = connection.errorStream?.bufferedReader()?.use { it.readText() }.orEmpty()
-            val message = runCatching { JSONObject(details).let { it.optString("detail").ifBlank { it.optString("error") } } }.getOrDefault("")
-            throw IllegalStateException(if (message.isNotBlank()) "AI Interview (HTTP $status): $message" else "Layanan AI Interview belum siap (HTTP $status).")
+    val speech = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val recognized = result.data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)?.firstOrNull()
+            if (!recognized.isNullOrBlank()) answer = recognized
+            else error = "Suara tidak dikenali. Coba lagi atau ketik jawaban."
+        } else {
+            error = "Perekaman dibatalkan. Kamu tetap bisa mengetik jawaban."
         }
-        val response = JSONObject(connection.inputStream.bufferedReader().use { it.readText() })
-        val finalReport = if (action == "finish") buildString {
-            append("Nilai: ${response.optInt("overall_score", 0)}/100\\n\\n")
-            for (key in listOf("strengths", "improvements")) {
-                append(if (key == "strengths") "Kelebihan:\\n" else "Yang perlu diperbaiki:\\n")
-                val items = response.optJSONArray(key) ?: JSONArray()
-                for (i in 0 until items.length()) append("• ${items.optString(i)}\\n")
-                append("\\n")
+    }
+    DisposableEffect(context) {
+        val engine = TextToSpeech(context) { status ->
+            ttsReady = status == TextToSpeech.SUCCESS
+            if (status != TextToSpeech.SUCCESS) error = "Pembaca suara tidak tersedia di perangkat."
+        }
+        tts = engine
+        onDispose {
+            engine.stop()
+            engine.shutdown()
+            tts = null
+            ttsReady = false
+        }
+    }
+    fun requestAiQuestion(evaluate: Boolean = false) {
+        if (loading) return
+        loading = true
+        error = null
+        val history = conversation.toList()
+        val selectedCv = cvText
+        val selectedRole = role
+        val selectedLanguage = if (english) "English" else "Indonesia"
+        scope.launch {
+            val result = withContext(Dispatchers.IO) {
+                runCatching {
+                    val host = if (android.os.Build.FINGERPRINT.contains("generic")) "10.0.2.2" else "127.0.0.1"
+                    val connection = URL("http://$host:8790/interview/" + if (evaluate) "evaluate" else "next").openConnection() as HttpURLConnection
+                    try {
+                        connection.requestMethod = "POST"
+                        connection.connectTimeout = 5000
+                        connection.readTimeout = 50000
+                        connection.doOutput = true
+                        connection.setRequestProperty("Content-Type", "application/json")
+                        val messages = JSONArray()
+                        history.forEach { (speaker, message) ->
+                            messages.put(JSONObject().put("role", speaker).put("content", message))
+                        }
+                        val body = JSONObject().put("role", selectedRole).put("language", selectedLanguage).put("history", messages).put("cv_text", selectedCv)
+                        connection.outputStream.use { it.write(body.toString().toByteArray(Charsets.UTF_8)) }
+                        val stream = if (connection.responseCode in 200..299) connection.inputStream else connection.errorStream
+                        val json = JSONObject(stream.bufferedReader().use { it.readText() })
+                        if (connection.responseCode !in 200..299) throw IllegalStateException(json.optString("error", "Layanan AI tidak tersedia"))
+                        json.getString(if (evaluate) "evaluation" else "question").also { require(it.isNotBlank()) }
+                    } finally { connection.disconnect() }
+                }
             }
-            append("Contoh jawaban: ${response.optString("example_answer")}\\n\\n")
-            append(response.optString("encouragement"))
-            val english = response.optString("english_feedback")
-            if (english.isNotBlank()) append("\\n\\nEnglish: $english")
-        } else ""
-        InterviewReply(
-            question = response.optString("question"),
-            feedback = response.optString("feedback"),
-            score = if (response.has("answer_score") && !response.isNull("answer_score"))
-                response.optInt("answer_score") else null,
-            improvement = response.optString("improvement"),
-            finalReport = finalReport,
-            overallScore = if (action == "finish") response.optInt("overall_score", 0) else null,
-            strengths = if (action == "finish") (response.optJSONArray("strengths") ?: JSONArray()).let { a -> (0 until a.length()).map { a.optString(it) } } else emptyList(),
-            improvements = if (action == "finish") (response.optJSONArray("improvements") ?: JSONArray()).let { a -> (0 until a.length()).map { a.optString(it) } } else emptyList(),
-            encouragement = response.optString("encouragement"),
-            awaitingAnswer = response.optBoolean("awaiting_answer", false),
-            conversationState = response.optString("conversation_state")
-        )
-    } finally {
-        connection.disconnect()
+            loading = false
+            result.onSuccess { question ->
+                if (evaluate) {
+                    evaluation = question
+                    page = "finished"
+                } else {
+                    aiQuestion = question
+                    conversation.add("assistant" to question)
+                    page = "session"
+                }
+            }.onFailure { error = "AI belum terhubung: ${it.message ?: "periksa backend AI"}" }
+        }
+    }
+    fun back() {
+        tts?.stop()
+        page = when (page) {
+            "finished", "session" -> "setup"
+            "setup" -> "menu"
+            else -> "menu"
+        }
+    }
+    BackHandler(enabled = page != "menu") { back() }
+    fun speak() {
+        val engine = tts
+        if (engine == null || !ttsReady) {
+            error = "Pembaca suara belum siap. Coba lagi sebentar."
+            return
+        }
+        val available = engine.setLanguage(if (english) Locale.US else Locale("id", "ID"))
+        if (available < TextToSpeech.LANG_AVAILABLE) {
+            error = "Paket suara bahasa yang dipilih belum tersedia."
+            return
+        }
+        if (engine.speak(aiQuestion, TextToSpeech.QUEUE_FLUSH, null, "interview-question") == TextToSpeech.ERROR)
+            error = "Gagal membacakan pertanyaan."
+    }
+
+    Column(
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp)
+    ) {
+        if (page != "menu") TextButton(onClick = { back() }) { Text("← Kembali", color = InterviewNavy) }
+        error?.let { message ->
+            Text(message, color = MaterialTheme.colorScheme.error)
+            TextButton(onClick = { error = null }) { Text("Tutup pesan") }
+        }
+        when (page) {
+            "menu" -> {
+                Text("AI Interview", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold, color = InterviewNavy)
+                Text("Pilih jenis latihan wawancara kerja.")
+                InterviewOption("Interview Teks", "Jawab pertanyaan melalui teks.") { mode = "text"; page = "setup" }
+                InterviewOption("Interview Suara", "Dengarkan pertanyaan dan jawab menggunakan mikrofon.") { mode = "voice"; page = "setup" }
+                Text("Interview Video: belum tersedia", color = Color.Gray)
+            }
+            "setup" -> {
+                Text(if (mode == "voice") "Interview Suara" else "Interview Teks", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold, color = InterviewNavy)
+                Text("Posisi yang dilamar", fontWeight = FontWeight.Bold)
+                InterviewPositions.forEach { item ->
+                    Row(Modifier.fillMaxWidth().clickable { position = item }, verticalAlignment = Alignment.CenterVertically) {
+                        RadioButton(selected = position == item, onClick = { position = item })
+                        Text(item)
+                    }
+                }
+                if (position == "Lainnya") OutlinedTextField(customPosition, { customPosition = it }, label = { Text("Nama posisi") }, modifier = Modifier.fillMaxWidth())
+                Text("Bahasa", fontWeight = FontWeight.Bold)
+                Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                    FilterChip(selected = !english, onClick = { english = false }, label = { Text("Indonesia") })
+                    FilterChip(selected = english, onClick = { english = true }, label = { Text("English") })
+                }
+                Text("CV (opsional)", fontWeight = FontWeight.Bold)
+                if (cvUri == null) {
+                    OutlinedButton(onClick = { picker.launch(arrayOf("application/pdf")) }, modifier = Modifier.fillMaxWidth()) { Text("Pilih CV PDF") }
+                } else {
+                    Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF2E9)), modifier = Modifier.fillMaxWidth()) {
+                        Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                            Text(cvName ?: "CV dipilih", color = InterviewNavy, fontWeight = FontWeight.Bold, maxLines = 3, overflow = TextOverflow.Ellipsis)
+                            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                OutlinedButton(onClick = { picker.launch(arrayOf("application/pdf")) }) { Text("Ganti CV") }
+                                OutlinedButton(onClick = { cvUri = null; cvName = null; cvText = "" }) { Text("Hapus CV") }
+                            }
+                        }
+                    }
+                }
+                Text("CV akan dibaca dari PDF berbasis teks dan digunakan AI sebagai konteks. Layanan AI lokal harus aktif.", style = MaterialTheme.typography.bodySmall)
+                Button(
+                    onClick = {
+                        if (role.isBlank()) error = "Isi nama posisi terlebih dahulu."
+                        else {
+                            error = null
+                            responses.clear()
+                            conversation.clear()
+                            questionIndex = 0
+                            evaluation = ""
+                            answer = ""
+                            requestAiQuestion()
+                        }
+                    },
+                    enabled = role.isNotBlank() && !loading,
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = ButtonDefaults.buttonColors(containerColor = InterviewOrange)
+                ) { Text(if (loading) "Menghubungi AI..." else if (mode == "voice") "Mulai Interview Suara" else "Mulai Interview Teks") }
+                if (role.isBlank()) Text("Isi nama posisi agar sesi bisa dimulai.", color = MaterialTheme.colorScheme.error)
+            }
+            "session" -> {
+                Text(if (mode == "voice") "Interview Suara" else "Interview Teks", style = MaterialTheme.typography.headlineMedium, color = InterviewNavy)
+                Text("Pertanyaan ${questionIndex + 1} • $role")
+                Card(colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF2E9)), modifier = Modifier.fillMaxWidth()) {
+                    Text(aiQuestion, modifier = Modifier.padding(18.dp), style = MaterialTheme.typography.titleLarge)
+                }
+                if (mode == "voice") {
+                    OutlinedButton(onClick = { speak() }) { Text("Dengarkan Pertanyaan") }
+                    OutlinedButton(onClick = {
+                        val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
+                            putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+                            putExtra(RecognizerIntent.EXTRA_LANGUAGE, if (english) "en-US" else "id-ID")
+                            putExtra(RecognizerIntent.EXTRA_PROMPT, "Jawab pertanyaan interview")
+                        }
+                        runCatching { speech.launch(intent) }.onFailure {
+                            error = "Layanan pengenalan suara tidak tersedia. Gunakan jawaban teks."
+                        }
+                    }) { Text("Jawab dengan Mikrofon") }
+                }
+                OutlinedTextField(answer, { answer = it }, label = { Text("Jawaban") }, minLines = 4, modifier = Modifier.fillMaxWidth())
+                Button(
+                    onClick = {
+                        if (answer.isNotBlank()) {
+                            responses.add(answer.trim())
+                            conversation.add("user" to answer.trim())
+                            answer = ""
+                            tts?.stop()
+                            if (questionIndex >= 9) requestAiQuestion(evaluate = true)
+                            else { questionIndex++; requestAiQuestion() }
+                        }
+                    },
+                    enabled = answer.isNotBlank() && !loading,
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = ButtonDefaults.buttonColors(containerColor = InterviewOrange)
+                ) { Text(if (loading) "AI sedang menyiapkan pertanyaan..." else if (questionIndex >= 9) "Selesaikan Interview" else "Kirim Jawaban ke AI & Lanjut") }
+            }
+            "finished" -> {
+                Text("Latihan Selesai", style = MaterialTheme.typography.headlineMedium, color = InterviewNavy)
+                Text("${responses.size} jawaban tercatat dalam sesi ini.")
+                responses.forEachIndexed { index, response ->
+                    Text("${index + 1}. ${conversation.getOrNull(index * 2)?.second ?: "Pertanyaan"}", fontWeight = FontWeight.Bold)
+                    Text(response)
+                    HorizontalDivider()
+                }
+                Text("Evaluasi AI", fontWeight = FontWeight.Bold)
+                Text(evaluation.ifBlank { "Evaluasi belum tersedia." })
+                Button(onClick = { page = "setup" }, colors = ButtonDefaults.buttonColors(containerColor = InterviewOrange)) { Text("Latihan Lagi") }
+            }
+        }
     }
 }
 
 @Composable
-fun AiInterviewScreen(isPro: Boolean = false) {
-    val roles = listOf("Admin Warehouse", "Supervisor Logistik", "Staff Operasional", "Operator Produksi", "Sales", "Lainnya")
-    var role by rememberSaveable { mutableStateOf(roles.first()) }
-    var interviewMode by rememberSaveable { mutableStateOf("text") }
-    var interviewer by rememberSaveable { mutableStateOf("female") }
-    var language by rememberSaveable { mutableStateOf("id") }
-    var cv by rememberSaveable { mutableStateOf("") }
-    var cvLoaded by rememberSaveable { mutableStateOf(false) }
-    var cvFileName by rememberSaveable { mutableStateOf("") }
-    var cvReading by remember { mutableStateOf(false) }
-    // Service address is app-managed; never ask end users for provider credentials.
-    val endpoint = BuildConfig.INTERVIEW_BASE_URL.takeIf { it.isNotBlank() }?.trimEnd('/')?.plus("/interview/turn")
-    var started by rememberSaveable { mutableStateOf(false) }
-    var question by rememberSaveable { mutableStateOf("") }
-    var answer by rememberSaveable { mutableStateOf("") }
-    var history by remember { mutableStateOf(emptyList<InterviewTurn>()) }
-    var chatMessages by remember { mutableStateOf(emptyList<Pair<Boolean, String>>()) }
-    var pendingQuestion by rememberSaveable { mutableStateOf("") }
-    var feedback by rememberSaveable { mutableStateOf("") }
-    var report by rememberSaveable { mutableStateOf("") }
-    var resultScore by rememberSaveable { mutableIntStateOf(0) }
-    var resultStrengths by remember { mutableStateOf(emptyList<String>()) }
-    var resultImprovements by remember { mutableStateOf(emptyList<String>()) }
-    var resultAdvice by rememberSaveable { mutableStateOf("") }
-    var showResultDetails by rememberSaveable { mutableStateOf(false) }
-    var showPreparation by rememberSaveable { mutableStateOf(false) }
-    var error by rememberSaveable { mutableStateOf("") }
-    var loading by remember { mutableStateOf(false) }
-    val context = LocalContext.current
-    val session = remember(context) { SessionManager(context.applicationContext) }
-    var ttsReady by remember { mutableStateOf(false) }
-    val voiceMode = interviewMode == "voice"
-    val selectedLocale = if (language == "en") Locale.US else Locale.forLanguageTag("id-ID")
-    BackHandler(enabled = started || showPreparation || report.isNotBlank()) {
-        when {
-            report.isNotBlank() -> { report = ""; started = false; showPreparation = true }
-            started -> { started = false; showPreparation = true }
-            showPreparation -> showPreparation = false
-        }
-    }
-    var pendingSpeech by remember { mutableStateOf<String?>(null) }
-    val tts = remember { TextToSpeech(context) { status -> ttsReady = status == TextToSpeech.SUCCESS } }
-    fun speakQuestion(spokenText: String) {
-        if (!voiceMode || spokenText.isBlank()) return
-        if (!ttsReady) {
-            pendingSpeech = null
-            error = "Mesin suara Android belum siap. Periksa pengaturan Text-to-Speech perangkat."
-            return
-        }
-        val availability = tts.setLanguage(selectedLocale)
-        if (availability == TextToSpeech.LANG_MISSING_DATA || availability == TextToSpeech.LANG_NOT_SUPPORTED) {
-            error = if (language == "en") "Suara bahasa Inggris belum tersedia di perangkat." else "Suara bahasa Indonesia belum tersedia. Pasang data suara di pengaturan Text-to-Speech."
-            return
-        }
-        tts.stop()
-        tts.speak(spokenText, TextToSpeech.QUEUE_FLUSH, null, "karirmate-interview")
-    }
-    DisposableEffect(tts) { onDispose { tts.stop(); tts.shutdown() } }
-    LaunchedEffect(ttsReady, language) {
-        if (ttsReady) {
-            tts.language = selectedLocale
-            tts.setSpeechRate(0.90f)
-            tts.setPitch(1.02f)
-        }
-    }
-    val voiceLauncher = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-        if (result.resultCode == android.app.Activity.RESULT_OK) {
-            val spoken = result.data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)?.firstOrNull()
-            if (!spoken.isNullOrBlank()) {
-                answer = spoken
-                if (voiceMode) pendingSpeech = spoken
-            }
-            else error = "Suara tidak terdeteksi. Coba lagi."
-        } else error = "Mikrofon dibatalkan atau tidak dapat mengenali suara."
-    }
-    val scope = rememberCoroutineScope()
-    val cvPicker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-        if (uri != null) {
-            cv = ""
-            cvLoaded = false
-            cvFileName = ""
-            cvReading = true
-            error = ""
-            scope.launch {
-                try {
-                    cv = withContext(Dispatchers.IO) { extractCv(context, uri) }
-                    cvLoaded = true
-                    cvFileName = context.contentResolver.query(uri, arrayOf(android.provider.OpenableColumns.DISPLAY_NAME), null, null, null)?.use { cursor -> if (cursor.moveToFirst()) cursor.getString(0) else null } ?: uri.lastPathSegment.orEmpty()
-                } catch (ex: Exception) {
-                    cvLoaded = false
-                    error = ex.message ?: "Gagal membaca CV."
-                } finally {
-                    cvReading = false
-                }
-            }
-        }
-    }
-    fun send(action: String, turns: List<InterviewTurn>) {
-        if (loading) return
-        loading = true
-        error = ""
-        scope.launch {
-            try {
-                val accessToken = session.getValidToken() ?: throw IllegalStateException("Silakan login kembali.")
-                val serviceUrl = endpoint ?: throw IllegalStateException("Layanan AI Interview belum dikonfigurasi.")
-                val response = requestInterview(serviceUrl, accessToken, role, language, cv, action, turns, interviewer)
-                history = turns
-                if (action == "start") {
-                    report = ""
-                    resultScore = 0
-                    resultStrengths = emptyList()
-                    resultImprovements = emptyList()
-                    resultAdvice = ""
-                    require(response.question.isNotBlank()) { "AI belum mengirim pertanyaan pembuka. Periksa layanan AI Interview." }
-                    chatMessages = listOf(false to response.question)
-                } else if (action == "reply") {
-                    require(response.question.isNotBlank()) { "AI belum mengirim pertanyaan lanjutan. Coba ulangi jawaban." }
-                    val latest = turns.lastOrNull()?.answer.orEmpty()
-                    chatMessages = chatMessages + (true to latest) + (false to (response.feedback.takeIf { it.isNotBlank() }?.plus("\\n\\n") ?: "") + response.question)
-                }
-                feedback = buildString {
-                    if (response.score != null) append("Nilai jawaban: ${response.score}/100\\n")
-                    append(response.feedback)
-                    if (response.improvement.isNotBlank()) append("\\nSaran: ${response.improvement}")
-                }
-                if (action == "finish") {
-                    started = false
-                    report = response.finalReport
-                    resultScore = response.overallScore ?: 0
-                    resultStrengths = response.strengths
-                    resultImprovements = response.improvements
-                    resultAdvice = response.encouragement
-                } else {
-                    question = response.question
-                    pendingQuestion = if (response.awaitingAnswer) response.question else ""
-                    if (voiceMode) speakQuestion(question)
-                    started = true
-                    answer = ""
-                }
-            } catch (ex: Exception) {
-                error = when (ex) {
-                    is java.net.ConnectException -> "Server AI Interview tidak aktif. Jalankan layanan pada port 8790 di Termux."
-                    is java.net.SocketTimeoutException -> "Server AI Interview tidak merespons. Periksa layanan dan koneksi model AI."
-                    else -> ex.message ?: "Gagal menghubungi AI Interview."
-                }
-            } finally {
-                loading = false
-            }
-        }
-    }
-
-    LaunchedEffect(pendingSpeech, loading, started) {
-        val speech = pendingSpeech
-        if (speech != null && !loading && started && question.isNotBlank()) {
-            pendingSpeech = null
-            send("reply", history + InterviewTurn(question, speech.trim()))
-        }
-    }
-    val orange = com.example.automatesmartbot.ui.theme.KarirOrange
-    val teal = Color(0xFF16A34A)
-    val ink = com.example.automatesmartbot.ui.theme.KarirTextDark
-    val muted = com.example.automatesmartbot.ui.theme.KarirTextMuted
-    val shape = RoundedCornerShape(16.dp)
-    fun resetSession() {
-        started = false
-        question = ""
-        answer = ""
-        history = emptyList()
-        chatMessages = emptyList()
-        pendingQuestion = ""
-        report = ""
-        feedback = ""
-        showResultDetails = false
-    }
-    @Composable
-    fun InfoCard(title: String, body: String, accent: Color = Color.White) {
-        Card(modifier = Modifier.fillMaxWidth(), shape = shape,
-            colors = CardDefaults.cardColors(containerColor = accent),
-            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
-            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
-            Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                Text(title, fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
-                Text(body, color = muted)
-            }
-        }
-    }
-    if (!started && !showPreparation && report.isBlank()) {
-        Column(Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient).verticalScroll(rememberScrollState())) {
-            Row(Modifier.fillMaxWidth().padding(20.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                Text("KarirMate", color = orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleLarge)
-                Surface(
-                    shape = RoundedCornerShape(10.dp),
-                    color = Color(0xFFFFF3E0),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9))
-                ) {
-                    Text("AI INTERVIEW", color = Color(0xFFE65100), fontWeight = FontWeight.Bold, fontSize = 11.sp, modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp))
-                }
-            }
-            Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-                shape = RoundedCornerShape(16.dp)
-            ) {
-                Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("AI Interview", color = ink, fontWeight = FontWeight.Bold, fontSize = 22.sp)
-                    Text("Latihan wawancara kerja interaktif dengan AI HR yang cerdas, adaptif, dan siap memberi umpan balik.", color = muted, fontSize = 13.sp)
-                }
-            }
-            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-                Card(Modifier.fillMaxWidth().clickable { interviewMode = "text"; showPreparation = true },
-                    shape = shape, border = BorderStroke(1.5.dp, orange),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
-                    Row(Modifier.padding(18.dp), verticalAlignment = Alignment.CenterVertically) {
-                        Text("💬", style = MaterialTheme.typography.headlineMedium)
-                        Spacer(Modifier.width(14.dp))
-                        Column(Modifier.weight(1f)) {
-                            Text("Interview Teks", color = ink, fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                            Text("Wawancara interaktif via chat tanya-jawab AI", color = muted, fontSize = 12.sp)
-                        }
-                        Text("›", color = orange, fontWeight = FontWeight.Bold, fontSize = 22.sp)
-                    }
-                }
-                Card(Modifier.fillMaxWidth().clickable { interviewMode = "voice"; showPreparation = true },
-                    shape = shape, border = BorderStroke(1.5.dp, Color(0xFFFFDEC9)),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
-                    Row(Modifier.padding(18.dp), verticalAlignment = Alignment.CenterVertically) {
-                        Text("🎙️", style = MaterialTheme.typography.headlineMedium)
-                        Spacer(Modifier.width(14.dp))
-                        Column(Modifier.weight(1f)) {
-                            Text("Interview Suara", color = ink, fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                            Text("Wawancara dengan suara dan pengenalan audio", color = muted, fontSize = 12.sp)
-                        }
-                        Text("›", color = orange, fontWeight = FontWeight.Bold, fontSize = 22.sp)
-                    }
-                }
-
-            }
-        }
-    } else if (!started && report.isBlank()) {
-        Column(Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient).verticalScroll(rememberScrollState()).padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp)) {
-            Text("← Pilih Interviewer", modifier = Modifier.clickable { showPreparation = false }, color = orange,
-                fontWeight = FontWeight.Bold, fontSize = 18.sp)
-            Text("Pilih AI HR yang akan mewawancarai Anda secara ramah dan profesional.", color = muted, fontSize = 12.5.sp)
-            listOf(Triple("male", "👨🏻‍💼 Mr. ILHAM", "AI HR laki-laki • Profesional, ramah, dan komunikatif."),
-                Triple("female", "👩🏻‍💼 Ms. Tanti", "AI HR perempuan • Hangat, suportif, dan detail.")).forEach { (id, name, description) ->
-                Card(Modifier.fillMaxWidth().clickable { interviewer = id }, shape = shape,
-                    border = BorderStroke(if (interviewer == id) 2.dp else 1.dp, if (interviewer == id) orange else Color(0xFFFFDEC9)),
-                    colors = CardDefaults.cardColors(containerColor = if (interviewer == id) Color(0xFFFFF4E9) else Color.White)) {
-                    Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                        Column(Modifier.weight(1f)) {
-                            Text(name, color = ink, fontSize = 16.sp, fontWeight = FontWeight.Bold)
-                            Text(description, color = muted, fontSize = 12.sp)
-                        }
-                        RadioButton(
-                            selected = interviewer == id,
-                            onClick = { interviewer = id },
-                            colors = RadioButtonDefaults.colors(selectedColor = orange)
-                        )
-                    }
-                }
-            }
-            Text("Posisi yang dilamar", color = ink, fontWeight = FontWeight.Bold)
-            roles.forEach { item ->
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    RadioButton(selected = role == item, onClick = { role = item })
-                    Text(item, Modifier.clickable { role = item }, color = ink)
-                }
-            }
-            Text("Bahasa Interview", color = ink, fontWeight = FontWeight.Bold)
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                FilterChip(selected = language == "id", onClick = { language = "id" }, label = { Text("Indonesia", color = ink) })
-                FilterChip(selected = language == "en", onClick = { language = "en" }, label = { Text("English", color = ink) })
-            }
-            OutlinedButton(enabled = !cvReading && !loading, onClick = {
-                cvPicker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
-            }, modifier = Modifier.fillMaxWidth()) { Text(if (cvReading) "Membaca CV..." else "📄 Unggah CV PDF / DOCX (opsional)", color = ink) }
-            if (cvLoaded) {
-                Text("✓ CV: $cvFileName", color = ink, fontWeight = FontWeight.Bold)
-                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    OutlinedButton(onClick = { cvPicker.launch(arrayOf("application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document")) }) { Text("Ganti CV", color = ink) }
-                    OutlinedButton(onClick = { cv = ""; cvLoaded = false; cvFileName = "" }) { Text("Hapus CV", color = ink) }
-                }
-            }
-            Text("CV maksimal 10 MB; PDF scan memerlukan OCR.", color = muted, style = MaterialTheme.typography.bodySmall)
-            if (voiceMode) Text("Mode suara: AI membacakan pertanyaan. Jawab hanya melalui mikrofon.", color = ink)
-            Button(enabled = !loading && !cvReading && endpoint != null, modifier = Modifier.fillMaxWidth().height(56.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = orange), shape = RoundedCornerShape(16.dp),
-                onClick = {
-                    history = emptyList()
-                    chatMessages = emptyList()
-                    pendingQuestion = ""
-                    report = ""
-                    feedback = ""
-                    send("start", emptyList())
-                }) { Text(if (voiceMode) "Mulai Interview Suara  ➜" else "Mulai Interview Teks  ➜", color = Color.White, fontWeight = FontWeight.Bold) }
-            if (endpoint == null) Text("Layanan AI Interview belum tersedia.", color = MaterialTheme.colorScheme.error)
-            if (error.isNotBlank()) Text(error, color = MaterialTheme.colorScheme.error)
-        }
-    } else if (report.isNotBlank()) {
-        Column(Modifier.fillMaxSize().background(Color(0xFFFFFBF7)).verticalScroll(rememberScrollState()).padding(18.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp)) {
-            Text("←  Hasil Interview", modifier = Modifier.clickable { report = ""; started = false; showPreparation = true }, color = orange,
-                fontWeight = FontWeight.Bold, fontSize = 18.sp)
-            Card(
-                shape = shape,
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
-            ) {
-                Column(Modifier.fillMaxWidth().padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-                    Text("🏅", style = MaterialTheme.typography.displayMedium)
-                    Text("Skor Akhir", color = ink, fontWeight = FontWeight.Bold)
-                    Text("$resultScore / 100", color = orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.displayMedium)
-                    Text("Hasil latihan wawancara profesional", color = muted)
-                }
-            }
-            InfoCard("📋 Kekuatan", resultStrengths.joinToString("\n• ", prefix = "• ").ifBlank { "Belum ada catatan." })
-            InfoCard("🎯 Area Pengembangan", resultImprovements.joinToString("\n• ", prefix = "• ").ifBlank { "Belum ada catatan." })
-            InfoCard("💡 Saran", resultAdvice.ifBlank { "Terus berlatih dengan jawaban yang spesifik dan terukur." })
-            if (showResultDetails) InfoCard("📑 Pembahasan Lengkap", report)
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                OutlinedButton(
-                    onClick = { resetSession(); showPreparation = true },
-                    modifier = Modifier.weight(1f),
-                    shape = RoundedCornerShape(12.dp),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
-                    colors = ButtonDefaults.outlinedButtonColors(contentColor = ink)
-                ) { Text("↻ Ulangi") }
-                Button(onClick = { showResultDetails = !showResultDetails }, modifier = Modifier.weight(1f),
-                    shape = RoundedCornerShape(12.dp),
-                    colors = ButtonDefaults.buttonColors(containerColor = orange)) { Text(if (showResultDetails) "Tutup Detail" else "Lihat Detail", color = Color.White) }
-            }
-        }
-    } else {
-        Column(Modifier.fillMaxSize().background(Color(0xFFFFFBF7))) {
-            Row(Modifier.fillMaxWidth().background(Color.White).border(BorderStroke(0.75.dp, Color(0xFFF1E5DC))).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                Text("‹", modifier = Modifier.clickable { started = false; showPreparation = true; tts.stop() }, color = ink, style = MaterialTheme.typography.headlineMedium)
-                Spacer(Modifier.width(12.dp))
-                Text(if (interviewer == "male") "👨🏻‍💼" else "👩🏻‍💼", style = MaterialTheme.typography.headlineMedium)
-                Spacer(Modifier.width(10.dp))
-                Column(Modifier.weight(1f)) {
-                    Text(if (interviewer == "male") "Mr. ILHAM" else "Ms. Tanti", color = ink, fontWeight = FontWeight.Bold)
-                    Text("🟢 AI HR KarirMate • Sesi Aktif", color = muted, style = MaterialTheme.typography.bodySmall)
-                }
-            }
-            LazyColumn(modifier = Modifier.weight(1f).fillMaxWidth().padding(horizontal = 12.dp),
-                contentPadding = PaddingValues(vertical = 16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                items(chatMessages) { (fromCandidate, message) ->
-                    Row(Modifier.fillMaxWidth(), horizontalArrangement = if (fromCandidate) Arrangement.End else Arrangement.Start) {
-                        Card(modifier = Modifier.fillMaxWidth(0.84f),
-                            shape = RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp,
-                                bottomStart = if (fromCandidate) 16.dp else 4.dp,
-                                bottomEnd = if (fromCandidate) 4.dp else 16.dp),
-                            border = if (!fromCandidate) BorderStroke(1.dp, Color(0xFFFFDEC9)) else null,
-                            colors = CardDefaults.cardColors(containerColor = if (fromCandidate) orange else Color.White)) {
-                            Text(message.replace("\\n", "\n"), modifier = Modifier.padding(14.dp),
-                                color = if (fromCandidate) Color.White else ink)
-                        }
-                    }
-                }
-                if (loading) item { Row(Modifier.padding(12.dp), verticalAlignment = Alignment.CenterVertically) { CircularProgressIndicator(Modifier.size(22.dp), color = orange, strokeWidth = 2.dp); Spacer(Modifier.width(10.dp)); Text("AI sedang menyiapkan pertanyaan...", color = ink) } }
-            }
-            if (error.isNotBlank()) Text(error, Modifier.padding(horizontal = 16.dp), color = MaterialTheme.colorScheme.error)
-            Row(Modifier.fillMaxWidth().background(Color.White).padding(10.dp),
-                horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-                if (!voiceMode) OutlinedTextField(answer, { answer = it }, modifier = Modifier.weight(1f),
-                    placeholder = { Text("Ketik jawaban Anda...", color = muted) }, maxLines = 4,
-                    textStyle = androidx.compose.ui.text.TextStyle(color = ink),
-                    colors = OutlinedTextFieldDefaults.colors(focusedTextColor = ink, unfocusedTextColor = ink, cursorColor = orange, focusedContainerColor = Color.White, unfocusedContainerColor = Color.White),
-                    shape = RoundedCornerShape(24.dp))
-                if (voiceMode) IconButton(enabled = !loading, onClick = {
-                    val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH).apply {
-                        putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
-                        putExtra(RecognizerIntent.EXTRA_LANGUAGE, if (language == "en") "en-US" else "id-ID")
-                    }
-                    try { voiceLauncher.launch(intent) } catch (_: Exception) { error = "Pengenalan suara tidak tersedia." }
-                }) { Text("🎙", color = ink) }
-                if (voiceMode) TextButton(enabled = !loading, onClick = {
-                    if (question.isNotBlank()) speakQuestion(question)
-                }) { Text("🔊", color = ink) }
-                if (!voiceMode) Button(enabled = !loading && answer.isNotBlank(), onClick = {
-                    send("reply", history + InterviewTurn(question, answer.trim()))
-                }, colors = ButtonDefaults.buttonColors(containerColor = orange),
-                    contentPadding = PaddingValues(12.dp)) { Text("➤", color = Color.White) }
-            }
-            Row(Modifier.fillMaxWidth().background(Color.White).padding(horizontal = 12.dp, vertical = 4.dp),
-                horizontalArrangement = Arrangement.SpaceBetween) {
-                TextButton(enabled = !loading, onClick = {
-                    send("reply", history + InterviewTurn(question, "lewati"))
-                }) { Text("Lewati", color = teal) }
-                TextButton(enabled = !loading, onClick = {
-                    send("finish", history + (if (answer.isNotBlank()) listOf(InterviewTurn(question, answer.trim())) else emptyList()))
-                }) { Text("Selesai & Evaluasi", color = orange) }
-            }
+private fun InterviewOption(title: String, description: String, onClick: () -> Unit) {
+    Card(
+        onClick = onClick,
+        modifier = Modifier.fillMaxWidth(),
+        border = BorderStroke(1.dp, InterviewOrange),
+        colors = CardDefaults.cardColors(containerColor = Color.White)
+    ) {
+        Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            Text(title, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = InterviewNavy)
+            Text(description, color = Color.DarkGray)
         }
     }
 }
