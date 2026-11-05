@@ -76,12 +76,12 @@ class TrainingNarrationTest {
             val colors = if (value == ThemeMode.DARK) KarirMateDarkColors else KarirMateLightColors
             compose.onNodeWithText("Dengarkan").assertIsEnabled()
             compose.onNodeWithText("Berhenti").assertIsNotEnabled()
-            assertInk("Dengarkan", OnKarirOrange)
+            assertInk("Dengarkan", colors.onPrimary)
             assertInk("Berhenti", colors.onSurfaceVariant)
             compose.onNodeWithText("Dengarkan").performClick()
             compose.onNodeWithText("Putar Ulang").assertIsEnabled()
             compose.onNodeWithText("Berhenti").assertIsEnabled()
-            assertInk("Putar Ulang", OnKarirOrange)
+            assertInk("Putar Ulang", colors.onPrimary)
             assertInk("Berhenti", colors.onSurface)
             var spokenCount = 0
             compose.runOnIdle {
