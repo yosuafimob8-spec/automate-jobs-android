@@ -105,7 +105,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -123,8 +123,8 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                         )
                         Surface(
                             shape = RoundedCornerShape(10.dp),
-                            color = Color(0xFFFFF3E0),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                            color = Color(0xFFE8F5F7),
+                            border = BorderStroke(1.dp, Color(0xFFC6DFE8))
                         ) {
                             Text(
                                 "${items.size} Dokumen",
@@ -167,15 +167,15 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                 LinearProgressIndicator(
                     Modifier.fillMaxWidth(),
                     color = KarirOrange,
-                    trackColor = Color(0xFFFFDEC9)
+                    trackColor = Color(0xFFC6DFE8)
                 )
             }
 
             if (message.isNotBlank()) {
                 Surface(
                     shape = RoundedCornerShape(8.dp),
-                    color = Color(0xFFFFF3E0),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    color = Color(0xFFE8F5F7),
+                    border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(message, color = Color(0xFF9A3412), fontSize = 12.sp, modifier = Modifier.padding(10.dp))
@@ -186,7 +186,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                 Card(
                     colors = CardDefaults.cardColors(containerColor = Color.White),
                     shape = RoundedCornerShape(16.dp),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Column(
@@ -205,7 +205,7 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
                     Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(14.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                     elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
                 ) {
                     Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -250,12 +250,12 @@ fun CareerDocumentsScreen(onLegacyDocuments: () -> Unit) {
             }
 
             val chosen = items.filter { it.id in selected }
-            HorizontalDivider(color = Color(0xFFF1E5DC))
+            HorizontalDivider(color = Color(0xFFC6DFE8))
 
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
