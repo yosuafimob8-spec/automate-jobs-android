@@ -1,0 +1,66 @@
+name: "KarirMate Integrate Revisions 5-10 (no APK build)"
+on:
+  push:
+    branches:
+      - integration/base41860101825-ui-merge-20261105
+    paths:
+      - .github/patches/karirmate_updates_05_10.zip
+permissions:
+  contents: write
+concurrency:
+  group: karirmate-integration-05-10
+  cancel-in-progress: false
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: integration/base41860101825-ui-merge-20261105
+          fetch-depth: 0
+          persist-credentials: true
+      - name: Fast-forward to latest integration base
+        run: |
+          git fetch origin integration/base41860101825-ui-merge-20261105
+          git checkout -B integration/base41860101825-ui-merge-20261105 FETCH_HEAD
+      - name: Integrate UI patches 5-10 and verify anchors
+        run: |
+          mkdir -p /tmp/km-patches
+          unzip -q .github/patches/karirmate_updates_05_10.zip -d /tmp/km-patches
+          python3 /tmp/km-patches/apply_all.py "$GITHUB_WORKSPACE"
+          python3 -m py_compile /tmp/km-patches/apply_revisi_10.py
+      - name: Verify one header and one navigation callback per route
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('app/src/main/java/com/example/automatesmartbot/ui/screens')
+          n=(p/'MainDashboardScreen.kt').read_text()
+          t=(p/'JobTrainingScreen.kt').read_text()
+          assert 'CareerEdgeHeader(' in n and 'edgeHeaderRoutes' in n
+          assert all(f'Screen.{name}.route' in n for name in ('LatihanPsikotes','SalaryCalculator','JobTraining','Certificates'))
+          assert 'backOneStage()' in t and 'onBackActionChanged' in t
+          assert 'Kembali ke Katalog' not in t
+          assert (p/'CareerEdgeHeader.kt').exists()
+          print('PASS: UI navigation and edge-to-edge status bar source checks')
+          PY
+      - name: Commit all revised screens to integration branch only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add app/src/main/java/com/example/automatesmartbot/ui/screens/JobTrainingScreen.kt
+          git add app/src/main/java/com/example/automatesmartbot/ui/screens/AiInterviewScreen.kt
+          git add app/src/main/java/com/example/automatesmartbot/ui/screens/AiInterviewLanding.kt
+          git add app/src/main/java/com/example/automatesmartbot/ui/screens/LatihanPsikotesScreen.kt
+          git add app/src/main/java/com/example/automatesmartbot/ui/screens/PsychotestHome.kt
+          git add app/src/main/java/com/example/automatesmartbot/ui/screens/CareerToolsScreens.kt
+          git add app/src/main/java/com/example/automatesmartbot/ui/screens/MainDashboardScreen.kt
+          git add app/src/main/java/com/example/automatesmartbot/ui/screens/CareerEdgeHeader.kt
+          git add app/src/main/res/drawable-nodpi/ai_interview_hr_portrait.webp
+          git add app/src/test/java/com/example/automatesmartbot/ui/screens/ElevenBugUiTest.kt
+          git diff --cached --check
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "feat(ui): integrate KarirMate revisions 5-10 on latest base"
+          git push origin HEAD:refs/heads/integration/base41860101825-ui-merge-20261105
