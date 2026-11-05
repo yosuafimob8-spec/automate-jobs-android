@@ -202,7 +202,6 @@ fun DashboardScreen(
                     )
                 }
                 item { CareerJourneyCard(status = status, onCompleteProfile = { onNavigate(Screen.OnboardingProfile.route) }) }
-                item { CareerBillboardPlaceholder() }
                 item { AccountStats(status = status) }
                 item { SectionHeader(title = "Cari Kerja & Persiapan", itemCount = jobFeatures.size) }
                 item { FeatureGrid(features = jobFeatures, onNavigate = onNavigate) }
