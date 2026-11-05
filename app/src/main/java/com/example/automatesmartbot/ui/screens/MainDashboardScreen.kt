@@ -340,7 +340,7 @@ private fun MainDashboardContent(
                 )
             }
             composable(Screen.Login.route) {
-                FixedCanvasTheme(dark = true) {
+                FixedCanvasTheme(dark = false) {
                     LoginScreen(
                         onNavigateRegister = {
                             navController.navigate(Screen.Register.route) {
