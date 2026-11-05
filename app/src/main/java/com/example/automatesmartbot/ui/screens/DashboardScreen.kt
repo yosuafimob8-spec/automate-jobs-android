@@ -230,7 +230,7 @@ fun DashboardScreen(
                 Spacer(Modifier.width(9.dp))
                 Text("KarirMate", color = ScreenText, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp, modifier = Modifier.weight(1f))
                 IconButton(onClick = { onNavigate(Screen.Riwayat.route) }) {
-                    Icon(Icons.Default.Notifications, contentDescription = "Notifikasi", tint = ScreenText)
+                    Icon(Icons.Default.Notifications, contentDescription = "Riwayat aktivitas", tint = ScreenText)
                 }
             }
         }
@@ -511,7 +511,7 @@ private fun DashboardTopHeaderSection(
                     ) {
                         Icon(
                             imageVector = Icons.Default.Notifications,
-                            contentDescription = "Notifikasi",
+                            contentDescription = "Riwayat aktivitas",
                             tint = ScreenText,
                             modifier = Modifier.size(24.dp)
                         )
