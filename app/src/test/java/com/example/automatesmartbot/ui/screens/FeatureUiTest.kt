@@ -97,7 +97,7 @@ class FeatureUiTest {
         compose.activity.getSharedPreferences("career_training", 0).edit().clear().commit()
         compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { JobTrainingScreen() } }
         val course = com.example.automatesmartbot.data.career.TrainingCourses.all.first()
-        compose.onNodeWithText(course.title).performScrollTo().performClick()
+        compose.onNodeWithText("Lanjutkan", substring = true).performScrollTo().performClick()
         val practice = "Saya akan periksa data yang masuk, melakukan verifikasi sumber informasi, mencatat setiap temuan secara lengkap, lalu melapor kepada penanggung jawab agar langkah perbaikan dapat dievaluasi dengan benar dan pekerjaan berjalan sesuai prosedur."
         course.lessons.forEach { lesson ->
             compose.onNodeWithText(lesson.first).performScrollTo().performClick()
@@ -107,7 +107,7 @@ class FeatureUiTest {
         }
         compose.onNodeWithText("Evaluasi Akhir →").performScrollTo().performClick()
         // Legacy catalog courses contain five questions; production requires 20.
-        compose.onNodeWithText("Bank soal 20 pertanyaan belum tersedia untuk kursus ini.", substring = true).assertExists()
+        compose.onNodeWithText("Bank soal 20 pertanyaan belum tersedia", substring = true).assertExists()
         compose.runOnIdle {
             val history = org.json.JSONArray(compose.activity.getSharedPreferences("career_training", 0).getString("certificates", "[]"))
             assertEquals(0, history.length())
