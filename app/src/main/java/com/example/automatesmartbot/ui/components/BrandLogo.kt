@@ -10,9 +10,9 @@ import com.example.automatesmartbot.R
 @Composable
 fun BrandLogo(modifier: Modifier = Modifier) {
     Image(
-        painter = painterResource(R.drawable.karir_mate_logo),
-        contentDescription = "Logo Karir Mate",
+        painter = painterResource(R.drawable.karirmate_brand_mark),
+        contentDescription = "Logo KarirMate",
         modifier = modifier,
-        contentScale = ContentScale.Crop
+        contentScale = ContentScale.Fit
     )
 }
