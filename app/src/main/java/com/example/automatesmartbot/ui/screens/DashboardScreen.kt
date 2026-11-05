@@ -81,7 +81,7 @@ private val jobFeatures = listOf(
         title = "CV Builder",
         subtitle = "Susun CV dari data profil",
         icon = Icons.Default.Description,
-        accent = Color(0xFF8B5CF6),
+        accent = Color(0xFF55C6A9),
         route = Screen.CvBuilder.route,
         statusLabel = null
     ),
@@ -89,7 +89,7 @@ private val jobFeatures = listOf(
         title = "Latihan Psikotes",
         subtitle = "Persiapan tes kerja",
         icon = Icons.Default.Psychology,
-        accent = Color(0xFFF97316),
+        accent = Color(0xFF2563A6),
         route = Screen.LatihanPsikotes.route,
         statusLabel = null
     ),
@@ -108,7 +108,7 @@ private val automationFeatures = listOf(
         title = "AI Agent",
         subtitle = "Otomasi dengan persetujuan Anda",
         icon = Icons.Default.SmartToy,
-        accent = Color(0xFFEC4899),
+        accent = Color(0xFF55C6A9),
         route = Screen.AiAgent.route,
         statusLabel = "Segera Hadir"
     ),
@@ -116,7 +116,7 @@ private val automationFeatures = listOf(
         title = "Kalkulator Gaji",
         subtitle = "Lembur, BPJS, PPh 21 & THR",
         icon = Icons.Default.History,
-        accent = Color(0xFF6366F1),
+        accent = Color(0xFF2563A6),
         route = Screen.SalaryCalculator.route,
         statusLabel = null
     ),
@@ -124,7 +124,7 @@ private val automationFeatures = listOf(
         title = "Surat Lamaran & Resign",
         subtitle = "Editor surat profesional & PDF",
         icon = Icons.Default.FolderShared,
-        accent = Color(0xFF14B8A6),
+        accent = Color(0xFF55C6A9),
         route = Screen.CareerLetters.route,
         statusLabel = null
     ),
@@ -132,7 +132,7 @@ private val automationFeatures = listOf(
         title = "Dokumen Karier",
         subtitle = "Gabung, susun & putar PDF",
         icon = Icons.Default.Person,
-        accent = Color(0xFFEAB308),
+        accent = Color(0xFFF2C75C),
         route = Screen.CareerDocuments.route
     )
 )
@@ -148,7 +148,7 @@ fun DashboardScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF6FAFF))
+            .background(Color(0xFFF5FAFC))
     ) {
         if (isLoading && status == null) {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
@@ -162,15 +162,15 @@ fun DashboardScreen(
             ) {
                 item {
                     Text(
-                        text = "Karir Mate",
+                        text = "KarirMate",
                         fontWeight = FontWeight.Bold,
                         fontSize = 24.sp,
-                        color = Color(0xFF17324D)
+                        color = Color(0xFF243547)
                     )
                     Text(
                         text = "Temukan peluang dan siapkan langkah karier Anda.",
                         fontSize = 13.sp,
-                        color = Color(0xFF64748B)
+                        color = Color(0xFF52677A)
                     )
                 }
                 item {
@@ -216,7 +216,7 @@ private fun ConnectionPill(isOnline: Boolean) {
                 text = if (isOnline) "Online" else "Offline",
                 fontWeight = FontWeight.Bold,
                 fontSize = 10.sp,
-                color = Color(0xFF17324D)
+                color = Color(0xFF243547)
             )
         }
     }
@@ -228,7 +228,7 @@ private fun WelcomeCard(
     onCompleteProfile: () -> Unit
 ) {
     val isPro = status?.isPro == true
-    val displayName = status?.displayName?.takeIf { it.isNotBlank() } ?: "SmartBot User"
+    val displayName = status?.displayName?.takeIf { it.isNotBlank() } ?: "Sahabat Karir"
     val profileText = when (status?.profileCompleted) {
         true -> "Profil lengkap"
         false -> "Profil belum lengkap"
@@ -262,23 +262,23 @@ private fun WelcomeCard(
                         Text(
                             text = "Halo, $displayName",
                             fontSize = 13.sp,
-                            color = Color(0xFF64748B)
+                            color = Color(0xFF52677A)
                         )
                         ConnectionPill(isOnline = status?.isOnline == true)
                     }
                     Spacer(modifier = Modifier.height(2.dp))
                     Text(
-                        text = "AutoMate Dashboard",
+                        text = "Perjalanan Kariermu",
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = Color(0xFF17324D)
+                        color = Color(0xFF243547)
                     )
                 }
                 Spacer(modifier = Modifier.width(12.dp))
                 MembershipBadge(isPro = isPro)
             }
 
-            HorizontalDivider(color = Color(0xFFE2EAF5), thickness = 1.dp)
+            HorizontalDivider(color = Color(0xFFD9E9ED), thickness = 1.dp)
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -352,7 +352,7 @@ private fun StatusPill(
 ) {
     Surface(
         modifier = modifier,
-        color = Color(0xFFF5F9FF),
+        color = Color(0xFFF5FAFC),
         shape = RoundedCornerShape(10.dp)
     ) {
         Row(
@@ -369,7 +369,7 @@ private fun StatusPill(
             Text(
                 text = text,
                 fontSize = 10.sp,
-                color = Color(0xFF17324D),
+                color = Color(0xFF243547),
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
@@ -441,7 +441,7 @@ private fun StatCard(item: StatItem, modifier: Modifier = Modifier) {
         modifier = modifier.height(88.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
         shape = RoundedCornerShape(14.dp),
-        border = BorderStroke(1.dp, Color(0xFFE2EAF5))
+        border = BorderStroke(1.dp, Color(0xFFD9E9ED))
     ) {
         Column(
             modifier = Modifier
@@ -452,7 +452,7 @@ private fun StatCard(item: StatItem, modifier: Modifier = Modifier) {
             Text(
                 text = item.title,
                 fontSize = 10.sp,
-                color = Color(0xFF64748B),
+                color = Color(0xFF52677A),
                 fontWeight = FontWeight.Medium
             )
             Text(
@@ -466,7 +466,7 @@ private fun StatCard(item: StatItem, modifier: Modifier = Modifier) {
             Text(
                 text = item.caption,
                 fontSize = 9.sp,
-                color = Color(0xFF64748B),
+                color = Color(0xFF52677A),
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis
             )
@@ -485,13 +485,13 @@ private fun SectionHeader(title: String, itemCount: Int? = null) {
             text = title,
             fontWeight = FontWeight.Bold,
             fontSize = 16.sp,
-            color = Color(0xFF17324D)
+            color = Color(0xFF243547)
         )
         if (itemCount != null) {
             Text(
                 text = "$itemCount fitur",
                 fontSize = 10.sp,
-                color = Color(0xFF64748B)
+                color = Color(0xFF52677A)
             )
         }
     }
@@ -576,7 +576,7 @@ private fun FeatureCard(
                             text = label,
                             modifier = Modifier.padding(horizontal = 6.dp, vertical = 4.dp),
                             fontSize = 8.sp,
-                            color = Color(0xFF64748B),
+                            color = Color(0xFF52677A),
                             fontWeight = FontWeight.Bold,
                             maxLines = 1
                         )
@@ -589,7 +589,7 @@ private fun FeatureCard(
                     text = feature.title,
                     fontWeight = FontWeight.Bold,
                     fontSize = 13.sp,
-                    color = Color(0xFF17324D),
+                    color = Color(0xFF243547),
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
                 )
@@ -602,7 +602,7 @@ private fun FeatureCard(
                         text = feature.subtitle,
                         modifier = Modifier.weight(1f),
                         fontSize = 10.sp,
-                        color = Color(0xFF64748B),
+                        color = Color(0xFF52677A),
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis
                     )
@@ -645,13 +645,13 @@ private fun ActivityUnavailableCard(onOpenHistory: () -> Unit) {
                     text = "Belum ada riwayat lamaran",
                     fontWeight = FontWeight.Bold,
                     fontSize = 14.sp,
-                    color = Color(0xFF17324D)
+                    color = Color(0xFF243547)
                 )
             }
             Text(
                 text = "Riwayat lamaran akan tampil di sini setelah fitur pengiriman tersedia. Aplikasi tidak menampilkan status palsu.",
                 fontSize = 12.sp,
-                color = Color(0xFF64748B)
+                color = Color(0xFF52677A)
             )
             TextButton(
                 onClick = onOpenHistory,
