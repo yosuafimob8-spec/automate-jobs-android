@@ -23,17 +23,17 @@ val KarirMateDarkColors = darkColorScheme(
 )
 
 val KarirMateLightColors = lightColorScheme(
-    primary = Color(0xFFA8430F),
+    primary = RoyalBlue,
     onPrimary = TextWhite,
-    primaryContainer = Color(0xFFFFF2E5),
+    primaryContainer = LightSurfaceVariant,
     onPrimaryContainer = KarirTextDark,
-    secondary = ActionOrange,
-    onSecondary = Color.White,
-    background = Color(0xFFFFFBF7),
+    secondary = Cyan,
+    onSecondary = KarirTextDark,
+    background = LightBackground,
     onBackground = KarirTextDark,
     surface = LightSurface,
     onSurface = KarirTextDark,
-    surfaceVariant = Color(0xFFFFF2E5),
+    surfaceVariant = LightSurfaceVariant,
     onSurfaceVariant = Color(0xFF526277)
 )
 
