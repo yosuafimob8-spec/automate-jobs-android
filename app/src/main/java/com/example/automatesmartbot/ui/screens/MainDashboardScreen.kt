@@ -230,9 +230,9 @@ private fun MainDashboardContent(
         bottomBar = {
             if (showBottomBar) {
                 NavigationBar(
-                    containerColor = com.example.automatesmartbot.ui.theme.screenCanvas(Color(0xFFFFFDF9), com.example.automatesmartbot.ui.theme.DarkSurface),
+                    containerColor = com.example.automatesmartbot.ui.theme.screenCanvas(Color(0xFFF5FAFC), com.example.automatesmartbot.ui.theme.DarkSurface),
                     tonalElevation = 8.dp,
-                    modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC))
+                    modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFC6DFE8))
                 ) {
                     bottomNavItems.forEach { screen ->
                         val selected = currentRoute == screen.route
@@ -263,7 +263,7 @@ private fun MainDashboardContent(
                                 selectedTextColor = MaterialTheme.colorScheme.primary,
                                 unselectedIconColor = MaterialTheme.colorScheme.onSurfaceVariant,
                                 unselectedTextColor = MaterialTheme.colorScheme.onSurface,
-                                indicatorColor = Color(0xFFFF6B00)
+                                indicatorColor = Color(0xFF2563A6)
                             )
                         )
                     }
