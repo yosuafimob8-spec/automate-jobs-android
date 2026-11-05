@@ -153,8 +153,8 @@ fun SuratIzinDokumenScreen() {
             if (notice.isNotEmpty()) {
                 Surface(
                     shape = RoundedCornerShape(8.dp),
-                    color = Color(0xFFFFF3E0),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    color = Color(0xFFE6F5F5),
+                    border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(notice, color = Color(0xFF9A3412), fontSize = 12.sp, modifier = Modifier.padding(10.dp))
@@ -247,7 +247,7 @@ fun SuratIzinDokumenScreen() {
                             OutlinedButton(
                                 onClick = { stampPicker.launch(arrayOf("image/*")) },
                                 shape = RoundedCornerShape(10.dp),
-                                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                                 modifier = Modifier.weight(1f)
                             ) {
                                 Text(if (clinicStamp == null) "Unggah Cap" else "Cap Dipilih ✓", color = KarirOrangeDeep, fontSize = 11.5.sp)
@@ -255,7 +255,7 @@ fun SuratIzinDokumenScreen() {
                             OutlinedButton(
                                 onClick = { signaturePicker.launch(arrayOf("image/*")) },
                                 shape = RoundedCornerShape(10.dp),
-                                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                                 modifier = Modifier.weight(1f)
                             ) {
                                 Text(if (doctorSignature == null) "Unggah TTD" else "TTD Dipilih ✓", color = KarirOrangeDeep, fontSize = 11.5.sp)
@@ -292,7 +292,7 @@ fun SuratIzinDokumenScreen() {
                         onClick = { page = 2 },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                        border = BorderStroke(1.dp, Color(0xFFC6DFE8))
                     ) {
                         Text("Edit Data Surat", color = KarirTextDark)
                     }
@@ -316,7 +316,7 @@ fun SuratIzinDokumenScreen() {
                         onClick = { page = 0 },
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                        border = BorderStroke(1.dp, Color(0xFFC6DFE8))
                     ) {
                         Text("Kembali ke Menu Utama", color = KarirTextDark)
                     }
@@ -332,7 +332,7 @@ private fun SuratCard(content: @Composable ColumnScope.() -> Unit) {
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp), content = content)
@@ -350,7 +350,7 @@ private fun SuratField(label: String, value: String, onChange: (String) -> Unit)
             focusedTextColor = KarirTextDark,
             unfocusedTextColor = KarirTextDark,
             focusedBorderColor = KarirOrange,
-            unfocusedBorderColor = Color(0xFFFFDEC9),
+            unfocusedBorderColor = Color(0xFFC6DFE8),
             focusedLabelColor = KarirOrange,
             cursorColor = KarirOrange
         ),
