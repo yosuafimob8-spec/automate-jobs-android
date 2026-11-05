@@ -188,7 +188,7 @@ private fun MainDashboardContent(
         Screen.AiInterview.route -> "AI Interview"
         Screen.WorkPedia.route -> "WorkPedia"
         Screen.Riwayat.route -> "Riwayat Lamaran"
-        Screen.SuratIzinDokumen.route -> "Surat Izin & Dokumen Kerja"
+        Screen.SuratIzinDokumen.route -> "Dokumen Karier"
         Screen.UpgradePro.route -> "Upgrade PRO"
         Screen.ProCheckout.route -> "Pembelian Paket"
         Screen.ManagePro.route -> "Kelola Langganan"
@@ -337,9 +337,11 @@ private fun MainDashboardContent(
             }
             composable(Screen.WorkPedia.route) { WorkPediaScreen(onExit = navigateUpOrDashboard) }
             composable(Screen.SuratIzinDokumen.route) {
-                FixedCanvasTheme(dark = false) {
-                    SuratIzinDokumenScreen()
-
+                androidx.compose.runtime.LaunchedEffect(Unit) {
+                    navController.navigate(Screen.CareerDocuments.route) {
+                        popUpTo(Screen.SuratIzinDokumen.route) { inclusive = true }
+                        launchSingleTop = true
+                    }
                 }
             }
             composable(Screen.Riwayat.route) {
