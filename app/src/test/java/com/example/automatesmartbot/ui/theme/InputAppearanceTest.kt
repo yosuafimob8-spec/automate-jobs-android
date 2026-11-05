@@ -81,7 +81,9 @@ class InputAppearanceTest {
         listOf(Color.White, Color(0xFFE2E8F0), Color(0xFFCBD5E1), Color(0xFFFFB787)).forEach { ink ->
             assertTrue(ratio(ink, TrainingSlideBackdrop) >= 4.5f)
         }
-        assertTrue(ratio(OnKarirOrange, KarirOrange) >= 4.5f)
+        listOf(KarirMateLightColors, KarirMateDarkColors).forEach { scheme ->
+            assertTrue(ratio(scheme.onPrimary, scheme.primary) >= 4.5f)
+        }
         assertTrue(ratio(Color(0xFFA8430F), Color(0xFFFFF0E5)) >= 4.5f)
     }
 }
