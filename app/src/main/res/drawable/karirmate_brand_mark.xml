@@ -2,6 +2,7 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp" android:height="108dp"
     android:viewportWidth="108" android:viewportHeight="108">
+    <group android:scaleX="0.72" android:scaleY="0.72" android:pivotX="54" android:pivotY="54">
     <!-- White K stem and leg; blue inner diagonal, mint career ribbon and gold sparkle. -->
     <path android:fillColor="#FFFFFF" android:pathData="M23,19 Q23,15 28,15 L37,15 Q42,15 42,20 L42,52 L70,20 Q73,16 79,16 L90,16 Q94,17 90,22 L62,53 L91,87 Q94,93 87,93 L75,93 Q72,93 69,89 L42,61 L42,88 Q42,93 37,93 L28,93 Q23,93 23,88 Z"/>
     <path android:fillColor="#0879B9" android:pathData="M43,55 L77,19 L90,17 Q78,38 56,59 L89,89 L75,90 Z"/>
@@ -9,4 +10,5 @@
     <path android:fillColor="#55E3BF" android:pathData="M16,76 Q24,60 49,51 Q74,41 83,23 Q85,44 66,55 Q48,65 37,83 Q28,96 19,92 Q12,88 16,76 Z"/>
     <path android:fillColor="#0BB6AC" android:pathData="M19,91 Q27,91 37,78 Q48,62 66,55 Q43,70 37,89 Q28,99 19,91 Z"/>
     <path android:fillColor="#F2C75C" android:pathData="M89,7 L92,17 L102,20 L92,23 L89,33 L86,23 L76,20 L86,17 Z"/>
+    </group>
 </vector>
