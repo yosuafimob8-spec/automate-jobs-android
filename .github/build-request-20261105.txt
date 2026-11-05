@@ -1,2 +1,2 @@
-Trigger APK build + Android tests for KarirMate revisions 5-10.
-Source integration commit: 6e7db489d04f839b0021e9add307f55546beaeef
+Retry APK build after UI test navigation updates (2026-11-05).
+Source head before triggering: 90dbb677fc9fa969aaa244320e7deda8c9e1dd08
