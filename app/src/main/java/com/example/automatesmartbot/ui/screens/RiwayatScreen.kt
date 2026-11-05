@@ -19,7 +19,7 @@ fun RiwayatScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF5FAFF))
+            .background(Color(0xFFF5FAFC))
             .padding(16.dp)
     ) {
         Column(
@@ -28,18 +28,18 @@ fun RiwayatScreen() {
         ) {
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
-                shape = RoundedCornerShape(18.dp),
+                shape = RoundedCornerShape(22.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Icon(Icons.Default.History, contentDescription = null, tint = Color(0xFF1678C8))
-                        Text(text = "Riwayat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(0xFF17324D))
+                        Icon(Icons.Default.History, contentDescription = null, tint = Color(0xFF2563A6))
+                        Text(text = "Riwayat Lamaran", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = Color(0xFF243547))
                     }
                     Text(
                         text = "Pantau status lamaran yang Anda kirim.",
                         fontSize = 12.sp,
-                        color = Color(0xFF64748B)
+                        color = Color(0xFF52677A)
                     )
                 }
             }
@@ -57,19 +57,19 @@ fun RiwayatScreen() {
                     Icon(
                         Icons.Default.History,
                         contentDescription = null,
-                        tint = Color(0xFF64748B),
+                        tint = Color(0xFF52677A),
                         modifier = Modifier.size(48.dp)
                     )
                     Text(
                         text = "Belum ada riwayat lamaran",
                         fontSize = 15.sp,
                         fontWeight = FontWeight.Bold,
-                        color = Color(0xFF64748B)
+                        color = Color(0xFF52677A)
                     )
                     Text(
                         text = "Riwayat akan muncul setelah fitur pengiriman lamaran tersedia. Aplikasi tidak menampilkan status palsu.",
                         fontSize = 12.sp,
-                        color = Color(0xFF64748B),
+                        color = Color(0xFF52677A),
                         textAlign = androidx.compose.ui.text.style.TextAlign.Center
                     )
                 }
