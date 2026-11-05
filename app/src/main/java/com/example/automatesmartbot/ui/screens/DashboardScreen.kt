@@ -352,8 +352,8 @@ private fun DashboardTopHeaderSection(
             .fillMaxWidth()
             .height(180.dp)
     ) {
-        val headerTop = screenCanvas(Color(0xFFFFF2E5))
-        val headerMiddle = screenCanvas(Color(0xFFFFF7F0))
+        val headerTop = screenCanvas(Color(0xFFEAF5F8))
+        val headerMiddle = screenCanvas(Color(0xFFF5FAFC))
         // Decorative warm background with swooping orange curve and city skyline
         Canvas(modifier = Modifier.fillMaxSize()) {
             val width = size.width
@@ -383,7 +383,7 @@ private fun DashboardTopHeaderSection(
             drawPath(
                 path = wavePath,
                 brush = Brush.linearGradient(
-                    colors = listOf(Color(0xFFFF9E42), Color(0xFFFF7A00)),
+                    colors = listOf(Color(0xFF55C6A9), Color(0xFF2563A6)),
                     start = Offset(width * 0.5f, 0f),
                     end = Offset(width, height * 0.7f)
                 )
@@ -641,7 +641,7 @@ private fun DashboardSearchBar(
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(18.dp),
         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.5.dp)
     ) {
         Row(
@@ -1201,7 +1201,7 @@ private fun CertificateRequirementsCard(
             .padding(horizontal = 16.dp),
         shape = RoundedCornerShape(20.dp),
         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+        border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
         elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
     ) {
         Box(
