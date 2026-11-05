@@ -33,58 +33,30 @@ import com.example.automatesmartbot.ui.theme.KarirTextMuted
 @Composable
 fun StartupSplashScreen() {
     Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(KarirPageGradient),
+        modifier = Modifier.fillMaxSize().background(
+            androidx.compose.ui.graphics.Brush.verticalGradient(
+                listOf(Color(0xFF0963B3), Color(0xFF0B4B8B), Color(0xFF063D78))
+            )
+        ),
         contentAlignment = Alignment.Center
     ) {
-        Card(
-            colors = CardDefaults.cardColors(containerColor = Color.White),
-            shape = RoundedCornerShape(24.dp),
-            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
-            elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
-            modifier = Modifier.padding(32.dp)
-        ) {
-            Column(
-                modifier = Modifier.padding(horizontal = 36.dp, vertical = 32.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(14.dp)
-            ) {
-                Surface(
-                    color = Color(0xFFFFF2E5),
-                    shape = CircleShape,
-                    border = BorderStroke(1.5.dp, Color(0xFFFFDEC9)),
-                    modifier = Modifier.size(80.dp)
-                ) {
-                    Box(
-                        contentAlignment = Alignment.Center,
-                        modifier = Modifier.fillMaxSize()
-                    ) {
-                        BrandLogo(modifier = Modifier.size(52.dp))
-                    }
-                }
-
-                Text(
-                    text = "KarirMate",
-                    fontWeight = FontWeight.ExtraBold,
-                    fontSize = 24.sp,
-                    color = KarirTextDark
-                )
-
-                Text(
-                    text = "Menyiapkan akun Anda...",
-                    fontSize = 13.sp,
-                    color = KarirTextMuted
-                )
-
-                Spacer(modifier = Modifier.height(4.dp))
-
-                CircularProgressIndicator(
-                    color = KarirOrange,
-                    strokeWidth = 2.5.dp,
-                    modifier = Modifier.size(24.dp)
-                )
+        androidx.compose.foundation.Canvas(Modifier.fillMaxSize()) {
+            val wave = androidx.compose.ui.graphics.Path().apply {
+                moveTo(0f, size.height * .76f)
+                cubicTo(size.width * .3f, size.height * .62f, size.width * .65f, size.height * .88f, size.width, size.height * .65f)
+                lineTo(size.width, size.height)
+                lineTo(0f, size.height)
+                close()
             }
+            drawPath(wave, Color(0xFF55C6A9).copy(alpha = .45f))
+        }
+        Column(horizontalAlignment = Alignment.CenterHorizontally) {
+            BrandLogo(modifier = Modifier.size(120.dp))
+            Spacer(Modifier.height(14.dp))
+            Text("KarirMate", color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = 34.sp)
+            Text("Partner Persiapan Kariermu", color = Color.White, fontSize = 13.sp)
+            Spacer(Modifier.height(30.dp))
+            CircularProgressIndicator(color = Color(0xFF55C6A9), strokeWidth = 2.5.dp, modifier = Modifier.size(22.dp))
         }
     }
 }
