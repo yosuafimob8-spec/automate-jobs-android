@@ -27,7 +27,7 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF5FAFF))
+            .background(Color(0xFFF5FAFC))
             .padding(16.dp)
     ) {
         Column(
@@ -36,7 +36,7 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
         ) {
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
-                shape = RoundedCornerShape(18.dp),
+                shape = RoundedCornerShape(22.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
@@ -44,25 +44,25 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        Icon(Icons.Default.BusinessCenter, contentDescription = null, tint = Color(0xFF10B981))
+                        Icon(Icons.Default.BusinessCenter, contentDescription = null, tint = Color(0xFF55C6A9))
                         Text(
                             text = "Auto Apply Portal Multi-Platform",
                             fontWeight = FontWeight.Bold,
                             fontSize = 18.sp,
-                            color = Color(0xFF17324D)
+                            color = Color(0xFF243547)
                         )
                     }
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
                         text = "Otomatisasi lamaran kerja langsung terhubung ke profil Kalibrr, Indeed, dan Glints.",
                         fontSize = 13.sp,
-                        color = Color(0xFF64748B)
+                        color = Color(0xFF52677A)
                     )
                 }
             }
 
             // Portal Selector Chips
-            Text(text = "Pilih Platform Portal:", fontSize = 14.sp, fontWeight = FontWeight.Bold, color = Color(0xFF1678C8))
+            Text(text = "Pilih Platform Portal:", fontSize = 14.sp, fontWeight = FontWeight.Bold, color = Color(0xFF2563A6))
             Row(
                 horizontalArrangement = Arrangement.spacedBy(8.dp),
                 modifier = Modifier.fillMaxWidth()
@@ -73,10 +73,10 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
                         onClick = { selectedPortal = portal },
                         label = { Text(portal, fontSize = 13.sp) },
                         colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = Color(0xFF10B981),
-                            selectedLabelColor = Color(0xFF17324D),
+                            selectedContainerColor = Color(0xFF55C6A9),
+                            selectedLabelColor = Color(0xFF243547),
                             containerColor = Color(0xFFFFFFFF),
-                            labelColor = Color(0xFF64748B)
+                            labelColor = Color(0xFF52677A)
                         )
                     )
                 }
@@ -85,14 +85,14 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
             // Portal Info Card
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
-                shape = RoundedCornerShape(18.dp),
+                shape = RoundedCornerShape(22.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
                     modifier = Modifier.padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    Text(text = "Status Koneksi: $selectedPortal", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(0xFF17324D))
+                    Text(text = "Status Koneksi: $selectedPortal", fontWeight = FontWeight.Bold, fontSize = 15.sp, color = Color(0xFF243547))
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                         Icon(Icons.Default.CheckCircle, contentDescription = null, tint = Color(0xFF34D399), modifier = Modifier.size(16.dp))
                         Text(text = "Akun terhubung • Sesi Aktif", fontSize = 13.sp, color = Color(0xFF34D399))
@@ -100,7 +100,7 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
                     Text(
                         text = "Target Posisi: Android Engineer / Kotlin Developer\nResume: CV_Andri_2025.pdf",
                         fontSize = 12.sp,
-                        color = Color(0xFF64748B)
+                        color = Color(0xFF52677A)
                     )
                 }
             }
@@ -115,9 +115,9 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
                     }
                 },
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = if (isRunning) Color(0xFFEF4444) else Color(0xFF10B981)
+                    containerColor = if (isRunning) Color(0xFFEF4444) else Color(0xFF55C6A9)
                 ),
-                shape = RoundedCornerShape(18.dp),
+                shape = RoundedCornerShape(22.dp),
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(50.dp)
@@ -133,13 +133,13 @@ fun AutoApplyPortalScreen(isPro: Boolean) {
 
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
-                shape = RoundedCornerShape(18.dp),
+                shape = RoundedCornerShape(22.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(modifier = Modifier.padding(16.dp)) {
-                    Text(text = "Log Eksekusi:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color(0xFF10B981))
+                    Text(text = "Log Eksekusi:", fontWeight = FontWeight.Bold, fontSize = 13.sp, color = Color(0xFF55C6A9))
                     Spacer(modifier = Modifier.height(4.dp))
-                    Text(text = logText, fontSize = 13.sp, color = Color(0xFF17324D))
+                    Text(text = logText, fontSize = 13.sp, color = Color(0xFF243547))
                 }
             }
         }
