@@ -36,7 +36,7 @@ fun RiwayatScreen() {
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
