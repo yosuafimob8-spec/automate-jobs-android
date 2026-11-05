@@ -51,7 +51,8 @@ class InputAppearanceTest {
                 assertTrue(ratio(scheme.error, scheme.surface) >= 4.5f)
                 assertEquals(scheme.onSurface, fields.focusedTextColor)
                 assertEquals(scheme.onSurface, fields.unfocusedTextColor)
-                assertEquals(KarirOrange, buttons.containerColor)
+                assertEquals(scheme.primary, buttons.containerColor)
+                assertEquals(scheme.onPrimary, buttons.contentColor)
             }
         } }
         listOf(ThemeMode.LIGHT, ThemeMode.DARK).forEach { value ->
