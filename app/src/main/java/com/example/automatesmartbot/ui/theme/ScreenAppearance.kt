@@ -30,7 +30,7 @@ val ScreenPageGradient: Brush
         Brush.verticalGradient(listOf(DarkBackground, DarkSurface, DarkBackground)) else KarirPageGradient
 
 /** Bright KarirMate orange remains the button fill; dark ink gives readable text. */
-val OnKarirOrange = Color(0xFF21150D)
+val OnKarirOrange = Color.White
 
 @Composable
 fun karirButtonColors() = ButtonDefaults.buttonColors(
