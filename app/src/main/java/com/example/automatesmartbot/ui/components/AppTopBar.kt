@@ -55,12 +55,16 @@ fun AppTopBar(
                         .size(28.dp)
                         .clip(RoundedCornerShape(8.dp))
                 )
-                Text(
-                    text = title,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 18.sp,
-                    color = KarirTextDark
-                )
+                if (title == "KarirMate") {
+                    BrandWordmark(fontSize = 18.sp)
+                } else {
+                    Text(
+                        text = title,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 18.sp,
+                        color = KarirTextDark
+                    )
+                }
             }
         },
         actions = {
