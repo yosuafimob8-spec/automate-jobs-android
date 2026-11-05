@@ -53,7 +53,6 @@ val detailNavItems = listOf(
     Screen.LatihanPsikotes,
     Screen.AiInterview,
     Screen.WorkPedia,
-    Screen.SuratIzinDokumen,
     Screen.UpgradePro, Screen.ProCheckout, Screen.ManagePro
 )
 
