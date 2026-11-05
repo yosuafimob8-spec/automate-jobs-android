@@ -9,6 +9,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Visibility
@@ -19,6 +20,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.font.FontStyle
+import com.example.automatesmartbot.ui.components.BrandLogo
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
@@ -38,6 +41,9 @@ fun RegisterScreen(
     onRegisterSuccess: () -> Unit,
     viewModel: AuthViewModel = viewModel()
 ) {
+    var name by remember { mutableStateOf("") }
+    var agreed by remember { mutableStateOf(false) }
+    var notice by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var confirmPassword by remember { mutableStateOf("") }
@@ -100,10 +106,13 @@ fun RegisterScreen(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
+                    BrandLogo(modifier = Modifier.size(92.dp))
+                    Text("KarirMate", fontSize = 36.sp, fontWeight = FontWeight.ExtraBold, fontStyle = FontStyle.Italic, color = KarirTextDark)
+                    Text("Your Career Journey", fontSize = 13.sp, color = KarirTextMuted)
                     Text(
                         text = "Buat Akun Baru",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 22.sp,
+                        fontWeight = FontWeight.ExtraBold,
+                        fontSize = 26.sp,
                         color = KarirTextDark
                     )
 
@@ -112,6 +121,17 @@ fun RegisterScreen(
                         fontSize = 12.5.sp,
                         color = KarirTextMuted,
                         textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                        modifier = Modifier.fillMaxWidth()
+                    )
+
+                    OutlinedTextField(
+                        value = name,
+                        onValueChange = { name = it },
+                        label = { Text("Nama Lengkap") },
+                        leadingIcon = { Icon(Icons.Default.Person, contentDescription = null, tint = KarirOrange) },
+                        shape = RoundedCornerShape(12.dp),
+                        colors = textFieldColors,
+                        singleLine = true,
                         modifier = Modifier.fillMaxWidth()
                     )
 
@@ -159,10 +179,18 @@ fun RegisterScreen(
                         modifier = Modifier.fillMaxWidth()
                     )
 
+                    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+                        Checkbox(checked = agreed, onCheckedChange = { agreed = it })
+                        Text("Saya setuju dengan Syarat & Ketentuan dan Kebijakan Privasi", color = KarirTextDark, fontSize = 13.sp)
+                    }
+                    if (notice.isNotBlank()) Text(notice, color = MaterialTheme.colorScheme.error, fontSize = 12.sp)
                     Button(
                         onClick = {
-                            viewModel.register(email, password, confirmPassword, onRegisterSuccess)
+                            if (name.isBlank()) notice = "Nama lengkap wajib diisi."
+                            else if (!agreed) notice = "Setujui Syarat & Ketentuan dan Kebijakan Privasi."
+                            else { notice = ""; viewModel.register(email, password, confirmPassword, onRegisterSuccess) }
                         },
+                        enabled = !isLoading,
                         colors = ButtonDefaults.buttonColors(containerColor = KarirOrange),
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier
