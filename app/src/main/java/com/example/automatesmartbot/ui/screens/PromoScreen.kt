@@ -57,7 +57,7 @@ fun PromoScreen(
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -98,7 +98,7 @@ fun PromoScreen(
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -122,7 +122,7 @@ fun PromoScreen(
 
                     Surface(
                         color = if (isPro) Color(0xFFE8F5E9) else Color(0xFFFFF0E5),
-                        border = BorderStroke(1.dp, if (isPro) Color(0xFFA5D6A7) else Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, if (isPro) Color(0xFFA5D6A7) else Color(0xFFC6DFE8)),
                         shape = RoundedCornerShape(8.dp)
                     ) {
                         Text(
@@ -152,7 +152,7 @@ fun PromoScreen(
                     Card(
                         colors = CardDefaults.cardColors(containerColor = Color.White),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                        border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -168,8 +168,8 @@ fun PromoScreen(
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Surface(
-                                    color = Color(0xFFFFF2E5),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                                    color = Color(0xFFEAF5F8),
+                                    border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                                     shape = RoundedCornerShape(6.dp)
                                 ) {
                                     Text(
@@ -202,7 +202,7 @@ fun PromoScreen(
                                 lineHeight = 18.sp
                             )
 
-                            HorizontalDivider(color = Color(0xFFF1E5DC), thickness = 0.75.dp)
+                            HorizontalDivider(color = Color(0xFFC6DFE8), thickness = 0.75.dp)
 
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
