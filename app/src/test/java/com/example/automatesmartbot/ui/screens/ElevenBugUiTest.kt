@@ -276,12 +276,12 @@ class ElevenBugUiTest {
         val previous = """[{"id":"legacy-certificate","course":"Pelatihan lama","name":"Pengguna lama","date":"2026-10-01","score":90}]"""
         prefs.edit().putString("certificates", previous).commit()
         compose.setContent { KarirMateTheme(mode) { JobTrainingScreen() } }
-        compose.onNodeWithText("Lihat Riwayat Sertifikat").performScrollTo().performClick()
+        compose.onNodeWithText("Lihat Riwayat Sertifikat", substring = true).performScrollTo().performClick()
         bothModes {
             input().performScrollTo().performTextReplacement("identitas-tidak-terdaftar")
             assertInputInk()
-            compose.onNodeWithText("Periksa Identitas Sertifikat").performScrollTo().performClick()
-            compose.onNodeWithText("Tidak ditemukan di perangkat ini; belum ada registri online.").performScrollTo().assertExists()
+            compose.onNodeWithText("Periksa Sertifikat").performScrollTo().performClick()
+            compose.onNodeWithText("Tidak ditemukan pada riwayat lokal perangkat ini.").performScrollTo().assertExists()
         }
         compose.runOnIdle { assertEquals(previous, prefs.getString("certificates", null)) }
     }
@@ -291,7 +291,7 @@ class ElevenBugUiTest {
         prefs.edit().clear().commit()
         compose.setContent { KarirMateTheme(mode) { JobTrainingScreen() } }
         val course = com.example.automatesmartbot.data.career.TrainingCourses.all.first()
-        compose.onNodeWithText(course.title).performScrollTo().performClick()
+        compose.onNodeWithText("Lanjutkan", substring = true).performScrollTo().performClick()
         compose.onNodeWithText(course.lessons.first().first).performScrollTo().performClick()
         compose.onNodeWithText("Lanjut ke Latihan →").performScrollTo().performClick()
         val answer = "Jawaban pengguna\nTetap tersimpan setelah mode tampilan diganti."
