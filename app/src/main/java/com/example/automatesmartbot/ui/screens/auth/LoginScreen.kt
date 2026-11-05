@@ -1,6 +1,10 @@
 package com.example.automatesmartbot.ui.screens.auth
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -41,6 +45,11 @@ fun LoginScreen(
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var passwordVisible by remember { mutableStateOf(false) }
+    val context = LocalContext.current
+    val prefs = remember { context.getSharedPreferences("karirmate_login_preferences", 0) }
+    var rememberMe by remember { mutableStateOf(prefs.getString("remembered_email", "").orEmpty().isNotBlank()) }
+    var googleNotice by remember { mutableStateOf(false) }
+    LaunchedEffect(Unit) { email = prefs.getString("remembered_email", "").orEmpty() }
 
     val isLoading by viewModel.isLoading.collectAsState()
     val errorMessage by viewModel.errorMessage.collectAsState()
@@ -52,6 +61,7 @@ fun LoginScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(KarirPageGradient)
+            .verticalScroll(rememberScrollState())
             .padding(24.dp),
         contentAlignment = Alignment.Center
     ) {
@@ -68,14 +78,15 @@ fun LoginScreen(
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 BrandLogo(
-                    modifier = Modifier.size(64.dp)
+                    modifier = Modifier.size(92.dp)
                 )
-                com.example.automatesmartbot.ui.components.BrandWordmark(fontSize = 26.sp)
+                Text("KarirMate", fontSize = 36.sp, fontWeight = FontWeight.ExtraBold, fontStyle = FontStyle.Italic, color = KarirTextDark)
+                Text("Your Career Journey", color = KarirTextMuted, fontSize = 13.sp)
 
                 Text(
                     text = "Masuk ke Akunmu",
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 22.sp,
+                    fontWeight = FontWeight.ExtraBold,
+                    fontSize = 26.sp,
                     color = KarirTextDark
                 )
 
@@ -121,8 +132,13 @@ fun LoginScreen(
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.End
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Checkbox(checked = rememberMe, onCheckedChange = { rememberMe = it })
+                        Text("Ingat Saya", color = KarirTextDark, fontSize = 13.sp)
+                    }
                     TextButton(onClick = onNavigateForgot) {
                         Text("Lupa kata sandi?", fontSize = 12.5.sp, color = KarirOrangeDeep, fontWeight = FontWeight.SemiBold)
                     }
@@ -130,6 +146,7 @@ fun LoginScreen(
 
                 Button(
                     onClick = {
+                        prefs.edit().putString("remembered_email", if (rememberMe) email else "").apply()
                         viewModel.login(email, password, onLoginSuccess)
                     },
                     enabled = !isLoading,
@@ -145,6 +162,12 @@ fun LoginScreen(
                         Text("Masuk", fontWeight = FontWeight.Bold, fontSize = 15.sp)
                     }
                 }
+
+                Text("atau masuk dengan", color = KarirTextMuted, fontSize = 13.sp)
+                OutlinedButton(onClick = { googleNotice = true }, modifier = Modifier.fillMaxWidth().height(52.dp)) {
+                    Text("Masuk dengan Google", color = KarirTextDark, fontWeight = FontWeight.SemiBold)
+                }
+                if (googleNotice) Text("Login Google belum tersedia: perlu integrasi OAuth.", color = KarirTextMuted, fontSize = 12.sp)
 
                 errorMessage?.let { err ->
                     Surface(
