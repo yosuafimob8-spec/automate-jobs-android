@@ -16,7 +16,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.automatesmartbot.ui.theme.Navy
+import com.example.automatesmartbot.ui.theme.OceanBlue
+import com.example.automatesmartbot.ui.theme.FreshMint
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -61,7 +62,7 @@ fun AppTopBar(
             Box(
                 modifier = Modifier
                     .clip(RoundedCornerShape(16.dp))
-                    .background(if (isPro) Color(0xFFF59E0B) else Color(0xFF0EA5E9))
+                    .background(if (isPro) Color(0xFFF59E0B) else FreshMint)
                     .padding(horizontal = 10.dp, vertical = 5.dp),
                 contentAlignment = Alignment.Center
             ) {
@@ -85,7 +86,7 @@ fun AppTopBar(
                     } else {
                         Text(
                             text = "FREE",
-                            color = Color.White,
+                            color = Color(0xFF243547),
                             fontWeight = FontWeight.Bold,
                             fontSize = 11.sp
                         )
@@ -100,12 +101,12 @@ fun AppTopBar(
                 Icon(
                     imageVector = Icons.Default.Person,
                     contentDescription = "Profil",
-                    tint = Color(0xFF94A3B8)
+                    tint = Color.White
                 )
             }
         },
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = Navy,
+            containerColor = OceanBlue,
             titleContentColor = Color.White
         )
     )
