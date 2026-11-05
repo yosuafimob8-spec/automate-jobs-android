@@ -190,7 +190,7 @@ fun ProfilScreen(
                         .padding(horizontal = 16.dp, vertical = 8.dp),
                     shape = RoundedCornerShape(16.dp),
                     colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                     elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                 ) {
                     Column(
@@ -210,8 +210,8 @@ fun ProfilScreen(
                             )
                             Surface(
                                 shape = RoundedCornerShape(10.dp),
-                                color = screenCanvas(Color(0xFFFFF3E0)),
-                                border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9)))
+                                color = screenCanvas(Color(0xFFE8F5F7)),
+                                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8)))
                             ) {
                                 Text(
                                     "DATA UTAMA",
@@ -268,7 +268,7 @@ internal fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode)
     Card(
         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -287,12 +287,12 @@ internal fun AppearanceCard(selectedMode: ThemeMode, onModeSelected: (ThemeMode)
                         onClick = { onModeSelected(mode) },
                         label = { Text(mode.label, maxLines = 1, fontSize = 11.5.sp, fontWeight = if (selected) FontWeight.Bold else FontWeight.Normal) },
                         colors = androidx.compose.material3.FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = screenCanvas(Color(0xFFFFF3E0)),
+                            selectedContainerColor = screenCanvas(Color(0xFFE8F5F7)),
                             selectedLabelColor = MaterialTheme.colorScheme.primary,
                             containerColor = ScreenSurface,
                             labelColor = KarirTextDark
                         ),
-                        border = BorderStroke(1.dp, if (selected) KarirOrange else screenCanvas(Color(0xFFFFDEC9)))
+                        border = BorderStroke(1.dp, if (selected) KarirOrange else screenCanvas(Color(0xFFC6DFE8)))
                     )
                 }
             }
@@ -351,7 +351,7 @@ internal fun ProfileIdentityCard(
     Card(
         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
         shape = RoundedCornerShape(16.dp),
-        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -366,8 +366,8 @@ internal fun ProfileIdentityCard(
                 horizontalArrangement = Arrangement.spacedBy(14.dp)
             ) {
                 Surface(
-                    color = screenCanvas(Color(0xFFFFF3E0)),
-                    border = BorderStroke(1.5.dp, screenCanvas(Color(0xFFFFDEC9))),
+                    color = screenCanvas(Color(0xFFE8F5F7)),
+                    border = BorderStroke(1.5.dp, screenCanvas(Color(0xFFC6DFE8))),
                     shape = RoundedCornerShape(50),
                     modifier = Modifier.size(80.dp)
                 ) {
@@ -397,8 +397,8 @@ internal fun ProfileIdentityCard(
                         color = KarirTextDark
                     )
                     Surface(
-                        color = screenCanvas(Color(0xFFFFF3E0)),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        color = screenCanvas(Color(0xFFE8F5F7)),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         shape = RoundedCornerShape(10.dp)
                     ) {
                         Text(
@@ -430,9 +430,9 @@ internal fun ProfileIdentityCard(
             }
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = screenCanvas(Color(0xFFFFFBF7))),
+                colors = CardDefaults.cardColors(containerColor = screenCanvas(Color(0xFFF5FAFC))),
                 shape = RoundedCornerShape(14.dp),
-                border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(Modifier.fillMaxWidth().padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -499,7 +499,7 @@ internal fun ProfileIdentityCard(
                 }
             }
 
-            HorizontalDivider(color = screenCanvas(Color(0xFFF1E5DC)))
+            HorizontalDivider(color = screenCanvas(Color(0xFFC6DFE8)))
 
             Text(
                 "INFORMASI PRIBADI",
@@ -514,7 +514,7 @@ internal fun ProfileIdentityCard(
             ProfileDetailRow(icon = Icons.Default.LocationOn, label = "Domisili", value = profile?.domicile ?: "-")
             ProfileDetailRow(icon = Icons.Default.School, label = "Pendidikan", value = profile?.education ?: "-")
 
-            HorizontalDivider(color = screenCanvas(Color(0xFFF1E5DC)))
+            HorizontalDivider(color = screenCanvas(Color(0xFFC6DFE8)))
 
             Text(
                 "PREFERENSI KARIER",
@@ -541,17 +541,17 @@ internal fun ProfileIdentityCard(
             )
 
             Card(
-                colors = CardDefaults.cardColors(containerColor = screenCanvas(Color(0xFFFFFBF7))),
+                colors = CardDefaults.cardColors(containerColor = screenCanvas(Color(0xFFF5FAFC))),
                 shape = RoundedCornerShape(14.dp),
-                border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                     Text("Ringkasan Karier", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = KarirTextDark)
                     Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        CareerSummaryTile("CV", "Buka CV", screenCanvas(Color(0xFFFFF3E0)), Modifier.weight(1f))
-                        CareerSummaryTile("Lamaran", "Riwayat", screenCanvas(Color(0xFFFFF3E0)), Modifier.weight(1f))
-                        CareerSummaryTile("Dokumen", "Kelola", screenCanvas(Color(0xFFFFF3E0)), Modifier.weight(1f))
+                        CareerSummaryTile("CV", "Buka CV", screenCanvas(Color(0xFFE8F5F7)), Modifier.weight(1f))
+                        CareerSummaryTile("Lamaran", "Riwayat", screenCanvas(Color(0xFFE8F5F7)), Modifier.weight(1f))
+                        CareerSummaryTile("Dokumen", "Kelola", screenCanvas(Color(0xFFE8F5F7)), Modifier.weight(1f))
                     }
                     Text("Ringkasan integrasi fitur resmi KarirMate.", fontSize = 11.sp, color = KarirTextMuted)
                 }
@@ -612,7 +612,7 @@ private fun CareerSummaryTile(title: String, caption: String, color: Color, modi
     Surface(
         modifier = modifier,
         color = color,
-        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
         shape = RoundedCornerShape(12.dp)
     ) {
         Column(
