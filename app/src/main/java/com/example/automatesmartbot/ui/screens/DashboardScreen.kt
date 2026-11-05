@@ -196,243 +196,146 @@ fun DashboardScreen(
 ) {
     val status by viewModel.status.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
-    var dashboardSearch by remember { mutableStateOf("") }
-
     val isPro = status?.isPro == true
-    val isOnline = status?.isOnline != false
-    val displayName = status?.displayName?.takeIf { it.isNotBlank() } ?: "Ilham Ramdhani S"
-
-    val dashboardGradient = ScreenPageGradient
-
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(dashboardGradient)
+    val displayName = status?.displayName?.takeIf { it.isNotBlank() } ?: "Pengguna"
+    val ocean = Color(0xFF2563A6)
+    val mint = Color(0xFF55C6A9)
+    val background = ScreenSurface
+    val menu = listOf(
+        MainMenuItem("CV Builder", icon = Icons.Default.Badge, iconTint = Color(0xFF16A085), bgTint = Color(0xFFE1F7F1), route = Screen.CvBuilder.route),
+        MainMenuItem("Psikotes", icon = Icons.Default.Psychology, iconTint = Color(0xFF8054D7), bgTint = Color(0xFFF0E9FF), route = Screen.LatihanPsikotes.route),
+        MainMenuItem("AI Interview", icon = Icons.Default.Headphones, iconTint = ocean, bgTint = Color(0xFFE4F1FF), route = Screen.AiInterview.route),
+        MainMenuItem("Pelatihan", icon = Icons.Default.School, iconTint = Color(0xFFDA9B13), bgTint = Color(0xFFFFF3D3), route = Screen.JobTraining.route),
+        MainMenuItem("Kalkulator Gaji", icon = Icons.Default.Calculate, iconTint = Color(0xFFF0A91B), bgTint = Color(0xFFFFF4DB), route = Screen.SalaryCalculator.route),
+        MainMenuItem("Surat & Dokumen", icon = Icons.Default.Description, iconTint = Color(0xFF16A085), bgTint = Color(0xFFE1F7F1), route = Screen.CareerLetters.route),
+        MainMenuItem("Workpedia", icon = Icons.Default.Work, iconTint = Color(0xFFEAA332), bgTint = Color(0xFFFFF0D9), route = Screen.WorkPedia.route),
+        MainMenuItem("Lainnya", icon = Icons.Default.GridView, iconTint = Color(0xFF52677D), bgTint = Color(0xFFE9F1F5), route = Screen.CariLowongan.route)
+    )
+    LazyColumn(
+        modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background),
+        contentPadding = PaddingValues(bottom = 28.dp),
+        verticalArrangement = Arrangement.spacedBy(14.dp)
     ) {
-        // Decorative ambient transparent waves across the full dashboard background
-        Canvas(modifier = Modifier.fillMaxSize()) {
-            val w = size.width
-            val h = size.height
-
-            // Top soft ambient wave
-            val topWave = Path().apply {
-                moveTo(w * 0.40f, 0f)
-                cubicTo(
-                    w * 0.70f, h * 0.03f,
-                    w * 0.50f, h * 0.15f,
-                    w, h * 0.14f
-                )
-                lineTo(w, 0f)
-                close()
-            }
-            drawPath(
-                path = topWave,
-                brush = Brush.linearGradient(
-                    colors = listOf(Color(0xFFFF9E42).copy(alpha = 0.20f), Color(0xFFFF7A00).copy(alpha = 0.06f)),
-                    start = Offset(w * 0.5f, 0f),
-                    end = Offset(w, h * 0.14f)
-                )
-            )
-
-            // Middle gentle flowing wave behind menu area
-            val midWave = Path().apply {
-                moveTo(0f, h * 0.36f)
-                cubicTo(
-                    w * 0.35f, h * 0.32f,
-                    w * 0.65f, h * 0.42f,
-                    w, h * 0.38f
-                )
-                lineTo(w, h * 0.48f)
-                cubicTo(
-                    w * 0.65f, h * 0.52f,
-                    w * 0.35f, h * 0.44f,
-                    0f, h * 0.46f
-                )
-                close()
-            }
-            drawPath(
-                path = midWave,
-                brush = Brush.horizontalGradient(
-                    colors = listOf(
-                        Color(0xFFFF8533).copy(alpha = 0.030f),
-                        Color(0xFFFFB280).copy(alpha = 0.050f),
-                        Color(0xFFFF8533).copy(alpha = 0.020f)
-                    )
-                )
-            )
-
-            // Lower gentle ambient wave near certificate
-            val lowerWave = Path().apply {
-                moveTo(0f, h * 0.70f)
-                cubicTo(
-                    w * 0.40f, h * 0.75f,
-                    w * 0.70f, h * 0.66f,
-                    w, h * 0.72f
-                )
-                lineTo(w, h * 0.82f)
-                cubicTo(
-                    w * 0.65f, h * 0.86f,
-                    w * 0.30f, h * 0.78f,
-                    0f, h * 0.81f
-                )
-                close()
-            }
-            drawPath(
-                path = lowerWave,
-                brush = Brush.horizontalGradient(
-                    colors = listOf(
-                        Color(0xFFFF9E42).copy(alpha = 0.025f),
-                        Color(0xFFFF7A00).copy(alpha = 0.045f)
-                    )
-                )
-            )
-        }
-
-        if (isLoading && status == null) {
-            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator(color = KarirOrange)
-            }
-        } else {
-            LazyColumn(
-                modifier = Modifier.fillMaxSize(),
-                contentPadding = PaddingValues(bottom = 24.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp)
+        item {
+            Row(
+                modifier = Modifier.fillMaxWidth().background(background).padding(horizontal = 18.dp, vertical = 14.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
-                // 1. Header with Orange Wave background & Greeting
-                item {
-                    DashboardTopHeaderSection(
-                        isPro = isPro,
-                        isOnline = isOnline,
-                        displayName = displayName,
-                        onNavigate = onNavigate
+                Box(
+                    modifier = Modifier.size(38.dp).background(ocean, RoundedCornerShape(10.dp)),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text("K", color = Color.White, fontWeight = FontWeight.Black, fontSize = 26.sp)
+                }
+                Spacer(Modifier.width(9.dp))
+                Text("KarirMate", color = ScreenText, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp, modifier = Modifier.weight(1f))
+                IconButton(onClick = { onNavigate(Screen.Riwayat.route) }) {
+                    Icon(Icons.Default.Notifications, contentDescription = "Notifikasi", tint = ScreenText)
+                }
+            }
+        }
+        item {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 18.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Box(
+                    modifier = Modifier.size(46.dp).background(Color(0xFFE4F1FF), CircleShape),
+                    contentAlignment = Alignment.Center
+                ) { Icon(Icons.Default.Person, contentDescription = null, tint = ocean) }
+                Spacer(Modifier.width(10.dp))
+                Column {
+                    Text("Halo, ${displayName.substringBefore(' ')} 👋", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = ScreenText)
+                    Text("Siap lanjutkan perjalanan kariermu?", fontSize = 12.sp, color = ScreenMuted)
+                }
+            }
+        }
+        item {
+            Card(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp).clickable { onNavigate(Screen.OnboardingProfile.route) },
+                shape = RoundedCornerShape(16.dp),
+                colors = CardDefaults.cardColors(containerColor = ocean)
+            ) {
+                Column(Modifier.padding(17.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(Icons.Default.TrendingUp, contentDescription = null, tint = Color.White)
+                        Spacer(Modifier.width(9.dp))
+                        Column(Modifier.weight(1f)) {
+                            Text("Career Journey", fontWeight = FontWeight.Bold, color = Color.White, fontSize = 15.sp)
+                            Text("Progres Persiapan Karier", color = Color.White.copy(alpha = .86f), fontSize = 11.sp)
+                        }
+                        Text(if (status?.profileCompleted == true) "Profil siap" else "Lengkapi profil", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                    }
+                    LinearProgressIndicator(
+                        progress = { if (status?.profileCompleted == true) 1f else 0f },
+                        modifier = Modifier.fillMaxWidth().height(8.dp).clip(RoundedCornerShape(8.dp)),
+                        color = mint,
+                        trackColor = Color.White.copy(alpha = .25f)
                     )
                 }
-
-                // 2. Search Bar
-                item {
-                    DashboardSearchBar(
-                        query = dashboardSearch,
-                        onQueryChange = { dashboardSearch = it },
-                        onFilterClick = { onNavigate(Screen.CariLowongan.route) }
-                    )
-                }
-
-                // 3. Search Results or Normal Flow
-                if (dashboardSearch.isNotBlank()) {
-                    val allFeatures = primaryMenuItems + extraSearchableFeatures
-                    val filtered = allFeatures.filter {
-                        it.title.contains(dashboardSearch, ignoreCase = true) ||
-                                (it.subtitle?.contains(dashboardSearch, ignoreCase = true) == true)
-                    }
-
-                    item {
-                        Column(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(horizontal = 16.dp),
-                            verticalArrangement = Arrangement.spacedBy(10.dp)
-                        ) {
-                            Text(
-                                text = "${filtered.size} fitur ditemukan",
-                                fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.primary,
-                                fontSize = 14.sp
-                            )
-                            if (filtered.isEmpty()) {
-                                Card(
-                                    colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-                                    shape = RoundedCornerShape(18.dp),
-                                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
-                                    elevation = CardDefaults.cardElevation(defaultElevation = 2.5.dp),
-                                    modifier = Modifier.fillMaxWidth()
-                                ) {
-                                    Column(
-                                        modifier = Modifier.padding(18.dp),
-                                        verticalArrangement = Arrangement.spacedBy(6.dp)
-                                    ) {
-                                        Text("Fitur tidak ditemukan", fontWeight = FontWeight.Bold, color = ScreenText)
-                                        Text("Coba kata kunci lain atau bersihkan pencarian.", color = ScreenMuted, fontSize = 12.sp)
-                                        TextButton(onClick = { dashboardSearch = "" }, contentPadding = PaddingValues(0.dp)) {
-                                            Text("Hapus Pencarian", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold)
-                                        }
-                                    }
-                                }
-                            } else {
-                                filtered.forEach { item ->
-                                    Card(
-                                        modifier = Modifier
-                                            .fillMaxWidth()
-                                            .clickable { onNavigate(item.route) },
-                                        shape = RoundedCornerShape(16.dp),
-                                        colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-                                        border = BorderStroke(1.dp, Color(0xFFF3EAE2)),
-                                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
-                                    ) {
-                                        Row(
-                                            modifier = Modifier.padding(14.dp),
-                                            verticalAlignment = Alignment.CenterVertically,
-                                            horizontalArrangement = Arrangement.spacedBy(12.dp)
-                                        ) {
-                                            Box(
-                                                modifier = Modifier
-                                                    .size(42.dp)
-                                                    .background(item.bgTint, RoundedCornerShape(12.dp)),
-                                                contentAlignment = Alignment.Center
-                                            ) {
-                                                Icon(item.icon, contentDescription = null, tint = item.iconTint, modifier = Modifier.size(23.dp))
-                                            }
-                                            Column(modifier = Modifier.weight(1f)) {
-                                                Text(item.title.replace("\n", " "), fontWeight = FontWeight.Bold, fontSize = 13.sp, color = ScreenText)
-                                                item.subtitle?.let {
-                                                    Text(it, fontSize = 11.sp, color = ScreenMuted)
-                                                }
-                                            }
-                                            Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(16.dp))
-                                        }
-                                    }
-                                }
-                            }
+            }
+        }
+        item {
+            Column(Modifier.padding(horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(9.dp)) {
+                Text("Career Billboard", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = ScreenText)
+                Card(
+                    modifier = Modifier.fillMaxWidth().clickable { onNavigate(Screen.JobTraining.route) },
+                    shape = RoundedCornerShape(17.dp),
+                    colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF2CF))
+                ) {
+                    Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+                        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                            Text("Upgrade Skill, Buka Peluang", color = Color(0xFF16446B), fontWeight = FontWeight.ExtraBold, fontSize = 18.sp)
+                            Text("Ikuti pelatihan kerja dan kembangkan kemampuanmu.", color = Color(0xFF34546A), fontSize = 12.sp)
+                            Text("Lihat Program  →", color = Color(0xFF087D77), fontWeight = FontWeight.Bold, fontSize = 13.sp)
                         }
-                    }
-                } else {
-                    // Profile Completion Alert (if not complete)
-                    if (status?.profileCompleted == false) {
-                        item {
-                            ProfileIncompleteBanner(onCompleteProfile = { onNavigate(Screen.OnboardingProfile.route) })
-                        }
-                    }
-
-                    // 4. "Kondisi Ketenagakerjaan Indonesia" Carousel Card
-                    item {
-                        IndonesianLaborConditionCard(onDetailClick = { onNavigate(Screen.CariLowongan.route) })
-                    }
-
-                    item {
-                        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                            Button(
-                                onClick = { onNavigate(Screen.UpgradePro.route) },
-                                colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
-                            ) { Text(if (isPro) "Lihat Paket KarirMate PRO" else "Upgrade PRO • Mulai Rp5.000") }
-                            TextButton(onClick = { onNavigate(Screen.ManagePro.route) }) {
-                                Text("Kelola Langganan")
-                            }
-                        }
-                    }
-
-                    // 5. "Menu Utama" Section
-                    item {
-                        MenuUtamaSection(onNavigate = onNavigate)
-                    }
-
-                    // 6. "Syarat Sertifikat KarirMate" Section
-                    item {
-                        CertificateRequirementsCard(
-                            isPro = isPro,
-                            onNavigate = onNavigate
-                        )
+                        Icon(Icons.Default.School, contentDescription = null, tint = ocean, modifier = Modifier.size(55.dp))
                     }
                 }
             }
+        }
+        item {
+            Column(Modifier.padding(horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                menu.chunked(4).forEach { rowItems ->
+                    Row(horizontalArrangement = Arrangement.spacedBy(7.dp), modifier = Modifier.fillMaxWidth()) {
+                        rowItems.forEach { feature ->
+                            Card(
+                                modifier = Modifier.weight(1f).clickable { onNavigate(feature.route) },
+                                shape = RoundedCornerShape(13.dp),
+                                colors = CardDefaults.cardColors(containerColor = background),
+                                border = BorderStroke(1.dp, MaterialTheme.colorScheme.outlineVariant)
+                            ) {
+                                Column(
+                                    modifier = Modifier.fillMaxWidth().padding(vertical = 12.dp, horizontal = 3.dp),
+                                    horizontalAlignment = Alignment.CenterHorizontally,
+                                    verticalArrangement = Arrangement.spacedBy(7.dp)
+                                ) {
+                                    Box(
+                                        modifier = Modifier.size(37.dp).background(feature.bgTint, RoundedCornerShape(10.dp)),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        Icon(feature.icon, contentDescription = null, tint = feature.iconTint, modifier = Modifier.size(22.dp))
+                                    }
+                                    Text(feature.title, fontSize = 10.sp, fontWeight = FontWeight.SemiBold, textAlign = TextAlign.Center, color = ScreenText, maxLines = 2, minLines = 2)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        item {
+            Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                OutlinedButton(onClick = { onNavigate(Screen.ManagePro.route) }, modifier = Modifier.weight(1f)) {
+                    Text("Kelola Langganan", fontSize = 12.sp)
+                }
+                Button(onClick = { onNavigate(Screen.UpgradePro.route) }, modifier = Modifier.weight(1f), colors = ButtonDefaults.buttonColors(containerColor = ocean)) {
+                    Text(if (isPro) "Paket PRO" else "Upgrade PRO", fontSize = 12.sp)
+                }
+            }
+        }
+        if (isLoading && status == null) {
+            item { LinearProgressIndicator(modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp)) }
         }
     }
 }
