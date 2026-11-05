@@ -151,8 +151,8 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
             state.message?.let {
                 Surface(
                     shape = RoundedCornerShape(8.dp),
-                    color = screenCanvas(Color(0xFFFFF3E0)),
-                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                    color = screenCanvas(Color(0xFFE6F5F5)),
+                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(it, color = MaterialTheme.colorScheme.onSurface, fontSize = 12.sp, modifier = Modifier.padding(10.dp))
@@ -163,7 +163,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                 LinearProgressIndicator(
                     Modifier.fillMaxWidth(),
                     color = MaterialTheme.colorScheme.primary,
-                    trackColor = screenCanvas(Color(0xFFFFDEC9))
+                    trackColor = screenCanvas(Color(0xFFC6DFE8))
                 )
             }
 
@@ -172,7 +172,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -190,8 +190,8 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                                 )
                                 Surface(
                                     shape = RoundedCornerShape(10.dp),
-                                    color = screenCanvas(Color(0xFFFFF3E0)),
-                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9)))
+                                    color = screenCanvas(Color(0xFFE6F5F5)),
+                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8)))
                                 ) {
                                     Text(
                                         "${state.drafts.size} CV Tersimpan",
@@ -250,7 +250,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                             Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(16.dp),
                             colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-                            border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                            border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                         ) {
                             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -276,7 +276,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                                     OutlinedButton(
                                         onClick = { if (viewModel.selectDocument(document.id)) nav("Preview CV") },
                                         shape = RoundedCornerShape(10.dp),
-                                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                                         colors = ButtonDefaults.outlinedButtonColors(contentColor = KarirTextDark)
                                     ) {
                                         Text("Preview", fontSize = 12.sp)
@@ -294,7 +294,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -311,8 +311,8 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                                     onClick = { nav(title) },
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
-                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
-                                    colors = ButtonDefaults.outlinedButtonColors(containerColor = screenCanvas(Color(0xFFFFFBF7)), contentColor = KarirTextDark)
+                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
+                                    colors = ButtonDefaults.outlinedButtonColors(containerColor = screenCanvas(Color(0xFFF5FAFC)), contentColor = KarirTextDark)
                                 ) {
                                     Row(
                                         modifier = Modifier.fillMaxWidth(),
@@ -354,7 +354,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -402,7 +402,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -422,7 +422,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                         Card(
                             colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                             shape = RoundedCornerShape(16.dp),
-                            border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                            border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                             modifier = Modifier.fillMaxWidth()
                         ) {
                             Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -454,7 +454,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -485,7 +485,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -527,7 +527,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                                     Modifier.weight(1f).clickable { templatePreview = template.id; nav("Preview Template") },
                                     colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                                     shape = RoundedCornerShape(14.dp),
-                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                                     elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
                                 ) {
                                     Column(Modifier.padding(8.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
@@ -557,7 +557,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -620,7 +620,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -644,7 +644,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                                 onClick = viewModel::runDraftCheck,
                                 modifier = Modifier.fillMaxWidth(),
                                 shape = RoundedCornerShape(12.dp),
-                                border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9)))
+                                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8)))
                             ) {
                                 Text("Periksa CV Saya yang Aktif", color = KarirTextDark)
                             }
@@ -652,8 +652,8 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                             state.ats?.let { report ->
                                 Surface(
                                     shape = RoundedCornerShape(12.dp),
-                                    color = screenCanvas(Color(0xFFFFF3E0)),
-                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                                    color = screenCanvas(Color(0xFFE6F5F5)),
+                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                                     modifier = Modifier.fillMaxWidth()
                                 ) {
                                     Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
@@ -695,7 +695,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -724,7 +724,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -734,8 +734,8 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                                     onClick = { letterType = type.name; nav("Tujuan Surat") },
                                     modifier = Modifier.fillMaxWidth(),
                                     shape = RoundedCornerShape(12.dp),
-                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
-                                    colors = ButtonDefaults.outlinedButtonColors(containerColor = screenCanvas(Color(0xFFFFFBF7)))
+                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
+                                    colors = ButtonDefaults.outlinedButtonColors(containerColor = screenCanvas(Color(0xFFF5FAFC)))
                                 ) {
                                     Text(type.label, color = KarirTextDark, fontWeight = FontWeight.Medium)
                                 }
@@ -749,7 +749,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -783,7 +783,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -807,7 +807,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                     Card(
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
                         shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
