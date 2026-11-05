@@ -225,7 +225,7 @@ fun DashboardScreen(
                     modifier = Modifier.size(38.dp).background(ocean, RoundedCornerShape(10.dp)),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text("K", color = Color.White, fontWeight = FontWeight.Black, fontSize = 26.sp)
+                    com.example.automatesmartbot.ui.components.BrandLogo(modifier = Modifier.size(32.dp))
                 }
                 Spacer(Modifier.width(9.dp))
                 Text("KarirMate", color = ScreenText, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp, modifier = Modifier.weight(1f))
