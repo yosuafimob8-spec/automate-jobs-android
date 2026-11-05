@@ -295,7 +295,11 @@ private fun MainDashboardContent(
             }
             composable(Screen.ManagePro.route) { ManageProSubscriptionScreen(onUpgrade = { navController.navigate(Screen.UpgradePro.route) }) }
             composable(Screen.CariLowongan.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = when (themePreference.mode) {
+                    com.example.automatesmartbot.ui.theme.ThemeMode.DARK -> true
+                    com.example.automatesmartbot.ui.theme.ThemeMode.LIGHT -> false
+                    com.example.automatesmartbot.ui.theme.ThemeMode.AUTO -> androidx.compose.foundation.isSystemInDarkTheme()
+                }) {
                     CariLowonganScreen(isPro = isPro)
 
                 }
@@ -330,7 +334,11 @@ private fun MainDashboardContent(
                 LatihanPsikotesScreen(isPro = isPro, onExit = navigateUpOrDashboard)
             }
             composable(Screen.AiInterview.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = when (themePreference.mode) {
+                    com.example.automatesmartbot.ui.theme.ThemeMode.DARK -> true
+                    com.example.automatesmartbot.ui.theme.ThemeMode.LIGHT -> false
+                    com.example.automatesmartbot.ui.theme.ThemeMode.AUTO -> androidx.compose.foundation.isSystemInDarkTheme()
+                }) {
                     AiInterviewScreen(isPro = isPro)
 
                 }
@@ -345,7 +353,11 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.Riwayat.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = when (themePreference.mode) {
+                    com.example.automatesmartbot.ui.theme.ThemeMode.DARK -> true
+                    com.example.automatesmartbot.ui.theme.ThemeMode.LIGHT -> false
+                    com.example.automatesmartbot.ui.theme.ThemeMode.AUTO -> androidx.compose.foundation.isSystemInDarkTheme()
+                }) {
                     RiwayatScreen()
 
                 }
@@ -388,7 +400,11 @@ private fun MainDashboardContent(
 
             }
             composable(Screen.Register.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = when (themePreference.mode) {
+                    com.example.automatesmartbot.ui.theme.ThemeMode.DARK -> true
+                    com.example.automatesmartbot.ui.theme.ThemeMode.LIGHT -> false
+                    com.example.automatesmartbot.ui.theme.ThemeMode.AUTO -> androidx.compose.foundation.isSystemInDarkTheme()
+                }) {
                     RegisterScreen(
                         onNavigateLogin = navigateToLogin,
                         onRegisterSuccess = {
@@ -399,7 +415,11 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.ForgotPassword.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = when (themePreference.mode) {
+                    com.example.automatesmartbot.ui.theme.ThemeMode.DARK -> true
+                    com.example.automatesmartbot.ui.theme.ThemeMode.LIGHT -> false
+                    com.example.automatesmartbot.ui.theme.ThemeMode.AUTO -> androidx.compose.foundation.isSystemInDarkTheme()
+                }) {
                     ForgotPasswordScreen(
                         onNavigateLogin = navigateToLogin
                     )
@@ -407,7 +427,11 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.OnboardingProfile.route) {
-                FixedCanvasTheme(dark = false) {
+                FixedCanvasTheme(dark = when (themePreference.mode) {
+                    com.example.automatesmartbot.ui.theme.ThemeMode.DARK -> true
+                    com.example.automatesmartbot.ui.theme.ThemeMode.LIGHT -> false
+                    com.example.automatesmartbot.ui.theme.ThemeMode.AUTO -> androidx.compose.foundation.isSystemInDarkTheme()
+                }) {
                     OnboardingProfileScreen(
                         isOnline = isOnline,
                         onBack = navigateUpOrDashboard,
