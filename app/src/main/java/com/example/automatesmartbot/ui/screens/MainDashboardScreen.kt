@@ -180,6 +180,7 @@ private fun MainDashboardContent(
         Screen.CariLowongan.route -> "Cari Lowongan"
         Screen.KirimLamaran.route -> "Kirim Lamaran"
         Screen.JobTraining.route -> "Pelatihan Kerja"
+        Screen.Certificates.route -> "Sertifikat"
         Screen.SalaryCalculator.route -> "Kalkulator Gaji"
         Screen.CareerLetters.route -> "Surat Lamaran & Resign"
         Screen.CareerDocuments.route -> "Dokumen Karier"
@@ -316,6 +317,7 @@ private fun MainDashboardContent(
                 )
             }
             composable(Screen.JobTraining.route) { JobTrainingScreen() }
+            composable(Screen.Certificates.route) { JobTrainingScreen(initialStage = "history") }
             composable(Screen.SalaryCalculator.route) { SalaryCalculatorScreen() }
             composable(Screen.CareerLetters.route) {
                 CareerLettersScreen(onApplicationLetter = {
