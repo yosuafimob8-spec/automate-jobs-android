@@ -161,17 +161,37 @@ fun DashboardScreen(
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 item {
-                    Text(
-                        text = "KarirMate",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 24.sp,
-                        color = Color(0xFF243547)
-                    )
-                    Text(
-                        text = "Temukan peluang dan siapkan langkah karier Anda.",
-                        fontSize = 13.sp,
-                        color = Color(0xFF52677A)
-                    )
+                    Surface(
+                        modifier = Modifier.fillMaxWidth(),
+                        color = PrimaryBlue,
+                        shape = RoundedCornerShape(24.dp)
+                    ) {
+                        Column(
+                            modifier = Modifier.padding(horizontal = 20.dp, vertical = 22.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Text(
+                                text = "KARIRMATE  /  CAREER HUB",
+                                fontWeight = FontWeight.SemiBold,
+                                fontSize = 10.sp,
+                                letterSpacing = 1.2.sp,
+                                color = Color(0xFFB8F1E3)
+                            )
+                            Text(
+                                text = "Bangun karier\nlebih percaya diri",
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 25.sp,
+                                lineHeight = 30.sp,
+                                color = Color.White
+                            )
+                            Text(
+                                text = "Persiapkan CV, latihan, dan lamaran dalam satu tempat.",
+                                fontSize = 12.sp,
+                                lineHeight = 18.sp,
+                                color = Color(0xFFE4F2FC)
+                            )
+                        }
+                    }
                 }
                 item {
                     WelcomeCard(
@@ -539,11 +559,11 @@ private fun FeatureCard(
 ) {
     Card(
         modifier = modifier
-            .height(142.dp)
+            .height(156.dp)
             .clickable(onClick = onClick),
-        colors = CardDefaults.cardColors(containerColor = feature.accent.copy(alpha = 0.12f)),
-        shape = RoundedCornerShape(18.dp),
-        border = BorderStroke(1.dp, feature.accent.copy(alpha = 0.35f))
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        shape = RoundedCornerShape(20.dp),
+        border = BorderStroke(1.dp, Color(0xFFD8E9EE))
     ) {
         Column(
             modifier = Modifier
@@ -559,7 +579,7 @@ private fun FeatureCard(
                 Box(
                     modifier = Modifier
                         .size(40.dp)
-                        .background(feature.accent.copy(alpha = 0.2f), CircleShape),
+                        .background(feature.accent.copy(alpha = 0.13f), RoundedCornerShape(13.dp)),
                     contentAlignment = Alignment.Center
                 ) {
                     Icon(
