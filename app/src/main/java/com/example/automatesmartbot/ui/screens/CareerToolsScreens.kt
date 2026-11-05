@@ -179,7 +179,7 @@ fun SalaryCalculatorScreen() {
                         }
                     }
 
-                    HorizontalDivider(color = screenCanvas(Color(0xFFF1E5DC)))
+                    HorizontalDivider(color = screenCanvas(Color(0xFFC6DFE8)))
 
                     AppInput("Dasar iuran BPJS Kesehatan (0 jika tidak ikut)", health, { health = it; result = null })
                     AppInput("Dasar iuran JHT (0 jika tidak ikut)", jht, { jht = it; result = null })
@@ -232,7 +232,7 @@ fun SalaryCalculatorScreen() {
                         )
                         Text("Estimasi per bulan, belum termasuk THR tahunan.", fontSize = 12.sp, color = KarirTextMuted)
 
-                        HorizontalDivider(color = screenCanvas(Color(0xFFF1E5DC)))
+                        HorizontalDivider(color = screenCanvas(Color(0xFFC6DFE8)))
 
                         listOf(
                             "Upah lembur hari ini" to r.overtime,
@@ -464,7 +464,7 @@ fun LegacyJobTrainingScreen() {
 
                 if (page in course.lessons.indices) {
                     val lesson = course.lessons[page]
-                    HorizontalDivider(color = Color(0xFFF1E5DC))
+                    HorizontalDivider(color = Color(0xFFC6DFE8))
                     Text(lesson.first, fontWeight = FontWeight.Bold, fontSize = 17.sp, color = KarirTextDark)
                     Text(lesson.second, fontSize = 13.sp, color = KarirTextDark)
                     Text("Latihan praktik", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = KarirTextDark)
@@ -505,7 +505,7 @@ fun LegacyJobTrainingScreen() {
                 }
 
                 if (page == course.lessons.size) {
-                    HorizontalDivider(color = Color(0xFFF1E5DC))
+                    HorizontalDivider(color = Color(0xFFC6DFE8))
                     Text("Evaluasi Akhir • Minimal 80/100", fontWeight = FontWeight.Bold, fontSize = 17.sp, color = KarirTextDark)
                     if (!allDone) {
                         Text("Selesaikan seluruh modul dan latihan praktik sebelum mengikuti evaluasi.", fontSize = 12.sp, color = KarirTextMuted)
