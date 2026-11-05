@@ -49,7 +49,7 @@ fun RegisterScreen(
 
     val textFieldColors = OutlinedTextFieldDefaults.colors(
         focusedBorderColor = KarirOrange,
-        unfocusedBorderColor = Color(0xFFFFDEC9),
+        unfocusedBorderColor = Color(0xFFC6DFE8),
         focusedLabelColor = KarirOrange,
         unfocusedLabelColor = KarirTextMuted,
         cursorColor = KarirOrange,
@@ -62,7 +62,7 @@ fun RegisterScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC)),
+                modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFC6DFE8)),
                 navigationIcon = {
                     IconButton(onClick = onNavigateLogin) {
                         Icon(
@@ -73,10 +73,10 @@ fun RegisterScreen(
                     }
                 },
                 title = { Text("Daftar Akun", color = KarirTextDark, fontWeight = FontWeight.Bold, fontSize = 18.sp) },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFFFFDF9))
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFF5FAFC))
             )
         },
-        containerColor = Color(0xFFFFFBF7)
+        containerColor = Color(0xFFF5FAFC)
     ) { innerPadding ->
         Box(
             modifier = Modifier
@@ -101,14 +101,14 @@ fun RegisterScreen(
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     Text(
-                        text = "Daftar Akun Baru",
+                        text = "Buat Akun Baru",
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
                         color = KarirTextDark
                     )
 
                     Text(
-                        text = "Buat akun KarirMate baru untuk mengelola CV, latihan psikotes, dan melamar pekerjaan.",
+                        text = "Gabung dan mulai perjalanan kariermu",
                         fontSize = 12.5.sp,
                         color = KarirTextMuted,
                         textAlign = androidx.compose.ui.text.style.TextAlign.Center,
@@ -129,7 +129,7 @@ fun RegisterScreen(
                     OutlinedTextField(
                         value = password,
                         onValueChange = { password = it },
-                        label = { Text("Password (min. 8 karakter)") },
+                        label = { Text("Kata Sandi (min. 8 karakter)") },
                         leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null, tint = KarirOrange) },
                         trailingIcon = {
                             IconButton(onClick = { passwordVisible = !passwordVisible }) {
@@ -150,7 +150,7 @@ fun RegisterScreen(
                     OutlinedTextField(
                         value = confirmPassword,
                         onValueChange = { confirmPassword = it },
-                        label = { Text("Konfirmasi Password") },
+                        label = { Text("Konfirmasi Kata Sandi") },
                         leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null, tint = KarirOrange) },
                         visualTransformation = PasswordVisualTransformation(),
                         shape = RoundedCornerShape(12.dp),
