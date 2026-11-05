@@ -35,7 +35,7 @@ fun SuratIzinDokumenScreen() {
     val ctx = LocalContext.current
     val prefs = remember { ctx.getSharedPreferences("karirmate_surat_izin", 0) }
     var page by remember { mutableStateOf(0) }
-    var type by remember { mutableStateOf("Surat Izin Sakit") }
+    var type by remember { mutableStateOf("Dokumen Karier") }
     var clinic by remember { mutableStateOf("") }
     var address by remember { mutableStateOf("") }
     var doctor by remember { mutableStateOf("") }
@@ -164,7 +164,7 @@ fun SuratIzinDokumenScreen() {
             when (page) {
                 0 -> {
                     Text("Buat draf surat izin resmi dan kelola dokumen kerja dengan mudah.", color = KarirTextMuted, fontSize = 13.sp)
-                    listOf("Surat Izin Sakit", "Surat Izin Cuti", "Surat Izin Keperluan Keluarga").forEach { title ->
+                    emptyList<String>().forEach { title ->
                         SuratCard {
                             Text(title, fontSize = 16.sp, color = KarirTextDark, fontWeight = FontWeight.Bold)
                             Button(
