@@ -1,1 +1,2 @@
-Trigger build for KarirMate updates 1-4 on integration branch.
+Trigger APK build + Android tests for KarirMate revisions 5-10.
+Source integration commit: 6e7db489d04f839b0021e9add307f55546beaeef
