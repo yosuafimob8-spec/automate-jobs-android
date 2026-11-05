@@ -53,8 +53,8 @@ fun StartupSplashScreen() {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             BrandLogo(modifier = Modifier.size(120.dp))
             Spacer(Modifier.height(14.dp))
-            Text("KarirMate", color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = 34.sp)
-            Text("Partner Persiapan Kariermu", color = Color.White, fontSize = 13.sp)
+            com.example.automatesmartbot.ui.components.BrandWordmark(fontSize = 34.sp, onDark = true)
+            Text("Your Career Journey", color = Color.White, fontSize = 13.sp)
             Spacer(Modifier.height(30.dp))
             CircularProgressIndicator(color = Color(0xFF55C6A9), strokeWidth = 2.5.dp, modifier = Modifier.size(22.dp))
         }
