@@ -363,7 +363,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     fun InfoCard(title: String, body: String, accent: Color = Color.White) {
         Card(modifier = Modifier.fillMaxWidth(), shape = shape,
             colors = CardDefaults.cardColors(containerColor = accent),
-            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+            border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
             elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
             Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
                 Text(title, fontWeight = FontWeight.Bold, color = ink, style = MaterialTheme.typography.titleMedium)
@@ -377,15 +377,15 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                 Text("KarirMate", color = orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleLarge)
                 Surface(
                     shape = RoundedCornerShape(10.dp),
-                    color = Color(0xFFFFF3E0),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9))
+                    color = Color(0xFFE6F5F5),
+                    border = BorderStroke(1.dp, Color(0xFFC6DFE8))
                 ) {
                     Text("AI INTERVIEW", color = Color(0xFFE65100), fontWeight = FontWeight.Bold, fontSize = 11.sp, modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp))
                 }
             }
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
                 shape = RoundedCornerShape(16.dp)
@@ -411,7 +411,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     }
                 }
                 Card(Modifier.fillMaxWidth().clickable { interviewMode = "voice"; showPreparation = true },
-                    shape = shape, border = BorderStroke(1.5.dp, Color(0xFFFFDEC9)),
+                    shape = shape, border = BorderStroke(1.5.dp, Color(0xFFC6DFE8)),
                     colors = CardDefaults.cardColors(containerColor = Color.White),
                     elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
                     Row(Modifier.padding(18.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -436,7 +436,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             listOf(Triple("male", "👨🏻‍💼 Mr. ILHAM", "AI HR laki-laki • Profesional, ramah, dan komunikatif."),
                 Triple("female", "👩🏻‍💼 Ms. Tanti", "AI HR perempuan • Hangat, suportif, dan detail.")).forEach { (id, name, description) ->
                 Card(Modifier.fillMaxWidth().clickable { interviewer = id }, shape = shape,
-                    border = BorderStroke(if (interviewer == id) 2.dp else 1.dp, if (interviewer == id) orange else Color(0xFFFFDEC9)),
+                    border = BorderStroke(if (interviewer == id) 2.dp else 1.dp, if (interviewer == id) orange else Color(0xFFC6DFE8)),
                     colors = CardDefaults.cardColors(containerColor = if (interviewer == id) Color(0xFFFFF4E9) else Color.White)) {
                     Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
                         Column(Modifier.weight(1f)) {
@@ -489,14 +489,14 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             if (error.isNotBlank()) Text(error, color = MaterialTheme.colorScheme.error)
         }
     } else if (report.isNotBlank()) {
-        Column(Modifier.fillMaxSize().background(Color(0xFFFFFBF7)).verticalScroll(rememberScrollState()).padding(18.dp),
+        Column(Modifier.fillMaxSize().background(Color(0xFFF5FAFC)).verticalScroll(rememberScrollState()).padding(18.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)) {
             Text("←  Hasil Interview", modifier = Modifier.clickable { report = ""; started = false; showPreparation = true }, color = orange,
                 fontWeight = FontWeight.Bold, fontSize = 18.sp)
             Card(
                 shape = shape,
                 colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(Modifier.fillMaxWidth().padding(24.dp), horizontalAlignment = Alignment.CenterHorizontally) {
@@ -515,7 +515,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     onClick = { resetSession(); showPreparation = true },
                     modifier = Modifier.weight(1f),
                     shape = RoundedCornerShape(12.dp),
-                    border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                    border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                     colors = ButtonDefaults.outlinedButtonColors(contentColor = ink)
                 ) { Text("↻ Ulangi") }
                 Button(onClick = { showResultDetails = !showResultDetails }, modifier = Modifier.weight(1f),
@@ -524,7 +524,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             }
         }
     } else {
-        Column(Modifier.fillMaxSize().background(Color(0xFFFFFBF7))) {
+        Column(Modifier.fillMaxSize().background(Color(0xFFF5FAFC))) {
             Row(Modifier.fillMaxWidth().background(Color.White).border(BorderStroke(0.75.dp, Color(0xFFF1E5DC))).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
                 Text("‹", modifier = Modifier.clickable { started = false; showPreparation = true; tts.stop() }, color = ink, style = MaterialTheme.typography.headlineMedium)
                 Spacer(Modifier.width(12.dp))
@@ -543,7 +543,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                             shape = RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp,
                                 bottomStart = if (fromCandidate) 16.dp else 4.dp,
                                 bottomEnd = if (fromCandidate) 4.dp else 16.dp),
-                            border = if (!fromCandidate) BorderStroke(1.dp, Color(0xFFFFDEC9)) else null,
+                            border = if (!fromCandidate) BorderStroke(1.dp, Color(0xFFC6DFE8)) else null,
                             colors = CardDefaults.cardColors(containerColor = if (fromCandidate) orange else Color.White)) {
                             Text(message.replace("\\n", "\n"), modifier = Modifier.padding(14.dp),
                                 color = if (fromCandidate) Color.White else ink)
