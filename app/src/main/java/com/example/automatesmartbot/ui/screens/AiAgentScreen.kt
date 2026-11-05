@@ -11,7 +11,7 @@ fun AiAgentScreen() {
         title = "AI Agent",
         description = "Asisten otomasi untuk membantu alur pencarian kerja, dengan kontrol dan persetujuan pengguna.",
         icon = Icons.Default.SmartToy,
-        accent = Color(0xFFEC4899),
+        accent = Color(0xFF55C6A9),
         bullets = listOf(
             "Rencana langkah yang dapat ditinjau",
             "Persetujuan sebelum tindakan dijalankan",
