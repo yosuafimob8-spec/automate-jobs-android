@@ -2,5 +2,7 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp" android:height="108dp"
     android:viewportWidth="108" android:viewportHeight="108">
-    <path android:fillColor="#09599B" android:pathData="M0,0h108v108h-108z"/>
+    <path android:fillColor="#0869A9" android:pathData="M0,0h108v108h-108z"/>
+    <path android:fillColor="#05538E" android:pathData="M0,72 Q50,38 108,63 L108,108 L0,108 Z"/>
+    <path android:fillColor="#087D9E" android:pathData="M0,96 Q55,71 108,87 L108,108 L0,108 Z"/>
 </vector>
