@@ -1,4 +1,4 @@
-package com.example.automatesmartbot.ui.screens
+﻿package com.example.automatesmartbot.ui.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -19,10 +19,12 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.automatesmartbot.ui.theme.KarirOrange
-import com.example.automatesmartbot.ui.theme.KarirPageGradient
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
+import com.example.automatesmartbot.ui.theme.CardBorder
+import com.example.automatesmartbot.ui.theme.DarkBackground
+import com.example.automatesmartbot.ui.theme.DarkSurface
+import com.example.automatesmartbot.ui.theme.DarkSurfaceVariant
+import com.example.automatesmartbot.ui.theme.TextGray
+import com.example.automatesmartbot.ui.theme.TextWhite
 
 @Composable
 fun FeatureComingSoonScreen(
@@ -35,16 +37,15 @@ fun FeatureComingSoonScreen(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .background(KarirPageGradient),
+            .background(Color(0xFFF5FAFC)),
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         item {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+                colors = CardDefaults.cardColors(containerColor = accent.copy(alpha = 0.12f)),
+                shape = RoundedCornerShape(20.dp),
+                border = BorderStroke(1.dp, accent.copy(alpha = 0.35f)),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
@@ -58,28 +59,27 @@ fun FeatureComingSoonScreen(
                     ) {
                         Box(
                             modifier = Modifier
-                                .size(50.dp)
-                                .background(Color(0xFFFFF3E0), CircleShape),
+                                .size(52.dp)
+                                .background(accent.copy(alpha = 0.2f), CircleShape),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
                                 imageVector = icon,
                                 contentDescription = null,
-                                tint = KarirOrange,
-                                modifier = Modifier.size(26.dp)
+                                tint = accent,
+                                modifier = Modifier.size(28.dp)
                             )
                         }
                         Surface(
-                            color = Color(0xFFFFF3E0),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                            color = Color(0xFFE8F5F7),
                             shape = RoundedCornerShape(8.dp)
                         ) {
                             Text(
                                 text = "SEGERA HADIR",
-                                modifier = Modifier.padding(horizontal = 9.dp, vertical = 5.dp),
-                                fontSize = 10.sp,
+                                modifier = Modifier.padding(horizontal = 9.dp, vertical = 6.dp),
+                                fontSize = 9.sp,
                                 fontWeight = FontWeight.Bold,
-                                color = Color(0xFFE65100)
+                                color = accent
                             )
                         }
                     }
@@ -88,12 +88,12 @@ fun FeatureComingSoonScreen(
                         text = title,
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = KarirTextDark
+                        color = Color(0xFF243547)
                     )
                     Text(
                         text = description,
                         fontSize = 13.sp,
-                        color = KarirTextMuted,
+                        color = Color(0xFF52677A),
                         lineHeight = 19.sp
                     )
                 }
@@ -102,21 +102,19 @@ fun FeatureComingSoonScreen(
 
         item {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                shape = RoundedCornerShape(20.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
-                    modifier = Modifier.padding(18.dp),
+                    modifier = Modifier.padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
                     Text(
-                        text = "Rencana Fitur",
+                        text = "Yang direncanakan",
                         fontWeight = FontWeight.Bold,
-                        fontSize = 15.sp,
-                        color = KarirTextDark
+                        fontSize = 14.sp,
+                        color = Color(0xFF243547)
                     )
                     bullets.forEach { bullet ->
                         Row(
@@ -126,15 +124,15 @@ fun FeatureComingSoonScreen(
                             Icon(
                                 imageVector = Icons.Default.CheckCircle,
                                 contentDescription = null,
-                                tint = KarirOrange,
+                                tint = accent,
                                 modifier = Modifier
-                                    .padding(top = 2.dp)
-                                    .size(16.dp)
+                                    .padding(top = 1.dp)
+                                    .size(15.dp)
                             )
                             Text(
                                 text = bullet,
-                                fontSize = 12.5.sp,
-                                color = KarirTextDark,
+                                fontSize = 12.sp,
+                                color = Color(0xFF52677A),
                                 lineHeight = 18.sp
                             )
                         }
@@ -145,14 +143,13 @@ fun FeatureComingSoonScreen(
 
         item {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
-                elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                shape = RoundedCornerShape(20.dp),
+                border = BorderStroke(1.dp, CardBorder),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
-                    modifier = Modifier.padding(18.dp),
+                    modifier = Modifier.padding(16.dp),
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
                     Row(
@@ -162,33 +159,33 @@ fun FeatureComingSoonScreen(
                         Icon(
                             imageVector = Icons.Default.Info,
                             contentDescription = null,
-                            tint = Color(0xFFD97706),
-                            modifier = Modifier.size(18.dp)
+                            tint = Color(0xFFFBBF24),
+                            modifier = Modifier.size(17.dp)
                         )
                         Text(
-                            text = "Status Pengembangan",
+                            text = "Status fitur",
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp,
-                            color = KarirTextDark
+                            color = Color(0xFF243547)
                         )
                     }
                     Text(
-                        text = "Fitur ini sedang dalam tahap pengembangan aktif untuk KarirMate. Seluruh fitur resmi mengutamakan keamanan dan transparansi.",
+                        text = "Fitur ini sedang disiapkan. Aplikasi tidak membuat data, hasil AI, atau dokumen palsu.",
                         fontSize = 12.sp,
-                        color = KarirTextMuted,
+                        color = Color(0xFF52677A),
                         lineHeight = 18.sp
                     )
                     Button(
                         onClick = { },
                         enabled = false,
                         colors = ButtonDefaults.buttonColors(
-                            disabledContainerColor = Color(0xFFFFF7F2),
-                            disabledContentColor = Color(0xFF94A3B8)
+                            disabledContainerColor = Color(0xFFE8F5F7),
+                            disabledContentColor = Color(0xFF52677A)
                         ),
-                        shape = RoundedCornerShape(12.dp),
+                        shape = RoundedCornerShape(18.dp),
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(48.dp)
+                            .height(46.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.Lock,
@@ -205,5 +202,15 @@ fun FeatureComingSoonScreen(
                 }
             }
         }
+
+        item {
+            Text(
+                text = "Belum ada data yang dibuat dari layar ini.",
+                modifier = Modifier.fillMaxWidth(),
+                fontSize = 10.sp,
+                color = Color(0xFF52677A)
+            )
+        }
     }
 }
+
