@@ -1,12 +1,7 @@
-package com.example.automatesmartbot.ui.screens.auth
+﻿package com.example.automatesmartbot.ui.screens.auth
 
-import androidx.compose.foundation.BorderStroke
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Email
@@ -24,11 +19,6 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.automatesmartbot.ui.theme.KarirOrange
-import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
-import com.example.automatesmartbot.ui.theme.KarirPageGradient
-import com.example.automatesmartbot.ui.theme.KarirTextDark
-import com.example.automatesmartbot.ui.theme.KarirTextMuted
 import com.example.automatesmartbot.ui.viewmodel.AuthViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -47,56 +37,38 @@ fun RegisterScreen(
     val errorMessage by viewModel.errorMessage.collectAsState()
     val successMessage by viewModel.successMessage.collectAsState()
 
-    val textFieldColors = OutlinedTextFieldDefaults.colors(
-        focusedBorderColor = KarirOrange,
-        unfocusedBorderColor = Color(0xFFFFDEC9),
-        focusedLabelColor = KarirOrange,
-        unfocusedLabelColor = KarirTextMuted,
-        cursorColor = KarirOrange,
-        focusedContainerColor = Color.White,
-        unfocusedContainerColor = Color.White,
-        focusedTextColor = KarirTextDark,
-        unfocusedTextColor = KarirTextDark
-    )
-
     Scaffold(
         topBar = {
             TopAppBar(
-                modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC)),
                 navigationIcon = {
                     IconButton(onClick = onNavigateLogin) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Kembali",
-                            tint = KarirTextDark
+                            tint = Color(0xFF243547)
                         )
                     }
                 },
-                title = { Text("Daftar Akun", color = KarirTextDark, fontWeight = FontWeight.Bold, fontSize = 18.sp) },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFFFFDF9))
+                title = { Text("Daftar Akun", color = Color(0xFF243547), fontWeight = FontWeight.Bold) },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFFFFFFF))
             )
         },
-        containerColor = Color(0xFFFFFBF7)
+        containerColor = Color(0xFFF5FAFC)
     ) { innerPadding ->
         Box(
             modifier = Modifier
                 .fillMaxSize()
-                .background(KarirPageGradient)
                 .padding(innerPadding)
-                .padding(20.dp),
+                .padding(24.dp),
             contentAlignment = Alignment.Center
         ) {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                shape = RoundedCornerShape(20.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
-                elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
+                shape = RoundedCornerShape(16.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
-                    modifier = Modifier
-                        .padding(24.dp)
-                        .verticalScroll(rememberScrollState()),
+                    modifier = Modifier.padding(24.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
                     verticalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
@@ -104,124 +76,118 @@ fun RegisterScreen(
                         text = "Daftar Akun Baru",
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = KarirTextDark
+                        color = Color(0xFF243547)
                     )
 
                     Text(
-                        text = "Buat akun KarirMate baru untuk mengelola CV, latihan psikotes, dan melamar pekerjaan.",
-                        fontSize = 12.5.sp,
-                        color = KarirTextMuted,
-                        textAlign = androidx.compose.ui.text.style.TextAlign.Center,
-                        modifier = Modifier.fillMaxWidth()
-                    )
+                    text = "Buat akun KarirMate baru untuk mulai melamar kerja.",
+                    fontSize = 13.sp,
+                    color = Color(0xFF243547),
+                    modifier = Modifier.fillMaxWidth()
+                )
 
-                    OutlinedTextField(
-                        value = email,
-                        onValueChange = { email = it },
-                        label = { Text("Email") },
-                        leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = KarirOrange) },
-                        shape = RoundedCornerShape(12.dp),
-                        colors = textFieldColors,
-                        singleLine = true,
-                        modifier = Modifier.fillMaxWidth()
-                    )
+                OutlinedTextField(
+                    value = email,
+                    onValueChange = { email = it },
+                    label = { Text("Email") },
+                    leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = Color(0xFF2563A6)) },
+                    shape = RoundedCornerShape(12.dp),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = Color(0xFF2563A6),
+                        unfocusedBorderColor = Color(0xFF55C6A9),
+                        focusedContainerColor = Color(0xFFF5FAFC),
+                        unfocusedContainerColor = Color(0xFFF5FAFC),
+                        focusedTextColor = Color(0xFF243547),
+                        unfocusedTextColor = Color(0xFF243547)
+                    ),
+                    modifier = Modifier.fillMaxWidth()
+                )
 
-                    OutlinedTextField(
-                        value = password,
-                        onValueChange = { password = it },
-                        label = { Text("Password (min. 8 karakter)") },
-                        leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null, tint = KarirOrange) },
-                        trailingIcon = {
-                            IconButton(onClick = { passwordVisible = !passwordVisible }) {
-                                Icon(
-                                    imageVector = if (passwordVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
-                                    contentDescription = null,
-                                    tint = KarirTextMuted
-                                )
-                            }
-                        },
-                        visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
-                        shape = RoundedCornerShape(12.dp),
-                        colors = textFieldColors,
-                        singleLine = true,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-
-                    OutlinedTextField(
-                        value = confirmPassword,
-                        onValueChange = { confirmPassword = it },
-                        label = { Text("Konfirmasi Password") },
-                        leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null, tint = KarirOrange) },
-                        visualTransformation = PasswordVisualTransformation(),
-                        shape = RoundedCornerShape(12.dp),
-                        colors = textFieldColors,
-                        singleLine = true,
-                        modifier = Modifier.fillMaxWidth()
-                    )
-
-                    Button(
-                        onClick = {
-                            viewModel.register(email, password, confirmPassword, onRegisterSuccess)
-                        },
-                        colors = ButtonDefaults.buttonColors(containerColor = KarirOrange),
-                        shape = RoundedCornerShape(12.dp),
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(50.dp)
-                    ) {
-                        if (isLoading) {
-                            CircularProgressIndicator(color = Color.White, modifier = Modifier.size(22.dp))
-                        } else {
-                            Text("Daftar Sekarang", fontWeight = FontWeight.Bold, fontSize = 15.sp)
-                        }
-                    }
-
-                    errorMessage?.let { err ->
-                        Surface(
-                            shape = RoundedCornerShape(8.dp),
-                            color = Color(0xFFFEE2E2),
-                            border = BorderStroke(1.dp, Color(0xFFFECACA)),
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Text(
-                                text = err,
-                                fontSize = 12.sp,
-                                color = Color(0xFFDC2626),
-                                fontWeight = FontWeight.Bold,
-                                modifier = Modifier.padding(10.dp)
+                OutlinedTextField(
+                    value = password,
+                    onValueChange = { password = it },
+                    label = { Text("Password") },
+                    leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null, tint = Color(0xFF2563A6)) },
+                    trailingIcon = {
+                        IconButton(onClick = { passwordVisible = !passwordVisible }) {
+                            Icon(
+                                imageVector = if (passwordVisible) Icons.Default.Visibility else Icons.Default.VisibilityOff,
+                                contentDescription = null,
+                                tint = Color(0xFF243547)
                             )
                         }
-                    }
+                    },
+                    visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = Color(0xFF2563A6),
+                        unfocusedBorderColor = Color(0xFF55C6A9),
+                        focusedContainerColor = Color(0xFFF5FAFC),
+                        unfocusedContainerColor = Color(0xFFF5FAFC),
+                        focusedTextColor = Color(0xFF243547),
+                        unfocusedTextColor = Color(0xFF243547)
+                    ),
+                    modifier = Modifier.fillMaxWidth()
+                )
 
-                    successMessage?.let { msg ->
-                        Surface(
-                            shape = RoundedCornerShape(8.dp),
-                            color = Color(0xFFDCFCE7),
-                            border = BorderStroke(1.dp, Color(0xFFBBF7D0)),
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Text(
-                                text = msg,
-                                fontSize = 12.sp,
-                                color = Color(0xFF16A34A),
-                                fontWeight = FontWeight.Bold,
-                                modifier = Modifier.padding(10.dp)
-                            )
-                        }
-                    }
+                OutlinedTextField(
+                    value = confirmPassword,
+                    onValueChange = { confirmPassword = it },
+                    label = { Text("Konfirmasi Password") },
+                    leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null, tint = Color(0xFF2563A6)) },
+                    visualTransformation = PasswordVisualTransformation(),
+                    shape = RoundedCornerShape(12.dp),
+                    colors = OutlinedTextFieldDefaults.colors(
+                        focusedBorderColor = Color(0xFF2563A6),
+                        unfocusedBorderColor = Color(0xFF55C6A9),
+                        focusedContainerColor = Color(0xFFF5FAFC),
+                        unfocusedContainerColor = Color(0xFFF5FAFC),
+                        focusedTextColor = Color(0xFF243547),
+                        unfocusedTextColor = Color(0xFF243547)
+                    ),
+                    modifier = Modifier.fillMaxWidth()
+                )
 
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.Center,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text("Sudah punya akun?", fontSize = 13.sp, color = KarirTextMuted)
-                        TextButton(onClick = onNavigateLogin) {
-                            Text("Masuk", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = KarirOrangeDeep)
-                        }
+                Spacer(modifier = Modifier.height(4.dp))
+
+                Button(
+                    onClick = {
+                        viewModel.register(email, password, confirmPassword, onRegisterSuccess)
+                    },
+                    colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2563A6)),
+                    shape = RoundedCornerShape(12.dp),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(50.dp)
+                ) {
+                    if (isLoading) {
+                        CircularProgressIndicator(color = Color.White, modifier = Modifier.size(24.dp))
+                    } else {
+                        Text("Daftar Sekarang", fontWeight = FontWeight.Bold, fontSize = 15.sp)
+                    }
+                }
+
+                errorMessage?.let { err ->
+                    Text(text = err, fontSize = 12.sp, color = Color(0xFFEF4444))
+                }
+
+                successMessage?.let { msg ->
+                    Text(text = msg, fontSize = 12.sp, color = Color(0xFF34D399))
+                }
+
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text("Sudah punya akun?", fontSize = 13.sp, color = Color(0xFF243547))
+                    TextButton(onClick = onNavigateLogin) {
+                        Text("Masuk", fontSize = 13.sp, fontWeight = FontWeight.Bold, color = Color(0xFF2563A6))
                     }
                 }
             }
         }
     }
+    }
 }
+
