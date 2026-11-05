@@ -13,6 +13,7 @@ import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.Send
+import androidx.compose.material.icons.filled.WorkspacePremium
 import androidx.compose.material.icons.filled.Article
 import androidx.compose.material.icons.filled.Badge
 import androidx.compose.material.icons.filled.Calculate
@@ -209,7 +210,7 @@ fun DashboardScreen(
         MainMenuItem("Kalkulator Gaji", icon = Icons.Default.Calculate, iconTint = Color(0xFFF0A91B), bgTint = Color(0xFFFFF4DB), route = Screen.SalaryCalculator.route),
         MainMenuItem("Surat & Dokumen", icon = Icons.Default.Description, iconTint = Color(0xFF16A085), bgTint = Color(0xFFE1F7F1), route = Screen.CareerLetters.route),
         MainMenuItem("Workpedia", icon = Icons.Default.Work, iconTint = Color(0xFFEAA332), bgTint = Color(0xFFFFF0D9), route = Screen.WorkPedia.route),
-        MainMenuItem("Lainnya", icon = Icons.Default.GridView, iconTint = Color(0xFF52677D), bgTint = Color(0xFFE9F1F5), route = Screen.CariLowongan.route)
+        MainMenuItem("Sertifikat", icon = Icons.Default.WorkspacePremium, iconTint = Color(0xFFBA8A16), bgTint = Color(0xFFFFF3D3), route = Screen.Certificates.route)
     )
     LazyColumn(
         modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background),
