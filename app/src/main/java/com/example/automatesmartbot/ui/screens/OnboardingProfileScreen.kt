@@ -87,12 +87,12 @@ fun OnboardingProfileScreen(
     val scrollState = rememberScrollState()
 
     val textFieldColors = OutlinedTextFieldDefaults.colors(
-        focusedBorderColor = Color(0xFF3B82F6),
-        unfocusedBorderColor = Color(0xFF334155),
-        focusedContainerColor = Color(0xFF0D1B2A),
-        unfocusedContainerColor = Color(0xFF0D1B2A),
-        focusedTextColor = Color.White,
-        unfocusedTextColor = Color.White
+        focusedBorderColor = Color(0xFF2563A6),
+        unfocusedBorderColor = Color(0xFF55C6A9),
+        focusedContainerColor = Color(0xFFF5FAFC),
+        unfocusedContainerColor = Color(0xFFF5FAFC),
+        focusedTextColor = Color(0xFF243547),
+        unfocusedTextColor = Color(0xFF243547)
     )
 
     Scaffold(
@@ -107,13 +107,13 @@ fun OnboardingProfileScreen(
                         )
                     }
                 },
-                title = { Text("Setup / Edit Profil", color = Color.White, fontWeight = FontWeight.Bold) },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFF1B263B))
+                title = { Text("Setup / Edit Profil", color = Color(0xFF243547), fontWeight = FontWeight.Bold) },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFFFFFFF))
             )
         },
         bottomBar = {
             Surface(
-                color = Color(0xFF1B263B),
+                color = Color(0xFFFFFFFF),
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Column(
@@ -136,7 +136,7 @@ fun OnboardingProfileScreen(
                             )
                         },
                         enabled = isOnline && !isLoading,
-                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3B82F6)),
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2563A6)),
                         shape = RoundedCornerShape(12.dp),
                         modifier = Modifier
                             .fillMaxWidth()
@@ -158,7 +158,7 @@ fun OnboardingProfileScreen(
                 }
             }
         },
-        containerColor = Color(0xFF0D1B2A)
+        containerColor = Color(0xFFF5FAFC)
     ) { innerPadding ->
         Column(
             modifier = Modifier
@@ -169,7 +169,7 @@ fun OnboardingProfileScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Card(
-                colors = CardDefaults.cardColors(containerColor = Color(0xFF1B263B)),
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFFFFF)),
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -188,7 +188,7 @@ fun OnboardingProfileScreen(
                         value = fullName,
                         onValueChange = { fullName = it },
                         label = { Text("Nama Lengkap *") },
-                        leadingIcon = { Icon(Icons.Default.Person, contentDescription = null, tint = Color(0xFF60A5FA)) },
+                        leadingIcon = { Icon(Icons.Default.Person, contentDescription = null, tint = Color(0xFF2563A6)) },
                         shape = RoundedCornerShape(10.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
@@ -198,7 +198,7 @@ fun OnboardingProfileScreen(
                         value = whatsapp,
                         onValueChange = { whatsapp = it },
                         label = { Text("Nomor WhatsApp *") },
-                        leadingIcon = { Icon(Icons.Default.Phone, contentDescription = null, tint = Color(0xFF60A5FA)) },
+                        leadingIcon = { Icon(Icons.Default.Phone, contentDescription = null, tint = Color(0xFF2563A6)) },
                         shape = RoundedCornerShape(10.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
@@ -208,7 +208,7 @@ fun OnboardingProfileScreen(
                         value = domicile,
                         onValueChange = { domicile = it },
                         label = { Text("Lokasi / Domisili *") },
-                        leadingIcon = { Icon(Icons.Default.LocationOn, contentDescription = null, tint = Color(0xFF60A5FA)) },
+                        leadingIcon = { Icon(Icons.Default.LocationOn, contentDescription = null, tint = Color(0xFF2563A6)) },
                         shape = RoundedCornerShape(10.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
@@ -218,7 +218,7 @@ fun OnboardingProfileScreen(
                         value = education,
                         onValueChange = { education = it },
                         label = { Text("Pendidikan Terakhir * (e.g. S1, D3)") },
-                        leadingIcon = { Icon(Icons.Default.School, contentDescription = null, tint = Color(0xFF60A5FA)) },
+                        leadingIcon = { Icon(Icons.Default.School, contentDescription = null, tint = Color(0xFF2563A6)) },
                         shape = RoundedCornerShape(10.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
@@ -228,7 +228,7 @@ fun OnboardingProfileScreen(
                         value = desiredPositions,
                         onValueChange = { desiredPositions = it },
                         label = { Text("Posisi Pekerjaan Diminati (Pisah koma)") },
-                        leadingIcon = { Icon(Icons.Default.Work, contentDescription = null, tint = Color(0xFF60A5FA)) },
+                        leadingIcon = { Icon(Icons.Default.Work, contentDescription = null, tint = Color(0xFF2563A6)) },
                         shape = RoundedCornerShape(10.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
@@ -238,7 +238,7 @@ fun OnboardingProfileScreen(
                         value = preferredLocations,
                         onValueChange = { preferredLocations = it },
                         label = { Text("Lokasi Penempatan Kerja (Pisah koma)") },
-                        leadingIcon = { Icon(Icons.Default.LocationOn, contentDescription = null, tint = Color(0xFF60A5FA)) },
+                        leadingIcon = { Icon(Icons.Default.LocationOn, contentDescription = null, tint = Color(0xFF2563A6)) },
                         shape = RoundedCornerShape(10.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
@@ -248,7 +248,7 @@ fun OnboardingProfileScreen(
                         value = applicationEmail,
                         onValueChange = { applicationEmail = it },
                         label = { Text("Email Pengirim Lamaran *") },
-                        leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = Color(0xFF60A5FA)) },
+                        leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = Color(0xFF2563A6)) },
                         shape = RoundedCornerShape(10.dp),
                         colors = textFieldColors,
                         modifier = Modifier.fillMaxWidth()
