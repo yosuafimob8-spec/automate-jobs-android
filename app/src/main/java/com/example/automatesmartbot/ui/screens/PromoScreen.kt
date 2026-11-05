@@ -40,7 +40,7 @@ fun PromoScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF5FAFF))
+            .background(Color(0xFFF5FAFC))
             .padding(16.dp)
     ) {
         Column(
@@ -61,18 +61,18 @@ fun PromoScreen(
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        Icon(Icons.Default.LocalOffer, contentDescription = null, tint = Color(0xFFEC4899))
+                        Icon(Icons.Default.LocalOffer, contentDescription = null, tint = Color(0xFF55C6A9))
                         Text(
                             text = "ðŸŽ Promo Eksklusif Qpon.id",
                             fontWeight = FontWeight.Bold,
                             fontSize = 18.sp,
-                            color = Color(0xFF17324D)
+                            color = Color(0xFF243547)
                         )
                     }
                     Text(
                         text = "Gunakan kode kupon resmi Qpon.id di bawah ini untuk mendapatkan potongan harga berlangganan AutoMateSmartBot PRO.",
                         fontSize = 13.sp,
-                        color = Color(0xFF64748B)
+                        color = Color(0xFF52677A)
                     )
                 }
             }
@@ -93,23 +93,23 @@ fun PromoScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Column {
-                            Text(text = "Status Anda Saat Ini", fontSize = 13.sp, color = Color(0xFF64748B))
+                            Text(text = "Status Anda Saat Ini", fontSize = 13.sp, color = Color(0xFF52677A))
                             Spacer(modifier = Modifier.height(2.dp))
                             Text(
                                 text = if (isPro) "PRO MEMBER â­" else "FREE MEMBER",
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 18.sp,
-                                color = if (isPro) Color(0xFFF59E0B) else Color(0xFF38BDF8)
+                                color = if (isPro) Color(0xFFF59E0B) else Color(0xFF55C6A9)
                             )
                         }
 
                         Surface(
-                            color = if (isPro) Color(0xFF065F46) else Color(0xFF22304A),
+                            color = if (isPro) Color(0xFF065F46) else Color(0xFF243547),
                             shape = RoundedCornerShape(8.dp)
                         ) {
                             Text(
                                 text = if (isPro) "Status Aktif" else "Belum Upgrade",
-                                color = if (isPro) Color(0xFF34D399) else Color(0xFF64748B),
+                                color = if (isPro) Color(0xFF34D399) else Color(0xFF52677A),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 12.sp,
                                 modifier = Modifier.padding(horizontal = 10.dp, vertical = 6.dp)
@@ -123,7 +123,7 @@ fun PromoScreen(
                 text = "Daftar Kupon Qpon.id Tersedia",
                 fontWeight = FontWeight.Bold,
                 fontSize = 16.sp,
-                color = Color(0xFF17324D)
+                color = Color(0xFF243547)
             )
 
             // Qpon List
@@ -149,12 +149,12 @@ fun PromoScreen(
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 Surface(
-                                    color = Color(0xFF22304A),
+                                    color = Color(0xFF243547),
                                     shape = RoundedCornerShape(6.dp)
                                 ) {
                                     Text(
                                         text = qpon.code,
-                                        color = Color(0xFF1678C8),
+                                        color = Color(0xFF2563A6),
                                         fontWeight = FontWeight.Bold,
                                         fontSize = 14.sp,
                                         modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp)
@@ -174,21 +174,21 @@ fun PromoScreen(
                                 }
                             }
 
-                            Text(text = qpon.description, fontSize = 13.sp, color = Color(0xFF17324D))
+                            Text(text = qpon.description, fontSize = 13.sp, color = Color(0xFF243547))
 
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
                                 horizontalArrangement = Arrangement.SpaceBetween,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                Text(text = "Berlaku hingga: ${qpon.validUntil}", fontSize = 11.sp, color = Color(0xFF64748B))
+                                Text(text = "Berlaku hingga: ${qpon.validUntil}", fontSize = 11.sp, color = Color(0xFF52677A))
 
                                 TextButton(onClick = {
                                     snackbarMessage = "Kode kupon '${qpon.code}' berhasil disalin!"
                                 }) {
-                                    Icon(Icons.Default.ContentCopy, contentDescription = null, modifier = Modifier.size(14.dp), tint = Color(0xFF1678C8))
+                                    Icon(Icons.Default.ContentCopy, contentDescription = null, modifier = Modifier.size(14.dp), tint = Color(0xFF2563A6))
                                     Spacer(modifier = Modifier.width(4.dp))
-                                    Text("Salin Kupon", fontSize = 12.sp, color = Color(0xFF1678C8))
+                                    Text("Salin Kupon", fontSize = 12.sp, color = Color(0xFF2563A6))
                                 }
                             }
                         }
@@ -204,11 +204,11 @@ fun PromoScreen(
                     .padding(16.dp),
                 action = {
                     TextButton(onClick = { snackbarMessage = null }) {
-                        Text("OK", color = Color(0xFF1678C8))
+                        Text("OK", color = Color(0xFF2563A6))
                     }
                 },
-                containerColor = Color(0xFF22304A),
-                contentColor = Color(0xFF17324D)
+                containerColor = Color(0xFF243547),
+                contentColor = Color(0xFF243547)
             ) {
                 Text(msg)
             }
