@@ -43,7 +43,7 @@ fun AutoUploadScreen(isPro: Boolean) {
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -76,12 +76,12 @@ fun AutoUploadScreen(isPro: Boolean) {
                         onClick = { selectedPlatform = platform },
                         label = { Text(platform, fontSize = 12.sp, fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal) },
                         colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = Color(0xFFFFF3E0),
+                            selectedContainerColor = Color(0xFFE8F5F7),
                             selectedLabelColor = Color(0xFFE65100),
                             containerColor = Color.White,
                             labelColor = KarirTextDark
                         ),
-                        border = BorderStroke(1.dp, if (isSelected) KarirOrange else Color(0xFFFFDEC9))
+                        border = BorderStroke(1.dp, if (isSelected) KarirOrange else Color(0xFFC6DFE8))
                     )
                 }
             }
@@ -90,7 +90,7 @@ fun AutoUploadScreen(isPro: Boolean) {
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -122,7 +122,7 @@ fun AutoUploadScreen(isPro: Boolean) {
                 minLines = 3,
                 colors = OutlinedTextFieldDefaults.colors(
                     focusedBorderColor = KarirOrange,
-                    unfocusedBorderColor = Color(0xFFFFDEC9),
+                    unfocusedBorderColor = Color(0xFFC6DFE8),
                     cursorColor = KarirOrange,
                     focusedContainerColor = Color.White,
                     unfocusedContainerColor = Color.White,
@@ -161,7 +161,7 @@ fun AutoUploadScreen(isPro: Boolean) {
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
