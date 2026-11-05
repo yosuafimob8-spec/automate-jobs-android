@@ -672,7 +672,7 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                                 Text("Buat Surat Lamaran", fontWeight = FontWeight.Bold)
                             }
 
-                            HorizontalDivider(color = screenCanvas(Color(0xFFF1E5DC)))
+                            HorizontalDivider(color = screenCanvas(Color(0xFFC6DFE8)))
 
                             Text("Riwayat Analisis", fontWeight = FontWeight.Bold, fontSize = 14.sp, color = KarirTextDark)
                             state.analyses.forEach { a ->
