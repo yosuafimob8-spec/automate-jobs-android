@@ -22,6 +22,7 @@ sealed class Screen(val route: String, val title: String, val icon: ImageVector)
     object CvBuilder : Screen("cv_builder", "CV Builder", Icons.Default.Description)
     object LatihanPsikotes : Screen("latihan_psikotes", "Psikotes", Icons.Default.Psychology)
     object JobTraining : Screen("job_training", "Pelatihan Kerja", Icons.Default.Work)
+    object Certificates : Screen("certificates", "Sertifikat", Icons.Default.Work)
     object SalaryCalculator : Screen("salary_calculator", "Kalkulator Gaji", Icons.Default.Work)
     object CareerLetters : Screen("career_letters", "Surat Lamaran & Resign", Icons.Default.Description)
     object CareerDocuments : Screen("career_documents", "Dokumen Karier", Icons.Default.FolderShared)
@@ -48,7 +49,7 @@ val bottomNavItems = listOf(
 )
 
 val detailNavItems = listOf(
-    Screen.JobTraining, Screen.SalaryCalculator, Screen.CareerLetters, Screen.CareerDocuments,
+    Screen.JobTraining, Screen.Certificates, Screen.SalaryCalculator, Screen.CareerLetters, Screen.CareerDocuments,
     Screen.CvBuilder,
     Screen.LatihanPsikotes,
     Screen.AiInterview,
