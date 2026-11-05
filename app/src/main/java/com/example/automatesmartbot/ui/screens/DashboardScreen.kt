@@ -221,14 +221,9 @@ fun DashboardScreen(
                 modifier = Modifier.fillMaxWidth().background(background).padding(horizontal = 18.dp, vertical = 14.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Box(
-                    modifier = Modifier.size(38.dp).background(ocean, RoundedCornerShape(10.dp)),
-                    contentAlignment = Alignment.Center
-                ) {
-                    com.example.automatesmartbot.ui.components.BrandLogo(modifier = Modifier.size(32.dp))
-                }
+                com.example.automatesmartbot.ui.components.BrandLogo(modifier = Modifier.size(42.dp))
                 Spacer(Modifier.width(9.dp))
-                Text("KarirMate", color = ScreenText, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp, modifier = Modifier.weight(1f))
+                com.example.automatesmartbot.ui.components.BrandWordmark(modifier = Modifier.weight(1f), fontSize = 22.sp)
                 IconButton(onClick = { onNavigate(Screen.Riwayat.route) }) {
                     Icon(Icons.Default.Notifications, contentDescription = "Riwayat aktivitas", tint = ScreenText)
                 }
