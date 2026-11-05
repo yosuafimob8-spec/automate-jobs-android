@@ -43,7 +43,7 @@ fun FeatureComingSoonScreen(
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -59,7 +59,7 @@ fun FeatureComingSoonScreen(
                         Box(
                             modifier = Modifier
                                 .size(50.dp)
-                                .background(Color(0xFFFFF3E0), CircleShape),
+                                .background(Color(0xFFE8F5F7), CircleShape),
                             contentAlignment = Alignment.Center
                         ) {
                             Icon(
@@ -70,8 +70,8 @@ fun FeatureComingSoonScreen(
                             )
                         }
                         Surface(
-                            color = Color(0xFFFFF3E0),
-                            border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                            color = Color(0xFFE8F5F7),
+                            border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                             shape = RoundedCornerShape(8.dp)
                         ) {
                             Text(
@@ -104,7 +104,7 @@ fun FeatureComingSoonScreen(
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
@@ -147,7 +147,7 @@ fun FeatureComingSoonScreen(
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
