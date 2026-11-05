@@ -29,12 +29,13 @@ val ScreenPageGradient: Brush
     @Composable get() = if (MaterialTheme.colorScheme.surface.luminance() < .5f)
         Brush.verticalGradient(listOf(DarkBackground, DarkSurface, DarkBackground)) else KarirPageGradient
 
-/** Bright KarirMate orange remains the button fill; dark ink gives readable text. */
-val OnKarirOrange = Color.White
+/** Use the active theme primary color for accessible buttons in both modes. */
+val OnKarirOrange: Color
+    @Composable get() = MaterialTheme.colorScheme.onPrimary
 
 @Composable
 fun karirButtonColors() = ButtonDefaults.buttonColors(
-    containerColor = KarirOrange,
+    containerColor = MaterialTheme.colorScheme.primary,
     contentColor = OnKarirOrange,
     disabledContainerColor = screenCanvas(Color(0xFFE2E8F0)),
     disabledContentColor = ScreenText
