@@ -95,7 +95,7 @@ fun OnboardingProfileScreen(
 
     val textFieldColors = OutlinedTextFieldDefaults.colors(
         focusedBorderColor = KarirOrange,
-        unfocusedBorderColor = Color(0xFFFFDEC9),
+        unfocusedBorderColor = Color(0xFFC6DFE8),
         focusedLabelColor = KarirOrange,
         unfocusedLabelColor = KarirTextMuted,
         focusedContainerColor = Color.White,
@@ -108,7 +108,7 @@ fun OnboardingProfileScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFF1E5DC)),
+                modifier = Modifier.border(width = 0.75.dp, color = Color(0xFFC6DFE8)),
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(
@@ -119,7 +119,7 @@ fun OnboardingProfileScreen(
                     }
                 },
                 title = { Text("Setup / Edit Profil", color = KarirTextDark, fontWeight = FontWeight.Bold, fontSize = 18.sp) },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFFFFDF9))
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color(0xFFF5FAFC))
             )
         },
         bottomBar = {
@@ -127,7 +127,7 @@ fun OnboardingProfileScreen(
                 color = Color.White,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .border(width = 0.75.dp, color = Color(0xFFF1E5DC))
+                    .border(width = 0.75.dp, color = Color(0xFFC6DFE8))
             ) {
                 Column(
                     modifier = Modifier
@@ -171,7 +171,7 @@ fun OnboardingProfileScreen(
                 }
             }
         },
-        containerColor = Color(0xFFFFFBF7)
+        containerColor = Color(0xFFF5FAFC)
     ) { innerPadding ->
         Column(
             modifier = Modifier
@@ -185,7 +185,7 @@ fun OnboardingProfileScreen(
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
                 shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, Color(0xFFFFDEC9)),
+                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 modifier = Modifier.fillMaxWidth()
             ) {
