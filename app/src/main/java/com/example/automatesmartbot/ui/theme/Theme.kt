@@ -8,12 +8,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 val KarirMateDarkColors = darkColorScheme(
-    primary = KarirOrange,
-    onPrimary = OnKarirOrange,
+    primary = PrimaryBlue,
+    onPrimary = TextWhite,
     primaryContainer = PrimaryBlueVariant,
     onPrimaryContainer = TextWhite,
     secondary = LightBlueAccent,
-    onSecondary = Color.White,
+    onSecondary = DarkBackground,
     background = DarkBackground,
     onBackground = TextWhite,
     surface = DarkSurface,
@@ -23,18 +23,18 @@ val KarirMateDarkColors = darkColorScheme(
 )
 
 val KarirMateLightColors = lightColorScheme(
-    primary = Color(0xFFA8430F),
+    primary = RoyalBlue,
     onPrimary = TextWhite,
-    primaryContainer = Color(0xFFFFF2E5),
-    onPrimaryContainer = KarirTextDark,
-    secondary = ActionOrange,
-    onSecondary = Color.White,
-    background = Color(0xFFFFFBF7),
-    onBackground = KarirTextDark,
+    primaryContainer = LightSurfaceVariant,
+    onPrimaryContainer = Charcoal,
+    secondary = Cyan,
+    onSecondary = Charcoal,
+    background = LightBackground,
+    onBackground = Charcoal,
     surface = LightSurface,
-    onSurface = KarirTextDark,
-    surfaceVariant = Color(0xFFFFF2E5),
-    onSurfaceVariant = Color(0xFF526277)
+    onSurface = Charcoal,
+    surfaceVariant = LightSurfaceVariant,
+    onSurfaceVariant = Color(0xFF47627E)
 )
 
 @Composable
