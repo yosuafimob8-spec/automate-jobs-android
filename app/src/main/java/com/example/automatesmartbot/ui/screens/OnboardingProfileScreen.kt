@@ -98,11 +98,11 @@ fun OnboardingProfileScreen(
         unfocusedBorderColor = Color(0xFFC6DFE8),
         focusedLabelColor = KarirOrange,
         unfocusedLabelColor = KarirTextMuted,
-        focusedContainerColor = Color.White,
-        unfocusedContainerColor = Color.White,
-        focusedTextColor = KarirTextDark,
-        unfocusedTextColor = KarirTextDark,
-        cursorColor = KarirOrange
+        focusedContainerColor = androidx.compose.material3.MaterialTheme.colorScheme.surface,
+        unfocusedContainerColor = androidx.compose.material3.MaterialTheme.colorScheme.surface,
+        focusedTextColor = androidx.compose.material3.MaterialTheme.colorScheme.onSurface,
+        unfocusedTextColor = androidx.compose.material3.MaterialTheme.colorScheme.onSurface,
+        cursorColor = androidx.compose.material3.MaterialTheme.colorScheme.primary
     )
 
     Scaffold(
