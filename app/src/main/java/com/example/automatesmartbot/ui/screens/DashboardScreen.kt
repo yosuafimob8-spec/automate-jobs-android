@@ -84,8 +84,8 @@ private val primaryMenuItems = listOf(
         title = "Pelatihan\nKerja",
         subtitle = null,
         icon = Icons.Default.School,
-        iconTint = Color(0xFFF97316),
-        bgTint = Color(0xFFFFF3E0),
+        iconTint = Color(0xFF2563A6),
+        bgTint = Color(0xFFE8F5F7),
         route = Screen.JobTraining.route
     ),
     MainMenuItem(
@@ -97,12 +97,12 @@ private val primaryMenuItems = listOf(
         route = Screen.SalaryCalculator.route
     ),
     MainMenuItem(
-        title = "Surat Izin &\nDokumen Kerja",
+        title = "Dokumen\nKarier",
         subtitle = null,
         icon = Icons.Default.Article,
         iconTint = Color(0xFFD97706),
         bgTint = Color(0xFFFEF3C7),
-        route = Screen.SuratIzinDokumen.route
+        route = Screen.CareerDocuments.route
     ),
     MainMenuItem(
         title = "Workpedia",
@@ -152,7 +152,7 @@ private val extraSearchableFeatures = listOf(
         subtitle = "Temukan pekerjaan impian",
         icon = Icons.Default.Work,
         iconTint = KarirOrange,
-        bgTint = Color(0xFFFFF3E0),
+        bgTint = Color(0xFFE8F5F7),
         route = Screen.CariLowongan.route
     ),
     MainMenuItem(
