@@ -181,6 +181,8 @@ fun DashboardScreen(
                         }
                     )
                 }
+                item { CareerJourneyCard(status = status, onCompleteProfile = { onNavigate(Screen.OnboardingProfile.route) }) }
+                item { CareerBillboardPlaceholder() }
                 item { AccountStats(status = status) }
                 item { SectionHeader(title = "Cari Kerja & Persiapan", itemCount = jobFeatures.size) }
                 item { FeatureGrid(features = jobFeatures, onNavigate = onNavigate) }
@@ -663,3 +665,69 @@ private fun ActivityUnavailableCard(onOpenHistory: () -> Unit) {
     }
 }
 
+
+/** Career Journey displays only confirmed account progress, never fabricated achievements. */
+@Composable
+private fun CareerJourneyCard(
+    status: DashboardStatusResponse?,
+    onCompleteProfile: () -> Unit
+) {
+    val completed = status?.profileCompleted == true
+    Card(
+        shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.cardColors(containerColor = Color(0xFFE8F5F7)),
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Column(
+            modifier = Modifier.padding(20.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp)
+        ) {
+            Text("Career Journey", color = Color(0xFF243547), fontWeight = FontWeight.Bold, fontSize = 20.sp)
+            Text(
+                if (completed) "Profil siap. Jelajahi pelatihan dan peluang karier."
+                else "Mulai perjalanan karier dengan melengkapi profil.",
+                color = Color(0xFF52677A),
+                fontSize = 13.sp
+            )
+            LinearProgressIndicator(
+                progress = { if (completed) 1f else 0f },
+                modifier = Modifier.fillMaxWidth().height(8.dp),
+                color = Color(0xFF55C6A9),
+                trackColor = Color.White
+            )
+            Text(
+                if (completed) "Profil: lengkap" else "Profil: belum lengkap atau belum terverifikasi",
+                fontSize = 12.sp,
+                color = Color(0xFF243547)
+            )
+            if (!completed) {
+                TextButton(onClick = onCompleteProfile) {
+                    Text("Lengkapi Profil", color = Color(0xFF2563A6), fontWeight = FontWeight.SemiBold)
+                }
+            }
+        }
+    }
+}
+
+/** Reserved ad area: no SDK, no live inventory, and no misleading sponsored content. */
+@Composable
+private fun CareerBillboardPlaceholder() {
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(20.dp),
+        color = Color(0xFFF0F8F9),
+        border = BorderStroke(1.dp, Color(0xFFD1E6E9))
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            Text("Career Billboard", color = Color(0xFF243547), fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
+            Text(
+                "Ruang informasi mitra karier — belum ada iklan.",
+                color = Color(0xFF52677A),
+                fontSize = 12.sp
+            )
+        }
+    }
+}
