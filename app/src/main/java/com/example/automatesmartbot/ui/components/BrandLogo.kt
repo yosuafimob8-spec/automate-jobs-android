@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -50,7 +51,7 @@ fun BrandWordmark(
     onDark: Boolean = false
 ) {
     Row(modifier = modifier, verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(0.dp)) {
-        Text("Karir", color = if (onDark) Color.White else Color(0xFF0B3556), fontWeight = FontWeight.ExtraBold, fontSize = fontSize)
-        Text("Mate", color = Color(0xFF16A88C).let { if (onDark) Color(0xFF55E3BF) else it }, fontWeight = FontWeight.ExtraBold, fontSize = fontSize)
+        Text("Karir", color = if (onDark || MaterialTheme.colorScheme.surface.luminance() < 0.5f) Color.White else Color(0xFF0B3556), fontWeight = FontWeight.ExtraBold, fontSize = fontSize)
+        Text("Mate", color = if (onDark || MaterialTheme.colorScheme.surface.luminance() < 0.5f) Color(0xFF55E3BF) else Color(0xFF087E72), fontWeight = FontWeight.ExtraBold, fontSize = fontSize)
     }
 }
