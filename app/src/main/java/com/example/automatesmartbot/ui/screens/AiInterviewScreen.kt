@@ -37,8 +37,8 @@ import com.tom_roush.pdfbox.android.PDFBoxResourceLoader
 import com.tom_roush.pdfbox.pdmodel.PDDocument
 import com.tom_roush.pdfbox.text.PDFTextStripper
 
-private val InterviewOrange = Color(0xFFFF792E)
-private val InterviewNavy = Color(0xFF172943)
+private val InterviewOrange = Color(0xFF55C6A9)
+private val InterviewNavy = Color(0xFF2563A6)
 private val InterviewPositions = listOf("Admin Warehouse", "Supervisor Logistik", "Staff Operasional", "Operator Produksi", "Sales", "Lainnya")
 
 private fun makeInterviewQuestions(role: String, english: Boolean): List<String> =
