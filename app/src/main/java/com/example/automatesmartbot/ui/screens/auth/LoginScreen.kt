@@ -68,8 +68,9 @@ fun LoginScreen(
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
                 BrandLogo(
-                    modifier = Modifier.size(48.dp)
+                    modifier = Modifier.size(64.dp)
                 )
+                com.example.automatesmartbot.ui.components.BrandWordmark(fontSize = 26.sp)
 
                 Text(
                     text = "Masuk ke Akunmu",
