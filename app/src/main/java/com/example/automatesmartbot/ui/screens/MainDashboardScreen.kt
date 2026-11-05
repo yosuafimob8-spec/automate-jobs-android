@@ -11,6 +11,7 @@ import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -204,10 +205,23 @@ private fun MainDashboardContent(
     val bottomNavRoutes = bottomNavItems.map { it.route }
     val appShellRoutes = appShellItems.map { it.route }
     val showBottomBar = currentRoute in appShellRoutes
-    val showTopBar = currentRoute in appShellRoutes && currentRoute != Screen.Dashboard.route
+    val showTopBar = currentRoute in appShellRoutes && currentRoute != Screen.Dashboard.route && currentRoute != Screen.AiInterview.route
     val showBack = currentRoute in appShellRoutes && currentRoute != Screen.Dashboard.route
     val cvBack: () -> Unit = { if (!cvViewModel.goBack()) navigateUpOrDashboard() }
-    val onBack: (() -> Unit)? = if (!showBack) null else if (currentRoute == Screen.CvBuilder.route) cvBack else navigateUpOrDashboard
+    var trainingBack by remember { mutableStateOf<(() -> Unit)?>(null) }
+    val edgeHeaderRoutes = setOf(
+        Screen.LatihanPsikotes.route, Screen.SalaryCalculator.route,
+        Screen.JobTraining.route, Screen.Certificates.route
+    )
+    val edgeHeader = currentRoute in edgeHeaderRoutes
+    var psychotestBack by remember { mutableStateOf<(() -> Unit)?>(null) }
+    val onBack: (() -> Unit)? = when {
+        !showBack -> null
+        currentRoute == Screen.CvBuilder.route -> cvBack
+        currentRoute == Screen.LatihanPsikotes.route -> { { psychotestBack?.invoke() ?: navigateUpOrDashboard() } }
+        currentRoute == Screen.JobTraining.route || currentRoute == Screen.Certificates.route -> { { trainingBack?.invoke() ?: navigateUpOrDashboard() } }
+        else -> navigateUpOrDashboard
+    }
 
     BackHandler(enabled = currentRoute == Screen.OnboardingProfile.route) {
         navigateUpOrDashboard()
@@ -216,16 +230,27 @@ private fun MainDashboardContent(
     Scaffold(
         topBar = {
             if (showTopBar) {
-                AppTopBar(
-                    title = currentTitle,
-                    isPro = isPro,
-                    onNavigateProfil = {
-                        navController.navigate(Screen.Profil.route) {
-                            launchSingleTop = true
-                        }
-                    },
-                    onBack = onBack
-                )
+                if (edgeHeader) {
+                    CareerEdgeHeader(
+                        title = currentTitle,
+                        subtitle = when (currentRoute) {
+                            Screen.LatihanPsikotes.route -> "Latihan Tes Kerja & Persiapan CPNS"
+                            Screen.SalaryCalculator.route -> "Simulasi gaji, lembur dan potongan"
+                            Screen.JobTraining.route -> "Upgrade skill untuk dunia kerja"
+                            else -> "Riwayat dan verifikasi sertifikat"
+                        },
+                        isPro = isPro,
+                        onBack = onBack ?: navigateUpOrDashboard,
+                        onProfile = { navController.navigate(Screen.Profil.route) { launchSingleTop = true } }
+                    )
+                } else {
+                    AppTopBar(
+                        title = currentTitle,
+                        isPro = isPro,
+                        onNavigateProfil = { navController.navigate(Screen.Profil.route) { launchSingleTop = true } },
+                        onBack = onBack
+                    )
+                }
             }
         },
         bottomBar = {
@@ -316,8 +341,8 @@ private fun MainDashboardContent(
                     }
                 )
             }
-            composable(Screen.JobTraining.route) { JobTrainingScreen() }
-            composable(Screen.Certificates.route) { JobTrainingScreen(initialStage = "history") }
+            composable(Screen.JobTraining.route) { JobTrainingScreen(onExit = navigateUpOrDashboard, onBackActionChanged = { trainingBack = it }) }
+            composable(Screen.Certificates.route) { JobTrainingScreen(initialStage = "history", onExit = navigateUpOrDashboard, onBackActionChanged = { trainingBack = it }) }
             composable(Screen.SalaryCalculator.route) { SalaryCalculatorScreen() }
             composable(Screen.CareerLetters.route) {
                 CareerLettersScreen(onApplicationLetter = {
@@ -333,7 +358,7 @@ private fun MainDashboardContent(
                 CvBuilderScreen(viewModel = cvViewModel, onBack = cvBack, isPro = isPro)
             }
             composable(Screen.LatihanPsikotes.route) {
-                LatihanPsikotesScreen(isPro = isPro, onExit = navigateUpOrDashboard)
+                LatihanPsikotesScreen(isPro = isPro, onExit = navigateUpOrDashboard, onBackActionChanged = { action -> psychotestBack = action })
             }
             composable(Screen.AiInterview.route) {
                 FixedCanvasTheme(dark = when (themePreference.mode) {
@@ -341,7 +366,7 @@ private fun MainDashboardContent(
                     com.example.automatesmartbot.ui.theme.ThemeMode.LIGHT -> false
                     com.example.automatesmartbot.ui.theme.ThemeMode.AUTO -> androidx.compose.foundation.isSystemInDarkTheme()
                 }) {
-                    AiInterviewScreen(isPro = isPro)
+                    AiInterviewScreen(isPro = isPro, onExit = navigateUpOrDashboard)
 
                 }
             }

@@ -185,7 +185,7 @@ private suspend fun requestInterview(
 }
 
 @Composable
-fun AiInterviewScreen(isPro: Boolean = false) {
+fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
     val roles = listOf("Admin Warehouse", "Supervisor Logistik", "Staff Operasional", "Operator Produksi", "Sales", "Lainnya")
     var role by rememberSaveable { mutableStateOf(roles.first()) }
     var interviewMode by rememberSaveable { mutableStateOf("text") }
@@ -371,67 +371,30 @@ fun AiInterviewScreen(isPro: Boolean = false) {
             }
         }
     }
-    if (!started && !showPreparation && report.isBlank()) {
-        Column(Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient).verticalScroll(rememberScrollState())) {
-            Row(Modifier.fillMaxWidth().padding(20.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                Text("KarirMate", color = orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.titleLarge)
-                Surface(
-                    shape = RoundedCornerShape(10.dp),
-                    color = Color(0xFFE6F5F5),
-                    border = BorderStroke(1.dp, Color(0xFFC6DFE8))
-                ) {
-                    Text("AI INTERVIEW", color = Color(0xFFE65100), fontWeight = FontWeight.Bold, fontSize = 11.sp, modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp))
-                }
-            }
-            Card(
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-                shape = RoundedCornerShape(16.dp)
-            ) {
-                Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("AI Interview", color = ink, fontWeight = FontWeight.Bold, fontSize = 22.sp)
-                    Text("Latihan wawancara kerja interaktif dengan AI HR yang cerdas, adaptif, dan siap memberi umpan balik.", color = muted, fontSize = 13.sp)
-                }
-            }
-            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-                Card(Modifier.fillMaxWidth().clickable { interviewMode = "text"; showPreparation = true },
-                    shape = shape, border = BorderStroke(1.5.dp, orange),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
-                    Row(Modifier.padding(18.dp), verticalAlignment = Alignment.CenterVertically) {
-                        Text("💬", style = MaterialTheme.typography.headlineMedium)
-                        Spacer(Modifier.width(14.dp))
-                        Column(Modifier.weight(1f)) {
-                            Text("Interview Teks", color = ink, fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                            Text("Wawancara interaktif via chat tanya-jawab AI", color = muted, fontSize = 12.sp)
-                        }
-                        Text("›", color = orange, fontWeight = FontWeight.Bold, fontSize = 22.sp)
+    Column(Modifier.fillMaxSize()) {
+        InterviewBrandedHeader(
+            isPro = isPro,
+            onBack = {
+                when {
+                    report.isNotBlank() -> {
+                        report = ""; started = false; showPreparation = true; tts.stop()
                     }
+                    started -> { started = false; showPreparation = true; tts.stop() }
+                    showPreparation -> showPreparation = false
+                    else -> onExit()
                 }
-                Card(Modifier.fillMaxWidth().clickable { interviewMode = "voice"; showPreparation = true },
-                    shape = shape, border = BorderStroke(1.5.dp, Color(0xFFC6DFE8)),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
-                    Row(Modifier.padding(18.dp), verticalAlignment = Alignment.CenterVertically) {
-                        Text("🎙️", style = MaterialTheme.typography.headlineMedium)
-                        Spacer(Modifier.width(14.dp))
-                        Column(Modifier.weight(1f)) {
-                            Text("Interview Suara", color = ink, fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                            Text("Wawancara dengan suara dan pengenalan audio", color = muted, fontSize = 12.sp)
-                        }
-                        Text("›", color = orange, fontWeight = FontWeight.Bold, fontSize = 22.sp)
-                    }
-                }
-
             }
-        }
+        )
+        Box(Modifier.weight(1f)) {
+            if (!started && !showPreparation && report.isBlank()) {
+                InterviewModeLanding(
+                    onTextSelected = { interviewMode = "text"; showPreparation = true },
+                    onVoiceSelected = { interviewMode = "voice"; showPreparation = true }
+                )
     } else if (!started && report.isBlank()) {
         Column(Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient).verticalScroll(rememberScrollState()).padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)) {
-            Text("← Pilih Interviewer", modifier = Modifier.clickable { showPreparation = false }, color = orange,
-                fontWeight = FontWeight.Bold, fontSize = 18.sp)
+            Text("Persiapan Interview", color = ink, fontWeight = FontWeight.ExtraBold, fontSize = 23.sp)
             Text("Pilih AI HR yang akan mewawancarai Anda secara ramah dan profesional.", color = muted, fontSize = 12.5.sp)
             listOf(Triple("male", "👨🏻‍💼 Mr. ILHAM", "AI HR laki-laki • Profesional, ramah, dan komunikatif."),
                 Triple("female", "👩🏻‍💼 Ms. Tanti", "AI HR perempuan • Hangat, suportif, dan detail.")).forEach { (id, name, description) ->
@@ -491,8 +454,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     } else if (report.isNotBlank()) {
         Column(Modifier.fillMaxSize().background(Color(0xFFF5FAFC)).verticalScroll(rememberScrollState()).padding(18.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)) {
-            Text("←  Hasil Interview", modifier = Modifier.clickable { report = ""; started = false; showPreparation = true }, color = orange,
-                fontWeight = FontWeight.Bold, fontSize = 18.sp)
+            Text("Hasil Interview", color = ink, fontWeight = FontWeight.ExtraBold, fontSize = 23.sp)
             Card(
                 shape = shape,
                 colors = CardDefaults.cardColors(containerColor = Color.White),
@@ -526,8 +488,6 @@ fun AiInterviewScreen(isPro: Boolean = false) {
     } else {
         Column(Modifier.fillMaxSize().background(Color(0xFFF5FAFC))) {
             Row(Modifier.fillMaxWidth().background(Color.White).border(BorderStroke(0.75.dp, Color(0xFFC6DFE8))).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                Text("‹", modifier = Modifier.clickable { started = false; showPreparation = true; tts.stop() }, color = ink, style = MaterialTheme.typography.headlineMedium)
-                Spacer(Modifier.width(12.dp))
                 Text(if (interviewer == "male") "👨🏻‍💼" else "👩🏻‍💼", style = MaterialTheme.typography.headlineMedium)
                 Spacer(Modifier.width(10.dp))
                 Column(Modifier.weight(1f)) {
@@ -584,6 +544,8 @@ fun AiInterviewScreen(isPro: Boolean = false) {
                     send("finish", history + (if (answer.isNotBlank()) listOf(InterviewTurn(question, answer.trim())) else emptyList()))
                 }) { Text("Selesai & Evaluasi", color = orange) }
             }
+        }
+    }
         }
     }
 }

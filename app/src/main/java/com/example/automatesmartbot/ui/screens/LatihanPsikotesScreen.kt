@@ -49,7 +49,7 @@ private fun JsonObject.s(k: String, fallback: String = "") = get(k)?.takeUnless 
 private fun JsonObject.n(k: String) = runCatching { get(k)?.asInt ?: 0 }.getOrDefault(0)
 
 @Composable
-fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
+fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionChanged: ((() -> Unit)?) -> Unit = {}) {
     MaterialTheme(colorScheme = com.example.automatesmartbot.ui.theme.KarirMateLightColors) {
     Surface(color = Color.Transparent, contentColor = ink) {
     val vm: PsychotestViewModel = viewModel()
@@ -95,6 +95,12 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
             else -> "home"
         }
     }
+    // One back control: Android back and the existing parent app toolbar
+    // both follow the same internal page history.
+    DisposableEffect(page) {
+        onBackActionChanged({ back() })
+        onDispose { onBackActionChanged(null) }
+    }
     BackHandler { back() }
     if (proNotice) AlertDialog(onDismissRequest = { proNotice = false },
         title = { Text("Fitur PRO") },
@@ -109,32 +115,16 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
         if (loading) LinearProgressIndicator(Modifier.fillMaxWidth(), color = orange)
         error?.let { Text(it, Modifier.padding(12.dp), color = MaterialTheme.colorScheme.error) }
         when (page) {
-            "home" -> LazyColumn(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                item {
-                    Card(shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = Color.White), border = BorderStroke(1.dp, Color(0xFFC6DFE8))) {
-                        Row(Modifier.fillMaxWidth().height(122.dp).padding(14.dp), verticalAlignment = Alignment.CenterVertically) {
-                            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                                Text("🧠 Psikotes", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
-                                Text("Latihan hari ini, siap menghadapi tes kerja besok!", color = ink, style = MaterialTheme.typography.bodySmall)
-                            }
-                            Text("🎯", style = MaterialTheme.typography.displayLarge)
-                        }
-                    }
-                }
-                item { CompactRoute("💼", "Tes Kerja Swasta", "Logika, numerik, verbal, dan kemampuan kerja", listOf(orange, Color(0xFFFFA168))) { family = "private"; page = "catalog" } }
-                item { CompactRoute("🏛️", "Persiapan CPNS", "TWK, TIU, TKP, simulasi CAT, dan SKB", listOf(blue, teal)) { family = "cpns"; page = "catalog" } }
-                item {
-                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        Shortcut("🕘 Riwayat", Modifier.weight(1f)) { vm.loadExtras(isPro); page = "history" }
-                        Shortcut("📊 Statistik 👑", Modifier.weight(1f)) { if (isPro) { vm.loadExtras(isPro); page = "stats" } else proNotice = true }
-                        Shortcut("🏆 Peringkat 👑", Modifier.weight(1f)) { if (isPro) { vm.loadExtras(isPro); page = "leaderboard" } else proNotice = true }
-                    }
-                }
-                item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp), border = BorderStroke(1.dp, Color(0xFFC6DFE8)), elevation = CardDefaults.cardElevation(2.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("Latihan Gratis", color = ink, fontWeight = FontWeight.Bold); Text("Semua kategori dasar • 10–20 soal per sesi • Riwayat latihan", color = ink, style = MaterialTheme.typography.bodySmall) } } }
-                item { Card(colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(14.dp), border = BorderStroke(1.dp, Color(0xFFC6DFE8)), elevation = CardDefaults.cardElevation(2.dp)) { Column(Modifier.fillMaxWidth().padding(14.dp)) { Text("👑 Fitur PRO", color = ink, fontWeight = FontWeight.Bold); Text("Simulasi lengkap, statistik dan peringkat untuk langganan aktif", color = ink, style = MaterialTheme.typography.bodySmall) } } }
-            }
+            "home" -> PsychotestHome(
+                isPro = isPro,
+                onPrivate = { family = "private"; page = "catalog" },
+                onCpns = { family = "cpns"; page = "catalog" },
+                onHistory = { vm.loadExtras(isPro); page = "history" },
+                onStats = { if (isPro) { vm.loadExtras(isPro); page = "stats" } else proNotice = true },
+                onLeaderboard = { if (isPro) { vm.loadExtras(isPro); page = "leaderboard" } else proNotice = true },
+                onPro = { proNotice = true }
+            )
             "catalog" -> Column(Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 10.dp)) {
-                TextButton(onClick = { back() }, contentPadding = PaddingValues(0.dp)) { Text("← Kembali ke Psikotes", color = teal) }
                 Text(if (family == "private") "💼 Tes Kerja Swasta" else if (family == "cpns") "🏛️ Persiapan CPNS" else "Pilih Jenis Tes", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = ink)
                 Text("Pilih latihan sesuai tujuanmu. Kerjakan soal, pantau progres, dan tingkatkan kemampuan.", style = MaterialTheme.typography.bodySmall, color = Color(0xFF59667A))
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.horizontalScroll(rememberScrollState())) {
@@ -408,7 +398,6 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 }
             }
             "history" -> LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                item { TextButton(onClick = { back() }) { Text("← Kembali", color = teal) } }
                 if (history.isEmpty()) item { Text("Belum ada riwayat.") }
                 items(history) {
                     val score = PsychotestPolicy.normalizedScore(it.get("score")?.takeUnless { x -> x.isJsonNull }?.asDouble, it.get("max_score")?.takeUnless { x -> x.isJsonNull }?.asDouble)
@@ -416,7 +405,6 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 }
             }
             "stats" -> if (isPro) Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                TextButton(onClick = { page = "home" }) { Text("← Kembali", color = teal) }
                 stats?.let {
                     Text("📊 Statistik Latihan", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold)
                     Info("📝 Total Tes", it.s("total_tests", "0"))
@@ -425,7 +413,6 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}) {
                 } ?: Text("Belum ada statistik.")
             }
             "leaderboard" -> if (isPro) LazyColumn(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                item { TextButton(onClick = { page = "home" }) { Text("← Kembali", color = teal) } }
                 item { Text("🏆 Peringkat Peserta", color = ink, style = MaterialTheme.typography.headlineSmall, fontWeight = FontWeight.Bold) }
                 if (leaderboard.isEmpty()) item { Text("Belum ada peringkat.") }
                 items(leaderboard) { Info("🏆 ${it.s("alias", "Peserta")}", "Skor: ${it.s("score", "-")}") }

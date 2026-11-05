@@ -89,7 +89,11 @@ private fun TrainingAction(label: String, enabled: Boolean = true, onClick: () -
 }
 
 @Composable
-fun JobTrainingScreen(initialStage: String = "catalog") {
+fun JobTrainingScreen(
+    initialStage: String = "catalog",
+    onExit: () -> Unit = {},
+    onBackActionChanged: ((() -> Unit)?) -> Unit = {}
+) {
     val context = LocalContext.current
     val trainingScope = rememberCoroutineScope()
     val trainingApi = remember { BuildConfig.TRAINING_BASE_URL.takeIf { it.startsWith("https://") }?.let { TrainingServerGateway(it) } }
@@ -128,6 +132,22 @@ fun JobTrainingScreen(initialStage: String = "catalog") {
         }
     }
     var stage by rememberSaveable(initialStage) { mutableStateOf(initialStage) }
+    fun backOneStage() {
+        when (stage) {
+            "catalog" -> onExit()
+            "history" -> if (initialStage == "history") onExit() else stage = "catalog"
+            "certificate" -> stage = "history"
+            "positions" -> stage = "catalog"
+            "modules" -> stage = "positions"
+            "lesson", "practice", "exam", "result" -> stage = "modules"
+            else -> stage = "catalog"
+        }
+    }
+    DisposableEffect(stage, initialStage) {
+        onBackActionChanged({ backOneStage() })
+        onDispose { onBackActionChanged(null) }
+    }
+    androidx.activity.compose.BackHandler(enabled = stage != "catalog") { backOneStage() }
     var selectedCategory by rememberSaveable { mutableStateOf(0) }
     var selectedPosition by rememberSaveable { mutableStateOf("") }
     var selectedLevel by rememberSaveable { mutableStateOf(TrainingLevel.BASIC.name) }
@@ -242,14 +262,6 @@ fun JobTrainingScreen(initialStage: String = "catalog") {
             Modifier.fillMaxWidth().background(screenCanvas(Color(0xFFFFFDF9))).border(BorderStroke(0.75.dp, screenCanvas(Color(0xFFF1E5DC)))).padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            if (stage != "catalog") TextButton(onClick = {
-                stage = when (stage) {
-                    "modules" -> "positions"
-                    "positions" -> "catalog"
-                    "lesson", "practice", "exam" -> "modules"
-                    else -> "catalog"
-                }
-            }) { Text("‹", color = darkTraining, fontSize = 28.sp) }
             Text("▣ KarirMate", color = MaterialTheme.colorScheme.primary, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
             Spacer(Modifier.weight(1f))
             Surface(
@@ -272,63 +284,100 @@ fun JobTrainingScreen(initialStage: String = "catalog") {
         ) {
             when (stage) {
                 "catalog" -> {
-                    Text("Pelatihan Kerja", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
-                    Text("Tingkatkan skill, kuasai kompetensi, dan dapatkan sertifikat penyelesaian.", color = darkTraining)
-                    Card(
-                        colors = CardDefaults.cardColors(containerColor = ScreenSurface, contentColor = darkTraining),
-                        shape = RoundedCornerShape(16.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
-                        elevation = CardDefaults.cardElevation(2.dp)
-                    ) {
-                        Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Text("Siapkan Karier Impianmu Lewat Pelatihan Terarah", fontSize = 23.sp, fontWeight = FontWeight.ExtraBold, color = darkTraining)
-                            listOf("✓ Materi praktis", "✓ Latihan & evaluasi", "✓ Sertifikat penyelesaian KarirMate").forEach {
-                                Text(it, color = tealTraining, fontWeight = FontWeight.SemiBold)
+                    val navy = darkTraining
+                    val blue = Color(0xFF0866B5)
+                    val categoryColors = listOf(
+                        Color(0xFFE5F4FF), Color(0xFFF2E9FF), Color(0xFFE5FAF0),
+                        Color(0xFFFFF2DF), Color(0xFFFFE9F0), Color(0xFFE4F8FC)
+                    )
+                    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+                        Text("🎓", fontSize = 48.sp)
+                        Spacer(Modifier.width(10.dp))
+                        Text("Pelatihan Kerja", fontSize = 27.sp, fontWeight = FontWeight.ExtraBold, color = navy, modifier = Modifier.weight(1f))
+                        Text("▶ 📚", fontSize = 27.sp, color = blue)
+                    }
+                    val shortcuts = listOf(
+                        Triple("📖", "Katalog\nPelatihan", "catalog"),
+                        Triple("▶️", "Lanjutkan\nBelajar", "modules"),
+                        Triple("🏅", "Sertifikat\nSaya", "history"),
+                        Triple("📊", "Riwayat\nPelatihan", "history")
+                    )
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
+                        shortcuts.forEach { (emoji, title, destination) ->
+                            Card(
+                                modifier = Modifier.weight(1f).height(114.dp).clickable {
+                                    if (destination == "modules") choose(courseId)
+                                    else stage = destination
+                                },
+                                shape = RoundedCornerShape(14.dp),
+                                colors = CardDefaults.cardColors(containerColor = ScreenSurface),
+                                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8)))
+                            ) {
+                                Column(Modifier.fillMaxSize().padding(5.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center) {
+                                    Text(emoji, fontSize = 26.sp)
+                                    Text(title, color = navy, fontWeight = FontWeight.Bold, fontSize = 11.sp, lineHeight = 14.sp, textAlign = TextAlign.Center)
+                                }
                             }
                         }
                     }
-                    TrainingHeroIllustration(Modifier.fillMaxWidth())
-                    Text("Jelajahi Posisi Pekerjaan", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = darkTraining)
-                    Text("${TrainingPositions.groups.size} bidang • ${TrainingPositions.count} posisi tersedia", color = darkTraining)
-                    TrainingPositions.groups.forEachIndexed { index, group ->
-                        OutlinedButton(
-                            colors = trainingButtonColors,
-                            shape = RoundedCornerShape(12.dp),
-                            border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
-                            onClick = { selectedCategory = index; stage = "positions" },
-                            modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)
-                        ) {
-                            Text("${group.category}  (${group.positions.size} posisi)", color = darkTraining, fontWeight = FontWeight.SemiBold)
-                        }
-                    }
-                    Text("Pilih Kategori Pelatihan", fontSize = 19.sp, fontWeight = FontWeight.Bold, color = darkTraining)
-                    TrainingCourses.all.chunked(2).forEach { row ->
-                        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                            row.forEach { item ->
+                    Text("▱  Pilih Kategori Pelatihan", fontSize = 22.sp, fontWeight = FontWeight.ExtraBold, color = navy)
+                    val groups = TrainingPositions.groups
+                    groups.take(6).chunked(2).forEachIndexed { rowIndex, pair ->
+                        Row(horizontalArrangement = Arrangement.spacedBy(10.dp), modifier = Modifier.fillMaxWidth()) {
+                            pair.forEachIndexed { colIndex, group ->
+                                val index = rowIndex * 2 + colIndex
+                                val icon = listOf("💼", "💬", "🏭", "💻", "📣", "🎧")[index]
                                 Card(
-                                    modifier = Modifier.weight(1f).height(120.dp).clickable { choose(item.id) },
-                                    shape = RoundedCornerShape(16.dp),
-                                    colors = CardDefaults.cardColors(containerColor = ScreenSurface, contentColor = darkTraining),
-                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
-                                    elevation = CardDefaults.cardElevation(2.dp)
+                                    modifier = Modifier.weight(1f).heightIn(min = 86.dp).clickable { selectedCategory = index; stage = "positions" },
+                                    shape = RoundedCornerShape(14.dp),
+                                    colors = CardDefaults.cardColors(containerColor = screenCanvas(categoryColors[index])),
+                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8)))
                                 ) {
-                                    Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Text("▣", color = MaterialTheme.colorScheme.primary, fontSize = 28.sp)
-                                        Text(item.title, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center, fontSize = 13.sp, color = darkTraining)
+                                    Row(Modifier.fillMaxWidth().padding(10.dp), verticalAlignment = Alignment.CenterVertically) {
+                                        Text(icon, fontSize = 24.sp)
+                                        Spacer(Modifier.width(7.dp))
+                                        Text(group.category, fontSize = 12.sp, lineHeight = 15.sp, fontWeight = FontWeight.Bold, color = navy, modifier = Modifier.weight(1f))
+                                        Text("›", fontSize = 23.sp, color = navy)
                                     }
                                 }
                             }
-                            if (row.size == 1) Spacer(Modifier.weight(1f))
+                            if (pair.size == 1) Spacer(Modifier.weight(1f))
                         }
                     }
-                    Text("Sertifikat penyelesaian adalah bukti latihan internal, bukan sertifikasi kompetensi resmi BNSP.", fontSize = 12.sp, color = darkTraining)
-                    OutlinedButton(
-                        colors = trainingButtonColors,
-                        shape = RoundedCornerShape(12.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
-                        onClick = { stage = "history" },
-                        modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp)
-                    ) { Text("Lihat Riwayat Sertifikat", fontWeight = FontWeight.SemiBold) }
+                    if (groups.size > 6) {
+                        Text("Kategori lainnya", fontWeight = FontWeight.Bold, color = navy)
+                        groups.drop(6).forEachIndexed { offset, group ->
+                            OutlinedButton(onClick = { selectedCategory = offset + 6; stage = "positions" }, modifier = Modifier.fillMaxWidth()) {
+                                Text(group.category, color = navy)
+                            }
+                        }
+                    }
+                    Text("🔥  Level Pelatihan", fontSize = 22.sp, fontWeight = FontWeight.ExtraBold, color = navy)
+                    Row(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
+                        listOf(Triple("🌱", "Basic", "Pemula"), Triple("📊", "Intermediate", "Menengah"), Triple("🏆", "Advance", "Mahir")).forEachIndexed { index, item ->
+                            Card(
+                                modifier = Modifier.weight(1f).height(110.dp).clickable {
+                                    selectedLevel = TrainingLevel.entries[index].name
+                                    stage = "positions"
+                                },
+                                colors = CardDefaults.cardColors(containerColor = screenCanvas(listOf(Color(0xFFE0F9EE), Color(0xFFE4F2FF), Color(0xFFF1E8FF))[index])),
+                                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
+                                shape = RoundedCornerShape(14.dp)
+                            ) {
+                                Column(Modifier.fillMaxSize().padding(5.dp), verticalArrangement = Arrangement.Center, horizontalAlignment = Alignment.CenterHorizontally) {
+                                    Text(item.first, fontSize = 25.sp)
+                                    Text(item.second, fontWeight = FontWeight.ExtraBold, fontSize = 12.sp, color = navy)
+                                    Text("(${item.third})", fontSize = 11.sp, color = navy)
+                                }
+                            }
+                        }
+                    }
+                    Surface(shape = RoundedCornerShape(12.dp), border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))), color = ScreenSurface) {
+                        Text("ⓘ  Sertifikat penyelesaian adalah bukti latihan internal, bukan sertifikasi kompetensi resmi BNSP.", modifier = Modifier.fillMaxWidth().padding(14.dp), color = navy, fontSize = 13.sp)
+                    }
+                    Button(onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth().height(54.dp), colors = ButtonDefaults.buttonColors(containerColor = blue), shape = RoundedCornerShape(14.dp)) {
+                        Text("▣  Lihat Riwayat Sertifikat  ›", fontWeight = FontWeight.Bold)
+                    }
                 }
                 "positions" -> {
                     val group = TrainingPositions.groups[selectedCategory]
@@ -602,47 +651,92 @@ fun JobTrainingScreen(initialStage: String = "catalog") {
                     OutlinedButton(colors = trainingButtonColors, onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth()) { Text("Lihat Riwayat Sertifikat") }
                 }
                 "history" -> {
-                    Text("Riwayat Sertifikat", fontSize = 26.sp, fontWeight = FontWeight.Bold)
                     val history = JSONArray(prefs.getString("certificates", "[]"))
-                    if (history.length() == 0) Text("Belum ada sertifikat.")
-                    var qrInput by rememberSaveable { mutableStateOf("") }
-                    var qrFeedback by remember { mutableStateOf("") }
-                    OutlinedTextField(
-                        value = qrInput,
-                        onValueChange = { qrInput = it; qrFeedback = "" },
-                        label = { Text("Isi QR sertifikat") },
-                        colors = karirInputColors(),
-                        modifier = Modifier.fillMaxWidth()
-                    )
-                    OutlinedButton(colors = trainingButtonColors, onClick = {
-                        val known = (0 until history.length()).mapNotNull { index ->
-                            val record = history.optJSONObject(index) ?: return@mapNotNull null
-                            runCatching {
-                                TrainingCertificateIdentity.payload(
-                                    record.optString("id"), record.optString("courseId"),
-                                    record.optString("date"), record.optInt("score")
-                                )
-                            }.getOrNull()
+                    val latest = history.optJSONObject(history.length() - 1)
+                    val ink = darkTraining
+                    val blue = Color(0xFF0969B9)
+                    val gold = Color(0xFFE5A728)
+                    Text("Riwayat Sertifikat", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = ink)
+                    Text("Kumpulan sertifikat pelatihan yang Anda peroleh di KarirMate.", color = ink, fontSize = 14.sp)
+                    TrainingCard {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text("✦", fontSize = 32.sp, color = blue)
+                            Spacer(Modifier.width(10.dp))
+                            Column(Modifier.weight(1f)) {
+                                Text("Syarat Mendapatkan Sertifikat", fontWeight = FontWeight.ExtraBold, color = ink)
+                                Text("Selesaikan tahapan yang dipersyaratkan untuk program sertifikat terkait.", fontSize = 12.sp, color = ink)
+                            }
                         }
-                        qrFeedback = if (TrainingCertificateIdentity.verifyLocal(qrInput.trim(), known))
-                            "Cocok dengan riwayat pada perangkat ini."
-                        else "Tidak ditemukan di perangkat ini; belum ada registri online."
-                    }) { Text("Periksa Identitas Sertifikat") }
-                    if (qrFeedback.isNotBlank()) Text(qrFeedback)
-                    (history.length() - 1 downTo 0).forEach { i ->
-                        val item = history.getJSONObject(i)
-                        TrainingCard {
-                            Text(item.optString("course"), fontWeight = FontWeight.Bold)
-                            Text("${item.optString("name")} • ${item.optString("date")}")
-                            TextButton(onClick = { certificate = item; stage = "certificate" }) { Text("Buka Sertifikat") }
+                        listOf(
+                            Triple("Psikotes", "Tes gabungan kepribadian, logika, numerik, dan verbal", "Status belum terhubung"),
+                            Triple("Pelatihan Kerja", "Level Basic sampai Advance", if (latest != null) "Ada sertifikat pelatihan" else "Belum ada sertifikat"),
+                            Triple("Interview AI", "Simulasi wawancara kerja", "Status belum terhubung")
+                        ).forEach { (title, subtitle, status) ->
+                            Surface(shape = RoundedCornerShape(12.dp), color = screenCanvas(Color(0xFFF0F7FC)), border = BorderStroke(1.dp, screenCanvas(Color(0xFFD2E3F0)))) {
+                                Column(Modifier.fillMaxWidth().padding(12.dp)) {
+                                    Text(title, fontWeight = FontWeight.Bold, color = ink)
+                                    Text(subtitle, fontSize = 12.sp, color = ink)
+                                    Text(status, fontSize = 12.sp, color = if (status.startsWith("Ada")) tealTraining else blue)
+                                }
+                            }
+                        }
+                        Text("Status tidak otomatis dianggap lulus. Sertifikat pelatihan bukan sertifikasi resmi BNSP.", fontSize = 11.sp, color = ink)
+                    }
+                    TrainingCard {
+                        Text("★ Sertifikat Terbaru", color = blue, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold)
+                        if (latest == null) {
+                            Text("Belum ada sertifikat. Selesaikan pelatihan untuk mendapatkannya.", color = ink)
+                        } else {
+                            Text(latest.optString("course", "Sertifikat Pelatihan"), fontWeight = FontWeight.Bold, color = ink)
+                            Text("Nama: ${latest.optString("name", "-")}", color = ink)
+                            Text("Tanggal terbit: ${latest.optString("date", "-")}", color = ink)
+                            Text("Nomor sertifikat: ${latest.optString("id", "-")}", color = ink)
+                            Text("Status: ${if (latest.optBoolean("serverRegistered")) "Terdaftar server" else "Tersimpan di perangkat; belum diverifikasi online"}", color = ink, fontSize = 12.sp)
+                            Button(onClick = { certificate = latest; stage = "certificate" }, colors = ButtonDefaults.buttonColors(containerColor = blue)) {
+                                Text("Lihat Sertifikat")
+                            }
+                            Text("Unduh PDF tersedia pada tampilan sertifikat. Bagikan setelah ekspor PDF melalui aplikasi berbagi Android.", fontSize = 12.sp, color = ink)
                         }
                     }
-                    OutlinedButton(
-                        colors = trainingButtonColors,
-                        shape = RoundedCornerShape(12.dp),
-                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
-                        onClick = { stage = "catalog" }
-                    ) { Text("Kembali ke Katalog", fontWeight = FontWeight.SemiBold) }
+                    TrainingCard {
+                        Text("Verifikasi Sertifikat", fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, color = ink)
+                        Text("Masukkan kode QR pada sertifikat untuk memeriksa identitas yang tersimpan di perangkat.", color = ink, fontSize = 12.sp)
+                        var qrInput by rememberSaveable { mutableStateOf("") }
+                        var qrFeedback by remember { mutableStateOf("") }
+                        OutlinedTextField(
+                            value = qrInput,
+                            onValueChange = { qrInput = it; qrFeedback = "" },
+                            label = { Text("Isi QR sertifikat") },
+                            colors = karirInputColors(),
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                        Button(onClick = {
+                            val known = (0 until history.length()).mapNotNull { index ->
+                                val record = history.optJSONObject(index) ?: return@mapNotNull null
+                                runCatching { TrainingCertificateIdentity.payload(
+                                    record.optString("id"), record.optString("courseId"),
+                                    record.optString("date"), record.optInt("score")
+                                ) }.getOrNull()
+                            }
+                            qrFeedback = if (TrainingCertificateIdentity.verifyLocal(qrInput.trim(), known))
+                                "Cocok dengan riwayat lokal. Belum merupakan verifikasi online."
+                            else "Tidak ditemukan pada riwayat lokal perangkat ini."
+                        }, colors = ButtonDefaults.buttonColors(containerColor = blue)) {
+                            Text("Periksa Sertifikat")
+                        }
+                        if (qrFeedback.isNotBlank()) Text(qrFeedback, color = ink)
+                    }
+                    if (history.length() > 1) {
+                        Text("Sertifikat Lainnya", fontWeight = FontWeight.Bold, color = ink)
+                        (history.length() - 2 downTo 0).forEach { i ->
+                            val item = history.optJSONObject(i) ?: return@forEach
+                            TrainingCard {
+                                Text(item.optString("course"), fontWeight = FontWeight.Bold, color = ink)
+                                Text("${item.optString("name")} • ${item.optString("date")}", color = ink)
+                                TextButton(onClick = { certificate = item; stage = "certificate" }) { Text("Lihat Sertifikat") }
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -36,6 +36,81 @@ import java.text.NumberFormat
 import java.util.Locale
 import java.util.UUID
 
+// Revision #9: UI-only payroll calculator. Financial estimates use the existing PayrollCalculator.
+private val salaryBlue = Color(0xFF0D6EBB)
+
+@Composable
+private fun SalaryCard(content: @Composable ColumnScope.() -> Unit) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(containerColor = ScreenSurface),
+        shape = RoundedCornerShape(18.dp),
+        border = BorderStroke(1.dp, screenCanvas(Color(0xFFD0E2F0))),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+    ) {
+        Column(
+            modifier = Modifier.fillMaxWidth().padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+            content = content
+        )
+    }
+}
+
+@Composable
+private fun SalaryNumberField(
+    label: String,
+    value: String,
+    onChange: (String) -> Unit,
+    hint: String = "",
+    modifier: Modifier = Modifier
+) {
+    val textColor = MaterialTheme.colorScheme.onSurface
+    val secondary = screenCanvas(Color(0xFF58718B), Color(0xFFB5CCDE))
+    val fieldBg = screenCanvas(Color(0xFFFFFFFF), Color(0xFF263950))
+    val cardBorder = screenCanvas(Color(0xFFBFDAEC), Color(0xFF496176))
+    Column(modifier = modifier.fillMaxWidth(), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+        Text(label, color = textColor, fontWeight = FontWeight.SemiBold, fontSize = 13.sp)
+        OutlinedTextField(
+            value = value,
+            onValueChange = { entered ->
+                // Monetary amounts may be written as 5000000 or 5.000.000; never accept a sign.
+                if (entered.length <= 17 && entered.all { it.isDigit() || it == '.' || it == ' ' }) onChange(entered)
+            },
+            modifier = Modifier.fillMaxWidth(),
+            singleLine = true,
+            shape = RoundedCornerShape(12.dp),
+            keyboardOptions = androidx.compose.foundation.text.KeyboardOptions(
+                keyboardType = androidx.compose.ui.text.input.KeyboardType.Number
+            ),
+            placeholder = { Text("0", color = secondary) },
+            colors = OutlinedTextFieldDefaults.colors(
+                focusedTextColor = textColor,
+                unfocusedTextColor = textColor,
+                focusedLabelColor = textColor,
+                unfocusedLabelColor = secondary,
+                cursorColor = salaryBlue,
+                focusedBorderColor = salaryBlue,
+                unfocusedBorderColor = cardBorder,
+                focusedContainerColor = fieldBg,
+                unfocusedContainerColor = fieldBg
+            )
+        )
+        if (hint.isNotBlank()) Text(hint, color = secondary, fontSize = 11.sp)
+    }
+}
+
+@Composable
+private fun SalaryAmountRow(label: String, value: String, emphasize: Boolean = false) {
+    val textColor = MaterialTheme.colorScheme.onSurface
+    Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+        Text(label, modifier = Modifier.weight(1f), color = textColor, fontSize = 12.sp)
+        Text(
+            value, color = if (emphasize) screenCanvas(salaryBlue, Color(0xFF78CDFF)) else textColor,
+            fontSize = 12.sp, fontWeight = if (emphasize) FontWeight.ExtraBold else FontWeight.SemiBold
+        )
+    }
+}
+
 @Composable
 fun SalaryCalculatorScreen() {
     var gross by rememberSaveable { mutableStateOf("") }
@@ -43,39 +118,45 @@ fun SalaryCalculatorScreen() {
     var hours by rememberSaveable { mutableStateOf("0") }
     var health by rememberSaveable { mutableStateOf("") }
     var jht by rememberSaveable { mutableStateOf("") }
-    var pension by rememberSaveable { mutableStateOf("0") }
+    var pension by rememberSaveable { mutableStateOf("") }
     var ptkp by rememberSaveable { mutableStateOf("54000000") }
     var months by rememberSaveable { mutableStateOf("12") }
     var day by rememberSaveable { mutableStateOf(PayrollCalculator.OvertimeDay.WORKDAY.name) }
+    var advancedVisible by rememberSaveable { mutableStateOf(false) }
     var result by remember { mutableStateOf<PayrollCalculator.Result?>(null) }
     var error by remember { mutableStateOf("") }
     val rupiah = remember { NumberFormat.getCurrencyInstance(Locale("id", "ID")) }
+    val ink = MaterialTheme.colorScheme.onSurface
+    val muted = screenCanvas(Color(0xFF58718B), Color(0xFFB5CCDE))
 
+    fun amount(raw: String, required: Boolean = false): Long {
+        val clean = raw.replace(".", "").replace(" ", "")
+        require(clean.isNotEmpty() || !required) { "Isi nominal penghasilan dan dasar lembur terlebih dahulu." }
+        return if (clean.isEmpty()) 0L else clean.toLongOrNull() ?: kotlin.error("Nominal terlalu besar atau tidak valid.")
+    }
     fun calculateEstimate() {
         try {
-            fun number(s: String) = s.trim().toLongOrNull() ?: kotlin.error("Isi angka rupiah tanpa titik/koma.")
             result = PayrollCalculator.calculate(
                 PayrollCalculator.Input(
-                    number(gross),
-                    number(base),
-                    hours.toIntOrNull() ?: kotlin.error("Jam tidak valid."),
-                    PayrollCalculator.OvertimeDay.valueOf(day),
-                    number(health),
-                    number(jht),
-                    number(pension),
-                    number(ptkp),
-                    months.toIntOrNull() ?: kotlin.error("Masa kerja tidak valid."),
-                    number(base)
+                    monthlyGross = amount(gross, required = true),
+                    overtimeBase = amount(base, required = true),
+                    overtimeHours = hours.replace(" ", "").toIntOrNull() ?: kotlin.error("Jam lembur harus berupa angka."),
+                    overtimeDay = PayrollCalculator.OvertimeDay.valueOf(day),
+                    bpjsHealthBase = amount(health),
+                    jhtBase = amount(jht),
+                    pensionBase = amount(pension),
+                    ptkp = amount(ptkp),
+                    serviceMonths = months.toIntOrNull() ?: kotlin.error("Masa kerja harus berupa angka."),
+                    thrBase = amount(base, required = true)
                 )
             )
             error = ""
-        } catch (e: Exception) {
-            error = e.message ?: "Input tidak valid."
+        } catch (ex: Exception) {
+            error = ex.message ?: "Input tidak valid. Periksa nominal dan jenis hari lembur."
             result = null
         }
     }
-
-    fun applyQuickSimulation() {
+    fun example() {
         gross = "5000000"
         base = "5000000"
         hours = "2"
@@ -85,179 +166,171 @@ fun SalaryCalculatorScreen() {
         ptkp = "54000000"
         months = "12"
         day = PayrollCalculator.OvertimeDay.WORKDAY.name
+        advancedVisible = true
         calculateEstimate()
     }
+    fun reset() {
+        gross = ""
+        base = ""
+        hours = "0"
+        health = ""
+        jht = ""
+        pension = ""
+        ptkp = "54000000"
+        months = "12"
+        day = PayrollCalculator.OvertimeDay.WORKDAY.name
+        advancedVisible = false
+        result = null
+        error = ""
+    }
 
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(KarirPageGradient)
+    Column(
+        Modifier.fillMaxSize().background(KarirPageGradient).verticalScroll(rememberScrollState())
+            .padding(horizontal = 16.dp, vertical = 16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Column(
-            Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState())
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp)
+        // Parent app shell provides the only back button and bottom navigation.
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(20.dp),
+            colors = CardDefaults.cardColors(containerColor = salaryBlue)
         ) {
-            KarirMateSectionHero("Kalkulator Gaji", "Simulasikan gaji, lembur, BPJS, pajak, dan THR secara transparan.")
-
-            Card(
-                onClick = ::applyQuickSimulation,
-                colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-                shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("Simulasi Cepat", fontWeight = FontWeight.Bold, fontSize = 16.sp, color = KarirTextDark)
-                    Text("Coba angka simulasi standar, lalu sesuaikan dengan nominal slip gaji Anda.", fontSize = 12.sp, color = KarirTextMuted)
-                    OutlinedButton(
-                        onClick = ::applyQuickSimulation,
-                        shape = RoundedCornerShape(10.dp),
-                        border = BorderStroke(1.dp, KarirOrange),
-                        colors = ButtonDefaults.outlinedButtonColors(
-                            containerColor = screenCanvas(Color(0xFFFFF7F2)),
-                            contentColor = MaterialTheme.colorScheme.primary
-                        )
-                    ) {
-                        Text("Isi Contoh Rp5 Juta", fontWeight = FontWeight.Bold, fontSize = 12.5.sp)
-                    }
-                }
-            }
-
-            Card(
-                colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-                shape = RoundedCornerShape(16.dp),
-                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Text(
-                        "Input Komponen Gaji",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp,
-                        color = KarirTextDark
+            Column(
+                Modifier.fillMaxWidth().background(
+                    androidx.compose.ui.graphics.Brush.horizontalGradient(
+                        listOf(Color(0xFF075596), Color(0xFF0A79CD), Color(0xFF22BFB5))
                     )
-                    Text(
-                        "Estimasi PPh 21 tahunan mengacu lapisan tarif UU HPP.",
-                        fontSize = 11.5.sp,
-                        color = KarirTextMuted
-                    )
-
-                    AppInput("Penghasilan bruto pajak per bulan (Rp)", gross, { gross = it; result = null })
-                    AppInput("Upah dasar lembur / THR (Rp)", base, { base = it; result = null })
-                    AppInput("Jam lembur dalam satu hari", hours, { hours = it; result = null })
-
-                    Text("Jenis Hari Lembur:", fontWeight = FontWeight.SemiBold, fontSize = 12.5.sp, color = KarirTextDark)
-                    listOf(
-                        PayrollCalculator.OvertimeDay.WORKDAY to "Hari kerja biasa",
-                        PayrollCalculator.OvertimeDay.REST_FIVE_DAY_WEEK to "Hari istirahat (minggu 5 hari kerja)",
-                        PayrollCalculator.OvertimeDay.REST_SIX_DAY_WEEK to "Hari istirahat (minggu 6 hari kerja)",
-                        PayrollCalculator.OvertimeDay.SHORT_DAY_REST to "Istirahat hari terpendek (minggu 6 hari)"
-                    ).forEach { (value, label) ->
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier.fillMaxWidth().selectable(
-                                selected = day == value.name,
-                                onClick = { day = value.name; result = null },
-                                role = Role.RadioButton
-                            ).padding(vertical = 2.dp)
-                        ) {
-                            RadioButton(
-                                selected = day == value.name,
-                                onClick = null,
-                                colors = RadioButtonDefaults.colors(
-                                    selectedColor = KarirOrange,
-                                    unselectedColor = MaterialTheme.colorScheme.onSurfaceVariant
-                                )
-                            )
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text(label, fontSize = 12.5.sp, color = KarirTextDark)
-                        }
-                    }
-
-                    HorizontalDivider(color = screenCanvas(Color(0xFFC6DFE8)))
-
-                    AppInput("Dasar iuran BPJS Kesehatan (0 jika tidak ikut)", health, { health = it; result = null })
-                    AppInput("Dasar iuran JHT (0 jika tidak ikut)", jht, { jht = it; result = null })
-                    AppInput("Dasar iuran JP setelah plafon (0 jika tidak ikut)", pension, { pension = it; result = null })
-                    AppInput("PTKP tahunan sesuai status pajak (Rp)", ptkp, { ptkp = it; result = null })
-                    AppInput("Masa kerja untuk THR (bulan penuh)", months, { months = it; result = null })
-
-                    Button(
-                        onClick = ::calculateEstimate,
-                        modifier = Modifier.fillMaxWidth(),
-                        shape = RoundedCornerShape(12.dp),
-                        colors = karirButtonColors()
-                    ) {
-                        Text("Hitung Estimasi Gaji", fontWeight = FontWeight.Bold, fontSize = 14.sp)
-                    }
-
-                    if (error.isNotBlank()) {
-                        Text(error, color = MaterialTheme.colorScheme.error, fontSize = 12.sp)
-                    }
-                }
+                ).padding(20.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Text("🧮 Kalkulator Gaji + Lembur", fontWeight = FontWeight.ExtraBold,
+                    fontSize = 23.sp, color = Color.White)
+                Text("Hitung estimasi gaji diterima, upah lembur, BPJS, PPh 21 dan THR.",
+                    color = Color.White, fontSize = 13.sp)
+                Text("Perhitungan simulasi, bukan slip gaji resmi perusahaan.",
+                    color = Color(0xFFE1F8FF), fontSize = 11.sp)
             }
+        }
 
-            result?.let { r ->
-                Card(
-                    colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-                    shape = RoundedCornerShape(16.dp),
-                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
-                    elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
-                    modifier = Modifier.fillMaxWidth()
+        SalaryCard {
+            Text("⚡ Simulasi Cepat", color = ink, fontWeight = FontWeight.ExtraBold, fontSize = 18.sp)
+            Text("Coba contoh gaji Rp5 juta dengan lembur 2 jam pada hari kerja.",
+                color = muted, fontSize = 12.sp)
+            Button(
+                onClick = ::example,
+                modifier = Modifier.fillMaxWidth().heightIn(min = 50.dp),
+                colors = ButtonDefaults.buttonColors(containerColor = salaryBlue),
+                shape = RoundedCornerShape(12.dp)
+            ) { Text("Coba Simulasi Rp5.000.000", color = Color.White, fontWeight = FontWeight.Bold) }
+        }
+
+        SalaryCard {
+            Text("💼 Komponen Penghasilan", color = ink, fontSize = 18.sp, fontWeight = FontWeight.ExtraBold)
+            SalaryNumberField("Gaji bruto per bulan (Rp)", gross, { gross = it; result = null })
+            SalaryNumberField("Dasar perhitungan lembur dan THR (Rp)", base, { base = it; result = null },
+                "Gunakan dasar upah sesuai komponen gaji yang berlaku.")
+        }
+
+        SalaryCard {
+            Text("⏱️ Perhitungan Lembur", color = ink, fontSize = 18.sp, fontWeight = FontWeight.ExtraBold)
+            SalaryNumberField("Total jam lembur dalam satu hari", hours, { hours = it; result = null })
+            Text("Jenis hari lembur", color = ink, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+            listOf(
+                PayrollCalculator.OvertimeDay.WORKDAY to "Hari kerja biasa",
+                PayrollCalculator.OvertimeDay.REST_FIVE_DAY_WEEK to "Hari istirahat (5 hari kerja/minggu)",
+                PayrollCalculator.OvertimeDay.REST_SIX_DAY_WEEK to "Hari istirahat (6 hari kerja/minggu)",
+                PayrollCalculator.OvertimeDay.SHORT_DAY_REST to "Hari istirahat terpendek (6 hari kerja)"
+            ).forEach { (option, label) ->
+                Row(
+                    modifier = Modifier.fillMaxWidth().selectable(
+                        selected = day == option.name,
+                        onClick = { day = option.name; result = null },
+                        role = Role.RadioButton
+                    ).padding(vertical = 3.dp),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                        Surface(
-                            shape = RoundedCornerShape(10.dp),
-                            color = screenCanvas(Color(0xFFE6F5F5)),
-                            border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8)))
-                        ) {
-                            Text(
-                                "ESTIMASI GAJI DITERIMA (TAKE HOME PAY)",
-                                color = MaterialTheme.colorScheme.primary,
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 11.sp,
-                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-                            )
-                        }
-                        Text(
-                            rupiah.format(r.monthlyTakeHomeEstimate),
-                            fontSize = 26.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = KarirTextDark
-                        )
-                        Text("Estimasi per bulan, belum termasuk THR tahunan.", fontSize = 12.sp, color = KarirTextMuted)
-
-                        HorizontalDivider(color = screenCanvas(Color(0xFFC6DFE8)))
-
-                        listOf(
-                            "Upah lembur hari ini" to r.overtime,
-                            "BPJS Kesehatan pekerja" to r.health,
-                            "JHT pekerja" to r.jht,
-                            "JP pekerja" to r.pension,
-                            "THR bruto" to r.thr,
-                            "Estimasi PPh 21 setahun" to r.annualTax,
-                            "Rata-rata PPh 21 bulanan" to r.monthlyTaxEstimate,
-                            "Estimasi diterima bulan ini" to r.monthlyTakeHomeEstimate
-                        ).forEach { (label, value) ->
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween
-                            ) {
-                                Text(label, fontSize = 12.sp, color = KarirTextMuted)
-                                Text(rupiah.format(value), fontSize = 12.sp, fontWeight = FontWeight.SemiBold, color = KarirTextDark)
-                            }
-                        }
-                    }
+                    RadioButton(
+                        selected = day == option.name, onClick = null,
+                        colors = RadioButtonDefaults.colors(selectedColor = salaryBlue)
+                    )
+                    Spacer(Modifier.width(6.dp))
+                    Text(label, color = ink, fontSize = 12.sp)
                 }
             }
         }
+
+        SalaryCard {
+            OutlinedButton(
+                onClick = { advancedVisible = !advancedVisible },
+                modifier = Modifier.fillMaxWidth(),
+                border = BorderStroke(1.dp, salaryBlue),
+                shape = RoundedCornerShape(12.dp)
+            ) {
+                Text(if (advancedVisible) "Sembunyikan BPJS, Pajak & THR  ▲" else "Atur BPJS, Pajak & THR  ▼",
+                    color = ink, fontWeight = FontWeight.Bold)
+            }
+            if (advancedVisible) {
+                Text("Potongan BPJS & komponen pajak", color = ink, fontWeight = FontWeight.Bold)
+                SalaryNumberField("Dasar iuran BPJS Kesehatan (Rp)", health, { health = it; result = null }, "Kosong atau 0 = tidak dihitung")
+                SalaryNumberField("Dasar iuran JHT (Rp)", jht, { jht = it; result = null }, "Kosong atau 0 = tidak dihitung")
+                SalaryNumberField("Dasar iuran Jaminan Pensiun (Rp)", pension, { pension = it; result = null }, "Isi dasar yang sudah memperhitungkan batas upah")
+                SalaryNumberField("PTKP tahunan (Rp)", ptkp, { ptkp = it; result = null })
+                SalaryNumberField("Masa kerja untuk THR (bulan)", months, { months = it; result = null })
+            } else {
+                Text("Buka untuk mengisi dasar BPJS, PTKP, dan masa kerja THR. Nilai kosong BPJS dianggap nol.",
+                    color = muted, fontSize = 12.sp)
+            }
+        }
+
+        Button(
+            onClick = ::calculateEstimate,
+            modifier = Modifier.fillMaxWidth().heightIn(min = 54.dp),
+            shape = RoundedCornerShape(14.dp),
+            colors = ButtonDefaults.buttonColors(containerColor = salaryBlue)
+        ) { Text("Hitung Estimasi Gaji", color = Color.White, fontWeight = FontWeight.ExtraBold, fontSize = 16.sp) }
+        if (error.isNotBlank()) {
+            Surface(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(12.dp),
+                color = screenCanvas(Color(0xFFFFEDED), Color(0xFF4A252A))
+            ) { Text(error, Modifier.padding(12.dp), color = screenCanvas(Color(0xFF9B1C1C), Color(0xFFFFCBCB)), fontSize = 12.sp) }
+        }
+
+        result?.let { r ->
+            SalaryCard {
+                Text("✅ Hasil Estimasi", color = ink, fontWeight = FontWeight.ExtraBold, fontSize = 18.sp)
+                Surface(
+                    shape = RoundedCornerShape(14.dp),
+                    color = screenCanvas(Color(0xFFE7F3FD), Color(0xFF1B4264))
+                ) {
+                    Column(Modifier.fillMaxWidth().padding(16.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                        Text("PERKIRAAN GAJI DITERIMA", color = ink, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                        Text(rupiah.format(r.monthlyTakeHomeEstimate), color = ink,
+                            fontWeight = FontWeight.ExtraBold, fontSize = 27.sp)
+                        Text("Perhitungan estimasi bulanan, tidak termasuk pencairan THR.",
+                            fontSize = 11.sp, color = muted)
+                    }
+                }
+                SalaryAmountRow("Upah lembur", rupiah.format(r.overtime))
+                SalaryAmountRow("Potongan BPJS Kesehatan", rupiah.format(r.health))
+                SalaryAmountRow("Potongan JHT", rupiah.format(r.jht))
+                SalaryAmountRow("Potongan JP", rupiah.format(r.pension))
+                SalaryAmountRow("Estimasi PPh 21 bulanan (rata-rata)", rupiah.format(r.monthlyTaxEstimate))
+                HorizontalDivider(color = screenCanvas(Color(0xFFD0E2F0)))
+                SalaryAmountRow("Estimasi PPh 21 tahunan", rupiah.format(r.annualTax))
+                SalaryAmountRow("Estimasi THR bruto", rupiah.format(r.thr))
+                HorizontalDivider(color = screenCanvas(Color(0xFFD0E2F0)))
+                SalaryAmountRow("Gaji diterima per bulan", rupiah.format(r.monthlyTakeHomeEstimate), emphasize = true)
+                Text("PPh 21 menggunakan estimasi tahunan yang dirata-ratakan; potongan aktual bulanan dapat berbeda karena metode TER dan kebijakan penggajian.",
+                    color = muted, fontSize = 11.sp)
+            }
+        }
+        OutlinedButton(onClick = ::reset, modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(12.dp)) {
+            Text("Atur Ulang", color = ink)
+        }
     }
 }
+
 
 @Composable
 fun CareerLettersScreen(onApplicationLetter: () -> Unit) {

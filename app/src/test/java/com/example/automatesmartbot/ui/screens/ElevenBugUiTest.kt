@@ -59,26 +59,26 @@ class ElevenBugUiTest {
         assertEquals(colors.onSurface, results.first().layoutInput.style.color)
     }
 
-    @Test fun quickSimulationCardAndButtonRecalculateAfterEditsAndErrors() {
+    @Test fun quickSimulationButtonCalculatesAfterEditsAndErrors() {
         compose.setContent { KarirMateTheme(mode) { SalaryCalculatorScreen() } }
         val expected = PayrollCalculator.calculate(PayrollCalculator.Input(
             5000000, 5000000, 2, PayrollCalculator.OvertimeDay.WORKDAY,
             5000000, 5000000, 5000000, 54000000, 12, 5000000))
         val amount = NumberFormat.getCurrencyInstance(Locale("id", "ID")).format(expected.monthlyTakeHomeEstimate)
         bothModes {
-            compose.onNodeWithText("Simulasi Cepat").performScrollTo().performClick()
+            compose.onNodeWithText("Coba Simulasi Rp5.000.000").performScrollTo().performClick()
             input().performScrollTo().assertTextEquals("5000000")
             assertInputInk()
-            compose.onNodeWithText("ESTIMASI GAJI DITERIMA (TAKE HOME PAY)").performScrollTo().assertExists()
+            compose.onNodeWithText("PERKIRAAN GAJI DITERIMA").performScrollTo().assertExists()
             compose.onAllNodesWithText(amount).assertCountEquals(2)
-            input().performScrollTo().performTextReplacement("invalid")
+            input().performScrollTo().performTextReplacement("")
             compose.onNodeWithText("Hitung Estimasi Gaji").performScrollTo().performClick()
-            compose.onNodeWithText("Isi angka rupiah tanpa titik/koma.").performScrollTo().assertExists()
-            compose.onNodeWithText("Isi Contoh Rp5 Juta").performScrollTo().performClick()
-            compose.onNodeWithText("Isi angka rupiah tanpa titik/koma.").assertDoesNotExist()
+            compose.onNodeWithText("Isi nominal penghasilan dan dasar lembur terlebih dahulu.").performScrollTo().assertExists()
+            compose.onNodeWithText("Coba Simulasi Rp5.000.000").performScrollTo().performClick()
+            compose.onNodeWithText("Isi nominal penghasilan dan dasar lembur terlebih dahulu.").assertDoesNotExist()
             compose.onAllNodesWithText(amount).assertCountEquals(2)
-            compose.onNodeWithText("Hari istirahat (minggu 5 hari kerja)").performScrollTo().performClick().assertIsSelected()
-            compose.onNodeWithText("Simulasi Cepat").performScrollTo().performClick()
+            compose.onNodeWithText("Hari istirahat (5 hari kerja/minggu)").performScrollTo().performClick().assertIsSelected()
+            compose.onNodeWithText("Coba Simulasi Rp5.000.000").performScrollTo().performClick()
             compose.onNodeWithText("Hari kerja biasa").performScrollTo().assertIsSelected()
         }
     }
@@ -86,6 +86,7 @@ class ElevenBugUiTest {
     @Test fun everySalaryInputUsesReadableInkFocusedAndUnfocused() {
         lateinit var focus: FocusManager
         compose.setContent { KarirMateTheme(mode) { focus = LocalFocusManager.current; SalaryCalculatorScreen() } }
+        compose.onNodeWithText("Atur BPJS, Pajak & THR  ▼").performScrollTo().performClick()
         bothModes {
             compose.onAllNodes(hasSetTextAction()).assertCountEquals(8)
             repeat(8) { index ->
