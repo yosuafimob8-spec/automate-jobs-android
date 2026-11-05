@@ -37,7 +37,7 @@ fun FeatureComingSoonScreen(
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFFF5FAFF)),
+            .background(Color(0xFFF5FAFC)),
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
@@ -71,7 +71,7 @@ fun FeatureComingSoonScreen(
                             )
                         }
                         Surface(
-                            color = Color(0xFFE9F5FF),
+                            color = Color(0xFFE8F5F7),
                             shape = RoundedCornerShape(8.dp)
                         ) {
                             Text(
@@ -88,12 +88,12 @@ fun FeatureComingSoonScreen(
                         text = title,
                         fontWeight = FontWeight.Bold,
                         fontSize = 22.sp,
-                        color = Color(0xFF17324D)
+                        color = Color(0xFF243547)
                     )
                     Text(
                         text = description,
                         fontSize = 13.sp,
-                        color = Color(0xFF64748B),
+                        color = Color(0xFF52677A),
                         lineHeight = 19.sp
                     )
                 }
@@ -114,7 +114,7 @@ fun FeatureComingSoonScreen(
                         text = "Yang direncanakan",
                         fontWeight = FontWeight.Bold,
                         fontSize = 14.sp,
-                        color = Color(0xFF17324D)
+                        color = Color(0xFF243547)
                     )
                     bullets.forEach { bullet ->
                         Row(
@@ -132,7 +132,7 @@ fun FeatureComingSoonScreen(
                             Text(
                                 text = bullet,
                                 fontSize = 12.sp,
-                                color = Color(0xFF64748B),
+                                color = Color(0xFF52677A),
                                 lineHeight = 18.sp
                             )
                         }
@@ -166,21 +166,21 @@ fun FeatureComingSoonScreen(
                             text = "Status fitur",
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp,
-                            color = Color(0xFF17324D)
+                            color = Color(0xFF243547)
                         )
                     }
                     Text(
                         text = "Fitur ini sedang disiapkan. Aplikasi tidak membuat data, hasil AI, atau dokumen palsu.",
                         fontSize = 12.sp,
-                        color = Color(0xFF64748B),
+                        color = Color(0xFF52677A),
                         lineHeight = 18.sp
                     )
                     Button(
                         onClick = { },
                         enabled = false,
                         colors = ButtonDefaults.buttonColors(
-                            disabledContainerColor = Color(0xFFE9F5FF),
-                            disabledContentColor = Color(0xFF64748B)
+                            disabledContainerColor = Color(0xFFE8F5F7),
+                            disabledContentColor = Color(0xFF52677A)
                         ),
                         shape = RoundedCornerShape(18.dp),
                         modifier = Modifier
@@ -208,7 +208,7 @@ fun FeatureComingSoonScreen(
                 text = "Belum ada data yang dibuat dari layar ini.",
                 modifier = Modifier.fillMaxWidth(),
                 fontSize = 10.sp,
-                color = Color(0xFF64748B)
+                color = Color(0xFF52677A)
             )
         }
     }
