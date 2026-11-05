@@ -325,7 +325,7 @@ private fun MainDashboardContent(
                 })
             }
             composable(Screen.CareerDocuments.route) {
-                CareerDocumentsScreen(onLegacyDocuments = { navController.navigate(Screen.SuratIzinDokumen.route) { launchSingleTop = true } })
+                CareerDocumentsScreen()
             }
             composable(Screen.CvBuilder.route) {
                 CvBuilderScreen(viewModel = cvViewModel, onBack = cvBack, isPro = isPro)
