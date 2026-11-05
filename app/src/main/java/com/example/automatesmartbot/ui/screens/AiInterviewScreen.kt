@@ -525,7 +525,7 @@ fun AiInterviewScreen(isPro: Boolean = false) {
         }
     } else {
         Column(Modifier.fillMaxSize().background(Color(0xFFF5FAFC))) {
-            Row(Modifier.fillMaxWidth().background(Color.White).border(BorderStroke(0.75.dp, Color(0xFFF1E5DC))).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+            Row(Modifier.fillMaxWidth().background(Color.White).border(BorderStroke(0.75.dp, Color(0xFFC6DFE8))).padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
                 Text("‹", modifier = Modifier.clickable { started = false; showPreparation = true; tts.stop() }, color = ink, style = MaterialTheme.typography.headlineMedium)
                 Spacer(Modifier.width(12.dp))
                 Text(if (interviewer == "male") "👨🏻‍💼" else "👩🏻‍💼", style = MaterialTheme.typography.headlineMedium)
