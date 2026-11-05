@@ -58,7 +58,7 @@ fun LoginScreen(
         Card(
             colors = CardDefaults.cardColors(containerColor = ScreenSurface),
             shape = RoundedCornerShape(20.dp),
-            border = BorderStroke(1.dp, screenCanvas(Color(0xFFFFDEC9))),
+            border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
             elevation = CardDefaults.cardElevation(defaultElevation = 3.dp),
             modifier = Modifier.fillMaxWidth()
         ) {
@@ -72,14 +72,14 @@ fun LoginScreen(
                 )
 
                 Text(
-                    text = "Masuk ke KarirMate",
+                    text = "Masuk ke Akunmu",
                     fontWeight = FontWeight.Bold,
                     fontSize = 22.sp,
                     color = KarirTextDark
                 )
 
                 Text(
-                    text = "Gunakan email dan password terdaftar untuk mengakses layanan pencarian kerja terpercaya.",
+                    text = "Lanjutkan persiapan kariermu",
                     fontSize = 12.5.sp,
                     color = KarirTextMuted,
                     textAlign = androidx.compose.ui.text.style.TextAlign.Center,
@@ -89,7 +89,7 @@ fun LoginScreen(
                 OutlinedTextField(
                     value = email,
                     onValueChange = { email = it },
-                    label = { Text("Email") },
+                    label = { Text("Email atau No. HP") },
                     leadingIcon = { Icon(Icons.Default.Email, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
                     shape = RoundedCornerShape(12.dp),
                     colors = textFieldColors,
@@ -100,7 +100,7 @@ fun LoginScreen(
                 OutlinedTextField(
                     value = password,
                     onValueChange = { password = it },
-                    label = { Text("Password") },
+                    label = { Text("Kata Sandi") },
                     leadingIcon = { Icon(Icons.Default.Lock, contentDescription = null, tint = MaterialTheme.colorScheme.primary) },
                     trailingIcon = {
                         IconButton(onClick = { passwordVisible = !passwordVisible }) {
@@ -123,7 +123,7 @@ fun LoginScreen(
                     horizontalArrangement = Arrangement.End
                 ) {
                     TextButton(onClick = onNavigateForgot) {
-                        Text("Lupa Password?", fontSize = 12.5.sp, color = KarirOrangeDeep, fontWeight = FontWeight.SemiBold)
+                        Text("Lupa kata sandi?", fontSize = 12.5.sp, color = KarirOrangeDeep, fontWeight = FontWeight.SemiBold)
                     }
                 }
 
