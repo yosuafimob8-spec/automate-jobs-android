@@ -26,13 +26,13 @@ val KarirMateLightColors = lightColorScheme(
     primary = RoyalBlue,
     onPrimary = TextWhite,
     primaryContainer = LightSurfaceVariant,
-    onPrimaryContainer = Navy,
+    onPrimaryContainer = Charcoal,
     secondary = Cyan,
-    onSecondary = Navy,
+    onSecondary = Charcoal,
     background = LightBackground,
-    onBackground = Navy,
+    onBackground = Charcoal,
     surface = LightSurface,
-    onSurface = Navy,
+    onSurface = Charcoal,
     surfaceVariant = LightSurfaceVariant,
     onSurfaceVariant = Color(0xFF47627E)
 )
