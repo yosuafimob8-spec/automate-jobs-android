@@ -45,7 +45,7 @@ fun RegisterScreen(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Kembali",
-                            tint = Color.White
+                            tint = Color(0xFF243547)
                         )
                     }
                 },
@@ -124,8 +124,8 @@ fun RegisterScreen(
                         unfocusedBorderColor = Color(0xFF55C6A9),
                         focusedContainerColor = Color(0xFFF5FAFC),
                         unfocusedContainerColor = Color(0xFFF5FAFC),
-                        focusedTextColor = Color.White,
-                        unfocusedTextColor = Color.White
+                        focusedTextColor = Color(0xFF243547),
+                        unfocusedTextColor = Color(0xFF243547)
                     ),
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -142,8 +142,8 @@ fun RegisterScreen(
                         unfocusedBorderColor = Color(0xFF55C6A9),
                         focusedContainerColor = Color(0xFFF5FAFC),
                         unfocusedContainerColor = Color(0xFFF5FAFC),
-                        focusedTextColor = Color.White,
-                        unfocusedTextColor = Color.White
+                        focusedTextColor = Color(0xFF243547),
+                        unfocusedTextColor = Color(0xFF243547)
                     ),
                     modifier = Modifier.fillMaxWidth()
                 )
