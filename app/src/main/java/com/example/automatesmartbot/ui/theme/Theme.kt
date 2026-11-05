@@ -9,7 +9,7 @@ import androidx.compose.ui.graphics.Color
 
 val KarirMateDarkColors = darkColorScheme(
     primary = FreshMint,
-    onPrimary = TextWhite,
+    onPrimary = DarkBackground,
     primaryContainer = PrimaryBlueVariant,
     onPrimaryContainer = TextWhite,
     secondary = LightBlueAccent,
