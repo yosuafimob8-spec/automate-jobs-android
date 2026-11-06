@@ -23,6 +23,13 @@ import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Schedule
+import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Layers
+import androidx.compose.material.icons.filled.CloudUpload
+import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.filled.Security
+import androidx.compose.material.icons.filled.Groups
+import androidx.compose.material.icons.filled.History
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -38,6 +45,8 @@ import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
 import com.example.automatesmartbot.ui.theme.KarirTextDark
 import com.example.automatesmartbot.ui.theme.KarirTextMuted
+import com.example.automatesmartbot.ui.theme.ScreenSurface
+import com.example.automatesmartbot.ui.theme.screenCanvas
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 import org.json.JSONObject
@@ -154,7 +163,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
     LazyColumn(
         Modifier
             .fillMaxSize()
-            .background(KarirPageGradient),
+            .background(com.example.automatesmartbot.ui.theme.ScreenPageGradient),
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
@@ -162,8 +171,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         item {
             Card(
                 shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
+                colors = CardDefaults.cardColors(containerColor = ScreenSurface),
+                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
@@ -175,10 +184,14 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         Surface(
                             shape = RoundedCornerShape(12.dp),
                             color = Color(0xFFE8F5F7),
-                            border = BorderStroke(1.dp, Color(0xFFC6DFE8))
+                            border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8)))
                         ) {
                             Text(
-                                "KARIRMATE • PRO",
+                                "KARIRMATE • " + when (com.example.automatesmartbot.ui.components.LocalMembershipTier.current) {
+                                    com.example.automatesmartbot.ui.components.MembershipTier.PRO -> "PRO"
+                                    com.example.automatesmartbot.ui.components.MembershipTier.FREE -> "FREE"
+                                    else -> "CEK"
+                                },
                                 color = Color(0xFFE65100),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 11.5.sp,
@@ -188,26 +201,25 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                     }
                     Text(
                         "Kirim Lamaran Otomatis",
-                        color = KarirTextDark,
+                        color = com.example.automatesmartbot.ui.theme.ScreenText,
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Bold
                     )
                     Text(
                         "Kelola CV, persetujuan, kandidat perusahaan, dan riwayat pengiriman resmi dalam satu alur terpusat.",
-                        color = KarirTextMuted,
+                        color = com.example.automatesmartbot.ui.theme.ScreenMuted,
                         fontSize = 13.sp
                     )
-                    Surface(
-                        shape = RoundedCornerShape(8.dp),
-                        color = Color(0xFFDCFCE7)
-                    ) {
-                        Text(
-                            "Maksimal 5 email per hari • Aman & Tanpa Duplikasi",
-                            color = Color(0xFF16A34A),
-                            fontWeight = FontWeight.SemiBold,
-                            fontSize = 11.5.sp,
-                            modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
-                        )
+                    Surface(shape = RoundedCornerShape(10.dp), color = Color(0xFFDCFCE7)) {
+                        Row(Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 9.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            Icon(Icons.Default.Security, null, tint = Color(0xFF079B35),
+                                modifier = Modifier.size(19.dp))
+                            Text("Maksimal 5 email per hari • Aman & Tanpa Duplikasi",
+                                color = Color(0xFF07852F), fontWeight = FontWeight.Bold,
+                                fontSize = 11.5.sp, lineHeight = 16.sp)
+                        }
                     }
                 }
             }
@@ -217,8 +229,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         item {
             Card(
                 shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
+                colors = CardDefaults.cardColors(containerColor = ScreenSurface),
+                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(Modifier.fillMaxWidth().padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -227,17 +239,23 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Text(
-                            "Status & Kesiapan",
-                            color = KarirTextDark,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 16.sp
-                        )
-                        TextButton(
-                            onClick = { scope.launch { load() } },
-                            enabled = !busy && isOnline
-                        ) {
-                            Text("Muat Ulang", color = KarirOrangeDeep, fontWeight = FontWeight.SemiBold, fontSize = 12.sp)
+                        Row(verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(9.dp),
+                            modifier = Modifier.weight(1f)) {
+                            Icon(Icons.Default.Layers, contentDescription = null,
+                                tint = Color(0xFF086ABC), modifier = Modifier.size(25.dp))
+                            Text("Status & Kesiapan", color = com.example.automatesmartbot.ui.theme.ScreenText,
+                                fontWeight = FontWeight.ExtraBold, fontSize = 17.sp,
+                                maxLines = 1)
+                        }
+                        TextButton(onClick = { scope.launch { load() } },
+                            enabled = !busy && isOnline,
+                            modifier = Modifier.background(screenCanvas(Color(0xFFE9F5FF)), RoundedCornerShape(13.dp))) {
+                            Icon(Icons.Default.Refresh, contentDescription = null,
+                                tint = KarirOrangeDeep, modifier = Modifier.size(17.dp))
+                            Spacer(Modifier.width(4.dp))
+                            Text("Muat Ulang", color = KarirOrangeDeep,
+                                fontWeight = FontWeight.Bold, fontSize = 11.5.sp)
                         }
                     }
 
@@ -250,17 +268,17 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                     }
 
                     if (message.isNotBlank()) {
-                        Surface(
-                            shape = RoundedCornerShape(8.dp),
-                            color = Color(0xFFFFF7ED),
-                            border = BorderStroke(1.dp, Color(0xFFFFD8B2))
-                        ) {
-                            Text(
-                                message,
-                                color = Color(0xFF9A3412),
-                                fontSize = 12.sp,
-                                modifier = Modifier.padding(10.dp)
-                            )
+                        Surface(shape = RoundedCornerShape(12.dp), color = Color(0xFFFFF7ED),
+                            border = BorderStroke(1.dp, Color(0xFFFFD8B2))) {
+                            Row(Modifier.fillMaxWidth().padding(12.dp),
+                                verticalAlignment = Alignment.Top,
+                                horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                                Icon(Icons.Default.Info, contentDescription = null,
+                                    tint = Color(0xFFE9900C), modifier = Modifier.size(21.dp))
+                                Text(message, color = Color(0xFF9A3412),
+                                    fontWeight = FontWeight.Medium, fontSize = 12.sp,
+                                    lineHeight = 17.sp, modifier = Modifier.weight(1f))
+                            }
                         }
                     }
 
@@ -268,7 +286,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                     Surface(
                         shape = RoundedCornerShape(12.dp),
                         color = Color(0xFFF5FAFC),
-                        border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
+                        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -284,14 +302,14 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                     else "Gmail: ${if (gmailConnected) "Terhubung" else "Belum terhubung"} • Status: ${if (enabled) "Aktif" else "Jeda"}",
                                     fontSize = 12.5.sp,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = KarirTextDark
+                                    color = com.example.automatesmartbot.ui.theme.ScreenText
                                 )
                             }
                             Text(
                                 if (operatorSendAllowed) "Izin operasional tersedia; jadwal pengiriman diverifikasi oleh sistem."
                                 else "Pengiriman produksi memerlukan izin operasional; Anda tetap dapat menyiapkan konfigurasi.",
                                 fontSize = 11.5.sp,
-                                color = KarirTextMuted
+                                color = com.example.automatesmartbot.ui.theme.ScreenMuted
                             )
                             Text(
                                 if (cvUploaded) "✓ CV backend: Tersimpan dan siap dikirim" else "⚠ CV backend: Belum diunggah",
@@ -310,15 +328,22 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                             shape = RoundedCornerShape(12.dp),
                             border = BorderStroke(1.dp, KarirOrange),
                             colors = ButtonDefaults.outlinedButtonColors(
-                                containerColor = Color.White,
+                                containerColor = ScreenSurface,
                                 contentColor = KarirOrange
                             )
                         ) {
+                            Icon(Icons.Default.CloudUpload, contentDescription = null,
+                                modifier = Modifier.size(18.dp))
+                            Spacer(Modifier.width(6.dp))
                             Text("Unggah CV PDF", fontSize = 12.sp, fontWeight = FontWeight.Bold)
                         }
 
                         TextButton(onClick = onNavigateProfil) {
-                            Text("Profil & CV", color = KarirOrangeDeep, fontWeight = FontWeight.SemiBold, fontSize = 12.sp)
+                            Icon(Icons.Default.Person, contentDescription = null,
+                                tint = KarirOrangeDeep, modifier = Modifier.size(18.dp))
+                            Spacer(Modifier.width(4.dp))
+                            Text("Profil & CV", color = KarirOrangeDeep,
+                                fontWeight = FontWeight.SemiBold, fontSize = 12.sp)
                         }
                     }
 
@@ -347,7 +372,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                 }
                             },
                             enabled = isOnline && !busy,
-                            modifier = Modifier.fillMaxWidth(),
+                            modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp),
                             shape = RoundedCornerShape(12.dp),
                             colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
                         ) {
@@ -364,20 +389,22 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         item {
             Card(
                 shape = RoundedCornerShape(16.dp),
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
+                colors = CardDefaults.cardColors(containerColor = ScreenSurface),
+                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                 elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
             ) {
                 Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                    Text(
-                        "Izin & Kontrol Auto Apply",
-                        color = KarirTextDark,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 16.sp
-                    )
+                    Row(verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                        Icon(Icons.Default.Security, contentDescription = null,
+                            tint = Color(0xFF086ABC), modifier = Modifier.size(24.dp))
+                        Text("Izin & Kontrol Auto Apply",
+                            color = com.example.automatesmartbot.ui.theme.ScreenText,
+                            fontWeight = FontWeight.ExtraBold, fontSize = 16.sp)
+                    }
                     Text(
                         "Saya mengizinkan penggunaan CV dan profil untuk mengirim lamaran melalui Gmail, dengan batas maksimal 5 email per hari. Persetujuan berlaku sampai Anda menjeda Auto Apply.",
-                        color = KarirTextMuted,
+                        color = com.example.automatesmartbot.ui.theme.ScreenMuted,
                         fontSize = 12.sp
                     )
 
@@ -394,7 +421,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(
                                 "Saya menyetujui pengiriman otomatis",
-                                color = KarirTextDark,
+                                color = com.example.automatesmartbot.ui.theme.ScreenText,
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Medium
                             )
@@ -483,7 +510,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         shape = RoundedCornerShape(12.dp),
                         border = BorderStroke(1.dp, Color(0xFFE2E8F0)),
                         colors = ButtonDefaults.outlinedButtonColors(
-                            containerColor = Color.White,
+                            containerColor = ScreenSurface,
                             contentColor = KarirTextDark
                         )
                     ) {
@@ -495,25 +522,26 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
 
         // Candidates List
         item {
-            Text(
-                "Kandidat Lamaran",
-                color = KarirTextDark,
-                fontWeight = FontWeight.Bold,
-                fontSize = 16.sp
-            )
+            Row(verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                Icon(Icons.Default.Groups, contentDescription = null,
+                    tint = Color(0xFF086ABC), modifier = Modifier.size(23.dp))
+                Text("Kandidat Lamaran", color = com.example.automatesmartbot.ui.theme.ScreenText,
+                    fontWeight = FontWeight.ExtraBold, fontSize = 16.sp)
+            }
         }
 
         if (candidates.isEmpty()) {
             item {
                 Card(
                     shape = RoundedCornerShape(14.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
+                    colors = CardDefaults.cardColors(containerColor = ScreenSurface),
+                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
                         "Belum ada kandidat lowongan yang dijadwalkan.",
-                        color = KarirTextMuted,
+                        color = com.example.automatesmartbot.ui.theme.ScreenMuted,
                         fontSize = 12.5.sp,
                         modifier = Modifier.padding(16.dp)
                     )
@@ -524,8 +552,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                 val c = candidates[index]
                 Card(
                     shape = RoundedCornerShape(14.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
+                    colors = CardDefaults.cardColors(containerColor = ScreenSurface),
+                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                     elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -534,7 +562,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                             "${c.optString("company")} • ${c.optString("position")}",
                             fontWeight = FontWeight.Bold,
                             fontSize = 14.sp,
-                            color = KarirTextDark
+                            color = com.example.automatesmartbot.ui.theme.ScreenText
                         )
                         Text(
                             c.optString("email"),
@@ -554,25 +582,26 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
 
         // Deliveries History
         item {
-            Text(
-                "Riwayat Pengiriman",
-                color = KarirTextDark,
-                fontWeight = FontWeight.Bold,
-                fontSize = 16.sp
-            )
+            Row(verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                Icon(Icons.Default.History, contentDescription = null,
+                    tint = Color(0xFF086ABC), modifier = Modifier.size(23.dp))
+                Text("Riwayat Pengiriman", color = com.example.automatesmartbot.ui.theme.ScreenText,
+                    fontWeight = FontWeight.ExtraBold, fontSize = 16.sp)
+            }
         }
 
         if (deliveries.isEmpty()) {
             item {
                 Card(
                     shape = RoundedCornerShape(14.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
+                    colors = CardDefaults.cardColors(containerColor = ScreenSurface),
+                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
                         "Belum ada riwayat pengiriman dari server.",
-                        color = KarirTextMuted,
+                        color = com.example.automatesmartbot.ui.theme.ScreenMuted,
                         fontSize = 12.5.sp,
                         modifier = Modifier.padding(16.dp)
                     )
@@ -585,8 +614,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                 val confirmed = AutoApplyConfirmation.sent(d.optString("status"), gmailId)
                 Card(
                     shape = RoundedCornerShape(14.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
-                    border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
+                    colors = CardDefaults.cardColors(containerColor = ScreenSurface),
+                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
                     elevation = CardDefaults.cardElevation(defaultElevation = 1.dp),
                     modifier = Modifier.fillMaxWidth()
                 ) {
@@ -602,7 +631,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                 d.optString("company"),
                                 fontWeight = FontWeight.Bold,
                                 fontSize = 14.sp,
-                                color = KarirTextDark
+                                color = com.example.automatesmartbot.ui.theme.ScreenText
                             )
                             Text(
                                 if (confirmed) "Terkirim via Gmail"

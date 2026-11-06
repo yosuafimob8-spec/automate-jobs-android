@@ -68,41 +68,9 @@ fun AppTopBar(
             }
         },
         actions = {
-            // Membership Status Badge
-            Box(
-                modifier = Modifier
-                    .clip(RoundedCornerShape(16.dp))
-                    .background(if (isPro) KarirOrange else screenCanvas(Color(0xFFFFF0E5)))
-                    .padding(horizontal = 10.dp, vertical = 5.dp),
-                contentAlignment = Alignment.Center
-            ) {
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(4.dp)
-                ) {
-                    if (isPro) {
-                        Icon(
-                            imageVector = Icons.Default.WorkspacePremium,
-                            contentDescription = "PRO",
-                            tint = com.example.automatesmartbot.ui.theme.OnKarirOrange,
-                            modifier = Modifier.size(14.dp)
-                        )
-                        Text(
-                            text = "PRO",
-                            color = com.example.automatesmartbot.ui.theme.OnKarirOrange,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 11.sp
-                        )
-                    } else {
-                        Text(
-                            text = "FREE",
-                            color = androidx.compose.material3.MaterialTheme.colorScheme.primary,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 11.sp
-                        )
-                    }
-                }
-            }
+            com.example.automatesmartbot.ui.components.MembershipBadge(
+                style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.LIGHT
+            )
 
             Spacer(modifier = Modifier.width(8.dp))
 

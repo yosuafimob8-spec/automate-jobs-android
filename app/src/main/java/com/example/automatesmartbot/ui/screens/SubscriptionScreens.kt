@@ -21,24 +21,6 @@ private fun price(plan: DemoPlan) = NumberFormat.getIntegerInstance(Locale("id",
 private fun date(time: Long) = SimpleDateFormat("dd MMM yyyy HH:mm", Locale("id", "ID")).format(Date(time))
 
 @Composable
-fun UpgradeProScreen(onCheckout: (Int) -> Unit) {
-    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        Text("Upgrade KarirMate PRO", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-        Text("Simulasi paket langganan. PRO DEMO terpisah dari hak PRO terverifikasi server.")
-        DemoPlans.all.forEachIndexed { index, plan ->
-            Card(Modifier.fillMaxWidth()) {
-                Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                    Text("PRO ${plan.name}", fontWeight = FontWeight.Bold)
-                    Text("${price(plan)} / ${if (plan.days == 1) "24 jam" else "${plan.days} hari"}")
-                    Button(onClick = { onCheckout(index) }, colors = karirButtonColors()) { Text("Pilih paket ${plan.name}") }
-                }
-            }
-        }
-        Text("Tidak ada transaksi uang sungguhan atau pemotongan saldo.")
-    }
-}
-
-@Composable
 fun ProCheckoutScreen(planIndex: Int, onComplete: () -> Unit, store: DemoSubscriptionStore? = null) {
     val context = LocalContext.current
     val subscription = remember(store) { store ?: DemoSubscriptionStore(context) }

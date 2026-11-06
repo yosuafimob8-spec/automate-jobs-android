@@ -199,7 +199,7 @@ fun DashboardScreen(
 ) {
     val status by viewModel.status.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
-    val isPro = status?.isPro == true
+    val isPro = status?.isPro == true && status?.membershipVerified == true
     val displayName = status?.displayName?.takeIf { it.isNotBlank() } ?: "Pengguna"
     val ocean = Color(0xFF2563A6)
     val mint = Color(0xFF55C6A9)
@@ -524,32 +524,11 @@ private fun DashboardTopHeaderSection(
                     verticalAlignment = Alignment.CenterVertically,
                     horizontalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
-                    // PRO Badge Pill
-                    Surface(
-                        shape = RoundedCornerShape(50),
-                        color = KarirOrange,
-                        shadowElevation = 2.dp,
-                        modifier = Modifier.clickable { onNavigate(Screen.Profil.route) }
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(horizontal = 11.dp, vertical = 6.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(4.dp)
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.WorkspacePremium,
-                                contentDescription = "PRO",
-                                tint = com.example.automatesmartbot.ui.theme.OnKarirOrange,
-                                modifier = Modifier.size(14.dp)
-                            )
-                            Text(
-                                text = "PRO",
-                                color = com.example.automatesmartbot.ui.theme.OnKarirOrange,
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 12.sp
-                            )
-                        }
-                    }
+                    // The badge reflects verified account status, not a static PRO icon.
+                    com.example.automatesmartbot.ui.components.MembershipBadge(
+                        modifier = Modifier.clickable { onNavigate(Screen.Profil.route) },
+                        style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.SOLID
+                    )
 
                     // Notification Bell
                     Box(

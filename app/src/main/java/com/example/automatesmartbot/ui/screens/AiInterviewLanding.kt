@@ -80,17 +80,7 @@ internal fun InterviewBrandedHeader(onBack: () -> Unit, isPro: Boolean) {
                 Text("AI Interview", fontSize = 22.sp, fontWeight = FontWeight.ExtraBold, color = Color.White)
                 Text("Latihan Wawancara Kerja dengan AI", fontSize = 11.sp, color = Color.White.copy(alpha = .90f), maxLines = 2)
             }
-            Surface(
-                shape = RoundedCornerShape(50),
-                color = Color(0xFF0A4D86),
-                border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFF6D06C))
-            ) {
-                Text(
-                    if (isPro) "★ PRO" else "♛ PRO",
-                    modifier = Modifier.padding(horizontal = 11.dp, vertical = 8.dp),
-                    color = Color(0xFFFBE59C), fontSize = 12.sp, fontWeight = FontWeight.Bold
-                )
-            }
+            com.example.automatesmartbot.ui.components.MembershipBadge(style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.HEADER)
         }
     }
 }

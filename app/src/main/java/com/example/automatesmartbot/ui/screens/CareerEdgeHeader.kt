@@ -86,17 +86,7 @@ internal fun CareerEdgeHeader(
                     Text(title, fontSize = 20.sp, lineHeight = 23.sp, color = Color.White, fontWeight = FontWeight.ExtraBold, maxLines = 2)
                     Text(subtitle, fontSize = 11.sp, lineHeight = 14.sp, color = Color.White.copy(alpha = .9f), maxLines = 2)
                 }
-                Surface(
-                    shape = RoundedCornerShape(50),
-                    color = Color(0xFF084C87),
-                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFEFD46B))
-                ) {
-                    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(horizontal = 8.dp, vertical = 6.dp)) {
-                        Icon(Icons.Default.WorkspacePremium, contentDescription = null, tint = Color(0xFFFFD66D), modifier = Modifier.size(14.dp))
-                        Spacer(Modifier.width(3.dp))
-                        Text(if (isPro) "PRO" else "PRO", color = Color(0xFFFFE6A6), fontSize = 11.sp, fontWeight = FontWeight.Bold)
-                    }
-                }
+                com.example.automatesmartbot.ui.components.MembershipBadge(style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.HEADER)
                 IconButton(onClick = onProfile, modifier = Modifier.size(36.dp)) {
                     Icon(Icons.Default.Person, contentDescription = "Profil", tint = Color.White, modifier = Modifier.size(23.dp))
                 }

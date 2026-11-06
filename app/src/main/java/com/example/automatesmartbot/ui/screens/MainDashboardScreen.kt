@@ -135,11 +135,9 @@ private fun MainDashboardContent(
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner, sessionToken) {
         val observer = LifecycleEventObserver { _, event ->
-            if (event == Lifecycle.Event.ON_RESUME &&
-                sessionToken != null &&
-                sessionManager?.hasValidSession() != true
-            ) {
-                endSession()
+            if (event == Lifecycle.Event.ON_RESUME && sessionToken != null) {
+                if (sessionManager?.hasValidSession() != true) endSession()
+                else dashboardViewModel.loadStatus() // Refresh after payment, expiration, or account changes.
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
@@ -170,7 +168,17 @@ private fun MainDashboardContent(
         }
     }
 
+    LaunchedEffect(sessionToken) {
+        if (sessionToken.isNullOrBlank()) return@LaunchedEffect
+        while (true) {
+            kotlinx.coroutines.delay(60_000L)
+            if (sessionManager?.hasValidSession() != true) return@LaunchedEffect
+            dashboardViewModel.loadStatus()
+        }
+    }
+
     val isPro = dashboardStatus?.isPro == true && dashboardStatus?.membershipVerified == true
+    val currentMembershipTier = com.example.automatesmartbot.ui.components.membershipTier(dashboardStatus)
     val isOnline = dashboardStatus?.isOnline == true
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -227,10 +235,25 @@ private fun MainDashboardContent(
         navigateUpOrDashboard()
     }
 
+    androidx.compose.runtime.CompositionLocalProvider(
+        com.example.automatesmartbot.ui.components.LocalMembershipTier provides currentMembershipTier
+    ) {
     Scaffold(
         topBar = {
             if (showTopBar) {
-                if (edgeHeader) {
+                if (currentRoute == Screen.UpgradePro.route) {
+                    ProBrandedHeader(onBack = onBack ?: navigateUpOrDashboard)
+                } else if (currentRoute == Screen.Riwayat.route) {
+                    HistoryBrandedHeader(onBack = onBack ?: navigateUpOrDashboard)
+                } else if (currentRoute == Screen.KirimLamaran.route) {
+                    KirimLamaranBrandedHeader(isPro = isPro,
+                        onBack = onBack ?: navigateUpOrDashboard)
+                } else if (currentRoute == Screen.CareerLetters.route) {
+                    CareerLettersBrandedHeader(
+                        isPro = isPro,
+                        onBack = onBack ?: navigateUpOrDashboard
+                    )
+                } else if (edgeHeader) {
                     CareerEdgeHeader(
                         title = currentTitle,
                         subtitle = when (currentRoute) {
@@ -346,7 +369,7 @@ private fun MainDashboardContent(
             composable(Screen.Certificates.route) { JobTrainingScreen(initialStage = "history", onExit = navigateUpOrDashboard, onBackActionChanged = { trainingBack = it }) }
             composable(Screen.SalaryCalculator.route) { SalaryCalculatorScreen() }
             composable(Screen.CareerLetters.route) {
-                CareerLettersScreen(onApplicationLetter = {
+                CareerLettersRedesignedScreen(onApplicationLetter = {
                     cvViewModel.resetNavigation()
                     cvViewModel.navigate("Pilih Jenis Surat")
                     navController.navigate(Screen.CvBuilder.route) { launchSingleTop = true }
@@ -419,6 +442,7 @@ private fun MainDashboardContent(
                         },
                         onLoginSuccess = { profileCompleted ->
                             val newToken = sessionManager?.getValidToken()
+                            dashboardViewModel.reset() // Do not display the previous account's membership.
                             sessionToken = newToken
                             checkedToken = newToken
                             val target = NavigationPolicy.postLoginRoute(profileCompleted)
@@ -476,5 +500,6 @@ private fun MainDashboardContent(
                 }
             }
         }
+    }
     }
 }

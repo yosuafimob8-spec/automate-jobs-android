@@ -30,7 +30,7 @@ class SubscriptionUiTest {
             "checkout" -> ProCheckoutScreen(index, { page = "manage" }, store)
             else -> ManageProSubscriptionScreen({ page = "upgrade" }, store)
         } } }
-        compose.onNodeWithText("Pilih paket Bulanan").performScrollTo().performClick()
+        compose.onNodeWithContentDescription("Pilih paket Bulanan").performScrollTo().performClick()
         compose.onNodeWithText("Paket Bulanan — Rp79.000").assertExists()
         compose.onNodeWithText("Aktifkan PRO Demo").assertIsNotEnabled()
         compose.onNode(isToggleable()).performClick()
@@ -44,7 +44,7 @@ class SubscriptionUiTest {
         compose.waitForIdle()
         compose.onNodeWithText("Tidak ada PRO DEMO aktif").assertExists()
         compose.onNodeWithText("Lihat paket / Perpanjang").performClick()
-        compose.onNodeWithText("Upgrade KarirMate PRO").assertExists()
+        compose.onNodeWithText("KarirMate PRO").assertExists()
     }
     @Test fun invalidCheckoutDoesNotSilentlyPurchaseAnotherPlan() {
         compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { ProCheckoutScreen(999, {}) } }

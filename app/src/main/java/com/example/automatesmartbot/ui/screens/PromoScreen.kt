@@ -113,7 +113,11 @@ fun PromoScreen(
                         Text(text = "Status Anda Saat Ini", fontSize = 12.sp, color = KarirTextMuted)
                         Spacer(modifier = Modifier.height(2.dp))
                         Text(
-                            text = if (isPro) "PRO MEMBER ⭐" else "FREE MEMBER",
+                            text = when (com.example.automatesmartbot.ui.components.LocalMembershipTier.current) {
+                    com.example.automatesmartbot.ui.components.MembershipTier.PRO -> "PRO MEMBER ⭐"
+                    com.example.automatesmartbot.ui.components.MembershipTier.FREE -> "FREE MEMBER"
+                    else -> "STATUS BELUM DIVERIFIKASI"
+                },
                             fontWeight = FontWeight.Bold,
                             fontSize = 17.sp,
                             color = if (isPro) KarirOrange else KarirTextDark
@@ -126,7 +130,11 @@ fun PromoScreen(
                         shape = RoundedCornerShape(8.dp)
                     ) {
                         Text(
-                            text = if (isPro) "Status Aktif" else "Belum Upgrade",
+                            text = when (com.example.automatesmartbot.ui.components.LocalMembershipTier.current) {
+                    com.example.automatesmartbot.ui.components.MembershipTier.PRO -> "Status Aktif"
+                    com.example.automatesmartbot.ui.components.MembershipTier.FREE -> "Belum Upgrade"
+                    else -> "Menunggu verifikasi akun"
+                },
                             color = if (isPro) Color(0xFF2E7D32) else Color(0xFFE65100),
                             fontWeight = FontWeight.Bold,
                             fontSize = 12.sp,

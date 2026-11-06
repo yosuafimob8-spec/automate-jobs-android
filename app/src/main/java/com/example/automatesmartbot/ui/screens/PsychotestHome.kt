@@ -69,12 +69,7 @@ internal fun PsychotestHome(
                 Spacer(Modifier.width(7.dp))
                 Text("KarirMate", color = ocean, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp)
                 Spacer(Modifier.weight(1f))
-                Surface(shape = RoundedCornerShape(40.dp), color = Color(0xFFFFF7EA),
-                    border = BorderStroke(1.dp, Color(0xFFF4D59B))) {
-                    Text(if (isPro) "♛ PRO Aktif" else "♛ PRO",
-                        modifier = Modifier.padding(horizontal = 14.dp, vertical = 7.dp),
-                        color = Color(0xFFB97A11), fontWeight = FontWeight.Bold, fontSize = 12.sp)
-                }
+                com.example.automatesmartbot.ui.components.MembershipBadge(style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.LIGHT)
             }
         }
         item {

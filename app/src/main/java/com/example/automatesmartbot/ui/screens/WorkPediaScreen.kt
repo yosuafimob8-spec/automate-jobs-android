@@ -193,51 +193,16 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                     contentPadding = PaddingValues(bottom = 24.dp)
                 ) {
                     items(visible, key = { it.optString("id") }) { term ->
-                        Card(
-                            onClick = { selected = term.optString("id") },
-                            modifier = Modifier.fillMaxWidth(),
-                            shape = RoundedCornerShape(14.dp),
-                            colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-                            border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
-                            elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
-                        ) {
-                            Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
-                                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
-                                    Text(
-                                        term.optString("name"),
-                                        color = KarirTextDark,
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = 16.sp,
-                                        modifier = Modifier.weight(1f)
-                                    )
-                                    TextButton(onClick = {
-                                        val id = term.optString("id")
-                                        favorites = if (id in favorites) favorites - id else favorites + id
-                                        prefs.edit().putStringSet("ids", favorites).apply()
-                                    }) {
-                                        Text(
-                                            if (term.optString("id") in favorites) "★" else "☆",
-                                            color = MaterialTheme.colorScheme.primary,
-                                            fontSize = 18.sp
-                                        )
-                                    }
-                                }
-                                Text(term.optString("fullName"), color = KarirTextDark, fontSize = 13.sp)
-                                Surface(
-                                    shape = RoundedCornerShape(6.dp),
-                                    color = screenCanvas(Color(0xFFE6F5F5)),
-                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8)))
-                                ) {
-                                    Text(
-                                        term.optString("category"),
-                                        color = MaterialTheme.colorScheme.primary,
-                                        fontSize = 11.sp,
-                                        fontWeight = FontWeight.SemiBold,
-                                        modifier = Modifier.padding(horizontal = 6.dp, vertical = 2.dp)
-                                    )
-                                }
+                        val id = term.optString("id")
+                        WorkPediaTermCard(
+                            term = term,
+                            isFavorite = id in favorites,
+                            onOpen = { selected = id },
+                            onFavoriteToggle = {
+                                favorites = if (id in favorites) favorites - id else favorites + id
+                                prefs.edit().putStringSet("ids", favorites.toSet()).apply()
                             }
-                        }
+                        )
                     }
                 }
             } else {

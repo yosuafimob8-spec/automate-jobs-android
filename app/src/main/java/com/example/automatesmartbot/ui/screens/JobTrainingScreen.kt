@@ -264,19 +264,7 @@ fun JobTrainingScreen(
         ) {
             Text("▣ KarirMate", color = MaterialTheme.colorScheme.primary, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
             Spacer(Modifier.weight(1f))
-            Surface(
-                color = screenCanvas(Color(0xFFFFF0E5)),
-                shape = RoundedCornerShape(10.dp),
-                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8)))
-            ) {
-                Text(
-                    "♛ PRO",
-                    Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
-                    color = MaterialTheme.colorScheme.primary,
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 11.5.sp
-                )
-            }
+            com.example.automatesmartbot.ui.components.MembershipBadge(style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.LIGHT)
         }
         Column(
             Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(18.dp),
@@ -652,92 +640,12 @@ fun JobTrainingScreen(
                 }
                 "history" -> {
                     val history = JSONArray(prefs.getString("certificates", "[]"))
-                    val latest = history.optJSONObject(history.length() - 1)
-                    val ink = darkTraining
-                    val blue = Color(0xFF0969B9)
-                    val gold = Color(0xFFE5A728)
-                    Text("Riwayat Sertifikat", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = ink)
-                    Text("Sertifikat Kompetensi KarirMate", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = blue)
-                    Text("Kumpulan sertifikat pelatihan yang Anda peroleh di KarirMate.", color = ink, fontSize = 14.sp)
-                    TrainingCard {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Text("✦", fontSize = 32.sp, color = blue)
-                            Spacer(Modifier.width(10.dp))
-                            Column(Modifier.weight(1f)) {
-                                Text("Syarat Mendapatkan Sertifikat", fontWeight = FontWeight.ExtraBold, color = ink)
-                                Text("Selesaikan tahapan yang dipersyaratkan untuk program sertifikat terkait.", fontSize = 12.sp, color = ink)
-                            }
-                        }
-                        listOf(
-                            Triple("Psikotes", "Tes gabungan kepribadian, logika, numerik, dan verbal", "Status belum terhubung"),
-                            Triple("Pelatihan Kerja", "Level Basic sampai Advance", if (latest != null) "Ada sertifikat pelatihan" else "Belum ada sertifikat"),
-                            Triple("Interview AI", "Simulasi wawancara kerja", "Status belum terhubung")
-                        ).forEach { (title, subtitle, status) ->
-                            Surface(shape = RoundedCornerShape(12.dp), color = screenCanvas(Color(0xFFF0F7FC)), border = BorderStroke(1.dp, screenCanvas(Color(0xFFD2E3F0)))) {
-                                Column(Modifier.fillMaxWidth().padding(12.dp)) {
-                                    Text(title, fontWeight = FontWeight.Bold, color = ink)
-                                    Text(subtitle, fontSize = 12.sp, color = ink)
-                                    Text(status, fontSize = 12.sp, color = if (status.startsWith("Ada")) tealTraining else blue)
-                                }
-                            }
-                        }
-                        Text("Status tidak otomatis dianggap lulus. Sertifikat pelatihan bukan sertifikasi resmi BNSP.", fontSize = 11.sp, color = ink)
-                    }
-                    TrainingCard {
-                        Text("★ Sertifikat Terbaru", color = blue, fontSize = 20.sp, fontWeight = FontWeight.ExtraBold)
-                        if (latest == null) {
-                            Text("Belum ada sertifikat. Selesaikan pelatihan untuk mendapatkannya.", color = ink)
-                        } else {
-                            Text(latest.optString("course", "Sertifikat Pelatihan"), fontWeight = FontWeight.Bold, color = ink)
-                            Text("Nama: ${latest.optString("name", "-")}", color = ink)
-                            Text("Tanggal terbit: ${latest.optString("date", "-")}", color = ink)
-                            Text("Nomor sertifikat: ${latest.optString("id", "-")}", color = ink)
-                            Text("Status: ${if (latest.optBoolean("serverRegistered")) "Terdaftar server" else "Tersimpan di perangkat; belum diverifikasi online"}", color = ink, fontSize = 12.sp)
-                            Button(onClick = { certificate = latest; stage = "certificate" }, colors = ButtonDefaults.buttonColors(containerColor = blue)) {
-                                Text("Lihat Sertifikat")
-                            }
-                            Text("Unduh PDF tersedia pada tampilan sertifikat. Bagikan setelah ekspor PDF melalui aplikasi berbagi Android.", fontSize = 12.sp, color = ink)
-                        }
-                    }
-                    TrainingCard {
-                        Text("Verifikasi Sertifikat", fontSize = 20.sp, fontWeight = FontWeight.ExtraBold, color = ink)
-                        Text("Masukkan kode QR pada sertifikat untuk memeriksa identitas yang tersimpan di perangkat.", color = ink, fontSize = 12.sp)
-                        var qrInput by rememberSaveable { mutableStateOf("") }
-                        var qrFeedback by remember { mutableStateOf("") }
-                        OutlinedTextField(
-                            value = qrInput,
-                            onValueChange = { qrInput = it; qrFeedback = "" },
-                            label = { Text("Isi QR sertifikat") },
-                            colors = karirInputColors(),
-                            modifier = Modifier.fillMaxWidth()
-                        )
-                        Button(onClick = {
-                            val known = (0 until history.length()).mapNotNull { index ->
-                                val record = history.optJSONObject(index) ?: return@mapNotNull null
-                                runCatching { TrainingCertificateIdentity.payload(
-                                    record.optString("id"), record.optString("courseId"),
-                                    record.optString("date"), record.optInt("score")
-                                ) }.getOrNull()
-                            }
-                            qrFeedback = if (TrainingCertificateIdentity.verifyLocal(qrInput.trim(), known))
-                                "Cocok dengan riwayat lokal. Belum merupakan verifikasi online."
-                            else "Tidak ditemukan pada riwayat lokal perangkat ini."
-                        }, colors = ButtonDefaults.buttonColors(containerColor = blue)) {
-                            Text("Periksa Sertifikat")
-                        }
-                        if (qrFeedback.isNotBlank()) Text(qrFeedback, color = ink)
-                    }
-                    if (history.length() > 1) {
-                        Text("Sertifikat Lainnya", fontWeight = FontWeight.Bold, color = ink)
-                        (history.length() - 2 downTo 0).forEach { i ->
-                            val item = history.optJSONObject(i) ?: return@forEach
-                            TrainingCard {
-                                Text(item.optString("course"), fontWeight = FontWeight.Bold, color = ink)
-                                Text("${item.optString("name")} • ${item.optString("date")}", color = ink)
-                                TextButton(onClick = { certificate = item; stage = "certificate" }) { Text("Lihat Sertifikat") }
-                            }
-                        }
-                    }
+                    CertificateHistoryBody(
+                        history = history,
+                        onShowCertificate = { item -> certificate = item; stage = "certificate" },
+                        onBackToCatalog = { stage = "catalog" }
+                    )
+
                 }
             }
         }

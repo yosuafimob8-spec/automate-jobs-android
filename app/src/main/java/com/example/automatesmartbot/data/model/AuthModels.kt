@@ -44,8 +44,17 @@ data class UserMeResponse(
             else -> false
         }
 
+    /** The backend is authoritative; a parseable expired date can never unlock PRO. */
     val hasProMembership: Boolean
-        get() = isPro ?: (membership?.equals("pro", ignoreCase = true) == true)
+        get() {
+            val serverGrantsPro = isPro ?: (membership?.equals("pro", ignoreCase = true) == true)
+            if (!serverGrantsPro) return false
+            val expiry = membershipExpiresAt?.takeIf { it.isNotBlank() }?.let { value ->
+                runCatching { java.time.Instant.parse(value).toEpochMilli() }.getOrNull()
+                    ?: runCatching { java.time.OffsetDateTime.parse(value).toInstant().toEpochMilli() }.getOrNull()
+            }
+            return expiry == null || expiry > System.currentTimeMillis()
+        }
 
     val hasVerifiedMembership: Boolean
         get() = isPro != null || !membership.isNullOrBlank()

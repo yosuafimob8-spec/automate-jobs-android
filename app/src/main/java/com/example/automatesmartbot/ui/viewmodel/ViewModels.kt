@@ -12,6 +12,7 @@ import kotlinx.coroutines.launch
 class DashboardViewModel(
     private val repository: DashboardRepository = DashboardRepository()
 ) : ViewModel() {
+    private var membershipRequestVersion = 0
     private val _status = MutableStateFlow<DashboardStatusResponse?>(null)
     val status: StateFlow<DashboardStatusResponse?> = _status.asStateFlow()
 
@@ -19,16 +20,21 @@ class DashboardViewModel(
     val isLoading: StateFlow<Boolean> = _isLoading.asStateFlow()
 
     fun loadStatus() {
+        val requestVersion = ++membershipRequestVersion
         viewModelScope.launch {
             _isLoading.value = true
             val result = repository.getDashboardStatus()
-            _status.value = result.getOrNull()
-            _isLoading.value = false
+            if (requestVersion == membershipRequestVersion) {
+                _status.value = result.getOrNull()
+                _isLoading.value = false
+            }
         }
     }
 
     fun reset() {
+        membershipRequestVersion++ // Reject any in-flight status reply for the old account.
         _status.value = null
+        _isLoading.value = false
     }
 }
 
