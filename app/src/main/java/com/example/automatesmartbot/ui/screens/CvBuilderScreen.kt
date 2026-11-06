@@ -146,7 +146,12 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(14.dp)
         ) {
-            KarirMateSectionHero("CV Builder", "Buat CV ATS profesional, pilih template, dan analisis skor CV Anda.")
+            if (page == "CV Builder") {
+                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text("Buat CV Profesional", fontSize = 26.sp, fontWeight = FontWeight.Bold, color = KarirTextDark)
+                    Text("Tingkatkan peluang diterima kerja", fontSize = 13.sp, color = KarirTextMuted)
+                }
+            } else KarirMateSectionHero("CV Builder", "Buat CV ATS profesional, pilih template, dan analisis skor CV Anda.")
 
             state.message?.let {
                 Surface(
