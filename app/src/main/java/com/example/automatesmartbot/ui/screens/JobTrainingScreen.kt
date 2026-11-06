@@ -657,6 +657,7 @@ fun JobTrainingScreen(
                     val blue = Color(0xFF0969B9)
                     val gold = Color(0xFFE5A728)
                     Text("Riwayat Sertifikat", fontSize = 28.sp, fontWeight = FontWeight.ExtraBold, color = ink)
+                    Text("Sertifikat Kompetensi KarirMate", fontSize = 15.sp, fontWeight = FontWeight.Bold, color = blue)
                     Text("Kumpulan sertifikat pelatihan yang Anda peroleh di KarirMate.", color = ink, fontSize = 14.sp)
                     TrainingCard {
                         Row(verticalAlignment = Alignment.CenterVertically) {
