@@ -15,6 +15,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ApiClient.init(this)
+        // Banner only requests Google test ads until production approval and consent setup.
+        Thread { com.google.android.gms.ads.MobileAds.initialize(applicationContext) {} }.start()
         com.example.automatesmartbot.data.cv.CvRenderer.initialize(this)
         enableEdgeToEdge()
         setContent {

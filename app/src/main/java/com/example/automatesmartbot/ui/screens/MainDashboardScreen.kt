@@ -4,6 +4,7 @@ import androidx.compose.ui.unit.dp
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -38,6 +39,7 @@ import com.example.automatesmartbot.data.network.ApiClient
 import com.example.automatesmartbot.data.repository.ProfileSetupRepository
 import com.example.automatesmartbot.data.security.SessionManager
 import com.example.automatesmartbot.ui.components.AppTopBar
+import com.example.automatesmartbot.ui.components.KarirMateTestBanner
 import com.example.automatesmartbot.ui.navigation.NavigationPolicy
 import com.example.automatesmartbot.ui.navigation.Screen
 import com.example.automatesmartbot.ui.navigation.appShellItems
@@ -255,6 +257,10 @@ private fun MainDashboardContent(
         },
         bottomBar = {
             if (showBottomBar) {
+                Column {
+                    if (currentRoute == Screen.Dashboard.route && sessionToken != null && dashboardStatus != null && !isPro) {
+                        KarirMateTestBanner()
+                    }
                 NavigationBar(
                     containerColor = com.example.automatesmartbot.ui.theme.screenCanvas(Color(0xFFF5FAFC), com.example.automatesmartbot.ui.theme.DarkSurface),
                     tonalElevation = 8.dp,
@@ -293,6 +299,7 @@ private fun MainDashboardContent(
                             )
                         )
                     }
+                }
                 }
             }
         }
