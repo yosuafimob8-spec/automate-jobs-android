@@ -1,2 +1,2 @@
-Retry APK build after UI test navigation updates (2026-11-05).
-Source head before triggering: 90dbb677fc9fa969aaa244320e7deda8c9e1dd08
+Build request: Update 5 Dashboard Career Journey and enlarged Career Billboard.
+Source commit: 35ee45a799fcbd50d4378803d2701a6b38abb089
