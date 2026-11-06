@@ -43,8 +43,8 @@ jobs:
           python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/update7-surat-lamaran/apply_update7.py" "$BASE_DIR"
           python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/update8-membership/apply_update8.py" "$BASE_DIR"
           git -C "$BASE_DIR" status --porcelain
-          git -C "$BASE_DIR" status --porcelain -z | while IFS= read -r -d '' changed; do
-            rel="${changed:3}"
+          git -C "$BASE_DIR" add -A app
+          git -C "$BASE_DIR" diff --cached --name-only -z | while IFS= read -r -d '' rel; do
             if [ ! -f "$BASE_DIR/$rel" ]; then
               echo "::error::Unexpected removed path: $rel"
               exit 1
