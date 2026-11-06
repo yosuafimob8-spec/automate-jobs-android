@@ -1,2 +1,3 @@
-Build request: validate fixed-light auth login test expectation and build APK.
-Source commit: d787416298968c9d8ab1b87804d5b3be6ba61bb1
+Build request: verify latest Career Billboard AdMob test banner integration.
+Source commit: ef0b3eef21816cc4963801ab5eb3697fb92273b3
+Run tests and assembleTermux; upload APK artifact.
