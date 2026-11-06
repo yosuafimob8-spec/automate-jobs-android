@@ -68,6 +68,7 @@ import com.example.automatesmartbot.ui.theme.ScreenPageGradient
 import com.example.automatesmartbot.ui.theme.screenCanvas
 import com.example.automatesmartbot.data.model.DashboardStatusResponse
 import com.example.automatesmartbot.ui.navigation.Screen
+import com.example.automatesmartbot.ui.components.KarirMateTestBanner
 import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.viewmodel.DashboardViewModel
 
@@ -193,7 +194,8 @@ private val extraSearchableFeatures = listOf(
 @Composable
 fun DashboardScreen(
     onNavigate: (String) -> Unit,
-    viewModel: DashboardViewModel
+    viewModel: DashboardViewModel,
+    showTestAd: Boolean = false
 ) {
     val status by viewModel.status.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
@@ -310,6 +312,12 @@ fun DashboardScreen(
         item {
             Column(Modifier.padding(horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text("Career Billboard", fontSize = 18.sp, fontWeight = FontWeight.ExtraBold, color = ScreenText)
+                if (showTestAd) {
+                    // Reserved Career Billboard area: ads are never over bottom navigation.
+                    Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+                        KarirMateTestBanner()
+                    }
+                } else {
                 Card(
                     modifier = Modifier.fillMaxWidth().heightIn(min = 210.dp).clickable { onNavigate(Screen.JobTraining.route) },
                     shape = RoundedCornerShape(22.dp),
@@ -332,6 +340,7 @@ fun DashboardScreen(
                             colors = ButtonDefaults.buttonColors(containerColor = ocean)
                         ) { Text("Lihat Program Pelatihan", color = Color.White) }
                     }
+                }
                 }
             }
         }
