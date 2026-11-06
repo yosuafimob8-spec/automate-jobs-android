@@ -28,7 +28,9 @@ jobs:
           BASE_SHA="1b4c04b6e3d13196b927d556a4394ae21f0a3a42"
           BASE_DIR="$RUNNER_TEMP/karirmate-original"
           PATCH_DIR="$RUNNER_TEMP/karirmate-ui-patches"
-          git worktree add --detach "$BASE_DIR" "$BASE_SHA"
+          # Use a standalone local clone: Update 6 explicitly requires .git to be a directory.
+          git clone --no-local --no-checkout "$GITHUB_WORKSPACE" "$BASE_DIR"
+          git -C "$BASE_DIR" checkout --detach "$BASE_SHA"
           mkdir -p "$PATCH_DIR"
           unzip -q .github/patches/karirmate-ui-updates-1-8.zip -d "$PATCH_DIR"
           # Fix the incorrect WorkPedia blob checksum in the previously exported patch.
