@@ -36,7 +36,7 @@ import com.example.automatesmartbot.ui.viewmodel.AuthViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RegisterScreen(
+private fun RegisterScreenContent(
     onNavigateLogin: () -> Unit,
     onRegisterSuccess: () -> Unit,
     viewModel: AuthViewModel = viewModel()
@@ -251,5 +251,16 @@ fun RegisterScreen(
                 }
             }
         }
+    }
+}
+
+@Composable
+fun RegisterScreen(
+    onNavigateLogin: () -> Unit,
+    onRegisterSuccess: () -> Unit,
+    viewModel: AuthViewModel = viewModel()
+) {
+    com.example.automatesmartbot.ui.components.AuthLightTheme {
+        RegisterScreenContent(onNavigateLogin, onRegisterSuccess, viewModel)
     }
 }
