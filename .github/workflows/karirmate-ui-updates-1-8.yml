@@ -1,0 +1,86 @@
+name: KarirMate UI Updates 1-8 Build
+on:
+  push:
+    branches:
+      - integration/base41860101825-ui-merge-20261105
+    paths:
+      - .github/patches/karirmate-ui-updates-1-8.zip
+      - .github/workflows/karirmate-ui-updates-1-8.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  integrate-and-build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout integration branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply all patches against exact verified base
+        shell: bash
+        run: |
+          set -euo pipefail
+          BASE_SHA="1b4c04b6e3d13196b927d556a4394ae21f0a3a42"
+          BASE_DIR="$RUNNER_TEMP/karirmate-original"
+          PATCH_DIR="$RUNNER_TEMP/karirmate-ui-patches"
+          git worktree add --detach "$BASE_DIR" "$BASE_SHA"
+          mkdir -p "$PATCH_DIR"
+          unzip -q .github/patches/karirmate-ui-updates-1-8.zip -d "$PATCH_DIR"
+          python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/apply_all.py" "$BASE_DIR" --check
+          python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/apply_all.py" "$BASE_DIR"
+          git -C "$BASE_DIR" status --porcelain
+          git -C "$BASE_DIR" status --porcelain -z | while IFS= read -r -d '' changed; do
+            rel="${changed:3}"
+            if [ ! -f "$BASE_DIR/$rel" ]; then
+              echo "::error::Unexpected removed path: $rel"
+              exit 1
+            fi
+            mkdir -p "$(dirname "$GITHUB_WORKSPACE/$rel")"
+            cp "$BASE_DIR/$rel" "$GITHUB_WORKSPACE/$rel"
+          done
+          git add app
+          if git diff --cached --quiet; then
+            echo "::error::No UI source changes were applied"
+            exit 1
+          fi
+          git diff --cached --stat
+
+      - name: Push integrated Android source to same branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "feat: apply KarirMate UI updates 1-8 from approved patch"
+          git push origin HEAD:refs/heads/integration/base41860101825-ui-merge-20261105
+
+      - name: Prepare Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Generate offline training videos
+        shell: bash
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python3 scripts/generate_training_videos.py
+
+      - name: Test and build APK
+        shell: bash
+        run: |
+          chmod +x gradlew
+          ./gradlew :app:testDebugUnitTest :app:assembleTermux --stacktrace
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: KarirMate-UI-Updates-1-to-8-APK
+          path: app/build/outputs/apk/termux/*.apk
+          if-no-files-found: error
