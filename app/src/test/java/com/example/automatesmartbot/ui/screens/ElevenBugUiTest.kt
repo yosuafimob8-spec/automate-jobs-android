@@ -59,6 +59,13 @@ class ElevenBugUiTest {
         assertEquals(colors.onSurface, results.first().layoutInput.style.color)
     }
 
+    private fun assertAuthLightInputInk(index: Int = 0) {
+        val results = mutableListOf<TextLayoutResult>()
+        input(index).performSemanticsAction(SemanticsActions.GetTextLayoutResult) { it(results) }
+        assertTrue("Auth input layout must be available", results.isNotEmpty())
+        assertEquals(KarirMateLightColors.onSurface, results.first().layoutInput.style.color)
+    }
+
     @Test fun quickSimulationButtonCalculatesAfterEditsAndErrors() {
         compose.setContent { KarirMateTheme(mode) { SalaryCalculatorScreen() } }
         val expected = PayrollCalculator.calculate(PayrollCalculator.Input(
@@ -236,10 +243,10 @@ class ElevenBugUiTest {
             compose.onNodeWithText("Email dan password tidak boleh kosong.").assertExists()
             input().performTextReplacement("qa@example.test")
             input().assertTextContains("qa@example.test")
-            assertInputInk()
+            assertAuthLightInputInk()
             input(1).performTextReplacement("fixture-password")
             input(1).assert(SemanticsMatcher.keyIsDefined(SemanticsProperties.Password))
-            assertInputInk(1)
+            assertAuthLightInputInk(1)
             compose.onNodeWithContentDescription("Tampilkan sandi").performClick()
             input(1).assert(SemanticsMatcher.keyNotDefined(SemanticsProperties.Password))
             input(1).assertTextContains("fixture-password")
