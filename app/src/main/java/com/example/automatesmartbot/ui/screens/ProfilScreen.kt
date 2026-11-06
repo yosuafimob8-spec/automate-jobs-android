@@ -346,10 +346,10 @@ internal fun ProfileIdentityCard(
     photoUri: String?,
     onPickPhoto: () -> Unit,
     onNavigateEditProfile: () -> Unit,
-    onNavigateCv: () -> Unit,
-    onNavigateApplications: () -> Unit,
-    onNavigateDocuments: () -> Unit,
-    onLogout: () -> Unit
+    onLogout: () -> Unit,
+    onNavigateCv: () -> Unit = {},
+    onNavigateApplications: () -> Unit = {},
+    onNavigateDocuments: () -> Unit = {}
 ) {
     val context = LocalContext.current
     val profileFields = listOf(profile?.fullName, profile?.whatsapp, profile?.domicile, profile?.education, profile?.applicationEmail)
