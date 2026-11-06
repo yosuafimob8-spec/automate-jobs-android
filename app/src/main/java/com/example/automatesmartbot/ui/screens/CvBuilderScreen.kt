@@ -175,69 +175,31 @@ fun CvBuilderScreen(viewModel: CvBuilderViewModel, isPro: Boolean = false, onBac
             when (page) {
                 "CV Builder" -> {
                     Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        shape = RoundedCornerShape(22.dp),
                         colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-                        shape = RoundedCornerShape(16.dp),
                         border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
-                        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
-                        modifier = Modifier.fillMaxWidth()
+                        elevation = CardDefaults.cardElevation(defaultElevation = 3.dp)
                     ) {
-                        Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                            Row(
-                                modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                verticalAlignment = Alignment.CenterVertically
-                            ) {
-                                Text(
-                                    "CV Saya",
-                                    fontWeight = FontWeight.Bold,
-                                    fontSize = 17.sp,
-                                    color = KarirTextDark
-                                )
-                                Surface(
-                                    shape = RoundedCornerShape(10.dp),
-                                    color = screenCanvas(Color(0xFFE6F5F5)),
-                                    border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8)))
-                                ) {
-                                    Text(
-                                        "${state.drafts.size} CV Tersimpan",
-                                        color = MaterialTheme.colorScheme.primary,
-                                        fontWeight = FontWeight.Bold,
-                                        fontSize = 11.5.sp,
-                                        modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
-                                    )
-                                }
+                        Column(Modifier.fillMaxWidth().padding(20.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                            Text("CV BUILDER", color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.ExtraBold, fontSize = 12.sp)
+                            Text("Buat CV Profesional", fontWeight = FontWeight.ExtraBold, fontSize = 25.sp, color = KarirTextDark)
+                            Text("Bangun CV yang menarik, rapi, dan ramah ATS untuk peluang karier berikutnya.", color = KarirTextMuted, fontSize = 13.sp)
+                            Surface(shape = RoundedCornerShape(12.dp), color = screenCanvas(Color(0xFFE6F5F5))) {
+                                Text("${state.drafts.size} CV tersimpan", Modifier.padding(horizontal = 14.dp, vertical = 9.dp), color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.Bold)
                             }
-                            Text(
-                                "Buat CV baru yang ramah ATS, jelajahi katalog template, atau gunakan CV Analyst.",
-                                color = KarirTextMuted,
-                                fontSize = 12.sp
-                            )
                             Button(
                                 onClick = { viewModel.newDocument(); if (viewModel.state.value.activeId != null) nav("CV Saya") },
-                                modifier = Modifier.fillMaxWidth(),
-                                shape = RoundedCornerShape(12.dp),
+                                modifier = Modifier.fillMaxWidth().height(52.dp),
+                                shape = RoundedCornerShape(14.dp),
                                 colors = karirButtonColors()
-                            ) {
-                                Text("+ Buat CV Baru", fontWeight = FontWeight.Bold)
-                            }
-                            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                                OutlinedButton(
-                                    onClick = { nav("Template") },
-                                    modifier = Modifier.weight(1f),
-                                    shape = RoundedCornerShape(12.dp),
-                                    border = BorderStroke(1.dp, KarirOrange),
-                                    colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.primary)
-                                ) {
-                                    Text("Template", fontWeight = FontWeight.Bold, fontSize = 12.5.sp)
+                            ) { Text("+ Buat CV Baru", fontWeight = FontWeight.Bold) }
+                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                                OutlinedButton(onClick = { nav("Template") }, modifier = Modifier.weight(1f), shape = RoundedCornerShape(12.dp)) {
+                                    Text("Template", fontWeight = FontWeight.Bold)
                                 }
-                                OutlinedButton(
-                                    onClick = { nav("CV Analyst") },
-                                    modifier = Modifier.weight(1f),
-                                    shape = RoundedCornerShape(12.dp),
-                                    border = BorderStroke(1.dp, KarirOrange),
-                                    colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.primary)
-                                ) {
-                                    Text("CV Analyst", fontWeight = FontWeight.Bold, fontSize = 12.5.sp)
+                                OutlinedButton(onClick = { nav("CV Analyst") }, modifier = Modifier.weight(1f), shape = RoundedCornerShape(12.dp)) {
+                                    Text("CV Analyst", fontWeight = FontWeight.Bold)
                                 }
                             }
                         }
