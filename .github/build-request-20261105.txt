@@ -1,3 +1,2 @@
-Build request: retry after ProfileIdentityCard test compatibility fix.
-Source commit: a735433da8e37463cb6e1a25d8700fd9ae3a2064
-Run tests and assembleTermux.
+Build request: validate fixed-light auth login test expectation and build APK.
+Source commit: d787416298968c9d8ab1b87804d5b3be6ba61bb1
