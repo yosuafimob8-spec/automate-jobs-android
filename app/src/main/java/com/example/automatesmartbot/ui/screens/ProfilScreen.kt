@@ -85,6 +85,9 @@ fun ProfilScreen(
     onNavigateLogin: () -> Unit,
     onNavigateEditProfile: () -> Unit,
     themePreference: ThemePreference,
+    onNavigateCv: () -> Unit = {},
+    onNavigateApplications: () -> Unit = {},
+    onNavigateDocuments: () -> Unit = {},
     authRepository: AuthRepository = remember { AuthRepository() },
     profileRepository: ProfileSetupRepository = remember { ProfileSetupRepository() }
 ) {
