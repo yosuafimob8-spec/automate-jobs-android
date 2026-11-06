@@ -211,7 +211,7 @@ private fun MainDashboardContent(
     var trainingBack by remember { mutableStateOf<(() -> Unit)?>(null) }
     val edgeHeaderRoutes = setOf(
         Screen.LatihanPsikotes.route, Screen.SalaryCalculator.route,
-        Screen.JobTraining.route, Screen.Certificates.route, Screen.CvBuilder.route
+        Screen.JobTraining.route, Screen.Certificates.route, Screen.CvBuilder.route, Screen.Profil.route
     )
     val edgeHeader = currentRoute in edgeHeaderRoutes
     var psychotestBack by remember { mutableStateOf<(() -> Unit)?>(null) }
@@ -394,6 +394,9 @@ private fun MainDashboardContent(
                     isOnline = isOnline,
                     onNavigateLogin = endSession,
                     themePreference = themePreference,
+                    onNavigateCv = { navController.navigate(Screen.CvBuilder.route) { launchSingleTop = true } },
+                    onNavigateApplications = { navController.navigate(Screen.Riwayat.route) { launchSingleTop = true } },
+                    onNavigateDocuments = { navController.navigate(Screen.CareerLetters.route) { launchSingleTop = true } },
                     onNavigateEditProfile = {
                         navController.navigate(Screen.OnboardingProfile.route) {
                             launchSingleTop = true
