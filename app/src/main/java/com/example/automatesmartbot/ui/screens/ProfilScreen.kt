@@ -247,6 +247,9 @@ fun ProfilScreen(
                         photoUri = photoUri,
                         onPickPhoto = { photoPicker.launch(arrayOf("image/*")) },
                         onNavigateEditProfile = onNavigateEditProfile,
+                        onNavigateCv = onNavigateCv,
+                        onNavigateApplications = onNavigateApplications,
+                        onNavigateDocuments = onNavigateDocuments,
                         onLogout = { authRepository.logout(); onNavigateLogin() }
                     )
                 }
@@ -343,6 +346,9 @@ internal fun ProfileIdentityCard(
     photoUri: String?,
     onPickPhoto: () -> Unit,
     onNavigateEditProfile: () -> Unit,
+    onNavigateCv: () -> Unit,
+    onNavigateApplications: () -> Unit,
+    onNavigateDocuments: () -> Unit,
     onLogout: () -> Unit
 ) {
     val context = LocalContext.current
@@ -561,6 +567,13 @@ internal fun ProfileIdentityCard(
             }
 
             Spacer(modifier = Modifier.height(6.dp))
+
+            Text("AKSES CEPAT", fontWeight = FontWeight.Bold, color = KarirTextDark, fontSize = 13.sp)
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                OutlinedButton(onClick = onNavigateCv, modifier = Modifier.weight(1f)) { Text("CV Saya", fontSize = 12.sp) }
+                OutlinedButton(onClick = onNavigateApplications, modifier = Modifier.weight(1f)) { Text("Lamaran", fontSize = 12.sp) }
+                OutlinedButton(onClick = onNavigateDocuments, modifier = Modifier.weight(1f)) { Text("Dokumen", fontSize = 12.sp) }
+            }
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
