@@ -1,4 +1,4 @@
-Build request: KarirMate UI updates 1-8 regression tests and Termux APK.
-Source commit: fe348a7657d2f720f03ddffa2945bb2b3e4a28e0
-Fix: align WorkPedia display-name and certificate local-QR test assertions with redesigned UI.
-Run :app:testDebugUnitTest and :app:assembleTermux; publish APK when both pass.
+Build request: verify and assemble KarirMate UI updates 1–8, separate resource-heavy Robolectric tests from APK assembly.
+Base: 19b8fc10c2c46f1729647cab267c6ddd56ba1f3a
+Previous run: https://github.com/ilhamramdhani763-stack/automate-jobs-android/actions/runs/42236660160
+Known issue: 7 Espresso AppNotIdleException tests; preserve test gate failure while making any compiled APK available for inspection.
