@@ -247,45 +247,90 @@ fun DashboardScreen(
             }
         }
         item {
+            val stages = listOf(
+                Triple("01", "Discover Yourself", Screen.OnboardingProfile.route),
+                Triple("02", "Build Your Skills", Screen.JobTraining.route),
+                Triple("03", "Prepare Yourself", Screen.CvBuilder.route),
+                Triple("04", "Find Opportunities", Screen.CariLowongan.route),
+                Triple("05", "Grow Your Career", Screen.SalaryCalculator.route)
+            )
+            // Only verified profile completion is available in DashboardStatusResponse.
+            // Never show mock progress for training, interviews or applications.
+            val completedStages = if (status?.profileCompleted == true) 1 else 0
             Card(
-                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp).clickable { onNavigate(Screen.OnboardingProfile.route) },
-                shape = RoundedCornerShape(16.dp),
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+                shape = RoundedCornerShape(20.dp),
                 colors = CardDefaults.cardColors(containerColor = ocean)
             ) {
-                Column(Modifier.padding(17.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Column(Modifier.padding(18.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Icon(Icons.Default.TrendingUp, contentDescription = null, tint = Color.White)
                         Spacer(Modifier.width(9.dp))
                         Column(Modifier.weight(1f)) {
-                            Text("Career Journey", fontWeight = FontWeight.Bold, color = Color.White, fontSize = 15.sp)
-                            Text("Progres Persiapan Karier", color = Color.White.copy(alpha = .86f), fontSize = 11.sp)
+                            Text("Career Journey", fontWeight = FontWeight.ExtraBold, color = Color.White, fontSize = 18.sp)
+                            Text("Perjalanan kariermu", color = Color.White.copy(alpha = .85f), fontSize = 12.sp)
                         }
-                        Text(if (status?.profileCompleted == true) "Profil siap" else "Lengkapi profil", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 12.sp)
+                        Text("${completedStages * 20}%", color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
                     }
                     LinearProgressIndicator(
-                        progress = { if (status?.profileCompleted == true) 1f else 0f },
-                        modifier = Modifier.fillMaxWidth().height(8.dp).clip(RoundedCornerShape(8.dp)),
+                        progress = { completedStages / 5f },
+                        modifier = Modifier.fillMaxWidth().height(9.dp).clip(RoundedCornerShape(9.dp)),
                         color = mint,
-                        trackColor = Color.White.copy(alpha = .25f)
+                        trackColor = Color.White.copy(alpha = .22f)
                     )
+                    Text("$completedStages dari 5 tahap terverifikasi", color = Color.White.copy(alpha = .85f), fontSize = 11.sp)
+                    stages.forEachIndexed { index, stage ->
+                        val done = index < completedStages
+                        Row(
+                            modifier = Modifier.fillMaxWidth()
+                                .clip(RoundedCornerShape(12.dp))
+                                .clickable { onNavigate(stage.third) }
+                                .background(Color.White.copy(alpha = .10f))
+                                .padding(horizontal = 12.dp, vertical = 10.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            Box(
+                                Modifier.size(31.dp).background(
+                                    if (done) mint else Color.White.copy(alpha = .20f),
+                                    CircleShape
+                                ),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                if (done) Icon(Icons.Default.Check, contentDescription = null, tint = Color.White, modifier = Modifier.size(18.dp))
+                                else Text(stage.first, color = Color.White, fontSize = 11.sp, fontWeight = FontWeight.Bold)
+                            }
+                            Spacer(Modifier.width(11.dp))
+                            Text(stage.second, modifier = Modifier.weight(1f), color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
+                            Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = "Buka tahap", tint = Color.White, modifier = Modifier.size(18.dp))
+                        }
+                    }
                 }
             }
         }
         item {
-            Column(Modifier.padding(horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(9.dp)) {
-                Text("Career Billboard", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = ScreenText)
+            Column(Modifier.padding(horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                Text("Career Billboard", fontSize = 18.sp, fontWeight = FontWeight.ExtraBold, color = ScreenText)
                 Card(
-                    modifier = Modifier.fillMaxWidth().clickable { onNavigate(Screen.JobTraining.route) },
-                    shape = RoundedCornerShape(17.dp),
+                    modifier = Modifier.fillMaxWidth().heightIn(min = 210.dp).clickable { onNavigate(Screen.JobTraining.route) },
+                    shape = RoundedCornerShape(22.dp),
                     colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF2CF))
                 ) {
-                    Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-                        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                            Text("Upgrade Skill, Buka Peluang", color = Color(0xFF16446B), fontWeight = FontWeight.ExtraBold, fontSize = 18.sp)
-                            Text("Ikuti pelatihan kerja dan kembangkan kemampuanmu.", color = Color(0xFF34546A), fontSize = 12.sp)
-                            Text("Lihat Program  →", color = Color(0xFF087D77), fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                    Column(
+                        modifier = Modifier.fillMaxWidth().padding(22.dp),
+                        verticalArrangement = Arrangement.spacedBy(12.dp)
+                    ) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(9.dp)) {
+                                Text("Upgrade Skill, Buka Peluang", color = Color(0xFF16446B), fontWeight = FontWeight.ExtraBold, fontSize = 23.sp, lineHeight = 27.sp)
+                                Text("Ikuti pelatihan kerja dari Basic sampai Advanced untuk mengembangkan kemampuanmu.", color = Color(0xFF34546A), fontSize = 13.sp, lineHeight = 19.sp)
+                            }
+                            Spacer(Modifier.width(8.dp))
+                            Icon(Icons.Default.School, contentDescription = null, tint = ocean, modifier = Modifier.size(70.dp))
                         }
-                        Icon(Icons.Default.School, contentDescription = null, tint = ocean, modifier = Modifier.size(55.dp))
+                        Button(
+                            onClick = { onNavigate(Screen.JobTraining.route) },
+                            colors = ButtonDefaults.buttonColors(containerColor = ocean)
+                        ) { Text("Lihat Program Pelatihan", color = Color.White) }
                     }
                 }
             }
