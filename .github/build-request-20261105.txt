@@ -1,3 +1,4 @@
-Build request: validate adaptive AdMob test banner and fallback in Career Billboard.
-Base commit: 5d63dbb80f6335fef8b99f0406345ef431bf2bc3
-Run Android unit tests and assembleTermux; upload resulting APK.
+Build request: KarirMate UI updates 1-8 regression tests and Termux APK.
+Source commit: fe348a7657d2f720f03ddffa2945bb2b3e4a28e0
+Fix: align WorkPedia display-name and certificate local-QR test assertions with redesigned UI.
+Run :app:testDebugUnitTest and :app:assembleTermux; publish APK when both pass.

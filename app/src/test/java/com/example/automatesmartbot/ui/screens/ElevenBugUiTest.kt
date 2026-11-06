@@ -111,12 +111,14 @@ class ElevenBugUiTest {
         bothModes {
             input().performTextReplacement("PKWTT")
             assertInputInk()
-            compose.onAllNodes(hasText("PKWTT") and !hasSetTextAction(), useUnmergedTree = true).assertCountEquals(2)
+            compose.onAllNodes(hasText("PKWTT") and !hasSetTextAction(), useUnmergedTree = true).assertCountEquals(1)
+            compose.onNodeWithText("Perjanjian Kerja Waktu Tidak Tertentu").assertExists()
             input().performTextReplacement("zzzz-not-a-work-term")
             compose.onNodeWithText("PKWTT", useUnmergedTree = true).assertDoesNotExist()
             compose.onNodeWithText("×").performClick()
             input().assert(SemanticsMatcher.expectValue(SemanticsProperties.EditableText, androidx.compose.ui.text.AnnotatedString("")))
-            compose.onAllNodes(hasText("PKWT") and !hasSetTextAction(), useUnmergedTree = true).assertCountEquals(2)
+            compose.onAllNodes(hasText("PKWT") and !hasSetTextAction(), useUnmergedTree = true).assertCountEquals(1)
+            compose.onNodeWithText("Perjanjian Kerja Waktu Tertentu").assertExists()
         }
     }
 
@@ -288,7 +290,7 @@ class ElevenBugUiTest {
             input().performScrollTo().performTextReplacement("identitas-tidak-terdaftar")
             assertInputInk()
             compose.onNodeWithText("Periksa Sertifikat").performScrollTo().performClick()
-            compose.onNodeWithText("Tidak ditemukan pada riwayat lokal perangkat ini.").performScrollTo().assertExists()
+            compose.onNodeWithText("Kode QR tidak cocok dengan catatan sertifikat lokal pada perangkat ini.").performScrollTo().assertExists()
         }
         compose.runOnIdle { assertEquals(previous, prefs.getString("certificates", null)) }
     }
