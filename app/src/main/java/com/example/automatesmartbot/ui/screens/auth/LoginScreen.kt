@@ -36,7 +36,7 @@ import com.example.automatesmartbot.ui.theme.ScreenMuted as KarirTextMuted
 import com.example.automatesmartbot.ui.viewmodel.AuthViewModel
 
 @Composable
-fun LoginScreen(
+private fun LoginScreenContent(
     onNavigateRegister: () -> Unit,
     onNavigateForgot: () -> Unit,
     onLoginSuccess: (profileCompleted: Boolean?) -> Unit,
@@ -215,5 +215,17 @@ fun LoginScreen(
                 }
             }
         }
+    }
+}
+
+@Composable
+fun LoginScreen(
+    onNavigateRegister: () -> Unit,
+    onNavigateForgot: () -> Unit,
+    onLoginSuccess: (profileCompleted: Boolean?) -> Unit,
+    viewModel: AuthViewModel = viewModel()
+) {
+    com.example.automatesmartbot.ui.components.AuthLightTheme {
+        LoginScreenContent(onNavigateRegister, onNavigateForgot, onLoginSuccess, viewModel)
     }
 }
