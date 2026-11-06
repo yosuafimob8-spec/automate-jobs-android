@@ -35,8 +35,13 @@ jobs:
           unzip -q .github/patches/karirmate-ui-updates-1-8.zip -d "$PATCH_DIR"
           # Fix the incorrect WorkPedia blob checksum in the previously exported patch.
           sed -i 's/6a604e1f73be9e585aac3824cabf1517fd87a1c3/6a604e1f73be9e585aac3824cabf1517fd2071b3/' "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/update2-workpedia/apply_update2.py"
-          python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/apply_all.py" "$BASE_DIR" --check
-          python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/apply_all.py" "$BASE_DIR"
+          python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/update1-pro/apply_patch.py" "$BASE_DIR"
+          python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/update2-workpedia/apply_update2.py" "$BASE_DIR"
+          python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/update3-history/apply_update3.py" "$BASE_DIR"
+          python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/update5-certificate/apply_update5.py" "$BASE_DIR"
+          python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/update6-kirim-lamaran/apply_update6.py" "$BASE_DIR"
+          python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/update7-surat-lamaran/apply_update7.py" "$BASE_DIR"
+          python3 "$PATCH_DIR/karirmate-ui-updates-1-2-3-5-6-7-8/update8-membership/apply_update8.py" "$BASE_DIR"
           git -C "$BASE_DIR" status --porcelain
           git -C "$BASE_DIR" status --porcelain -z | while IFS= read -r -d '' changed; do
             rel="${changed:3}"
