@@ -6,6 +6,8 @@ on:
     paths:
       - .github/build-request-20261105.txt
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,9 +29,20 @@ jobs:
         continue-on-error: true
         run: |
           chmod +x gradlew
-          ./gradlew :app:testDebugUnitTest --no-parallel --max-workers=1 --stacktrace
+          for attempt in 1 2 3 4; do
+            if ./gradlew :app:testDebugUnitTest --no-parallel --max-workers=1 --stacktrace; then
+              exit 0
+            fi
+            if [ "$attempt" -eq 4 ]; then
+              echo "::error::Gradle :app:testDebugUnitTest failed after four attempts"
+              exit 1
+            fi
+            echo "::warning::Gradle invocation failed (attempt $attempt/4); retrying after 20 seconds"
+            sleep 20
+          done
       - name: Upload unit test results
         if: always()
+        continue-on-error: true # GitHub artifact quota must not block APK assembly
         uses: actions/upload-artifact@v4
         with:
           name: KarirMate-UI-Tests-Report
@@ -38,13 +51,43 @@ jobs:
       - name: Assemble Android APK (isolated)
         run: |
           chmod +x gradlew
-          ./gradlew :app:assembleTermux --no-parallel --max-workers=1 --stacktrace
+          for attempt in 1 2 3 4; do
+            if ./gradlew :app:assembleTermux --no-parallel --max-workers=1 --stacktrace; then
+              exit 0
+            fi
+            if [ "$attempt" -eq 4 ]; then
+              echo "::error::Gradle :app:assembleTermux failed after four attempts"
+              exit 1
+            fi
+            echo "::warning::Gradle invocation failed (attempt $attempt/4); retrying after 20 seconds"
+            sleep 20
+          done
       - name: Upload APK
+        id: apk_upload
+        continue-on-error: true # Use a prerelease asset if Actions artifact quota is full
         uses: actions/upload-artifact@v4
         with:
-          name: KarirMate-UI-Updates-1-to-8-APK
+          name: KarirMate-Updates-1-to-10-APK
           path: app/build/outputs/apk/termux/*.apk
           if-no-files-found: error
+      - name: Publish APK fallback when Actions artifact quota is full
+        if: steps.unit_tests.outcome == 'success' && steps.apk_upload.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          shopt -s nullglob
+          files=(app/build/outputs/apk/termux/*.apk)
+          if (( ${#files[@]} == 0 )); then
+            echo "::error::APK build output is missing"
+            exit 1
+          fi
+          tag="karirmate-updates-1-10-${GITHUB_SHA:0:7}"
+          gh release create "$tag" "${files[@]}" --target "$GITHUB_SHA" \
+            --title "KarirMate Updates 1-10 (${GITHUB_SHA:0:7})" \
+            --notes "Automated test APK from integration branch; demo PRO does not represent a purchase." \
+            --prerelease
       - name: Enforce test gate after APK upload
         if: steps.unit_tests.outcome == 'failure'
         run: |

@@ -33,9 +33,14 @@ class FeatureUiTest {
         compose.onNodeWithText("Tutup ↑").performClick()
         compose.onNodeWithText("Gunakan menu di halaman ini", substring = true).assertDoesNotExist()
     }
-    @Test fun documentLibraryShowsTruthfulEmptyState() {
+    @Test fun historyShowsServerBackedStatusWithoutInventingApplications() {
         compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { RiwayatScreen() } }
-        compose.onNodeWithText("Belum ada riwayat lamaran").assertExists()
+        // The history page now fetches a report asynchronously. There is no guarantee
+        // the backend is online in Robolectric, so assert the truthful stable UI.
+        compose.onNodeWithText("Riwayat Lamaran").assertExists()
+        compose.onNodeWithText("Status Pengiriman").assertExists()
+        compose.onNodeWithText("Muat Ulang").assertExists()
+        compose.onNodeWithText("Pantau pengiriman yang benar-benar tercatat, tanpa status palsu.").assertExists()
     }
     @Test fun cvHeaderAndAndroidBackKeepFormDataAndPopOneStep() {
         val vm = CvBuilderViewModel(compose.activity.application, SavedStateHandle())

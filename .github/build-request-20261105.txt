@@ -4,3 +4,14 @@ Previous run: https://github.com/ilhamramdhani763-stack/automate-jobs-android/ac
 Known issue: 7 Espresso AppNotIdleException tests; preserve test gate failure while making any compiled APK available for inspection.
 
 Build KarirMate Update 1-10: 2026-11-09
+
+Build retry after truthful UI test fixes and artifact-quota fallback: 2026-11-09 (commit 60ecc84)
+
+Retry Gradle distribution HTTP 504 using four-attempt CI invocations (2026-11-09).
+
+Build retry with direct downloads.gradle.org distribution and SHA verification: 2026-11-09.
+
+Build approved: certificate layout, single header, and account certificate shortcut — 2026-11-09.
+
+Build retry: fixed missing Compose heightIn import in ProfilScreen, 2026-11-09.
+Build KarirMate akun kedua - 2026-11-09
