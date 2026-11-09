@@ -39,6 +39,7 @@ import com.example.automatesmartbot.ui.viewmodel.AuthViewModel
 private fun RegisterScreenContent(
     onNavigateLogin: () -> Unit,
     onRegisterSuccess: () -> Unit,
+    onGoogleSuccess: (Boolean?) -> Unit,
     viewModel: AuthViewModel = viewModel()
 ) {
     var name by remember { mutableStateOf("") }
@@ -206,6 +207,19 @@ private fun RegisterScreenContent(
                         }
                     }
 
+                    Text(
+                        "atau daftar dengan Google",
+                        color = KarirTextMuted,
+                        fontSize = 13.sp
+                    )
+                    GoogleSignInButton(
+                        label = "Daftar dengan Google",
+                        enabled = !isLoading && agreed,
+                        onIdToken = {
+                            viewModel.loginWithGoogle(it, onGoogleSuccess)
+                        }
+                    )
+
                     errorMessage?.let { err ->
                         Surface(
                             shape = RoundedCornerShape(8.dp),
@@ -260,9 +274,15 @@ private fun RegisterScreenContent(
 fun RegisterScreen(
     onNavigateLogin: () -> Unit,
     onRegisterSuccess: () -> Unit,
+    onGoogleSuccess: (Boolean?) -> Unit = {},
     viewModel: AuthViewModel = viewModel()
 ) {
     com.example.automatesmartbot.ui.components.AuthLightTheme {
-        RegisterScreenContent(onNavigateLogin, onRegisterSuccess, viewModel)
+        RegisterScreenContent(
+            onNavigateLogin,
+            onRegisterSuccess,
+            onGoogleSuccess,
+            viewModel
+        )
     }
 }

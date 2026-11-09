@@ -90,6 +90,7 @@ fun ProfilScreen(
     onNavigateApplications: () -> Unit = {},
     onNavigateDocuments: () -> Unit = {},
     onNavigateCertificates: () -> Unit = {},
+    onNavigateAbout: () -> Unit = {},
     authRepository: AuthRepository = remember { AuthRepository() },
     profileRepository: ProfileSetupRepository = remember { ProfileSetupRepository() }
 ) {
@@ -253,6 +254,7 @@ fun ProfilScreen(
                         onNavigateApplications = onNavigateApplications,
                         onNavigateDocuments = onNavigateDocuments,
                         onNavigateCertificates = onNavigateCertificates,
+                        onNavigateAbout = onNavigateAbout,
                         onLogout = { authRepository.logout(); onNavigateLogin() }
                     )
                 }
@@ -353,7 +355,8 @@ internal fun ProfileIdentityCard(
     onNavigateCv: () -> Unit = {},
     onNavigateApplications: () -> Unit = {},
     onNavigateDocuments: () -> Unit = {},
-    onNavigateCertificates: () -> Unit = {}
+    onNavigateCertificates: () -> Unit = {},
+    onNavigateAbout: () -> Unit = {}
 ) {
     val context = LocalContext.current
     val profileFields = listOf(profile?.fullName, profile?.whatsapp, profile?.domicile, profile?.education, profile?.applicationEmail)
@@ -584,6 +587,17 @@ internal fun ProfileIdentityCard(
                 shape = RoundedCornerShape(12.dp)
             ) {
                 Text("Sertifikat Saya — Riwayat & Unduh", fontSize = 12.sp, fontWeight = FontWeight.Bold)
+            }
+
+            OutlinedButton(
+                onClick = onNavigateAbout,
+                modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp),
+                shape = RoundedCornerShape(12.dp)
+            ) {
+                Text(
+                    "ⓘ  Tentang KarirMate",
+                    fontWeight = FontWeight.Bold
+                )
             }
 
             Row(

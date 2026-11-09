@@ -11,10 +11,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.example.automatesmartbot.data.subscription.*
-import com.example.automatesmartbot.ui.components.LocalMembershipTier
-import com.example.automatesmartbot.ui.components.MembershipTier
 import com.example.automatesmartbot.ui.theme.karirButtonColors
-import kotlinx.coroutines.delay
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -58,38 +55,8 @@ fun ProCheckoutScreen(planIndex: Int, onComplete: () -> Unit, store: DemoSubscri
             error?.let { Text(it, color = MaterialTheme.colorScheme.error) }
             if (activated) {
                 Text("Aktivasi demo tersimpan. Berakhir: ${date(expiry)}. Hak akses PRO server tidak berubah.")
-                Button(onClick = onComplete, colors = karirButtonColors()) { Text("Kelola Langganan") }
+                Button(onClick = onComplete, colors = karirButtonColors()) { Text("Kembali ke Paket PRO") }
             }
         }
-    }
-}
-
-@Composable
-fun ManageProSubscriptionScreen(onUpgrade: () -> Unit, store: DemoSubscriptionStore? = null) {
-    val context = LocalContext.current
-    val subscription = remember(store) { store ?: DemoSubscriptionStore(context) }
-    var identityReady by remember(store) { mutableStateOf(store != null || com.example.automatesmartbot.data.cv.cvWorkspaceBound(context, com.example.automatesmartbot.data.network.ApiClient.getSessionManager()?.getValidToken())) }
-    LaunchedEffect(store) {
-        if (store == null) identityReady = runCatching { com.example.automatesmartbot.data.cv.ensureCvWorkspace(context) }.getOrDefault(false)
-    }
-    var state by remember { mutableStateOf(subscription.current()) }
-    var time by remember { mutableLongStateOf(subscription.clock()) }
-    LaunchedEffect(subscription) {
-        while (true) { state = subscription.current(); time = subscription.clock(); delay(1000) }
-    }
-    val active = state.active(time)
-    val verifiedTier = LocalMembershipTier.current
-    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
-        Text("Kelola Langganan", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-        Text(when (verifiedTier) {
-            MembershipTier.PRO -> "Status akun terverifikasi: PRO"
-            MembershipTier.FREE -> "Status akun terverifikasi: FREE"
-            MembershipTier.UNVERIFIED -> "Status akun: BELUM TERVERIFIKASI (periksa koneksi)"
-        }, fontWeight = FontWeight.Bold)
-        Text(if (!identityReady) "Status demo menunggu verifikasi akun" else if (active) "Simulasi PRO lokal aktif (tidak memberikan akses PRO server)" else "Tidak ada simulasi PRO aktif")
-        state.planId?.let { id -> DemoPlans.all.firstOrNull { it.id == id }?.let { Text("Paket ${it.name}") } }
-        if (state.expiresAt > 0) Text("${if (active) "Berakhir" else "Berakhir pada"}: ${date(state.expiresAt)}")
-        Text("Status ini hanya simulasi lokal. PRO terverifikasi dan hak akses server diperiksa melalui backend.")
-        Button(onClick = onUpgrade, colors = karirButtonColors()) { Text("Lihat paket / Perpanjang") }
     }
 }

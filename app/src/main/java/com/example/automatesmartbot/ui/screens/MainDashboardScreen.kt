@@ -199,7 +199,11 @@ private fun MainDashboardContent(
         Screen.Riwayat.route -> "Riwayat Lamaran"
         Screen.UpgradePro.route -> "Upgrade PRO"
         Screen.ProCheckout.route -> "Pembelian Paket"
-        Screen.ManagePro.route -> "Kelola Langganan"
+        Screen.About.route -> "Tentang KarirMate"
+        Screen.AboutDescription.route -> "Tentang KarirMate"
+        Screen.AboutDevelopers.route -> "Pengembang"
+        Screen.AboutPrivacy.route -> "Privasi & Ketentuan"
+        Screen.AboutSupport.route -> "Bantuan & Kontak"
         Screen.Profil.route -> "Profil & Pengaturan"
         Screen.Login.route -> "Masuk Akun"
         Screen.Register.route -> "Daftar Akun"
@@ -217,7 +221,11 @@ private fun MainDashboardContent(
     var trainingBack by remember { mutableStateOf<(() -> Unit)?>(null) }
     val edgeHeaderRoutes = setOf(
         Screen.LatihanPsikotes.route, Screen.SalaryCalculator.route,
-        Screen.JobTraining.route, Screen.Certificates.route, Screen.CvBuilder.route, Screen.Profil.route
+        Screen.JobTraining.route, Screen.Certificates.route,
+        Screen.CvBuilder.route, Screen.Profil.route,
+        Screen.About.route, Screen.AboutDescription.route,
+        Screen.AboutDevelopers.route, Screen.AboutPrivacy.route,
+        Screen.AboutSupport.route
     )
     val edgeHeader = currentRoute in edgeHeaderRoutes
     var psychotestBack by remember { mutableStateOf<(() -> Unit)?>(null) }
@@ -346,9 +354,8 @@ private fun MainDashboardContent(
             }
             composable(Screen.UpgradePro.route) { UpgradeProScreen(onCheckout = { navController.navigate("pro_checkout/$it") }) }
             composable(Screen.ProCheckout.route, arguments = listOf(navArgument("plan") { type = NavType.IntType })) { entry ->
-                ProCheckoutScreen(entry.arguments?.getInt("plan") ?: 0, onComplete = { navController.navigate(Screen.ManagePro.route) })
+                ProCheckoutScreen(entry.arguments?.getInt("plan") ?: 0, onComplete = { navController.navigate(Screen.UpgradePro.route) { popUpTo(Screen.UpgradePro.route) { inclusive = false }; launchSingleTop = true } })
             }
-            composable(Screen.ManagePro.route) { ManageProSubscriptionScreen(onUpgrade = { navController.navigate(Screen.UpgradePro.route) }) }
             composable(Screen.KirimLamaran.route) {
                 KirimLamaranScreen(
                     isPro = isPro,
@@ -405,6 +412,26 @@ private fun MainDashboardContent(
 
                 }
             }
+            composable(Screen.About.route) {
+                AboutKarirMateHome(
+                    onOpenDescription = { navController.navigate(Screen.AboutDescription.route) },
+                    onOpenDevelopers = { navController.navigate(Screen.AboutDevelopers.route) },
+                    onOpenPrivacy = { navController.navigate(Screen.AboutPrivacy.route) },
+                    onOpenSupport = { navController.navigate(Screen.AboutSupport.route) }
+                )
+            }
+            composable(Screen.AboutDescription.route) {
+                AboutKarirMateDetail("description")
+            }
+            composable(Screen.AboutDevelopers.route) {
+                AboutKarirMateDetail("developers")
+            }
+            composable(Screen.AboutPrivacy.route) {
+                AboutKarirMateDetail("privacy")
+            }
+            composable(Screen.AboutSupport.route) {
+                AboutKarirMateDetail("support")
+            }
             composable(Screen.Profil.route) {
                 ProfilScreen(
                     isOnline = isOnline,
@@ -414,6 +441,7 @@ private fun MainDashboardContent(
                     onNavigateApplications = { navController.navigate(Screen.Riwayat.route) { launchSingleTop = true } },
                     onNavigateDocuments = { navController.navigate(Screen.CareerLetters.route) { launchSingleTop = true } },
                     onNavigateCertificates = { navController.navigate(Screen.Certificates.route) { launchSingleTop = true } },
+                    onNavigateAbout = { navController.navigate(Screen.About.route) { launchSingleTop = true } },
                     onNavigateEditProfile = {
                         navController.navigate(Screen.OnboardingProfile.route) {
                             launchSingleTop = true
@@ -457,6 +485,20 @@ private fun MainDashboardContent(
                         onNavigateLogin = navigateToLogin,
                         onRegisterSuccess = {
                             navigateToLogin()
+                        },
+                        onGoogleSuccess = { profileCompleted ->
+                            val newToken = sessionManager?.getValidToken()
+                            dashboardViewModel.reset()
+                            sessionToken = newToken
+                            checkedToken = newToken
+                            navController.navigate(
+                                NavigationPolicy.postLoginRoute(profileCompleted)
+                            ) {
+                                popUpTo(Screen.Register.route) {
+                                    inclusive = true
+                                }
+                                launchSingleTop = true
+                            }
                         }
                     )
 

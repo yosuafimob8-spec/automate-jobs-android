@@ -48,7 +48,6 @@ private fun LoginScreenContent(
     val context = LocalContext.current
     val prefs = remember { context.getSharedPreferences("karirmate_login_preferences", 0) }
     var rememberMe by remember { mutableStateOf(prefs.getString("remembered_email", "").orEmpty().isNotBlank()) }
-    var googleNotice by remember { mutableStateOf(false) }
     LaunchedEffect(Unit) { email = prefs.getString("remembered_email", "").orEmpty() }
 
     val isLoading by viewModel.isLoading.collectAsState()
@@ -165,10 +164,13 @@ private fun LoginScreenContent(
                 }
 
                 Text("atau masuk dengan", color = KarirTextMuted, fontSize = 13.sp)
-                OutlinedButton(onClick = { googleNotice = true }, modifier = Modifier.fillMaxWidth().height(52.dp)) {
-                    Text("Masuk dengan Google", color = KarirTextDark, fontWeight = FontWeight.SemiBold)
-                }
-                if (googleNotice) Text("Login Google belum tersedia: perlu integrasi OAuth.", color = KarirTextMuted, fontSize = 12.sp)
+                GoogleSignInButton(
+                    label = "Masuk dengan Google",
+                    enabled = !isLoading,
+                    onIdToken = {
+                        viewModel.loginWithGoogle(it, onLoginSuccess)
+                    }
+                )
 
                 errorMessage?.let { err ->
                     Surface(

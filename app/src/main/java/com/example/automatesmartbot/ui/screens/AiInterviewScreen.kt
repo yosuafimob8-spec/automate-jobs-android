@@ -330,6 +330,13 @@ fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
                     started = false
                     report = response.finalReport
                     resultScore = response.overallScore ?: 0
+                    if (voiceMode && response.overallScore != null) {
+                        CertificateScoreBridge.saveVoice(
+                            context,
+                            CertificateScoreBridge.accountKey(),
+                            response.overallScore
+                        )
+                    }
                     resultStrengths = response.strengths
                     resultImprovements = response.improvements
                     resultAdvice = response.encouragement

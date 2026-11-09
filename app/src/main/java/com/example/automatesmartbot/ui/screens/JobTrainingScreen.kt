@@ -126,6 +126,7 @@ fun JobTrainingScreen(
             } == CERTIFICATE_TEST_ACCOUNT_SHA256
         } == true
     }
+    val certificateScores = rememberCertificateScores()
     var courseId by rememberSaveable { mutableStateOf(TrainingCourses.all.first().id) }
     val course = remember(courseId) {
         TrainingCourses.all.firstOrNull { it.id == courseId } ?: TrainingPositions.groups.asSequence()
@@ -437,71 +438,6 @@ fun JobTrainingScreen(
                             color = MaterialTheme.colorScheme.primary
                         )
                     }
-                    if (certificateTestAccount) {
-                        TrainingCard {
-                            Text(
-                                "MODE PENGUJIAN • SIMULASI 100%",
-                                fontWeight = FontWeight.Bold,
-                                color = orangeTraining
-                            )
-                            Text(
-                                "Seluruh quest ditampilkan selesai khusus untuk pengujian. Progres asli tidak berubah."
-                            )
-
-                            OutlinedTextField(
-                                value = name,
-                                onValueChange = {
-                                    name = it
-                                    prefs.edit()
-                                        .putString("name", it)
-                                        .apply()
-                                },
-                                label = {
-                                    Text("Nama sertifikat uji")
-                                },
-                                modifier = Modifier.fillMaxWidth(),
-                                colors = karirInputColors()
-                            )
-
-                            TrainingAction(
-                                "Buat Sertifikat SIMULASI",
-                                enabled = name.isNotBlank()
-                            ) {
-                                val item = JSONObject()
-                                    .put(
-                                        "id",
-                                        "TEST-" + UUID.randomUUID().toString()
-                                    )
-                                    .put("name", name.trim())
-                                    .put("course", course.title)
-                                    .put("courseId", courseId)
-                                    .put("date", LocalDate.now().toString())
-                                    .put("score", 100)
-                                    .put("testSimulation", true)
-                                    .put("serverRegistered", false)
-
-                                val history = JSONArray(
-                                    testPrefs.getString(
-                                        "certificates", "[]"
-                                    )
-                                )
-                                history.put(item)
-
-                                testPrefs.edit()
-                                    .putString(
-                                        "certificates",
-                                        history.toString()
-                                    )
-                                    .apply()
-
-                                certificate = item
-                                examScore = 100
-                                examCorrect = null
-                                stage = "certificate"
-                            }
-                        }
-                    }
-
                     Text("Daftar Modul", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = darkTraining)
                     course.lessons.forEachIndexed { i, lesson ->
                         val done = i.toString() in completed
@@ -752,8 +688,87 @@ fun JobTrainingScreen(
                         }
                     }
 
+                    if (certificateTestAccount) {
+                        Text(
+                            "MODE UJI • Semua quest dihitung selesai 100%",
+                            color = tealTraining,
+                            fontWeight = FontWeight.Bold
+                        )
+                        OutlinedTextField(
+                            value = name,
+                            onValueChange = {
+                                name = it
+                                prefs.edit().putString("name", it).apply()
+                            },
+                            label = { Text("Nama pada sertifikat") },
+                            modifier = Modifier.fillMaxWidth(),
+                            colors = karirInputColors(),
+                            singleLine = true
+                        )
+                    }
+
+                    TrainingAction("Buat Sertifikat") {
+                        if (certificateTestAccount) {
+                            if (name.isBlank()) {
+                                message = "Isi nama pada sertifikat terlebih dahulu."
+                            } else {
+                                val item = JSONObject()
+                                    .put("id", "TEST-" + UUID.randomUUID().toString())
+                                    .put("name", name.trim())
+                                    .put("course", course.title)
+                                    .put("courseId", courseId)
+                                    .put("date", LocalDate.now().toString())
+                                    .put("score", 100)
+                                    .put("testSimulation", true)
+                                    .put("serverRegistered", false)
+
+                                val records = JSONArray(
+                                    testPrefs.getString("certificates", "[]")
+                                )
+                                records.put(item)
+                                testPrefs.edit()
+                                    .putString("certificates", records.toString())
+                                    .apply()
+
+                                certificate = item
+                                examScore = 100
+                                examCorrect = null
+                                message = ""
+                                stage = "certificate"
+                            }
+                        } else {
+                            val issued = (0 until history.length())
+                                .mapNotNull { history.optJSONObject(it) }
+                                .lastOrNull {
+                                    !it.optBoolean("testSimulation")
+                                        && it.optInt("score", -1) >= 80
+                                }
+
+                            message = when {
+                                !certificateScores.psychPassed ->
+                                    "Tes Gabungan belum mencapai nilai 80/100."
+                                !certificateScores.voicePassed ->
+                                    "Interview Suara belum mencapai nilai 80/100."
+                                issued == null ->
+                                    "Selesaikan pelatihan dan evaluasi akhir " +
+                                        "dengan nilai minimal 80/100."
+                                else -> ""
+                            }
+
+                            if (message.isBlank() && issued != null) {
+                                certificate = issued
+                                stage = "certificate"
+                            }
+                        }
+
+                    if (message.isNotBlank()) {
+                        Text(message, color = darkTraining)
+                    }
+
                     CertificateHistoryBody(
                         history = history,
+                        testMode = certificateTestAccount,
+                        scores = certificateScores,
                         onShowCertificate = { item -> certificate = item; stage = "certificate" },
                         onBackToCatalog = { if (initialStage == "history") onExit() else stage = "catalog" }
                     )

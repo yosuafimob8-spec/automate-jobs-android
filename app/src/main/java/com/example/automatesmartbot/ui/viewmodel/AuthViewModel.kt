@@ -1,4 +1,4 @@
-﻿package com.example.automatesmartbot.ui.viewmodel
+package com.example.automatesmartbot.ui.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -52,6 +52,33 @@ class AuthViewModel(
                     _errorMessage.value = err.localizedMessage ?: "Terjadi kesalahan. Coba lagi."
                 }
             )
+        }
+    }
+
+    fun loginWithGoogle(
+        idToken: String,
+        onLoggedIn: (Boolean?) -> Unit
+    ) {
+        viewModelScope.launch {
+            _isLoading.value = true
+            _errorMessage.value = null
+            try {
+                repository.loginWithGoogle(idToken).fold(
+                    onSuccess = {
+                        val completed = ProfileSetupRepository()
+                            .checkServerProfileCompletion()
+                        _successMessage.value = "Login Google berhasil!"
+                        _isLoading.value = false
+                        onLoggedIn(completed)
+                    },
+                    onFailure = {
+                        _errorMessage.value =
+                            it.message ?: "Login Google gagal."
+                    }
+                )
+            } finally {
+                _isLoading.value = false
+            }
         }
     }
 

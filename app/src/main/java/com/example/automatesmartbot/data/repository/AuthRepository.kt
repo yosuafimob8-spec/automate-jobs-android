@@ -59,6 +59,36 @@ class AuthRepository(
         }
     }
 
+    suspend fun loginWithGoogle(
+        idToken: String
+    ): Result<LoginResponse> = withContext(Dispatchers.IO) {
+        try {
+            val response = loginApi.googleLogin(
+                mapOf("id_token" to idToken)
+            )
+            val data = response.body()
+            if (!response.isSuccessful || data == null ||
+                data.access_token.isBlank()
+            ) {
+                return@withContext Result.failure(
+                    Exception(
+                        when (response.code()) {
+                            409 -> "Email sudah terdaftar. Masuk dengan password terlebih dahulu."
+                            401 -> "Identitas Google gagal diverifikasi."
+                            else -> "Login Google gagal (HTTP ${response.code()})."
+                        }
+                    )
+                )
+            }
+            sessionManager?.saveToken(
+                data.access_token, data.expires_at
+            )
+            Result.success(data)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
     suspend fun getMe(): Result<UserMeResponse> {
         return withContext(Dispatchers.IO) {
             try {

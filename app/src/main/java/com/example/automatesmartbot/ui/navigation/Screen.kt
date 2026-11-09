@@ -30,7 +30,11 @@ sealed class Screen(val route: String, val title: String, val icon: ImageVector)
     object Riwayat : Screen("riwayat", "Riwayat", Icons.Default.History)
     object UpgradePro : Screen("upgrade_pro", "Upgrade PRO", Icons.Default.Work)
     object ProCheckout : Screen("pro_checkout/{plan}", "Checkout PRO", Icons.Default.Work)
-    object ManagePro : Screen("manage_pro", "Kelola Langganan", Icons.Default.Work)
+    object About : Screen("about_karirmate", "Tentang KarirMate", Icons.Default.Person)
+    object AboutDescription : Screen("about_description", "Tentang KarirMate", Icons.Default.Person)
+    object AboutDevelopers : Screen("about_developers", "Pengembang", Icons.Default.Person)
+    object AboutPrivacy : Screen("about_privacy", "Privasi & Ketentuan", Icons.Default.Person)
+    object AboutSupport : Screen("about_support", "Bantuan & Kontak", Icons.Default.Person)
     object Profil : Screen("profil", "Profil", Icons.Default.Person)
     object Login : Screen("login", "Masuk", Icons.Default.Lock)
     object Register : Screen("register", "Daftar", Icons.Default.Person)
@@ -51,7 +55,9 @@ val detailNavItems = listOf(
     Screen.LatihanPsikotes,
     Screen.AiInterview,
     Screen.WorkPedia,
-    Screen.UpgradePro, Screen.ProCheckout, Screen.ManagePro
+    Screen.About, Screen.AboutDescription,
+    Screen.AboutDevelopers, Screen.AboutPrivacy, Screen.AboutSupport,
+    Screen.UpgradePro, Screen.ProCheckout
 )
 
 val appShellItems = bottomNavItems + detailNavItems

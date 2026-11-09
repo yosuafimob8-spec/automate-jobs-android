@@ -27,8 +27,8 @@ class SubscriptionUiTest {
         val store = DemoSubscriptionStore(compose.activity) { now }
         compose.setContent { KarirMateTheme(ThemeMode.DARK) { when(page) {
             "upgrade" -> UpgradeProScreen { index = it; page = "checkout" }
-            "checkout" -> ProCheckoutScreen(index, { page = "manage" }, store)
-            else -> ManageProSubscriptionScreen({ page = "upgrade" }, store)
+            "checkout" -> ProCheckoutScreen(index, { page = "upgrade" }, store)
+            else -> UpgradeProScreen { index = it; page = "checkout" }
         } } }
         compose.onNodeWithContentDescription("Pilih paket Bulanan").performScrollTo().performClick()
         compose.onNodeWithText("Paket Bulanan — Rp79.000").assertExists()
@@ -37,14 +37,9 @@ class SubscriptionUiTest {
         compose.onNodeWithText("Aktifkan PRO Demo").assertIsEnabled().performClick()
         compose.onNodeWithText("Aktifkan PRO Demo").assertIsNotEnabled()
         compose.runOnIdle { assertEquals("monthly", store.current().planId) }
-        compose.onNodeWithText("Kelola Langganan").performScrollTo().performClick()
-        compose.onNodeWithText("Simulasi PRO lokal aktif (tidak memberikan akses PRO server)").assertExists()
-        compose.runOnIdle { now = store.current().expiresAt }
-        compose.mainClock.advanceTimeBy(1100)
-        compose.waitForIdle()
-        compose.onNodeWithText("Tidak ada simulasi PRO aktif").assertExists()
-        compose.onNodeWithText("Lihat paket / Perpanjang").performClick()
+        compose.onNodeWithText("Kembali ke Paket PRO").performScrollTo().performClick()
         compose.onNodeWithText("KarirMate PRO").assertExists()
+        compose.runOnIdle { assertEquals("monthly", store.current().planId) }
     }
     @Test fun invalidCheckoutDoesNotSilentlyPurchaseAnotherPlan() {
         compose.setContent { KarirMateTheme(ThemeMode.LIGHT) { ProCheckoutScreen(999, {}) } }
