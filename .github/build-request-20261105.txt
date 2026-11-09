@@ -4,3 +4,5 @@ Previous run: https://github.com/ilhamramdhani763-stack/automate-jobs-android/ac
 Known issue: 7 Espresso AppNotIdleException tests; preserve test gate failure while making any compiled APK available for inspection.
 
 Build KarirMate Update 1-10: 2026-11-09
+
+Build retry after truthful UI test fixes and artifact-quota fallback: 2026-11-09 (commit 60ecc84)
