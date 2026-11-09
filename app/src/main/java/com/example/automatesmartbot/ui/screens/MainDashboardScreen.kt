@@ -412,6 +412,7 @@ private fun MainDashboardContent(
                     onNavigateCv = { navController.navigate(Screen.CvBuilder.route) { launchSingleTop = true } },
                     onNavigateApplications = { navController.navigate(Screen.Riwayat.route) { launchSingleTop = true } },
                     onNavigateDocuments = { navController.navigate(Screen.CareerLetters.route) { launchSingleTop = true } },
+                    onNavigateCertificates = { navController.navigate(Screen.Certificates.route) { launchSingleTop = true } },
                     onNavigateEditProfile = {
                         navController.navigate(Screen.OnboardingProfile.route) {
                             launchSingleTop = true
