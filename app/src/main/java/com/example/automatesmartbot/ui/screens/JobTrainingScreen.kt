@@ -760,6 +760,7 @@ fun JobTrainingScreen(
                                 stage = "certificate"
                             }
                         }
+                    }
 
                     if (message.isNotBlank()) {
                         Text(message, color = darkTraining)

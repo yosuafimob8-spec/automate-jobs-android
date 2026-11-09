@@ -399,10 +399,7 @@ fun DashboardScreen(
         }
         item {
             Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                OutlinedButton(onClick = { onNavigate(Screen.ManagePro.route) }, modifier = Modifier.weight(1f)) {
-                    Text("Kelola Langganan", fontSize = 12.sp)
-                }
-                Button(onClick = { onNavigate(Screen.UpgradePro.route) }, modifier = Modifier.weight(1f), colors = ButtonDefaults.buttonColors(containerColor = ocean)) {
+                Button(onClick = { onNavigate(Screen.UpgradePro.route) }, modifier = Modifier.fillMaxWidth(), colors = ButtonDefaults.buttonColors(containerColor = ocean)) {
                     Text(if (isPro) "Paket PRO" else "Upgrade PRO", fontSize = 12.sp)
                 }
             }
