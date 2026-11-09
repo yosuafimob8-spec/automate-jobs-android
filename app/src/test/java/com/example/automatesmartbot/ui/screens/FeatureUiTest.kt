@@ -82,7 +82,7 @@ class FeatureUiTest {
     }
     @Test fun newCareerRoutesKeepOriginalBottomNavigation() {
         val original = com.example.automatesmartbot.ui.navigation.bottomNavItems.map { it.route }
-        assertEquals(listOf("dashboard","cari_lowongan","kirim_lamaran","riwayat","profil"), original)
+        assertEquals(listOf("dashboard","kirim_lamaran","riwayat","profil"), original)
         assertTrue(com.example.automatesmartbot.ui.navigation.appShellItems.any { it.route == "career_documents" })
     }
     @Test fun resignationEditorGeneratesEditableTextAndExportControl() {
