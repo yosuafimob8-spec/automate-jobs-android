@@ -107,7 +107,7 @@ class ElevenBugUiTest {
     }
 
     @Test fun workpediaSearchFiltersAcceptsClearAndKeepsReadableInk() {
-        compose.setContent { KarirMateTheme(mode) { WorkPediaScreen {} } }
+        compose.setContent { KarirMateTheme(mode) { WorkPediaScreen(onExit = {}) } }
         bothModes {
             input().performTextReplacement("PKWTT")
             assertInputInk()
