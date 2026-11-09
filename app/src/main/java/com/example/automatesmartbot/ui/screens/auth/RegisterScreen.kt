@@ -218,7 +218,7 @@ private fun RegisterScreenContent(
                         onIdToken = {
                             viewModel.loginWithGoogle(it, onGoogleSuccess)
                         },
-                        errorMessage = errorMessage
+                        errorMessage = null
                     )
 
                     errorMessage?.let { err ->
