@@ -28,6 +28,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.automatesmartbot.data.career.TrainingCertificateIdentity
+import com.example.automatesmartbot.data.network.ApiClient
+import com.example.automatesmartbot.data.psychotest.PsychotestPolicy
 import com.example.automatesmartbot.ui.theme.ScreenSurface
 import com.example.automatesmartbot.ui.theme.ScreenText
 import com.example.automatesmartbot.ui.theme.ScreenMuted
@@ -41,6 +43,50 @@ import org.json.JSONObject
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.util.Locale
+
+
+/** Read-only result for the signed-in account. The server is authoritative for history.
+ * A psychotest score is not a certificate or proof that any pass threshold was met.
+ */
+@Composable
+private fun PsychotestCertificateSummary(): String {
+    val token = ApiClient.getSessionManager()?.getValidToken()
+    val api = ApiClient.psychotestApi
+    var summary by remember(token, api) {
+        mutableStateOf(if (token.isNullOrBlank()) "Login untuk melihat hasil" else "Memuat nilai...")
+    }
+    LaunchedEffect(token, api) {
+        if (token.isNullOrBlank()) {
+            summary = "Login untuk melihat hasil"
+            return@LaunchedEffect
+        }
+        if (api == null) {
+            summary = "Server Psikotes belum dikonfigurasi"
+            return@LaunchedEffect
+        }
+        summary = "Memuat nilai..."
+        summary = try {
+            val response = withContext(Dispatchers.IO) { api.history(limit = 100, offset = 0) }
+            if (!response.isSuccessful) {
+                "Riwayat belum tersedia (HTTP ${response.code()})"
+            } else {
+                val items = response.body()?.getAsJsonArray("items")
+                val scores = items?.mapNotNull { item ->
+                    runCatching {
+                        val obj = item.asJsonObject
+                        val score = obj.get("score")?.takeUnless { it.isJsonNull }?.asDouble
+                        val maximum = obj.get("max_score")?.takeUnless { it.isJsonNull }?.asDouble
+                        PsychotestPolicy.normalizedScore(score, maximum)
+                    }.getOrNull()
+                }.orEmpty()
+                if (scores.isEmpty()) "Belum ada skor latihan" else "Skor terbaik: ${scores.maxOrNull()}/100 (riwayat akun)"
+            }
+        } catch (_: Exception) {
+            "Server Psikotes tidak terhubung"
+        }
+    }
+    return summary
+}
 
 private val certBlue = Color(0xFF0864B5)
 private val certNavy = Color(0xFF10254A)
@@ -98,22 +144,23 @@ internal fun CertificateHistoryBody(
                 }
                 com.example.automatesmartbot.ui.components.MembershipBadge(style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.LIGHT)
             }
+            val psychotestSummary = PsychotestCertificateSummary()
             CertificateRequirementRow(
                 icon = { Icon(Icons.Default.AssignmentTurnedIn, null, tint = Color(0xFF168E9D), modifier = Modifier.size(29.dp)) },
-                title = "Lolos Psikotes", detail = "Kepribadian, logika, numerik, dan verbal",
-                status = "Belum terhubung", achieved = false
+                title = "Hasil Psikotes", detail = "Nilai latihan dari riwayat akun (bukan sertifikasi kelulusan)",
+                status = psychotestSummary, achieved = false
             )
             CertificateRequirementRow(
                 icon = { Icon(Icons.Default.MenuBook, null, tint = certBlue, modifier = Modifier.size(30.dp)) },
                 title = "Lolos Pelatihan Kerja", detail = "Level Basic sampai Advance",
-                status = if (latest != null) "Tercatat" else "Belum ada", achieved = latest != null
+                status = when { latest == null -> "Belum ada"; latest.optBoolean("serverRegistered") -> "Terverifikasi saat diterbitkan"; else -> "Tercatat lokal (belum diverifikasi online)" }, achieved = latest != null
             )
             CertificateRequirementRow(
                 icon = { Icon(Icons.Default.SmartToy, null, tint = certBlue, modifier = Modifier.size(30.dp)) },
                 title = "Lolos Interview AI", detail = "Simulasi wawancara kerja dengan AI HR",
-                status = "Belum terhubung", achieved = false
+                status = "Belum tersedia: verifikasi nilai belum terintegrasi", achieved = false
             )
-            Text("Status berdasarkan progres yang tercatat. Sertifikat pelatihan internal bukan sertifikasi kompetensi resmi BNSP.",
+            Text("Hasil Psikotes dan Interview belum tersinkronisasi; tidak dianggap lulus otomatis. Sertifikat pelatihan lokal bukan verifikasi server maupun sertifikasi resmi BNSP.",
                 fontSize = 10.sp, lineHeight = 15.sp, color = muted)
         }
     }

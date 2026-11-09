@@ -27,6 +27,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.launch
+import com.example.automatesmartbot.data.network.ApiClient
+import kotlinx.coroutines.CancellationException
+import org.json.JSONObject
 
 private val historyBlue = Color(0xFF0867BA)
 private val historyInk = Color(0xFF101A35)
@@ -46,6 +49,34 @@ fun RiwayatScreen(onReload: (() -> Unit)? = null) {
     val host = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     var showInfo by remember { mutableStateOf(false) }
+    var rows by remember { mutableStateOf<List<JSONObject>>(emptyList()) }
+    var loading by remember { mutableStateOf(false) }
+    var loaded by remember { mutableStateOf(false) }
+    var error by remember { mutableStateOf<String?>(null) }
+    var generation by remember { mutableIntStateOf(0) }
+    LaunchedEffect(generation) {
+        loading = true
+        error = null
+        try {
+            val response = ApiClient.apiService.getKarirMateReport()
+            if (!response.isSuccessful) {
+                val code = response.code()
+                response.errorBody()?.close()
+                throw IllegalStateException("Laporan tidak tersedia (HTTP $code)")
+            }
+            val json = JSONObject(response.body()?.use { it.string() } ?: "{}")
+            val array = json.optJSONArray("items") ?: org.json.JSONArray()
+            rows = (0 until array.length()).mapNotNull { array.optJSONObject(it) }
+            loaded = true
+        } catch (e: CancellationException) {
+            throw e
+        } catch (e: Exception) {
+            error = e.message ?: "Gagal membaca laporan"
+        } finally {
+            loading = false
+        }
+    }
+
 
     Box(
         Modifier.fillMaxSize().background(
@@ -140,10 +171,8 @@ fun RiwayatScreen(onReload: (() -> Unit)? = null) {
                             fontSize = 16.sp, fontWeight = FontWeight.ExtraBold)
                         Surface(
                             onClick = {
-                                if (onReload != null) onReload()
-                                else scope.launch {
-                                    host.showSnackbar("Sumber riwayat lamaran belum terhubung. Tidak ada status yang dibuat.")
-                                }
+                                generation++
+                                onReload?.invoke()
                             },
                             color = if (dark) Color(0xFF254764) else Color(0xFFE9F4FF),
                             shape = RoundedCornerShape(24.dp)
@@ -163,16 +192,42 @@ fun RiwayatScreen(onReload: (() -> Unit)? = null) {
                 }
             }
 
-            // Deliberate empty state: no fabricated applications while history API is absent.
-            Box(Modifier.fillMaxWidth().weight(1f), contentAlignment = Alignment.Center) {
-                Column(horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                    HistoryEmptyArtwork()
-                    Text("Belum ada riwayat lamaran", color = ink, fontSize = 18.sp,
-                        fontWeight = FontWeight.ExtraBold, textAlign = TextAlign.Center)
-                    Text("Riwayat resmi akan otomatis muncul setelah pengiriman email atau lamaran diproses.",
-                        color = muted, fontSize = 12.sp, lineHeight = 18.sp, textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(horizontal = 31.dp))
+            // Hanya menampilkan data laporan resmi server, bukan status hasil rekaan.
+            Box(Modifier.fillMaxWidth().weight(1f), contentAlignment = Alignment.TopCenter) {
+                when {
+                    loading && !loaded -> CircularProgressIndicator(modifier = Modifier.padding(20.dp))
+                    error != null -> Column(Modifier.fillMaxWidth().padding(18.dp)) {
+                        Text("Laporan belum dapat dimuat", fontWeight = FontWeight.Bold, color = ink)
+                        Text(error.orEmpty(), color = muted, fontSize = 12.sp)
+                        if (rows.isNotEmpty()) Text("Data terakhir ditampilkan setelah koneksi pulih.", color = muted)
+                    }
+                    rows.isEmpty() -> Column(horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                        HistoryEmptyArtwork()
+                        Text("Belum ada pengiriman tercatat", color = ink, fontSize = 17.sp,
+                            fontWeight = FontWeight.Bold)
+                        Text("Status muncul setelah backend mencatat pengiriman.", color = muted, fontSize = 12.sp)
+                    }
+                    else -> Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        rows.forEach { entry ->
+                            val label = listOf("company", "company_name", "employer", "recipient", "email")
+                                .firstNotNullOfOrNull { key -> entry.optString(key).takeIf { it.isNotBlank() } }
+                                ?: "Pengiriman tercatat"
+                            val job = listOf("position", "job_title", "title")
+                                .firstNotNullOfOrNull { key -> entry.optString(key).takeIf { it.isNotBlank() } }
+                            val status = listOf("status", "delivery_status")
+                                .firstNotNullOfOrNull { key -> entry.optString(key).takeIf { it.isNotBlank() } }
+                            Surface(Modifier.fillMaxWidth(), shape = RoundedCornerShape(14.dp),
+                                color = panel, border = BorderStroke(1.dp, line)) {
+                                Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                                    Text(label, color = ink, fontWeight = FontWeight.Bold)
+                                    job?.let { Text(it, color = muted, fontSize = 12.sp) }
+                                    Text("Status server: ${status ?: "belum dilaporkan"}", color = muted, fontSize = 12.sp)
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

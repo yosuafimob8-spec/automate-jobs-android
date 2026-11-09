@@ -30,7 +30,7 @@ val releasePsychotestBaseUrl = providers.gradleProperty("releasePsychotestBaseUr
         if (it.endsWith("/")) it else "$it/"
     }.orEmpty()
 
-val debugInterviewBaseUrl = providers.gradleProperty("debugInterviewBaseUrl").getOrElse("http://10.0.2.2:8790/")
+val debugInterviewBaseUrl = providers.gradleProperty("debugInterviewBaseUrl").getOrElse("http://127.0.0.1:8790/")
 val releaseInterviewBaseUrl = providers.gradleProperty("releaseInterviewBaseUrl").getOrElse("")
 
 val debugTrainingBaseUrl = providers.gradleProperty("debugTrainingBaseUrl").getOrElse("")

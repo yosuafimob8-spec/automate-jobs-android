@@ -153,7 +153,7 @@ private val extraSearchableFeatures = listOf(
         title = "Cari Lowongan",
         subtitle = "Temukan pekerjaan impian",
         icon = Icons.Default.Work,
-        iconTint = KarirOrange,
+        iconTint = Color(0xFF2563A6),
         bgTint = Color(0xFFE8F5F7),
         route = Screen.CariLowongan.route
     ),
@@ -397,260 +397,104 @@ private fun DashboardTopHeaderSection(
     displayName: String,
     onNavigate: (String) -> Unit
 ) {
+    // Update 5: unified Ocean Blue Dashboard header, matching Update 4.
+    // Retains greeting, backend-driven badge, notification and profile navigation.
     Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(180.dp)
+        modifier = Modifier.fillMaxWidth().height(180.dp)
+            .clip(RoundedCornerShape(bottomStart = 28.dp, bottomEnd = 28.dp))
+            .background(Brush.horizontalGradient(listOf(
+                Color(0xFF075AA8), Color(0xFF0769B2), Color(0xFF008EAB)
+            )))
     ) {
-        val headerTop = screenCanvas(Color(0xFFEAF5F8))
-        val headerMiddle = screenCanvas(Color(0xFFF5FAFC))
-        // Decorative warm background with swooping orange curve and city skyline
-        Canvas(modifier = Modifier.fillMaxSize()) {
-            val width = size.width
-            val height = size.height
-
-            // Warm gradient background on top right
-            drawRect(
-                brush = Brush.verticalGradient(
-                    colors = listOf(headerTop, headerMiddle, Color.Transparent),
-                    startY = 0f,
-                    endY = height
-                ),
-                size = size
-            )
-
-            // Orange wave curve
-            val wavePath = Path().apply {
-                moveTo(width * 0.45f, 0f)
-                cubicTo(
-                    width * 0.75f, 0f,
-                    width * 0.55f, height * 0.75f,
-                    width, height * 0.72f
-                )
-                lineTo(width, 0f)
+        Canvas(Modifier.fillMaxSize()) {
+            val upper = Path().apply {
+                moveTo(size.width * .64f, 0f)
+                cubicTo(size.width * .70f, size.height * .57f,
+                    size.width * .91f, size.height * .37f,
+                    size.width, size.height * .84f)
+                lineTo(size.width, 0f)
                 close()
             }
-            drawPath(
-                path = wavePath,
-                brush = Brush.linearGradient(
-                    colors = listOf(Color(0xFF55C6A9), Color(0xFF2563A6)),
-                    start = Offset(width * 0.5f, 0f),
-                    end = Offset(width, height * 0.7f)
-                )
-            )
-
-            // Stylized faint skyline buildings in warm tones
-            val buildingColor = Color(0xFFFFAE6B).copy(alpha = 0.55f)
-            val buildingColorAlt = Color(0xFFFFC08A).copy(alpha = 0.55f)
-
-            // Silhouette 1
-            drawRect(
-                color = buildingColorAlt,
-                topLeft = Offset(width * 0.65f, height * 0.28f),
-                size = Size(width * 0.08f, height * 0.45f)
-            )
-            // Silhouette 2
-            drawRect(
-                color = buildingColor,
-                topLeft = Offset(width * 0.74f, height * 0.20f),
-                size = Size(width * 0.10f, height * 0.53f)
-            )
-            // Silhouette 3
-            drawRect(
-                color = buildingColorAlt,
-                topLeft = Offset(width * 0.85f, height * 0.25f),
-                size = Size(width * 0.09f, height * 0.48f)
-            )
+            drawPath(upper, Color(0xFF12B2C5).copy(alpha = .28f))
+            val lower = Path().apply {
+                moveTo(size.width * .23f, size.height)
+                cubicTo(size.width * .15f, size.height * .25f,
+                    size.width * .44f, size.height * .34f,
+                    size.width * .42f, size.height)
+                close()
+            }
+            drawPath(lower, Color(0xFF064787).copy(alpha = .20f))
         }
-
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(horizontal = 16.dp, vertical = 10.dp),
+            modifier = Modifier.fillMaxSize().padding(horizontal = 14.dp, vertical = 13.dp),
             verticalArrangement = Arrangement.SpaceBetween
         ) {
-            // Header Row: Logo & Top Actions
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                // Logo & Branding
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(9.dp)
-                ) {
-                    Box(
-                        modifier = Modifier
-                            .size(38.dp)
-                            .shadow(3.dp, RoundedCornerShape(10.dp))
-                            .background(KarirOrange, RoundedCornerShape(10.dp)),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = "K",
-                            color = Color.White,
-                            fontSize = 24.sp,
-                            fontWeight = FontWeight.Black
-                        )
-                    }
-
-                    Column {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Text(
-                                text = "Karir",
-                                color = MaterialTheme.colorScheme.primary,
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 20.sp
-                            )
-                            Text(
-                                text = "Mate",
-                                color = ScreenText,
-                                fontWeight = FontWeight.Bold,
-                                fontSize = 20.sp
-                            )
-                        }
-                        Text(
-                            text = "AI Career Assistant",
-                            color = ScreenMuted,
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Medium
-                        )
-                    }
+                androidx.compose.foundation.Image(
+                    painter = androidx.compose.ui.res.painterResource(
+                        com.example.automatesmartbot.R.drawable.karirmate_brand_mark
+                    ),
+                    contentDescription = "Logo KarirMate",
+                    modifier = Modifier.size(43.dp),
+                    contentScale = androidx.compose.ui.layout.ContentScale.Fit
+                )
+                Column(Modifier.weight(1f)) {
+                    Text("KarirMate", color = Color.White,
+                        fontWeight = FontWeight.ExtraBold, fontSize = 20.sp, maxLines = 1)
+                    Text("AI Career Assistant", color = Color.White.copy(alpha = .85f),
+                        fontSize = 10.sp, maxLines = 1)
                 }
-
-                // Action Buttons: PRO pill, Bell, Avatar
-                Row(
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                com.example.automatesmartbot.ui.components.MembershipBadge(
+                    modifier = Modifier.clickable { onNavigate(Screen.Profil.route) },
+                    style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.HEADER
+                )
+                IconButton(
+                    onClick = { onNavigate(Screen.Riwayat.route) },
+                    modifier = Modifier.size(36.dp)
                 ) {
-                    // The badge reflects verified account status, not a static PRO icon.
-                    com.example.automatesmartbot.ui.components.MembershipBadge(
-                        modifier = Modifier.clickable { onNavigate(Screen.Profil.route) },
-                        style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.SOLID
-                    )
-
-                    // Notification Bell
-                    Box(
-                        modifier = Modifier
-                            .size(36.dp)
-                            .clip(CircleShape)
-                            .clickable { onNavigate(Screen.Riwayat.route) },
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Notifications,
-                            contentDescription = "Riwayat aktivitas",
-                            tint = ScreenText,
-                            modifier = Modifier.size(24.dp)
-                        )
-                        Box(
-                            modifier = Modifier
-                                .size(7.dp)
-                                .align(Alignment.TopEnd)
-                                .offset(x = (-4).dp, y = 4.dp)
-                                .background(Color(0xFFEF4444), CircleShape)
-                        )
-                    }
-
-                    // Profile Icon
-                    Box(
-                        modifier = Modifier
-                            .size(36.dp)
-                            .clip(CircleShape)
-                            .background(Color(0xFFFFF2E8), CircleShape)
-                            .border(1.5.dp, KarirOrange, CircleShape)
-                            .shadow(1.dp, CircleShape)
-                            .clickable { onNavigate(Screen.Profil.route) },
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Person,
-                            contentDescription = "Profil",
-                            tint = KarirOrange,
-                            modifier = Modifier.size(22.dp)
-                        )
-                    }
+                    Icon(Icons.Default.Notifications, "Riwayat aktivitas",
+                        tint = Color.White, modifier = Modifier.size(22.dp))
+                }
+                IconButton(
+                    onClick = { onNavigate(Screen.Profil.route) },
+                    modifier = Modifier.size(36.dp)
+                ) {
+                    Icon(Icons.Default.Person, "Profil",
+                        tint = Color.White, modifier = Modifier.size(22.dp))
                 }
             }
-
-            // User Greeting Row
             Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 8.dp),
+                modifier = Modifier.fillMaxWidth().padding(bottom = 2.dp),
                 verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(12.dp)
+                horizontalArrangement = Arrangement.spacedBy(10.dp)
             ) {
-                // User Avatar Circle
                 Box(
-                    modifier = Modifier
-                        .size(54.dp)
-                        .clip(CircleShape)
-                        .background(Color.White, CircleShape)
-                        .border(2.dp, Color.White, CircleShape)
-                        .shadow(3.dp, CircleShape),
+                    modifier = Modifier.size(45.dp).clip(CircleShape)
+                        .background(Color.White.copy(alpha = .15f))
+                        .border(1.dp, Color.White.copy(alpha = .45f), CircleShape),
                     contentAlignment = Alignment.Center
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .size(50.dp)
-                            .clip(CircleShape)
-                            .background(Color(0xFF1E293B), CircleShape),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Person,
-                            contentDescription = null,
-                            tint = Color(0xFFE2E8F0),
-                            modifier = Modifier.size(32.dp)
-                        )
-                    }
+                    Icon(Icons.Default.Person, null, tint = Color.White,
+                        modifier = Modifier.size(28.dp))
                 }
-
-                // Greeting Texts
-                Column(modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = "Halo, $displayName 👋",
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 17.5.sp,
-                        color = ScreenText,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                    Text(
-                        text = "Siapkan karier impianmu hari ini",
-                        fontSize = 12.sp,
-                        color = ScreenMuted
-                    )
-                    Spacer(modifier = Modifier.height(4.dp))
-                    // Online Pill
-                    Surface(
-                        shape = RoundedCornerShape(50),
-                        color = ScreenSurface,
-                        border = BorderStroke(1.dp, Color(0xFFE2E8F0)),
-                        shadowElevation = 1.dp
-                    ) {
-                        Row(
-                            modifier = Modifier.padding(horizontal = 9.dp, vertical = 3.dp),
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.spacedBy(5.dp)
-                        ) {
-                            Box(
-                                modifier = Modifier
-                                    .size(7.dp)
-                                    .background(
-                                        if (isOnline) Color(0xFF22C55E) else Color(0xFFEF4444),
-                                        CircleShape
-                                    )
-                            )
-                            Text(
-                                text = if (isOnline) "Online" else "Offline",
-                                fontSize = 10.5.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = if (isOnline) screenCanvas(Color(0xFF166534), Color(0xFF86EFAC)) else MaterialTheme.colorScheme.error
-                            )
-                        }
+                Column(Modifier.weight(1f)) {
+                    Text("Halo, $displayName 👋", fontWeight = FontWeight.Bold,
+                        fontSize = 17.sp, color = Color.White,
+                        maxLines = 1, overflow = TextOverflow.Ellipsis)
+                    Text("Siapkan karier impianmu hari ini", fontSize = 11.sp,
+                        color = Color.White.copy(alpha = .88f), maxLines = 1,
+                        overflow = TextOverflow.Ellipsis)
+                    Row(verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(5.dp)) {
+                        Box(Modifier.size(7.dp).background(
+                            if (isOnline) Color(0xFF55E6A1) else Color(0xFFFFD56B),
+                            CircleShape))
+                        Text(if (isOnline) "Online" else "Offline",
+                            color = Color.White.copy(alpha = .94f), fontSize = 10.sp)
                     }
                 }
             }
@@ -683,7 +527,7 @@ private fun DashboardSearchBar(
             Icon(
                 imageVector = Icons.Default.Search,
                 contentDescription = "Cari",
-                tint = KarirOrange,
+                tint = Color(0xFF2563A6),
                 modifier = Modifier.size(22.dp)
             )
 
@@ -699,7 +543,7 @@ private fun DashboardSearchBar(
                     value = query,
                     onValueChange = onQueryChange,
                     singleLine = true,
-                    cursorBrush = SolidColor(MaterialTheme.colorScheme.primary),
+                    cursorBrush = SolidColor(Color(0xFF2563A6)),
                     textStyle = TextStyle(
                         fontSize = 13.sp,
                         color = ScreenText,
@@ -712,7 +556,7 @@ private fun DashboardSearchBar(
             Icon(
                 imageVector = Icons.Default.Tune,
                 contentDescription = "Filter",
-                tint = KarirOrange,
+                tint = Color(0xFF2563A6),
                 modifier = Modifier
                     .size(20.dp)
                     .clickable(onClick = onFilterClick)
@@ -788,7 +632,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                 // Detail Data Button
                 Surface(
                     shape = RoundedCornerShape(50),
-                    border = BorderStroke(1.dp, KarirOrange),
+                    border = BorderStroke(1.dp, Color(0xFF2563A6)),
                     color = ScreenSurface,
                     shadowElevation = 1.dp,
                     modifier = Modifier.clickable(onClick = onDetailClick)
@@ -997,7 +841,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                     modifier = Modifier.weight(1f)
                 ) {
-                    Icon(Icons.Default.People, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
+                    Icon(Icons.Default.People, contentDescription = null, tint = Color(0xFF2563A6), modifier = Modifier.size(18.dp))
                     Column {
                         Text("Angkatan Kerja", fontSize = 8.5.sp, color = ScreenMuted)
                         Text("154,91 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = ScreenText)
@@ -1012,7 +856,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                     modifier = Modifier.weight(1f).padding(start = 6.dp)
                 ) {
-                    Icon(Icons.Default.Work, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
+                    Icon(Icons.Default.Work, contentDescription = null, tint = Color(0xFF2563A6), modifier = Modifier.size(18.dp))
                     Column {
                         Text("Penduduk Bekerja", fontSize = 8.5.sp, color = ScreenMuted)
                         Text("147,67 juta", fontWeight = FontWeight.Bold, fontSize = 11.5.sp, color = ScreenText)
@@ -1027,7 +871,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                     modifier = Modifier.weight(1.15f).padding(start = 6.dp)
                 ) {
-                    Icon(Icons.Default.Payments, contentDescription = null, tint = KarirOrange, modifier = Modifier.size(18.dp))
+                    Icon(Icons.Default.Payments, contentDescription = null, tint = Color(0xFF2563A6), modifier = Modifier.size(18.dp))
                     Column {
                         Text("Rata-rata Upah", fontSize = 8.5.sp, color = ScreenMuted)
                         Text("Rp3,29 jt/bln", fontWeight = FontWeight.Bold, fontSize = 11.sp, color = ScreenText)
@@ -1049,7 +893,7 @@ private fun IndonesianLaborConditionCard(onDetailClick: () -> Unit) {
             modifier = Modifier
                 .width(22.dp)
                 .height(5.dp)
-                .background(KarirOrange, RoundedCornerShape(3.dp))
+                .background(Color(0xFF2563A6), RoundedCornerShape(3.dp))
         )
         Spacer(modifier = Modifier.width(5.dp))
         Box(
@@ -1122,7 +966,7 @@ private fun MenuUtamaSection(onNavigate: (String) -> Unit) {
             Icon(
                 imageVector = Icons.Default.GridView,
                 contentDescription = null,
-                tint = KarirOrange,
+                tint = Color(0xFF2563A6),
                 modifier = Modifier.size(20.dp)
             )
             Text(
@@ -1272,7 +1116,7 @@ private fun CertificateRequirementsCard(
                                 Box(
                                     modifier = Modifier
                                         .size(13.dp)
-                                        .background(KarirOrange, RoundedCornerShape(3.dp)),
+                                        .background(Color(0xFF2563A6), RoundedCornerShape(3.dp)),
                                     contentAlignment = Alignment.Center
                                 ) {
                                     Text("K", color = Color.White, fontSize = 9.sp, fontWeight = FontWeight.Bold)
@@ -1335,7 +1179,7 @@ private fun CertificateRequirementsCard(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .height(4.dp)
-                                    .background(KarirOrange.copy(alpha = 0.2f), RoundedCornerShape(2.dp))
+                                    .background(Color(0xFF2563A6).copy(alpha = 0.2f), RoundedCornerShape(2.dp))
                             )
                         }
                     }
@@ -1352,7 +1196,7 @@ private fun CertificateRequirementsCard(
                             Icon(
                                 imageVector = Icons.Default.VerifiedUser,
                                 contentDescription = null,
-                                tint = KarirOrange,
+                                tint = Color(0xFF2563A6),
                                 modifier = Modifier.size(18.dp)
                             )
                             Text(
@@ -1435,7 +1279,7 @@ private fun CertificateRequirementsCard(
                                         .weight(1f)
                                         .height(6.dp)
                                         .clip(RoundedCornerShape(3.dp))
-                                        .background(if (completedCount >= i) KarirOrange else Color(0xFFCBD5E1))
+                                        .background(if (completedCount >= i) Color(0xFF2563A6) else Color(0xFFCBD5E1))
                                 )
                             }
                         }
@@ -1462,7 +1306,7 @@ private fun CertificateRequirementsCard(
                         .height(44.dp),
                     shape = RoundedCornerShape(24.dp),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = if (completedCount >= 4) KarirOrange else Color(0xFF94A3B8),
+                        containerColor = if (completedCount >= 4) Color(0xFF2563A6) else Color(0xFF94A3B8),
                         contentColor = com.example.automatesmartbot.ui.theme.OnKarirOrange
                     )
                 ) {
@@ -1525,10 +1369,10 @@ private fun RequirementRowItem(
                 .clip(RoundedCornerShape(4.dp))
                 .border(
                     width = 1.2.dp,
-                    color = if (isChecked) KarirOrange else Color(0xFFFF9800),
+                    color = if (isChecked) Color(0xFF2563A6) else Color(0xFF55C6A9),
                     shape = RoundedCornerShape(4.dp)
                 )
-                .background(if (isChecked) KarirOrange else Color.Transparent),
+                .background(if (isChecked) Color(0xFF2563A6) else Color.Transparent),
             contentAlignment = Alignment.Center
         ) {
             if (isChecked) {

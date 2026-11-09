@@ -198,7 +198,6 @@ private fun MainDashboardContent(
         Screen.AiInterview.route -> "AI Interview"
         Screen.WorkPedia.route -> "WorkPedia"
         Screen.Riwayat.route -> "Riwayat Lamaran"
-        Screen.SuratIzinDokumen.route -> "Dokumen Karier"
         Screen.UpgradePro.route -> "Upgrade PRO"
         Screen.ProCheckout.route -> "Pembelian Paket"
         Screen.ManagePro.route -> "Kelola Langganan"
@@ -335,7 +334,7 @@ private fun MainDashboardContent(
                             }
                         },
                         viewModel = dashboardViewModel,
-                        showTestAd = sessionToken != null && dashboardStatus != null && !isPro
+                        showTestAd = sessionToken != null && dashboardStatus?.membershipVerified == true && !isPro
                     )
 
             }
@@ -395,14 +394,6 @@ private fun MainDashboardContent(
                 }
             }
             composable(Screen.WorkPedia.route) { WorkPediaScreen(onExit = navigateUpOrDashboard) }
-            composable(Screen.SuratIzinDokumen.route) {
-                androidx.compose.runtime.LaunchedEffect(Unit) {
-                    navController.navigate(Screen.CareerDocuments.route) {
-                        popUpTo(Screen.SuratIzinDokumen.route) { inclusive = true }
-                        launchSingleTop = true
-                    }
-                }
-            }
             composable(Screen.Riwayat.route) {
                 FixedCanvasTheme(dark = when (themePreference.mode) {
                     com.example.automatesmartbot.ui.theme.ThemeMode.DARK -> true

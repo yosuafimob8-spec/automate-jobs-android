@@ -62,7 +62,8 @@ private fun SalaryNumberField(
     value: String,
     onChange: (String) -> Unit,
     hint: String = "",
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    digitsOnly: Boolean = false
 ) {
     val textColor = MaterialTheme.colorScheme.onSurface
     val secondary = screenCanvas(Color(0xFF58718B), Color(0xFFB5CCDE))
@@ -74,7 +75,9 @@ private fun SalaryNumberField(
             value = value,
             onValueChange = { entered ->
                 // Monetary amounts may be written as 5000000 or 5.000.000; never accept a sign.
-                if (entered.length <= 17 && entered.all { it.isDigit() || it == '.' || it == ' ' }) onChange(entered)
+                val validChars = if (digitsOnly) entered.all { it in '0'..'9' }
+                                 else entered.all { it in '0'..'9' || it == '.' || it == ' ' }
+                if (entered.length <= 17 && validChars) onChange(entered)
             },
             modifier = Modifier.fillMaxWidth(),
             singleLine = true,
@@ -157,6 +160,7 @@ fun SalaryCalculatorScreen() {
         }
     }
     fun example() {
+        // Ketukan simulasi mengisi angka contoh, lalu menghitung hasilnya.
         gross = "5000000"
         base = "5000000"
         hours = "2"
@@ -185,7 +189,7 @@ fun SalaryCalculatorScreen() {
     }
 
     Column(
-        Modifier.fillMaxSize().background(KarirPageGradient).verticalScroll(rememberScrollState())
+        Modifier.fillMaxSize().background(KarirPageGradient).imePadding().verticalScroll(rememberScrollState())
             .padding(horizontal = 16.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
@@ -233,7 +237,7 @@ fun SalaryCalculatorScreen() {
 
         SalaryCard {
             Text("⏱️ Perhitungan Lembur", color = ink, fontSize = 18.sp, fontWeight = FontWeight.ExtraBold)
-            SalaryNumberField("Total jam lembur dalam satu hari", hours, { hours = it; result = null })
+            SalaryNumberField("Total jam lembur dalam satu hari", hours, { hours = it; result = null }, digitsOnly = true)
             Text("Jenis hari lembur", color = ink, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
             listOf(
                 PayrollCalculator.OvertimeDay.WORKDAY to "Hari kerja biasa",
@@ -275,7 +279,7 @@ fun SalaryCalculatorScreen() {
                 SalaryNumberField("Dasar iuran JHT (Rp)", jht, { jht = it; result = null }, "Kosong atau 0 = tidak dihitung")
                 SalaryNumberField("Dasar iuran Jaminan Pensiun (Rp)", pension, { pension = it; result = null }, "Isi dasar yang sudah memperhitungkan batas upah")
                 SalaryNumberField("PTKP tahunan (Rp)", ptkp, { ptkp = it; result = null })
-                SalaryNumberField("Masa kerja untuk THR (bulan)", months, { months = it; result = null })
+                SalaryNumberField("Masa kerja untuk THR (bulan)", months, { months = it; result = null }, digitsOnly = true)
             } else {
                 Text("Buka untuk mengisi dasar BPJS, PTKP, dan masa kerja THR. Nilai kosong BPJS dianggap nol.",
                     color = muted, fontSize = 12.sp)
