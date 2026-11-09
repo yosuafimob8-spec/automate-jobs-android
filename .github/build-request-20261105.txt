@@ -12,3 +12,5 @@ Retry Gradle distribution HTTP 504 using four-attempt CI invocations (2026-11-09
 Build retry with direct downloads.gradle.org distribution and SHA verification: 2026-11-09.
 
 Build approved: certificate layout, single header, and account certificate shortcut — 2026-11-09.
+
+Build retry: fixed missing Compose heightIn import in ProfilScreen, 2026-11-09.
