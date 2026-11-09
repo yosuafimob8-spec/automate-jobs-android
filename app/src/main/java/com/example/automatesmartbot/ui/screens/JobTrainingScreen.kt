@@ -258,14 +258,6 @@ fun JobTrainingScreen(
     CompositionLocalProvider(LocalContentColor provides darkTraining, LocalTextStyle provides LocalTextStyle.current.copy(color = darkTraining)) {
     Box(Modifier.fillMaxSize().background(ScreenPageGradient)) {
     Column(Modifier.fillMaxSize()) {
-        Row(
-            Modifier.fillMaxWidth().background(screenCanvas(Color(0xFFFFFDF9))).border(BorderStroke(0.75.dp, screenCanvas(Color(0xFFF1E5DC)))).padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text("▣ KarirMate", color = MaterialTheme.colorScheme.primary, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
-            Spacer(Modifier.weight(1f))
-            com.example.automatesmartbot.ui.components.MembershipBadge(style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.LIGHT)
-        }
         Column(
             Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(18.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -643,7 +635,7 @@ fun JobTrainingScreen(
                     CertificateHistoryBody(
                         history = history,
                         onShowCertificate = { item -> certificate = item; stage = "certificate" },
-                        onBackToCatalog = { stage = "catalog" }
+                        onBackToCatalog = { if (initialStage == "history") onExit() else stage = "catalog" }
                     )
 
                 }
