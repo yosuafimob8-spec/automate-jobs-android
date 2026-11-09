@@ -156,6 +156,69 @@ private val primaryMenuItems = listOf(
     )
 )
 
+
+@Composable
+private fun DashboardProfilePhoto() {
+    val context = LocalContext.current
+    val prefs = remember(context) {
+        context.getSharedPreferences(
+            "karirmate_profile_photo",
+            Context.MODE_PRIVATE
+        )
+    }
+
+    var photoUri by remember {
+        mutableStateOf(prefs.getString("uri", null))
+    }
+
+    DisposableEffect(prefs) {
+        val listener =
+            SharedPreferences.OnSharedPreferenceChangeListener { _, key ->
+                if (key == "uri") {
+                    photoUri = prefs.getString("uri", null)
+                }
+            }
+        prefs.registerOnSharedPreferenceChangeListener(listener)
+        onDispose {
+            prefs.unregisterOnSharedPreferenceChangeListener(listener)
+        }
+    }
+
+    val bitmap = remember(photoUri) {
+        photoUri?.let { uri ->
+            runCatching {
+                context.contentResolver.openInputStream(
+                    Uri.parse(uri)
+                )?.use { BitmapFactory.decodeStream(it) }
+            }.getOrNull()
+        }
+    }
+
+    Box(
+        modifier = Modifier
+            .size(52.dp)
+            .clip(CircleShape)
+            .background(Color(0xFFE8F5F7)),
+        contentAlignment = Alignment.Center
+    ) {
+        if (bitmap != null) {
+            Image(
+                bitmap = bitmap.asImageBitmap(),
+                contentDescription = "Foto profil",
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
+            )
+        } else {
+            Icon(
+                Icons.Default.Person,
+                contentDescription = "Profil",
+                tint = Color(0xFF2563A6),
+                modifier = Modifier.size(30.dp)
+            )
+        }
+    }
+}
+
 @Composable
 fun DashboardScreen(
     onNavigate: (String) -> Unit,

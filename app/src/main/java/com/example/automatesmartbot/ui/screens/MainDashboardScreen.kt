@@ -262,7 +262,11 @@ private fun MainDashboardContent(
                             Screen.LatihanPsikotes.route -> "Latihan Tes Kerja & Persiapan CPNS"
                             Screen.SalaryCalculator.route -> "Simulasi gaji, lembur dan potongan"
                             Screen.JobTraining.route -> "Upgrade skill untuk dunia kerja"
-                            Screen.Certificates.route -> "Riwayat dan verifikasi sertifikat"\n                            Screen.CvBuilder.route -> "Buat dan kelola CV profesional"\n                            Screen.Profil.route -> "Informasi akun dan pengaturan"\n                            else -> ""\n                        },
+                            Screen.Certificates.route -> "Riwayat dan verifikasi sertifikat"
+                            Screen.CvBuilder.route -> "Buat dan kelola CV profesional"
+                            Screen.Profil.route -> "Informasi akun dan pengaturan"
+                            else -> ""
+                        },
                         isPro = isPro,
                         onBack = onBack ?: navigateUpOrDashboard,
                         onProfile = { navController.navigate(Screen.Profil.route) { launchSingleTop = true } }
