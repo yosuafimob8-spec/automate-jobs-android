@@ -214,7 +214,13 @@ private fun MainDashboardContent(
 
     val bottomNavRoutes = bottomNavItems.map { it.route }
     val appShellRoutes = appShellItems.map { it.route }
-    val showBottomBar = currentRoute in appShellRoutes
+    val aboutDetailRoutes = setOf(
+        Screen.AboutDescription.route,
+        Screen.AboutDevelopers.route,
+        Screen.AboutPrivacy.route,
+        Screen.AboutSupport.route
+    )
+    val showBottomBar = currentRoute in appShellRoutes && currentRoute !in aboutDetailRoutes
     val showTopBar = currentRoute in appShellRoutes && currentRoute != Screen.Dashboard.route && currentRoute != Screen.AiInterview.route
     val showBack = currentRoute in appShellRoutes && currentRoute != Screen.Dashboard.route
     val cvBack: () -> Unit = { if (!cvViewModel.goBack()) navigateUpOrDashboard() }

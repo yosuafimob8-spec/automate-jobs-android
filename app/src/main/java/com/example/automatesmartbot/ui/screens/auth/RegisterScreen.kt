@@ -217,7 +217,8 @@ private fun RegisterScreenContent(
                         enabled = !isLoading && agreed,
                         onIdToken = {
                             viewModel.loginWithGoogle(it, onGoogleSuccess)
-                        }
+                        },
+                        errorMessage = errorMessage
                     )
 
                     errorMessage?.let { err ->

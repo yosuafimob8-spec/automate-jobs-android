@@ -23,6 +23,28 @@ class AutoApplyApiContractTest {
         val request=server.takeRequest();assertEquals("/auto-apply/enable",request.path)
         val text=request.body.readUtf8();assertTrue(text.contains("\"consent\":true"));assertTrue(text.contains("\"max_emails_per_day\":5"))
     }
+    @Test fun targetSelectionUsesAuthenticatedPreferencesContract()=runTest {
+        server.enqueue(MockResponse().setBody("{\"applied_to_delivery\":true,\"positions\":[\"Staff Logistik\"],\"locations\":[\"Bogor\"]}"))
+        val preferences = AutoApplyTargetRequest(listOf("Staff Logistik"), listOf("Bogor"))
+        assertTrue(api.saveAutoApplyPreferences(preferences).isSuccessful)
+        val req = server.takeRequest()
+        assertEquals("POST", req.method)
+        assertEquals("/auto-apply/preferences", req.path)
+        val body = req.body.readUtf8()
+        assertTrue(body.contains("\"positions\":[\"Staff Logistik\"]"))
+        assertTrue(body.contains("\"locations\":[\"Bogor\"]"))
+
+        server.enqueue(MockResponse().setBody("{\"success\":true}"))
+        assertTrue(api.enableAutoApply(AutoApplyEnableRequest(
+            consent = true, positions = listOf("Staff Logistik"), locations = listOf("Bogor")
+        )).isSuccessful)
+        val enable = server.takeRequest()
+        assertEquals("/auto-apply/enable", enable.path)
+        val enableBody = enable.body.readUtf8()
+        assertTrue(enableBody.contains("\"positions\":[\"Staff Logistik\"]"))
+        assertTrue(enableBody.contains("\"locations\":[\"Bogor\"]"))
+    }
+
     @Test fun oauthStartAndRawPdfUploadMatchBackendRoutes()=runTest {
         server.enqueue(MockResponse().setBody("{\"url\":\"https://accounts.google.com/o/oauth2/v2/auth\"}"))
         assertTrue(api.startGmailOAuth().isSuccessful);assertEquals("/gmail/oauth/start",server.takeRequest().path)

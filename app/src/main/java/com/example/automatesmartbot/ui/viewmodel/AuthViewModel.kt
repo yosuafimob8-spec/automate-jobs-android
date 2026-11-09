@@ -76,6 +76,9 @@ class AuthViewModel(
                             it.message ?: "Login Google gagal."
                     }
                 )
+            } catch (e: Exception) {
+                _errorMessage.value = e.localizedMessage
+                    ?: "Terjadi kesalahan saat menyelesaikan Google Login."
             } finally {
                 _isLoading.value = false
             }

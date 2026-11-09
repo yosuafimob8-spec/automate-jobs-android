@@ -30,6 +30,9 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Security
 import androidx.compose.material.icons.filled.Groups
 import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Work
+import androidx.compose.material.icons.filled.Place
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -38,8 +41,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.automatesmartbot.data.autoapply.AutoApplyConfirmation
+import com.example.automatesmartbot.data.autoapply.AutoApplyTargetPolicy
 import com.example.automatesmartbot.data.network.ApiClient
 import com.example.automatesmartbot.data.network.AutoApplyEnableRequest
+import com.example.automatesmartbot.data.network.AutoApplyTargetRequest
 import com.example.automatesmartbot.ui.theme.KarirOrange
 import com.example.automatesmartbot.ui.theme.KarirOrangeDeep
 import com.example.automatesmartbot.ui.theme.KarirPageGradient
@@ -50,6 +55,78 @@ import com.example.automatesmartbot.ui.theme.screenCanvas
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 import org.json.JSONObject
+
+
+private fun targetEchoMatches(
+    response: JSONObject?,
+    positions: Set<String>,
+    regions: Set<String>,
+    flag: String
+): Boolean {
+    val payload = response ?: return false
+    if (!payload.optBoolean(flag)) return false
+    val receivedRoles = payload.optJSONArray("positions") ?: return false
+    val receivedRegions = payload.optJSONArray("locations") ?: return false
+    val roles = (0 until receivedRoles.length()).map { receivedRoles.optString(it) }.toSet()
+    val cities = (0 until receivedRegions.length()).map { receivedRegions.optString(it) }.toSet()
+    return roles == positions && cities == regions
+}
+
+@Composable
+private fun AutoApplyTargetPicker(
+    label: String,
+    items: List<String>,
+    selected: Set<String>,
+    enabled: Boolean,
+    onChange: (Set<String>) -> Unit
+) {
+    var expanded by remember { mutableStateOf(false) }
+    Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
+        Text(label, fontWeight = FontWeight.SemiBold, fontSize = 13.sp,
+            color = com.example.automatesmartbot.ui.theme.ScreenText)
+        Box(modifier = Modifier.fillMaxWidth()) {
+            OutlinedButton(
+                onClick = { expanded = true },
+                enabled = enabled,
+                modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp),
+                shape = RoundedCornerShape(12.dp),
+                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
+                colors = ButtonDefaults.outlinedButtonColors(containerColor = ScreenSurface)
+            ) {
+                Text(
+                    when (selected.size) {
+                        0 -> "Pilih $label"
+                        1 -> selected.first()
+                        else -> "${selected.size} pilihan: ${selected.sorted().take(2).joinToString(", ")}${if (selected.size > 2) "…" else ""}"
+                    },
+                    modifier = Modifier.weight(1f),
+                    maxLines = 2,
+                    fontSize = 12.sp,
+                    color = com.example.automatesmartbot.ui.theme.ScreenText
+                )
+                Icon(Icons.Default.ArrowDropDown, contentDescription = "Buka pilihan $label")
+            }
+            DropdownMenu(expanded = expanded && enabled, onDismissRequest = { expanded = false }) {
+                items.forEach { option ->
+                    DropdownMenuItem(
+                        text = { Text(option, fontSize = 13.sp) },
+                        leadingIcon = {
+                            Checkbox(checked = option in selected, onCheckedChange = null)
+                        },
+                        onClick = {
+                            onChange(if (option in selected) selected - option else selected + option)
+                        }
+                    )
+                }
+                HorizontalDivider()
+                DropdownMenuItem(
+                    text = { Text("Selesai", fontWeight = FontWeight.Bold) },
+                    onClick = { expanded = false }
+                )
+            }
+        }
+    }
+}
 
 @Composable
 fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -> Unit) {
@@ -68,6 +145,14 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
     var message by remember { mutableStateOf("") }
     var candidates by remember { mutableStateOf<List<JSONObject>>(emptyList()) }
     var deliveries by remember { mutableStateOf<List<JSONObject>>(emptyList()) }
+    val targetPrefs = remember { context.getSharedPreferences("auto_apply_targets", 0) }
+    var selectedPositions by remember(accountId) {
+        mutableStateOf(targetPrefs.getStringSet("positions_${accountId.orEmpty()}", emptySet()).orEmpty().toSet())
+    }
+    var selectedRegions by remember(accountId) {
+        mutableStateOf(targetPrefs.getStringSet("regions_${accountId.orEmpty()}", emptySet()).orEmpty().toSet())
+    }
+    var targetsConfirmed by remember { mutableStateOf(false) }
 
     suspend fun refresh() {
         statusLoaded = false
@@ -84,6 +169,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         cvUploaded = body.optBoolean("cv_uploaded")
         operatorSendAllowed = body.optBoolean("operator_send_allowed")
         val a = body.optJSONObject("auto_apply")
+        targetsConfirmed = targetEchoMatches(a, selectedPositions, selectedRegions, "preferences_enforced")
         consentSaved = AutoApplyConfirmation.consentState(
             a?.opt("consent_granted") as? Boolean,
             a?.optString("consent_at"),
@@ -221,6 +307,115 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                 fontSize = 11.5.sp, lineHeight = 16.sp)
                         }
                     }
+                }
+            }
+        }
+
+
+        // User-selected job positions and regions. This does not silently enable sending.
+        item {
+            Card(
+                shape = RoundedCornerShape(18.dp),
+                colors = CardDefaults.cardColors(containerColor = ScreenSurface),
+                border = BorderStroke(1.dp, screenCanvas(Color(0xFFC6DFE8))),
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+            ) {
+                Column(Modifier.fillMaxWidth().padding(18.dp),
+                    verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                    Row(verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                        Icon(Icons.Default.Work, contentDescription = null,
+                            tint = Color(0xFF2563A6), modifier = Modifier.size(23.dp))
+                        Text("Target Lamaran", fontSize = 17.sp, fontWeight = FontWeight.ExtraBold,
+                            color = com.example.automatesmartbot.ui.theme.ScreenText)
+                    }
+                    Text("Pilih satu atau beberapa posisi dan wilayah tujuan. Hanya kandidat sesuai pilihan yang ditampilkan.",
+                        fontSize = 12.sp,
+                        color = com.example.automatesmartbot.ui.theme.ScreenMuted)
+                    AutoApplyTargetPicker(
+                        label = "Posisi Pekerjaan",
+                        items = AutoApplyTargetPolicy.positions,
+                        selected = selectedPositions,
+                        enabled = accountId != null && !busy && !enabled,
+                        onChange = { new ->
+                            selectedPositions = new
+                            targetsConfirmed = false
+                            accountId?.let { id -> targetPrefs.edit().putStringSet("positions_$id", new).apply() }
+                        }
+                    )
+                    AutoApplyTargetPicker(
+                        label = "Wilayah Tujuan",
+                        items = AutoApplyTargetPolicy.regions,
+                        selected = selectedRegions,
+                        enabled = accountId != null && !busy && !enabled,
+                        onChange = { new ->
+                            selectedRegions = new
+                            targetsConfirmed = false
+                            accountId?.let { id -> targetPrefs.edit().putStringSet("regions_$id", new).apply() }
+                        }
+                    )
+                    if (selectedPositions.isNotEmpty() && selectedRegions.isNotEmpty()) {
+                        Surface(color = screenCanvas(Color(0xFFE8F5F7)), shape = RoundedCornerShape(10.dp)) {
+                            Text("${selectedPositions.size} posisi • ${selectedRegions.size} wilayah dipilih",
+                                modifier = Modifier.fillMaxWidth().padding(10.dp),
+                                fontSize = 12.sp,
+                                color = com.example.automatesmartbot.ui.theme.ScreenText,
+                                fontWeight = FontWeight.SemiBold)
+                        }
+                    }
+                    Button(
+                        enabled = isOnline && statusLoaded && !busy && !enabled && accountId != null &&
+                            selectedPositions.isNotEmpty() && selectedRegions.isNotEmpty(),
+                        onClick = {
+                            scope.launch {
+                                busy = true
+                                try {
+                                    val response = ApiClient.apiService.saveAutoApplyPreferences(
+                                        AutoApplyTargetRequest(selectedPositions.sorted(), selectedRegions.sorted())
+                                    )
+                                    if (!response.isSuccessful) {
+                                        response.errorBody()?.close()
+                                        error("Backend belum mendukung penyimpanan target lamaran (HTTP ${response.code()}). Pengiriman tidak diaktifkan.")
+                                    }
+                                    val saved = JSONObject(response.body()?.use { it.string() } ?: "{}")
+                                    if (!targetEchoMatches(saved, selectedPositions, selectedRegions, "applied_to_delivery")) {
+                                        error("Backend belum mengonfirmasi bahwa target dipakai untuk pengiriman. Pengiriman tidak diaktifkan.")
+                                    }
+                                    refresh()
+                                    if (!targetsConfirmed) {
+                                        error("Status backend belum mengonfirmasi filter pengiriman. Pengiriman tidak diaktifkan.")
+                                    }
+                                    message = "Target posisi dan wilayah berhasil disimpan di backend."
+                                } catch (e: CancellationException) {
+                                    throw e
+                                } catch (e: Exception) {
+                                    targetsConfirmed = false
+                                    message = e.message ?: "Gagal menyimpan target."
+                                } finally {
+                                    busy = false
+                                }
+                            }
+                        },
+                        modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp),
+                        shape = RoundedCornerShape(12.dp),
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2563A6))
+                    ) {
+                        Text("Simpan Posisi & Wilayah", fontWeight = FontWeight.Bold)
+                    }
+                    Row(verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Icon(Icons.Default.Place, contentDescription = null,
+                            tint = if (targetsConfirmed) Color(0xFF16A34A) else Color(0xFFD97706),
+                            modifier = Modifier.size(16.dp))
+                        Text(
+                            if (targetsConfirmed) "Filter pengiriman terkonfirmasi oleh backend."
+                            else "Pilihan tersimpan di HP untuk pratinjau. Pengiriman menunggu dukungan dan konfirmasi backend.",
+                            fontSize = 11.5.sp, lineHeight = 16.sp,
+                            color = com.example.automatesmartbot.ui.theme.ScreenMuted
+                        )
+                    }
+                    if (enabled) Text("Jeda Auto Apply terlebih dahulu untuk mengubah target.",
+                        fontSize = 11.5.sp, color = Color(0xFFD97706))
                 }
             }
         }
@@ -454,7 +649,13 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                             scope.launch {
                                 busy = true
                                 try {
-                                    val response = ApiClient.apiService.enableAutoApply(AutoApplyEnableRequest(consent = agreed || consentSaved))
+                                    val response = ApiClient.apiService.enableAutoApply(
+                                        AutoApplyEnableRequest(
+                                            consent = agreed || consentSaved,
+                                            positions = selectedPositions.sorted(),
+                                            locations = selectedRegions.sorted()
+                                        )
+                                    )
                                     if (!response.isSuccessful) {
                                         response.errorBody()?.close()
                                         error("Aktivasi ditolak (${response.code()}). Periksa izin Gmail dan langganan.")
@@ -475,7 +676,9 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                 }
                             }
                         },
-                        enabled = statusLoaded && gmailConnected && cvUploaded && isPro && isOnline && !busy && !enabled && (agreed || consentSaved),
+                        enabled = statusLoaded && gmailConnected && cvUploaded && isPro && isOnline && !busy && !enabled &&
+                            targetsConfirmed && selectedPositions.isNotEmpty() && selectedRegions.isNotEmpty() &&
+                            (agreed || consentSaved),
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
@@ -520,6 +723,12 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             }
         }
 
+        val visibleCandidates = candidates.filter { c ->
+            AutoApplyTargetPolicy.matchesCandidate(
+                c.optString("position"), c.optString("location"), selectedPositions, selectedRegions
+            )
+        }
+
         // Candidates List
         item {
             Row(verticalAlignment = Alignment.CenterVertically,
@@ -531,7 +740,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             }
         }
 
-        if (candidates.isEmpty()) {
+        if (visibleCandidates.isEmpty()) {
             item {
                 Card(
                     shape = RoundedCornerShape(14.dp),
@@ -540,7 +749,9 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
-                        "Belum ada kandidat lowongan yang dijadwalkan.",
+                        if (selectedPositions.isEmpty() || selectedRegions.isEmpty())
+                            "Pilih posisi dan wilayah terlebih dahulu untuk melihat kandidat."
+                        else "Belum ada kandidat yang sesuai posisi dan wilayah pilihan. Kandidat tanpa data lokasi tidak ditampilkan.",
                         color = com.example.automatesmartbot.ui.theme.ScreenMuted,
                         fontSize = 12.5.sp,
                         modifier = Modifier.padding(16.dp)
@@ -548,8 +759,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                 }
             }
         } else {
-            items(candidates.size) { index ->
-                val c = candidates[index]
+            items(visibleCandidates.size) { index ->
+                val c = visibleCandidates[index]
                 Card(
                     shape = RoundedCornerShape(14.dp),
                     colors = CardDefaults.cardColors(containerColor = ScreenSurface),

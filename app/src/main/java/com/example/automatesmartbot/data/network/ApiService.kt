@@ -12,7 +12,14 @@ import retrofit2.http.Query
 data class AutoApplyEnableRequest(
     val consent: Boolean,
     val max_emails_per_day: Int = 5,
-    val policy_version: String = "karirmate-v1"
+    val policy_version: String = "karirmate-v1",
+    val positions: List<String> = emptyList(),
+    val locations: List<String> = emptyList()
+)
+
+data class AutoApplyTargetRequest(
+    val positions: List<String>,
+    val locations: List<String>
 )
 
 interface ApiService {
@@ -29,6 +36,9 @@ interface ApiService {
 
     @GET("karirmate/report")
     suspend fun getKarirMateReport(): Response<ResponseBody>
+
+    @POST("auto-apply/preferences")
+    suspend fun saveAutoApplyPreferences(@Body request: AutoApplyTargetRequest): Response<ResponseBody>
 
     @POST("auto-apply/enable")
     suspend fun enableAutoApply(@Body request: AutoApplyEnableRequest): Response<ResponseBody>

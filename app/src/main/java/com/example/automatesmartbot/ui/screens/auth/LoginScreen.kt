@@ -169,7 +169,8 @@ private fun LoginScreenContent(
                     enabled = !isLoading,
                     onIdToken = {
                         viewModel.loginWithGoogle(it, onLoginSuccess)
-                    }
+                    },
+                    errorMessage = errorMessage
                 )
 
                 errorMessage?.let { err ->

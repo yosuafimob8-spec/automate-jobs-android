@@ -73,16 +73,27 @@ class AuthRepository(
                 return@withContext Result.failure(
                     Exception(
                         when (response.code()) {
-                            409 -> "Email sudah terdaftar. Masuk dengan password terlebih dahulu."
-                            401 -> "Identitas Google gagal diverifikasi."
+                            400 -> "Token Google tidak diterima backend (HTTP 400)."
+                            401 -> "Identitas Google gagal diverifikasi (HTTP 401). Periksa konfigurasi OAuth."
+                            403 -> "Email pada akun Google belum terverifikasi (HTTP 403)."
+                            404 -> "Endpoint /auth/google belum aktif (HTTP 404). Periksa backend Termux."
+                            409 -> "Email ini sudah punya akun password (HTTP 409). Masuk dengan password; penautan Google belum tersedia."
+                            429 -> "Terlalu banyak percobaan login (HTTP 429)."
                             else -> "Login Google gagal (HTTP ${response.code()})."
                         }
                     )
                 )
             }
-            sessionManager?.saveToken(
-                data.access_token, data.expires_at
-            )
+            val secureSession = sessionManager
+                ?: return@withContext Result.failure(
+                    IllegalStateException("Penyimpanan sesi KarirMate belum siap.")
+                )
+            secureSession.saveToken(data.access_token, data.expires_at)
+            if (secureSession.getValidToken().isNullOrBlank()) {
+                return@withContext Result.failure(
+                    IllegalStateException("Token login Google tidak berhasil disimpan.")
+                )
+            }
             Result.success(data)
         } catch (e: Exception) {
             Result.failure(e)

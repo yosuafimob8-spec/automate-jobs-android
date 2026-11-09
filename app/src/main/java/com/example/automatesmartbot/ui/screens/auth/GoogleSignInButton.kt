@@ -20,7 +20,8 @@ private const val WEB_CLIENT_ID =
 internal fun GoogleSignInButton(
     label: String,
     enabled: Boolean,
-    onIdToken: (String) -> Unit
+    onIdToken: (String) -> Unit,
+    errorMessage: String? = null
 ) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
@@ -58,9 +59,10 @@ internal fun GoogleSignInButton(
                                 credential.data
                             ).idToken
 
+                        message = "Akun dipilih. Memverifikasi login KarirMate..."
                         onIdToken(googleToken)
                     } catch (e: androidx.credentials.exceptions.GetCredentialCancellationException) {
-                        message = ""
+                        message = "Pemilihan akun Google dibatalkan atau tidak selesai."
                     } catch (e: Exception) {
                         message = e.localizedMessage
                             ?: "Gagal membuka Google Sign-In."
@@ -77,10 +79,16 @@ internal fun GoogleSignInButton(
             }
         }
 
-        if (message.isNotBlank()) {
+        if (!errorMessage.isNullOrBlank()) {
+            Text(
+                errorMessage,
+                color = MaterialTheme.colorScheme.error,
+                style = MaterialTheme.typography.bodySmall
+            )
+        } else if (message.isNotBlank()) {
             Text(
                 message,
-                color = MaterialTheme.colorScheme.error,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 style = MaterialTheme.typography.bodySmall
             )
         }
