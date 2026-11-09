@@ -88,6 +88,7 @@ fun ProfilScreen(
     onNavigateCv: () -> Unit = {},
     onNavigateApplications: () -> Unit = {},
     onNavigateDocuments: () -> Unit = {},
+    onNavigateCertificates: () -> Unit = {},
     authRepository: AuthRepository = remember { AuthRepository() },
     profileRepository: ProfileSetupRepository = remember { ProfileSetupRepository() }
 ) {
@@ -250,6 +251,7 @@ fun ProfilScreen(
                         onNavigateCv = onNavigateCv,
                         onNavigateApplications = onNavigateApplications,
                         onNavigateDocuments = onNavigateDocuments,
+                        onNavigateCertificates = onNavigateCertificates,
                         onLogout = { authRepository.logout(); onNavigateLogin() }
                     )
                 }
@@ -349,7 +351,8 @@ internal fun ProfileIdentityCard(
     onLogout: () -> Unit,
     onNavigateCv: () -> Unit = {},
     onNavigateApplications: () -> Unit = {},
-    onNavigateDocuments: () -> Unit = {}
+    onNavigateDocuments: () -> Unit = {},
+    onNavigateCertificates: () -> Unit = {}
 ) {
     val context = LocalContext.current
     val profileFields = listOf(profile?.fullName, profile?.whatsapp, profile?.domicile, profile?.education, profile?.applicationEmail)
@@ -573,6 +576,13 @@ internal fun ProfileIdentityCard(
                 OutlinedButton(onClick = onNavigateCv, modifier = Modifier.weight(1f)) { Text("CV Saya", fontSize = 12.sp) }
                 OutlinedButton(onClick = onNavigateApplications, modifier = Modifier.weight(1f)) { Text("Lamaran", fontSize = 12.sp) }
                 OutlinedButton(onClick = onNavigateDocuments, modifier = Modifier.weight(1f)) { Text("Dokumen", fontSize = 12.sp) }
+            }
+            OutlinedButton(
+                onClick = onNavigateCertificates,
+                modifier = Modifier.fillMaxWidth().heightIn(min = 48.dp),
+                shape = RoundedCornerShape(12.dp)
+            ) {
+                Text("Sertifikat Saya — Riwayat & Unduh", fontSize = 12.sp, fontWeight = FontWeight.Bold)
             }
 
             Row(

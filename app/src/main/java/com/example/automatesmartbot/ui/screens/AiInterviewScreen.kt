@@ -218,15 +218,31 @@ fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
     var ttsReady by remember { mutableStateOf(false) }
     val voiceMode = interviewMode == "voice"
     val selectedLocale = if (language == "en") Locale.US else Locale.forLanguageTag("id-ID")
-    BackHandler(enabled = started || showPreparation || report.isNotBlank()) {
-        when {
-            report.isNotBlank() -> { report = ""; started = false; showPreparation = true }
-            started -> { started = false; showPreparation = true }
-            showPreparation -> showPreparation = false
-        }
-    }
     var pendingSpeech by remember { mutableStateOf<String?>(null) }
     val tts = remember { TextToSpeech(context) { status -> ttsReady = status == TextToSpeech.SUCCESS } }
+
+    fun interviewBack() {
+        when {
+            report.isNotBlank() -> {
+                report = ""
+                started = false
+                showPreparation = true
+                tts.stop()
+            }
+            started -> {
+                started = false
+                showPreparation = true
+                tts.stop()
+            }
+            showPreparation -> {
+                showPreparation = false
+                tts.stop()
+            }
+            else -> onExit()
+        }
+    }
+
+    BackHandler { interviewBack() }
     fun speakQuestion(spokenText: String) {
         if (!voiceMode || spokenText.isBlank()) return
         if (!ttsReady) {
@@ -374,16 +390,7 @@ fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
     Column(Modifier.fillMaxSize()) {
         InterviewBrandedHeader(
             isPro = isPro,
-            onBack = {
-                when {
-                    report.isNotBlank() -> {
-                        report = ""; started = false; showPreparation = true; tts.stop()
-                    }
-                    started -> { started = false; showPreparation = true; tts.stop() }
-                    showPreparation -> showPreparation = false
-                    else -> onExit()
-                }
-            }
+            onBack = { interviewBack() }
         )
         Box(Modifier.weight(1f)) {
             if (!started && !showPreparation && report.isBlank()) {

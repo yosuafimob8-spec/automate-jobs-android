@@ -89,7 +89,9 @@ internal object TrainingCertificateArtwork {
         label("Training Manager", 196f, 507f, 12f)
         label("Ilham Ramdhani", 646f, 489f, 16f, navy, true)
         label("Program Director", 646f, 507f, 12f)
-        val qrPayload = if (item.optBoolean("serverRegistered") && BuildConfig.TRAINING_BASE_URL.startsWith("https://"))
+        val qrPayload = if (item.optBoolean("testSimulation"))
+            "KARIRMATE_SIMULASI_TIDAK_VALID:" + item.optString("id")
+        else if (item.optBoolean("serverRegistered") && BuildConfig.TRAINING_BASE_URL.startsWith("https://"))
             TrainingCertificateIdentity.verifiedPublicUrl(item.optString("id"), BuildConfig.TRAINING_BASE_URL, true, false)
         else TrainingCertificateIdentity.payload(item.optString("id"), item.optString("courseId"), item.optString("date"), item.optInt("score"))
         val qr = QRCodeWriter().encode(qrPayload, BarcodeFormat.QR_CODE, 88, 88)
@@ -100,5 +102,28 @@ internal object TrainingCertificateArtwork {
         label(if (item.optBoolean("serverRegistered")) "Verifikasi online" else "Identitas lokal", 421f, 517f, 10f)
         label("No: ${item.optString("id").take(30)}     |     Terbit: ${item.optString("date")}", 421f, 536f, 10f)
         label("Bukti penyelesaian pelatihan internal KarirMate • Bukan sertifikasi kompetensi BNSP", 421f, 579f, 12f, Color.WHITE)
+        if (item.optBoolean("testSimulation")) {
+            p.style = Paint.Style.FILL
+            p.color = Color.argb(95, 185, 27, 27)
+            p.typeface = Typeface.create(
+                Typeface.DEFAULT,
+                Typeface.BOLD
+            )
+            p.textSize = 71f
+            p.textAlign = Paint.Align.CENTER
+
+            canvas.save()
+            canvas.rotate(-28f, 421f, 285f)
+            canvas.drawText("SIMULASI", 421f, 280f, p)
+
+            p.textSize = 21f
+            canvas.drawText(
+                "TIDAK VALID UNTUK VERIFIKASI",
+                421f,
+                310f,
+                p
+            )
+            canvas.restore()
+        }
     }
 }

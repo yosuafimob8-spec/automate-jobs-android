@@ -1,5 +1,13 @@
 package com.example.automatesmartbot.ui.screens
 
+import android.content.Context
+import android.content.SharedPreferences
+import android.graphics.BitmapFactory
+import android.net.Uri
+import androidx.compose.foundation.Image
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -148,49 +156,6 @@ private val primaryMenuItems = listOf(
     )
 )
 
-private val extraSearchableFeatures = listOf(
-    MainMenuItem(
-        title = "Cari Lowongan",
-        subtitle = "Temukan pekerjaan impian",
-        icon = Icons.Default.Work,
-        iconTint = Color(0xFF2563A6),
-        bgTint = Color(0xFFE8F5F7),
-        route = Screen.CariLowongan.route
-    ),
-    MainMenuItem(
-        title = "Kirim Lamaran",
-        subtitle = "Kirim email dan status lamaran",
-        icon = Icons.AutoMirrored.Filled.Send,
-        iconTint = Color(0xFF16A34A),
-        bgTint = Color(0xFFDCFCE7),
-        route = Screen.KirimLamaran.route
-    ),
-    MainMenuItem(
-        title = "Latihan Psikotes",
-        subtitle = "Tes numerik, logika & spasial",
-        icon = Icons.Default.Psychology,
-        iconTint = Color(0xFFE11D48),
-        bgTint = Color(0xFFFFF1F2),
-        route = Screen.LatihanPsikotes.route
-    ),
-    MainMenuItem(
-        title = "Dokumen Karier",
-        subtitle = "Kelola PDF dan portofolio",
-        icon = Icons.Default.FolderShared,
-        iconTint = Color(0xFFD97706),
-        bgTint = Color(0xFFFEF3C7),
-        route = Screen.CareerDocuments.route
-    ),
-    MainMenuItem(
-        title = "Riwayat Lamaran",
-        subtitle = "Aktivitas dan jejak berkas",
-        icon = Icons.Default.History,
-        iconTint = Color(0xFF0284C7),
-        bgTint = Color(0xFFE0F2FE),
-        route = Screen.Riwayat.route
-    )
-)
-
 @Composable
 fun DashboardScreen(
     onNavigate: (String) -> Unit,
@@ -237,10 +202,7 @@ fun DashboardScreen(
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 18.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Box(
-                    modifier = Modifier.size(46.dp).background(Color(0xFFE4F1FF), CircleShape),
-                    contentAlignment = Alignment.Center
-                ) { Icon(Icons.Default.Person, contentDescription = null, tint = ocean) }
+                DashboardProfilePhoto()
                 Spacer(Modifier.width(10.dp))
                 Column {
                     Text("Halo, ${displayName.substringBefore(' ')} 👋", fontSize = 16.sp, fontWeight = FontWeight.Bold, color = ScreenText)
@@ -253,12 +215,12 @@ fun DashboardScreen(
                 Triple("01", "Discover Yourself", Screen.OnboardingProfile.route),
                 Triple("02", "Build Your Skills", Screen.JobTraining.route),
                 Triple("03", "Prepare Yourself", Screen.CvBuilder.route),
-                Triple("04", "Find Opportunities", Screen.CariLowongan.route),
+                Triple("04", "Manage Applications", Screen.KirimLamaran.route),
                 Triple("05", "Grow Your Career", Screen.SalaryCalculator.route)
             )
             // Only verified profile completion is available in DashboardStatusResponse.
             // Never show mock progress for training, interviews or applications.
-            val completedStages = if (status?.profileCompleted == true) 1 else 0
+            val profileVerified = status?.profileCompleted == true
             Card(
                 modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
                 shape = RoundedCornerShape(20.dp),
@@ -272,17 +234,15 @@ fun DashboardScreen(
                             Text("Career Journey", fontWeight = FontWeight.ExtraBold, color = Color.White, fontSize = 18.sp)
                             Text("Perjalanan kariermu", color = Color.White.copy(alpha = .85f), fontSize = 12.sp)
                         }
-                        Text("${completedStages * 20}%", color = Color.White, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
+                        Text(if (profileVerified) "Profil lengkap" else "Profil belum lengkap", color = Color.White, fontSize = 12.sp)
                     }
-                    LinearProgressIndicator(
-                        progress = { completedStages / 5f },
-                        modifier = Modifier.fillMaxWidth().height(9.dp).clip(RoundedCornerShape(9.dp)),
-                        color = mint,
-                        trackColor = Color.White.copy(alpha = .22f)
+                    Text(
+                        "Progres tahap lain belum terverifikasi otomatis.",
+                        color = Color.White,
+                        fontSize = 11.sp
                     )
-                    Text("$completedStages dari 5 tahap terverifikasi", color = Color.White.copy(alpha = .85f), fontSize = 11.sp)
                     stages.forEachIndexed { index, stage ->
-                        val done = index < completedStages
+                        val done = index == 0 && profileVerified
                         Row(
                             modifier = Modifier.fillMaxWidth()
                                 .clip(RoundedCornerShape(12.dp))
@@ -498,69 +458,6 @@ private fun DashboardTopHeaderSection(
                     }
                 }
             }
-        }
-    }
-}
-
-@Composable
-private fun DashboardSearchBar(
-    query: String,
-    onQueryChange: (String) -> Unit,
-    onFilterClick: () -> Unit
-) {
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 16.dp),
-        shape = RoundedCornerShape(18.dp),
-        colors = CardDefaults.cardColors(containerColor = ScreenSurface),
-        border = BorderStroke(1.dp, Color(0xFFC6DFE8)),
-        elevation = CardDefaults.cardElevation(defaultElevation = 2.5.dp)
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 14.dp, vertical = 10.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(10.dp)
-        ) {
-            Icon(
-                imageVector = Icons.Default.Search,
-                contentDescription = "Cari",
-                tint = Color(0xFF2563A6),
-                modifier = Modifier.size(22.dp)
-            )
-
-            Box(modifier = Modifier.weight(1f)) {
-                if (query.isEmpty()) {
-                    Text(
-                        text = "Cari lowongan, perusahaan, atau posisi...",
-                        fontSize = 13.sp,
-                        color = ScreenMuted
-                    )
-                }
-                BasicTextField(
-                    value = query,
-                    onValueChange = onQueryChange,
-                    singleLine = true,
-                    cursorBrush = SolidColor(Color(0xFF2563A6)),
-                    textStyle = TextStyle(
-                        fontSize = 13.sp,
-                        color = ScreenText,
-                        fontWeight = FontWeight.Medium
-                    ),
-                    modifier = Modifier.fillMaxWidth()
-                )
-            }
-
-            Icon(
-                imageVector = Icons.Default.Tune,
-                contentDescription = "Filter",
-                tint = Color(0xFF2563A6),
-                modifier = Modifier
-                    .size(20.dp)
-                    .clickable(onClick = onFilterClick)
-            )
         }
     }
 }

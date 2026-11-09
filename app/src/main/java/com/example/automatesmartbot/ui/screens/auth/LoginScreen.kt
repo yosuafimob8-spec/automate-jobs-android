@@ -62,8 +62,9 @@ private fun LoginScreenContent(
             .fillMaxSize()
             .background(KarirPageGradient)
             .verticalScroll(rememberScrollState())
-            .padding(24.dp),
-        contentAlignment = Alignment.Center
+            .imePadding()
+            .padding(horizontal = 12.dp, vertical = 16.dp),
+        contentAlignment = Alignment.TopCenter
     ) {
         Card(
             colors = CardDefaults.cardColors(containerColor = ScreenSurface),
@@ -73,14 +74,14 @@ private fun LoginScreenContent(
             modifier = Modifier.fillMaxWidth()
         ) {
             Column(
-                modifier = Modifier.padding(26.dp),
+                modifier = Modifier.padding(18.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.spacedBy(16.dp)
+                verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 BrandLogo(
-                    modifier = Modifier.size(92.dp)
+                    modifier = Modifier.size(72.dp)
                 )
-                Text("KarirMate", fontSize = 36.sp, fontWeight = FontWeight.ExtraBold, fontStyle = FontStyle.Italic, color = KarirTextDark)
+                Text("KarirMate", fontSize = 30.sp, fontWeight = FontWeight.ExtraBold, fontStyle = FontStyle.Italic, color = KarirTextDark)
                 Text("Your Career Journey", color = KarirTextMuted, fontSize = 13.sp)
 
                 Text(

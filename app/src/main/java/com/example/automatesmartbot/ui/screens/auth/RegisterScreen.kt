@@ -89,8 +89,10 @@ private fun RegisterScreenContent(
                 .fillMaxSize()
                 .background(KarirPageGradient)
                 .padding(innerPadding)
-                .padding(20.dp),
-            contentAlignment = Alignment.Center
+                .verticalScroll(rememberScrollState())
+                .imePadding()
+                .padding(horizontal = 12.dp, vertical = 16.dp),
+            contentAlignment = Alignment.TopCenter
         ) {
             Card(
                 colors = CardDefaults.cardColors(containerColor = Color.White),
@@ -101,13 +103,13 @@ private fun RegisterScreenContent(
             ) {
                 Column(
                     modifier = Modifier
-                        .padding(24.dp)
-                        .verticalScroll(rememberScrollState()),
+                        .fillMaxWidth()
+                        .padding(18.dp),
                     horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(16.dp)
+                    verticalArrangement = Arrangement.spacedBy(12.dp)
                 ) {
-                    BrandLogo(modifier = Modifier.size(92.dp))
-                    Text("KarirMate", fontSize = 36.sp, fontWeight = FontWeight.ExtraBold, fontStyle = FontStyle.Italic, color = KarirTextDark)
+                    BrandLogo(modifier = Modifier.size(72.dp))
+                    Text("KarirMate", fontSize = 30.sp, fontWeight = FontWeight.ExtraBold, fontStyle = FontStyle.Italic, color = KarirTextDark)
                     Text("Your Career Journey", fontSize = 13.sp, color = KarirTextMuted)
                     Text(
                         text = "Buat Akun Baru",

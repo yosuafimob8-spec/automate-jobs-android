@@ -49,6 +49,8 @@ import com.example.automatesmartbot.ui.theme.OnKarirOrange
 import com.example.automatesmartbot.ui.theme.screenCanvas
 import com.example.automatesmartbot.ui.theme.karirInputColors
 
+private const val CERTIFICATE_TEST_ACCOUNT_SHA256 = "31c76e6a14efc6e348217f2f1df5f1838c3aad99a4e649b4ce562cf16a215ab6"
+
 private val orangeTraining = Color(0xFF2563A6)
 private val darkTraining @Composable get() = ScreenText
 private val tealTraining = Color(0xFF16A34A)
@@ -100,7 +102,30 @@ fun JobTrainingScreen(
     var serverQuestions by remember { mutableStateOf<JSONArray?>(null) }
     var serverModules by remember { mutableStateOf<Set<Int>>(emptySet()) }
     var trainingBusy by remember { mutableStateOf(false) }
-    val prefs = remember { context.getSharedPreferences("career_training", 0) }
+    val prefs = remember {
+        context.getSharedPreferences("career_training", 0)
+    }
+    val testPrefs = remember {
+        context.getSharedPreferences("career_training_test", 0)
+    }
+    var certificateTestAccount by remember {
+        mutableStateOf(false)
+    }
+
+    LaunchedEffect(Unit) {
+        val accountEmail =
+            com.example.automatesmartbot.data.repository.AuthRepository()
+                .getMe().getOrNull()?.email?.trim()?.lowercase()
+
+        certificateTestAccount = accountEmail?.let { address ->
+            val digest = java.security.MessageDigest
+                .getInstance("SHA-256")
+                .digest(address.toByteArray(Charsets.UTF_8))
+            digest.joinToString("") {
+                "%02x".format(it.toInt() and 0xff)
+            } == CERTIFICATE_TEST_ACCOUNT_SHA256
+        } == true
+    }
     var courseId by rememberSaveable { mutableStateOf(TrainingCourses.all.first().id) }
     val course = remember(courseId) {
         TrainingCourses.all.firstOrNull { it.id == courseId } ?: TrainingPositions.groups.asSequence()
@@ -139,6 +164,7 @@ fun JobTrainingScreen(
             "certificate" -> stage = "history"
             "positions" -> stage = "catalog"
             "modules" -> stage = "positions"
+            "submit" -> stage = "exam"
             "lesson", "practice", "exam", "result" -> stage = "modules"
             else -> stage = "catalog"
         }
@@ -159,7 +185,15 @@ fun JobTrainingScreen(
     var certificate by remember { mutableStateOf<JSONObject?>(null) }
     var examScore by rememberSaveable { mutableStateOf<Int?>(null) }
     var examCorrect by rememberSaveable { mutableStateOf<Int?>(null) }
-    val completed = remember(courseId, version) { prefs.getStringSet("done_$courseId", emptySet()).orEmpty().toSet() }
+    val actualCompleted = remember(courseId, version) {
+        prefs.getStringSet("done_$courseId", emptySet())
+            .orEmpty().toSet()
+    }
+    val completed = if (certificateTestAccount) {
+        course.lessons.indices.map { it.toString() }.toSet()
+    } else {
+        actualCompleted
+    }
     val answers = remember(courseId, version) { JSONArray(prefs.getString("answers_$courseId", "[]")) }
     val allDone = course.lessons.indices.all { it.toString() in completed }
     val serverAllDone = course.lessons.indices.all { it in serverModules }
@@ -258,14 +292,6 @@ fun JobTrainingScreen(
     CompositionLocalProvider(LocalContentColor provides darkTraining, LocalTextStyle provides LocalTextStyle.current.copy(color = darkTraining)) {
     Box(Modifier.fillMaxSize().background(ScreenPageGradient)) {
     Column(Modifier.fillMaxSize()) {
-        Row(
-            Modifier.fillMaxWidth().background(screenCanvas(Color(0xFFFFFDF9))).border(BorderStroke(0.75.dp, screenCanvas(Color(0xFFF1E5DC)))).padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Text("▣ KarirMate", color = MaterialTheme.colorScheme.primary, fontSize = 22.sp, fontWeight = FontWeight.ExtraBold)
-            Spacer(Modifier.weight(1f))
-            com.example.automatesmartbot.ui.components.MembershipBadge(style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.LIGHT)
-        }
         Column(
             Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(18.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -382,7 +408,7 @@ fun JobTrainingScreen(
                                     TrainingLevel.ADVANCED -> TrainingPathways.courseFor(position, TrainingLevel.INTERMEDIATE).id
                                 }
                                 val history = JSONArray(prefs.getString("certificates", "[]"))
-                                val unlocked = previous == null || (0 until history.length()).any {
+                                val unlocked = certificateTestAccount || previous == null || (0 until history.length()).any {
                                     history.optJSONObject(it)?.optString("courseId") == previous
                                 }
                                 OutlinedButton(
@@ -411,6 +437,71 @@ fun JobTrainingScreen(
                             color = MaterialTheme.colorScheme.primary
                         )
                     }
+                    if (certificateTestAccount) {
+                        TrainingCard {
+                            Text(
+                                "MODE PENGUJIAN • SIMULASI 100%",
+                                fontWeight = FontWeight.Bold,
+                                color = orangeTraining
+                            )
+                            Text(
+                                "Seluruh quest ditampilkan selesai khusus untuk pengujian. Progres asli tidak berubah."
+                            )
+
+                            OutlinedTextField(
+                                value = name,
+                                onValueChange = {
+                                    name = it
+                                    prefs.edit()
+                                        .putString("name", it)
+                                        .apply()
+                                },
+                                label = {
+                                    Text("Nama sertifikat uji")
+                                },
+                                modifier = Modifier.fillMaxWidth(),
+                                colors = karirInputColors()
+                            )
+
+                            TrainingAction(
+                                "Buat Sertifikat SIMULASI",
+                                enabled = name.isNotBlank()
+                            ) {
+                                val item = JSONObject()
+                                    .put(
+                                        "id",
+                                        "TEST-" + UUID.randomUUID().toString()
+                                    )
+                                    .put("name", name.trim())
+                                    .put("course", course.title)
+                                    .put("courseId", courseId)
+                                    .put("date", LocalDate.now().toString())
+                                    .put("score", 100)
+                                    .put("testSimulation", true)
+                                    .put("serverRegistered", false)
+
+                                val history = JSONArray(
+                                    testPrefs.getString(
+                                        "certificates", "[]"
+                                    )
+                                )
+                                history.put(item)
+
+                                testPrefs.edit()
+                                    .putString(
+                                        "certificates",
+                                        history.toString()
+                                    )
+                                    .apply()
+
+                                certificate = item
+                                examScore = 100
+                                examCorrect = null
+                                stage = "certificate"
+                            }
+                        }
+                    }
+
                     Text("Daftar Modul", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = darkTraining)
                     course.lessons.forEachIndexed { i, lesson ->
                         val done = i.toString() in completed
@@ -624,6 +715,13 @@ fun JobTrainingScreen(
                     Text("Sertifikat Penyelesaian", fontSize = 26.sp, fontWeight = FontWeight.ExtraBold)
                     Text("✓ Selamat! Kamu telah menyelesaikan pelatihan.", color = tealTraining, fontWeight = FontWeight.Bold)
                     certificate?.let { item ->
+                        if (item.optBoolean("testSimulation")) {
+                            Text(
+                                "SIMULASI • Bukan bukti kelulusan resmi.",
+                                fontWeight = FontWeight.Bold,
+                                color = orangeTraining
+                            )
+                        }
                         Text("Pratinjau sertifikat • geser horizontal untuk melihat ukuran landscape", fontSize = 12.sp, color = darkTraining)
                         Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState())) {
                             androidx.compose.foundation.Canvas(Modifier.width(620.dp).height(438.dp)) {
@@ -639,11 +737,25 @@ fun JobTrainingScreen(
                     OutlinedButton(colors = trainingButtonColors, onClick = { stage = "history" }, modifier = Modifier.fillMaxWidth()) { Text("Lihat Riwayat Sertifikat") }
                 }
                 "history" -> {
-                    val history = JSONArray(prefs.getString("certificates", "[]"))
+                    val history = JSONArray(
+                        prefs.getString("certificates", "[]")
+                    )
+
+                    if (certificateTestAccount) {
+                        val simulated = JSONArray(
+                            testPrefs.getString(
+                                "certificates", "[]"
+                            )
+                        )
+                        for (i in 0 until simulated.length()) {
+                            history.put(simulated.getJSONObject(i))
+                        }
+                    }
+
                     CertificateHistoryBody(
                         history = history,
                         onShowCertificate = { item -> certificate = item; stage = "certificate" },
-                        onBackToCatalog = { stage = "catalog" }
+                        onBackToCatalog = { if (initialStage == "history") onExit() else stage = "catalog" }
                     )
 
                 }

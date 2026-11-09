@@ -28,7 +28,10 @@ import com.example.automatesmartbot.ui.theme.ScreenMuted as KarirTextMuted
 import org.json.JSONArray
 
 @Composable
-fun WorkPediaScreen(onExit: () -> Unit) {
+fun WorkPediaScreen(
+    onExit: () -> Unit,
+    onBackActionChanged: ((() -> Unit)?) -> Unit = {}
+) {
     val context = LocalContext.current
     val entries = remember {
         runCatching {
@@ -44,7 +47,17 @@ fun WorkPediaScreen(onExit: () -> Unit) {
     var category by remember { mutableStateOf("Semua") }
     val categories = remember(entries) { listOf("Semua") + entries.map { it.optString("category") }.filter { it.isNotBlank() }.distinct().sorted() }
 
-    BackHandler(selected != null) { selected = null }
+    fun goBack() {
+        if (selected != null) selected = null
+        else onExit()
+    }
+
+    DisposableEffect(selected) {
+        onBackActionChanged({ goBack() })
+        onDispose { onBackActionChanged(null) }
+    }
+
+    BackHandler(selected != null) { goBack() }
 
     val visible = remember(entries, query, onlyFavorites, favorites, category) {
         entries.filter { entry ->
@@ -155,7 +168,7 @@ fun WorkPediaScreen(onExit: () -> Unit) {
                         border = BorderStroke(1.dp, if (onlyFavorites) KarirOrange else screenCanvas(Color(0xFFC6DFE8)))
                     )
                     Spacer(Modifier.weight(1f))
-                    TextButton(onClick = onExit) {
+                    TextButton(onClick = { goBack() }) {
                         Text("Keluar", color = KarirOrangeDeep, fontWeight = FontWeight.SemiBold, fontSize = 12.sp)
                     }
                 }

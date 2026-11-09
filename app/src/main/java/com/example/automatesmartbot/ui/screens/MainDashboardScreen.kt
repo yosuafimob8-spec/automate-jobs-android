@@ -186,7 +186,6 @@ private fun MainDashboardContent(
 
     val currentTitle = when (currentRoute) {
         Screen.Dashboard.route -> "Beranda"
-        Screen.CariLowongan.route -> "Cari Lowongan"
         Screen.KirimLamaran.route -> "Kirim Lamaran"
         Screen.JobTraining.route -> "Pelatihan Kerja"
         Screen.Certificates.route -> "Sertifikat"
@@ -222,9 +221,13 @@ private fun MainDashboardContent(
     )
     val edgeHeader = currentRoute in edgeHeaderRoutes
     var psychotestBack by remember { mutableStateOf<(() -> Unit)?>(null) }
+    var workpediaBack by remember { mutableStateOf<(() -> Unit)?>(null) }
     val onBack: (() -> Unit)? = when {
         !showBack -> null
         currentRoute == Screen.CvBuilder.route -> cvBack
+        currentRoute == Screen.WorkPedia.route -> {
+            { workpediaBack?.invoke() ?: navigateUpOrDashboard() }
+        }
         currentRoute == Screen.LatihanPsikotes.route -> { { psychotestBack?.invoke() ?: navigateUpOrDashboard() } }
         currentRoute == Screen.JobTraining.route || currentRoute == Screen.Certificates.route -> { { trainingBack?.invoke() ?: navigateUpOrDashboard() } }
         else -> navigateUpOrDashboard
@@ -259,8 +262,7 @@ private fun MainDashboardContent(
                             Screen.LatihanPsikotes.route -> "Latihan Tes Kerja & Persiapan CPNS"
                             Screen.SalaryCalculator.route -> "Simulasi gaji, lembur dan potongan"
                             Screen.JobTraining.route -> "Upgrade skill untuk dunia kerja"
-                            else -> "Riwayat dan verifikasi sertifikat"
-                        },
+                            Screen.Certificates.route -> "Riwayat dan verifikasi sertifikat"\n                            Screen.CvBuilder.route -> "Buat dan kelola CV profesional"\n                            Screen.Profil.route -> "Informasi akun dan pengaturan"\n                            else -> ""\n                        },
                         isPro = isPro,
                         onBack = onBack ?: navigateUpOrDashboard,
                         onProfile = { navController.navigate(Screen.Profil.route) { launchSingleTop = true } }
@@ -343,16 +345,6 @@ private fun MainDashboardContent(
                 ProCheckoutScreen(entry.arguments?.getInt("plan") ?: 0, onComplete = { navController.navigate(Screen.ManagePro.route) })
             }
             composable(Screen.ManagePro.route) { ManageProSubscriptionScreen(onUpgrade = { navController.navigate(Screen.UpgradePro.route) }) }
-            composable(Screen.CariLowongan.route) {
-                FixedCanvasTheme(dark = when (themePreference.mode) {
-                    com.example.automatesmartbot.ui.theme.ThemeMode.DARK -> true
-                    com.example.automatesmartbot.ui.theme.ThemeMode.LIGHT -> false
-                    com.example.automatesmartbot.ui.theme.ThemeMode.AUTO -> androidx.compose.foundation.isSystemInDarkTheme()
-                }) {
-                    CariLowonganScreen(isPro = isPro)
-
-                }
-            }
             composable(Screen.KirimLamaran.route) {
                 KirimLamaranScreen(
                     isPro = isPro,
@@ -393,7 +385,12 @@ private fun MainDashboardContent(
 
                 }
             }
-            composable(Screen.WorkPedia.route) { WorkPediaScreen(onExit = navigateUpOrDashboard) }
+            composable(Screen.WorkPedia.route) {
+                WorkPediaScreen(
+                    onExit = navigateUpOrDashboard,
+                    onBackActionChanged = { workpediaBack = it }
+                )
+            }
             composable(Screen.Riwayat.route) {
                 FixedCanvasTheme(dark = when (themePreference.mode) {
                     com.example.automatesmartbot.ui.theme.ThemeMode.DARK -> true
@@ -412,6 +409,7 @@ private fun MainDashboardContent(
                     onNavigateCv = { navController.navigate(Screen.CvBuilder.route) { launchSingleTop = true } },
                     onNavigateApplications = { navController.navigate(Screen.Riwayat.route) { launchSingleTop = true } },
                     onNavigateDocuments = { navController.navigate(Screen.CareerLetters.route) { launchSingleTop = true } },
+                    onNavigateCertificates = { navController.navigate(Screen.Certificates.route) { launchSingleTop = true } },
                     onNavigateEditProfile = {
                         navController.navigate(Screen.OnboardingProfile.route) {
                             launchSingleTop = true
