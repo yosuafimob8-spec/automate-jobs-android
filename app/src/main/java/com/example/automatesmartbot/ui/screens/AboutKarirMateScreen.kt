@@ -295,7 +295,7 @@ private fun AboutPrivacyPage() {
         SectionIntro(Icons.Default.Security, "Informasi penting", "Privasi & Ketentuan", "Pahami penggunaan data dan batasan layanan")
         PolicySection(
             "Penggunaan informasi",
-            Icons.Default.LockOutline,
+            Icons.Default.Lock,
             "KarirMate menggunakan informasi yang diberikan pengguna untuk mendukung fitur akun, profil, CV, surat lamaran, psikotes, pelatihan, dan persiapan karier. Fitur tertentu dapat memerlukan pemrosesan melalui backend atau layanan pihak ketiga."
         )
         PolicySection(
