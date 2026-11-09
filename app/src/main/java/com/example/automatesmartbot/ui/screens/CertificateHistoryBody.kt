@@ -322,22 +322,38 @@ private fun CertificateRequirementRow(
     status: String,
     achieved: Boolean
 ) {
-    Surface(shape = RoundedCornerShape(11.dp),
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(11.dp),
         color = screenCanvas(Color(0xFFF0F7FD), Color(0xFF183044)),
-        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC3D8EB), Color(0xFF345B75)))) {
-        Row(Modifier.fillMaxWidth().padding(10.dp), horizontalArrangement = Arrangement.spacedBy(10.dp),
-            verticalAlignment = Alignment.CenterVertically) {
+        border = BorderStroke(1.dp, screenCanvas(Color(0xFFC3D8EB), Color(0xFF345B75)))
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(12.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.Top
+        ) {
             Box(Modifier.size(35.dp), contentAlignment = Alignment.Center) { icon() }
-            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
-                Text(title, fontWeight = FontWeight.ExtraBold, fontSize = 13.sp, color = ScreenText)
-                Text(detail, fontSize = 10.sp, lineHeight = 13.sp, color = ScreenMuted)
-            }
-            Surface(shape = RoundedCornerShape(50),
-                color = if (achieved) screenCanvas(Color(0xFFCFF4DA), Color(0xFF175539))
-                        else screenCanvas(Color(0xFFE7EEF5), Color(0xFF33475B))) {
-                Text((if (achieved) "✓ " else "• ") + status, modifier = Modifier.padding(horizontal = 8.dp, vertical = 5.dp),
-                    color = if (achieved) screenCanvas(Color(0xFF086529), Color(0xFFBEF4D4)) else ScreenMuted,
-                    fontWeight = FontWeight.Bold, fontSize = 10.sp, maxLines = 1)
+            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(5.dp)) {
+                Text(
+                    title, fontWeight = FontWeight.ExtraBold, fontSize = 13.sp,
+                    color = ScreenText, maxLines = 2, overflow = TextOverflow.Ellipsis
+                )
+                Text(detail, fontSize = 11.sp, lineHeight = 16.sp, color = ScreenMuted)
+                Surface(
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(10.dp),
+                    color = if (achieved) screenCanvas(Color(0xFFCFF4DA), Color(0xFF175539))
+                            else screenCanvas(Color(0xFFE7EEF5), Color(0xFF33475B))
+                ) {
+                    Text(
+                        (if (achieved) "✓ " else "• ") + status,
+                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 7.dp),
+                        color = if (achieved) screenCanvas(Color(0xFF086529), Color(0xFFBEF4D4)) else ScreenMuted,
+                        fontWeight = FontWeight.SemiBold, fontSize = 11.sp, lineHeight = 15.sp,
+                        maxLines = 3, overflow = TextOverflow.Ellipsis
+                    )
+                }
             }
         }
     }
