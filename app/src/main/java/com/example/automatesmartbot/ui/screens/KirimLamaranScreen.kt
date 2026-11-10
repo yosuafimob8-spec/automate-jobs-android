@@ -138,6 +138,11 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
     var agreed by remember { mutableStateOf(false) }
     var enabled by remember { mutableStateOf(false) }
     var operatorSendAllowed by remember { mutableStateOf(false) }
+    // KIRIM_LAMARAN_FIX_V1: readiness is reported by the authenticated backend.
+    var emailVerified by remember { mutableStateOf(false) }
+    var scheduleStatus by remember { mutableStateOf("") }
+    var backendActionRequired by remember { mutableStateOf("") }
+    var backendNote by remember { mutableStateOf("") }
     var cvUploaded by remember { mutableStateOf(false) }
     var gmailConnected by remember { mutableStateOf(false) }
     var statusLoaded by remember { mutableStateOf(false) }
@@ -168,22 +173,33 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         gmailConnected = body.optBoolean("gmail_connected")
         cvUploaded = body.optBoolean("cv_uploaded")
         operatorSendAllowed = body.optBoolean("operator_send_allowed")
+        scheduleStatus = body.optString("schedule_status", "").takeUnless { it == "null" }.orEmpty()
+        backendActionRequired = body.optString("action_required", "").takeUnless { it == "null" }.orEmpty()
+        backendNote = body.optString("message", "").takeUnless { it == "null" }.orEmpty()
         val a = body.optJSONObject("auto_apply")
         targetsConfirmed = targetEchoMatches(a, selectedPositions, selectedRegions, "preferences_enforced")
         consentSaved = AutoApplyConfirmation.consentState(
             a?.opt("consent_granted") as? Boolean,
             a?.optString("consent_at"),
-            accountId?.let { prefs.getBoolean(it, false) } == true
+            false // Local preferences must never substitute backend consent.
         )
         statusLoaded = true
     }
 
     suspend fun load() {
+        if (busy) return // Avoid racing initial load with ON_RESUME.
         busy = true
         try {
             val me = ApiClient.apiService.getMe()
-            accountId = me.takeIf { it.isSuccessful }?.body()?.id
-            me.errorBody()?.close()
+            if (!me.isSuccessful) {
+                val code = me.code()
+                me.errorBody()?.close()
+                error("Akun gagal diverifikasi (HTTP $code). Login ulang jika sesi berakhir.")
+            }
+            val verifiedAccount = me.body() ?: error("Backend tidak mengembalikan data akun.")
+            accountId = verifiedAccount.id?.takeIf { it.isNotBlank() }
+            emailVerified = verifiedAccount.isEmailVerified
+            require(accountId != null) { "Identitas akun tidak tersedia. Login ulang." }
             refresh()
             if (isPro) {
                 val response = ApiClient.apiService.getKarirMateCandidates()
@@ -199,7 +215,11 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             if (report.isSuccessful) {
                 val array = JSONObject(report.body()?.use { it.string() } ?: "{}").optJSONArray("items")
                 deliveries = if (array == null) emptyList() else (0 until array.length()).map { array.getJSONObject(it) }
-            } else report.errorBody()?.close()
+            } else {
+                val code = report.code()
+                report.errorBody()?.close()
+                message = "Riwayat pengiriman belum dapat dimuat (HTTP $code)."
+            }
         } catch (e: CancellationException) {
             throw e
         } catch (e: Exception) {
@@ -501,11 +521,28 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                 )
                             }
                             Text(
-                                if (operatorSendAllowed) "Izin operasional tersedia; jadwal pengiriman diverifikasi oleh sistem."
-                                else "Pengiriman produksi memerlukan izin operasional; Anda tetap dapat menyiapkan konfigurasi.",
+                                when {
+                                    !statusLoaded -> "Kesiapan pengiriman belum bisa diverifikasi."
+                                    enabled && operatorSendAllowed -> "Auto Apply aktif. Pengiriman mengikuti jadwal server, bukan langsung saat tombol ditekan."
+                                    enabled -> "Pengaturan aktif, tetapi pengiriman TERTAHAN karena izin operasional server belum tersedia."
+                                    !operatorSendAllowed -> "Pengiriman email belum diizinkan oleh backend. Menyambungkan Gmail saja tidak cukup."
+                                    else -> "Izin operasional tersedia. Aktifkan Auto Apply setelah semua persyaratan terpenuhi."
+                                },
                                 fontSize = 11.5.sp,
                                 color = com.example.automatesmartbot.ui.theme.ScreenMuted
                             )
+                            if (backendNote.isNotBlank()) {
+                                Text("Info server: $backendNote", fontSize = 11.sp,
+                                    color = com.example.automatesmartbot.ui.theme.ScreenMuted)
+                            }
+                            if (backendActionRequired.isNotBlank()) {
+                                Text("Tindakan diperlukan: $backendActionRequired", fontSize = 11.sp,
+                                    color = Color(0xFF92400E))
+                            }
+                            if (scheduleStatus.isNotBlank()) {
+                                Text("Jadwal server: $scheduleStatus", fontSize = 11.sp,
+                                    color = com.example.automatesmartbot.ui.theme.ScreenMuted)
+                            }
                             Text(
                                 if (cvUploaded) "✓ CV backend: Tersimpan dan siap dikirim" else "⚠ CV backend: Belum diunggah",
                                 fontSize = 12.sp,
@@ -542,6 +579,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         }
                     }
 
+                    Text("CV yang didukung: PDF maksimal 2,2 MB. Unggah kembali jika CV berubah.",
+                        fontSize = 11.sp, color = com.example.automatesmartbot.ui.theme.ScreenMuted)
                     if (!gmailConnected) {
                         Button(
                             onClick = {
@@ -643,6 +682,14 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                     if (!isPro) {
                         Text("• Auto Apply memerlukan paket langganan PRO aktif.", color = Color(0xFFD97706), fontSize = 11.5.sp)
                     }
+                    if (!emailVerified) {
+                        Text("• Verifikasi email akun KarirMate di Profil sebelum mengaktifkan pengiriman.",
+                            color = Color(0xFFD97706), fontSize = 11.5.sp)
+                    }
+                    if (!operatorSendAllowed) {
+                        Text("• Sistem pengiriman server belum siap. Izin Auto Apply tidak dapat diaktifkan; tidak ada email dikirim.",
+                            color = Color(0xFFD97706), fontSize = 11.5.sp)
+                    }
 
                     Button(
                         onClick = {
@@ -676,14 +723,15 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                 }
                             }
                         },
-                        enabled = statusLoaded && gmailConnected && cvUploaded && isPro && isOnline && !busy && !enabled &&
+                        enabled = statusLoaded && gmailConnected && cvUploaded && isPro && emailVerified &&
+                            operatorSendAllowed && isOnline && !busy && !enabled &&
                             targetsConfirmed && selectedPositions.isNotEmpty() && selectedRegions.isNotEmpty() &&
                             (agreed || consentSaved),
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
                     ) {
-                        Text(if (enabled) "Izin Auto Apply Aktif" else "Simpan Izin Auto Apply", fontWeight = FontWeight.Bold)
+                        Text(if (enabled) "Auto Apply Aktif" else "Aktifkan Auto Apply", fontWeight = FontWeight.Bold)
                     }
 
                     OutlinedButton(

@@ -98,13 +98,26 @@ class AuthViewModel(
             _isLoading.value = true
             _errorMessage.value = null
             val result = repository.register(RegisterRequest(email, password))
-            _isLoading.value = false
             result.fold(
-                onSuccess = { _ ->
-                    _successMessage.value = "Registrasi berhasil! Silakan masuk."
-                    onRegistered()
+                onSuccess = {
+                    // POST /auth/register does not return an access token.
+                    // Authenticate first; the global OTP gate will then request
+                    // a six-digit email code for accounts not yet verified.
+                    val loginResult = repository.login(LoginRequest(email, password))
+                    _isLoading.value = false
+                    loginResult.fold(
+                        onSuccess = {
+                            _successMessage.value = "Akun dibuat. Verifikasi email untuk melanjutkan."
+                            onRegistered()
+                        },
+                        onFailure = {
+                            _successMessage.value = "Akun dibuat. Masuk dengan sandi untuk verifikasi email."
+                            onRegistered() // Parent falls back to Login if no session token.
+                        }
+                    )
                 },
                 onFailure = { err ->
+                    _isLoading.value = false
                     _errorMessage.value = err.localizedMessage ?: "Terjadi kesalahan. Coba lagi."
                 }
             )

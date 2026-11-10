@@ -36,6 +36,8 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.example.automatesmartbot.data.network.ApiClient
 import com.example.automatesmartbot.data.repository.ProfileSetupRepository
+import com.example.automatesmartbot.data.repository.AuthRepository
+import com.example.automatesmartbot.ui.screens.auth.EmailOtpGate
 import com.example.automatesmartbot.data.security.SessionManager
 import com.example.automatesmartbot.ui.components.AppTopBar
 import com.example.automatesmartbot.ui.navigation.NavigationPolicy
@@ -87,6 +89,12 @@ private fun MainDashboardContent(
     val navController = rememberNavController()
     var sessionToken by remember { mutableStateOf(initialSessionToken) }
     var checkedToken by remember { mutableStateOf<String?>(null) }
+    // OTP_AUTO_GATE_V1: never show dashboard/profile before server-confirmed email verification.
+    var otpGateState by remember {
+        mutableStateOf(if (initialSessionToken.isNullOrBlank()) "idle" else "checking")
+    }
+    var otpGateEmail by remember { mutableStateOf("") }
+    var otpRetryKey by remember { mutableStateOf(0) }
     val dashboardViewModel: DashboardViewModel = viewModel()
     val dashboardStatus by dashboardViewModel.status.collectAsState()
     val cvViewModel: CvBuilderViewModel = viewModel(key = "cv_builder_${com.example.automatesmartbot.data.cv.cvSessionKey() ?: "signed-out"}")
@@ -144,18 +152,36 @@ private fun MainDashboardContent(
         onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
     }
 
-    LaunchedEffect(sessionToken) {
+    // The backend /auth/me is the only authority for email_verified.
+    // All password accounts, including stored sessions, must pass this gate.
+    // Google accounts bypass OTP only when the server confirms verification.
+    LaunchedEffect(sessionToken, otpRetryKey) {
         val token = sessionToken
         if (token.isNullOrBlank()) {
+            otpGateState = "idle"
+            otpGateEmail = ""
             dashboardViewModel.reset()
             return@LaunchedEffect
         }
+        otpGateState = "checking"
+        val result = AuthRepository().getMe()
+        val account = result.getOrNull()
+        when {
+            account == null -> otpGateState = "error" // Fail closed on network error.
+            account.isEmailVerified -> otpGateState = "verified"
+            else -> {
+                otpGateEmail = account.email.orEmpty()
+                otpGateState = "unverified"
+            }
+        }
+    }
 
+    LaunchedEffect(sessionToken, otpGateState) {
+        val token = sessionToken
+        if (token.isNullOrBlank() || otpGateState != "verified") return@LaunchedEffect
         dashboardViewModel.loadStatus()
-
         if (checkedToken == token) return@LaunchedEffect
         checkedToken = token
-
         val completed = ProfileSetupRepository(sessionManager).checkServerProfileCompletion()
         val currentRoute = navController.currentDestination?.route
         when (NavigationPolicy.profileGateTarget(completed, currentRoute)) {
@@ -470,8 +496,9 @@ private fun MainDashboardContent(
                         onLoginSuccess = { profileCompleted ->
                             val newToken = sessionManager?.getValidToken()
                             dashboardViewModel.reset() // Do not display the previous account's membership.
+                            otpGateState = "checking"
                             sessionToken = newToken
-                            checkedToken = newToken
+                            checkedToken = null
                             val target = NavigationPolicy.postLoginRoute(profileCompleted)
                             navController.navigate(target) {
                                 popUpTo(Screen.Login.route) { inclusive = true }
@@ -490,13 +517,26 @@ private fun MainDashboardContent(
                     RegisterScreen(
                         onNavigateLogin = navigateToLogin,
                         onRegisterSuccess = {
-                            navigateToLogin()
+                            val newToken = sessionManager?.getValidToken()
+                            if (newToken.isNullOrBlank()) {
+                                navigateToLogin()
+                            } else {
+                                dashboardViewModel.reset()
+                                otpGateState = "checking"
+                                checkedToken = null
+                                sessionToken = newToken
+                                navController.navigate(Screen.Dashboard.route) {
+                                    popUpTo(Screen.Register.route) { inclusive = true }
+                                    launchSingleTop = true
+                                }
+                            }
                         },
                         onGoogleSuccess = { profileCompleted ->
                             val newToken = sessionManager?.getValidToken()
                             dashboardViewModel.reset()
+                            otpGateState = "checking"
                             sessionToken = newToken
-                            checkedToken = newToken
+                            checkedToken = null
                             navController.navigate(
                                 NavigationPolicy.postLoginRoute(profileCompleted)
                             ) {
@@ -543,4 +583,38 @@ private fun MainDashboardContent(
         }
     }
     }
+    if (!sessionToken.isNullOrBlank() && otpGateState != "verified") {
+        androidx.compose.ui.window.Dialog(
+            onDismissRequest = {},
+            properties = androidx.compose.ui.window.DialogProperties(
+                dismissOnBackPress = false,
+                dismissOnClickOutside = false,
+                usePlatformDefaultWidth = false
+            )
+        ) {
+            androidx.compose.material3.Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = MaterialTheme.colorScheme.background
+            ) {
+                EmailOtpGate(
+                    state = otpGateState,
+                    email = otpGateEmail,
+                    onVerified = {
+                        // Recheck the backend; never trust only a successful POST.
+                        otpGateState = "checking"
+                        otpRetryKey += 1
+                    },
+                    onRetry = {
+                        otpGateState = "checking"
+                        otpRetryKey += 1
+                    },
+                    onLogout = {
+                        AuthRepository().logout()
+                        endSession()
+                    }
+                )
+            }
+        }
+    }
+
 }

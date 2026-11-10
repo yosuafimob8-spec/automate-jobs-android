@@ -196,10 +196,11 @@ fun RiwayatScreen(onReload: (() -> Unit)? = null) {
             Box(Modifier.fillMaxWidth().weight(1f), contentAlignment = Alignment.TopCenter) {
                 when {
                     loading && !loaded -> CircularProgressIndicator(modifier = Modifier.padding(20.dp))
-                    error != null -> Column(Modifier.fillMaxWidth().padding(18.dp)) {
+                    error != null -> Column(Modifier.fillMaxWidth().padding(18.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp)) {
                         Text("Laporan belum dapat dimuat", fontWeight = FontWeight.Bold, color = ink)
                         Text(error.orEmpty(), color = muted, fontSize = 12.sp)
-                        if (rows.isNotEmpty()) Text("Data terakhir ditampilkan setelah koneksi pulih.", color = muted)
+                        OutlinedButton(onClick = { generation++ }) { Text("Coba Lagi") }
                     }
                     rows.isEmpty() -> Column(horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -218,12 +219,25 @@ fun RiwayatScreen(onReload: (() -> Unit)? = null) {
                                 .firstNotNullOfOrNull { key -> entry.optString(key).takeIf { it.isNotBlank() } }
                             val status = listOf("status", "delivery_status")
                                 .firstNotNullOfOrNull { key -> entry.optString(key).takeIf { it.isNotBlank() } }
+                            // KIRIM_LAMARAN_FIX_V1: a 'sent' flag without Gmail receipt is NOT confirmed delivery.
+                            val gmailReference = listOf("gmail_message_id", "gmail_id")
+                                .firstNotNullOfOrNull { key -> entry.optString(key).takeIf {
+                                    com.example.automatesmartbot.data.autoapply.AutoApplyConfirmation.hasReference(it)
+                                } }
+                            val verifiedSent = com.example.automatesmartbot.data.autoapply.AutoApplyConfirmation.sent(
+                                status.orEmpty(), gmailReference)
+                            val deliveryLabel = when {
+                                verifiedSent -> "Terkirim via Gmail (terkonfirmasi)"
+                                status == "sent" -> "Menunggu konfirmasi Gmail"
+                                status == "uncertain" || status == "unknown" -> "Status belum pasti; periksa akun Gmail"
+                                else -> "Status server: ${status ?: "belum dilaporkan"}"
+                            }
                             Surface(Modifier.fillMaxWidth(), shape = RoundedCornerShape(14.dp),
                                 color = panel, border = BorderStroke(1.dp, line)) {
                                 Column(Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                                     Text(label, color = ink, fontWeight = FontWeight.Bold)
                                     job?.let { Text(it, color = muted, fontSize = 12.sp) }
-                                    Text("Status server: ${status ?: "belum dilaporkan"}", color = muted, fontSize = 12.sp)
+                                    Text(deliveryLabel, color = muted, fontSize = 12.sp)
                                 }
                             }
                         }

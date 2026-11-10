@@ -61,6 +61,12 @@ interface ApiService {
     @POST("auth/login")
     suspend fun login(@Body request: LoginRequest): Response<LoginResponse>
 
+    @POST("auth/email-verification/request")
+    suspend fun requestEmailVerification(@Body body: Map<String, String> = emptyMap()): Response<ResponseBody>
+
+    @POST("auth/email-verification/confirm")
+    suspend fun confirmEmailVerification(@Body body: Map<String, String>): Response<ResponseBody>
+
     @GET("auth/me")
     suspend fun getMe(): Response<UserMeResponse>
 

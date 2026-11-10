@@ -59,6 +59,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -107,6 +109,11 @@ fun ProfilScreen(
     }
     var profile by remember { mutableStateOf<ProfileResponse?>(null) }
     var account by remember { mutableStateOf<UserMeResponse?>(null) }
+    var emailVerificationOpen by remember { mutableStateOf(false) }
+    var emailVerificationSent by remember { mutableStateOf(false) }
+    var emailVerificationCode by remember { mutableStateOf("") }
+    var emailVerificationBusy by remember { mutableStateOf(false) }
+    var emailVerificationError by remember { mutableStateOf<String?>(null) }
     var isLoading by remember { mutableStateOf(true) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
 
@@ -131,6 +138,89 @@ fun ProfilScreen(
 
     LaunchedEffect(Unit) {
         fetchProfileData()
+    }
+
+    if (emailVerificationOpen) {
+        androidx.compose.material3.AlertDialog(
+            onDismissRequest = { if (!emailVerificationBusy) emailVerificationOpen = false },
+            title = { Text("Verifikasi Email") },
+            text = {
+                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                    Text(
+                        "Verifikasi kepemilikan email ${account?.email.orEmpty()} menggunakan kode enam digit.",
+                        color = KarirTextDark
+                    )
+                    if (!emailVerificationSent) {
+                        Text("Kode akan dikirim ke alamat email akun, bukan ke email lamaran.")
+                    } else {
+                        androidx.compose.material3.OutlinedTextField(
+                            value = emailVerificationCode,
+                            onValueChange = { emailVerificationCode = it.filter(Char::isDigit).take(6) },
+                            label = { Text("Kode verifikasi") },
+                            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                            singleLine = true,
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                        Text("Kode berlaku 10 menit. Jangan bagikan kepada orang lain.")
+                    }
+                    emailVerificationError?.let {
+                        Text(it, color = MaterialTheme.colorScheme.error)
+                    }
+                }
+            },
+            confirmButton = {
+                TextButton(
+                    enabled = !emailVerificationBusy &&
+                        (!emailVerificationSent || emailVerificationCode.length == 6),
+                    onClick = {
+                        coroutineScope.launch {
+                            emailVerificationBusy = true
+                            emailVerificationError = null
+                            val wasConfirming = emailVerificationSent
+                            val result = if (wasConfirming) {
+                                authRepository.confirmEmailVerification(emailVerificationCode)
+                            } else {
+                                authRepository.requestEmailVerification()
+                            }
+                            result.fold(
+                                onSuccess = {
+                                    // Backend /auth/me is authoritative. Never treat HTTP 200
+                                    // alone as proof that this account is verified.
+                                    val currentAccount = authRepository.getMe().getOrNull()
+                                    if (currentAccount?.isEmailVerified == true) {
+                                        account = currentAccount
+                                        emailVerificationOpen = false
+                                        fetchProfileData()
+                                    } else if (wasConfirming) {
+                                        emailVerificationError =
+                                            "Status verifikasi belum dikonfirmasi server. Periksa koneksi lalu coba kembali."
+                                    } else {
+                                        emailVerificationSent = true
+                                    }
+                                },
+                                onFailure = {
+                                    emailVerificationError = it.localizedMessage
+                                        ?: "Verifikasi email gagal."
+                                }
+                            )
+                            emailVerificationBusy = false
+                        }
+                    }
+                ) {
+                    if (emailVerificationBusy) {
+                        CircularProgressIndicator(modifier = Modifier.size(18.dp))
+                    } else {
+                        Text(if (emailVerificationSent) "Verifikasi" else "Kirim kode")
+                    }
+                }
+            },
+            dismissButton = {
+                TextButton(
+                    enabled = !emailVerificationBusy,
+                    onClick = { emailVerificationOpen = false }
+                ) { Text("Tutup") }
+            }
+        )
     }
 
     val scrollState = rememberScrollState()
@@ -255,7 +345,13 @@ fun ProfilScreen(
                         onNavigateDocuments = onNavigateDocuments,
                         onNavigateCertificates = onNavigateCertificates,
                         onNavigateAbout = onNavigateAbout,
-                        onLogout = { authRepository.logout(); onNavigateLogin() }
+                        onLogout = { authRepository.logout(); onNavigateLogin() },
+                        onVerifyEmailClick = {
+                            emailVerificationSent = false
+                            emailVerificationCode = ""
+                            emailVerificationError = null
+                            emailVerificationOpen = true
+                        }
                     )
                 }
 
@@ -356,7 +452,8 @@ internal fun ProfileIdentityCard(
     onNavigateApplications: () -> Unit = {},
     onNavigateDocuments: () -> Unit = {},
     onNavigateCertificates: () -> Unit = {},
-    onNavigateAbout: () -> Unit = {}
+    onNavigateAbout: () -> Unit = {},
+    onVerifyEmailClick: () -> Unit = {}
 ) {
     val context = LocalContext.current
     val profileFields = listOf(profile?.fullName, profile?.whatsapp, profile?.domicile, profile?.education, profile?.applicationEmail)
@@ -494,7 +591,11 @@ internal fun ProfileIdentityCard(
                         null -> screenCanvas(Color(0xFFF1F5F9))
                     },
                     shape = RoundedCornerShape(8.dp),
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f).clickable(
+                        enabled = account?.isEmailVerified == false,
+                        onClickLabel = "Verifikasi email",
+                        onClick = onVerifyEmailClick
+                    )
                 ) {
                     Text(
                         text = when (account?.isEmailVerified) {
@@ -512,6 +613,18 @@ internal fun ProfileIdentityCard(
                         textAlign = TextAlign.Center,
                         modifier = Modifier.padding(horizontal = 6.dp, vertical = 6.dp)
                     )
+                }
+            }
+
+            if (account?.isEmailVerified == false) {
+                OutlinedButton(
+                    onClick = onVerifyEmailClick,
+                    modifier = Modifier.fillMaxWidth().heightIn(min = 44.dp),
+                    shape = RoundedCornerShape(10.dp)
+                ) {
+                    Icon(Icons.Default.Email, contentDescription = null, modifier = Modifier.size(16.dp))
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text("Verifikasi Email — Kirim Kode OTP", fontWeight = FontWeight.SemiBold)
                 }
             }
 

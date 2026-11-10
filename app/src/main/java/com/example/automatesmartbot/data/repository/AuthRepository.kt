@@ -123,6 +123,36 @@ class AuthRepository(
         }
     }
 
+    suspend fun requestEmailVerification(): Result<Unit> = withContext(Dispatchers.IO) {
+        try {
+            val response = loginApi.requestEmailVerification()
+            if (response.isSuccessful) Result.success(Unit)
+            else Result.failure(Exception(when (response.code()) {
+                401 -> "Sesi berakhir. Masuk kembali."
+                429 -> "Terlalu sering meminta kode. Tunggu sebelum mencoba lagi."
+                503 -> "Layanan email verifikasi belum tersedia di server."
+                else -> "Gagal mengirim kode verifikasi (HTTP ${response.code()})."
+            }))
+        } catch (e: Exception) {
+            Result.failure(Exception("Tidak dapat mengirim kode: ${e.localizedMessage ?: "Periksa koneksi backend."}"))
+        }
+    }
+
+    suspend fun confirmEmailVerification(code: String): Result<Unit> = withContext(Dispatchers.IO) {
+        try {
+            val response = loginApi.confirmEmailVerification(mapOf("code" to code))
+            if (response.isSuccessful) Result.success(Unit)
+            else Result.failure(Exception(when (response.code()) {
+                400 -> "Kode salah atau kedaluwarsa. Periksa kode dan coba lagi."
+                401 -> "Sesi berakhir. Masuk kembali."
+                429 -> "Terlalu banyak percobaan. Minta kode baru nanti."
+                else -> "Verifikasi gagal (HTTP ${response.code()})."
+            }))
+        } catch (e: Exception) {
+            Result.failure(Exception("Tidak dapat memverifikasi kode: ${e.localizedMessage ?: "Periksa koneksi backend."}"))
+        }
+    }
+
     fun logout() {
         sessionManager?.clearSession()
     }

@@ -32,12 +32,16 @@ object AutoApplyTargetPolicy {
             }
             aliases.any { role.contains(it) }
         }
+        // KIRIM_LAMARAN_FIX_V1: avoid crossing distinct region choices.
+        val inTangsel = listOf("tangerang selatan", "tangsel", "bsd", "serpong", "pamulang", "ciputat")
+            .any { token -> city.contains(token) }
+        val inCikarang = city.contains("cikarang")
         val regionMatches = selectedRegions.any { selected ->
             when (selected) {
-                "Tangerang Selatan" -> city.contains("tangerang selatan") || city.contains("tangsel") || city.contains("bsd") || city.contains("serpong")
-                "Tangerang" -> city.contains("tangerang") || city.contains("karawaci") || city.contains("cikupa")
-                "Cikarang" -> city.contains("cikarang")
-                "Bekasi" -> city.contains("bekasi") || city.contains("cikarang")
+                "Tangerang Selatan" -> inTangsel
+                "Tangerang" -> !inTangsel && listOf("tangerang", "karawaci", "cikupa", "balaraja").any { token -> city.contains(token) }
+                "Cikarang" -> inCikarang
+                "Bekasi" -> city.contains("bekasi") || inCikarang
                 else -> city.contains(selected.lowercase())
             }
         }
