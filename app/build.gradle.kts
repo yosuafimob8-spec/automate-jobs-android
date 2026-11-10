@@ -74,6 +74,8 @@ android {
         }
         create("termux") {
             initWith(getByName("debug"))
+            // CI restores the same fixed keystore before this build.
+            signingConfig = signingConfigs.getByName("debug")
             isDebuggable = true
             matchingFallbacks += listOf("debug")
             buildConfigField("String", "BASE_URL", "\"http://127.0.0.1:8787/\"")

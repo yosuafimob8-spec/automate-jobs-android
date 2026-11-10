@@ -17,6 +17,28 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+      - name: Verify permanent Google Login integration
+        run: python3 scripts/verify_google_login_contract.py
+      - name: Restore stable Google Login signing certificate
+        env:
+          KARIRMATE_DEBUG_KEYSTORE_BASE64: ${{ secrets.KARIRMATE_DEBUG_KEYSTORE_BASE64 }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$KARIRMATE_DEBUG_KEYSTORE_BASE64" ]; then
+            echo "::error::Missing secret KARIRMATE_DEBUG_KEYSTORE_BASE64. Stop: ephemeral runner signing would change the OAuth SHA-1."
+            exit 1
+          fi
+          mkdir -p "$HOME/.android"
+          printf '%s' "$KARIRMATE_DEBUG_KEYSTORE_BASE64" | base64 --decode > "$HOME/.android/debug.keystore"
+          chmod 600 "$HOME/.android/debug.keystore"
+          keytool -list -keystore "$HOME/.android/debug.keystore" -storepass android -alias androiddebugkey >/dev/null
+          key_sha1=$(keytool -list -v -keystore "$HOME/.android/debug.keystore" -storepass android -alias androiddebugkey | sed -n 's/^[[:space:]]*SHA1:[[:space:]]*//p' | head -1 | tr -d ':[:space:]' | tr '[:lower:]' '[:upper:]')
+          if [ "$key_sha1" != "D263B4E01CB34E203F3B2EA1779D033720A33F2A" ]; then
+            echo "::error::KarirMate signing certificate changed; refusing build."
+            exit 1
+          fi
+          echo 'Stable debug signing key restored. Register its SHA-1 and applicationId in Google Cloud Android OAuth client.'
       - name: Generate offline training videos
         run: |
           sudo apt-get update -qq
@@ -62,6 +84,8 @@ jobs:
             echo "::warning::Gradle invocation failed (attempt $attempt/4); retrying after 20 seconds"
             sleep 20
           done
+      - name: Verify built APK Google signing certificate
+        run: python3 scripts/verify_karirmate_apk_signing.py app/build/outputs/apk/termux
       - name: Upload APK
         id: apk_upload
         continue-on-error: true # Use a prerelease asset if Actions artifact quota is full
