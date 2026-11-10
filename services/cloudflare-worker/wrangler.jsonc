@@ -1,0 +1,33 @@
+{
+  "keep_vars": true,
+  "name": "red-king-9c6cautomatesmartbot-auth",
+  "main": "src/worker.js",
+  "workers_dev": true,
+  "preview_urls": false,
+  "compatibility_date": "2026-10-28",
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "redact_query_string": false,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": false,
+      "persist": true,
+      "head_sampling_rate": 1
+    }
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_id": "ca540cfa-b789-47ec-9fe5-6bd6feaf7d2b"
+    }
+  ],
+  "vars": {
+    "KARIRMATE_GOOGLE_CLIENT_ID": "39856526801-srp1fvapkep1k67785qo3slk5ilqfpka.apps.googleusercontent.com"
+  }
+}
