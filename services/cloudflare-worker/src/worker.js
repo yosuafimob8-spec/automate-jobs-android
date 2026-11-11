@@ -471,6 +471,189 @@ async function sendApplication(request, env) {
   }
 }
 
+// KARIRMATE_GMAIL_SEND_V2
+async function sendKarirMateApplication(request, env) {
+  if (!(await authorized(request, env)))
+    return json({ error: "Unauthorized" }, 401);
+  const b = await request.json().catch(() => ({}));
+  const uid = karirMateAccountId(b.account_id);
+  const to = String(b.to || "")
+    .trim()
+    .toLowerCase();
+  const key = String(b.job_key || "");
+  if (
+    !uid ||
+    !looksLikeEmail(to) ||
+    !/^[a-f0-9]{64}$/.test(key)
+  ) {
+    return json({ error: "invalid_request" }, 400);
+  }
+  const domain = to.split("@")[1];
+  if (
+    BLOCKED_MAIL_DOMAINS.some((d) => domain === d || domain.endsWith("." + d))
+  ) {
+    return json({ error: "portal_email_blocked" }, 400);
+  }
+  let person, position, company;
+  try {
+    person = safeHeaderText(b.applicant_name, 100);
+    position = safeHeaderText(b.job_title, 130);
+    company = safeHeaderText(b.company, 100);
+  } catch {
+    return json({ error: "invalid_message_fields" }, 400);
+  }
+  if (
+    typeof b.pdf_base64 !== "string" ||
+    b.pdf_base64.length > 3_000_000 ||
+    !/^[A-Za-z0-9+/]+={0,2}$/.test(b.pdf_base64)
+  )
+    return json({ error: "invalid_pdf_data" }, 400);
+  let pdf;
+  try {
+    pdf = atob(b.pdf_base64);
+  } catch {
+    return json({ error: "invalid_pdf_encoding" }, 400);
+  }
+  if (!pdf.startsWith("%PDF-")) return json({ error: "invalid_pdf" }, 400);
+  const connection = await env.DB.prepare(
+    "SELECT encrypted_refresh_token FROM km_gmail_connections WHERE account_id=?"
+  )
+    .bind(uid)
+    .first();
+  if (!connection) return json({ error: "gmail_not_connected" }, 404);
+  await env.DB.prepare(
+    `CREATE TABLE IF NOT EXISTS km_application_sends (
+     account_id TEXT NOT NULL, job_key TEXT NOT NULL,
+     recipient TEXT NOT NULL, state TEXT NOT NULL,
+     gmail_message_id TEXT, reserved_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+     PRIMARY KEY(account_id,job_key)
+  )`
+  ).run();
+  // Reserve BEFORE external Gmail call. Ambiguous errors stay reserved; never auto-resend.
+  const reservation = await env.DB.prepare(
+    "INSERT OR IGNORE INTO km_application_sends (account_id,job_key,recipient,state) VALUES (?,?,?,?)"
+  )
+    .bind(uid, key, to, "reserved")
+    .run();
+  if (reservation.meta.changes !== 1) {
+    const existing = await env.DB.prepare(
+      "SELECT state,gmail_message_id FROM km_application_sends WHERE account_id=? AND job_key=?"
+    )
+      .bind(uid, key)
+      .first();
+    return json(
+      {
+        error: "already_reserved",
+        state: existing?.state || "unknown",
+        message_id: existing?.gmail_message_id || null,
+      },
+      409
+    );
+  }
+  // No further automatic retry after reserving, including refresh errors.
+  try {
+    const refreshToken = await decryptGmailToken(
+      connection.encrypted_refresh_token,
+      env
+    );
+    const refreshed = await fetch("https://oauth2.googleapis.com/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        client_id: env.KARIRMATE_GOOGLE_CLIENT_ID,
+        client_secret: env.KARIRMATE_GOOGLE_CLIENT_SECRET,
+        refresh_token: refreshToken,
+        grant_type: "refresh_token",
+      }),
+    });
+    if (!refreshed.ok) throw new Error("gmail_refresh_failed");
+    const { access_token } = await refreshed.json();
+    const requestedSubject =
+      typeof b.subject === "string" ? b.subject : "";
+    const subjectText = requestedSubject.trim();
+    const safeSubject =
+      subjectText &&
+      subjectText.length <= 180 &&
+      !/[\r\n]/.test(requestedSubject)
+        ? subjectText
+        : `Lamaran Kerja - ${position} - ${person}`;
+
+    const subject = encodedSubject(safeSubject);
+
+    const requestedBody =
+      typeof b.body === "string" ? b.body.trim() : "";
+
+    const body = (
+      requestedBody && requestedBody.length <= 12000
+        ? requestedBody
+        : [
+            "Yth. Tim Rekrutmen " + company + ",",
+            "",
+            "Dengan hormat,",
+            "",
+            `Saya ${person} bermaksud mengajukan lamaran untuk posisi ${position} di ${company}.`,
+            "Bersama email ini saya lampirkan CV untuk bahan pertimbangan.",
+            "",
+            "Terima kasih atas waktu dan perhatian Bapak/Ibu.",
+            "",
+            "Hormat saya,",
+            person,
+          ].join("\r\n")
+    ).replace(/\r\n|\r|\n/g, "\r\n");
+    const boundary = "cv_" + crypto.randomUUID().replace(/-/g, "");
+    const wrappedPdf = b.pdf_base64.match(/.{1,76}/g).join("\r\n");
+    const message = [
+      `To: ${to}`,
+      `Subject: ${subject}`,
+      "MIME-Version: 1.0",
+      `Content-Type: multipart/mixed; boundary="${boundary}"`,
+      "",
+      `--${boundary}`,
+      "Content-Type: text/plain; charset=UTF-8",
+      "Content-Transfer-Encoding: base64",
+      "",
+      btoa(String.fromCharCode(...new TextEncoder().encode(body))),
+      "",
+      `--${boundary}`,
+      'Content-Type: application/pdf; name="CV.pdf"',
+      'Content-Disposition: attachment; filename="CV.pdf"',
+      "Content-Transfer-Encoding: base64",
+      "",
+      wrappedPdf,
+      "",
+      `--${boundary}--`,
+      "",
+    ].join("\r\n");
+    const res = await fetch(
+      "https://gmail.googleapis.com/gmail/v1/users/me/messages/send",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${access_token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ raw: encodeMail(message) }),
+      }
+    );
+    if (!res.ok) throw new Error("gmail_http_" + res.status);
+    const result = await res.json();
+    await env.DB.prepare(
+      "UPDATE km_application_sends SET state=?,gmail_message_id=? WHERE account_id=? AND job_key=?"
+    )
+      .bind("sent", result.id, uid, key)
+      .run();
+    return json({ success: true, message_id: result.id }, 200);
+  } catch (err) {
+    console.error("Application send state uncertain:", err.name);
+    await env.DB.prepare(
+      "UPDATE km_application_sends SET state=? WHERE account_id=? AND job_key=?"
+    )
+      .bind("uncertain", uid, key)
+      .run();
+    return json({ error: "send_uncertain_check_gmail_before_retry" }, 502);
+  }
+}
+
 // KarirMate identity is account_id from an authenticated Termux backend session.
 // Separate tables deliberately preserve legacy Telegram OAuth and Gmail tokens.
 function karirMateAccountId(value) {
@@ -789,6 +972,9 @@ export default {
         const result = await sendGmailPdfTest(env, uid, body.pdf_base64);
         const { status, ...response } = result;
         return json(response, status);
+      }
+      if (path === "/api/karirmate/gmail/send-application" && request.method === "POST") {
+        return sendKarirMateApplication(request, env);
       }
       if (path === "/api/gmail/send-application" && request.method === "POST") {
         return sendApplication(request, env);

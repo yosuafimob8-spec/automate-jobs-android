@@ -163,15 +163,10 @@ class API(BaseHTTPRequestHandler):
                 return self.respond(200,{"success":True,"selection":km_auto_choose(db,int(row[0]))})
         path = urlsplit(self.path).path
         if path == "/karirmate/report":
-            account_id = self.authenticated_account()
-            if account_id is None:
-                return self.respond(401, {"error": "Unauthorized"})
-            with sqlite3.connect(DB) as db:
-                row = db.execute("SELECT telegram_user_id FROM android_accounts WHERE id=?", (account_id,)).fetchone()
-                if not row or row[0] is None:
-                    return self.respond(409, {"error": "Akun belum terhubung"})
-                from phase511_controls import state
-                return self.respond(200, {"success": True, "selection": km_auto_choose(db, int(row[0])), "auto_apply": state(int(row[0])), "sending_active": False})
+            # KM_REPORT_ACCOUNT_SCOPE_V44
+            from auto_apply_api import handle as auto_apply_handle
+            auto_apply_handle(self, path, "GET")
+            return
         if path == "/auto-apply/status":
             # Delegate to account-scoped Auto Apply handler; no Telegram requirement for status.
             from auto_apply_api import handle as auto_apply_handle

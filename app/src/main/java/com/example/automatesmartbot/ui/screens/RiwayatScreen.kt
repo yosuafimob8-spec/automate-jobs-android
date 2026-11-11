@@ -229,6 +229,8 @@ fun RiwayatScreen(onReload: (() -> Unit)? = null) {
                             val deliveryLabel = when {
                                 verifiedSent -> "Terkirim via Gmail (terkonfirmasi)"
                                 status == "sent" -> "Menunggu konfirmasi Gmail"
+                                status == "ready" -> "Menunggu pengiriman"
+                                status == "sending" -> "Sedang diproses"
                                 status == "uncertain" || status == "unknown" -> "Status belum pasti; periksa akun Gmail"
                                 else -> "Status server: ${status ?: "belum dilaporkan"}"
                             }
@@ -238,6 +240,14 @@ fun RiwayatScreen(onReload: (() -> Unit)? = null) {
                                     Text(label, color = ink, fontWeight = FontWeight.Bold)
                                     job?.let { Text(it, color = muted, fontSize = 12.sp) }
                                     Text(deliveryLabel, color = muted, fontSize = 12.sp)
+                                                                    val sentAt = entry.optString("sent_at")
+                                                                    if (verifiedSent && sentAt.isNotBlank()) {
+                                                                        Text(
+                                                                            "Terkirim: ${sentAt.take(16).replace('T', ' ')} (waktu server)",
+                                                                            color = muted,
+                                                                            fontSize = 11.sp
+                                                                        )
+                                                                    }
                                 }
                             }
                         }
