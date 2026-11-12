@@ -138,6 +138,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
     var agreed by remember { mutableStateOf(false) }
     var enabled by remember { mutableStateOf(false) }
     var operatorSendAllowed by remember { mutableStateOf(false) }
+    // KM_AUTOAPPLY_CONSENT_V72
     // KIRIM_LAMARAN_FIX_V1: readiness is reported by the authenticated backend.
     var emailVerified by remember { mutableStateOf(false) }
     var scheduleStatus by remember { mutableStateOf("") }
@@ -525,7 +526,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                 )
                                 Text(
                                     if (!statusLoaded) "Status belum dimuat"
-                                    else "Gmail: ${if (gmailConnected) "Terhubung" else "Belum terhubung"} • Status: ${if (enabled) "Aktif" else "Jeda"}",
+                                    else "Gmail: ${if (gmailConnected) "Terhubung" else "Belum terhubung"} • Pengaturan: ${if (enabled) "Aktif" else "Jeda"}",
                                     fontSize = 12.5.sp,
                                     fontWeight = FontWeight.SemiBold,
                                     color = com.example.automatesmartbot.ui.theme.ScreenText
@@ -698,7 +699,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                             color = Color(0xFFD97706), fontSize = 11.5.sp)
                     }
                     if (!operatorSendAllowed) {
-                        Text("• Sistem pengiriman server belum siap. Izin Auto Apply tidak dapat diaktifkan; tidak ada email dikirim.",
+                        Text("• Sistem pengiriman server belum siap. Izin dapat disimpan, tetapi email belum dapat dikirim.",
                             color = Color(0xFFD97706), fontSize = 11.5.sp)
                     }
 
@@ -723,7 +724,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                     if (enabled) {
                                         accountId?.let { prefs.edit().putBoolean(it, true).apply() }
                                         consentSaved = true
-                                        message = "Izin Auto Apply tersimpan. Pengiriman mengikuti konfigurasi operator."
+                                        message = if (operatorSendAllowed) "Izin tersimpan. Pengiriman mengikuti jadwal server." else "Izin tersimpan. Email belum dikirim karena pengiriman server belum aktif."
                                     } else message = "Server belum mengaktifkan Auto Apply."
                                 } catch (e: CancellationException) {
                                     throw e
@@ -735,14 +736,14 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                             }
                         },
                         enabled = statusLoaded && gmailConnected && cvUploaded && isPro && emailVerified &&
-                            operatorSendAllowed && isOnline && !busy && !enabled &&
+                            isOnline && !busy && !enabled &&
                             targetsConfirmed && selectedPositions.isNotEmpty() && selectedRegions.isNotEmpty() &&
                             (agreed || consentSaved),
                         modifier = Modifier.fillMaxWidth(),
                         shape = RoundedCornerShape(12.dp),
                         colors = ButtonDefaults.buttonColors(containerColor = KarirOrange)
                     ) {
-                        Text(if (enabled) "Auto Apply Aktif" else "Aktifkan Auto Apply", fontWeight = FontWeight.Bold)
+                        Text(when { enabled && operatorSendAllowed -> "Auto Apply Aktif"; enabled -> "Izin Auto Apply Tersimpan"; !operatorSendAllowed -> "Simpan Izin Auto Apply"; else -> "Aktifkan Auto Apply" }, fontWeight = FontWeight.Bold)
                     }
 
                     OutlinedButton(

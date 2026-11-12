@@ -1,1 +1,1 @@
-KarirMate V64-V71 integration build request: 2026-11-12 14:29:45 WIB
+KarirMate V72 Auto Apply consent UI fix: 2026-11-12 18:10:23 WIB
