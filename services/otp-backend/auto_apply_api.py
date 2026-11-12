@@ -9,7 +9,7 @@ import gmail_oauth_client
 import phase5_config
 import phase511_controls
 
-ROUTES={'/auto-apply/status','/auto-apply/enable','/auto-apply/pause','/gmail/oauth/start','/cv','/cv/status','/karirmate/report','/karirmate/candidates','/karirmate/selection'}
+ROUTES={'/auto-apply/status','/auto-apply/preferences','/auto-apply/enable','/auto-apply/pause','/gmail/oauth/start','/cv','/cv/status','/karirmate/report','/karirmate/candidates','/karirmate/selection'}
 
 class RequestError(Exception):
     def __init__(self,status,message): self.status,self.message=status,message
@@ -113,6 +113,46 @@ def handle(handler,path,method):
                 data['action_required']='auto_apply_integration_pending'
                 data['message']='Gmail dapat ditautkan langsung; pengiriman otomatis tetap nonaktif.'
             data['operator_send_allowed']=False
+            # Read preference used by the real sender; never infer it from local UI.
+            if uid is not None:
+                with sqlite3.connect(DB,timeout=30) as db:
+                    pref=db.execute('SELECT desired_positions,preferred_locations FROM android_profiles WHERE account_id=?',(account_id,)).fetchone()
+                if pref and isinstance(data.get('auto_apply'),dict):
+                    try:
+                        roles=json.loads(pref[0] or '[]')
+                        places=json.loads(pref[1] or '[]')
+                    except (ValueError,TypeError):
+                        roles,places=[],[]
+                    data['auto_apply'].update(positions=roles,locations=places,
+                        preferences_enforced=bool(roles and places))
+
+        # KM_PREFERENCES_V56: authenticated, account-scoped, never sends email.
+        elif method=='POST' and path=='/auto-apply/preferences':
+            request=_body(handler)
+            roles=request.get('positions')
+            locations=request.get('locations')
+            if not isinstance(roles,list) or not isinstance(locations,list):
+                raise RequestError(400,'Posisi dan wilayah wajib berupa daftar.')
+            def safe_choices(values, maximum):
+                if not 1<=len(values)<=maximum or any(not isinstance(x,str) or not 1<=len(x.strip())<=80 for x in values):
+                    raise RequestError(400,'Pilihan posisi atau wilayah tidak valid.')
+                result=list(dict.fromkeys(x.strip() for x in values))
+                if not result: raise RequestError(400,'Pilihan tidak boleh kosong.')
+                return result
+            roles=safe_choices(roles,20)
+            locations=safe_choices(locations,30)
+            import phase57_queue
+            phase57_queue.initialize()
+            with sqlite3.connect(DB,timeout=30) as db:
+                db.execute('BEGIN IMMEDIATE')
+                running=db.execute('SELECT enabled FROM phase57_settings WHERE user_id=?',(uid,)).fetchone()
+                if running and running[0]:
+                    raise RequestError(409,'Jeda Auto Apply sebelum mengubah target.')
+                changed=db.execute('UPDATE android_profiles SET desired_positions=?,preferred_locations=? WHERE account_id=?',
+                    (json.dumps(roles,ensure_ascii=False),json.dumps(locations,ensure_ascii=False),account_id))
+                if changed.rowcount!=1:
+                    raise RequestError(409,'Lengkapi profil sebelum memilih target.')
+            data={'success':True,'positions':roles,'locations':locations,'applied_to_delivery':True}
         elif method=='POST' and path=='/gmail/oauth/start':
             _body(handler)
             data={'success':True,'url':gmail_oauth_client.begin(uid)}

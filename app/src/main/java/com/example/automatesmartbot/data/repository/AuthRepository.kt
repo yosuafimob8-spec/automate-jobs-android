@@ -130,7 +130,7 @@ class AuthRepository(
             else Result.failure(Exception(when (response.code()) {
                 401 -> "Sesi berakhir. Masuk kembali."
                 429 -> "Terlalu sering meminta kode. Tunggu sebelum mencoba lagi."
-                503 -> "Layanan email verifikasi belum tersedia di server."
+                503 -> "Server OTP belum dapat mengirim email. Administrator perlu memeriksa konfigurasi SMTP."
                 else -> "Gagal mengirim kode verifikasi (HTTP ${response.code()})."
             }))
         } catch (e: Exception) {

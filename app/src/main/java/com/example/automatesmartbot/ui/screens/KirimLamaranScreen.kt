@@ -177,6 +177,17 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         backendActionRequired = body.optString("action_required", "").takeUnless { it == "null" }.orEmpty()
         backendNote = body.optString("message", "").takeUnless { it == "null" }.orEmpty()
         val a = body.optJSONObject("auto_apply")
+        // KM_PREF_UI_V56: display saved server preferences if this account has no local selection.
+        if (selectedPositions.isEmpty() && selectedRegions.isEmpty()) {
+            val serverRoles = a?.optJSONArray("positions")
+            val serverPlaces = a?.optJSONArray("locations")
+            if (serverRoles != null && serverPlaces != null) {
+                selectedPositions = (0 until serverRoles.length())
+                    .map { serverRoles.optString(it) }.filter { it.isNotBlank() }.toSet()
+                selectedRegions = (0 until serverPlaces.length())
+                    .map { serverPlaces.optString(it) }.filter { it.isNotBlank() }.toSet()
+            }
+        }
         targetsConfirmed = targetEchoMatches(a, selectedPositions, selectedRegions, "preferences_enforced")
         consentSaved = AutoApplyConfirmation.consentState(
             a?.opt("consent_granted") as? Boolean,
@@ -356,7 +367,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         label = "Posisi Pekerjaan",
                         items = AutoApplyTargetPolicy.positions,
                         selected = selectedPositions,
-                        enabled = accountId != null && !busy && !enabled,
+                        enabled = !enabled,
                         onChange = { new ->
                             selectedPositions = new
                             targetsConfirmed = false
@@ -367,7 +378,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         label = "Wilayah Tujuan",
                         items = AutoApplyTargetPolicy.regions,
                         selected = selectedRegions,
-                        enabled = accountId != null && !busy && !enabled,
+                        enabled = !enabled,
                         onChange = { new ->
                             selectedRegions = new
                             targetsConfirmed = false
@@ -581,7 +592,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
 
                     Text("CV yang didukung: PDF maksimal 2,2 MB. Unggah kembali jika CV berubah.",
                         fontSize = 11.sp, color = com.example.automatesmartbot.ui.theme.ScreenMuted)
-                    if (!gmailConnected) {
+                    run {
                         Button(
                             onClick = {
                                 scope.launch {
@@ -612,7 +623,7 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         ) {
                             Icon(Icons.Default.Email, contentDescription = null, modifier = Modifier.size(16.dp))
                             Spacer(modifier = Modifier.width(6.dp))
-                            Text("Hubungkan Akun Gmail", fontWeight = FontWeight.Bold)
+                            Text(if (gmailConnected) "Hubungkan Ulang Gmail" else "Hubungkan Akun Gmail", fontWeight = FontWeight.Bold)
                         }
                     }
                 }

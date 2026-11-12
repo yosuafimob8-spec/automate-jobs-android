@@ -31,12 +31,14 @@ fun EmailOtpGate(
     var sending by remember(email) { mutableStateOf(false) }
     var confirming by remember(email) { mutableStateOf(false) }
     var sent by remember(email) { mutableStateOf(false) }
+    var automaticRequestStarted by rememberSaveable(email) { mutableStateOf(false) }
     var message by remember(email) { mutableStateOf("") }
     var error by remember(email) { mutableStateOf("") }
 
     // Auto-request exactly once when entering this gate (resend is manual and rate-limited).
     LaunchedEffect(state, email) {
-        if (state == "unverified") {
+        if (state == "unverified" && !automaticRequestStarted) {
+            automaticRequestStarted = true
             sending = true
             error = ""
             val result = repository.requestEmailVerification()

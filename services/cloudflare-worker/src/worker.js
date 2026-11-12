@@ -635,7 +635,21 @@ async function sendKarirMateApplication(request, env) {
         body: JSON.stringify({ raw: encodeMail(message) }),
       }
     );
-    if (!res.ok) throw new Error("gmail_http_" + res.status);
+    if (!res.ok) {
+      const googleResponse = await res.json().catch(() => ({}));
+      const googleError = googleResponse.error || {};
+
+      console.error("Gmail API rejection:", {
+        httpStatus: res.status,
+        googleStatus: googleError.status || null,
+        reason:
+          googleError.errors?.[0]?.reason ||
+          googleError.details?.[0]?.reason ||
+          null,
+      });
+
+      throw new Error("gmail_http_" + res.status);
+    }
     const result = await res.json();
     await env.DB.prepare(
       "UPDATE km_application_sends SET state=?,gmail_message_id=? WHERE account_id=? AND job_key=?"

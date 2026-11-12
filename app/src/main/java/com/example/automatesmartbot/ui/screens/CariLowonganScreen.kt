@@ -251,7 +251,9 @@ fun CariLowonganScreen(
                                                 .background(Color(0xFF16A34A), shape = RoundedCornerShape(4.dp))
                                         )
                                         Text(
-                                            "Lowongan Aktif Terverifikasi",
+                                            if (liveJobs.all { it.vacancyVerified == true })
+                                            "Lowongan Aktif Terverifikasi"
+                                        else "Lowongan dari sumber eksternal (cek detail lowongan)",
                                             color = KarirOrangeDeep,
                                             fontWeight = FontWeight.Bold,
                                             fontSize = 13.sp

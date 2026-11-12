@@ -77,31 +77,49 @@ def google_login(token):
             """, (email,)).fetchone()
 
             if existing:
-                return 409, {
-                    "error": "Email sudah terdaftar. "
-                             "Silakan masuk menggunakan password."
-                }
+                # KARIRMATE_GOOGLE_LINK_V71
+                account_id = int(existing[0])
+                verified = db.execute(
+                    "SELECT COALESCE(email_verified, 0) FROM android_accounts WHERE id=?",
+                    (account_id,)
+                ).fetchone()
 
-            from android_auth import password_hash
+                if not verified or int(verified[0]) != 1:
+                    return 409, {"error": "Verifikasi email akun terlebih dahulu."}
 
-            now = int(time.time())
-            unusable_password = password_hash(
-                secrets.token_urlsafe(48)
-            )
+                linked = db.execute(
+                    "SELECT google_sub FROM android_google_identities WHERE account_id=?",
+                    (account_id,)
+                ).fetchone()
 
-            cur = db.execute("""
-                INSERT INTO android_accounts
-                (email, password_hash, email_verified, created_at)
-                VALUES (?, ?, 1, ?)
-            """, (email, unusable_password, now))
+                if linked:
+                    return 409, {"error": "Akun sudah tertaut ke identitas Google lain."}
 
-            account_id = cur.lastrowid
+                db.execute(
+                    "INSERT INTO android_google_identities (google_sub, account_id, created_at) VALUES (?, ?, ?)",
+                    (subject, account_id, int(time.time()))
+                )
+            else:
+                from android_auth import password_hash
 
-            db.execute("""
-                INSERT INTO android_google_identities
-                (google_sub, account_id, created_at)
-                VALUES (?, ?, ?)
-            """, (subject, account_id, now))
+                now = int(time.time())
+                unusable_password = password_hash(
+                    secrets.token_urlsafe(48)
+                )
+
+                cur = db.execute("""
+                    INSERT INTO android_accounts
+                    (email, password_hash, email_verified, created_at)
+                    VALUES (?, ?, 1, ?)
+                """, (email, unusable_password, now))
+
+                account_id = cur.lastrowid
+
+                db.execute("""
+                    INSERT INTO android_google_identities
+                    (google_sub, account_id, created_at)
+                    VALUES (?, ?, ?)
+                """, (subject, account_id, now))
 
         access_token = secrets.token_urlsafe(32)
         expires = int(time.time()) + 86400

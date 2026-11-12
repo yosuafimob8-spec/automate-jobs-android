@@ -342,3 +342,97 @@ def canonical_url(url):
         return url.strip(), "Ashby"
 
     return original_url, source
+
+
+# KARIRMATE_ROLE_MATCH_V65
+# Safety guard for known permissive legacy role matching.
+# This gate only rejects unsuitable titles; it never turns a failed legacy
+# match into an accepted vacancy.
+import re as _km65_re
+_km65_previous_position_tier = position_tier
+
+def position_tier(title, position):
+    name = str(title or '').casefold().strip()
+    requested = str(position or '').casefold().strip()
+    if not name or not requested:
+        return 0
+
+    # Data-warehouse/technology roles are not physical warehouse roles.
+    if _km65_re.search(
+        r'\b(data\s+warehouse|software|developer|programmer|'
+        r'data\s+engineer|data\s+scientist|machine\s+learning|'
+        r'warehouse\s+(?:engineer|architect|analyst)|'
+        r'it\s+engineer|system\s+engineer)\b', name
+    ):
+        return 0
+
+    # Do not silently cross seniority or select unrelated commercial roles.
+    if _km65_re.search(r'\b(intern|internship|magang|manager|director|direktur|chief|head\s+of)\b', name):
+        return 0
+    is_supervisor_title = bool(_km65_re.search(
+        r'\b(supervisor|supervisi|spv|coordinator|koordinator|team\s+lead|team\s+leader)\b', name
+    ))
+    wants_supervisor = requested.startswith('supervisor')
+    if is_supervisor_title != wants_supervisor:
+        return 0
+
+    warehouse = bool(_km65_re.search(
+        r'\b(warehouse|gudang|pergudangan|inventory|inventori|stock|stok|stockroom|fulfilment|fulfillment)\b', name
+    ))
+    logistics = bool(_km65_re.search(
+        r'\b(logistic|logistics|logistik|supply\s+chain|distribusi|distribution|'
+        r'freight|transportasi|transportation|shipping|ekspedisi)\b', name
+    ))
+    operations = bool(_km65_re.search(
+        r'\b(operational|operations|operation|operasional|operasi)\b', name
+    ))
+    if 'warehouse' in requested:
+        if not warehouse:
+            return 0
+    elif 'logistic' in requested or 'logistik' in requested:
+        if not logistics:
+            return 0
+    elif 'operational' in requested or 'operasional' in requested:
+        if not operations:
+            return 0
+    else:
+        return 0
+
+    return _km65_previous_position_tier(title, position)
+
+
+# KARIRMATE_ROLE_SENIORITY_V67
+# Do not report management/head-of-department vacancies as admin or staff jobs.
+# This sits on top of the existing V65 match guard; rejects only.
+import re as _km67_re
+_km67_previous_position_tier = position_tier
+
+def position_tier(title, position):
+    name = _km67_re.sub(r'\s+', ' ', str(title or '').casefold()).strip()
+    requested = str(position or '').casefold().strip()
+    if not name or not requested:
+        return 0
+
+    # "Head Office" describes a location rather than the job holder's level.
+    level_text = _km67_re.sub(r'\bhead[\s-]+office\b', ' ', name)
+
+    # Position families supported by the KarirMate UI only extend to supervisor.
+    # A Warehouse Head, Kepala Gudang or Manager is NOT an Admin Warehouse job.
+    if _km67_re.search(
+        r'\b(?:head|kepala|manager|manajer|chief|director|direktur|'
+        r'vice[\s-]+president|president|pimpinan|general[\s-]+manager)\b',
+        level_text,
+    ):
+        return 0
+
+    # Lead/coordinator/foreman roles are not staff/admin positions.
+    # Supervisor searches continue to rely on the existing V65 seniority logic.
+    wants_supervisor = requested.startswith('supervisor')
+    if not wants_supervisor and _km67_re.search(
+        r'\b(?:lead|leader|foreman|supervisor|spv|supervisi|'
+        r'coordinator|koordinator)\b',
+        level_text,
+    ):
+        return 0
+
+    return _km67_previous_position_tier(title, position)
