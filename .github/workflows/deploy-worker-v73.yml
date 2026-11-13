@@ -33,10 +33,27 @@ jobs:
         with:
           version: 10
 
+      - name: Validate Cloudflare secret format
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          python3 - <<'CHECK'
+          import os, re, sys
+          token = os.getenv("CF_TOKEN", "")
+          account = os.getenv("CF_ACCOUNT", "")
+          if not token or any(c.isspace() for c in token):
+              sys.exit("FAIL: Format API Token tidak valid")
+          if not re.fullmatch(r"[0-9a-fA-F]{32}", account):
+              sys.exit("FAIL: Format Account ID tidak valid")
+          print("PASS: Format Cloudflare Secrets")
+          CHECK
+
       - name: Deploy to Cloudflare
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          wranglerVersion: "4.161.0"
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: services/cloudflare-worker
           command: deploy --config wrangler.jsonc
