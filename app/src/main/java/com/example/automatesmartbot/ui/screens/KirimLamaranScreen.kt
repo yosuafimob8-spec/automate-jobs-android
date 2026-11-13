@@ -167,8 +167,21 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         val response = ApiClient.apiService.getAutoApplyStatus()
         if (!response.isSuccessful) {
             if (response.code() in listOf(401, 403)) gmailConnected = false
-            response.errorBody()?.close()
-            error("Status Auto Apply gagal (${response.code()}). Periksa sesi dan otorisasi Gmail.")
+            // KM_GMAIL_STATUS_DRAFT_MERGE_V74: show actionable status without ever sending mail.
+            val httpStatus = response.code()
+            val detail = response.errorBody()?.use { body ->
+                runCatching {
+                    val json = JSONObject(body.string())
+                    json.optString("error").ifBlank { json.optString("message") }
+                }.getOrNull()
+            }?.trim()?.take(160)?.takeIf { it.isNotBlank() }
+            val guidance = when (httpStatus) {
+                401 -> "Sesi login tidak valid. Masuk kembali ke KarirMate."
+                403 -> "Akses akun dibatasi. Periksa status akun dan langganan."
+                409 -> "Konfigurasi akun atau Gmail ditolak backend."
+                else -> "Periksa backend dan coba lagi."
+            }
+            error("Status Auto Apply gagal (HTTP $httpStatus): ${detail ?: guidance}")
         }
         val body = JSONObject(response.body()?.use { it.string() } ?: error("Status kosong."))
         require(body.has("gmail_connected") && body.has("auto_apply")) { "Status Auto Apply dari server belum lengkap." }
@@ -433,38 +446,53 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         }
                     }
                     Button(
-                        enabled = isOnline && statusLoaded && !busy && !enabled && accountId != null &&
+                        // Pilihan boleh disimpan sebagai draf di HP walau backend offline.
+                        // Tombol ini TIDAK mengaktifkan pengiriman otomatis.
+                        enabled = !busy && !enabled && accountId != null &&
                             selectedPositions.isNotEmpty() && selectedRegions.isNotEmpty(),
                         onClick = {
                             scope.launch {
                                 busy = true
                                 try {
-                                    val response = ApiClient.apiService.saveAutoApplyPreferences(
-                                        AutoApplyTargetRequest(selectedPositions.sorted(), selectedRegions.sorted())
-                                    )
-                                    if (!response.isSuccessful) {
-                                        response.errorBody()?.close()
-                                        error("Backend belum mendukung penyimpanan target lamaran (HTTP ${response.code()}). Pengiriman tidak diaktifkan.")
+                                    // Simpan draf akun ini secara lokal; bukan bukti backend menerima target.
+                                    val id = accountId ?: error("Akun belum dimuat. Masuk kembali.")
+                                    targetPrefs.edit()
+                                        .putStringSet("positions_$id", selectedPositions.toSet())
+                                        .putStringSet("regions_$id", selectedRegions.toSet())
+                                        .apply()
+                                    targetsDirty = true
+                                    targetsConfirmed = false
+                                    if (!isOnline || !statusLoaded) {
+                                        message = "Posisi dan wilayah tersimpan di HP. Backend belum siap; Auto Apply tetap tidak aktif."
+                                    } else {
+                                        val response = ApiClient.apiService.saveAutoApplyPreferences(
+                                            AutoApplyTargetRequest(selectedPositions.sorted(), selectedRegions.sorted())
+                                        )
+                                        if (!response.isSuccessful) {
+                                            response.errorBody()?.close()
+                                            error("Backend belum mendukung penyimpanan target lamaran (HTTP ${response.code()}). Pengiriman tidak diaktifkan.")
+                                        }
+                                        val saved = JSONObject(response.body()?.use { it.string() } ?: "{}")
+                                        if (!targetEchoMatches(saved, selectedPositions, selectedRegions, "applied_to_delivery")) {
+                                            error("Backend belum mengonfirmasi bahwa target dipakai untuk pengiriman. Pengiriman tidak diaktifkan.")
+                                        }
+                                        targetsDirty = false
+                                        refresh()
+                                        if (!targetsConfirmed) {
+                                            error("Status backend belum mengonfirmasi filter pengiriman. Pengiriman tidak diaktifkan.")
+                                        }
+                                        val listUpdated = reloadCandidates()
+                                        message = if (listUpdated)
+                                            "Target tersimpan. Daftar kandidat sudah diperbarui."
+                                        else
+                                            "Target tersimpan, tetapi kandidat belum termuat. Tekan Muat Ulang."
                                     }
-                                    val saved = JSONObject(response.body()?.use { it.string() } ?: "{}")
-                                    if (!targetEchoMatches(saved, selectedPositions, selectedRegions, "applied_to_delivery")) {
-                                        error("Backend belum mengonfirmasi bahwa target dipakai untuk pengiriman. Pengiriman tidak diaktifkan.")
-                                    }
-                                    targetsDirty = false
-                                    refresh()
-                                    if (!targetsConfirmed) {
-                                        error("Status backend belum mengonfirmasi filter pengiriman. Pengiriman tidak diaktifkan.")
-                                    }
-                                    val listUpdated = reloadCandidates()
-                                    message = if (listUpdated)
-                                        "Target tersimpan. Daftar kandidat sudah diperbarui."
-                                    else
-                                        "Target tersimpan, tetapi kandidat belum termuat. Tekan Muat Ulang."
                                 } catch (e: CancellationException) {
                                     throw e
                                 } catch (e: Exception) {
+                                    targetsDirty = true
                                     targetsConfirmed = false
-                                    message = e.message ?: "Gagal menyimpan target."
+                                    message = "Target tersimpan sebagai draf di HP; belum terkonfirmasi backend. ${e.message ?: "Coba lagi."}"
                                 } finally {
                                     busy = false
                                 }
