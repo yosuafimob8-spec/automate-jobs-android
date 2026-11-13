@@ -17,13 +17,60 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y ffmpeg
           python3 scripts/generate_training_videos.py
+      # KARIRMATE_STABLE_SIGNING_V76: fixed signing identity across every canonical GitHub APK build.
+      - name: Restore registered Android signing keystore
+        env:
+          SIGNING_KEYSTORE_B64: ${{ secrets.KARIRMATE_DEBUG_KEYSTORE_B64 }}
+        run: |
+          set -euo pipefail
+          if [ -z "${SIGNING_KEYSTORE_B64:-}" ]; then
+            echo "::error::Missing GitHub Actions secret: KARIRMATE_DEBUG_KEYSTORE_B64"
+            exit 1
+          fi
+          mkdir -p "$HOME/.android"
+          umask 077
+          printf '%s' "$SIGNING_KEYSTORE_B64" | base64 --decode > "$HOME/.android/debug.keystore"
+          unset SIGNING_KEYSTORE_B64
+          actual="$(keytool -list -v -keystore "$HOME/.android/debug.keystore" -storepass android -alias androiddebugkey | sed -n 's/^[[:space:]]*SHA1:[[:space:]]*//p' | head -n 1)"
+          expected="D2:63:B4:E0:1C:B3:4E:20:3F:3B:2E:A1:77:9D:03:37:20:A3:3F:2A"
+          if [ "$actual" != "$expected" ]; then
+            echo "::error::Keystore SHA-1 tidak sama dengan sertifikat signing yang dikunci"
+            exit 1
+          fi
+          echo "PASS: keystore tetap cocok dengan SHA-1 yang dikunci"
       - name: Run Android unit tests and build debug APK
         run: |
           chmod +x gradlew
           ./gradlew :app:testDebugUnitTest :app:assembleTermux --stacktrace
-      - name: Verify APK output before upload
+      - name: Verify APK signature against registered Google OAuth SHA-1
         run: |
-          ls -lh app/build/outputs/apk/termux/*.apk
+          set -euo pipefail
+          shopt -s nullglob
+          apks=(app/build/outputs/apk/termux/*.apk)
+          if [ ${#apks[@]} -eq 0 ]; then
+            echo "::error::Tidak ada APK keluaran build"
+            exit 1
+          fi
+          sdk="${ANDROID_HOME:-${ANDROID_SDK_ROOT:-}}"
+          if [ -z "$sdk" ] || [ ! -d "$sdk/build-tools" ]; then
+            echo "::error::Android build-tools tidak ditemukan"
+            exit 1
+          fi
+          signer="$(find "$sdk/build-tools" -maxdepth 2 -type f -name apksigner | sort -V | tail -n 1)"
+          if [ -z "$signer" ]; then
+            echo "::error::apksigner tidak ditemukan"
+            exit 1
+          fi
+          for apk in "${apks[@]}"; do
+            "$signer" verify "$apk"
+            sha1="$("$signer" verify --print-certs "$apk" | sed -n 's/.*certificate SHA-1 digest: *//p' | head -n 1 | tr '[:lower:]' '[:upper:]')"
+            if [ "$sha1" != "D263B4E01CB34E203F3B2EA1779D033720A33F2A" ]; then
+              echo "::error::Sertifikat APK TIDAK sama dengan SHA-1 yang dikunci"
+              exit 1
+            fi
+            ls -lh "$apk"
+            echo "PASS: APK ditandatangani oleh sertifikat tetap yang benar"
+          done
       - uses: actions/upload-artifact@v4
         with:
           name: Karir-Mate-debug-APK
