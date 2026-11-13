@@ -28,6 +28,11 @@ jobs:
           test -n "$CF_TOKEN" || { echo "Missing API token"; exit 1; }
           test -n "$CF_ACCOUNT" || { echo "Missing account ID"; exit 1; }
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Deploy to Cloudflare
         uses: cloudflare/wrangler-action@v3
         with:
