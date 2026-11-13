@@ -101,12 +101,9 @@ def main(live):
             ], 15)
             continue
 
-        sources = [
-            ("km_disnaker_v39.py", 32),
-            ("km_public_discovery.py", 65),
-            ("km_jobs_v2_bridge.py", 50),
-            ("km_auto_refill.py", 30)
-        ]
+        # KM_REGION_FIRST_V73: legacy sources disabled; catalog lookup runs inside sender.
+        # Existing HR finder is kept available for manual public-company discovery.
+        sources = []
 
         for script, limit in sources:
             file = BASE / script
@@ -124,6 +121,13 @@ def main(live):
 
             run(args, limit)
 
+        # KM_REGION_FIRST_V73: read confirmed delivery failures if authorized.
+        # Failure to read Gmail never generates a retry or marks a recipient bounced.
+        if Path(BASE / 'km_bounce_monitor_v73.py').is_file():
+            import os
+            if os.environ.get('KARIRMATE_BOUNCE_READ_ENABLED') == '1':
+                run([sys.executable, 'km_bounce_monitor_v73.py',
+                     '--account-id', str(account_id), '--apply'], 70)
         # Kuota, PRO, Gmail, CV, consent dan anti-duplikat
         # tetap diperiksa oleh phase512_sender.
         run([

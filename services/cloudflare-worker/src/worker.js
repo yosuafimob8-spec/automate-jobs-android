@@ -1,4 +1,80 @@
 const SCOPE = "https://www.googleapis.com/auth/gmail.send";
+
+// KM_REGION_FIRST_V73: Read only confirmed failed-delivery recipients, no email body leakage.
+const KM_READ_SCOPE = "https://www.googleapis.com/auth/gmail.readonly";
+function kmDecodeBody(data) {
+  if (!data || typeof data !== "string") return "";
+  try {
+    const raw = atob(data.replace(/-/g, "+").replace(/_/g, "/"));
+    return new TextDecoder().decode(Uint8Array.from(raw, c => c.charCodeAt(0)));
+  } catch { return ""; }
+}
+function kmDeliveryBlocks(payload, output) {
+  if (!payload || typeof payload !== "object" || output.length > 50) return;
+  const type = String(payload.mimeType || "").toLowerCase();
+  if (type === "message/delivery-status" || type === "text/plain") {
+    const body = kmDecodeBody(payload.body?.data);
+    if (body) output.push(body.slice(0, 50000));
+  }
+  for (const part of payload.parts || []) kmDeliveryBlocks(part, output);
+}
+async function kmBounceReports(request, env, url) {
+  if (!(await authorized(request, env))) return json({error: "Unauthorized"}, 401);
+  const accountId = karirMateAccountId(url.searchParams.get("account_id"));
+  if (!accountId) return json({error: "Invalid KarirMate account ID"}, 400);
+  const conn = await env.DB.prepare(
+    "SELECT encrypted_refresh_token FROM km_gmail_connections WHERE account_id=?"
+  ).bind(accountId).first();
+  if (!conn) return json({error: "gmail_not_connected"}, 404);
+  const refresh = await decryptGmailToken(conn.encrypted_refresh_token, env);
+  const res = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST", headers: {"Content-Type": "application/x-www-form-urlencoded"},
+    body: new URLSearchParams({
+      client_id: env.KARIRMATE_GOOGLE_CLIENT_ID,
+      client_secret: env.KARIRMATE_GOOGLE_CLIENT_SECRET,
+      refresh_token: refresh, grant_type: "refresh_token"
+    })
+  });
+  if (!res.ok) return json({error: "gmail_refresh_failed"}, 403);
+  const token = (await res.json()).access_token;
+  const headers = {Authorization: "Bearer " + token};
+  const query = "from:(mailer-daemon OR postmaster) newer_than:14d";
+  const list = await fetch("https://gmail.googleapis.com/gmail/v1/users/me/messages?" +
+    new URLSearchParams({q: query, maxResults: "50"}), {headers});
+  if (list.status === 403) return json({error: "gmail_read_scope_required"}, 403);
+  if (!list.ok) return json({error: "gmail_list_failed"}, 502);
+  const refs = (await list.json()).messages || [];
+  const bounces = []; const seen = new Set();
+  for (const ref of refs.slice(0, 50)) {
+    const get = await fetch("https://gmail.googleapis.com/gmail/v1/users/me/messages/" +
+      encodeURIComponent(ref.id) + "?format=full", {headers});
+    if (!get.ok) continue;
+    const msg = await get.json();
+    const headersList = msg.payload?.headers || [];
+    const h = name => String(headersList.find(x => x.name?.toLowerCase() === name)?.value || "");
+    const sender = h("from").toLowerCase();
+    if (!/(mailer-daemon|postmaster)/.test(sender)) continue;
+    const blocks = [];
+    kmDeliveryBlocks(msg.payload, blocks);
+    // Each DSN recipient block must explicitly contain Action: failed.
+    // Do not mark 'delayed' or 'delivered' recipients as bounced.
+    for (const block of blocks) {
+      for (const section of block.split(/\r?\n\s*\r?\n/)) {
+        if (!/(?:^|\n)Action:\s*failed\b/im.test(section)) continue;
+        for (const match of section.matchAll(/(?:^|\n)Final-Recipient:\s*rfc822;\s*([^\s;,<>]+)/gim)) {
+          const recipient = match[1].trim().toLowerCase();
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(recipient)) continue;
+          const key = ref.id + ":" + recipient;
+          if (seen.has(key)) continue;
+          seen.add(key);
+          bounces.push({recipient, bounce_message_id: ref.id, confirmed: true});
+        }
+      }
+    }
+  }
+  return json({success: true, account_id: accountId, bounces: bounces.slice(0, 100)});
+}
+
 const CALLBACK = "/oauth/google/callback";
 function reply(message, status = 200) {
   return new Response(message, {
@@ -714,7 +790,7 @@ async function startKarirMateOAuth(request, env, url, now) {
   google.searchParams.set("client_id", env.KARIRMATE_GOOGLE_CLIENT_ID);
   google.searchParams.set("redirect_uri", url.origin + CALLBACK);
   google.searchParams.set("response_type", "code");
-  google.searchParams.set("scope", SCOPE);
+  google.searchParams.set("scope", SCOPE + " " + KM_READ_SCOPE);
   google.searchParams.set("access_type", "offline");
   google.searchParams.set("prompt", "consent");
   google.searchParams.set("state", state);
@@ -776,7 +852,7 @@ async function completeKarirMateOAuth(stateHash, code, env, url, now) {
   if (
     !String(tokenData.scope || "")
       .split(/\s+/)
-      .includes(SCOPE)
+      .includes(SCOPE) || !String(tokenData.scope || "").split(/\s+/).includes(KM_READ_SCOPE)
   ) {
     return reply("Izin gmail.send tidak diberikan.", 403);
   }
@@ -986,6 +1062,9 @@ export default {
         const result = await sendGmailPdfTest(env, uid, body.pdf_base64);
         const { status, ...response } = result;
         return json(response, status);
+      }
+      if (path === "/api/karirmate/gmail/bounces" && request.method === "GET") {
+        return kmBounceReports(request, env, url);
       }
       if (path === "/api/karirmate/gmail/send-application" && request.method === "POST") {
         return sendKarirMateApplication(request, env);

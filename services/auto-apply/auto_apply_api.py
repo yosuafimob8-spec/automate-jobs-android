@@ -62,34 +62,11 @@ def _status(uid):
             'cv_uploaded':bool(cfg.get('cv_path') and Path(cfg['cv_path']).is_file()),
             'auto_apply':phase511_controls.state(uid)}
 
-def candidates(account_id,uid):
-    """Do not turn scraped emails or contacts without location into verified vacancies."""
-    from candidate_selection import select_for_profile
-    from phase512_sender import extract_cv_text
-    cfg=phase5_config.get(uid)
-    cv_path=Path(cfg.get('cv_path') or '')
-    if not cv_path.is_file(): return [],'Unggah CV terlebih dahulu.'
-    try: cv_text=extract_cv_text(cv_path)
-    except (ValueError,ImportError): return [],'CV belum dapat diekstrak untuk pencocokan.'
-    with sqlite3.connect(DB,timeout=30) as db:
-        db.row_factory=sqlite3.Row
-        profile=db.execute('SELECT desired_positions,preferred_locations FROM android_profiles WHERE account_id=?',(account_id,)).fetchone()
-        if not profile: return [],'Lengkapi posisi dan lokasi pada profil.'
-        positions=json.loads(profile['desired_positions']);locations=json.loads(profile['preferred_locations'])
-        claimed={r[0] for r in db.execute('SELECT email FROM phase57_delivery_claims WHERE user_id=?',(uid,))}
-        rows=[]
-        for table in ('km_stage1_sources','km_companies'):
-            columns={r[1] for r in db.execute(f'PRAGMA table_info({table})')}
-            if not {'company','email','position','user_id'}<=columns: continue
-            for row in db.execute(f'SELECT * FROM {table} WHERE user_id=? LIMIT 500',(uid,)):
-                c=dict(row)
-                if str(c.get('email') or '').strip().lower() in claimed: continue
-                source=c.get('source_url') or c.get('source') or ''
-                verified=c.get('vacancy_verified') in (True,1) and c.get('active') in (True,1)
-                rows.append(dict(c,source_url=source,contact_source=source,kind='vacancy' if verified else 'spontaneous',vacancy_verified=verified,active=verified))
-    import re
-    rows=[r for r in rows if any(word in cv_text for word in re.findall(r'[a-z]{3,}',r['position'].casefold()))]
-    return select_for_profile(rows,positions,locations), 'Kontak tanpa lokasi/posisi/sumber yang sesuai tidak dipilih. Tidak ada lowongan atau alamat email yang dikarang.'
+def candidates(account_id, uid):
+    """KM_REGION_FIRST_V73: region-only, deduplicated spontaneous contacts."""
+    from km_catalog_v73 import candidates as from_catalog
+    with sqlite3.connect(DB, timeout=30) as db:
+        return from_catalog(db, uid, account_id, limit=100)
 
 def handle(handler,path,method):
     if path not in ROUTES: return False
@@ -182,7 +159,7 @@ def handle(handler,path,method):
             if not ok: raise RequestError(409,message)
             items,note=candidates(account_id,uid)
             import phase57_queue
-            for candidate in items: phase57_queue.enqueue(uid,candidate)
+            for candidate in items[:10]: phase57_queue.enqueue(uid,candidate)
             data={'success':True,'message':message,'queue_note':note,'auto_apply':phase511_controls.state(uid)}
         elif method=='POST' and path=='/auto-apply/pause':
             phase511_controls.pause(uid);data={'success':True,'auto_apply':phase511_controls.state(uid)}
@@ -190,7 +167,7 @@ def handle(handler,path,method):
             data={'success':True,'items':phase511_controls.history(uid),'auto_apply':phase511_controls.state(uid)}
         elif method=='GET' and path=='/karirmate/candidates':
             items,note=candidates(account_id,uid);data={'success':True,'items':items,'note':note,'sending_enabled':False}
-        elif method=='GET' and path=='/karirmate/selection': data={'success':True,'selection':{'mode':'cv_and_location','decided_by':'backend','random_fallback':False}}
+        elif method=='GET' and path=='/karirmate/selection': data={'success':True,'selection':{'mode':'location_first_spontaneous','decided_by':'backend','random_fallback':False}}
         else: raise RequestError(405,'Metode tidak didukung untuk endpoint ini.')
         handler.respond(200,data)
     except RequestError as exc: handler.respond(exc.status,{'success':False,'error':exc.message})

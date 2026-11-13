@@ -1,6 +1,6 @@
 package com.example.automatesmartbot.data.autoapply
 
-/** Preview matching only; actual delivery filters must be enforced by the authenticated backend. */
+/** V73: Region-first preview. Position is only a label for an application letter. */
 object AutoApplyTargetPolicy {
     val positions = listOf(
         "Admin Gudang", "Staff Gudang", "Supervisor Gudang",
@@ -10,41 +10,28 @@ object AutoApplyTargetPolicy {
         "Operator Produksi", "Staff Purchasing", "Staff Inventory",
         "Driver", "Sales"
     )
+
     val regions = listOf(
         "Jakarta", "Bogor", "Depok", "Tangerang", "Tangerang Selatan",
-        "Bekasi", "Cikarang", "Karawang"
+        "Bekasi", "Cikarang", "Karawang", "Bandung", "Purwakarta"
     )
 
     fun matchesCandidate(position: String, location: String, selectedPositions: Set<String>, selectedRegions: Set<String>): Boolean {
-        if (position.isBlank() || location.isBlank() || selectedPositions.isEmpty() || selectedRegions.isEmpty()) return false
-        val role = position.lowercase()
+        if (location.isBlank() || selectedPositions.isEmpty() || selectedRegions.isEmpty()) return false
+        // Intentionally ignore position: it only determines the cover letter's role.
         val city = location.lowercase()
-        val roleMatches = selectedPositions.any { selected ->
-            val key = selected.lowercase()
-            val aliases = when (key) {
-                "staff warehouse" -> listOf("staff warehouse", "staff gudang")
-                "admin warehouse" -> listOf("admin warehouse", "admin gudang")
-                "supervisor warehouse" -> listOf("supervisor warehouse", "supervisor gudang")
-                "staff gudang" -> listOf("staff gudang", "staff warehouse")
-                "admin gudang" -> listOf("admin gudang", "admin warehouse")
-                "supervisor gudang" -> listOf("supervisor gudang", "supervisor warehouse")
-                else -> listOf(key)
-            }
-            aliases.any { role.contains(it) }
-        }
-        // KIRIM_LAMARAN_FIX_V1: avoid crossing distinct region choices.
         val inTangsel = listOf("tangerang selatan", "tangsel", "bsd", "serpong", "pamulang", "ciputat")
             .any { token -> city.contains(token) }
         val inCikarang = city.contains("cikarang")
-        val regionMatches = selectedRegions.any { selected ->
-            when (selected) {
-                "Tangerang Selatan" -> inTangsel
-                "Tangerang" -> !inTangsel && listOf("tangerang", "karawaci", "cikupa", "balaraja").any { token -> city.contains(token) }
-                "Cikarang" -> inCikarang
-                "Bekasi" -> city.contains("bekasi") || inCikarang
+        return selectedRegions.any { selected ->
+            when (selected.lowercase()) {
+                "tangerang selatan" -> inTangsel
+                "tangerang" -> !inTangsel && listOf("tangerang", "karawaci", "cikupa", "balaraja")
+                    .any { token -> city.contains(token) }
+                "cikarang" -> inCikarang
+                "bekasi" -> city.contains("bekasi") || inCikarang
                 else -> city.contains(selected.lowercase())
             }
         }
-        return roleMatches && regionMatches
     }
 }

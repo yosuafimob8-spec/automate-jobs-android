@@ -110,7 +110,15 @@ def extract_cv_text(path):
     if sum(c.isalpha() for c in text)<40: raise ValueError('Teks CV belum dapat dibaca untuk pencocokan. Gunakan PDF teks; OCR belum tersedia.')
     return text
 
-def _claim(uid,now,cv_text,allow_spontaneous=False):
+def attempts_used(db, uid, now=None):
+    """Count ALL Gmail attempts, including bounces, on WIB day (max 10)."""
+    date = (now or _now()).astimezone(WIB).date().isoformat()
+    rows = db.execute("SELECT status,attempt_day,sent_at FROM phase57_queue WHERE user_id=? AND status IN ('sent','bounced','sending','uncertain','failed')", (uid,))
+    return sum(1 for status, attempt_day, sent_at in rows
+               if (attempt_day or _day(sent_at)) == date or
+                  (status in ('sending','uncertain') and not attempt_day and not sent_at))
+
+def _claim_legacy(uid,now,cv_text,allow_spontaneous=False):
     today=now.astimezone(WIB).date().isoformat()
     with sqlite3.connect(DB,timeout=30) as db:
         db.execute('BEGIN IMMEDIATE')
@@ -185,6 +193,55 @@ def _claim(uid,now,cv_text,allow_spontaneous=False):
             return item
     return None
 
+
+def _claim(uid, now, cv_text, allow_spontaneous=False):
+    # KM_REGION_FIRST_V73: KarirMate users only; Telegram retains its old behavior.
+    if uid >= 0:
+        return _claim_legacy(uid, now, cv_text, allow_spontaneous)
+    if not allow_spontaneous:
+        return None
+    from km_catalog_v73 import approved_queue_row, already_attempted_company
+    day = now.astimezone(WIB).date().isoformat()
+    with sqlite3.connect(DB, timeout=30) as db:
+        db.execute('BEGIN IMMEDIATE')
+        settings = db.execute('SELECT enabled,daily_limit,consent_at FROM phase57_settings WHERE user_id=?', (uid,)).fetchone()
+        cfg = db.execute('SELECT auto_consent,daily_limit FROM phase5_config WHERE user_id=?', (uid,)).fetchone()
+        if not settings or not settings[0] or not settings[2] or not cfg or not cfg[0]:
+            return None
+        limit = max(0, min(5, int(settings[1]), int(cfg[1])))
+        if quota_used(db, uid, now) >= limit or attempts_used(db, uid, now) >= 10:
+            return None
+        profile = db.execute('SELECT desired_positions,preferred_locations FROM android_profiles WHERE account_id=?', (-uid,)).fetchone()
+        if not profile:
+            return None
+        from km_catalog_v73 import decode_choices
+        positions, locations = decode_choices(profile[0]), decode_choices(profile[1])
+        if not positions or not locations:
+            return None
+        position = positions[0]  # only for cover letter, NEVER used as contact filter
+        db.row_factory = sqlite3.Row
+        rows = db.execute("SELECT * FROM phase57_queue WHERE user_id=? AND status='ready' ORDER BY id LIMIT 250", (uid,)).fetchall()
+        for row in rows:
+            job = dict(row)
+            email = str(job['email'] or '').strip().lower()
+            if (not valid_target(email) or not approved_queue_row(db, job, locations)
+                    or already_attempted_company(db, uid, job['company'], job['id'])):
+                continue
+            # UNIQUE(user_id,email) on claims prevents reuse even when email/company spelling changes.
+            cursor = db.execute('INSERT OR IGNORE INTO phase57_delivery_claims(user_id,email,queue_id) VALUES(?,?,?)',
+                                (uid, email, job['id']))
+            if cursor.rowcount != 1:
+                continue
+            key = hashlib.sha256(f"{uid}\0{job['job_url']}\0{email}".encode()).hexdigest()
+            saved = db.execute("""UPDATE phase57_queue SET status='sending',attempt_day=?,claimed_at=?,
+                              job_key=?,job_title=?,error=NULL WHERE id=? AND user_id=? AND status='ready' """,
+                              (day, now.isoformat(), key, position, job['id'], uid))
+            if saved.rowcount != 1:
+                raise RuntimeError('Queue claim unexpectedly failed')
+            job.update(email=email, job_key=key, job_title=position)
+            return job
+    return None
+
 # KARIRMATE_SENDER_ROUTE_V1
 def _route_status(uid):
     if uid < 0:
@@ -221,13 +278,17 @@ def send_batch(uid,name,*,sender=_route_send,status_reader=_route_status,pro_che
     gmail=status_reader(uid)
     if gmail.get('connected') is not True: raise PermissionError('Gmail belum terhubung; otorisasi ulang diperlukan.')
     phase57_queue.initialize()
-    # Refill only from existing, matching company records. Unknown schemas never create contacts.
-    from auto_apply_api import candidates
-    with sqlite3.connect(DB,timeout=30) as db:
-        row=db.execute('SELECT id FROM android_accounts WHERE telegram_user_id=? LIMIT 1',(uid,)).fetchone()
-    if row:
-        fresh,_=candidates(row[0],uid)
-        for candidate in fresh: phase57_queue.enqueue(uid,candidate)
+    # KM_REGION_FIRST_V73: region catalog is the ONLY sender source for KarirMate.
+    if uid < 0:
+        from km_catalog_v73 import refill
+        refill(DB, uid, batch=10)
+    else:
+        from auto_apply_api import candidates
+        with sqlite3.connect(DB,timeout=30) as db:
+            row=db.execute('SELECT id FROM android_accounts WHERE telegram_user_id=? LIMIT 1',(uid,)).fetchone()
+        if row:
+            fresh,_=candidates(row[0],uid)
+            for candidate in fresh: phase57_queue.enqueue(uid,candidate)
     result={'sent':0,'uncertain':0}
     for _ in range(5):
         if pro_checker(uid) is not True: break

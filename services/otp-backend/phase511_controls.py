@@ -8,17 +8,20 @@ from runtime_paths import DB
 
 def state(uid):
     phase57_queue.initialize()
-    from phase512_sender import quota_used
-    with sqlite3.connect(DB,timeout=30) as db:
-        row=db.execute('SELECT enabled,daily_limit,consent_at FROM phase57_settings WHERE user_id=?',(uid,)).fetchone()
-        counts=dict(db.execute('SELECT status,COUNT(*) FROM phase57_queue WHERE user_id=? GROUP BY status',(uid,)))
-        used=quota_used(db,uid)
-        cfg=db.execute('SELECT auto_consent FROM phase5_config WHERE user_id=?',(uid,)).fetchone()
-        consent=bool(row and row[2] and cfg and cfg[0])
-    limit=min(5,max(0,row[1])) if row else 5
-    return {'enabled':bool(row and row[0] and consent),'limit':limit,
-            'consent_at':row[2] if consent else None,'consent_granted':consent,'counts':counts,
-            'quota_used_today':used,'remaining_today':max(0,limit-used),'scheduler_modified':False}
+    from phase512_sender import quota_used, attempts_used
+    with sqlite3.connect(DB, timeout=30) as db:
+        row = db.execute('SELECT enabled,daily_limit,consent_at FROM phase57_settings WHERE user_id=?', (uid,)).fetchone()
+        counts = dict(db.execute('SELECT status,COUNT(*) FROM phase57_queue WHERE user_id=? GROUP BY status', (uid,)))
+        used, attempted = quota_used(db,uid), attempts_used(db,uid)
+        cfg = db.execute('SELECT auto_consent FROM phase5_config WHERE user_id=?', (uid,)).fetchone()
+        consent = bool(row and row[2] and cfg and cfg[0])
+    limit = min(5,max(0,int(row[1]))) if row else 5
+    return {'enabled': bool(row and row[0] and consent), 'limit': limit,
+            'consent_at': row[2] if consent else None, 'consent_granted': consent,
+            'counts': counts, 'quota_used_today': used,
+            'remaining_today': max(0, min(limit-used, 10-attempted)),
+            'attempts_used_today': attempted, 'attempts_limit_today': 10,
+            'bounced': counts.get('bounced',0), 'scheduler_modified': False}
 
 def enable(uid,gmail_connected,explicit_consent=False,daily_limit=5):
     cfg=phase5_config.get(uid)
