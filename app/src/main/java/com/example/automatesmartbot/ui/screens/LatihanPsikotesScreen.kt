@@ -113,7 +113,43 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionC
     Column(Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient)) {
         // The parent dashboard already draws the app toolbar; do not duplicate it.
         if (loading) LinearProgressIndicator(Modifier.fillMaxWidth(), color = orange)
-        error?.let { Text(it, Modifier.padding(12.dp), color = MaterialTheme.colorScheme.error) }
+        // KARIRMATE_PSIKOTES_UI_V74_LOCAL: error/retry belongs to the active workflow.
+        // The home picker must not show an exam-sync instruction or an unreachable action.
+        if (page != "home" && !error.isNullOrBlank()) {
+            Surface(
+                modifier = Modifier.fillMaxWidth().padding(horizontal = 14.dp, vertical = 8.dp),
+                shape = RoundedCornerShape(12.dp),
+                color = Color(0xFFFFF7ED),
+                border = BorderStroke(1.dp, Color(0xFFF2D4B9))
+            ) {
+                Column(
+                    Modifier.padding(horizontal = 14.dp, vertical = 10.dp),
+                    verticalArrangement = Arrangement.spacedBy(6.dp)
+                ) {
+                    val hasPendingAnswers = page == "exam" && pendingCount > 0
+                    Text(
+                        if (hasPendingAnswers) "Koneksi terganggu. $pendingCount jawaban tersimpan sementara di HP."
+                        else error.orEmpty(),
+                        color = Color(0xFF9A3412),
+                        style = MaterialTheme.typography.bodySmall
+                    )
+                    when {
+                        hasPendingAnswers -> TextButton(
+                            onClick = { vm.syncAnswers() },
+                            enabled = !loading && !submitting
+                        ) { Text("Sinkronkan Jawaban ($pendingCount)") }
+                        page == "catalog" -> TextButton(
+                            onClick = { vm.loadCatalog() },
+                            enabled = !loading
+                        ) { Text("Coba Muat Soal") }
+                        page == "history" || page == "stats" || page == "leaderboard" -> TextButton(
+                            onClick = { vm.loadExtras(isPro) },
+                            enabled = !loading
+                        ) { Text("Muat Ulang") }
+                    }
+                }
+            }
+        }
         when (page) {
             "home" -> PsychotestHome(
                 isPro = isPro,

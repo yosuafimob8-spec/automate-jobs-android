@@ -124,7 +124,11 @@ class PsychotestViewModel @JvmOverloads constructor(private val savedState: Save
         catch (e: Exception) {
             error.value = when (e) {
                 is HttpException -> when (e.code()) { 401 -> "Sesi akun berakhir. Silakan masuk kembali."; 403 -> "Akses ditolak server. Periksa langganan Anda."; else -> "API psikotes gagal (${e.code()}). Coba lagi; jawaban lokal tetap disimpan." }
-                is java.io.IOException -> "Koneksi terputus. Jawaban lokal tetap disimpan; tekan Sinkronkan Jawaban."
+                // KARIRMATE_PSIKOTES_UI_V74_LOCAL: no exam-sync instruction without pending answers.
+                is java.io.IOException -> if (pendingCount.value > 0 && session.value != null)
+                    "Koneksi terputus. ${pendingCount.value} jawaban tersimpan sementara di HP. Sinkronkan saat koneksi pulih."
+                else
+                    "Layanan psikotes belum terhubung. Periksa jaringan atau server, lalu coba lagi."
                 else -> e.message ?: "Permintaan psikotes gagal."
             }
         } finally { requests--; loading.value = requests > 0 }

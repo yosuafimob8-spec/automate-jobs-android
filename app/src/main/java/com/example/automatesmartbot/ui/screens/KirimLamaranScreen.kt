@@ -159,6 +159,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         mutableStateOf(targetPrefs.getStringSet("regions_${accountId.orEmpty()}", emptySet()).orEmpty().toSet())
     }
     var targetsConfirmed by remember { mutableStateOf(false) }
+    // KM_TARGET_REFRESH_V74: backend is authoritative, but never overwrite an unsaved edit.
+    var targetsDirty by remember(accountId) { mutableStateOf(false) }
 
     suspend fun refresh() {
         statusLoaded = false
@@ -178,8 +180,9 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
         backendActionRequired = body.optString("action_required", "").takeUnless { it == "null" }.orEmpty()
         backendNote = body.optString("message", "").takeUnless { it == "null" }.orEmpty()
         val a = body.optJSONObject("auto_apply")
-        // KM_PREF_UI_V56: display saved server preferences if this account has no local selection.
-        if (selectedPositions.isEmpty() && selectedRegions.isEmpty()) {
+        // Always reconcile local display with the authenticated server when nothing is being edited.
+        // SharedPreferences are cache only; they must not override account-specific backend targets.
+        if (!targetsDirty) {
             val serverRoles = a?.optJSONArray("positions")
             val serverPlaces = a?.optJSONArray("locations")
             if (serverRoles != null && serverPlaces != null) {
@@ -187,15 +190,39 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                     .map { serverRoles.optString(it) }.filter { it.isNotBlank() }.toSet()
                 selectedRegions = (0 until serverPlaces.length())
                     .map { serverPlaces.optString(it) }.filter { it.isNotBlank() }.toSet()
+                accountId?.let { id ->
+                    targetPrefs.edit()
+                        .putStringSet("positions_$id", selectedPositions)
+                        .putStringSet("regions_$id", selectedRegions)
+                        .apply()
+                }
             }
         }
-        targetsConfirmed = targetEchoMatches(a, selectedPositions, selectedRegions, "preferences_enforced")
+        targetsConfirmed = !targetsDirty && targetEchoMatches(
+            a, selectedPositions, selectedRegions, "preferences_enforced"
+        )
         consentSaved = AutoApplyConfirmation.consentState(
             a?.opt("consent_granted") as? Boolean,
             a?.optString("consent_at"),
             false // Local preferences must never substitute backend consent.
         )
         statusLoaded = true
+    }
+
+    suspend fun reloadCandidates(): Boolean {
+        if (!isPro) {
+            candidates = emptyList()
+            return true
+        }
+        val response = ApiClient.apiService.getKarirMateCandidates()
+        if (!response.isSuccessful) {
+            response.errorBody()?.close()
+            return false
+        }
+        val array = JSONObject(response.body()?.use { it.string() } ?: "{}").optJSONArray("items")
+        candidates = if (array == null) emptyList() else
+            (0 until array.length()).map { array.getJSONObject(it) }
+        return true
     }
 
     suspend fun load() {
@@ -213,15 +240,8 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
             emailVerified = verifiedAccount.isEmailVerified
             require(accountId != null) { "Identitas akun tidak tersedia. Login ulang." }
             refresh()
-            if (isPro) {
-                val response = ApiClient.apiService.getKarirMateCandidates()
-                if (response.isSuccessful) {
-                    val array = JSONObject(response.body()?.use { it.string() } ?: "{}").optJSONArray("items")
-                    candidates = if (array == null) emptyList() else (0 until array.length()).map { array.getJSONObject(it) }
-                } else {
-                    response.errorBody()?.close()
-                    message = "Kandidat gagal dimuat (${response.code()})."
-                }
+            if (isPro && !reloadCandidates()) {
+                message = "Kandidat gagal dimuat. Tekan Muat Ulang."
             }
             val report = ApiClient.apiService.getKarirMateReport()
             if (report.isSuccessful) {
@@ -270,7 +290,22 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
     val owner = LocalLifecycleOwner.current
     DisposableEffect(owner) {
         val observer = LifecycleEventObserver { _, event ->
-            if (event == Lifecycle.Event.ON_RESUME) scope.launch { load() }
+            // A light resume refresh, instead of reloading the full dashboard/history.
+            // Update candidate list only if saved backend target actually changed.
+            if (event == Lifecycle.Event.ON_RESUME && statusLoaded && !busy) scope.launch {
+                try {
+                    val oldPositions = selectedPositions
+                    val oldRegions = selectedRegions
+                    refresh()
+                    if (isPro && (oldPositions != selectedPositions || oldRegions != selectedRegions)) {
+                        if (!reloadCandidates()) message = "Kandidat gagal diperbarui. Tekan Muat Ulang."
+                    }
+                } catch (e: CancellationException) {
+                    throw e
+                } catch (e: Exception) {
+                    message = e.message ?: "Status gagal diperbarui."
+                }
+            }
         }
         owner.lifecycle.addObserver(observer)
         onDispose { owner.lifecycle.removeObserver(observer) }
@@ -368,9 +403,10 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         label = "Posisi Pekerjaan",
                         items = AutoApplyTargetPolicy.positions,
                         selected = selectedPositions,
-                        enabled = !enabled,
+                        enabled = !enabled && !busy,
                         onChange = { new ->
                             selectedPositions = new
+                            targetsDirty = true
                             targetsConfirmed = false
                             accountId?.let { id -> targetPrefs.edit().putStringSet("positions_$id", new).apply() }
                         }
@@ -379,9 +415,10 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                         label = "Wilayah Tujuan",
                         items = AutoApplyTargetPolicy.regions,
                         selected = selectedRegions,
-                        enabled = !enabled,
+                        enabled = !enabled && !busy,
                         onChange = { new ->
                             selectedRegions = new
+                            targetsDirty = true
                             targetsConfirmed = false
                             accountId?.let { id -> targetPrefs.edit().putStringSet("regions_$id", new).apply() }
                         }
@@ -413,11 +450,16 @@ fun KirimLamaranScreen(isPro: Boolean, isOnline: Boolean, onNavigateProfil: () -
                                     if (!targetEchoMatches(saved, selectedPositions, selectedRegions, "applied_to_delivery")) {
                                         error("Backend belum mengonfirmasi bahwa target dipakai untuk pengiriman. Pengiriman tidak diaktifkan.")
                                     }
+                                    targetsDirty = false
                                     refresh()
                                     if (!targetsConfirmed) {
                                         error("Status backend belum mengonfirmasi filter pengiriman. Pengiriman tidak diaktifkan.")
                                     }
-                                    message = "Target posisi dan wilayah berhasil disimpan di backend."
+                                    val listUpdated = reloadCandidates()
+                                    message = if (listUpdated)
+                                        "Target tersimpan. Daftar kandidat sudah diperbarui."
+                                    else
+                                        "Target tersimpan, tetapi kandidat belum termuat. Tekan Muat Ulang."
                                 } catch (e: CancellationException) {
                                     throw e
                                 } catch (e: Exception) {

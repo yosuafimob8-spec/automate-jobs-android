@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -60,18 +61,10 @@ internal fun PsychotestHome(
         modifier = Modifier.fillMaxSize().background(
             Brush.verticalGradient(listOf(Color(0xFFF8FCFF), Color(0xFFEAF6FD)))
         ).padding(horizontal = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp)
+        contentPadding = PaddingValues(top = 10.dp, bottom = 16.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        item { Spacer(Modifier.height(2.dp)) }
-        item {
-            Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                Text("✦", fontSize = 22.sp, color = Color(0xFF0A93C1))
-                Spacer(Modifier.width(7.dp))
-                Text("KarirMate", color = ocean, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp)
-                Spacer(Modifier.weight(1f))
-                com.example.automatesmartbot.ui.components.MembershipBadge(style = com.example.automatesmartbot.ui.components.MembershipBadgeStyle.LIGHT)
-            }
-        }
+        // KARIRMATE_PSIKOTES_UI_V74_LOCAL: parent toolbar already owns brand and PRO.
         item {
             Box(Modifier.fillMaxWidth().heightIn(min = 182.dp).background(
                 Brush.horizontalGradient(listOf(Color(0xFF0754A1), Color(0xFF0879C9), Color(0xFF0BB8AF))),
@@ -79,7 +72,7 @@ internal fun PsychotestHome(
             )) {
                 Row(Modifier.fillMaxWidth().padding(23.dp), verticalAlignment = Alignment.CenterVertically) {
                     Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                        Text("🧠  Psikotes KarirMate", fontSize = 23.sp,
+                        Text("🧠  Asah Kemampuanmu", fontSize = 23.sp,
                             color = Color.White, fontWeight = FontWeight.ExtraBold, lineHeight = 29.sp)
                         Text("Latihan tes kerja, evaluasi kemampuan, dan persiapan seleksi yang lebih percaya diri.",
                             fontSize = 13.sp, color = Color.White, lineHeight = 19.sp)
@@ -141,7 +134,6 @@ internal fun PsychotestHome(
                 }
             }
         }
-        item { Spacer(Modifier.height(12.dp)) }
     }
 }
 
