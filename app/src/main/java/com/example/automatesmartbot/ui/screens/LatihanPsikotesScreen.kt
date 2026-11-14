@@ -155,7 +155,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionC
             "home" -> PsychotestHome(
                 isPro = isPro,
                 onPrivate = { family = "private"; page = "catalog" },
-                onCpns = { family = "cpns"; cpnsGroup = "all"; page = "catalog" },
+                onCpns = { family = "cpns"; cpnsGroup = "skd"; page = "catalog" },
                 onHistory = { vm.loadExtras(isPro); page = "history" },
                 onStats = { if (isPro) { vm.loadExtras(isPro); page = "stats" } else proNotice = true },
                 onLeaderboard = { if (isPro) { vm.loadExtras(isPro); page = "leaderboard" } else proNotice = true },
@@ -210,7 +210,19 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionC
                         val testId = mode.s("test_id").lowercase()
                         val title = when {
                             testId == "cpns_skd" -> "SKD Gabungan CPNS (TWK, TIU, TKP)"
-                            testId.startsWith("skb_") && testId.endsWith("_combined") -> "SKB Gabungan • $rawTitle"
+                            testId.startsWith("skb_") && testId.endsWith("_combined") -> when (testId) {
+                                "skb_admin_pemerintahan_combined" -> "SKB • Administrasi Pemerintahan"
+                                "skb_analis_sdm_aparatur_combined" -> "SKB • Analis SDM Aparatur"
+                                "skb_pranata_komputer_combined" -> "SKB • Pranata Komputer"
+                                "skb_pengelola_keuangan_combined" -> "SKB • Pengelola Keuangan"
+                                "skb_analis_kebijakan_combined" -> "SKB • Analis Kebijakan"
+                                "skb_guru_combined" -> "SKB • Guru"
+                                "skb_tenaga_kesehatan_combined" -> "SKB • Tenaga Kesehatan"
+                                "skb_hukum_combined" -> "SKB • Hukum"
+                                "skb_arsiparis_combined" -> "SKB • Arsiparis"
+                                else -> "SKB • " + testId.removePrefix("skb_")
+                                    .removeSuffix("_combined").replace('_', ' ')
+                            }
                             else -> rawTitle
                         }
                         val icon = testIcon(rawTitle)
@@ -225,12 +237,12 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionC
                             }
                             else if (basicMode(mode)) freeNotice = true
                             else proNotice = true
-                        }, enabled = !loading, modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, Color(0xFFC6DFE8)), elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
+                        }, enabled = !loading, modifier = Modifier.height(184.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, Color(0xFFC6DFE8)), elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
                             Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
                                 Box(Modifier.background(icon.second.copy(alpha = 0.13f), RoundedCornerShape(12.dp)).size(42.dp), contentAlignment = Alignment.Center) {
                                     Text(icon.first, style = MaterialTheme.typography.titleLarge)
                                 }
-                                Text(title, fontWeight = FontWeight.Bold, color = ink, maxLines = 2, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
+                                Text(title, fontWeight = FontWeight.Bold, color = ink, maxLines = 3, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
                                 Text("$displayedCount soal  •  ${displayedSeconds / 60} menit", color = Color(0xFF58657A), style = MaterialTheme.typography.labelSmall)
                                 Text(if (freeEligible(mode)) "FREE • Mulai →" else if (basicMode(mode)) "FREE • 20 soal saja" else "👑 PRO", color = if (freeEligible(mode)) teal else orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodySmall)
                             }
