@@ -66,6 +66,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionC
     val pendingCount by vm.pendingCount.collectAsState()
     var page by rememberSaveable { mutableStateOf("home") }
     var family by remember { mutableStateOf("all") }
+    var cpnsGroup by rememberSaveable { mutableStateOf("all") }
     var proNotice by remember { mutableStateOf(false) }
     var freeNotice by remember { mutableStateOf(false) }
     var resultAnalysisPage by rememberSaveable { mutableStateOf(false) }
@@ -108,7 +109,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionC
         confirmButton = { TextButton(onClick = { proNotice = false }) { Text("Mengerti") } })
     if (freeNotice) AlertDialog(onDismissRequest = { freeNotice = false },
         title = { Text("Latihan FREE") },
-        text = { Text("Paket FREE hanya mencakup kategori dasar dengan 10–20 soal per sesi. Paket ini belum tersedia di server; silakan pilih kategori lain.") },
+        text = { Text("Paket FREE mencakup latihan kategori dasar 20 soal. Tes gabungan memerlukan akses PRO.") },
         confirmButton = { TextButton(onClick = { freeNotice = false }) { Text("Mengerti") } })
     Column(Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient)) {
         // The parent dashboard already draws the app toolbar; do not duplicate it.
@@ -154,7 +155,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionC
             "home" -> PsychotestHome(
                 isPro = isPro,
                 onPrivate = { family = "private"; page = "catalog" },
-                onCpns = { family = "cpns"; page = "catalog" },
+                onCpns = { family = "cpns"; cpnsGroup = "skd"; page = "catalog" },
                 onHistory = { vm.loadExtras(isPro); page = "history" },
                 onStats = { if (isPro) { vm.loadExtras(isPro); page = "stats" } else proNotice = true },
                 onLeaderboard = { if (isPro) { vm.loadExtras(isPro); page = "leaderboard" } else proNotice = true },
@@ -165,29 +166,70 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionC
                 Text("Pilih latihan sesuai tujuanmu. Kerjakan soal, pantau progres, dan tingkatkan kemampuan.", style = MaterialTheme.typography.bodySmall, color = Color(0xFF59667A))
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.horizontalScroll(rememberScrollState())) {
                     listOf("Semua" to "all", "Swasta" to "private", "CPNS" to "cpns").forEach { (label, value) ->
-                        FilterChip(selected = family == value, onClick = { family = value }, label = { Text(label) }, colors = FilterChipDefaults.filterChipColors(selectedContainerColor = orange, selectedLabelColor = Color.White))
+                        FilterChip(selected = family == value, onClick = { family = value; cpnsGroup = "all" }, label = { Text(label) }, colors = FilterChipDefaults.filterChipColors(selectedContainerColor = orange, selectedLabelColor = Color.White))
                     }
                 }
-                val visible = modes.filter {
-                    val f = it.s("family").lowercase()
-                    family == "all" || f == family || (family == "cpns" && f == "skb")
+                // KM_V74_RESTORE_RULES_20261114: SKD/SKB tidak hilang di antara puluhan mode.
+                if (family == "cpns") {
+                    Row(horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.horizontalScroll(rememberScrollState())) {
+                        listOf("Semua CPNS" to "all", "SKD Gabungan" to "skd", "SKB Gabungan" to "skb_combined", "Materi SKB" to "skb_material").forEach { (label, value) ->
+                            FilterChip(selected = cpnsGroup == value, onClick = { cpnsGroup = value }, label = { Text(label) }, colors = FilterChipDefaults.filterChipColors(selectedContainerColor = blue, selectedLabelColor = Color.White))
+                        }
+                    }
                 }
-                if (visible.isEmpty() && !loading) Text("Belum ada tes tersedia dari server.", color = ink)
-                Text("FREE: kategori dasar 10–20 soal. Kategori lain memerlukan PRO.", color = ink, style = MaterialTheme.typography.bodySmall)
+                val visible = modes.filter { mode ->
+                    val f = mode.s("family").lowercase()
+                    val id = mode.s("test_id").lowercase()
+                    val withinFamily = when (family) {
+                        "private" -> f == "private" || id.startsWith("private_")
+                        "cpns" -> f == "cpns" || f == "skb" || id.startsWith("cpns_") || id.startsWith("skb_")
+                        else -> true
+                    }
+                    val withinCpnsGroup = if (family != "cpns") true else when (cpnsGroup) {
+                        "skd" -> id == "cpns_skd"
+                        "skb_combined" -> id.startsWith("skb_") && id.endsWith("_combined")
+                        "skb_material" -> id.startsWith("skb_") && !id.endsWith("_combined")
+                        else -> true
+                    }
+                    withinFamily && withinCpnsGroup
+                }.sortedWith(compareBy<JsonObject> { mode ->
+                    val id = mode.s("test_id").lowercase()
+                    when {
+                        id == "cpns_skd" -> 0
+                        id == "private_combined" -> 0
+                        id == "cpns_twk" || id == "cpns_tiu" || id == "cpns_tkp" -> 1
+                        id.startsWith("skb_") && id.endsWith("_combined") -> 2
+                        else -> 3
+                    }
+                }.thenBy { it.s("title") })
+                if (visible.isEmpty() && !loading) Text("Kategori tes belum tersedia pada katalog server. Coba muat ulang.", color = ink)
+                Text("FREE: latihan dasar 20 soal. Tes gabungan memerlukan PRO.", color = ink, style = MaterialTheme.typography.bodySmall)
                 LazyVerticalGrid(columns = GridCells.Fixed(2), horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp), contentPadding = PaddingValues(bottom = 12.dp)) {
                     items(visible) { mode ->
-                        val title = mode.s("title", "Tes")
-                        val icon = testIcon(title)
-                        // KM_V74_COUNT_FIX_20261114: use the same count for the card and request.
-                        // FREE basic practice uses catalog training count; PRO uses the full mode.
-                        val fullCount = mode.n("question_count").coerceIn(1, 110)
-                        val isShortTraining = !isPro && freeEligible(mode)
-                        val displayedCount = if (isShortTraining)
-                            (mode.n("training_question_count").takeIf { it in 10..20 } ?: fullCount)
-                            else fullCount
-                        val displayedSeconds = if (isShortTraining)
-                            (mode.n("training_duration_seconds").takeIf { it > 0 } ?: mode.n("duration_seconds"))
-                            else mode.n("duration_seconds")
+                        val rawTitle = mode.s("title", "Tes")
+                        val testId = mode.s("test_id").lowercase()
+                        val title = when {
+                            testId == "cpns_skd" -> "SKD Gabungan CPNS (TWK, TIU, TKP)"
+                            testId.startsWith("skb_") && testId.endsWith("_combined") -> when (testId) {
+                                "skb_admin_pemerintahan_combined" -> "SKB • Administrasi Pemerintahan"
+                                "skb_analis_sdm_aparatur_combined" -> "SKB • Analis SDM Aparatur"
+                                "skb_pranata_komputer_combined" -> "SKB • Pranata Komputer"
+                                "skb_pengelola_keuangan_combined" -> "SKB • Pengelola Keuangan"
+                                "skb_analis_kebijakan_combined" -> "SKB • Analis Kebijakan"
+                                "skb_guru_combined" -> "SKB • Guru"
+                                "skb_tenaga_kesehatan_combined" -> "SKB • Tenaga Kesehatan"
+                                "skb_hukum_combined" -> "SKB • Hukum"
+                                "skb_arsiparis_combined" -> "SKB • Arsiparis"
+                                else -> "SKB • " + testId.removePrefix("skb_")
+                                    .removeSuffix("_combined").replace('_', ' ')
+                            }
+                            else -> rawTitle
+                        }
+                        val icon = testIcon(rawTitle)
+                        // KM_V74_RESTORE_RULES_20261114: selalu gunakan ketentuan asli katalog.
+                        // FREE swasta 20; gabungan swasta 100; SKD 110; materi SKB sesuai mode.
+                        val displayedCount = mode.n("question_count").coerceIn(1, 110)
+                        val displayedSeconds = mode.n("duration_seconds")
                         Card(onClick = {
                             if (isPro || freeEligible(mode)) {
                                 vm.start(mode.s("test_id"), displayedCount)
@@ -195,14 +237,14 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionC
                             }
                             else if (basicMode(mode)) freeNotice = true
                             else proNotice = true
-                        }, enabled = !loading, modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, Color(0xFFC6DFE8)), elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
+                        }, enabled = !loading, modifier = Modifier.height(184.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, Color(0xFFC6DFE8)), elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
                             Column(Modifier.fillMaxSize().padding(12.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
                                 Box(Modifier.background(icon.second.copy(alpha = 0.13f), RoundedCornerShape(12.dp)).size(42.dp), contentAlignment = Alignment.Center) {
                                     Text(icon.first, style = MaterialTheme.typography.titleLarge)
                                 }
-                                Text(title, fontWeight = FontWeight.Bold, color = ink, maxLines = 2, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
+                                Text(title, fontWeight = FontWeight.Bold, color = ink, maxLines = 3, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
                                 Text("$displayedCount soal  •  ${displayedSeconds / 60} menit", color = Color(0xFF58657A), style = MaterialTheme.typography.labelSmall)
-                                Text(if (freeEligible(mode)) "FREE • Mulai →" else if (basicMode(mode)) "FREE • 10–20 soal saja" else "👑 PRO", color = if (freeEligible(mode)) teal else orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodySmall)
+                                Text(if (freeEligible(mode)) "FREE • Mulai →" else if (basicMode(mode)) "FREE • 20 soal saja" else "👑 PRO", color = if (freeEligible(mode)) teal else orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodySmall)
                             }
                         }
                     }
