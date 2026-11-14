@@ -178,8 +178,21 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionC
                     items(visible) { mode ->
                         val title = mode.s("title", "Tes")
                         val icon = testIcon(title)
+                        // KM_V74_COUNT_FIX_20261114: use the same count for the card and request.
+                        // FREE basic practice uses catalog training count; PRO uses the full mode.
+                        val fullCount = mode.n("question_count").coerceIn(1, 110)
+                        val isShortTraining = !isPro && freeEligible(mode)
+                        val displayedCount = if (isShortTraining)
+                            (mode.n("training_question_count").takeIf { it in 10..20 } ?: fullCount)
+                            else fullCount
+                        val displayedSeconds = if (isShortTraining)
+                            (mode.n("training_duration_seconds").takeIf { it > 0 } ?: mode.n("duration_seconds"))
+                            else mode.n("duration_seconds")
                         Card(onClick = {
-                            if (isPro || freeEligible(mode)) { val requestedCount = if (isPro && !freeEligible(mode)) mode.n("question_count").coerceIn(10, 110) else (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20); vm.start(mode.s("test_id"), requestedCount); page = "exam" }
+                            if (isPro || freeEligible(mode)) {
+                                vm.start(mode.s("test_id"), displayedCount)
+                                page = "exam"
+                            }
                             else if (basicMode(mode)) freeNotice = true
                             else proNotice = true
                         }, enabled = !loading, modifier = Modifier.height(164.dp), colors = CardDefaults.cardColors(containerColor = Color.White), shape = RoundedCornerShape(18.dp), border = BorderStroke(1.dp, Color(0xFFC6DFE8)), elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
@@ -188,7 +201,7 @@ fun LatihanPsikotesScreen(isPro: Boolean, onExit: () -> Unit = {}, onBackActionC
                                     Text(icon.first, style = MaterialTheme.typography.titleLarge)
                                 }
                                 Text(title, fontWeight = FontWeight.Bold, color = ink, maxLines = 2, style = MaterialTheme.typography.bodyMedium, modifier = Modifier.weight(1f))
-                                Text("${(if (isPro && !freeEligible(mode)) mode.n("question_count").coerceIn(10, 110) else (if (mode.has("training_question_count")) mode.n("training_question_count") else mode.n("question_count")).coerceIn(10, 20))} soal  •  ${mode.n("duration_seconds") / 60} menit", color = Color(0xFF58657A), style = MaterialTheme.typography.labelSmall)
+                                Text("$displayedCount soal  •  ${displayedSeconds / 60} menit", color = Color(0xFF58657A), style = MaterialTheme.typography.labelSmall)
                                 Text(if (freeEligible(mode)) "FREE • Mulai →" else if (basicMode(mode)) "FREE • 10–20 soal saja" else "👑 PRO", color = if (freeEligible(mode)) teal else orange, fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodySmall)
                             }
                         }
