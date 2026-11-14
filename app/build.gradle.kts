@@ -73,10 +73,10 @@ android {
             manifestPlaceholders["usesCleartextTraffic"] = "true"
         }
         create("termux") {
+            initWith(getByName("debug"))
             // V74 parallel test: distinct application ID; NEVER overwrites installed V74.
             applicationIdSuffix = ".v74test"
             versionNameSuffix = "-V74-TEST"
-            initWith(getByName("debug"))
             // CI restores the same fixed keystore before this build.
             signingConfig = signingConfigs.getByName("debug")
             isDebuggable = true
