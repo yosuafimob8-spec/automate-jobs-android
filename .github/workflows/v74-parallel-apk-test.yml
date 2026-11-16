@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - integration/v74-psikotes-parallel-20261114
+    paths:
+      - '.github/apk-build-request-v74.txt'
 
 permissions:
   contents: read

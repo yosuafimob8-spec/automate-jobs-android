@@ -29,3 +29,11 @@ __pycache__/
 *.pyc
 
 .kotlin/
+
+# KarirMate: editor source backup files
+*.bak
+*.bak-*
+*.bak_*
+*.backup
+*.backup-*
+*.backup_*

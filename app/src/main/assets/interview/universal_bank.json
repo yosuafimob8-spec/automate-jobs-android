@@ -1,0 +1,350 @@
+{
+  "version": 1,
+  "language": "id",
+  "totalQuestions": 128,
+  "note": "Bank pertanyaan universal (TalentHunts, SuaraGarut, KitaLulus, Cake, DigitalBuku, HRZone, dll — diverifikasi 14 November 2026). Bukan daftar resmi Shopee/BCA.",
+  "categories": [
+    {
+      "id": 1,
+      "title": "Pembuka dan Perkenalan Diri",
+      "questions": [
+        "Silakan ceritakan tentang diri Anda.",
+        "Boleh perkenalkan diri Anda secara singkat?",
+        "Apa yang perlu kami ketahui tentang Anda?",
+        "Ceritakan latar belakang pendidikan Anda.",
+        "Apa pekerjaan Anda saat ini?",
+        "Apa pengalaman kerja Anda yang paling relevan?",
+        "Apa keahlian utama Anda?",
+        "Apa yang membuat Anda berbeda dari pelamar lain?",
+        "Bagaimana teman kerja menggambarkan diri Anda?",
+        "Apa kegiatan Anda di luar pekerjaan?"
+      ],
+      "followUp": "Boleh diceritakan lebih detail satu pengalaman yang paling berhubungan dengan posisi ini?",
+      "sources": []
+    },
+    {
+      "id": 2,
+      "title": "Motivasi, Perusahaan, dan Posisi",
+      "questions": [
+        "Mengapa Anda melamar posisi ini?",
+        "Mengapa Anda tertarik bekerja di perusahaan ini?",
+        "Apa yang Anda ketahui tentang perusahaan ini?",
+        "Apa yang Anda ketahui tentang pekerjaan yang dilamar?",
+        "Dari mana Anda mengetahui lowongan ini?",
+        "Mengapa kami harus menerima Anda?",
+        "Kontribusi apa yang bisa Anda berikan?",
+        "Apa yang memotivasi Anda untuk bekerja?",
+        "Apa yang membuat Anda bertahan di sebuah pekerjaan?",
+        "Apa yang Anda harapkan dari pekerjaan ini?"
+      ],
+      "followUp": "Bagian mana dari perusahaan atau posisi ini yang paling menarik bagi Anda, dan mengapa?",
+      "sources": []
+    },
+    {
+      "id": 3,
+      "title": "Kelebihan, Kekurangan, dan Kepribadian",
+      "questions": [
+        "Apa kelebihan terbesar Anda?",
+        "Apa kekurangan terbesar Anda?",
+        "Bagaimana Anda memperbaiki kekurangan Anda?",
+        "Apa pencapaian terbesar Anda?",
+        "Apa yang membedakan Anda dari kandidat lain?",
+        "Apa hobi atau kegiatan Anda di luar pekerjaan?",
+        "Lingkungan kerja seperti apa yang Anda sukai?",
+        "Lebih suka bekerja sendiri atau bekerja dalam tim?",
+        "Apa arti kesuksesan dalam karier menurut Anda?",
+        "Bagaimana Anda menggambarkan kepribadian Anda?"
+      ],
+      "followUp": "Boleh beri satu contoh nyata saat kelebihan itu membantu pekerjaan Anda?",
+      "sources": [
+        {
+          "name": "TalentHunts",
+          "url": "https://www.talenthunts.id/id/article/pertanyaan-wawancara"
+        },
+        {
+          "name": "SuaraGarut",
+          "url": "https://suaragarut.id/60-pertanyaan-interview-kerja"
+        },
+        {
+          "name": "KitaLulus",
+          "url": "https://www.kitalulus.com/blog/seputar-kerja/pertanyaan-interview-kerja/"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Pengalaman, Pendidikan, dan Fresh Graduate",
+      "questions": [
+        "Ceritakan pengalaman kerja Anda sebelumnya.",
+        "Apa tugas utama Anda di pekerjaan sebelumnya?",
+        "Apa pencapaian terbesar selama Anda bekerja?",
+        "Mengapa Anda keluar dari pekerjaan sebelumnya?",
+        "Mengapa Anda memilih jurusan kuliah tersebut?",
+        "Apakah Anda memiliki pengalaman magang atau organisasi?",
+        "Apa pengalaman paling berkesan selama kuliah?",
+        "Bagaimana pengalaman itu membantu pekerjaan ini?",
+        "Mengapa Anda melamar pekerjaan yang tidak sesuai jurusan?",
+        "Apa keterampilan yang bisa Anda tawarkan sebagai lulusan baru?"
+      ],
+      "followUp": "Tugas apa yang paling sering Anda kerjakan di sana, dan apa hasilnya?",
+      "sources": [
+        {
+          "name": "SuaraGarut",
+          "url": "https://suaragarut.id/60-pertanyaan-interview-kerja"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Behavioral STAR — Masalah, Kesalahan, dan Kegagalan",
+      "questions": [
+        "Ceritakan masalah tersulit yang pernah Anda hadapi di tempat kerja.",
+        "Ceritakan kesalahan terbesar Anda saat bekerja.",
+        "Ceritakan saat Anda gagal mencapai target.",
+        "Apa yang Anda pelajari dari kegagalan itu?",
+        "Ceritakan saat Anda harus mengambil keputusan yang sulit.",
+        "Ceritakan saat rencana Anda tidak berjalan sesuai harapan.",
+        "Ceritakan saat Anda menerima kritik dari atasan.",
+        "Ceritakan saat Anda tidak setuju dengan keputusan atasan.",
+        "Ceritakan saat Anda harus memperbaiki pekerjaan orang lain.",
+        "Ceritakan saat Anda menghadapi pelanggan yang marah."
+      ],
+      "followUp": "Lalu apa yang Anda lakukan setelah itu, dan apa hasilnya?",
+      "sources": [
+        {
+          "name": "TalentHunts",
+          "url": "https://www.talenthunts.id/id/article/pertanyaan-wawancara"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Behavioral STAR — Tekanan, Deadline, dan Manajemen Waktu",
+      "questions": [
+        "Ceritakan saat Anda bekerja di bawah tekanan.",
+        "Bagaimana Anda menghadapi tenggat waktu yang ketat?",
+        "Ceritakan saat Anda harus menyelesaikan banyak tugas sekaligus.",
+        "Bagaimana Anda mengatur prioritas pekerjaan?",
+        "Ceritakan saat Anda hampir tidak bisa memenuhi tenggat waktu.",
+        "Apa yang Anda lakukan jika tidak bisa memenuhi tenggat waktu?",
+        "Bagaimana Anda tetap tenang saat pekerjaan menumpuk?",
+        "Ceritakan saat Anda harus bekerja lembur untuk menyelesaikan tugas.",
+        "Bagaimana Anda membagi waktu antara pekerjaan dan istirahat?",
+        "Ceritakan saat Anda menyelesaikan pekerjaan lebih cepat dari jadwal."
+      ],
+      "followUp": "Bagaimana Anda menentukan mana yang dikerjakan lebih dulu saat itu?",
+      "sources": [
+        {
+          "name": "TalentHunts",
+          "url": "https://www.talenthunts.id/id/article/pertanyaan-wawancara"
+        },
+        {
+          "name": "HRZone",
+          "url": "https://hrzone.id/pertanyaan-interview-yang-sebenarnya-sedang-menguji-anda/"
+        },
+        {
+          "name": "SuaraGarut",
+          "url": "https://suaragarut.id/60-pertanyaan-interview-kerja"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Teamwork dan Konflik",
+      "questions": [
+        "Ceritakan pengalaman bekerja dalam tim yang berhasil.",
+        "Apa peran Anda dalam tim tersebut?",
+        "Ceritakan saat Anda bekerja dengan rekan yang berbeda pendapat.",
+        "Bagaimana Anda menyelesaikan konflik dengan rekan kerja?",
+        "Ceritakan saat Anda membantu rekan kerja yang kesulitan.",
+        "Bagaimana Anda bekerja sama dengan tim lain?",
+        "Ceritakan saat Anda harus bekerja dengan orang yang sulit diajak kerja sama.",
+        "Bagaimana Anda menyampaikan pendapat agar diterima tim?",
+        "Ceritakan saat tim Anda tidak mencapai target.",
+        "Apa yang Anda lakukan jika rekan kerja tidak mengerjakan bagiannya?"
+      ],
+      "followUp": "Apa yang Anda katakan atau lakukan langsung kepada rekan itu saat itu?",
+      "sources": [
+        {
+          "name": "DigitalBuku",
+          "url": "https://digitalbuku.id/contoh-pertanyaan-behavioral-event-interview-dan-cara-menyusun-jawaban-yang-efektif/"
+        },
+        {
+          "name": "TalentHunts",
+          "url": "https://www.talenthunts.id/id/article/pertanyaan-wawancara"
+        },
+        {
+          "name": "SuaraGarut",
+          "url": "https://suaragarut.id/60-pertanyaan-interview-kerja"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Kepemimpinan dan Inisiatif",
+      "questions": [
+        "Ceritakan saat Anda memimpin sebuah tim atau proyek.",
+        "Bagaimana Anda memotivasi anggota tim yang sedang tidak bersemangat?",
+        "Ceritakan saat Anda mengambil keputusan sulit yang berdampak pada tim.",
+        "Apa gaya kepemimpinan Anda?",
+        "Ceritakan saat Anda mengambil inisiatif di luar tugas utama Anda.",
+        "Ceritakan ide baru yang pernah Anda usulkan dan terapkan.",
+        "Bagaimana Anda membagi tugas kepada anggota tim?",
+        "Apa yang Anda lakukan jika anggota tim tidak bisa menyelesaikan tugasnya?",
+        "Bagaimana Anda menciptakan lingkungan kerja yang nyaman?",
+        "Ceritakan saat Anda menjadi pemimpin tanpa jabatan resmi."
+      ],
+      "followUp": "Apa hasil dari tindakan Anda itu bagi tim?",
+      "sources": [
+        {
+          "name": "DigitalBuku",
+          "url": "https://digitalbuku.id/contoh-pertanyaan-behavioral-event-interview-dan-cara-menyusun-jawaban-yang-efektif/"
+        },
+        {
+          "name": "TalentHunts",
+          "url": "https://www.talenthunts.id/id/article/pertanyaan-wawancara"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Problem Solving, Adaptasi, dan Belajar Hal Baru",
+      "questions": [
+        "Ceritakan masalah sulit yang pernah Anda selesaikan.",
+        "Bagaimana Anda mencari akar dari suatu masalah?",
+        "Ceritakan saat Anda menemukan solusi kreatif untuk suatu masalah.",
+        "Ceritakan saat Anda gagal menyelesaikan suatu masalah.",
+        "Ceritakan saat Anda harus beradaptasi dengan perubahan besar.",
+        "Bagaimana Anda belajar hal baru dengan cepat?",
+        "Ceritakan saat rencana awal Anda tidak berhasil.",
+        "Bagaimana Anda menghadapi perubahan sistem atau cara kerja baru?",
+        "Ceritakan saat Anda mengantisipasi masalah sebelum terjadi.",
+        "Apa yang Anda lakukan jika mendapat tugas yang belum pernah dilakukan?"
+      ],
+      "followUp": "Langkah pertama apa yang Anda ambil untuk memahami masalah itu?",
+      "sources": [
+        {
+          "name": "DigitalBuku",
+          "url": "https://digitalbuku.id/contoh-pertanyaan-behavioral-event-interview-dan-cara-menyusun-jawaban-yang-efektif/"
+        },
+        {
+          "name": "HRD Forum",
+          "url": "https://hrd-forum.com/teknik-wawancara-behavioral-event-interview-bei-3/"
+        },
+        {
+          "name": "SuaraGarut",
+          "url": "https://suaragarut.id/60-pertanyaan-interview-kerja"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Situasional, Pelanggan, dan Target",
+      "questions": [
+        "Apa yang Anda lakukan jika pelanggan marah kepada Anda?",
+        "Apa yang Anda lakukan jika pelanggan mengeluh tentang layanan kami?",
+        "Bagaimana Anda menangani pelanggan yang sulit?",
+        "Apa yang Anda lakukan jika target tidak tercapai?",
+        "Bagaimana Anda mencapai target kerja Anda?",
+        "Apa yang Anda lakukan jika rekan kerja meminta bantuan saat Anda sibuk?",
+        "Apa yang Anda lakukan jika atasan memberi tugas mendadak?",
+        "Apa yang Anda lakukan jika menemukan kesalahan dalam pekerjaan Anda?",
+        "Apa yang Anda lakukan jika sistem atau alat kerja tiba-tiba bermasalah?",
+        "Apa yang Anda lakukan jika ada perubahan jadwal secara mendadak?"
+      ],
+      "followUp": "Boleh diceritakan langkah demi langkah apa yang Anda lakukan pertama kali?",
+      "sources": [
+        {
+          "name": "TalentHunts",
+          "url": "https://www.talenthunts.id/id/article/pertanyaan-wawancara"
+        },
+        {
+          "name": "SuaraGarut",
+          "url": "https://suaragarut.id/60-pertanyaan-interview-kerja"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Gaji, Rencana Karier, dan Kesiapan Kerja",
+      "questions": [
+        "Berapa gaji yang Anda harapkan?",
+        "Berapa gaji Anda di perusahaan sebelumnya?",
+        "Apakah Anda bersedia bernegosiasi soal gaji?",
+        "Apa rencana karier Anda lima tahun ke depan?",
+        "Apa tujuan jangka panjang yang ingin Anda capai?",
+        "Bagaimana cara Anda meningkatkan kemampuan Anda?",
+        "Kapan Anda bisa mulai bekerja?",
+        "Apakah Anda bersedia bekerja dengan sistem shift?",
+        "Bagaimana jika pekerjaan membutuhkan lembur?",
+        "Apakah Anda bersedia ditempatkan di luar kota?"
+      ],
+      "followUp": "Apa pertimbangan Anda dalam menentukan jawaban itu?",
+      "sources": [
+        {
+          "name": "SuaraGarut",
+          "url": "https://suaragarut.id/60-pertanyaan-interview-kerja"
+        },
+        {
+          "name": "KitaLulus",
+          "url": "https://www.kitalulus.com/blog/seputar-kerja/pertanyaan-interview-kerja/"
+        },
+        {
+          "name": "SoraLearning",
+          "url": "https://soralearning.com/pertanyaan-interview-dan-jawabannya/"
+        },
+        {
+          "name": "TalentHunts",
+          "url": "https://www.talenthunts.id/id/article/pertanyaan-wawancara"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Penutup",
+      "questions": [
+        "Apakah ada yang ingin Anda tanyakan kepada kami?",
+        "Apa yang ingin Anda ketahui tentang tim ini?",
+        "Apa harapan Anda jika diterima bekerja di sini?",
+        "Apa yang akan Anda lakukan dalam sembilan puluh hari pertama?",
+        "Mengapa Anda yakin cocok dengan posisi ini?",
+        "Apakah ada informasi lain yang ingin Anda sampaikan?",
+        "Apakah Anda sedang melamar di perusahaan lain?",
+        "Apa yang akan Anda lakukan jika mendapat tawaran kerja lain?",
+        "Bagaimana kami bisa menghubungi Anda setelah ini?",
+        "Apakah ada hal yang belum kami tanyakan kepada Anda?"
+      ],
+      "followUp": "Dari semua yang Anda sampaikan, apa satu hal yang paling ingin Anda tegaskan sebelum kami selesai?",
+      "sources": [
+        {
+          "name": "SuaraGarut",
+          "url": "https://suaragarut.id/60-pertanyaan-interview-kerja"
+        },
+        {
+          "name": "KitaLulus",
+          "url": "https://www.kitalulus.com/blog/seputar-kerja/pertanyaan-interview-kerja/"
+        },
+        {
+          "name": "TalentHunts",
+          "url": "https://www.talenthunts.id/id/article/pertanyaan-wawancara"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Kategori Kecil — Logistik, Gudang, dan Operasional",
+      "questions": [
+        "Bagaimana Anda mengelola stok barang di gudang?",
+        "Bagaimana Anda memastikan barang yang dikirim tidak salah?",
+        "Apa yang Anda lakukan jika ada barang yang hilang atau rusak?",
+        "Bagaimana Anda menangani pengiriman yang terlambat?",
+        "Bagaimana Anda bekerja dengan kurir atau vendor pengiriman?",
+        "Apa pengalaman Anda memakai sistem manajemen gudang?",
+        "Bagaimana Anda menjaga efisiensi tanpa menurunkan kualitas?",
+        "Bagaimana Anda menghadapi lonjakan pesanan saat promo besar?"
+      ],
+      "followUp": "Boleh beri satu contoh nyata saat Anda menghadapi situasi itu?",
+      "sources": []
+    }
+  ]
+}

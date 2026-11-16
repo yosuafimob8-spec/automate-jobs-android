@@ -61,6 +61,7 @@ android {
             useSupportLibrary = true
         }
         manifestPlaceholders["usesCleartextTraffic"] = "false"
+        manifestPlaceholders["admobAppId"] = providers.gradleProperty("admobAppId").get()
     }
 
     buildTypes {
@@ -75,8 +76,6 @@ android {
         create("termux") {
             initWith(getByName("debug"))
             // V74 parallel test: distinct application ID; NEVER overwrites installed V74.
-            applicationIdSuffix = ".v74test"
-            versionNameSuffix = "-V74-TEST"
             // CI restores the same fixed keystore before this build.
             signingConfig = signingConfigs.getByName("debug")
             isDebuggable = true
@@ -126,6 +125,10 @@ tasks.named("preBuild").configure {
 }
 
 dependencies {
+    implementation(libs.androidx.camera.view)
+    implementation(libs.androidx.camera.lifecycle)
+    implementation(libs.androidx.camera.camera2)
+    implementation(libs.androidx.camera.core)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

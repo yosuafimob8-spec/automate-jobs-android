@@ -15,6 +15,7 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.ChatBubbleOutline
 import androidx.compose.material.icons.filled.Mic
+import androidx.compose.material.icons.filled.VideoCall
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -86,7 +87,8 @@ internal fun InterviewBrandedHeader(onBack: () -> Unit, isPro: Boolean) {
 }
 
 @Composable
-internal fun InterviewModeLanding(onTextSelected: () -> Unit, onVoiceSelected: () -> Unit) {
+internal fun InterviewModeLanding(onTextSelected: () -> Unit, onVoiceSelected: () -> Unit,
+    onGuidedSelected: () -> Unit = {},) {
     val dark = MaterialTheme.colorScheme.surface.luminance() < 0.5f
     val surface = MaterialTheme.colorScheme.surface
     val ink = MaterialTheme.colorScheme.onSurface
@@ -152,6 +154,13 @@ internal fun InterviewModeLanding(onTextSelected: () -> Unit, onVoiceSelected: (
             selected = false, isDark = dark, onClick = onVoiceSelected,
             icon = { Icon(Icons.Default.Mic, null, tint = Color(0xFF6553D7), modifier = Modifier.size(36.dp)) }
         )
+        InterviewModeCard(
+            title = "Latihan Terpandu 10 Soal",
+            body = "Video-call dengan Bu Nadia • 10 soal HRD tetap + respons HRD • Offline, tanpa server",
+            selected = false, isDark = dark, onClick = onGuidedSelected,
+            icon = { Icon(Icons.Default.VideoCall, null, tint = Color(0xFF0E7C66), modifier = Modifier.size(36.dp)) }
+        )
+
         Spacer(Modifier.height(12.dp))
     }
 }

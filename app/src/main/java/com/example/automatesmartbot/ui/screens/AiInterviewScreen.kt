@@ -211,6 +211,7 @@ fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
     var resultAdvice by rememberSaveable { mutableStateOf("") }
     var showResultDetails by rememberSaveable { mutableStateOf(false) }
     var showPreparation by rememberSaveable { mutableStateOf(false) }
+    var guidedFlow by rememberSaveable { mutableStateOf(false) }
     var error by rememberSaveable { mutableStateOf("") }
     var loading by remember { mutableStateOf(false) }
     val context = LocalContext.current
@@ -218,11 +219,11 @@ fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
     var ttsReady by remember { mutableStateOf(false) }
     val voiceMode = interviewMode == "voice"
     val selectedLocale = if (language == "en") Locale.US else Locale.forLanguageTag("id-ID")
-    var pendingSpeech by remember { mutableStateOf<String?>(null) }
     val tts = remember { TextToSpeech(context) { status -> ttsReady = status == TextToSpeech.SUCCESS } }
 
     fun interviewBack() {
         when {
+            guidedFlow -> { guidedFlow = false; tts.stop() }
             report.isNotBlank() -> {
                 report = ""
                 started = false
@@ -246,7 +247,6 @@ fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
     fun speakQuestion(spokenText: String) {
         if (!voiceMode || spokenText.isBlank()) return
         if (!ttsReady) {
-            pendingSpeech = null
             error = "Mesin suara Android belum siap. Periksa pengaturan Text-to-Speech perangkat."
             return
         }
@@ -270,8 +270,8 @@ fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
         if (result.resultCode == android.app.Activity.RESULT_OK) {
             val spoken = result.data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)?.firstOrNull()
             if (!spoken.isNullOrBlank()) {
-                answer = spoken
-                if (voiceMode) pendingSpeech = spoken
+                answer = spoken.trim()
+                // STT hanya mengisi draf jawaban; kirim lewat tombol manual.
             }
             else error = "Suara tidak terdeteksi. Coba lagi."
         } else error = "Mikrofon dibatalkan atau tidak dapat mengenali suara."
@@ -359,13 +359,6 @@ fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
         }
     }
 
-    LaunchedEffect(pendingSpeech, loading, started) {
-        val speech = pendingSpeech
-        if (speech != null && !loading && started && question.isNotBlank()) {
-            pendingSpeech = null
-            send("reply", history + InterviewTurn(question, speech.trim()))
-        }
-    }
     val orange = com.example.automatesmartbot.ui.theme.KarirOrange
     val teal = Color(0xFF16A34A)
     val ink = com.example.automatesmartbot.ui.theme.KarirTextDark
@@ -400,10 +393,13 @@ fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
             onBack = { interviewBack() }
         )
         Box(Modifier.weight(1f)) {
-            if (!started && !showPreparation && report.isBlank()) {
+            if (guidedFlow) {
+                GuidedInterviewFlow(onExit = { guidedFlow = false })
+            } else if (!started && !showPreparation && report.isBlank()) {
                 InterviewModeLanding(
                     onTextSelected = { interviewMode = "text"; showPreparation = true },
-                    onVoiceSelected = { interviewMode = "voice"; showPreparation = true }
+                    onVoiceSelected = { interviewMode = "voice"; showPreparation = true },
+                    onGuidedSelected = { guidedFlow = true }
                 )
     } else if (!started && report.isBlank()) {
         Column(Modifier.fillMaxSize().background(com.example.automatesmartbot.ui.theme.KarirPageGradient).verticalScroll(rememberScrollState()).padding(16.dp),
@@ -529,7 +525,7 @@ fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
             if (error.isNotBlank()) Text(error, Modifier.padding(horizontal = 16.dp), color = MaterialTheme.colorScheme.error)
             Row(Modifier.fillMaxWidth().background(Color.White).padding(10.dp),
                 horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-                if (!voiceMode) OutlinedTextField(answer, { answer = it }, modifier = Modifier.weight(1f),
+                OutlinedTextField(answer, { answer = it }, modifier = Modifier.weight(1f),
                     placeholder = { Text("Ketik jawaban Anda...", color = muted) }, maxLines = 4,
                     textStyle = androidx.compose.ui.text.TextStyle(color = ink),
                     colors = OutlinedTextFieldDefaults.colors(focusedTextColor = ink, unfocusedTextColor = ink, cursorColor = orange, focusedContainerColor = Color.White, unfocusedContainerColor = Color.White),
@@ -544,7 +540,7 @@ fun AiInterviewScreen(isPro: Boolean = false, onExit: () -> Unit = {}) {
                 if (voiceMode) TextButton(enabled = !loading, onClick = {
                     if (question.isNotBlank()) speakQuestion(question)
                 }) { Text("🔊", color = ink) }
-                if (!voiceMode) Button(enabled = !loading && answer.isNotBlank(), onClick = {
+                Button(enabled = !loading && started && question.isNotBlank() && answer.isNotBlank(), onClick = {
                     send("reply", history + InterviewTurn(question, answer.trim()))
                 }, colors = ButtonDefaults.buttonColors(containerColor = orange),
                     contentPadding = PaddingValues(12.dp)) { Text("➤", color = Color.White) }

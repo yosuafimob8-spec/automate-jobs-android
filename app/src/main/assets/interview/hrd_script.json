@@ -1,0 +1,68 @@
+{
+  "interviewer": "Bu Nadia",
+  "role": "HR Recruiter",
+  "language": "id",
+  "questions": [
+    {
+      "no": 1,
+      "title": "Perkenalan Diri",
+      "question": "Silakan perkenalkan diri Anda secara singkat, termasuk pendidikan terakhir dan pengalaman kerja sebelumnya.",
+      "response": "Baik, terima kasih atas perkenalannya. Saya sudah mendapatkan gambaran mengenai latar belakang Anda. Kita lanjut ke pertanyaan berikutnya, ya."
+    },
+    {
+      "no": 2,
+      "title": "Pengalaman Kerja",
+      "question": "Bisa ceritakan pekerjaan Anda sebelumnya, termasuk tugas dan tanggung jawab yang biasa Anda lakukan?",
+      "response": "Baik, terima kasih atas penjelasannya. Dari pengalaman tersebut, apa pencapaian yang paling Anda banggakan selama bekerja?"
+    },
+    {
+      "no": 3,
+      "title": "Alasan Melamar",
+      "question": "Apa alasan Anda tertarik melamar posisi ini di perusahaan kami?",
+      "response": "Baik, terima kasih. Kami ingin memastikan bahwa kandidat memahami posisi yang dilamar dan memiliki motivasi untuk berkembang bersama perusahaan."
+    },
+    {
+      "no": 4,
+      "title": "Alasan Berhenti Bekerja",
+      "question": "Apa alasan Anda keluar atau ingin mengundurkan diri dari perusahaan sebelumnya?",
+      "response": "Baik, saya memahami penjelasan Anda. Semoga pengalaman sebelumnya bisa menjadi pembelajaran dan bekal untuk pekerjaan berikutnya."
+    },
+    {
+      "no": 5,
+      "title": "Kelebihan dan Kekurangan",
+      "question": "Menurut Anda, apa kelebihan dan kekurangan diri Anda dalam bekerja?",
+      "response": "Terima kasih atas keterbukaannya. Mengenali kelebihan dan kekurangan diri sendiri merupakan hal penting. Kami juga ingin melihat bagaimana seseorang berusaha memperbaiki kekurangannya."
+    },
+    {
+      "no": 6,
+      "title": "Menghadapi Tekanan Pekerjaan",
+      "question": "Bagaimana cara Anda menghadapi tekanan pekerjaan, terutama ketika banyak tugas harus diselesaikan dalam waktu bersamaan?",
+      "response": "Baik, terima kasih. Kemampuan mengatur prioritas dan menjaga kualitas pekerjaan dalam situasi yang penuh tekanan sangat penting di lingkungan kerja."
+    },
+    {
+      "no": 7,
+      "title": "Kesalahan dalam Pekerjaan",
+      "question": "Apakah Anda pernah melakukan kesalahan saat bekerja? Jika pernah, bagaimana cara Anda bertanggung jawab dan menyelesaikannya?",
+      "response": "Terima kasih sudah menceritakan pengalaman tersebut. Bagi kami, tanggung jawab, kejujuran, dan kemauan belajar dari kesalahan merupakan hal yang penting."
+    },
+    {
+      "no": 8,
+      "title": "Konflik dengan Rekan Kerja",
+      "question": "Jika terjadi perbedaan pendapat atau konflik dengan rekan kerja maupun atasan, bagaimana cara Anda menyelesaikannya?",
+      "response": "Baik, terima kasih. Komunikasi yang baik, profesionalisme, dan kemampuan bekerja sama sangat diperlukan untuk menciptakan lingkungan kerja yang nyaman."
+    },
+    {
+      "no": 9,
+      "title": "Ekspektasi Gaji",
+      "question": "Berapa ekspektasi gaji yang Anda harapkan untuk posisi ini? Apakah nominal tersebut masih dapat dinegosiasikan?",
+      "response": "Baik, terima kasih atas informasinya. Ekspektasi gaji Anda akan menjadi salah satu bahan pertimbangan dan akan disesuaikan dengan kualifikasi, tanggung jawab posisi, serta kebijakan perusahaan."
+    },
+    {
+      "no": 10,
+      "title": "Kesiapan Bergabung",
+      "question": "Jika Anda dinyatakan lolos seleksi, kapan Anda siap mulai bekerja? Apakah ada kendala terkait lokasi kerja, jam kerja, atau ketentuan perusahaan?",
+      "response": "Baik, terima kasih atas informasinya. Kami akan mempertimbangkan kesiapan Anda bersama hasil wawancara secara keseluruhan."
+    }
+  ],
+  "closing": "Baik, terima kasih sudah meluangkan waktu untuk mengikuti proses interview hari ini. Untuk tahap selanjutnya, kami akan melakukan evaluasi terhadap hasil wawancara dan kualifikasi Anda. Apabila Anda dinyatakan lolos ke tahap berikutnya, tim HRD akan menghubungi Anda melalui kontak yang telah didaftarkan. Sebelum kita akhiri, apakah ada pertanyaan yang ingin Anda sampaikan mengenai posisi atau perusahaan kami? Sekali lagi, terima kasih atas waktu dan partisipasinya. Semoga sukses dan selamat melanjutkan aktivitas."
+}
